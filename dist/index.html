@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8f6">
+  <meta name="description" content="以地圖探索曼谷 Huai Khwang condo：租售價格、管理費與投資報酬試算。">
+  <title>Huai Khwang Condo Map｜曼谷樓盤地圖</title>
+  <link rel="stylesheet" href="vendor/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Huai Khwang Condo Map 首頁"><span class="brand-mark">H</span><span>CONDO<span class="brand-light"> MAP</span></span></a>
+    <div class="top-divider"></div>
+    <div class="location-title"><span class="eyebrow">BANGKOK · THAILAND</span><strong>Huai Khwang</strong></div>
+    <div class="top-spacer"></div>
+    <a class="hipflat-link" href="https://www.hipflat.co.th/zh/thailand-projects/condo/bangkok-bm" target="_blank" rel="noopener">Hipflat 區域清單 <span>↗</span></a>
+    <span class="count-pill">197 個樓盤</span>
+  </header>
+
+  <main class="map-shell">
+    <div id="map" role="region" aria-label="Huai Khwang condo 地圖"></div>
+    <div class="map-wash" aria-hidden="true"></div>
+
+    <section class="explorer panel" aria-label="樓盤搜尋與清單">
+      <div class="panel-head">
+        <div><p class="eyebrow">AREA EXPLORER</p><h1>從地圖開始找房</h1></div>
+        <button id="fitMap" class="icon-button" aria-label="顯示全部樓盤" title="顯示全部樓盤">⤢</button>
+      </div>
+      <p class="panel-subtitle">Huai Khwang / 輝煌區 <span class="live-dot"></span><span id="resultCount">5 個樣本</span></p>
+      <label class="searchbox"><span class="search-icon">⌕</span><input id="search" type="search" placeholder="搜尋樓盤名稱" autocomplete="off"><kbd>⌘ K</kbd></label>
+      <div class="sort-row"><span>地圖標籤</span><div class="segmented" role="group" aria-label="選擇地圖顯示數字"><button data-mode="sale" class="selected">售價</button><button data-mode="rent">租金</button><button data-mode="yield">投報</button></div></div>
+      <div class="list-heading"><span>樓盤 <b id="listCount">05</b></span><button id="clearSearch" class="text-button">清除搜尋</button></div>
+      <div id="projectList" class="project-list"></div>
+      <div class="panel-foot"><span class="source-dot"></span><span>地圖標籤為樓盤快速比較；點選任一標記查看租售與試算。</span></div>
+    </section>
+
+    <div class="map-tools panel" aria-label="地圖工具"><button id="zoomIn" class="map-tool" aria-label="放大地圖">＋</button><button id="zoomOut" class="map-tool" aria-label="縮小地圖">−</button><div class="tool-divider"></div><button id="locate" class="map-tool locate" aria-label="回到 Huai Khwang 樓盤">◎</button></div>
+
+    <aside id="detailPanel" class="detail-panel panel" aria-label="樓盤資訊" aria-live="polite"></aside>
+    <div class="map-note"><span>© OpenStreetMap contributors</span><span>點位為公開樓盤座標</span></div>
+  </main>
+  <script src="vendor/leaflet.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
