@@ -48,7 +48,7 @@
     return points;
   }
   stations.forEach(s => {
-    const marker = L.marker([s.lat, s.lng], { icon: L.divIcon({ className: 'station-icon', html: `<span><b>M</b><strong>${esc(s.name)}</strong><small>${esc(s.id)}</small></span>`, iconSize: [140, 32], iconAnchor: [14, 16] }), zIndexOffset: 500 }).addTo(map);
+    const marker = L.marker([s.lat, s.lng], { title: `MRT ${s.name} ${s.id}`, icon: L.divIcon({ className: 'station-icon', html: `<span><b>M</b><strong>${esc(s.name)}</strong><small>${esc(s.id)}</small></span>`, iconSize: [58, 30], iconAnchor: [14, 15] }), zIndexOffset: 500 }).addTo(map);
     marker.bindPopup(`<strong>MRT ${esc(s.name)}</strong><br>${esc(s.id)} · 藍線站點`);
     stationMarkers.set(s.id, marker);
   });
