@@ -30,7 +30,7 @@
     return (rentRate * (12 - (useAgent ? 1 : 0)) - feeRate) / priceRate * 100;
   }
   function icon(c, active = false) {
-    return L.divIcon({ className: 'condo-icon' + (active ? ' active' : ''), html: `<span>${labelFor(c)}</span>`, iconSize: [92, 34], iconAnchor: [46, 17] });
+    return L.divIcon({ className: 'condo-icon' + (active ? ' active' : ''), html: `<span><b class="marker-price">${labelFor(c)}</b><i class="marker-year">完工 ${esc(c.completedYear || '未載明')}</i></span>`, iconSize: [110, 42], iconAnchor: [55, 21] });
   }
   function decodePolyline6(encoded) {
     let index = 0, lat = 0, lng = 0;
@@ -58,16 +58,58 @@
     marker.on('click', () => select(c.id));
     markers.set(c.id, marker);
   });
+  function matchesQuery(c) {
+    if (!query.trim()) return true;
+    const stationName = stations.find(s => s.id === c.nearestMrt?.stationId)?.name || c.station || '';
+    const haystack = `${c.name} ${stationName} ${c.completedYear || ''}`.toLowerCase();
+    const aliases = {
+      '年':'year','完工年':'year','完成年':'year','year':'year',
+      '售價':'sale','售價/㎡':'sale','售價單價':'sale','sale':'sale','price':'sale',
+      '租金':'rent','月租':'rent','租金/㎡':'rent','月租/㎡':'rent','rent':'rent',
+      '距離':'distance','步行':'distance','步行距離':'distance','mrt距離':'distance','distance':'distance',
+      '投報':'yield','淨投報':'yield','投報率':'yield','yield':'yield',
+      '站':'station','mrt':'station','樓名':'name','name':'name'
+    };
+    const metrics = { year:Number(c.completedYear), sale:Number(c.sale.minimumSqm), rent:Number(c.rent.minimumSqm), distance:Number(c.nearestMrt?.distanceKm), yield:yieldFor(c) };
+    return query.trim().split(/\s+/).every(token => {
+      const expr = token.match(/^(.+?)(<=|>=|<|>|=|:)(.+)$/);
+      if (!expr) return haystack.includes(token.toLowerCase());
+      const field = aliases[expr[1].toLowerCase()];
+      if (!field) return haystack.includes(token.toLowerCase());
+      const [, , operator, rawValue] = expr;
+      if (field === 'name' || field === 'station') return [':','='].includes(operator) && `${field === 'name' ? c.name : stationName}`.toLowerCase().includes(rawValue.toLowerCase());
+      const target = metrics[field], value = Number(rawValue);
+      if (!Number.isFinite(target) || !Number.isFinite(value)) return false;
+      if (operator === ':' || operator === '=') return target === value;
+      if (operator === '<') return target < value;
+      if (operator === '<=') return target <= value;
+      if (operator === '>') return target > value;
+      return target >= value;
+    });
+  }
   function filtered() {
-    const shown = condos.filter(c => c.name.toLowerCase().includes(query.toLowerCase()));
+    const shown = condos.filter(matchesQuery);
     const keyFor = c => sortMode === 'distance' ? c.nearestMrt?.distanceKm : sortMode === 'sale' ? c.sale.minimumSqm : sortMode === 'rent' ? c.rent.minimumSqm : yieldFor(c);
+    const ranked = sortMode === 'year-new' || sortMode === 'year-old' ? sortMode : null;
     return shown.sort((a, b) => {
+      if (ranked) {
+        const yearA = Number(a.completedYear), yearB = Number(b.completedYear);
+        if (!Number.isFinite(yearA)) return Number.isFinite(yearB) ? 1 : 0;
+        if (!Number.isFinite(yearB)) return -1;
+        const yearDelta = yearA - yearB;
+        return sortMode === 'year-new' ? -yearDelta : yearDelta;
+      }
       const delta = Number(keyFor(a) ?? Infinity) - Number(keyFor(b) ?? Infinity);
       return sortMode === 'yield' ? -delta : delta;
     });
   }
   function renderList() {
     const shown = filtered();
+    const visibleIds = new Set(shown.map(c => c.id));
+    markers.forEach((marker, id) => {
+      if (visibleIds.has(id) && !map.hasLayer(marker)) marker.addTo(map);
+      else if (!visibleIds.has(id) && map.hasLayer(marker)) map.removeLayer(marker);
+    });
     document.getElementById('resultCount').textContent = `${shown.length} 個樣本`;
     document.getElementById('listCount').textContent = String(shown.length).padStart(2, '0');
     list.innerHTML = shown.map((c, i) => { const nearestStation = stations.find(s => s.id === c.nearestMrt?.stationId); return `<article class="project-card ${c.id === selectedId ? 'active' : ''}" data-id="${c.id}" tabindex="0" role="button" aria-label="查看 ${esc(c.name)}"><span class="rank">${String(i + 1).padStart(2, '0')}</span><div class="project-copy"><strong class="project-name">${esc(c.name)}</strong><span class="project-meta">MRT ${esc(nearestStation?.name || c.station)} · 完工 ${c.completedYear}</span><div class="project-values"><span>售/㎡ <b>${fmt(c.sale.minimumSqm)}</b></span><span>租/㎡/月 <b>${fmt(c.rent.minimumSqm)}</b></span><span>🚶 <b>${c.nearestMrt?.distanceKm ?? '—'}</b> km</span></div></div><span class="price-chip">${labelFor(c)}</span></article>`; }).join('') || '<p class="empty-state">沒有符合的樓盤</p>';
@@ -135,7 +177,7 @@
   document.getElementById('sortOrder').addEventListener('change', e => { sortMode = e.target.value; renderList(); });
   document.getElementById('search').addEventListener('input', e => { query = e.target.value.trim(); renderList(); });
   document.getElementById('clearSearch').addEventListener('click', () => { document.getElementById('search').value = ''; query = ''; renderList(); });
-  document.getElementById('fitMap').addEventListener('click', () => { const points = [...condos.filter(c => !query || c.name.toLowerCase().includes(query.toLowerCase())).map(c => [c.lat,c.lng]), ...stations.map(s => [s.lat,s.lng])]; if (points.length) map.fitBounds(points, { padding: [70, 90], maxZoom: 14 }); });
+  document.getElementById('fitMap').addEventListener('click', () => { const points = [...filtered().map(c => [c.lat,c.lng]), ...stations.map(s => [s.lat,s.lng])]; if (points.length) map.fitBounds(points, { padding: [70, 90], maxZoom: 14 }); });
   document.getElementById('zoomIn').addEventListener('click', () => map.zoomIn());
   document.getElementById('zoomOut').addEventListener('click', () => map.zoomOut());
   document.getElementById('locate').addEventListener('click', () => map.setView([13.7824, 100.5763], 14));
