@@ -7,7 +7,7 @@
   <meta name="description" content="以地圖探索曼谷 Huai Khwang condo：租售價格、管理費與投資報酬試算。">
   <title>Huai Khwang Condo Map｜曼谷樓盤地圖</title>
   <link rel="stylesheet" href="vendor/leaflet.css">
-  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
   <header class="topbar">
@@ -30,7 +30,8 @@
       </div>
       <p class="panel-subtitle">Huai Khwang / 輝煌區 <span class="live-dot"></span><span id="resultCount">5 個樣本</span></p>
       <label class="searchbox"><span class="search-icon">⌕</span><input id="search" type="search" placeholder="搜尋樓盤名稱" autocomplete="off"><kbd>⌘ K</kbd></label>
-      <div class="sort-row"><span>地圖標籤</span><div class="segmented" role="group" aria-label="選擇地圖顯示數字"><button data-mode="sale" class="selected">售價</button><button data-mode="rent">租金</button><button data-mode="yield">投報</button></div></div>
+      <div class="sort-row"><span>地圖標籤</span><div class="segmented" role="group" aria-label="選擇地圖顯示數字"><button data-mode="sale" class="selected">售價/㎡</button><button data-mode="rent">月租/㎡</button><button data-mode="yield">淨投報</button></div></div>
+      <div class="sort-order-row"><label for="sortOrder">排序樓盤</label><select id="sortOrder" aria-label="排序樓盤"><option value="distance">MRT 步行距離：近 → 遠</option><option value="sale">最低售價單價：低 → 高</option><option value="rent">最低月租單價：低 → 高</option><option value="yield">淨投報率：高 → 低</option></select></div>
       <div class="list-heading"><span>樓盤 <b id="listCount">05</b></span><button id="clearSearch" class="text-button">清除搜尋</button></div>
       <div id="projectList" class="project-list"></div>
       <div class="panel-foot"><span class="source-dot"></span><span>地圖標籤為樓盤快速比較；點選任一標記查看租售與試算。</span></div>
@@ -46,5 +47,6 @@
   <script src="app.js"></script>
 </body>
 </html>
+
 
 
