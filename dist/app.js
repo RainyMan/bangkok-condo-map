@@ -186,6 +186,15 @@
         saleRooms[key] = { ...current, beds: count, minimum: Number(sample.price), area: Number(sample.area), sourceUrl: sample.url };
       }
     });
+    (c.rent?.samples || []).forEach(sample => {
+      const count = bedroomCountForSample(sample), price = Number(sample.price), area = Number(sample.area);
+      if (!count || !(price > 0) || !(area > 0) || !sample.url) return;
+      const key = String(count), current = rentRooms[key] || {}, sampleRate = price / area;
+      const currentRate = Number(current.minimumSqm || current.averageSqm || (current.minimum && current.area ? current.minimum / current.area : 0));
+      if (!(currentRate > 0) || sampleRate < currentRate) {
+        rentRooms[key] = { ...current, beds: count, minimum: price, area, minimumSqm: sampleRate, sourceUrl: sample.url };
+      }
+    });
     const roomOptions = Object.entries(saleRooms).filter(([, row]) => Number(row.minimum || row.average) > 0);
     const lowestRoom = roomOptions.sort((a, b) => Number(a[1].minimum || a[1].average) - Number(b[1].minimum || b[1].average))[0];
     const defaultRoom = saleRooms['2'] && Number(saleRooms['2'].minimum || saleRooms['2'].average) > 0
