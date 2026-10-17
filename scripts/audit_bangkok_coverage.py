@@ -54,6 +54,8 @@ def has_individual_listing(market: dict) -> bool:
             return True
         if host.endswith("propertyscout.co.th") and re.search(r"/.+-\d{6,}/?$", path):
             return True
+        if host.endswith("condothai.co.th") and re.search(r"^/room/\d+/", path):
+            return True
         if host.endswith("thaiapartment.com") and "/condo-detail/" in path:
             return True
         if host.endswith("scancondo.com") and re.search(r"/(?:sell|rent)/\d+/[a-z0-9-]+/", path):
