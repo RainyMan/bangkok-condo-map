@@ -1,0 +1,28 @@
+{
+  "hipflatId": 3369,
+  "projectName": "Niche Mono Itsaraphap",
+  "checkedAt": "2026-10-18",
+  "projectSource": "https://propertyhub.in.th/en/condo-for-rent/project-niche-mono-itsaraphap",
+  "listing": {
+    "id": "6368947",
+    "price": 13000,
+    "area": 30,
+    "priceSqm": 433.33,
+    "beds": 1,
+    "roomType": "1BR",
+    "title": "Niche Mono Itsaraphap，1 房，30 ㎡，4 樓，฿13,000/月",
+    "url": "https://propertyhub.in.th/en/listings/1bed-1bath-mrt-itsaraphap-30sqm-thb-13-000-mo-fl-4-niche-mono-itsaraphap-bangkok---6368947",
+    "sourceName": "PropertyHub",
+    "projectName": "Niche Mono Itsaraphap",
+    "checkedAt": "2026-10-18",
+    "updated": "2026-10-03",
+    "availableFrom": "2026-09-03",
+    "matchedBy": "exact_propertyhub_project_and_listing_page",
+    "listingStatus": "availability_unconfirmed_date_unknown"
+  },
+  "notes": [
+    "PropertyHub's exact project rent page showed three rental listings when checked on 2026-10-18; the listing page opened directly and identifies the project, one bedroom, 30 sqm, THB 13,000/month and floor 4.",
+    "The project result card was refreshed 2026-10-03. The direct listing states available from 2026-09-03, a date already passed at verification; the listing remains visible, but current vacancy is unconfirmed and is labeled in the UI.",
+    "The listing's rent per square metre is THB 433.33/month. The manually verified sample set contains only this directly inspected rental, not all three result cards."
+  ]
+}
