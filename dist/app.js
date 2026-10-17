@@ -279,29 +279,42 @@
   let query = '';
   let sortMode = 'distance';
   const yieldOverrides = new Map();
-  // Recalculate all map and card baselines from the current lowest two-bedroom listing.
-  // Rebuild saved estimates from the refreshed lowest two-bedroom sale and
-  // matched two-bedroom rent baseline. Carry over only the user's fee choices.
-  const yieldStorageKey = 'bangkokCondoYieldInputsV14';
+  // Refresh auto-generated baselines when new exact listings arrive while
+  // keeping values the user intentionally edited and saved.
+  const yieldStorageKey = 'bangkokCondoYieldInputsV16';
   const loadYieldInputs = () => {
     try {
       const current = localStorage.getItem(yieldStorageKey);
       if (current) return JSON.parse(current);
-      // Rebuild the saved baseline from each Condo's lowest two-bedroom sale
-      // and the two-bedroom average-low rent rate multiplied by that same unit's area.
-      // Preserve the user's fee switches, but discard old cached price/area
-      // values so the map and detail cards start from the refreshed samples.
-      const previous = JSON.parse(localStorage.getItem('bangkokCondoYieldInputsV13') || localStorage.getItem('bangkokCondoYieldInputsV12') || localStorage.getItem('bangkokCondoYieldInputsV11') || localStorage.getItem('bangkokCondoYieldInputsV10') || localStorage.getItem('bangkokCondoYieldInputsV9') || localStorage.getItem('bangkokCondoYieldInputsV8') || localStorage.getItem('bangkokCondoYieldInputsV7') || localStorage.getItem('bangkokCondoYieldInputsV6') || localStorage.getItem('bangkokCondoYieldInputsV5') || '{}');
+      const previous = JSON.parse(localStorage.getItem('bangkokCondoYieldInputsV15') || localStorage.getItem('bangkokCondoYieldInputsV14') || localStorage.getItem('bangkokCondoYieldInputsV13') || localStorage.getItem('bangkokCondoYieldInputsV12') || localStorage.getItem('bangkokCondoYieldInputsV11') || localStorage.getItem('bangkokCondoYieldInputsV10') || localStorage.getItem('bangkokCondoYieldInputsV9') || localStorage.getItem('bangkokCondoYieldInputsV8') || localStorage.getItem('bangkokCondoYieldInputsV7') || localStorage.getItem('bangkokCondoYieldInputsV6') || localStorage.getItem('bangkokCondoYieldInputsV5') || '{}');
       const recalculated = {};
       condos.forEach(c => {
-        const defaults = yieldDefaultsFor(c, '2');
-        if (!(Number(defaults.price) > 0) || !(Number(defaults.area) > 0) || !(Number(defaults.rent) > 0)) return;
         const old = previous[c.id] || {};
+        const beds = String(old.beds || '2');
+        const defaults = yieldDefaultsFor(c, beds);
+        if (!(Number(defaults.price) > 0) || !(Number(defaults.area) > 0) || !(Number(defaults.rent) > 0)) return;
+        const oldSaleRoom = c.sale?.byBedroom?.[beds] || {};
+        const oldRentRoom = c.rent?.byBedroom?.[beds] || {};
+        const saleCandidates = [
+          ...(c.sale?.samples || []).filter(sample => bedroomCountForSample(sample) === Number(beds)).map(sample => ({ price: Number(sample.price), area: Number(sample.area) })),
+          { price: Number(oldSaleRoom.minimum), area: Number(oldSaleRoom.area) },
+          { price: Number(c.sale?.minimum), area: Number(c.sale?.minimumArea) },
+          { price: Number(oldSaleRoom.average), area: Number(oldSaleRoom.average) / Number(oldSaleRoom.averageSqm) },
+        ].filter(candidate => candidate.price > 0 && candidate.area > 0);
+        const rentRates = [
+          Number(oldRentRoom.minimumSqm), Number(oldRentRoom.averageSqm),
+          ...(c.rent?.samples || []).filter(sample => bedroomCountForSample(sample) === Number(beds) && Number(sample.price) > 0 && Number(sample.area) > 0).map(sample => Number(sample.price) / Number(sample.area)),
+          Number(c.rent?.minimumSqm),
+        ].filter(rate => rate > 0);
+        const oldSaleMatches = saleCandidates.some(candidate => Number(old.price) === candidate.price && Number(old.area) === candidate.area);
+        const oldRentMatches = rentRates.some(rate => Math.abs(Number(old.rent) - Math.round(rate * Number(old.area))) <= 1);
+        const wasAutoBaseline = oldSaleMatches && oldRentMatches;
+        const useRefreshedBaseline = !old.price || wasAutoBaseline;
         recalculated[c.id] = {
-          price: defaults.price,
-          rent: defaults.rent,
-          area: defaults.area,
-          beds: defaults.beds,
+          price: useRefreshedBaseline ? defaults.price : Number(old.price),
+          rent: useRefreshedBaseline ? defaults.rent : Number(old.rent),
+          area: useRefreshedBaseline ? defaults.area : Number(old.area),
+          beds: beds,
           deductFee: old.deductFee ?? true,
           deductAgent: old.deductAgent ?? true,
         };

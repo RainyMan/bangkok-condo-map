@@ -1,0 +1,60 @@
+{
+  "hipflatId": 3369,
+  "projectName": "Niche Mono Itsaraphap",
+  "checkedAt": "2026-10-18",
+  "saleProjectSource": "https://propertyhub.in.th/en/condo-for-sale/project-niche-mono-itsaraphap",
+  "saleListing": {
+    "id": "6220174",
+    "price": 2900000,
+    "area": 28.42,
+    "priceSqm": 102041,
+    "beds": 1,
+    "roomType": "1BR",
+    "title": "A046959 Niche Mono Itsaraphap，1 房，28.42 ㎡，4 樓，฿2,900,000",
+    "url": "https://propertyhub.in.th/en/listings/a046959-niche-mono-itsaraphap---6220174",
+    "sourceName": "PropertyHub",
+    "projectName": "Niche Mono Itsaraphap",
+    "checkedAt": "2026-10-18",
+    "updated": "2026-10-02",
+    "matchedBy": "exact_propertyhub_project_and_listing_page",
+    "listingStatus": "active_as_listed"
+  },
+  "rentProjectSource": "https://propertyhub.in.th/en/condo-for-rent/project-niche-mono-itsaraphap",
+  "rentListing": {
+    "id": "6368947",
+    "price": 13000,
+    "area": 30,
+    "priceSqm": 433.33,
+    "beds": 1,
+    "roomType": "1BR",
+    "title": "Niche Mono Itsaraphap，1 房，30 ㎡，4 樓，฿13,000/月",
+    "url": "https://propertyhub.in.th/en/listings/1bed-1bath-mrt-itsaraphap-30sqm-thb-13-000-mo-fl-4-niche-mono-itsaraphap-bangkok---6368947",
+    "sourceName": "PropertyHub",
+    "projectName": "Niche Mono Itsaraphap",
+    "checkedAt": "2026-10-18",
+    "updated": "2026-10-03",
+    "availableFrom": "2026-09-03",
+    "matchedBy": "exact_propertyhub_project_and_listing_page",
+    "listingStatus": "availability_unconfirmed_date_unknown"
+  },
+  "defaultYieldEstimate": {
+    "bedrooms": 1,
+    "purchasePrice": 2900000,
+    "purchaseAreaSqm": 28.42,
+    "sourceRentMonthly": 13000,
+    "sourceRentAreaSqm": 30,
+    "estimatedMonthlyRentAtPurchaseArea": 12315,
+    "commonFeePerSqmMonthly": 57,
+    "deductAgentMonths": 1,
+    "annualRentAfterAgent": 135465,
+    "annualCommonFee": 19439.28,
+    "netAnnualYieldPercent": 4.0009
+  },
+  "notes": [
+    "PropertyHub's exact project rent page showed three rental listings when checked on 2026-10-18; the listing page opened directly and identifies the project, one bedroom, 30 sqm, THB 13,000/month and floor 4.",
+    "The project result card was refreshed 2026-10-03. The direct listing states available from 2026-09-03, a date already passed at verification; the listing remains visible, but current vacancy is unconfirmed and is labeled in the UI.",
+    "The listing's rent per square metre is THB 433.33/month. The manually verified sample set contains only this directly inspected rental, not all three result cards.",
+    "PropertyHub's exact sale page showed the 1-bedroom A046959 card at THB 2,900,000 for 28.42 sqm, last refreshed 2026-10-02; its direct detail page was opened and confirmed project name, sale price, bedroom count, floor, and area. The project result page showed no active two-bedroom sale sample, so the ROI baseline remains explicitly one-bedroom.",
+    "Using the lowest verified 1-bedroom sale sample, the directly verified rental rate scaled to 28.42 sqm, THB 57/sqm/month common fee, one agent month, and 12 months of common fees, the default net annual ROI is approximately 4.00%. Taxes, vacancy, maintenance, and purchase costs are excluded."
+  ]
+}
