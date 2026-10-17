@@ -98,7 +98,14 @@
   const areaFor = c => Number(c.area?.min ?? c.area ?? 1);
   const areaLabel = c => c.area && typeof c.area === 'object' ? `${fmt(c.area.min, 1)}–${fmt(c.area.max, 1)} ㎡樓型範圍` : c.area ? `約 ${fmt(c.area, 1)} ㎡` : '';
   const compactMoney = n => n == null ? '—' : n >= 1000000 ? `฿${(n / 1000000).toFixed(2)}M` : `฿${fmt(n / 1000, 0)}K`;
-  const sampleSource = (url, market) => url ? `<a class="sample-source" href="${esc(url)}" target="_blank" rel="noopener" aria-label="${market?.marketSummary ? '開啟Condo行情摘要' : '開啟這筆最低價物件'}" title="${market?.marketSummary ? '開啟Condo行情摘要' : '開啟這筆最低價物件'}" style="color:var(--green);font-weight:700;text-decoration:none;margin-left:4px">${market?.marketSummary ? '行情頁 ↗' : '物件 ↗'}</a>` : '<span class="sample-source-missing" title="目前沒有核對到這筆樣本的個別物件頁">物件連結待補</span>';
+  const sampleSource = (url, market) => {
+    if (!url) return '<span class="sample-source-missing" title="目前沒有核對到這筆樣本的個別物件頁">物件連結待補</span>';
+    const updated = market?.marketSummary ? '' : String(url) === String(market?.minimumSqmSourceUrl || '')
+      ? market?.minimumSqmSampleUpdated : market?.minimumSampleUpdated;
+    const dateLabel = updated ? ` · 更新 ${esc(String(updated).slice(0, 10))}` : '';
+    const label = market?.marketSummary ? '行情頁 ↗' : '物件 ↗';
+    return `<a class="sample-source" href="${esc(url)}" target="_blank" rel="noopener" aria-label="${market?.marketSummary ? '開啟Condo行情摘要' : '開啟這筆最低價物件'}" title="${updated ? `房源更新日 ${esc(String(updated).slice(0, 10))}` : market?.marketSummary ? '開啟Condo行情摘要' : '開啟這筆最低價物件'}" style="color:var(--green);font-weight:700;text-decoration:none;margin-left:4px">${label}${dateLabel}</a>`;
+  };
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const reviewsUrl = c => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${c.name} condo ${c.address || 'Bangkok Thailand'}`)}`;
   const map = L.map('map', { zoomControl: false, scrollWheelZoom: true }).setView([13.7563, 100.5018], 11);
@@ -224,8 +231,8 @@
   }
   function filtered() {
     const read = id => { const value = document.getElementById(id)?.value; return value === '' || value == null ? null : Number(value); };
-    const lowriseOnly = document.getElementById('lowriseOnly')?.checked;
-    const shown = condos.filter(c => matchesQuery(c) && matchesSidebarFilters(c, read, lowriseOnly));
+    const lowriseMode = document.getElementById('lowriseOnly')?.value || 'all';
+    const shown = condos.filter(c => matchesQuery(c) && matchesSidebarFilters(c, read, lowriseMode));
     const keyFor = c => sortMode === 'distance' ? (c.nearestMrt?.distanceKm ?? c.nearestMrt?.straightDistanceKm) : sortMode === 'sale' ? c.sale?.minimumSqm : sortMode === 'rent' ? c.rent?.minimumSqm : yieldFor(c);
     const ranked = sortMode === 'year-new' || sortMode === 'year-old' ? sortMode : null;
     return shown.sort((a, b) => {
@@ -241,9 +248,11 @@
     });
   }
   let budgetMax = null;
-  function matchesSidebarFilters(c, read, lowriseOnly) {
+  function matchesSidebarFilters(c, read, lowriseMode) {
     const floorCount = c.floors == null || c.floors === '' ? NaN : Number(c.floors);
-    if (lowriseOnly && (!Number.isFinite(floorCount) || floorCount > 8)) return false;
+    if (lowriseMode !== 'all' && !Number.isFinite(floorCount)) return false;
+    if (lowriseMode === 'yes' && floorCount > 8) return false;
+    if (lowriseMode === 'no' && floorCount <= 8) return false;
     if (selectedBedrooms && !(Number(c.sale?.byBedroom?.[selectedBedrooms]?.minimum) > 0)) return false;
     const budget = budgetMax;
     const total = selectedBedrooms ? Number(c.sale?.byBedroom?.[selectedBedrooms]?.minimum) : Number(c.sale?.minimum);
@@ -522,7 +531,7 @@
     setBedroomSelection(null);
     budgetMax = null;
     ['distanceMax','saleMin','saleMax','rentMin','rentMax','yieldMin','yieldMax','yearMin','yearMax'].forEach(id => { document.getElementById(id).value = ''; });
-    document.getElementById('lowriseOnly').checked = false;
+    document.getElementById('lowriseOnly').value = 'all';
     renderList();
   });
   document.getElementById('fitMap').addEventListener('click', () => { const points = [...filtered().filter(c => Number.isFinite(c.lat) && Number.isFinite(c.lng)).map(c => [c.lat,c.lng]), ...stations.map(s => [s.lat,s.lng])]; if (points.length) map.fitBounds(points, { padding: [70, 90], maxZoom: 14 }); });

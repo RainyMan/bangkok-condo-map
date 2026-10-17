@@ -42,6 +42,14 @@ def has_individual_listing(market: dict) -> bool:
     return any(isinstance(url, str) and re.search(r"/(?:listings|ads)/", url) for url in urls)
 
 
+def listing_updated(market: dict) -> str:
+    target_url = market.get("minimumSqmSourceUrl") or market.get("minimumSourceUrl")
+    for sample in market.get("samples", []):
+        if isinstance(sample, dict) and sample.get("url") == target_url:
+            return str(sample.get("updated") or "")
+    return ""
+
+
 def main() -> None:
     projects = load_array("bangkok-catalogue.js", "BANGKOK_HIPFLAT_PROJECTS")
     propertyhub = index(load_array("bangkok-propertyhub.js", "BANGKOK_PROPERTYHUB_PROJECTS"), "id")
@@ -114,9 +122,11 @@ def main() -> None:
             "sale_sample": "yes" if has_sale else "no",
             "sale_individual_listing_link": "yes" if sale_linked else "no",
             "sale_source": str(sale.get("minimumSqmSourceUrl") or sale.get("minimumSourceUrl") or sale.get("source") or ""),
+            "sale_sample_updated": listing_updated(sale),
             "rent_sample": "yes" if has_rent else "no",
             "rent_individual_listing_link": "yes" if rent_linked else "no",
             "rent_source": str(rent.get("minimumSqmSourceUrl") or rent.get("minimumSourceUrl") or rent.get("source") or ""),
+            "rent_sample_updated": listing_updated(rent),
             "missing": ", ".join(missing),
         })
 

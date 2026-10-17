@@ -303,7 +303,7 @@
   .filter-toolbar .filter-group summary b::before{font-size:8px}
 }
 
-.lowrise-options label{display:flex;align-items:center;gap:10px;min-height:44px;color:#40534a;font-size:12px;font-weight:600;cursor:pointer}.lowrise-options input{width:19px;height:19px;margin:0;accent-color:#087f63}
+.lowrise-options label{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:44px;color:#40534a;font-size:12px;font-weight:600;cursor:pointer}.lowrise-options select{min-width:135px;max-width:58%;padding:9px 28px 9px 10px;border:1px solid #dfe8e2;border-radius:8px;background:#fff;color:#26352e;font:inherit}.lowrise-options small{display:block;color:#89968f;font-size:10px;line-height:1.5}
 @media(max-width:1200px) and (min-width:851px){
   .filter-toolbar{left:12px;right:12px;gap:6px}
   .filter-toolbar>.searchbox{flex:0 0 180px}

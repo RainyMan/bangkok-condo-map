@@ -7,7 +7,7 @@
   <meta name="description" content="以地圖探索 Hipflat 收錄的曼谷 condo 專案，查看核實座標、售租掛牌來源、每平方米單價與投報試算。">
   <title>Bangkok Condo Map｜BANGKOK Condo 專案全覽</title>
   <link rel="stylesheet" href="vendor/leaflet.css">
-  <link rel="stylesheet" href="style.css?v=15">
+  <link rel="stylesheet" href="style.css?v=16">
 </head>
 <body>
   <header class="topbar">
@@ -36,7 +36,7 @@
         <details class="filter-group"><summary><b data-short="單價 / ㎡">單價 / ㎡</b><span>售價與月租</span></summary><div class="filter-content range-filter"><label>售價最低<input id="saleMin" type="number" min="0" placeholder="最低">฿ / ㎡</label><label>售價最高<input id="saleMax" type="number" min="0" placeholder="最高">฿ / ㎡</label><label>月租最低<input id="rentMin" type="number" min="0" placeholder="最低">฿ / ㎡</label><label>月租最高<input id="rentMax" type="number" min="0" placeholder="最高">฿ / ㎡</label></div></details>
         <details class="filter-group"><summary><b data-short="年投報">年投報率</b><span>淨投報範圍</span></summary><div class="filter-content range-filter"><label>最低<input id="yieldMin" type="number" min="0" step="0.1" placeholder="例如 5">%</label><label>最高<input id="yieldMax" type="number" min="0" step="0.1" placeholder="例如 8">%</label></div></details>
         <details class="filter-group"><summary><b data-short="完工年">完工年</b><span>年份範圍</span></summary><div class="filter-content range-filter"><label>從<input id="yearMin" type="number" min="1900" max="2100" placeholder="2010"></label><label>到<input id="yearMax" type="number" min="1900" max="2100" placeholder="2024"></label></div></details>
-        <details class="filter-group"><summary><b data-short="樓高">8 樓以下</b><span>低樓層 Condo</span></summary><div class="filter-content lowrise-options"><label for="lowriseOnly"><input id="lowriseOnly" type="checkbox">只看 8 樓以下 Condo</label></div></details>
+        <details class="filter-group"><summary><b data-short="樓高">公寓樓高</b><span>是否 8 樓以下</span></summary><div class="filter-content lowrise-options"><label for="lowriseOnly">是否為 8 樓以下公寓<select id="lowriseOnly" aria-label="是否為 8 樓以下公寓" title="選擇是或否時，只顯示已知樓層數的 Condo"><option value="all">不限</option><option value="yes">是，8 樓以下</option><option value="no">否，超過 8 樓</option></select></label><small>樓層資料未公開的 Condo 不會出現在「是／否」結果中。</small></div></details>
       </div>
     </section>
 
@@ -65,7 +65,7 @@
   <script src="bangkok-propertyscout-markets.js?v=20261017b"></script>
   <script src="stations.js?v=20261017c"></script>
   <script src="bangkok-walk-routes.js?v=20261017m"></script>
-  <script src="app.js?v=20261017p"></script>
+  <script src="app.js?v=20261017q"></script>
 </body>
 </html>
 
