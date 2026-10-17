@@ -7,7 +7,7 @@
   <meta name="description" content="以地圖探索 Hipflat 收錄的曼谷 condo 專案，查看核實座標、售租掛牌來源、每平方米單價與投報試算。">
   <title>Bangkok Condo Map｜BANGKOK Condo 專案全覽</title>
   <link rel="stylesheet" href="vendor/leaflet.css">
-  <link rel="stylesheet" href="style.css?v=14">
+  <link rel="stylesheet" href="style.css?v=15">
 </head>
 <body>
   <header class="topbar">
@@ -23,6 +23,7 @@
 
   <main class="map-shell">
     <div id="map" role="region" aria-label="曼谷 condo Condo 地圖"></div>
+    <div id="startupLoader" class="startup-loader" role="status"><span class="loading-spinner"></span><span>正在載入 Condo 與捷運資料…</span></div>
     <div class="map-wash" aria-hidden="true"></div>
     <section class="filter-toolbar panel" aria-label="Condo 篩選條件">
       <label class="searchbox"><span class="search-icon">⌕</span><input id="search" type="search" placeholder="搜尋 Condo、站點或條件，例如：2房售價<=100萬" autocomplete="off" aria-label="搜尋 Condo或自訂篩選條件"><kbd>⌘ K</kbd></label>
@@ -55,16 +56,15 @@
   <script src="catalogue.js"></script>
   <script src="huai-khwang.js"></script>
   <script src="bangkok-catalogue.js?v=20261017c"></script>
-  <script src="bangkok-propertyhub.js?v=20261017c"></script>
+  <script src="bangkok-propertyhub-map.js?v=20261017p"></script>
   <script src="bangkok-propertyhub-details.js?v=20261017c"></script>
   <script src="bangkok-propertyhub-guessed-details.js?v=20261017k"></script>
-  <script src="bangkok-propertyhub-city-summaries.js?v=20261017k"></script>
   <script src="bangkok-osm.js?v=20261017e"></script>
   <script src="bangkok-propertyscout-details.js?v=20261017b"></script>
   <script src="bangkok-propertyscout-markets.js?v=20261017b"></script>
   <script src="stations.js?v=20261017c"></script>
   <script src="bangkok-walk-routes.js?v=20261017m"></script>
-  <script src="app.js?v=20261017o"></script>
+  <script src="app.js?v=20261017p"></script>
 </body>
 </html>
 
