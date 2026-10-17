@@ -82,6 +82,8 @@ def main() -> None:
         scout_market = scout_markets.get(project_id, {})
         manual_market = manual_markets.get(project_id, {})
         sale = city.get(project_id, {}).get("sale") or market.get("sale") or scout_market.get("sale") or manual_market.get("sale") or {}
+        if manual_market.get("replaceSale") and manual_market.get("sale"):
+            sale = manual_market["sale"]
         rent = city.get(project_id, {}).get("rent") or market.get("rent") or scout_market.get("rent") or manual_market.get("rent") or {}
         scout_location = scout_details.get(project_id, {})
         verified_location = verified_coordinates.get(project_id, {})
@@ -102,10 +104,20 @@ def main() -> None:
         )
         sale_linked = (has_sale and has_individual_listing(sale)) or has_manual_sale_listing
         rent_linked = has_rent and has_individual_listing(rent)
-        coordinate_source = (
-            market.get("locationSourceUrl") or project.get("locationSourceUrl") or osm.get(project_id, {}).get("sourceUrl")
-            or scout_location.get("locationSourceUrl") or verified_location.get("sourceUrl") or legacy.get("locationSourceUrl") or ""
-        )
+        # Match the coordinate source actually selected by app.js instead of
+        # accidentally reporting a market/search URL as the location source.
+        coordinate_source = ""
+        for row, source_url in (
+            (market, market.get("locationSourceUrl")),
+            (project, project.get("locationSourceUrl")),
+            (osm.get(project_id, {}), osm.get(project_id, {}).get("sourceUrl")),
+            (scout_location, scout_location.get("locationSourceUrl")),
+            (verified_location, verified_location.get("sourceUrl")),
+            (legacy, legacy.get("locationSourceUrl")),
+        ):
+            if row.get("locationVerified") and row.get("lat") is not None and row.get("lng") is not None:
+                coordinate_source = str(source_url or "")
+                break
         counts.update({
             "coordinates": int(has_coords), "sale": int(has_sale), "rent": int(has_rent),
             "sale_individual_listing": int(sale_linked), "rent_individual_listing": int(rent_linked),

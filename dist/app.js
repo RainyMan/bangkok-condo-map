@@ -49,6 +49,7 @@
     if (citySummary.rent) propertyHub.rent = citySummary.rent;
     if (!propertyHub.sale && propertyScoutMarket.sale) propertyHub.sale = propertyScoutMarket.sale;
     if (!propertyHub.rent && propertyScoutMarket.rent) propertyHub.rent = propertyScoutMarket.rent;
+    if (manualMarket.replaceSale === true && manualMarket.sale) propertyHub.sale = manualMarket.sale;
     if (!propertyHub.sale && manualMarket.sale) propertyHub.sale = manualMarket.sale;
     if (!propertyHub.rent && manualMarket.rent) propertyHub.rent = manualMarket.rent;
     const osm = osmById.get(Number(project.id));
