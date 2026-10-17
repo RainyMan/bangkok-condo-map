@@ -272,18 +272,15 @@
   let query = '';
   let sortMode = 'distance';
   const yieldOverrides = new Map();
-  const yieldStorageKey = 'bangkokCondoYieldInputsV3';
+  // Recalculate the map baseline from the current lowest two-bedroom listing.
+  // Older saved estimates remain in their previous storage key, while V4
+  // starts from the refreshed matched price/area/rent defaults.
+  const yieldStorageKey = 'bangkokCondoYieldInputsV4';
   const loadYieldInputs = () => {
     try {
       const current = localStorage.getItem(yieldStorageKey);
       if (current) return JSON.parse(current);
-      // Older saved estimates may use another room count. Keep only saved
-      // two-bedroom estimates so default map yields are recalculated from the
-      // lowest two-bedroom sale listing and its matching floor area.
-      const legacy = JSON.parse(localStorage.getItem('bangkokCondoYieldInputsV2') || '{}');
-      const twoBedroom = Object.fromEntries(Object.entries(legacy).filter(([, row]) => String(row?.beds) === '2'));
-      if (Object.keys(twoBedroom).length) localStorage.setItem(yieldStorageKey, JSON.stringify(twoBedroom));
-      return twoBedroom;
+      return {};
     } catch { return {}; }
   };
   const saveYieldInputs = values => { try { localStorage.setItem(yieldStorageKey, JSON.stringify(values)); } catch {} };
