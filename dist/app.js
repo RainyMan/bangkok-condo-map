@@ -275,12 +275,32 @@
   // Recalculate the map baseline from the current lowest two-bedroom listing.
   // Older saved estimates remain in their previous storage key, while V4
   // starts from the refreshed matched price/area/rent defaults.
-  const yieldStorageKey = 'bangkokCondoYieldInputsV4';
+  const yieldStorageKey = 'bangkokCondoYieldInputsV5';
   const loadYieldInputs = () => {
     try {
       const current = localStorage.getItem(yieldStorageKey);
       if (current) return JSON.parse(current);
-      return {};
+      // Rebuild the saved baseline from each Condo's lowest two-bedroom sale
+      // and the two-bedroom rent rate multiplied by that same unit's area.
+      // Preserve the user's fee switches, but discard old cached price/area
+      // values so the map and detail cards start from the refreshed samples.
+      const previous = JSON.parse(localStorage.getItem('bangkokCondoYieldInputsV4') || '{}');
+      const recalculated = {};
+      condos.forEach(c => {
+        const defaults = yieldDefaultsFor(c, '2');
+        if (!(Number(defaults.price) > 0) || !(Number(defaults.area) > 0) || !(Number(defaults.rent) > 0)) return;
+        const old = previous[c.id] || {};
+        recalculated[c.id] = {
+          price: defaults.price,
+          rent: defaults.rent,
+          area: defaults.area,
+          beds: defaults.beds,
+          deductFee: old.deductFee ?? true,
+          deductAgent: old.deductAgent ?? true,
+        };
+      });
+      localStorage.setItem(yieldStorageKey, JSON.stringify(recalculated));
+      return recalculated;
     } catch { return {}; }
   };
   const saveYieldInputs = values => { try { localStorage.setItem(yieldStorageKey, JSON.stringify(values)); } catch {} };
