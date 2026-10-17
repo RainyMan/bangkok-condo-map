@@ -1,0 +1,9 @@
+{
+  "host": "imap.gmail.com",
+  "port": 993,
+  "username": "your-email@example.com",
+  "folder": "INBOX",
+  "days": 45,
+  "fromDomains": ["ddproperty.com", "propertyhub.in.th"],
+  "credentialName": "BangkokCondoDailyIMAP"
+}

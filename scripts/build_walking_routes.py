@@ -17,6 +17,12 @@ PROPERTYHUB = ROOT / "dist/bangkok-propertyhub.js"
 PROPERTYHUB_DETAILS = ROOT / "dist/bangkok-propertyhub-details.js"
 PROPERTYHUB_GUESSED_DETAILS = ROOT / "dist/bangkok-propertyhub-guessed-details.js"
 PROPERTYSCOUT_DETAILS = ROOT / "dist/bangkok-propertyscout-details.js"
+VERIFIED_COORDINATES = ROOT / "dist/bangkok-verified-coordinates.js"
+LEGACY_FILES = (
+    (ROOT / "dist/data.js", "CONDO_DATA"),
+    (ROOT / "dist/catalogue.js", "CATALOGUE_PROJECTS"),
+    (ROOT / "dist/huai-khwang.js", "HUAI_KHWANG_PROJECTS"),
+)
 STATIONS = ROOT / "dist/stations.js"
 CACHE = RESEARCH / "walking-route-matrix.jsonl"
 OUTPUT = ROOT / "dist/bangkok-walk-routes.js"
@@ -48,6 +54,15 @@ def main() -> int:
     guessed = {int(x["hipflatProjectId"]): x for x in guessed_rows if x.get("hipflatProjectId") and x.get("locationVerified")}
     propertyscout_rows = js_array(PROPERTYSCOUT_DETAILS, "BANGKOK_PROPERTYSCOUT_DETAILS") if PROPERTYSCOUT_DETAILS.exists() else []
     propertyscout = {int(x["hipflatId"]): x for x in propertyscout_rows if x.get("hipflatId") and x.get("locationVerified")}
+    verified_rows = js_array(VERIFIED_COORDINATES, "BANGKOK_VERIFIED_COORDINATES") if VERIFIED_COORDINATES.exists() else []
+    verified = {int(x["hipflatId"]): x for x in verified_rows if x.get("hipflatId") and x.get("locationVerified")}
+    legacy_by_name: dict[str, list[dict]] = {}
+    for path, symbol in LEGACY_FILES:
+        if not path.exists():
+            continue
+        for row in js_array(path, symbol):
+            key = re.sub(r"[^a-z0-9]+", " ", str(row.get("name") or "").lower()).strip()
+            legacy_by_name.setdefault(key, []).append(row)
     stations = js_array(STATIONS, "MRT_STATIONS")
     cache: dict[int, dict] = {}
     if CACHE.exists():
@@ -75,12 +90,34 @@ def main() -> int:
         enriched = ph.get(pid) or {}
         market = propertyhub.get(pid) or {}
         project_detail = details.get(str(market.get("propertyHubProjectId") or "")) or {}
-        point = enriched if enriched.get("locationVerified") else project_detail if project_detail.get("locationVerified") else guessed.get(pid) if guessed.get(pid) else project if project.get("locationVerified") else osm.get(pid) or propertyscout.get(pid)
+        point = enriched if enriched.get("locationVerified") else project_detail if project_detail.get("locationVerified") else guessed.get(pid) if guessed.get(pid) else None
+        if not point and project.get("locationVerified"):
+            point = project
+        if not point:
+            point = osm.get(pid)
+        if not point:
+            point = propertyscout.get(pid)
+        if not point:
+            point = verified.get(pid)
+        if not point:
+            key = re.sub(r"[^a-z0-9]+", " ", str(project.get("name") or "").lower()).strip()
+            matches = legacy_by_name.get(key, [])
+            point = matches[0] if len(matches) == 1 and matches[0].get("locationVerified") else None
         if not point:
             continue
         lat, lon = point.get("lat"), point.get("lng")
         if isinstance(lat, (int, float)) and isinstance(lon, (int, float)):
             coords.append({"id": pid, "name": project["name"], "lat": lat, "lon": lon})
+    coords_by_id = {point["id"]: point for point in coords}
+    # Drop cached walking routes if the project's verified coordinates were
+    # removed or changed. Keeping them would show a plausible route for the
+    # old point, even though the current listing no longer has that location.
+    cache = {
+        project_id: route for project_id, route in cache.items()
+        if project_id in coords_by_id
+        and abs(float(route.get("originLat", 0)) - coords_by_id[project_id]["lat"]) < 0.00001
+        and abs(float(route.get("originLng", 0)) - coords_by_id[project_id]["lon"]) < 0.00001
+    }
     todo = [point for point in coords if point["id"] not in cache or point["id"] in refresh_ids]
     print(f"Verified coordinates: {len(coords)}; routes cached: {len(cache)}; forced refresh: {len(refresh_ids)}; pending: {len(todo)}", flush=True)
     session = requests.Session()

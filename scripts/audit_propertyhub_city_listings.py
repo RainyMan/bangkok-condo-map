@@ -13,6 +13,7 @@ RESEARCH = pathlib.Path(r"C:\Users\j654v\Desktop\codex\condo_research\bangkok")
 PAGES = RESEARCH / "propertyhub-bangkok-pages.jsonl"
 OUTPUT = RESEARCH / "propertyhub-city-listing-match-audit.json"
 SUMMARY_OUTPUT = DIST / "bangkok-propertyhub-city-summaries.js"
+EXCLUSIONS = pathlib.Path(__file__).with_name("propertyhub_listing_exclusions.json")
 DISTRICTS = (
     "Pom Prap Sattru Phai", "Thawi Watthana", "Khlong Sam Wa", "Bang Khun Thian", "Bang Kho Laem", "Saphan Sung",
     "Bangkok Yai", "Bangkok Noi", "Phaya Thai", "Phra Khanong", "Ratchathewi", "Samphanthawong", "Wang Thonglang",
@@ -58,6 +59,8 @@ def district(value: str) -> str | None:
 def main() -> None:
     projects = arr("bangkok-catalogue.js", "BANGKOK_HIPFLAT_PROJECTS")
     propertyhub = arr("bangkok-propertyhub.js", "BANGKOK_PROPERTYHUB_PROJECTS")
+    exclusions = json.loads(EXCLUSIONS.read_text(encoding="utf-8")) if EXCLUSIONS.exists() else []
+    excluded_listing_ids = {str(row["listingId"]) for row in exclusions}
     by_ph_id = {str(row["propertyHubProjectId"]): row for row in propertyhub if row.get("propertyHubProjectId")}
     # Link additional PropertyHub projects only where the official project page
     # was fetched and its numeric ID plus exact English name match a unique
@@ -102,6 +105,7 @@ def main() -> None:
     listings: dict[tuple[int, str], dict[str, dict]] = defaultdict(dict)
     match_methods: Counter = Counter()
     unresolved_name: Counter = Counter()
+    excluded_listing_cards: set[str] = set()
     pages = 0
     raw_cards = 0
     for line in PAGES.open(encoding="utf-8"):
@@ -109,10 +113,15 @@ def main() -> None:
         pages += 1
         for item in page.get("listings", []):
             raw_cards += 1
+            listing_id = str(item.get("listingId") or "")
+            if listing_id in excluded_listing_ids:
+                excluded_listing_cards.add(listing_id)
+                continue
             kind = item.get("kind") or page.get("kind")
             if kind not in {"sale", "rent"}:
                 continue
             owner = by_ph_id.get(str(item.get("projectId") or ""))
+            duplicate_owners = []
             method = "propertyhub_project_id"
             if owner is None:
                 owner = project_detail_by_ph_id.get(str(item.get("projectId") or ""))
@@ -147,32 +156,48 @@ def main() -> None:
                         owner = None
                     else:
                         method = "exact_name_and_district"
-                elif item.get("projectName"):
+                elif len(candidates) > 1 and listing_district:
+                    # Hipflat occasionally contains duplicate project records.
+                    # Share the listing only when every exact-name candidate
+                    # has the same district and identical normalized address.
+                    # Similar names or distinct addresses remain unresolved.
+                    address_keys = {norm(p.get("address", "")) for p in candidates}
+                    exact_names = all(norm(p.get("name", "")) == norm(item.get("projectName", "")) for p in candidates)
+                    if exact_names and len(address_keys) == 1 and next(iter(address_keys), ""):
+                        duplicate_owners = candidates
+                        method = "exact_name_district_identical_address_duplicate"
+                    else:
+                        duplicate_owners = []
+                else:
+                    duplicate_owners = []
+                if owner is None and not duplicate_owners and item.get("projectName"):
                     reason = "no_exact_name" if not candidates else "ambiguous_exact_name" if len(candidates) > 1 else "district_conflict"
                     unresolved_name[reason] += 1
-            if owner is None:
+            owners = [owner] if owner is not None else duplicate_owners
+            if not owners:
                 continue
             price = float(item.get("price") or 0)
             area = float(item.get("area") or 0)
             price_sqm = float(item.get("priceSqm") or (price / area if area > 0 else 0))
-            valid_band = (10_000 <= price_sqm <= 2_000_000) if kind == "sale" else (100 <= price_sqm <= 20_000)
+            valid_band = (10_000 <= price_sqm <= 2_000_000) if kind == "sale" else (50 <= price_sqm <= 20_000)
             if price <= 0 or area < 8 or not valid_band:
                 continue
-            key = (int(owner["id"]), kind)
             listing_url = str(item.get("url") or "")
             listing_id = str(item.get("listingId") or listing_url or "")
             if not listing_id or not listing_url.startswith("https://propertyhub.in.th/en/listings/"):
                 continue
-            existing = listings[key].get(listing_id)
             normalized = {
                 "id": listing_id, "price": price, "area": area, "priceSqm": int(round(price_sqm)),
                 "beds": item.get("beds"), "roomType": item.get("roomType"), "title": item.get("title"),
                 "url": item.get("url"), "updated": item.get("updated"), "projectId": str(item.get("projectId") or ""),
                 "projectName": item.get("projectName"), "matchedBy": method,
             }
-            if existing is None or str(normalized.get("updated") or "") > str(existing.get("updated") or ""):
-                listings[key][listing_id] = normalized
-            match_methods[method] += 1
+            for matched_owner in owners:
+                key = (int(matched_owner["id"]), kind)
+                existing = listings[key].get(listing_id)
+                if existing is None or str(normalized.get("updated") or "") > str(existing.get("updated") or ""):
+                    listings[key][listing_id] = normalized
+                match_methods[method] += 1
 
     # Add per-project samples already fetched from the project's own listing
     # page before building the city-wide summaries, deduplicating by listing ID.
@@ -181,10 +206,12 @@ def main() -> None:
         for kind in ("sale", "rent"):
             market = row.get(kind) or {}
             for sample in market.get("samples") or []:
+                if str(sample.get("id") or "") in excluded_listing_ids:
+                    continue
                 price = float(sample.get("price") or 0)
                 area = float(sample.get("area") or 0)
                 price_sqm = float(sample.get("priceSqm") or (price / area if area > 0 else 0))
-                valid_band = (10_000 <= price_sqm <= 2_000_000) if kind == "sale" else (100 <= price_sqm <= 20_000)
+                valid_band = (10_000 <= price_sqm <= 2_000_000) if kind == "sale" else (50 <= price_sqm <= 20_000)
                 if price <= 0 or area < 8 or not valid_band:
                     continue
                 listing_url = str(sample.get("url") or "")
@@ -214,6 +241,7 @@ def main() -> None:
                 "count": len(rows), "observedCount": len(rows), "countKind": "matched_city_index",
                 "average": int(round(sum(row["price"] for row in rows) / len(rows))),
                 "minimum": lowest_total["price"],
+                "minimumArea": lowest_total["area"],
                 "minimumSampleUpdated": lowest_total.get("updated"),
                 "averageSqm": int(round(sum(row["priceSqm"] for row in rows) / len(rows))),
                 "minimumSqm": lowest_sqm["priceSqm"], "minimumSqmSampleUpdated": lowest_sqm.get("updated"), "asOf": "2026-10-17",
@@ -233,6 +261,7 @@ def main() -> None:
                 room_lowest_sqm = min(room_rows, key=lambda row: row["priceSqm"])
                 by_bedroom[str(bedroom)] = {
                     "count": len(room_rows), "minimum": room_lowest["price"],
+                    "area": room_lowest["area"], "priceSqm": room_lowest["priceSqm"],
                     "minimumSqm": room_lowest_sqm["priceSqm"], "sourceUrl": room_lowest["url"],
                     "minimumSqmSourceUrl": room_lowest_sqm["url"],
                 }
@@ -247,6 +276,7 @@ def main() -> None:
         "projectsWithBothSaleAndRent": len(all_ids["sale"] & all_ids["rent"]),
         "uniqueListingCount": {kind: sum(len(rows) for rows in per_kind[kind].values()) for kind in per_kind},
         "matchMethods": dict(match_methods), "unresolvedNameCards": dict(unresolved_name),
+        "excludedListingCount": len(excluded_listing_cards),
         "summaryFile": str(SUMMARY_OUTPUT), "summaryProjects": len(summaries),
     }
     OUTPUT.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")

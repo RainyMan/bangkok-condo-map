@@ -16,6 +16,26 @@ ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
 OUTPUT = DIST / "bangkok-propertyscout-markets.js"
 AUDIT = locations.RESEARCH / "propertyscout-market-audit.json"
+# Manually reviewed project-name aliases. Each record has the same verified
+# Bangkok district and a distinctive matching project name, block/phase number,
+# or clear transliteration/number-format variant on the linked PropertyScout
+# page. Numbered phase conflicts and street/district conflicts stay excluded.
+VERIFIED_NAME_EQUIVALENCES = {
+    3654,  # Boutique Le Rich Ratchada-Sutthisan / Le Rich Ratchada-Sutthisan
+    3199,  # Brix Charan 64 / Charansanitwong 64
+    4954,  # The President Sukhumvit 81 / The President Condo Sukhumvit 81
+    5106,  # N.S. Tower Central Bangna / NS Tower Central City Bangna
+    5455,  # Quinn Condo Ratchada / Quinn Condo Ratchada 17; address is Ratchadaphisek 17
+    3804,  # Royal Castle Sukhumvit 39 / Royal Castle Sukhumvit
+    3855,  # Altitude Symphony Charoenkrung - Sathorn / Charoenkrung
+    4379,  # Maxxi Ratchayothin-Phaholyothin 34 / Rachayothin-Phahol 34
+    4599,  # Rama 3 / Rama III
+    5581,  # Green Ville II / Green Ville 2
+    5713,  # Baan Klang Krung Resort / Klang Krung Resort (Ratchada 7)
+    6156,  # The Bangkok Narathiwas Ratchanakarint / Condominium spelling variant
+    6332,  # Bewerly / Beverly Tower
+    6363,  # Prasanmitr / Prasarnmit Place
+}
 
 
 def number(value: str) -> float | None:
@@ -166,7 +186,8 @@ def main() -> int:
         district, expected_district = aliases.get(district, district), aliases.get(expected_district, expected_district)
         cross_check = locations.CROSS_DISTRICT_VERIFIED.get(int(row["hipflatId"]))
         min_name_score = 95 if row.get("slugMatchScore", 100) < 100 else 90
-        if row.get("error") or row.get("nameScore", 0) < min_name_score or (expected_district and district != expected_district and not cross_check):
+        name_verified = row.get("nameScore", 0) >= min_name_score or int(row["hipflatId"]) in VERIFIED_NAME_EQUIVALENCES
+        if row.get("error") or not name_verified or (expected_district and district != expected_district and not cross_check):
             continue
         sale = None if row.get("existingSale") else row.get("sale")
         rent = None if row.get("existingRent") else row.get("rent")

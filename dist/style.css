@@ -153,7 +153,10 @@
 .panel-size-toggle{display:grid;place-items:center;width:28px;height:28px;border:1px solid #dfe7e2;border-radius:8px;background:#fff;color:#52645b;font-size:17px;line-height:1;cursor:pointer}
 .panel-size-toggle:hover{border-color:#91c6a8;background:#f2faf5;color:#087f63}
 .detail-panel{position:absolute}
-.detail-size-toggle{position:absolute;z-index:2;top:14px;right:54px}
+.detail-size-toggle{position:absolute;z-index:2;top:14px;right:14px}
+.detail-topline{padding-right:38px}
+.yield-input select{width:100%;height:34px;padding:0 8px;border:1px solid #e1e8e3;border-radius:7px;outline:0;background:#fff;color:#36463e;font:600 11px "DM Sans","Noto Sans TC",sans-serif}
+.yield-input select:focus{border-color:#78b99a;box-shadow:0 0 0 2px #dff2e7}
 .detail-panel.compact{height:auto;max-height:none;bottom:auto;overflow:hidden}
 .detail-panel.compact .walk-section,.detail-panel.compact .detail-section{display:none}
 .detail-panel.compact .detail-hero{padding-bottom:14px}
@@ -161,7 +164,7 @@
 .explorer.compact .sort-order-row,.explorer.compact .project-list,.explorer.compact .panel-foot{display:none}
 .explorer.compact .list-heading{padding:0}
 @media(max-width:650px){
-  .detail-size-toggle{top:12px;right:49px}
+  .detail-size-toggle{top:12px;right:12px}
   .detail-panel.compact{top:auto;bottom:10px;left:10px;right:10px;width:auto;max-height:180px}
   .explorer.compact{top:auto;bottom:10px;left:10px;right:auto;width:220px;height:auto;min-height:0;padding:10px 12px}
   .explorer.compact .list-heading{padding:0}
@@ -242,7 +245,7 @@
   .map-note .line-legend>span{gap:2px}
   .map-note .line-legend i{width:6px;height:6px}
   .close-detail{right:11px;top:11px;width:32px;height:32px;font-size:20px}
-  .detail-size-toggle{top:12px;right:50px;width:32px;height:32px}
+  .detail-size-toggle{top:12px;right:10px;width:32px;height:32px}
   .detail-panel.compact{top:auto;bottom:max(8px,env(safe-area-inset-bottom));left:8px;right:8px;width:auto;max-height:190px}
   .explorer.compact{top:auto;bottom:max(8px,env(safe-area-inset-bottom));left:8px;right:auto;width:min(230px,calc(100vw - 16px));height:auto;min-height:0;max-height:none;padding:9px 10px}
   .explorer.compact .list-heading{padding:0}

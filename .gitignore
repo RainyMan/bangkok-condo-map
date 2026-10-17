@@ -1,1 +1,5 @@
 scripts/__pycache__/
+local-data/*
+!local-data/property-alerts/
+!local-data/property-alerts/README.md
+dist/bangkok-local-listings.js

@@ -39,7 +39,7 @@ def in_range(value: object, low: int, high: int) -> bool:
 def has_individual_listing(market: dict) -> bool:
     urls = [market.get("minimumSourceUrl"), market.get("minimumSqmSourceUrl")]
     urls.extend(sample.get("url") for sample in market.get("samples", []) if isinstance(sample, dict))
-    return any(isinstance(url, str) and re.search(r"/(?:listings|ads)/", url) for url in urls)
+    return any(isinstance(url, str) and re.search(r"/(?:listings|ads|property|properties|view/\d+|livingdetail_en/\d+|detail/condo-)|tperty\.com/.+-\d{5,}|property-hua-hin\.com/.+-u\d{5,}|propertyscout\.co\.th/.+-\d{6,}/?|thaiapartment\.com/condo-detail/", url) for url in urls)
 
 
 def listing_updated(market: dict) -> str:
@@ -58,7 +58,9 @@ def main() -> None:
     city = index(load_array("bangkok-propertyhub-city-summaries.js", "BANGKOK_PROPERTYHUB_CITY_SUMMARIES"), "id")
     osm = index(load_array("bangkok-osm.js", "BANGKOK_OSM_LOCATIONS"), "id")
     scout_details = index(load_array("bangkok-propertyscout-details.js", "BANGKOK_PROPERTYSCOUT_DETAILS"), "hipflatId")
+    verified_coordinates = index(load_array("bangkok-verified-coordinates.js", "BANGKOK_VERIFIED_COORDINATES"), "hipflatId")
     scout_markets = index(load_array("bangkok-propertyscout-markets.js", "BANGKOK_PROPERTYSCOUT_MARKETS"), "hipflatId")
+    manual_markets = index(load_array("bangkok-manual-market-samples.js", "BANGKOK_MANUAL_MARKET_SAMPLES"), "hipflatId")
     legacy_rows = (
         load_array("data.js", "CONDO_DATA")
         + load_array("catalogue.js", "CATALOGUE_PROJECTS")
@@ -78,23 +80,31 @@ def main() -> None:
         # Match app.js source precedence for project and market data.
         market = {**base, **guessed.get(project_id, {}), **details.get(propertyhub_id, {})}
         scout_market = scout_markets.get(project_id, {})
-        sale = city.get(project_id, {}).get("sale") or market.get("sale") or scout_market.get("sale") or {}
-        rent = city.get(project_id, {}).get("rent") or market.get("rent") or scout_market.get("rent") or {}
+        manual_market = manual_markets.get(project_id, {})
+        sale = city.get(project_id, {}).get("sale") or market.get("sale") or scout_market.get("sale") or manual_market.get("sale") or {}
+        rent = city.get(project_id, {}).get("rent") or market.get("rent") or scout_market.get("rent") or manual_market.get("rent") or {}
         scout_location = scout_details.get(project_id, {})
+        verified_location = verified_coordinates.get(project_id, {})
         project_name_key = re.sub(r"[^a-z0-9]+", " ", str(project.get("name", "")).lower()).strip()
         legacy_matches = legacy_by_name.get(project_name_key, [])
         legacy = legacy_matches[0] if len(legacy_matches) == 1 else {}
         has_coords = any((row.get("locationVerified") and row.get("lat") is not None and row.get("lng") is not None)
-                         for row in (market, project, scout_location, legacy)) or (
+                         for row in (market, project, scout_location, verified_location, legacy)) or (
             osm.get(project_id, {}).get("lat") is not None and osm[project_id].get("lng") is not None
         )
         has_sale = in_range(sale.get("minimumSqm"), 10_000, 2_000_000)
-        has_rent = in_range(rent.get("minimumSqm"), 100, 20_000)
-        sale_linked = has_sale and has_individual_listing(sale)
+        has_rent = in_range(rent.get("minimumSqm"), 50, 20_000)
+        manual_sale_samples = manual_market.get("sale", {}).get("samples", [])
+        has_manual_sale_listing = any(
+            sample.get("price") and sample.get("area") and isinstance(sample.get("url"), str)
+            and has_individual_listing({"minimumSourceUrl": sample["url"]})
+            for sample in manual_sale_samples if isinstance(sample, dict)
+        )
+        sale_linked = (has_sale and has_individual_listing(sale)) or has_manual_sale_listing
         rent_linked = has_rent and has_individual_listing(rent)
         coordinate_source = (
             market.get("locationSourceUrl") or project.get("locationSourceUrl") or osm.get(project_id, {}).get("sourceUrl")
-            or scout_location.get("locationSourceUrl") or legacy.get("locationSourceUrl") or ""
+            or scout_location.get("locationSourceUrl") or verified_location.get("sourceUrl") or legacy.get("locationSourceUrl") or ""
         )
         counts.update({
             "coordinates": int(has_coords), "sale": int(has_sale), "rent": int(has_rent),
@@ -105,7 +115,7 @@ def main() -> None:
         if not has_coords:
             missing.append("座標")
         if not has_sale:
-            missing.append("出售")
+            missing.append("出售行情（僅有特殊資產掛牌）" if has_manual_sale_listing else "出售")
         elif not sale_linked:
             missing.append("出售單筆來源")
         if not has_rent:
@@ -119,7 +129,8 @@ def main() -> None:
             "hipflat_project": str(project.get("hipflatProjectUrl") or ""),
             "coordinates": "yes" if has_coords else "no",
             "coordinate_source": str(coordinate_source),
-            "sale_sample": "yes" if has_sale else "no",
+            "sale_sample": "yes" if has_sale or has_manual_sale_listing else "no",
+            "sale_market_value": "yes" if has_sale else "no",
             "sale_individual_listing_link": "yes" if sale_linked else "no",
             "sale_source": str(sale.get("minimumSqmSourceUrl") or sale.get("minimumSourceUrl") or sale.get("source") or ""),
             "sale_sample_updated": listing_updated(sale),

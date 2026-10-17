@@ -1,0 +1,18 @@
+[
+  {
+    "listingId": "5893289",
+    "hipflatProjectId": 3047,
+    "propertyHubProjectId": "668",
+    "kind": "sale",
+    "sourceUrl": "https://propertyhub.in.th/en/listings/for-sale-condo-1-bedroom-at-la-green-hotel-residence---5893289",
+    "reason": "PropertyHub links the card to UTD Aries, but the listing identifies La Green Hotel & Residence, gives a Phuket location, and states floor 7 while UTD Aries is a five-floor Bangkok project."
+  },
+  {
+    "listingId": "6296795",
+    "hipflatProjectId": 3051,
+    "propertyHubProjectId": "3051",
+    "kind": "sale",
+    "sourceUrl": "https://propertyhub.in.th/en/listings/2-bedroom-condo-for-sale-jomtien-yacht-club-pattaya---6296795",
+    "reason": "PropertyHub project page linked a Jomtien Yacht Club Pattaya listing to Juldis Mansion in Bangkok; the listing title and location show it is a different project."
+  }
+]

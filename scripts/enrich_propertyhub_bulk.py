@@ -23,6 +23,7 @@ ENRICHED_FILE = DIST / "bangkok-propertyhub.js"
 DIRECT_CACHE = RESEARCH / "propertyhub-enrichment.jsonl"
 PAGE_CACHE = RESEARCH / "propertyhub-bangkok-pages.jsonl"
 LOG = RESEARCH / "propertyhub-bulk-progress.log"
+EXCLUSIONS_FILE = pathlib.Path(__file__).with_name("propertyhub_listing_exclusions.json")
 BASE = "https://propertyhub.in.th"
 HEADERS = {
     "User-Agent": "BangkokCondoMapResearch/1.0 (public listing research)",
@@ -61,7 +62,7 @@ def parse_ad(ad: dict[str, Any], kind: str) -> dict[str, Any] | None:
     rate = amount / area
     if kind == "sale" and not (10_000 <= amount <= 500_000_000 and 10_000 <= rate <= 2_000_000):
         return None
-    if kind == "rent" and not (500 <= amount <= 5_000_000 and 100 <= rate <= 20_000):
+    if kind == "rent" and not (500 <= amount <= 5_000_000 and 50 <= rate <= 20_000):
         return None
     listing_id = str(ad.get("id") or "")
     slug = str(ad.get("slug") or "")
@@ -220,11 +221,15 @@ def main() -> int:
 
 def aggregate(projects: list[dict[str, Any]], indexes: list[tuple[int, str, set[str]]], token_index: dict[str, set[int]],
               pages: dict[str, dict[str, Any]], direct: dict[int, dict[str, Any]]) -> list[dict[str, Any]]:
+    exclusions = json.loads(EXCLUSIONS_FILE.read_text(encoding="utf-8")) if EXCLUSIONS_FILE.exists() else []
+    excluded_ids = {str(item["listingId"]) for item in exclusions}
     by_project: dict[int, dict[str, dict[str, dict[str, Any]]]] = defaultdict(lambda: {"sale": {}, "rent": {}})
     project_meta: dict[int, dict[str, Any]] = {}
     for page in pages.values():
         kind = page.get("kind")
         for ad in page.get("listings", []):
+            if str(ad.get("listingId") or "") in excluded_ids:
+                continue
             pid = project_match(ad.get("projectName"), indexes, token_index)
             if pid is not None:
                 by_project[pid][kind][ad["listingId"]] = ad
@@ -244,6 +249,36 @@ def aggregate(projects: list[dict[str, Any]], indexes: list[tuple[int, str, set[
         for kind in ("sale", "rent"):
             values = list(by_project[pid][kind].values())
             previous = row.get(kind) or {}
+            # Preserve the area paired with the previous minimum when a
+            # project-page sample, rather than the city-card sample, is still
+            # the lowest listing. Older summaries stored the URL and price but
+            # omitted its area, which made ROI fall back to the project range.
+            previous_samples = previous.get("samples", [])
+            previous_minimum_url = previous.get("minimumSourceUrl")
+            previous_minimum_value = float(previous.get("minimum") or math.inf)
+            previous_minimum_sample = next((sample for sample in previous_samples
+                                            if previous_minimum_url and sample.get("url") == previous_minimum_url), None)
+            if previous_minimum_sample is None and math.isfinite(previous_minimum_value):
+                previous_minimum_sample = next((sample for sample in previous_samples
+                                                if abs(float(sample.get("price") or 0) - previous_minimum_value) < 0.01), None)
+            if previous_minimum_sample and previous_minimum_sample.get("area"):
+                previous["minimumArea"] = previous_minimum_sample["area"]
+            previous_bedrooms = previous.get("byBedroom") or {}
+            if previous_bedrooms and previous_samples:
+                for bedroom, room in previous_bedrooms.items():
+                    room_sample = next((sample for sample in previous_samples
+                                        if room.get("sourceUrl") and sample.get("url") == room.get("sourceUrl")), None)
+                    if room_sample and room_sample.get("area"):
+                        room["area"] = room_sample["area"]
+                        room["priceSqm"] = room_sample.get("priceSqm")
+            excluded_samples = [sample for sample in previous.get("samples", [])
+                                if str(sample.get("id") or "") in excluded_ids]
+            # A previously cached project-page summary can contain a portal-side
+            # project-linking error. Discard that summary and rebuild only from
+            # the independently matched city listing cards below.
+            if excluded_samples:
+                previous = {}
+                row[kind] = None
             if not values or len(values) < int(previous.get("observedCount") or 0):
                 continue
             by_price = sorted(values, key=lambda item: item["price"])
@@ -254,6 +289,8 @@ def aggregate(projects: list[dict[str, Any]], indexes: list[tuple[int, str, set[
                     if isinstance(item.get("beds"), (int, float)):
                         groups[str(int(item["beds"]))].append(item)
                 return {bed: {"count": len(group), "minimum": min(x["price"] for x in group),
+                              "area": min(group, key=lambda x: x["price"])["area"],
+                              "priceSqm": min(group, key=lambda x: x["price"])["priceSqm"],
                               "minimumSqm": min(x["priceSqm"] for x in group),
                               "sourceUrl": min(group, key=lambda x: x["price"])["url"]}
                         for bed, group in groups.items()}
@@ -261,12 +298,18 @@ def aggregate(projects: list[dict[str, Any]], indexes: list[tuple[int, str, set[
             previous_minimum_sqm = float(previous.get("minimumSqm") or math.inf)
             minimum = min(by_price[0]["price"], previous_minimum)
             minimum_sqm = min(by_rate[0]["priceSqm"], previous_minimum_sqm)
+            minimum_area = (
+                previous.get("minimumArea")
+                if previous_minimum <= by_price[0]["price"] and previous.get("minimumArea")
+                else by_price[0]["area"]
+            )
             row[kind] = {
                 "count": max(int(previous.get("count") or 0), len(values)),
                 "countKind": "project_total" if previous.get("count") else "matched_city_index",
                 "observedCount": max(len(values), int(previous.get("observedCount") or 0)),
                 "average": round(sum(x["price"] for x in values) / len(values)),
                 "minimum": minimum,
+                "minimumArea": minimum_area,
                 "averageSqm": round(sum(x["priceSqm"] for x in values) / len(values)),
                 "minimumSqm": minimum_sqm,
                 "asOf": date.today().isoformat(),

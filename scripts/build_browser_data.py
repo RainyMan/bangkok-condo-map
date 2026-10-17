@@ -6,18 +6,20 @@ The source files stay intact for research and future refreshes.
 """
 
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
+EXCLUSIONS = Path(__file__).with_name("propertyhub_listing_exclusions.json")
 
 
 def load_array(filename: str, global_name: str) -> list[dict]:
     text = (DIST / filename).read_text(encoding="utf-8")
-    prefix = f"window.{global_name} = "
-    if not text.startswith(prefix):
+    match = re.search(rf"window\.{re.escape(global_name)}\s*=\s*(\[.*\]);", text, re.S)
+    if not match:
         raise ValueError(f"Unexpected data format in {filename}")
-    return json.loads(text[len(prefix):].strip().removesuffix(";"))
+    return json.loads(match.group(1))
 
 
 def strip_samples(value):
@@ -31,9 +33,20 @@ def strip_samples(value):
 if __name__ == "__main__":
     projects = load_array("bangkok-propertyhub.js", "BANGKOK_PROPERTYHUB_PROJECTS")
     summaries = {int(row["id"]): row for row in load_array("bangkok-propertyhub-city-summaries.js", "BANGKOK_PROPERTYHUB_CITY_SUMMARIES")}
+    exclusions = json.loads(EXCLUSIONS.read_text(encoding="utf-8")) if EXCLUSIONS.exists() else []
+    excluded_by_project_kind = {}
+    for item in exclusions:
+        key = (int(item["hipflatProjectId"]), str(item["kind"]))
+        excluded_by_project_kind.setdefault(key, set()).add(str(item["listingId"]))
     for project in projects:
         summary = summaries.get(int(project["id"]), {})
         for market in ("sale", "rent"):
+            excluded_ids = excluded_by_project_kind.get((int(project["id"]), market), set())
+            if excluded_ids and any(str(sample.get("id") or "") in excluded_ids
+                                    for sample in (project.get(market) or {}).get("samples", [])):
+                # Clear the contaminated aggregate if the independently
+                # audited city feed has no clean replacement.
+                project[market] = None
             if summary.get(market):
                 project[market] = summary[market]
     browser_fields = {
