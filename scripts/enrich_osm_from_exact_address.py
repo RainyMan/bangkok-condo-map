@@ -83,7 +83,7 @@ class AddressObjects(osmium.SimpleHandler):
 
 
 def main() -> None:
-    projects = arr(DIST / "bangkok-catalogue.js", "BANGKOK_HIPFLAT_PROJECTS")
+    projects = arr(DIST / "bangkok-catalogue.js", "BANGKOK_CONDO_CATALOGUE")
     current = {int(row["id"]): row for row in arr(OUTPUT, "BANGKOK_OSM_LOCATIONS")}
     located = set(current)
     ph = {int(row["id"]): row for row in arr(DIST / "bangkok-propertyhub.js", "BANGKOK_PROPERTYHUB_PROJECTS")}
