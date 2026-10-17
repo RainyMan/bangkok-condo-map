@@ -1,0 +1,139 @@
+{
+  "hipflatId": 3408,
+  "projectName": "The Avenue Sukhumvit 61",
+  "checkedAt": "2026-10-18",
+  "hipflatProject": "https://www.hipflat.co.th/en/projects/the-avenue-sukhumvit-61-wulzso",
+  "coordinate": {
+    "hipflatId": 3408,
+    "name": "The Avenue Sukhumvit 61",
+    "lat": 13.7247543,
+    "lng": 100.582655,
+    "locationVerified": true,
+    "sourceName": "PropertyHub 出售物件所附 Google Maps 大樓點位",
+    "sourceUrl": "https://goo.gl/maps/Au93FhkzX64F2qVm8",
+    "verificationSourceUrl": "https://www.hipflat.co.th/en/projects/the-avenue-sukhumvit-61-wulzso",
+    "corroborationSourceUrl": "https://propertyhub.in.th/en/listings/for-sale-condo-avenue-61-bts-thong-lo-khlong-tan-nuea-watthana-bangkok-cx-74320-live-chat-with-us-add-line-connexproperty--b5cd09b0---4026121",
+    "verificationMethod": "exact_avenue_61_listing_google_maps_place_pin_crosschecked_with_hipflat_project_name_and_sukhumvit_61_address",
+    "asOf": "2026-10-18"
+  },
+  "sale": {
+    "count": 23,
+    "observedCount": 1,
+    "countKind": "manual_verified_listing",
+    "average": 9500000,
+    "minimum": 9500000,
+    "minimumArea": 102,
+    "minimumSampleUpdated": "2026-10-18",
+    "averageSqm": 93137,
+    "minimumSqm": 93137,
+    "minimumSqmSampleUpdated": "2026-10-18",
+    "asOf": "2026-10-18",
+    "sourceName": "PropertyHub 單筆掛牌",
+    "source": "https://propertyhub.in.th/en/condo-for-sale/project-avenue-61",
+    "minimumSourceUrl": "https://propertyhub.in.th/en/listings/for-sale-condo-avenue-61-bts-thong-lo-khlong-tan-nuea-watthana-bangkok-cx-74320-live-chat-with-us-add-line-connexproperty--b5cd09b0---4026121",
+    "minimumSqmSourceUrl": "https://propertyhub.in.th/en/listings/for-sale-condo-avenue-61-bts-thong-lo-khlong-tan-nuea-watthana-bangkok-cx-74320-live-chat-with-us-add-line-connexproperty--b5cd09b0---4026121",
+    "byBedroom": {
+      "2": {
+        "count": 1,
+        "minimum": 9500000,
+        "area": 102,
+        "minimumSqm": 93137,
+        "sourceUrl": "https://propertyhub.in.th/en/listings/for-sale-condo-avenue-61-bts-thong-lo-khlong-tan-nuea-watthana-bangkok-cx-74320-live-chat-with-us-add-line-connexproperty--b5cd09b0---4026121"
+      }
+    },
+    "samples": [
+      {
+        "id": "4026121",
+        "price": 9500000,
+        "area": 102,
+        "priceSqm": 93137,
+        "beds": 2,
+        "roomType": "2BR",
+        "title": "The Avenue Sukhumvit 61，2 房，102 ㎡，8 樓，฿9,500,000",
+        "url": "https://propertyhub.in.th/en/listings/for-sale-condo-avenue-61-bts-thong-lo-khlong-tan-nuea-watthana-bangkok-cx-74320-live-chat-with-us-add-line-connexproperty--b5cd09b0---4026121",
+        "sourceName": "PropertyHub",
+        "projectName": "Avenue 61",
+        "checkedAt": "2026-10-18",
+        "updated": "2026-10-18",
+        "matchedBy": "exact_propertyhub_project_and_listing_page_google_maps_pin",
+        "listingStatus": "active_as_listed"
+      }
+    ]
+  },
+  "rent": {
+    "count": 90,
+    "observedCount": 2,
+    "countKind": "manual_verified_listing",
+    "average": 40000,
+    "minimum": 40000,
+    "minimumArea": 102,
+    "minimumSampleUpdated": "2026-10-17",
+    "averageSqm": 383,
+    "minimumSqm": 374,
+    "minimumSqmSampleUpdated": "2026-10-17",
+    "asOf": "2026-10-18",
+    "sourceName": "PropertyHub 兩筆可見掛牌",
+    "source": "https://propertyhub.in.th/en/condo-for-rent/project-avenue-61",
+    "minimumSourceUrl": "https://propertyhub.in.th/en/listings/2-br-condo-at-avenue-61-condominium-near-bts-thong-lor-id-1852075--b5dd0984---4740685",
+    "minimumSqmSourceUrl": "https://propertyhub.in.th/en/listings/sr146-special-deal-for-rent-condo-avenue-61--ad820934---2818834",
+    "samples": [
+      {
+        "id": "2818834",
+        "price": 40000,
+        "area": 107.01,
+        "priceSqm": 374,
+        "beds": 2,
+        "roomType": "2BR",
+        "title": "Avenue 61，2 房，107.01 ㎡，B 棟 4 樓，฿40,000/月",
+        "url": "https://propertyhub.in.th/en/listings/sr146-special-deal-for-rent-condo-avenue-61--ad820934---2818834",
+        "sourceName": "PropertyHub",
+        "projectName": "Avenue 61",
+        "checkedAt": "2026-10-18",
+        "updated": "2026-10-17",
+        "matchedBy": "exact_propertyhub_project_and_listing_page",
+        "listingStatus": "active_as_listed"
+      },
+      {
+        "id": "4740685",
+        "price": 40000,
+        "area": 102,
+        "priceSqm": 392,
+        "beds": 2,
+        "roomType": "2BR",
+        "title": "Avenue 61，2 房，102 ㎡，8 樓，฿40,000/月",
+        "url": "https://propertyhub.in.th/en/listings/2-br-condo-at-avenue-61-condominium-near-bts-thong-lor-id-1852075--b5dd0984---4740685",
+        "sourceName": "PropertyHub",
+        "projectName": "Avenue 61",
+        "checkedAt": "2026-10-18",
+        "updated": "2026-10-17",
+        "matchedBy": "exact_propertyhub_project_and_listing_page",
+        "listingStatus": "active_as_listed"
+      }
+    ]
+  },
+  "managementFee": {
+    "rate": 35,
+    "status": "public",
+    "note": "PropertyHub 專案頁刊載管理費 ฿35/㎡/月；向管委會確認目前費率。",
+    "source": "https://propertyhub.in.th/en/projects/avenue-61"
+  },
+  "completedYear": {
+    "year": 2005,
+    "sourceUrl": "https://propertyhub.in.th/en/projects/avenue-61"
+  },
+  "defaultTwoBedroomNetYield": {
+    "purchasePrice": 9500000,
+    "purchaseListingAreaSqm": 102,
+    "rentPerSqmPerMonth": 374,
+    "estimatedRentPerMonthForPurchaseArea": 38127,
+    "agentFeeMonthsDeducted": 1,
+    "annualCommonFee": 42840,
+    "netYieldPercent": 3.96
+  },
+  "notes": [
+    "PropertyHub 2026-10-17 project listing refresh identifies the two-bedroom sale at ฿9,500,000, 102 m², floor 8; its detail page update timestamp is 2026-10-18 00:10 local and includes the Google Maps short link.",
+    "Two exact two-bedroom rental listing pages show ฿40,000/month at 102 m² and 107.01 m²; the latter is the lower rent per m² and the former ties for lowest total rent. Project result cards were refreshed 2026-10-17.",
+    "PropertyHub project information lists utility/common fee ฿35/m²/month and completion year 2005. The project page has inconsistent unit totals, so unit count was not changed.",
+    "Default two-bedroom net yield at checked source rates: purchase ฿9,500,000; selected sale unit 102 m²; rent rate ฿40,000 / 107.01 m²; estimated monthly rent scaled to 102 m²; deduct 1 agent month and ฿35/m²/month common fee. Other transaction costs, vacancy, tax, and maintenance are excluded."
+  ]
+}

@@ -137,7 +137,7 @@
     const localRent = withLocalListings(mergedRent, 'rent');
     const cleanSale = localSale && Number(localSale.minimumSqm) >= 10000 && Number(localSale.minimumSqm) <= 2000000 ? localSale : null;
     const cleanRent = localRent && Number(localRent.minimumSqm) >= 50 && Number(localRent.minimumSqm) <= 20000 ? localRent : null;
-    const rawCompletedYear = Number((propertyScoutMarket.locationVerificationSourceUrl && propertyScoutMarket.completedYear) || propertyHub.completedYear || project.completedYear || propertyScoutMarket.completedYear || legacy?.completedYear || 0);
+    const rawCompletedYear = Number((propertyScoutMarket.locationVerificationSourceUrl && propertyScoutMarket.completedYear) || propertyHub.completedYear || project.completedYear || propertyScoutMarket.completedYear || manualMarket.completedYear || legacy?.completedYear || 0);
     const completedYear = rawCompletedYear >= 2400 && rawCompletedYear <= 2700 ? rawCompletedYear - 543 : rawCompletedYear || null;
     return { ...legacy, ...project, ...propertyHub, lat, lng, locationVerified,
       manualSaleSamples: (manualMarket.sale?.samples || []).filter(sample => sample.specialAsset === true),
@@ -148,7 +148,7 @@
       completedYear,
       startedYear: propertyHub.startedYear || project.startedYear || propertyScoutMarket.startedYear || legacy?.startedYear || null,
       fee: propertyHub.fee || project.fee || manualMarket.fee || (Number(propertyScoutMarket.fee) > 0 ? { rate: Number(propertyScoutMarket.fee), status: 'public', note: 'PropertyScout 專案頁公開管理費，請向管委會確認。', source: propertyScoutMarket.sourceUrl } : legacy?.fee || null),
-      completedYearSourceUrl: propertyHub.completedYearSourceUrl || (propertyScoutMarket.completedYear ? propertyScoutMarket.sourceUrl : project.completedYearSourceUrl || legacy?.completedYearSourceUrl),
+      completedYearSourceUrl: propertyHub.completedYearSourceUrl || (propertyScoutMarket.completedYear ? propertyScoutMarket.sourceUrl : manualMarket.completedYearSourceUrl || project.completedYearSourceUrl || legacy?.completedYearSourceUrl),
       nearestMrt, station: stationsById.get(nearestMrt?.stationId)?.name || project.station || legacy?.station || null,
       propertyHubProjectUrl: propertyHub.propertyHubProjectUrl || project.propertyHubProjectUrl || legacy?.propertyHubProjectUrl || null };
   });
