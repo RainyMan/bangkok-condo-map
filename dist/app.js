@@ -206,11 +206,11 @@
       ? { price: roomSummaryMinimum, area: summaryArea || Number(summarySample.area), url: summaryUrl }
       : null;
     const listingCandidates = roomListings.map(sample => ({ price: Number(sample.price), area: Number(sample.area), url: sample.url }));
-    // A two-bedroom ROI must use the cheapest real two-bedroom listing when
-    // one is available. Market summaries are a fallback only; they can be a
-    // modeled project-level minimum that does not identify a matching unit.
-    const roomSample = listingCandidates.sort((a, b) => a.price - b.price)[0]
-      || summaryCandidate || null;
+    // Compare the lowest individual listing and the room-summary minimum.
+    // Previously any cached listing won, even when the summary held a lower
+    // room-type price. Keep price, area, and source from the winning record.
+    const roomSample = [...listingCandidates, ...(summaryCandidate ? [summaryCandidate] : [])]
+      .sort((a, b) => a.price - b.price || Number(Boolean(b.url)) - Number(Boolean(a.url)))[0] || null;
     const selectedRoomMinimum = Number(roomSample?.price || 0);
     const roomAveragePrice = !selectedRoomMinimum && Number(room?.average) > 0 ? Number(room.average) : 0;
     const roomAverageArea = roomAveragePrice > 0 && Number(room?.averageSqm) > 0 ? roomAveragePrice / Number(room.averageSqm) : 0;
