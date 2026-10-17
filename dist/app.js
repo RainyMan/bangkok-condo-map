@@ -155,11 +155,13 @@
     const lowestRoom = roomOptions.sort((a, b) => Number(a[1].minimum) - Number(b[1].minimum))[0];
     const chosenBeds = beds && c.sale?.byBedroom?.[String(beds)] ? String(beds) : lowestRoom?.[0] || null;
     const room = chosenBeds ? c.sale?.byBedroom?.[chosenBeds] : null;
-    const roomSample = room?.sourceUrl ? (c.sale?.samples || []).find(sample => sample.url === room.sourceUrl) : null;
+    const roomListings = chosenBeds ? (c.sale?.samples || []).filter(sample => Number(sample.beds ?? sample.bedrooms) === Number(chosenBeds) && Number(sample.price) > 0) : [];
+    const roomSample = (room?.sourceUrl ? roomListings.find(sample => sample.url === room.sourceUrl) : null)
+      || roomListings.sort((a, b) => Number(a.price) - Number(b.price))[0];
     const lowestSaleSample = (c.sale?.samples || []).find(sample => sample.url === c.sale?.minimumSourceUrl)
       || (c.sale?.samples || []).find(sample => Number(sample.price) === Number(c.sale?.minimum));
-    const salePrice = Number(room?.minimum || c.sale?.minimum || 0);
-    const saleArea = Number(room?.area || roomSample?.area || (!room ? c.sale?.minimumArea || lowestSaleSample?.area : null) || areaFor(c));
+    const salePrice = Number(roomSample?.price || room?.minimum || c.sale?.minimum || 0);
+    const saleArea = Number(roomSample?.area || room?.area || (!room ? c.sale?.minimumArea || lowestSaleSample?.area : null) || areaFor(c));
     const roomRent = chosenBeds ? c.rent?.byBedroom?.[chosenBeds] : null;
     const rentRate = Number(roomRent?.minimumSqm || c.rent?.minimumSqm || 0);
     return { price: salePrice || Math.round(Number(c.sale?.minimumSqm || 0) * saleArea), area: saleArea, rent: Math.round(rentRate * saleArea), beds: chosenBeds || room?.beds || c.beds || null, isRoomStart: Boolean(room?.minimum), roomOptions };
