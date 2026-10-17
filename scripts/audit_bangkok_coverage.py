@@ -42,20 +42,27 @@ def has_individual_listing(market: dict) -> bool:
     return any(isinstance(url, str) and re.search(r"/(?:listings|ads|property|properties|view/\d+|livingdetail_en/\d+|detail/condo-)|tperty\.com/.+-\d{5,}|property-hua-hin\.com/.+-u\d{5,}|propertyscout\.co\.th/.+-\d{6,}/?|thaiapartment\.com/condo-detail/", url) for url in urls)
 
 
-def listing_updated(market: dict) -> str:
+def listing_updated(market: dict, research_market: dict | None = None) -> str:
     target_url = market.get("minimumSqmSourceUrl") or market.get("minimumSourceUrl")
-    for sample in market.get("samples", []):
-        if isinstance(sample, dict) and sample.get("url") == target_url:
-            return str(sample.get("updated") or "")
+    # Compiled display markets retain the freshness of the exact minimum-per-
+    # sqm sample even when they omit the full list of observed cards.
+    if market.get("minimumSqmSampleUpdated"):
+        return str(market["minimumSqmSampleUpdated"])
+    for source in (market, research_market or {}):
+        for sample in source.get("samples", []):
+            if isinstance(sample, dict) and sample.get("url") == target_url:
+                return str(sample.get("updated") or "")
     return ""
 
 
 def main() -> None:
     projects = load_array("bangkok-catalogue.js", "BANGKOK_HIPFLAT_PROJECTS")
-    propertyhub = index(load_array("bangkok-propertyhub.js", "BANGKOK_PROPERTYHUB_PROJECTS"), "id")
+    # This must be the same compiled source file loaded by index.html. The
+    # similarly named bangkok-propertyhub.js is an unbundled research artifact.
+    propertyhub = index(load_array("bangkok-propertyhub-map.js", "BANGKOK_PROPERTYHUB_PROJECTS"), "id")
+    propertyhub_research = index(load_array("bangkok-propertyhub.js", "BANGKOK_PROPERTYHUB_PROJECTS"), "id")
     details = index(load_array("bangkok-propertyhub-details.js", "BANGKOK_PROPERTYHUB_DETAILS"), "propertyHubProjectId")
     guessed = index(load_array("bangkok-propertyhub-guessed-details.js", "BANGKOK_PROPERTYHUB_GUESSED_DETAILS"), "hipflatProjectId")
-    city = index(load_array("bangkok-propertyhub-city-summaries.js", "BANGKOK_PROPERTYHUB_CITY_SUMMARIES"), "id")
     osm = index(load_array("bangkok-osm.js", "BANGKOK_OSM_LOCATIONS"), "id")
     scout_details = index(load_array("bangkok-propertyscout-details.js", "BANGKOK_PROPERTYSCOUT_DETAILS"), "hipflatId")
     verified_coordinates = index(load_array("bangkok-verified-coordinates.js", "BANGKOK_VERIFIED_COORDINATES"), "hipflatId")
@@ -81,10 +88,11 @@ def main() -> None:
         market = {**base, **guessed.get(project_id, {}), **details.get(propertyhub_id, {})}
         scout_market = scout_markets.get(project_id, {})
         manual_market = manual_markets.get(project_id, {})
-        sale = city.get(project_id, {}).get("sale") or market.get("sale") or scout_market.get("sale") or manual_market.get("sale") or {}
+        research_market = propertyhub_research.get(project_id, {})
+        sale = market.get("sale") or scout_market.get("sale") or manual_market.get("sale") or {}
         if manual_market.get("replaceSale") and manual_market.get("sale"):
             sale = manual_market["sale"]
-        rent = city.get(project_id, {}).get("rent") or market.get("rent") or scout_market.get("rent") or manual_market.get("rent") or {}
+        rent = market.get("rent") or scout_market.get("rent") or manual_market.get("rent") or {}
         scout_location = scout_details.get(project_id, {})
         verified_location = verified_coordinates.get(project_id, {})
         project_name_key = re.sub(r"[^a-z0-9]+", " ", str(project.get("name", "")).lower()).strip()
@@ -145,11 +153,11 @@ def main() -> None:
             "sale_market_value": "yes" if has_sale else "no",
             "sale_individual_listing_link": "yes" if sale_linked else "no",
             "sale_source": str(sale.get("minimumSqmSourceUrl") or sale.get("minimumSourceUrl") or sale.get("source") or ""),
-            "sale_sample_updated": listing_updated(sale),
+            "sale_sample_updated": listing_updated(sale, research_market.get("sale") or {}),
             "rent_sample": "yes" if has_rent else "no",
             "rent_individual_listing_link": "yes" if rent_linked else "no",
             "rent_source": str(rent.get("minimumSqmSourceUrl") or rent.get("minimumSourceUrl") or rent.get("source") or ""),
-            "rent_sample_updated": listing_updated(rent),
+            "rent_sample_updated": listing_updated(rent, research_market.get("rent") or {}),
             "missing": ", ".join(missing),
         })
 

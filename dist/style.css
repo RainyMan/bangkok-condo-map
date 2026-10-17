@@ -104,7 +104,7 @@
   .explorer{top:auto}
   .detail-panel{top:auto}
 }
-.save-yield-button{padding:6px 10px;border:1px solid #0b765e;border-radius:7px;background:#087f63;color:#fff;font-size:9px;font-weight:700;cursor:pointer}
+.use-lowest-yield-button{margin-top:5px;padding:5px 8px;border:1px solid #b7d8c8;border-radius:6px;background:#f2faf5;color:#087f63;font-size:9px;font-weight:700;cursor:pointer}.use-lowest-yield-button:hover{background:#e2f4e9}\n.save-yield-button{padding:6px 10px;border:1px solid #0b765e;border-radius:7px;background:#087f63;color:#fff;font-size:9px;font-weight:700;cursor:pointer}
 .save-yield-button:hover{background:#075b49}
 .yield-saved-note{align-self:center;color:#16805f;font-size:9px}
 
@@ -239,7 +239,7 @@
   .yield-input input{height:38px;font-size:12px}
   .yield-options{gap:9px}
   .yield-options label{font-size:10px}
-  .save-yield-button{min-height:34px;padding:6px 10px}
+  .use-lowest-yield-button{margin-top:5px;padding:5px 8px;border:1px solid #b7d8c8;border-radius:6px;background:#f2faf5;color:#087f63;font-size:9px;font-weight:700;cursor:pointer}.use-lowest-yield-button:hover{background:#e2f4e9}\n.save-yield-button{min-height:34px;padding:6px 10px}
   .map-note{left:8px;right:8px;bottom:calc(46% + 9px);max-width:none;max-height:34px;overflow:hidden;gap:6px;padding:4px 6px;font-size:7px;line-height:1.35}
   .map-note .line-legend{gap:5px}
   .map-note .line-legend>span{gap:2px}
