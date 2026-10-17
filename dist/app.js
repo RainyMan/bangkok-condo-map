@@ -171,8 +171,11 @@
     const raw = sample?.beds ?? sample?.bedrooms;
     const numeric = Number(raw);
     if (Number.isFinite(numeric) && numeric > 0) return numeric;
-    const label = `${sample?.roomType || ''} ${sample?.title || ''}`;
-    const match = label.match(/(?:^|\D)(\d+)[\s-]*(?:br\b|bed(?:room)?s?\b|房)/i);
+    const roomType = String(sample?.roomType || '').toLowerCase().replace(/[_-]+/g, ' ');
+    const wordCount = roomType.match(/\b(one|two|three|four|five)\s+bed(?:\s*room)?s?\b/);
+    if (wordCount) return ({ one: 1, two: 2, three: 3, four: 4, five: 5 })[wordCount[1]];
+    const label = `${roomType} ${sample?.title || ''}`;
+    const match = label.match(/(?:^|\D)(\d+)\s*(?:br\b|bed(?:\s*room)?s?\b|房)/i);
     return match ? Number(match[1]) : null;
   };
   const yieldDefaultsFor = (c, beds = null) => {
