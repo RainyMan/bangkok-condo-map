@@ -149,3 +149,20 @@
   .price-chip{display:block;font-size:8px;padding:4px 5px}
   .panel-foot{display:none}
 }
+
+.panel-size-toggle{display:grid;place-items:center;width:28px;height:28px;border:1px solid #dfe7e2;border-radius:8px;background:#fff;color:#52645b;font-size:17px;line-height:1;cursor:pointer}
+.panel-size-toggle:hover{border-color:#91c6a8;background:#f2faf5;color:#087f63}
+.detail-panel{position:absolute}
+.detail-size-toggle{position:absolute;z-index:2;top:14px;right:54px}
+.detail-panel.compact{height:auto;max-height:none;bottom:auto;overflow:hidden}
+.detail-panel.compact .walk-section,.detail-panel.compact .detail-section{display:none}
+.detail-panel.compact .detail-hero{padding-bottom:14px}
+.explorer.compact{height:auto;bottom:auto;width:220px}
+.explorer.compact .sort-order-row,.explorer.compact .project-list,.explorer.compact .panel-foot{display:none}
+.explorer.compact .list-heading{padding:0}
+@media(max-width:650px){
+  .detail-size-toggle{top:12px;right:49px}
+  .detail-panel.compact{top:auto;bottom:10px;left:10px;right:10px;width:auto;max-height:180px}
+  .explorer.compact{top:auto;bottom:10px;left:10px;right:auto;width:220px;height:auto;min-height:0;padding:10px 12px}
+  .explorer.compact .list-heading{padding:0}
+}
