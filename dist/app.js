@@ -1,11 +1,12 @@
 (() => {
-  const condos = window.CONDO_DATA || [];
+  const condos = [...(window.CONDO_DATA || []), ...(window.CATALOGUE_PROJECTS || [])];
+  const marketCondos = new Set((window.CONDO_DATA || []).map(c => c.id));
   const stations = window.MRT_STATIONS || [];
   const fmt = (n, digits = 0) => n == null || Number.isNaN(Number(n)) ? '—' : Number(n).toLocaleString('en-US', { maximumFractionDigits: digits });
   const money = n => n == null ? '—' : `฿${fmt(n)}`;
   const compactMoney = n => n == null ? '—' : n >= 1000000 ? `฿${(n / 1000000).toFixed(2)}M` : `฿${fmt(n / 1000, 0)}K`;
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const reviewsUrl = c => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${c.name} condo Huai Khwang Bangkok`)}`;
+  const reviewsUrl = c => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(c.station ? `${c.name} condo near ${c.station} MRT Bangkok` : `${c.name} condo Huai Khwang Bangkok`)}`;
   const map = L.map('map', { zoomControl: false, scrollWheelZoom: true }).setView([13.7824, 100.5763], 14);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
   let mode = 'sale';
@@ -18,8 +19,9 @@
   let walkingLine = null;
   const list = document.getElementById('projectList');
   const detail = document.getElementById('detailPanel');
-  const labelFor = c => mode === 'sale' ? `${fmt(c.sale.minimumSqm)}<small>最低 ฿/㎡</small>` : mode === 'rent' ? `${fmt(c.rent.minimumSqm)}<small>最低 ฿/㎡/月</small>` : `${yieldFor(c).toFixed(1)}<small>% 淨投報</small>`;
+  const labelFor = c => !marketCondos.has(c.id) ? '待補資料<small>Hipflat 樓盤</small>' : mode === 'sale' ? `${fmt(c.sale.minimumSqm)}<small>最低 ฿/㎡</small>` : mode === 'rent' ? `${fmt(c.rent.minimumSqm)}<small>最低 ฿/㎡/月</small>` : `${yieldFor(c).toFixed(1)}<small>% 淨投報</small>`;
   function yieldFor(c) {
+    if (!marketCondos.has(c.id)) return 0;
     if (yieldOverrides.has(c.id)) return yieldOverrides.get(c.id);
     const priceRate = Number(c.sale.minimumSqm || 0);
     const rentRate = Number(c.rent.minimumSqm || 0);
@@ -70,7 +72,7 @@
       '投報':'yield','淨投報':'yield','投報率':'yield','yield':'yield',
       '站':'station','mrt':'station','樓名':'name','name':'name'
     };
-    const metrics = { year:Number(c.completedYear), sale:Number(c.sale.minimumSqm), rent:Number(c.rent.minimumSqm), distance:Number(c.nearestMrt?.distanceKm), yield:yieldFor(c) };
+    const metrics = { year:Number(c.completedYear), sale:Number(c.sale?.minimumSqm), rent:Number(c.rent?.minimumSqm), distance:Number(c.nearestMrt?.distanceKm), yield:yieldFor(c) };
     return query.trim().split(/\s+/).every(token => {
       const expr = token.match(/^(.+?)(<=|>=|<|>|=|:)(.+)$/);
       if (!expr) return haystack.includes(token.toLowerCase());
@@ -89,7 +91,7 @@
   }
   function filtered() {
     const shown = condos.filter(matchesQuery);
-    const keyFor = c => sortMode === 'distance' ? c.nearestMrt?.distanceKm : sortMode === 'sale' ? c.sale.minimumSqm : sortMode === 'rent' ? c.rent.minimumSqm : yieldFor(c);
+    const keyFor = c => sortMode === 'distance' ? c.nearestMrt?.distanceKm : sortMode === 'sale' ? c.sale?.minimumSqm : sortMode === 'rent' ? c.rent?.minimumSqm : yieldFor(c);
     const ranked = sortMode === 'year-new' || sortMode === 'year-old' ? sortMode : null;
     return shown.sort((a, b) => {
       if (ranked) {
@@ -110,9 +112,9 @@
       if (visibleIds.has(id) && !map.hasLayer(marker)) marker.addTo(map);
       else if (!visibleIds.has(id) && map.hasLayer(marker)) map.removeLayer(marker);
     });
-    document.getElementById('resultCount').textContent = `${shown.length} 個樣本`;
+    document.getElementById('resultCount').textContent = `${shown.length} 個樓盤`;
     document.getElementById('listCount').textContent = String(shown.length).padStart(2, '0');
-    list.innerHTML = shown.map((c, i) => { const nearestStation = stations.find(s => s.id === c.nearestMrt?.stationId); return `<article class="project-card ${c.id === selectedId ? 'active' : ''}" data-id="${c.id}" tabindex="0" role="button" aria-label="查看 ${esc(c.name)}"><span class="rank">${String(i + 1).padStart(2, '0')}</span><div class="project-copy"><strong class="project-name">${esc(c.name)}</strong><span class="project-meta">MRT ${esc(nearestStation?.name || c.station)} · 完工 ${c.completedYear}</span><div class="project-values"><span>售/㎡ <b>${fmt(c.sale.minimumSqm)}</b></span><span>租/㎡/月 <b>${fmt(c.rent.minimumSqm)}</b></span><span>🚶 <b>${c.nearestMrt?.distanceKm ?? '—'}</b> km</span></div></div><span class="price-chip">${labelFor(c)}</span></article>`; }).join('') || '<p class="empty-state">沒有符合的樓盤</p>';
+    list.innerHTML = shown.map((c, i) => { const nearestStation = stations.find(s => s.id === c.nearestMrt?.stationId); const located = Number.isFinite(c.lat) && Number.isFinite(c.lng); return `<article class="project-card ${c.id === selectedId ? 'active' : ''}" data-id="${c.id}" tabindex="0" role="button" aria-label="查看 ${esc(c.name)}"><span class="rank">${String(i + 1).padStart(2, '0')}</span><div class="project-copy"><strong class="project-name">${esc(c.name)}</strong><span class="project-meta">MRT ${esc(nearestStation?.name || c.station)} · ${marketCondos.has(c.id) ? `完工 ${esc(c.completedYear)}` : 'Hipflat 收錄 · 位置待核'}</span><div class="project-values"><span>售/㎡ <b>${fmt(c.sale?.minimumSqm)}</b></span><span>租/㎡/月 <b>${fmt(c.rent?.minimumSqm)}</b></span><span>${located ? '🚶' : '座標'} <b>${located ? (c.nearestMrt?.distanceKm ?? '—') + ' km' : '待補'}</b></span></div></div><span class="price-chip">${labelFor(c)}</span></article>`; }).join('') || '<p class="empty-state">沒有符合的樓盤</p>';
     list.querySelectorAll('.project-card').forEach(el => {
       const activate = () => select(Number(el.dataset.id));
       el.addEventListener('click', activate);
@@ -120,6 +122,19 @@
     });
   }
   function renderDetail(c) {
+    if (!marketCondos.has(c.id)) {
+      const query = encodeURIComponent(`${c.name} condo Bangkok`);
+      const ddSale = `https://www.google.com/search?q=site%3Addproperty.com+${query}+for+sale`;
+      const ddRent = `https://www.google.com/search?q=site%3Addproperty.com+${query}+for+rent`;
+      const phSale = `https://www.google.com/search?q=site%3Apropertyhub.in.th+${query}+for+sale`;
+      const phRent = `https://www.google.com/search?q=site%3Apropertyhub.in.th+${query}+for+rent`;
+      const station = stations.find(s => s.id === 'BL21');
+      detail.classList.remove('empty');
+      detail.innerHTML = `<button class="close-detail" aria-label="關閉樓盤資訊">×</button><div class="detail-hero"><div class="detail-topline"><span class="station-pill">Hipflat · Phetchaburi MRT 周邊</span><span class="age-pill">BL21</span></div><h2 class="detail-title">${esc(c.name)}</h2><p class="detail-caption">此案已加入站點周邊樓盤索引；座標、完工年、管理費和售租樣本尚待逐案核實。</p><a class="review-link" href="${reviewsUrl(c)}" target="_blank" rel="noopener"><span>◎</span> 在 Google Maps 查看評論 <span>↗</span></a></div><section class="walk-section"><div class="walk-main"><span class="walk-symbol">🚇</span><div><span class="metric-label">參考站點 · ${esc(station?.name || 'Phetchaburi')}</span><strong>步行距離待核實</strong><small>確認樓盤座標後再計算路網距離</small></div></div><button id="showWalkingRoute" class="route-button">查看 MRT 站點</button></section><section class="detail-section"><p class="section-label">來源分工</p><p class="fee-note">Hipflat 用於搜尋樓盤；二手售價與租金由 DDproperty、PropertyHub 掛牌整理。資料尚未整理完成，暫不計算單價與投報率。</p><div class="source-links"><a href="${esc(c.discoveryUrl)}" target="_blank" rel="noopener">Hipflat 站點樓盤清單 ↗</a></div></section><section class="detail-section"><p class="section-label">二手出售搜尋</p><div class="source-links"><a href="${ddSale}" target="_blank" rel="noopener">DDproperty ↗</a><a href="${phSale}" target="_blank" rel="noopener">PropertyHub ↗</a></div></section><section class="detail-section"><p class="section-label">出租搜尋</p><div class="source-links"><a href="${ddRent}" target="_blank" rel="noopener">DDproperty ↗</a><a href="${phRent}" target="_blank" rel="noopener">PropertyHub ↗</a></div></section><section class="detail-section"><p class="section-label">資料狀態 <span>尚未啟用每日更新</span></p><p class="fee-note">售價、租金及更新日期欄位已預留；目前不執行爬蟲。</p></section>`;
+      detail.querySelector('.close-detail').addEventListener('click', () => { detail.classList.add('empty'); document.querySelector('.explorer').classList.remove('hidden-mobile'); });
+      detail.querySelector('#showWalkingRoute').addEventListener('click', () => { const s = stations.find(x => x.id === 'BL21'); if (s) { map.setView([s.lat, s.lng], 16); stationMarkers.get(s.id)?.openPopup(); } });
+      return;
+    }
     const avgRate = c.rent.averageSqm;
     const minRate = c.rent.minimumSqm;
     const feeText = c.fee.rate ? `<div class="fee-row"><strong class="fee-number">฿${fmt(c.fee.rate)} <small>/ ㎡ / 月*</small></strong><span class="age-pill">${c.fee.status === 'historical_indicative' ? '歷史參考' : '公開刊載'}</span></div><p class="fee-note">${esc(c.fee.note || '')}</p>` : '<p class="fee-note">尚未查得可用管理費資料。</p>';
@@ -166,7 +181,8 @@
     renderDetail(c);
     if (walkingLine) { map.removeLayer(walkingLine); walkingLine = null; }
     if (window.matchMedia('(max-width: 650px)').matches) document.querySelector('.explorer').classList.add('hidden-mobile');
-    map.panTo([c.lat, c.lng], { animate: true, duration: .4 });
+    if (Number.isFinite(c.lat) && Number.isFinite(c.lng)) map.panTo([c.lat, c.lng], { animate: true, duration: .4 });
+    else { const station = stations.find(s => s.id === c.nearestMrt?.stationId); if (station) map.panTo([station.lat, station.lng], { animate: true, duration: .4 }); }
   }
   function refreshMode() {
     document.querySelectorAll('.segmented button').forEach(b => b.classList.toggle('selected', b.dataset.mode === mode));
@@ -177,7 +193,7 @@
   document.getElementById('sortOrder').addEventListener('change', e => { sortMode = e.target.value; renderList(); });
   document.getElementById('search').addEventListener('input', e => { query = e.target.value.trim(); renderList(); });
   document.getElementById('clearSearch').addEventListener('click', () => { document.getElementById('search').value = ''; query = ''; renderList(); });
-  document.getElementById('fitMap').addEventListener('click', () => { const points = [...filtered().map(c => [c.lat,c.lng]), ...stations.map(s => [s.lat,s.lng])]; if (points.length) map.fitBounds(points, { padding: [70, 90], maxZoom: 14 }); });
+  document.getElementById('fitMap').addEventListener('click', () => { const points = [...filtered().filter(c => Number.isFinite(c.lat) && Number.isFinite(c.lng)).map(c => [c.lat,c.lng]), ...stations.map(s => [s.lat,s.lng])]; if (points.length) map.fitBounds(points, { padding: [70, 90], maxZoom: 14 }); });
   document.getElementById('zoomIn').addEventListener('click', () => map.zoomIn());
   document.getElementById('zoomOut').addEventListener('click', () => map.zoomOut());
   document.getElementById('locate').addEventListener('click', () => map.setView([13.7824, 100.5763], 14));
@@ -187,7 +203,7 @@
   if (condos.length) {
     const narrow = window.matchMedia('(max-width: 650px)').matches;
     if (narrow) map.setView([13.7824, 100.5763], 12);
-    else map.fitBounds([...condos.map(c => [c.lat,c.lng]), ...stations.map(s => [s.lat,s.lng])], { paddingTopLeft: [390, 60], paddingBottomRight: [390, 60], maxZoom: 13 });
+    else map.fitBounds([...condos.filter(c => Number.isFinite(c.lat) && Number.isFinite(c.lng)).map(c => [c.lat,c.lng]), ...stations.map(s => [s.lat,s.lng])], { paddingTopLeft: [390, 60], paddingBottomRight: [390, 60], maxZoom: 13 });
   }
   window.addEventListener('resize', () => map.invalidateSize());
 })();
