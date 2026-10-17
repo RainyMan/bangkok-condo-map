@@ -46,7 +46,7 @@ def has_individual_listing(market: dict) -> bool:
         parsed = urlsplit(url)
         path = parsed.path.lower()
         host = (parsed.hostname or "").lower()
-        if re.search(r"/(?:listings?|ads?|properties?|view/\d+|livingdetail_en/\d+|detail/condo-|property-rent/|property-for-sale/)", path):
+        if re.search(r"/(?:listings?|ads?|property/|properties?|view/\d+|livingdetail_en/\d+|detail/condo-|property-rent/|property-for-sale/)", path):
             return True
         if host.endswith("tperty.com") and re.search(r"/.+-\d{5,}", path):
             return True
