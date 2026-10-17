@@ -29,12 +29,18 @@
         <button id="fitMap" class="icon-button" aria-label="顯示全部樓盤" title="顯示全部樓盤">⤢</button>
       </div>
       <p class="panel-subtitle">Huai Khwang + Phetchaburi <span class="live-dot"></span><span id="resultCount">105 個樓盤</span></p>
-      <label class="searchbox"><span class="search-icon">⌕</span><input id="search" type="search" placeholder="樓名或條件：年:2014 售價/㎡<50000" autocomplete="off" aria-label="搜尋樓盤或自訂篩選條件"><kbd>⌘ K</kbd></label>
+      <label class="searchbox"><span class="search-icon">⌕</span><input id="search" type="search" placeholder="也可輸入：2房售價<=100萬" autocomplete="off" aria-label="搜尋樓盤或自訂篩選條件"><kbd>⌘ K</kbd></label>
+      <div class="quick-filters" aria-label="房型與總價篩選">
+        <span class="filter-caption">房型</span><div class="bedroom-options" role="group" aria-label="選擇房型">
+          <button type="button" data-bedrooms="1" aria-pressed="false">1 房</button><button type="button" data-bedrooms="2" aria-pressed="false">2 房</button><button type="button" data-bedrooms="3" aria-pressed="false">3 房</button><button type="button" data-bedrooms="4" aria-pressed="false">4 房</button>
+        </div>
+        <label class="budget-filter" for="budgetInput"><span>總價上限</span><input id="budgetInput" type="text" inputmode="decimal" value="400萬" placeholder="例如 100萬" aria-label="輸入總價上限，例如 100萬"></label><button id="applyBedroomFilter" class="apply-filter" type="button">搜尋</button>
+      </div>
       <div class="sort-row"><span>地圖標籤</span><div class="segmented" role="group" aria-label="選擇地圖顯示數字"><button data-mode="sale" class="selected">售價/㎡</button><button data-mode="rent">月租/㎡</button><button data-mode="yield">淨投報</button></div></div>
       <div class="sort-order-row"><label for="sortOrder">排序樓盤</label><select id="sortOrder" aria-label="排序樓盤"><option value="distance">MRT 距離：近 → 遠</option><option value="sale">最低售價單價：低 → 高</option><option value="rent">最低月租單價：低 → 高</option><option value="yield">淨投報率：高 → 低</option><option value="year-new">完工年：新 → 舊</option><option value="year-old">完工年：舊 → 新</option></select></div>
       <div class="list-heading"><span>樓盤 <b id="listCount">05</b></span><button id="clearSearch" class="text-button">清除搜尋</button></div>
       <div id="projectList" class="project-list"></div>
-      <div class="panel-foot"><span class="source-dot"></span><span>搜尋例：年:2014、售價/㎡&lt;50000、租金/㎡&lt;300、距離&lt;1、投報&gt;5；空格可疊加條件。92 個樓盤座標已由公開樓盤或地圖頁核對；售租數字為平台頁面可見樣本，採用 OpenStreetMap。</span></div>
+      <div class="panel-foot"><span class="source-dot"></span><span>點選 1～4 房並輸入總價上限（可用「100萬」或「1,000,000」）；也可在搜尋欄輸入 2房售價&lt;=100萬、年:2014、售價/㎡&lt;50000、距離&lt;1。空格可疊加條件。</span></div>
     </section>
 
     <div class="map-tools panel" aria-label="地圖工具"><button id="zoomIn" class="map-tool" aria-label="放大地圖">＋</button><button id="zoomOut" class="map-tool" aria-label="縮小地圖">−</button><div class="tool-divider"></div><button id="locate" class="map-tool locate" aria-label="回到 Huai Khwang 樓盤">◎</button></div>
