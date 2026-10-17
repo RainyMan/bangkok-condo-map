@@ -143,6 +143,20 @@ def fetch(row: dict[str, Any], projects: list[dict[str, Any]]) -> dict[str, Any]
 
 
 def write_output(rows: list[dict[str, Any]]) -> None:
+    # Retain coordinates verified by earlier research passes. This runner only
+    # checks projects that have no linked PropertyHub project ID, so replacing
+    # its output with this run's cache would silently discard other verified
+    # project-page matches that are not in the current cache.
+    if OUTPUT.exists():
+        try:
+            previous = read_array(OUTPUT, "BANGKOK_PROPERTYHUB_GUESSED_DETAILS")
+        except (OSError, ValueError, json.JSONDecodeError):
+            previous = []
+        by_id = {int(row["hipflatProjectId"]): row for row in previous
+                 if row.get("locationVerified") and row.get("lat") is not None and row.get("lng") is not None}
+        by_id.update({int(row["hipflatProjectId"]): row for row in rows
+                      if row.get("locationVerified") and row.get("lat") is not None and row.get("lng") is not None})
+        rows = sorted(by_id.values(), key=lambda row: int(row["hipflatProjectId"]))
     target = OUTPUT.with_suffix(".js.tmp")
     target.write_text("window.BANGKOK_PROPERTYHUB_GUESSED_DETAILS = " + json.dumps(rows, ensure_ascii=False, separators=(",", ":")) + ";\n", encoding="utf-8")
     target.replace(OUTPUT)
