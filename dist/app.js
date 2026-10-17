@@ -162,16 +162,18 @@
     // source URL recorded for that exact lowest-price listing. The general
     // sample array may not include every listing used in the bedroom summary.
     const roomMinimum = Number(room?.minimum || 0);
-    const roomSample = (room?.sourceUrl ? roomListings.find(sample => sample.url === room.sourceUrl) : null)
-      || roomListings.find(sample => Number(sample.price) === roomMinimum)
-      || roomListings.slice().sort((a, b) => Number(a.price) - Number(b.price))[0];
+    // The bedroom summary is the source of truth for the lowest total price.
+    // Use listing details only when they confirm that exact price, so a stale
+    // source URL or a different unit cannot replace the two-bedroom minimum.
+    const roomSample = roomListings.find(sample => Number(sample.price) === roomMinimum)
+      || (room?.sourceUrl ? roomListings.find(sample => sample.url === room.sourceUrl && Number(sample.price) === roomMinimum) : null);
     const lowestSaleSample = (c.sale?.samples || []).find(sample => sample.url === c.sale?.minimumSourceUrl)
       || (c.sale?.samples || []).find(sample => Number(sample.price) === Number(c.sale?.minimum));
     // When the bedroom summary points to an individual listing, use that
     // listing's price and floor area together so ROI never mixes two units.
     // Fall back to the bedroom summary only when its listing is absent from
     // the cached sample array (for example, a summary-only market source).
-    const salePrice = Number(roomSample?.price || roomMinimum || c.sale?.minimum || 0);
+    const salePrice = Number(roomMinimum || roomSample?.price || c.sale?.minimum || 0);
     const saleArea = Number(roomSample?.area || room?.area || (!room ? c.sale?.minimumArea || lowestSaleSample?.area : null) || areaFor(c));
     const roomRent = chosenBeds ? c.rent?.byBedroom?.[chosenBeds] : null;
     const rentRate = Number(roomRent?.minimumSqm || (roomRent?.minimum && roomRent?.area ? roomRent.minimum / roomRent.area : 0) || c.rent?.minimumSqm || 0);
