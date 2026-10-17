@@ -206,12 +206,12 @@
       ? { price: roomSummaryMinimum, area: summaryArea || Number(summarySample.area), url: summaryUrl }
       : null;
     const listingCandidates = roomListings.map(sample => ({ price: Number(sample.price), area: Number(sample.area), url: sample.url }));
-    // When individual listings exist for this room type, select the lowest
-    // total price from those listings. Room-summary prices are only a fallback
-    // when there is no matching individual listing to link to.
-    const roomSample = listingCandidates.length
-      ? listingCandidates.sort((a, b) => a.price - b.price || Number(Boolean(b.url)) - Number(Boolean(a.url)))[0]
-      : summaryCandidate;
+    // Compare the room summary's lowest linked listing with the individual
+    // samples. The summary can include a cheaper two-bedroom listing that is
+    // not present in the limited sample array, so don't ignore it just because
+    // another same-room listing is available.
+    const roomSample = [...listingCandidates, ...(summaryCandidate ? [summaryCandidate] : [])]
+      .sort((a, b) => a.price - b.price || Number(Boolean(b.url)) - Number(Boolean(a.url)))[0] || null;
     const selectedRoomMinimum = Number(roomSample?.price || 0);
     const roomAveragePrice = !selectedRoomMinimum && Number(room?.average) > 0 ? Number(room.average) : 0;
     const roomAverageArea = roomAveragePrice > 0 && Number(room?.averageSqm) > 0 ? roomAveragePrice / Number(room.averageSqm) : 0;
