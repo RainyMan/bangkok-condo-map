@@ -130,7 +130,7 @@
     const rawCompletedYear = Number((propertyScoutMarket.locationVerificationSourceUrl && propertyScoutMarket.completedYear) || propertyHub.completedYear || project.completedYear || propertyScoutMarket.completedYear || legacy?.completedYear || 0);
     const completedYear = rawCompletedYear >= 2400 && rawCompletedYear <= 2700 ? rawCompletedYear - 543 : rawCompletedYear || null;
     return { ...legacy, ...project, ...propertyHub, lat, lng, locationVerified,
-      manualSaleSamples: manualMarket.sale?.samples || [],
+      manualSaleSamples: (manualMarket.sale?.samples || []).filter(sample => sample.specialAsset === true),
       locationSourceUrl: coordsFromPropertyHub ? propertyHub.locationSourceUrl : coordsFromProject ? project.locationSourceUrl : coordsFromOsm ? osm.sourceUrl : coordsFromPropertyScout ? propertyScoutDetail.locationSourceUrl : coordsFromVerifiedSource ? verifiedCoordinate.sourceUrl : project.locationSourceUrl || legacy?.locationSourceUrl,
       locationVerificationSourceUrl: coordsFromPropertyScout ? (propertyScoutDetail.locationVerificationSourceUrl || propertyScoutMarket.locationVerificationSourceUrl) : coordsFromVerifiedSource ? (verifiedCoordinate.corroborationSourceUrl || verifiedCoordinate.verificationSourceUrl) : null,
       locationSourceName: coordsFromPropertyHub ? propertyHub.locationSourceName : coordsFromOsm ? 'OpenStreetMap 建物／地址' : coordsFromPropertyScout ? propertyScoutDetail.locationSourceName : coordsFromVerifiedSource ? verifiedCoordinate.sourceName : project.locationSourceName || legacy?.locationSourceName,
@@ -158,9 +158,11 @@
     const chosenBeds = beds && c.sale?.byBedroom?.[String(beds)] ? String(beds) : defaultRoom;
     const room = chosenBeds ? c.sale?.byBedroom?.[chosenBeds] : null;
     const roomListings = chosenBeds ? (c.sale?.samples || []).filter(sample => Number(sample.beds ?? sample.bedrooms) === Number(chosenBeds) && Number(sample.price) > 0) : [];
-    const roomSample = (room?.sourceUrl ? roomListings.find(sample => sample.url === room.sourceUrl) : null)
-      || roomListings.find(sample => Number(sample.price) === Number(room?.minimum))
-      || (!Number(room?.minimum) ? roomListings.sort((a, b) => Number(a.price) - Number(b.price))[0] : null);
+    // The yield purchase reference must be the cheapest listing for the selected
+    // bedroom count. A summary's sourceUrl may point to its lowest price-per-sqm
+    // listing, which is not necessarily the lowest total-price listing.
+    const roomSample = roomListings.slice().sort((a, b) => Number(a.price) - Number(b.price))[0]
+      || (room?.sourceUrl ? roomListings.find(sample => sample.url === room.sourceUrl) : null);
     const lowestSaleSample = (c.sale?.samples || []).find(sample => sample.url === c.sale?.minimumSourceUrl)
       || (c.sale?.samples || []).find(sample => Number(sample.price) === Number(c.sale?.minimum));
     const salePrice = Number(roomSample?.price || room?.minimum || c.sale?.minimum || 0);
