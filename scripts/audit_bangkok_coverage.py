@@ -73,7 +73,7 @@ def listing_updated(market: dict, research_market: dict | None = None) -> str:
 
 
 def main() -> None:
-    projects = load_array("bangkok-catalogue.js", "BANGKOK_HIPFLAT_PROJECTS")
+    projects = load_array("bangkok-catalogue.js", "BANGKOK_CONDO_CATALOGUE")
     # This must be the same compiled source file loaded by index.html. The
     # similarly named bangkok-propertyhub.js is an unbundled research artifact.
     propertyhub = index(load_array("bangkok-propertyhub-map.js", "BANGKOK_PROPERTYHUB_PROJECTS"), "id")

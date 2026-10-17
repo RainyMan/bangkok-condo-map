@@ -43,7 +43,7 @@ def typo_compatible(left: str, right: str) -> bool:
 
 
 def main() -> None:
-    projects = arr("bangkok-catalogue.js", "BANGKOK_HIPFLAT_PROJECTS")
+    projects = arr("bangkok-catalogue.js", "BANGKOK_CONDO_CATALOGUE")
     ph = arr("bangkok-propertyhub.js", "BANGKOK_PROPERTYHUB_PROJECTS")
     details = arr("bangkok-propertyhub-guessed-details.js", "BANGKOK_PROPERTYHUB_GUESSED_DETAILS")
     known = {str(row["propertyHubProjectId"]) for row in ph if row.get("propertyHubProjectId")}

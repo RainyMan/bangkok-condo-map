@@ -264,8 +264,20 @@
   let query = '';
   let sortMode = 'distance';
   const yieldOverrides = new Map();
-  const yieldStorageKey = 'bangkokCondoYieldInputsV2';
-  const loadYieldInputs = () => { try { return JSON.parse(localStorage.getItem(yieldStorageKey) || '{}'); } catch { return {}; } };
+  const yieldStorageKey = 'bangkokCondoYieldInputsV3';
+  const loadYieldInputs = () => {
+    try {
+      const current = localStorage.getItem(yieldStorageKey);
+      if (current) return JSON.parse(current);
+      // Older saved estimates may use another room count. Keep only saved
+      // two-bedroom estimates so default map yields are recalculated from the
+      // lowest two-bedroom sale listing and its matching floor area.
+      const legacy = JSON.parse(localStorage.getItem('bangkokCondoYieldInputsV2') || '{}');
+      const twoBedroom = Object.fromEntries(Object.entries(legacy).filter(([, row]) => String(row?.beds) === '2'));
+      if (Object.keys(twoBedroom).length) localStorage.setItem(yieldStorageKey, JSON.stringify(twoBedroom));
+      return twoBedroom;
+    } catch { return {}; }
+  };
   const saveYieldInputs = values => { try { localStorage.setItem(yieldStorageKey, JSON.stringify(values)); } catch {} };
   const calculateNetYield = (c, { price, rent, area, deductFee = true, deductAgent = true }) => {
     const purchasePrice = Number(price), monthlyRent = Number(rent), floorArea = Number(area);
@@ -542,7 +554,7 @@
       ${localListingSection}
       ${manualSaleSection}
       <section class="detail-section"><p class="section-label">管理費參考 <span>需向管委會確認</span></p>${feeText}${c.fee?.source ? `<div class="source-links"><a href="${esc(c.fee.source)}" target="_blank" rel="noopener">管理費來源 ↗</a></div>` : ''}</section>
-      ${hasYieldData(c) ? `<section class="detail-section yield-section"><div class="yield-heading"><p class="section-label">年租金報酬試算 <span>${yieldDefaults.isRoomStart ? `${yieldDefaults.beds || ''} 房最低總價` : yieldDefaults.isRoomAverage ? `${yieldDefaults.beds || ''} 房平均售價估算` : yieldUsesSummary ? '房型行情摘要估算' : '最低價格估算'}</span></p><div class="yield-value" id="yieldValue">${yieldFor(c).toFixed(2)}<small>% / 年</small></div></div><div class="yield-inputs"><div class="yield-input"><label for="yieldPrice">參考購入總價 (฿)</label><input id="yieldPrice" type="number" min="1" step="50000" value="${calcPrice}"><button type="button" id="useLowestYieldSample" class="use-lowest-yield-button">重算最低兩房基準</button></div><div class="yield-input"><label for="yieldRent">參考月租 (฿)</label><input id="yieldRent" type="number" min="0" step="500" value="${calcRent}"></div><div class="yield-input"><label for="yieldArea">室內面積 (㎡)</label><input id="yieldArea" type="number" min="1" step="0.1" value="${calcArea.toFixed(1)}"></div><div class="yield-input"><label for="yieldBeds">參考房型</label><select id="yieldBeds">${yieldDefaults.roomOptions.map(([bed]) => `<option value="${esc(bed)}" ${String(yieldDefaults.beds) === String(bed) ? 'selected' : ''}>${bed} 房${Number(bed) >= 5 ? '以上' : ''}</option>`).join('') || '<option value="">房型未提供</option>'}</select></div></div><p class="formula-note">預設優先採兩房最低總價，且面積取同一筆最低價掛牌；若來源只有房型平均售價，才以該房型均價和均價推算面積，並標示為估算。月租優先用同房型租金單價乘上購入面積，缺少房型租金時才退回Condo整體低點。淨年投報率＝（月租 × 扣除仲介月數後的年租月數 − 年管理費）÷ 購入總價；管理費僅在已查得時扣除。可自行修改並儲存，未含稅、維修與交易成本。</p><div class="yield-options"><label><input id="deductFee" type="checkbox" ${calcDeductFee ? 'checked' : ''}> 扣除管理費</label><label><input id="deductAgent" type="checkbox" ${calcDeductAgent ? 'checked' : ''}> 扣除 1 個月仲介管理費</label><button type="button" id="saveYieldInputs" class="save-yield-button">儲存試算</button><span id="yieldSavedNote" class="yield-saved-note">${savedYield ? '已儲存於此裝置' : ''}</span></div><div class="source-links"><a href="${esc(yieldDefaults.saleSourceUrl || saleSampleUrl)}" target="_blank" rel="noopener">${yieldDefaults.beds ? `${esc(yieldDefaults.beds)} 房${yieldDefaults.isRoomStart ? '最低總價' : '房型售價估算'}來源` : '購入基準來源'} ↗</a><a href="${esc(yieldDefaults.rentSourceUrl || rentSampleUrl)}" target="_blank" rel="noopener">${yieldDefaults.beds ? `${esc(yieldDefaults.beds)} 房租金單價來源` : '租金基準來源'} ↗</a><a href="${ddSale}" target="_blank" rel="noopener">DDproperty 出售 ↗</a><a href="${ddRent}" target="_blank" rel="noopener">DDproperty 出租 ↗</a><a href="${hipflatSearch}" target="_blank" rel="noopener">Hipflat 專案行情 ↗</a></div></section>` : '<section class="detail-section yield-section"><p class="section-label">投報率試算 <span>售租資料不足</span></p><p class="fee-note">至少需要同一 Condo可核對的出售與出租每平方米單價，才能計算投報率。</p></section>'}
+      ${hasYieldData(c) ? `<section class="detail-section yield-section"><div class="yield-heading"><p class="section-label">年租金報酬試算 <span>${yieldDefaults.isRoomStart ? `${yieldDefaults.beds || ''} 房最低總價` : yieldDefaults.isRoomAverage ? `${yieldDefaults.beds || ''} 房平均售價估算` : yieldUsesSummary ? '房型行情摘要估算' : '最低價格估算'}</span></p><div class="yield-value" id="yieldValue">${yieldFor(c).toFixed(2)}<small>% / 年</small></div></div><div class="yield-inputs"><div class="yield-input"><label for="yieldPrice">參考購入總價 (฿)</label><input id="yieldPrice" type="number" min="1" step="50000" value="${calcPrice}"><button type="button" id="useLowestYieldSample" class="use-lowest-yield-button">重新計算最低兩房投報</button></div><div class="yield-input"><label for="yieldRent">參考月租 (฿)</label><input id="yieldRent" type="number" min="0" step="500" value="${calcRent}"></div><div class="yield-input"><label for="yieldArea">室內面積 (㎡)</label><input id="yieldArea" type="number" min="1" step="0.1" value="${calcArea.toFixed(1)}"></div><div class="yield-input"><label for="yieldBeds">參考房型</label><select id="yieldBeds">${yieldDefaults.roomOptions.map(([bed]) => `<option value="${esc(bed)}" ${String(yieldDefaults.beds) === String(bed) ? 'selected' : ''}>${bed} 房${Number(bed) >= 5 ? '以上' : ''}</option>`).join('') || '<option value="">房型未提供</option>'}</select></div></div><p class="formula-note">預設採兩房最低總價掛牌，購入總價、面積及來源連結均取自同一筆最低價物件；按下「重新計算最低兩房投報」會套用該筆資料。月租以同房型租金單價乘上這筆物件面積；缺少房型租金時才退回Condo整體低點。淨年投報率＝（月租 × 扣除仲介月數後的年租月數 − 年管理費）÷ 購入總價；管理費僅在已查得時扣除。可自行修改並儲存，未含稅、維修與交易成本。</p><div class="yield-options"><label><input id="deductFee" type="checkbox" ${calcDeductFee ? 'checked' : ''}> 扣除管理費</label><label><input id="deductAgent" type="checkbox" ${calcDeductAgent ? 'checked' : ''}> 扣除 1 個月仲介管理費</label><button type="button" id="saveYieldInputs" class="save-yield-button">儲存試算</button><span id="yieldSavedNote" class="yield-saved-note">${savedYield ? '已儲存於此裝置' : ''}</span></div><div class="source-links"><a href="${esc(yieldDefaults.saleSourceUrl || saleSampleUrl)}" target="_blank" rel="noopener">${yieldDefaults.beds ? `${esc(yieldDefaults.beds)} 房${yieldDefaults.isRoomStart ? '最低總價' : '房型售價估算'}來源` : '購入基準來源'} ↗</a><a href="${esc(yieldDefaults.rentSourceUrl || rentSampleUrl)}" target="_blank" rel="noopener">${yieldDefaults.beds ? `${esc(yieldDefaults.beds)} 房租金單價來源` : '租金基準來源'} ↗</a><a href="${ddSale}" target="_blank" rel="noopener">DDproperty 出售 ↗</a><a href="${ddRent}" target="_blank" rel="noopener">DDproperty 出租 ↗</a><a href="${hipflatSearch}" target="_blank" rel="noopener">Hipflat 專案行情 ↗</a></div></section>` : '<section class="detail-section yield-section"><p class="section-label">投報率試算 <span>售租資料不足</span></p><p class="fee-note">至少需要同一 Condo可核對的出售與出租每平方米單價，才能計算投報率。</p></section>'}
       <section class="detail-section"><p class="section-label">Condo 資訊 <span>${c.completedYear ? `${esc(c.completedYear)} 完工` : '完工年待補'} · ${c.startedYear ? `${esc(c.startedYear)} 起造` : '起造年待補'}</span></p><p class="fee-note">PropertyHub 來源為單筆公開掛牌；PropertyScout 來源為Condo房型行情摘要，連結會開啟該Condo行情頁。Hipflat 提供Condo清單與專案資料。</p><div class="source-links">${c.completedYearSourceUrl || c.propertyHubProjectUrl ? `<a href="${esc(c.completedYearSourceUrl || c.propertyHubProjectUrl)}" target="_blank" rel="noopener">完工與Condo資料來源 ↗</a>` : ''}${c.locationSourceUrl ? `<a href="${esc(c.locationSourceUrl)}" target="_blank" rel="noopener">座標來源 ↗</a>` : ''}${c.locationVerificationSourceUrl ? `<a href="${esc(c.locationVerificationSourceUrl)}" target="_blank" rel="noopener">地址交叉核實 ↗</a>` : ''}<a href="${hipflatSearch}" target="_blank" rel="noopener">搜尋此案 Hipflat 專案與售租行情 ↗</a><a href="${ddSale}" target="_blank" rel="noopener">DDproperty 出售 ↗</a><a href="${ddRent}" target="_blank" rel="noopener">DDproperty 出租 ↗</a></div></section>`;
     detail.querySelector('.close-detail').addEventListener('click', () => { detail.classList.add('empty'); document.querySelector('.explorer').classList.remove('hidden-mobile'); });
     wireDetailSizeToggle();
@@ -576,6 +588,11 @@
       detail.querySelector('#yieldPrice').value = defaults.price;
       detail.querySelector('#yieldArea').value = Number(defaults.area || 0).toFixed(1);
       detail.querySelector('#yieldRent').value = defaults.rent;
+      const baselineLabel = detail.querySelector('.yield-heading .section-label span');
+      if (baselineLabel) baselineLabel.textContent = defaults.isRoomStart ? `${defaults.beds} 房最低總價` : defaults.isRoomAverage ? `${defaults.beds} 房平均售價估算` : '兩房資料不足，使用可用基準';
+      const yieldSourceLinks = detail.querySelectorAll('.yield-section .source-links a');
+      if (yieldSourceLinks[0] && defaults.saleSourceUrl) yieldSourceLinks[0].href = defaults.saleSourceUrl;
+      if (yieldSourceLinks[1] && defaults.rentSourceUrl) yieldSourceLinks[1].href = defaults.rentSourceUrl;
       recalculateYield();
     });
     detail.querySelector('#yieldBeds')?.addEventListener('change', event => {
@@ -584,6 +601,11 @@
       detail.querySelector('#yieldPrice').value = defaults.price;
       detail.querySelector('#yieldArea').value = defaults.area.toFixed(1);
       detail.querySelector('#yieldRent').value = defaults.rent;
+      const baselineLabel = detail.querySelector('.yield-heading .section-label span');
+      if (baselineLabel) baselineLabel.textContent = defaults.isRoomStart ? `${defaults.beds} 房最低總價` : defaults.isRoomAverage ? `${defaults.beds} 房平均售價估算` : `${defaults.beds || '可用'} 房資料不足，使用可用基準`;
+      const yieldSourceLinks = detail.querySelectorAll('.yield-section .source-links a');
+      if (yieldSourceLinks[0] && defaults.saleSourceUrl) yieldSourceLinks[0].href = defaults.saleSourceUrl;
+      if (yieldSourceLinks[1] && defaults.rentSourceUrl) yieldSourceLinks[1].href = defaults.rentSourceUrl;
       recalculateYield();
     });
     detail.querySelector('#saveYieldInputs')?.addEventListener('click', () => {
