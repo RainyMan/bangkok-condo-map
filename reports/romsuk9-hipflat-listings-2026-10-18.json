@@ -1,0 +1,49 @@
+{
+  "hipflatId": 3107,
+  "projectName": "Romsuk 9 Condotown",
+  "checkedAt": "2026-10-18",
+  "projectSource": "https://www.hipflat.co.th/projects/romsuk-9-condotown-gloeqm",
+  "saleListings": [
+    {
+      "id": "NI-085376",
+      "price": 350000,
+      "area": 28,
+      "priceSqm": 12500,
+      "title": "Romsuk 9 Condotown，28 ㎡，4 樓，฿350,000",
+      "url": "https://www.hipflat.co.th/ads/2enl443088at7814c92n92h93u09n9h7",
+      "sourceName": "Hipflat",
+      "projectName": "Romsuk 9 Condotown",
+      "checkedAt": "2026-10-18",
+      "updated": "2026-09-09",
+      "matchedBy": "exact_hipflat_project_page_unit",
+      "listingStatus": "listed_on_project_page_update_over_30d"
+    },
+    {
+      "id": "NI-085373",
+      "price": 350000,
+      "area": 27,
+      "priceSqm": 12962,
+      "title": "Romsuk 9 Condotown，27 ㎡，4 樓，฿350,000",
+      "url": "https://www.hipflat.co.th/ads/4u9l0aa788a09u07ea9cnhea3ul37el3",
+      "sourceName": "Hipflat",
+      "projectName": "Romsuk 9 Condotown",
+      "checkedAt": "2026-10-18",
+      "updated": "2026-09-09",
+      "matchedBy": "exact_hipflat_project_page_unit",
+      "listingStatus": "listed_on_project_page_update_over_30d"
+    }
+  ],
+  "fee": {
+    "rate": 12.34,
+    "status": "public",
+    "note": "Hipflat 單筆出售掛牌註明每平方公尺管理費 ฿12.34/月；請向管委會確認最新費率。",
+    "source": "https://www.hipflat.co.th/ads/2enl443088at7814c92n92h93u09n9h7"
+  },
+  "notes": [
+    "Hipflat Thai project page lists two active sale cards at ฿350,000 each; both unit pages were opened directly.",
+    "Both unit listings show the same update date, 2026-09-09, and were still linked from the project page when checked 2026-10-18.",
+    "Listing card areas are 28 m² and 27 m². The descriptions contain slightly more precise floor areas, while the project cards report rounded areas and per-square-metre rates; the compiled comparison uses card values consistently.",
+    "The first unit description states common area fee ฿12.34/m²/month; confirm with the juristic office before purchase.",
+    "No matching rental listing was displayed on the Hipflat project page, so rent and ROI remain unavailable for this project."
+  ]
+}
