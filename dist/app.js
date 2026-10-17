@@ -108,6 +108,9 @@
   let query = '';
   let sortMode = 'distance';
   const yieldOverrides = new Map();
+  const yieldStorageKey = 'bangkokCondoYieldInputs';
+  const loadYieldInputs = () => { try { return JSON.parse(localStorage.getItem(yieldStorageKey) || '{}'); } catch { return {}; } };
+  const saveYieldInputs = values => { try { localStorage.setItem(yieldStorageKey, JSON.stringify(values)); } catch {} };
   const markers = new Map();
   const stationMarkers = new Map();
   let walkingLine = null;
@@ -296,6 +299,16 @@
     const addr = `${c.name} condo ${c.address || 'Bangkok Thailand'}`;
     const nearest = c.nearestMrt;
     const nearestStation = stations.find(s => s.id === nearest?.stationId);
+    const savedYield = loadYieldInputs()[c.id] || null;
+    const calcPrice = Number(savedYield?.price || Math.round(Number(c.sale.minimumSqm || 0) * areaFor(c)));
+    const calcRent = Number(savedYield?.rent || Math.round(Number(c.rent.minimumSqm || 0) * areaFor(c)));
+    const calcArea = Number(savedYield?.area || areaFor(c));
+    const calcDeductFee = savedYield?.deductFee ?? true;
+    const calcDeductAgent = savedYield?.deductAgent ?? true;
+    if (savedYield && calcPrice > 0 && calcArea > 0) {
+      const annualFee = calcDeductFee && c.fee?.rate ? c.fee.rate * calcArea * 12 : 0;
+      yieldOverrides.set(c.id, (calcRent * (12 - (calcDeductAgent ? 1 : 0)) - annualFee) / calcPrice * 100);
+    }
     detail.classList.remove('empty');
     const saleLabel = c.sale.marketSummary ? '房型行情摘要' : 'PropertyHub 可見掛牌';
     const rentLabel = c.rent.marketSummary ? '房型行情摘要' : 'PropertyHub 可見掛牌';
@@ -310,7 +323,7 @@
       <section class="detail-section"><p class="section-label">二手出售 <span>${sampleCount(c.sale)} · ${esc(c.sale.asOf || '')}</span></p><div class="metric-grid"><div class="metric"><span class="metric-label">${c.sale.marketSummary ? '房型平均售價' : c.sale.observedCount ? '樣本平均售價' : '平均售價'}</span><b class="metric-value">${money(c.sale.average)}</b><span class="metric-sub">${saleLowLabel} ${money(c.sale.minimum)} ${sampleSource(c.sale.minimumSourceUrl, c.sale)}</span></div><div class="metric"><span class="metric-label">${c.sale.marketSummary ? '房型平均售價 / ㎡' : '售價 / ㎡'}</span><b class="metric-value">${money(c.sale.averageSqm)}</b><span class="metric-sub">${saleLowSqmLabel} ${money(c.sale.minimumSqm)} / ㎡ ${sampleSource(c.sale.minimumSqmSourceUrl, c.sale)}</span></div></div>${roomListing?.sourceUrl ? `<p class="room-sample">${roomMatch[1]} 房最低掛牌 ${money(roomListing.minimum)} <a href="${esc(roomListing.sourceUrl)}" target="_blank" rel="noopener">物件 ↗</a></p>` : ''}<div class="unit-price"><span>來源：${saleLabel}</span><b><a href="${esc(saleSampleUrl)}" target="_blank" rel="noopener">查看來源 ↗</a></b></div></section>
       <section class="detail-section rent-section"><p class="section-label">出租市場 <span>${sampleCount(c.rent)} · ${esc(c.rent.asOf || '')}</span></p><div class="metric-grid"><div class="metric"><span class="metric-label">${c.rent.marketSummary ? '房型平均月租' : c.rent.observedCount ? '樣本平均月租' : '平均月租'}</span><b class="metric-value">${money(c.rent.average)}</b><span class="metric-sub">${rentLowLabel} ${money(c.rent.minimum)} / 月 ${sampleSource(c.rent.minimumSourceUrl, c.rent)}</span></div><div class="metric"><span class="metric-label">${c.rent.marketSummary ? '房型平均租金 / ㎡' : '租金 / ㎡'}</span><b class="metric-value">${money(avgRate)}<small> / 月</small></b><span class="metric-sub">${rentLowSqmLabel} ${money(minRate)} / ㎡ / 月 ${sampleSource(c.rent.minimumSqmSourceUrl, c.rent)}</span></div></div><div class="unit-price"><span>來源：${rentLabel}</span><b><a href="${esc(rentSampleUrl)}" target="_blank" rel="noopener">查看來源 ↗</a></b></div></section>
       <section class="detail-section"><p class="section-label">管理費參考 <span>需向管委會確認</span></p>${feeText}${c.fee?.source ? `<div class="source-links"><a href="${esc(c.fee.source)}" target="_blank" rel="noopener">管理費來源 ↗</a></div>` : ''}</section>
-      ${hasYieldData(c) ? `<section class="detail-section yield-section"><div class="yield-heading"><p class="section-label">年租金報酬試算 <span>${yieldUsesSummary ? '含房型行情摘要估算' : '最低單價為預設'}</span></p><div class="yield-value" id="yieldValue">${yieldFor(c).toFixed(2)}<small>% / 年</small></div></div><div class="yield-inputs"><div class="yield-input"><label for="yieldPrice">參考購入總價 (฿)</label><input id="yieldPrice" type="number" min="1" step="50000" value="${Math.round(Number(c.sale.minimumSqm || 0) * areaFor(c))}"></div><div class="yield-input"><label for="yieldRent">參考月租 (฿)</label><input id="yieldRent" type="number" min="0" step="500" value="${Math.round(Number(c.rent.minimumSqm || 0) * areaFor(c))}"></div><div class="yield-input"><label for="yieldArea">室內面積 (㎡)</label><input id="yieldArea" type="number" min="1" step="0.1" value="${areaFor(c).toFixed(1)}"></div><div class="yield-input"><label>參考房型</label><input value="${c.beds || '—'} 房" readonly></div></div><div class="yield-options"><label><input id="deductFee" type="checkbox" checked> 扣除管理費</label><label><input id="deductAgent" type="checkbox" checked> 扣除 1 個月仲介管理費</label></div><p class="formula-note">${yieldUsesSummary ? 'PropertyScout 行情摘要以不同房型平均單價估算，不能視為同一戶的售租配對。' : '預設以最低售價/㎡及最低租金/㎡估算。'}只有樓型面積範圍時，參考總價以最小面積示例，仍需用實際房源面積確認。已知管理費才會扣除，勾選時扣 1 個月租金作仲介費；未含稅、維修及交易成本。</p><div class="source-links"><a href="${esc(saleSampleUrl)}" target="_blank" rel="noopener">${c.sale.marketSummary ? '出售行情摘要來源' : '出售掛牌來源'} ↗</a><a href="${esc(rentSampleUrl)}" target="_blank" rel="noopener">${c.rent.marketSummary ? '出租行情摘要來源' : '出租掛牌來源'} ↗</a><a href="${ddSale}" target="_blank" rel="noopener">DDproperty 出售 ↗</a><a href="${ddRent}" target="_blank" rel="noopener">DDproperty 出租 ↗</a><a href="${hipflatSearch}" target="_blank" rel="noopener">Hipflat 專案行情 ↗</a></div></section>` : '<section class="detail-section yield-section"><p class="section-label">投報率試算 <span>售租資料不足</span></p><p class="fee-note">至少需要同一樓盤可核對的出售與出租每平方米單價，才能計算投報率。</p></section>'}
+      ${hasYieldData(c) ? `<section class="detail-section yield-section"><div class="yield-heading"><p class="section-label">年租金報酬試算 <span>${yieldUsesSummary ? '含房型行情摘要估算' : '最低單價為預設'}</span></p><div class="yield-value" id="yieldValue">${yieldFor(c).toFixed(2)}<small>% / 年</small></div></div><div class="yield-inputs"><div class="yield-input"><label for="yieldPrice">參考購入總價 (฿)</label><input id="yieldPrice" type="number" min="1" step="50000" value="${calcPrice}"></div><div class="yield-input"><label for="yieldRent">參考月租 (฿)</label><input id="yieldRent" type="number" min="0" step="500" value="${calcRent}"></div><div class="yield-input"><label for="yieldArea">室內面積 (㎡)</label><input id="yieldArea" type="number" min="1" step="0.1" value="${calcArea.toFixed(1)}"></div><div class="yield-input"><label>參考房型</label><input value="${c.beds || '—'} 房" readonly></div></div><div class="yield-options"><label><input id="deductFee" type="checkbox" ${calcDeductFee ? 'checked' : ''}> 扣除管理費</label><label><input id="deductAgent" type="checkbox" ${calcDeductAgent ? 'checked' : ''}> 扣除 1 個月仲介管理費</label><button type="button" id="saveYieldInputs" class="save-yield-button">儲存試算</button><span id="yieldSavedNote" class="yield-saved-note">${savedYield ? '已儲存於此裝置' : ''}</span></div><p class="formula-note">${yieldUsesSummary ? 'PropertyScout 行情摘要以不同房型平均單價估算，不能視為同一戶的售租配對。' : '預設以最低售價/㎡及最低租金/㎡估算。'}只有樓型面積範圍時，參考總價以最小面積示例，仍需用實際房源面積確認。已知管理費才會扣除，勾選時扣 1 個月租金作仲介費；未含稅、維修及交易成本。</p><div class="source-links"><a href="${esc(saleSampleUrl)}" target="_blank" rel="noopener">${c.sale.marketSummary ? '出售行情摘要來源' : '出售掛牌來源'} ↗</a><a href="${esc(rentSampleUrl)}" target="_blank" rel="noopener">${c.rent.marketSummary ? '出租行情摘要來源' : '出租掛牌來源'} ↗</a><a href="${ddSale}" target="_blank" rel="noopener">DDproperty 出售 ↗</a><a href="${ddRent}" target="_blank" rel="noopener">DDproperty 出租 ↗</a><a href="${hipflatSearch}" target="_blank" rel="noopener">Hipflat 專案行情 ↗</a></div></section>` : '<section class="detail-section yield-section"><p class="section-label">投報率試算 <span>售租資料不足</span></p><p class="fee-note">至少需要同一樓盤可核對的出售與出租每平方米單價，才能計算投報率。</p></section>'}
       <section class="detail-section"><p class="section-label">樓盤資訊 <span>${c.completedYear ? `${esc(c.completedYear)} 完工` : '完工年待補'} · ${c.startedYear ? `${esc(c.startedYear)} 起造` : '起造年待補'}</span></p><p class="fee-note">PropertyHub 來源為單筆公開掛牌；PropertyScout 來源為樓盤房型行情摘要，連結會開啟該樓盤行情頁。Hipflat 提供樓盤清單與專案資料。</p><div class="source-links">${c.completedYearSourceUrl || c.propertyHubProjectUrl ? `<a href="${esc(c.completedYearSourceUrl || c.propertyHubProjectUrl)}" target="_blank" rel="noopener">完工與樓盤資料來源 ↗</a>` : ''}${c.locationSourceUrl ? `<a href="${esc(c.locationSourceUrl)}" target="_blank" rel="noopener">座標來源 ↗</a>` : ''}${c.locationVerificationSourceUrl ? `<a href="${esc(c.locationVerificationSourceUrl)}" target="_blank" rel="noopener">地址交叉核實 ↗</a>` : ''}<a href="${hipflatSearch}" target="_blank" rel="noopener">搜尋此案 Hipflat 專案與售租行情 ↗</a><a href="${ddSale}" target="_blank" rel="noopener">DDproperty 出售 ↗</a><a href="${ddRent}" target="_blank" rel="noopener">DDproperty 出租 ↗</a></div></section>`;
     detail.querySelector('.close-detail').addEventListener('click', () => { detail.classList.add('empty'); document.querySelector('.explorer').classList.remove('hidden-mobile'); });
     detail.querySelector('#showWalkingRoute').addEventListener('click', () => {
@@ -338,6 +351,18 @@
       markers.forEach((m, markerId) => m.setIcon(icon(condos.find(x => x.id === markerId), markerId === selectedId)));
       renderList();
     }));
+    detail.querySelector('#saveYieldInputs')?.addEventListener('click', () => {
+      const values = loadYieldInputs();
+      values[c.id] = {
+        price: Number(detail.querySelector('#yieldPrice').value),
+        rent: Number(detail.querySelector('#yieldRent').value),
+        area: Number(detail.querySelector('#yieldArea').value),
+        deductFee: detail.querySelector('#deductFee').checked,
+        deductAgent: detail.querySelector('#deductAgent').checked,
+      };
+      saveYieldInputs(values);
+      detail.querySelector('#yieldSavedNote').textContent = '已儲存於此裝置';
+    });
   }
   function markerFor(id) { return markers.get(id); }
   function select(id) {
