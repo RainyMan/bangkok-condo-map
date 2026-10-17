@@ -269,6 +269,13 @@ def main() -> None:
                 metric["byBedroom"] = by_bedroom
             summary[kind] = metric
         summaries.append(summary)
+    # The browser needs market aggregates and the lowest linked sample per
+    # bedroom, not hundreds of thousands of listing cards. Keep the full cards
+    # in the local audit cache and publish this compact display bundle instead.
+    for summary in summaries:
+        for kind in ("sale", "rent"):
+            if summary.get(kind):
+                summary[kind].pop("samples", None)
     SUMMARY_OUTPUT.write_text("window.BANGKOK_PROPERTYHUB_CITY_SUMMARIES = " + json.dumps(summaries, ensure_ascii=False, separators=(",", ":")) + ";\n", encoding="utf-8")
     report = {
         "pages": pages, "rawCards": raw_cards,

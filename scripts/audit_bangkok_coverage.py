@@ -78,6 +78,7 @@ def main() -> None:
     # similarly named bangkok-propertyhub.js is an unbundled research artifact.
     propertyhub = index(load_array("bangkok-propertyhub-map.js", "BANGKOK_PROPERTYHUB_PROJECTS"), "id")
     propertyhub_research = index(load_array("bangkok-propertyhub.js", "BANGKOK_PROPERTYHUB_PROJECTS"), "id")
+    city_summaries = index(load_array("bangkok-propertyhub-city-summaries.js", "BANGKOK_PROPERTYHUB_CITY_SUMMARIES"), "id")
     details = index(load_array("bangkok-propertyhub-details.js", "BANGKOK_PROPERTYHUB_DETAILS"), "propertyHubProjectId")
     guessed = index(load_array("bangkok-propertyhub-guessed-details.js", "BANGKOK_PROPERTYHUB_GUESSED_DETAILS"), "hipflatProjectId")
     osm = index(load_array("bangkok-osm.js", "BANGKOK_OSM_LOCATIONS"), "id")
@@ -103,6 +104,13 @@ def main() -> None:
         propertyhub_id = str(base.get("propertyHubProjectId", ""))
         # Match app.js source precedence for project and market data.
         market = {**base, **guessed.get(project_id, {}), **details.get(propertyhub_id, {})}
+        city_summary = city_summaries.get(project_id, {})
+        # app.js uses the matched Bangkok-wide listing summary when present;
+        # audit that exact displayed market before falling back to other feeds.
+        if city_summary.get("sale"):
+            market["sale"] = city_summary["sale"]
+        if city_summary.get("rent"):
+            market["rent"] = city_summary["rent"]
         scout_market = scout_markets.get(project_id, {})
         manual_market = manual_markets.get(project_id, {})
         research_market = propertyhub_research.get(project_id, {})
