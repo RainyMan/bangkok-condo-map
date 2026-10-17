@@ -107,3 +107,45 @@
 .save-yield-button{padding:6px 10px;border:1px solid #0b765e;border-radius:7px;background:#087f63;color:#fff;font-size:9px;font-weight:700;cursor:pointer}
 .save-yield-button:hover{background:#075b49}
 .yield-saved-note{align-self:center;color:#16805f;font-size:9px}
+
+/* Header carries the explorer summary and map label controls to the right of the page title. */
+.topbar{height:82px;gap:12px;padding:0 18px;overflow-x:auto;overflow-y:hidden;scrollbar-width:none}
+.topbar::-webkit-scrollbar{display:none}
+.brand,.top-divider,.location-title,.header-explorer,.header-data,.header-map-mode,.hipflat-link,.count-pill{flex:none}
+.header-explorer{display:flex;flex-direction:column;justify-content:center;min-width:136px;padding-left:14px;border-left:1px solid var(--line)}
+.header-explorer strong{font-size:14px;white-space:nowrap}
+.header-data{width:310px}
+.header-counts{display:flex;align-items:center;gap:3px;color:#607068;font-size:10px;white-space:nowrap}
+.header-counts .live-dot{margin:0 3px;width:6px;height:6px}
+.header-data .coverage-line{max-width:310px;margin:4px 0 0;font-size:8px;line-height:1.35}
+.header-map-mode{display:flex;align-items:center;gap:8px;padding-left:12px;border-left:1px solid var(--line);color:#68756f;font-size:9px;white-space:nowrap}
+.header-map-mode .segmented{gap:1px}
+.header-map-mode .segmented button{padding:6px 8px;font-size:9px}
+.map-shell{inset:82px 0 0}
+.explorer{top:70px}
+.detail-panel{top:70px}
+.list-heading{padding:0 0 8px}
+.list-actions{display:flex;align-items:center;gap:9px}
+.list-actions .icon-button{width:28px;height:28px;font-size:16px}
+.sort-order-row{margin:0;padding:8px 0;border-bottom:1px solid var(--line)}
+.project-list{min-height:0}
+@media(max-width:900px) and (min-width:651px){.topbar{height:82px;padding:0 12px;gap:9px}.header-data{width:260px}.header-data .coverage-line{max-width:260px}.header-explorer{min-width:125px}.header-map-mode{gap:5px;padding-left:8px}.header-map-mode .segmented button{padding:6px 6px}.map-shell{inset:82px 0 0}}
+@media(max-width:650px){
+  .topbar{height:62px;gap:9px;padding:0 10px;overflow-x:auto}
+  .location-title{min-width:150px}
+  .header-explorer{min-width:128px;padding-left:9px}
+  .header-explorer strong{font-size:12px}
+  .header-data{width:245px}
+  .header-data .coverage-line{max-width:245px;font-size:7px}
+  .header-map-mode{gap:5px;padding-left:8px}
+  .header-map-mode .segmented button{padding:5px 6px;font-size:8px}
+  .map-shell{inset:62px 0 0}
+  .explorer{top:auto;bottom:10px;height:44%;min-height:260px}
+  #map{inset:0 0 45%}
+  .list-heading{padding-bottom:6px}
+  .sort-order-row{padding:6px 0}
+  .project-list{min-height:45px}
+  .project-card{grid-template-columns:27px minmax(0,1fr) auto}
+  .price-chip{display:block;font-size:8px;padding:4px 5px}
+  .panel-foot{display:none}
+}

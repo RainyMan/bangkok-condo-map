@@ -7,13 +7,16 @@
   <meta name="description" content="以地圖探索 Hipflat 收錄的曼谷 condo 專案，查看核實座標、售租掛牌來源、每平方米單價與投報試算。">
   <title>Bangkok Condo Map｜曼谷樓盤</title>
   <link rel="stylesheet" href="vendor/leaflet.css">
-  <link rel="stylesheet" href="style.css?v=9">
+  <link rel="stylesheet" href="style.css?v=10">
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="#" aria-label="Bangkok Condo Map 首頁"><span class="brand-mark">B</span><span>CONDO<span class="brand-light"> MAP</span></span></a>
     <div class="top-divider"></div>
     <div class="location-title"><span class="eyebrow">BANGKOK · THAILAND</span><strong>曼谷 Condo 專案全覽</strong></div>
+    <div class="header-explorer"><span class="eyebrow">AREA EXPLORER</span><strong>從地圖開始找房</strong></div>
+    <div class="header-data"><div class="header-counts"><span>曼谷 50 區</span><span class="live-dot"></span><span id="resultCount">3,555 個樓盤</span></div><p id="coverageSummary" class="coverage-line" aria-live="polite">正在統計資料覆蓋</p></div>
+    <div class="header-map-mode"><span>地圖標籤</span><div class="segmented" role="group" aria-label="選擇地圖顯示數字"><button data-mode="sale" class="selected">售價/㎡</button><button data-mode="rent">月租/㎡</button><button data-mode="yield">淨投報</button></div></div>
     <div class="top-spacer"></div>
     <a class="hipflat-link" href="https://www.hipflat.co.th/en/thailand-projects/condo/bangkok-bm" target="_blank" rel="noopener">Hipflat · Bangkok <span>↗</span></a>
     <span class="count-pill">3,555 個樓盤</span>
@@ -37,15 +40,8 @@
     </section>
 
     <section class="explorer panel" aria-label="樓盤搜尋與清單">
-      <div class="panel-head">
-        <div><p class="eyebrow">AREA EXPLORER</p><h1>從地圖開始找房</h1></div>
-        <button id="fitMap" class="icon-button" aria-label="顯示全部樓盤" title="顯示全部樓盤">⤢</button>
-      </div>
-      <p class="panel-subtitle">曼谷 50 區 <span class="live-dot"></span><span id="resultCount">3,555 個樓盤</span></p>
-      <p id="coverageSummary" class="coverage-line" aria-live="polite">正在統計資料覆蓋</p>
-      <div class="sort-row"><span>地圖標籤</span><div class="segmented" role="group" aria-label="選擇地圖顯示數字"><button data-mode="sale" class="selected">售價/㎡</button><button data-mode="rent">月租/㎡</button><button data-mode="yield">淨投報</button></div></div>
+      <div class="list-heading"><span>樓盤 <b id="listCount">05</b></span><div class="list-actions"><button id="fitMap" class="icon-button" aria-label="顯示全部樓盤" title="顯示全部樓盤">⤢</button><button id="clearSearch" class="text-button">清除篩選</button></div></div>
       <div class="sort-order-row"><label for="sortOrder">排序樓盤</label><select id="sortOrder" aria-label="排序樓盤"><option value="distance">MRT 距離：近 → 遠</option><option value="sale">最低售價單價：低 → 高</option><option value="rent">最低月租單價：低 → 高</option><option value="yield">淨投報率：高 → 低</option><option value="year-new">完工年：新 → 舊</option><option value="year-old">完工年：舊 → 新</option></select></div>
-      <div class="list-heading"><span>樓盤 <b id="listCount">05</b></span><button id="clearSearch" class="text-button">清除搜尋</button></div>
       <div id="projectList" class="project-list"></div>
       <div class="panel-foot"><span class="source-dot"></span><span>點選 1～4 房並輸入總價上限（數字單位固定為萬泰銖）；也可搜尋 2房售價&lt;=100萬、年:2014、售價/㎡&lt;50000、距離&lt;1、年投報率&gt;=5%。空格可疊加條件。</span></div>
     </section>
@@ -69,9 +65,10 @@
   <script src="bangkok-propertyscout-markets.js?v=20261017b"></script>
   <script src="stations.js?v=20261017c"></script>
   <script src="bangkok-walk-routes.js?v=20261017m"></script>
-  <script src="app.js?v=20261017k"></script>
+  <script src="app.js?v=20261017l"></script>
 </body>
 </html>
+
 
 
 
