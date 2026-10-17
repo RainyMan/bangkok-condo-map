@@ -40,6 +40,10 @@ def tokens(value: str) -> set[str]:
     return {part for part in re.sub(r"[^a-z0-9]+", " ", value).split() if part not in STOP and (len(part) > 1 or part.isdigit())}
 
 
+def normalize_name(value: str) -> str:
+    return " ".join(re.findall(r"[a-z0-9]+", (value or "").lower()))
+
+
 def house_number(value: str) -> str | None:
     match = re.search(r"(?<![a-z0-9])(\d+[a-z]?(?:/\d+[a-z]?)?)(?![a-z0-9])", value.lower())
     return match.group(1) if match else None
@@ -86,6 +90,15 @@ def main() -> None:
     projects = arr(DIST / "bangkok-catalogue.js", "BANGKOK_CONDO_CATALOGUE")
     current = {int(row["id"]): row for row in arr(OUTPUT, "BANGKOK_OSM_LOCATIONS")}
     located = set(current)
+    verified = {int(row["hipflatId"]): row for row in arr(DIST / "bangkok-verified-coordinates.js", "BANGKOK_VERIFIED_COORDINATES")}
+    propertyscout = {int(row["hipflatId"]): row for row in arr(DIST / "bangkok-propertyscout-details.js", "BANGKOK_PROPERTYSCOUT_DETAILS")}
+    located.update(pid for pid, row in verified.items() if row.get("locationVerified"))
+    located.update(pid for pid, row in propertyscout.items() if row.get("locationVerified") and row.get("lat") is not None and row.get("lng") is not None)
+    legacy_rows = []
+    for filename, symbol in (("data.js", "CONDO_DATA"), ("catalogue.js", "CATALOGUE_PROJECTS"), ("huai-khwang.js", "HUAI_KHWANG_PROJECTS")):
+        legacy_rows.extend(arr(DIST / filename, symbol))
+    legacy_verified_names = {normalize_name(row.get("name", "")) for row in legacy_rows
+                             if row.get("locationVerified") and row.get("lat") is not None and row.get("lng") is not None}
     ph = {int(row["id"]): row for row in arr(DIST / "bangkok-propertyhub.js", "BANGKOK_PROPERTYHUB_PROJECTS")}
     details = {str(row.get("propertyHubProjectId")): row for row in arr(DIST / "bangkok-propertyhub-details.js", "BANGKOK_PROPERTYHUB_DETAILS")}
     guessed = {int(row["hipflatProjectId"]): row for row in arr(DIST / "bangkok-propertyhub-guessed-details.js", "BANGKOK_PROPERTYHUB_GUESSED_DETAILS") if row.get("locationVerified")}
@@ -93,7 +106,8 @@ def main() -> None:
         pid = int(project["id"])
         base = ph.get(pid) or {}
         detail = details.get(str(base.get("propertyHubProjectId") or "")) or {}
-        if base.get("locationVerified") or detail.get("locationVerified") or pid in guessed or project.get("locationVerified"):
+        if (base.get("locationVerified") or detail.get("locationVerified") or pid in guessed or project.get("locationVerified")
+                or normalize_name(project.get("name", "")) in legacy_verified_names):
             located.add(pid)
 
     if ADDRESS_CACHE.exists():
@@ -133,6 +147,13 @@ def main() -> None:
             postcode_match = bool(pa["postcode"] and pa["postcode"] == obj.get("addr:postcode"))
             admin_match = bool(pa["admin"] & osm_admin)
             if not (postcode_match or admin_match):
+                continue
+            project_name = tokens(project.get("name", ""))
+            object_name = tokens(" ".join(obj.get(k, "") for k in ("name", "name:en", "addr:housename", "addr:housename:en")))
+            name_overlap = project_name & object_name
+            # House number + a citywide road name can still land on a nearby
+            # business. Require a distinctive condo-name match as well.
+            if not (any(len(token) >= 6 for token in name_overlap) or len(name_overlap) >= 2):
                 continue
             candidates.append((obj, len(street_overlap), postcode_match, admin_match))
         # Address points and the building footprint often duplicate a single
