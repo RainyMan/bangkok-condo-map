@@ -16,6 +16,7 @@ OSM = ROOT / "dist/bangkok-osm.js"
 PROPERTYHUB = ROOT / "dist/bangkok-propertyhub.js"
 PROPERTYHUB_DETAILS = ROOT / "dist/bangkok-propertyhub-details.js"
 PROPERTYHUB_GUESSED_DETAILS = ROOT / "dist/bangkok-propertyhub-guessed-details.js"
+PROPERTYSCOUT_DETAILS = ROOT / "dist/bangkok-propertyscout-details.js"
 STATIONS = ROOT / "dist/stations.js"
 CACHE = RESEARCH / "walking-route-matrix.jsonl"
 OUTPUT = ROOT / "dist/bangkok-walk-routes.js"
@@ -45,6 +46,8 @@ def main() -> int:
     details = {str(x["propertyHubProjectId"]): x for x in detail_rows if x.get("propertyHubProjectId")}
     guessed_rows = js_array(PROPERTYHUB_GUESSED_DETAILS, "BANGKOK_PROPERTYHUB_GUESSED_DETAILS") if PROPERTYHUB_GUESSED_DETAILS.exists() else []
     guessed = {int(x["hipflatProjectId"]): x for x in guessed_rows if x.get("hipflatProjectId") and x.get("locationVerified")}
+    propertyscout_rows = js_array(PROPERTYSCOUT_DETAILS, "BANGKOK_PROPERTYSCOUT_DETAILS") if PROPERTYSCOUT_DETAILS.exists() else []
+    propertyscout = {int(x["hipflatId"]): x for x in propertyscout_rows if x.get("hipflatId") and x.get("locationVerified")}
     stations = js_array(STATIONS, "MRT_STATIONS")
     cache: dict[int, dict] = {}
     if CACHE.exists():
@@ -72,7 +75,7 @@ def main() -> int:
         enriched = ph.get(pid) or {}
         market = propertyhub.get(pid) or {}
         project_detail = details.get(str(market.get("propertyHubProjectId") or "")) or {}
-        point = enriched if enriched.get("locationVerified") else project_detail if project_detail.get("locationVerified") else guessed.get(pid) if guessed.get(pid) else project if project.get("locationVerified") else osm.get(pid)
+        point = enriched if enriched.get("locationVerified") else project_detail if project_detail.get("locationVerified") else guessed.get(pid) if guessed.get(pid) else project if project.get("locationVerified") else osm.get(pid) or propertyscout.get(pid)
         if not point:
             continue
         lat, lon = point.get("lat"), point.get("lng")

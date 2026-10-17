@@ -87,12 +87,17 @@ def main() -> None:
     fuzzy_detail_by_ph_id = {}
     for detail in detail_rows:
         if (not detail.get("locationVerified") or not detail.get("propertyHubProjectId")
-                or detail.get("identityMatchMethod") != "exact_propertyhub_id_plus_high_confidence_name_and_listing_district"):
+                or detail.get("identityMatchMethod") not in {
+                    "exact_propertyhub_id_plus_high_confidence_name_and_listing_district",
+                    "verified_propertyhub_id_page_with_listing_title_alias_evidence",
+                    "verified_propertyhub_id_page_with_project_alias",
+                }):
             continue
         target = by_id.get(int(detail.get("hipflatProjectId") or 0))
         if not target or district(target.get("address", "")) != district(detail.get("projectAddress", "")):
             continue
-        fuzzy_detail_by_ph_id[str(detail.get("propertyHubProjectId"))] = target
+        listing_project_id = detail.get("propertyHubListingProjectId") or detail.get("propertyHubProjectId")
+        fuzzy_detail_by_ph_id[str(listing_project_id)] = target
 
     listings: dict[tuple[int, str], dict[str, dict]] = defaultdict(dict)
     match_methods: Counter = Counter()

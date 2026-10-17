@@ -48,6 +48,7 @@ def main() -> None:
     details = arr("bangkok-propertyhub-guessed-details.js", "BANGKOK_PROPERTYHUB_GUESSED_DETAILS")
     known = {str(row["propertyHubProjectId"]) for row in ph if row.get("propertyHubProjectId")}
     known.update(str(row["propertyHubProjectId"]) for row in details if row.get("propertyHubProjectId"))
+    known.update(str(row["propertyHubListingProjectId"]) for row in details if row.get("propertyHubListingProjectId"))
     catalogue_by_district: dict[str, list[dict]] = defaultdict(list)
     for row in projects:
         d = audit.district(row.get("address", ""))
