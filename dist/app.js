@@ -198,8 +198,11 @@
       ? { price: roomSummaryMinimum, area: summaryArea || Number(summarySample.area), url: summaryUrl }
       : null;
     const listingCandidates = roomListings.map(sample => ({ price: Number(sample.price), area: Number(sample.area), url: sample.url }));
-    const roomSample = [...listingCandidates, ...(summaryCandidate ? [summaryCandidate] : [])]
-      .sort((a, b) => a.price - b.price)[0] || null;
+    // A two-bedroom ROI must use the cheapest real two-bedroom listing when
+    // one is available. Market summaries are a fallback only; they can be a
+    // modeled project-level minimum that does not identify a matching unit.
+    const roomSample = listingCandidates.sort((a, b) => a.price - b.price)[0]
+      || summaryCandidate || null;
     const selectedRoomMinimum = Number(roomSample?.price || 0);
     const roomAveragePrice = !selectedRoomMinimum && Number(room?.average) > 0 ? Number(room.average) : 0;
     const roomAverageArea = roomAveragePrice > 0 && Number(room?.averageSqm) > 0 ? roomAveragePrice / Number(room.averageSqm) : 0;
@@ -552,13 +555,6 @@
       renderList();
     };
     ['yieldPrice', 'yieldRent', 'yieldArea', 'deductFee', 'deductAgent'].forEach(id => detail.querySelector(`#${id}`)?.addEventListener('input', recalculateYield));
-    detail.querySelector('#useLowestYieldSample')?.addEventListener('click', () => {
-      const defaults = yieldDefaultsFor(c, detail.querySelector('#yieldBeds').value || null);
-      detail.querySelector('#yieldPrice').value = defaults.price;
-      detail.querySelector('#yieldArea').value = Number(defaults.area || 0).toFixed(1);
-      detail.querySelector('#yieldRent').value = defaults.rent;
-      recalculateYield();
-    });
     detail.querySelector('#useLowestYieldSample')?.addEventListener('click', () => {
       const defaults = yieldDefaultsFor(c, detail.querySelector('#yieldBeds').value || null);
       detail.querySelector('#yieldPrice').value = defaults.price;

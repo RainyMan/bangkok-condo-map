@@ -11,6 +11,7 @@ import re
 from collections import Counter
 from datetime import date
 from pathlib import Path
+from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
@@ -39,7 +40,23 @@ def in_range(value: object, low: int, high: int) -> bool:
 def has_individual_listing(market: dict) -> bool:
     urls = [market.get("minimumSourceUrl"), market.get("minimumSqmSourceUrl")]
     urls.extend(sample.get("url") for sample in market.get("samples", []) if isinstance(sample, dict))
-    return any(isinstance(url, str) and re.search(r"/(?:listings|ads|property|properties|view/\d+|livingdetail_en/\d+|detail/condo-)|tperty\.com/.+-\d{5,}|property-hua-hin\.com/.+-u\d{5,}|propertyscout\.co\.th/.+-\d{6,}/?|thaiapartment\.com/condo-detail/", url) for url in urls)
+    for url in urls:
+        if not isinstance(url, str):
+            continue
+        parsed = urlsplit(url)
+        path = parsed.path.lower()
+        host = (parsed.hostname or "").lower()
+        if re.search(r"/(?:listings?|ads?|properties?|view/\d+|livingdetail_en/\d+|detail/condo-|property-rent/|property-for-sale/)", path):
+            return True
+        if host.endswith("tperty.com") and re.search(r"/.+-\d{5,}", path):
+            return True
+        if host.endswith("property-hua-hin.com") and re.search(r"/.+-u\d{5,}", path):
+            return True
+        if host.endswith("propertyscout.co.th") and re.search(r"/.+-\d{6,}/?$", path):
+            return True
+        if host.endswith("thaiapartment.com") and "/condo-detail/" in path:
+            return True
+    return False
 
 
 def listing_updated(market: dict, research_market: dict | None = None) -> str:
