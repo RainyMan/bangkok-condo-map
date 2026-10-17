@@ -153,21 +153,38 @@
   const money = n => n == null ? '—' : `฿${fmt(n)}`;
   const areaFor = c => Number(c.area?.min ?? c.area ?? 1);
   const bedroomRows = market => {
-    if (market?.byBedroom && Object.keys(market.byBedroom).length) return market.byBedroom;
+    if (market?.byBedroom && Object.keys(market.byBedroom).length) return { ...market.byBedroom };
     return Object.fromEntries((market?.bedroomRates || []).filter(row => Number(row.beds) > 0).map(row => {
       const average = Number(row.average || 0), averageSqm = Number(row.averageSqm || 0);
       return [String(row.beds), { ...row, average, averageSqm, area: average > 0 && averageSqm > 0 ? average / averageSqm : 0, marketSummary: true }];
     }));
   };
+  const bedroomCountForSample = sample => {
+    const raw = sample?.beds ?? sample?.bedrooms;
+    const numeric = Number(raw);
+    if (Number.isFinite(numeric) && numeric > 0) return numeric;
+    const label = `${sample?.roomType || ''} ${sample?.title || ''}`;
+    const match = label.match(/(?:^|\D)(\d+)[\s-]*(?:br\b|bed(?:room)?s?\b|房)/i);
+    return match ? Number(match[1]) : null;
+  };
   const yieldDefaultsFor = (c, beds = null) => {
     const saleRooms = bedroomRows(c.sale), rentRooms = bedroomRows(c.rent);
+    const saleSamples = c.sale?.samples || [];
+    saleSamples.forEach(sample => {
+      const count = bedroomCountForSample(sample);
+      if (!count || !(Number(sample.price) > 0) || !(Number(sample.area) > 0)) return;
+      const key = String(count), current = saleRooms[key] || {};
+      if (!(Number(current.minimum) > 0) || Number(sample.price) < Number(current.minimum)) {
+        saleRooms[key] = { ...current, beds: count, minimum: Number(sample.price), area: Number(sample.area), sourceUrl: sample.url };
+      }
+    });
     const roomOptions = Object.entries(saleRooms).filter(([, row]) => Number(row.minimum || row.average) > 0);
     const lowestRoom = roomOptions.sort((a, b) => Number(a[1].minimum || a[1].average) - Number(b[1].minimum || b[1].average))[0];
     const defaultRoom = saleRooms['2'] && Number(saleRooms['2'].minimum || saleRooms['2'].average) > 0
       ? '2' : lowestRoom?.[0] || null;
     const chosenBeds = beds && saleRooms[String(beds)] ? String(beds) : defaultRoom;
     const room = chosenBeds ? saleRooms[chosenBeds] : null;
-    const roomListings = chosenBeds ? (c.sale?.samples || []).filter(sample => Number(sample.beds ?? sample.bedrooms) === Number(chosenBeds) && Number(sample.price) > 0 && Number(sample.area) > 0 && sample.url) : [];
+    const roomListings = chosenBeds ? saleSamples.filter(sample => bedroomCountForSample(sample) === Number(chosenBeds) && Number(sample.price) > 0 && Number(sample.area) > 0 && sample.url) : [];
     // Use the lowest verified total price for the selected bedroom count.
     // Keep price, floor area, and source URL from the same listing together;
     // bedroom summaries are valid only when they provide all three.
