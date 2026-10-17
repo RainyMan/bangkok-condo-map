@@ -26,6 +26,18 @@ CANDIDATES = [
     {"hipflatProjectId": 6011, "hipflatName": "Bang Aor Riverside Tower", "district": "Bang Phlat", "propertyHubProjectId": "2861", "propertyHubName": "Bang Aor Riverside Tower", "slug": "bang-aor-riverside-tower"},
     {"hipflatProjectId": 5880, "hipflatName": "Origin Play Sri Lasalle Station", "district": "Bang Na", "propertyHubProjectId": "4478", "propertyHubName": "Origin Play Sri Lasalle Station", "slug": "origin-play-sri-lasalle-station"},
     {"hipflatProjectId": 5964, "hipflatName": "Baan Sukhothai Ramkhamhaeng", "district": "Bang Kapi", "propertyHubProjectId": "19292", "propertyHubName": "Baan Sukhothai Ramklamhaeng condominium", "slug": "baan-sukhothai-ramkhamhaeng-condominium---19292"},
+    {"hipflatProjectId": 4136, "hipflatName": "Lumpini Condo Town Ramindra - Latplakhao", "district": "Bang Khen", "propertyHubProjectId": "1897", "propertyHubName": "Lumpini Condo Town Raminthra - Latplakhao", "slug": "lumpini-condo-town-raminthra-latplakhao"},
+    {"hipflatProjectId": 5168, "hipflatName": "Tanyakarn Condominium", "district": "Huai Khwang", "propertyHubProjectId": "2382", "propertyHubName": "Thanyakarn Condominium", "slug": "thanyakarn-condominium"},
+    {"hipflatProjectId": 4906, "hipflatName": "39 Suites", "district": "Watthana", "propertyHubProjectId": "244", "propertyHubName": "39 Suite", "slug": "39-suite"},
+    {"hipflatProjectId": 4087, "hipflatName": "Baan Boonpitak", "district": "Suan Luang", "propertyHubProjectId": "2635", "propertyHubName": "Baan Boonyapitak", "slug": "baan-boonyapitak"},
+    {"hipflatProjectId": 4464, "hipflatName": "Choke Thanachai Condominium", "district": "Min Buri", "propertyHubProjectId": "23115", "propertyHubName": "Chokthanachai Condominium", "slug": "chokthanachai-condominium"},
+    {"hipflatProjectId": 6255, "hipflatName": "Metro Luxe Rose Gold Phaholyothin - Sutthisan", "district": "Phaya Thai", "propertyHubProjectId": "3124", "propertyHubName": "Metro Luxe Rose Gold Phahol - Sutthisan", "slug": "metro-luxe-rose-gold-phahol-sutthisan"},
+    {"hipflatProjectId": 3443, "hipflatName": "Nirund Residence 9 Udom Suk", "district": "Bang Na", "propertyHubProjectId": "14279", "propertyHubName": "Niran Residence 9 Udom Suk", "slug": "niran-residence-9-udom-suk---14279"},
+    {"hipflatProjectId": 3140, "hipflatName": "Baan Nonzee Condominium", "district": "Sathon", "propertyHubProjectId": "1583", "propertyHubName": "Baan Nonsee", "slug": "baan-nonsee--2"},
+    {"hipflatProjectId": 4602, "hipflatName": "Yen Akard Garden", "district": "Yan Nawa", "propertyHubProjectId": "4917", "propertyHubName": "Yen Akat Garden", "slug": "yen-akat-garden"},
+    {"hipflatProjectId": 5648, "hipflatName": "Lamsalee Mansion", "district": "Bang Kapi", "propertyHubProjectId": "2591", "propertyHubName": "Lamsali Mansion", "slug": "lamsali-mansion"},
+    {"hipflatProjectId": 3206, "hipflatName": "NUE Epic Asok-Rama9", "district": "Din Daeng", "propertyHubProjectId": "21678", "propertyHubName": "NUE Epic Asoke - Rama 9", "slug": "nue-epic-asoke-rama-9"},
+    {"hipflatProjectId": 5233, "hipflatName": "Baan Sri Nawamin 2", "district": "Bang Kapi", "propertyHubProjectId": "9322", "propertyHubName": "Baan Sri Nawamin 2 By NHA", "slug": "baan-sri-nawamin-2-by-nha"},
 ]
 
 
