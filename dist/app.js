@@ -202,8 +202,12 @@
     const summarySample = summaryUrl
       ? (c.sale?.samples || []).find(sample => sample.url === summaryUrl && Number(sample.price) > 0 && Number(sample.area) > 0)
       : null;
-    const summaryCandidate = roomSummaryMinimum > 0 && summaryUrl && (summaryArea > 0 || summarySample)
-      ? { price: roomSummaryMinimum, area: summaryArea || Number(summarySample.area), url: summaryUrl }
+    // A bedroom summary's `area` can describe a typical unit rather than the
+    // lowest-priced listing. Only trust its minimum when its source resolves
+    // to the matching listing, so purchase price and floor area always belong
+    // to the same two-bedroom unit.
+    const summaryCandidate = roomSummaryMinimum > 0 && summarySample
+      ? { price: Number(summarySample.price), area: Number(summarySample.area), url: summarySample.url }
       : null;
     const listingCandidates = roomListings.map(sample => ({ price: Number(sample.price), area: Number(sample.area), url: sample.url }));
     // Compare the room summary's lowest linked listing with the individual
