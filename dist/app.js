@@ -38,7 +38,7 @@
     return (rentRate * (12 - (useAgent ? 1 : 0)) - feeRate) / priceRate * 100;
   }
   function icon(c, active = false) {
-    return L.divIcon({ className: 'condo-icon' + (active ? ' active' : ''), html: `<span><b class="marker-price">${labelFor(c)}</b><i class="marker-year">完工 ${esc(c.completedYear || '未載明')}</i></span>`, iconSize: [110, 42], iconAnchor: [55, 21] });
+    return L.divIcon({ className: 'condo-icon' + (active ? ' active' : ''), html: `<span><b class="marker-price">${labelFor(c)}</b></span>`, iconSize: [110, 34], iconAnchor: [55, 17] });
   }
   function decodePolyline6(encoded) {
     let index = 0, lat = 0, lng = 0;
