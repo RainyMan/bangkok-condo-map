@@ -8,6 +8,9 @@
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const reviewsUrl = c => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(c.station ? `${c.name} condo near ${c.station} MRT Bangkok` : `${c.name} condo Huai Khwang Bangkok`)}`;
   const map = L.map('map', { zoomControl: false, scrollWheelZoom: true }).setView([13.7824, 100.5763], 14);
+  const mapElement = document.getElementById('map');
+  const updateMarkerDensity = () => mapElement.classList.toggle('low-zoom', map.getZoom() < 15);
+  map.on('zoomend', updateMarkerDensity);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
   let mode = 'sale';
   let selectedId = condos[0]?.id;
@@ -72,7 +75,7 @@
       '投報':'yield','淨投報':'yield','投報率':'yield','yield':'yield',
       '站':'station','mrt':'station','樓名':'name','name':'name'
     };
-    const metrics = { year:Number(c.completedYear), sale:Number(c.sale?.minimumSqm), rent:Number(c.rent?.minimumSqm), distance:Number(c.nearestMrt?.distanceKm), yield:yieldFor(c) };
+    const metrics = { year:Number(c.completedYear), sale:Number(c.sale?.minimumSqm), rent:Number(c.rent?.minimumSqm), distance:Number(c.nearestMrt?.distanceKm ?? c.nearestMrt?.straightDistanceKm), yield:yieldFor(c) };
     return query.trim().split(/\s+/).every(token => {
       const expr = token.match(/^(.+?)(<=|>=|<|>|=|:)(.+)$/);
       if (!expr) return haystack.includes(token.toLowerCase());
@@ -91,7 +94,7 @@
   }
   function filtered() {
     const shown = condos.filter(matchesQuery);
-    const keyFor = c => sortMode === 'distance' ? c.nearestMrt?.distanceKm : sortMode === 'sale' ? c.sale?.minimumSqm : sortMode === 'rent' ? c.rent?.minimumSqm : yieldFor(c);
+    const keyFor = c => sortMode === 'distance' ? (c.nearestMrt?.distanceKm ?? c.nearestMrt?.straightDistanceKm) : sortMode === 'sale' ? c.sale?.minimumSqm : sortMode === 'rent' ? c.rent?.minimumSqm : yieldFor(c);
     const ranked = sortMode === 'year-new' || sortMode === 'year-old' ? sortMode : null;
     return shown.sort((a, b) => {
       if (ranked) {
@@ -114,7 +117,7 @@
     });
     document.getElementById('resultCount').textContent = `${shown.length} 個樓盤`;
     document.getElementById('listCount').textContent = String(shown.length).padStart(2, '0');
-    list.innerHTML = shown.map((c, i) => { const nearestStation = stations.find(s => s.id === c.nearestMrt?.stationId); const located = Number.isFinite(c.lat) && Number.isFinite(c.lng); return `<article class="project-card ${c.id === selectedId ? 'active' : ''}" data-id="${c.id}" tabindex="0" role="button" aria-label="查看 ${esc(c.name)}"><span class="rank">${String(i + 1).padStart(2, '0')}</span><div class="project-copy"><strong class="project-name">${esc(c.name)}</strong><span class="project-meta">MRT ${esc(nearestStation?.name || c.station)} · ${marketCondos.has(c.id) ? `完工 ${esc(c.completedYear)}` : 'Hipflat 收錄 · 位置待核'}</span><div class="project-values"><span>售/㎡ <b>${fmt(c.sale?.minimumSqm)}</b></span><span>租/㎡/月 <b>${fmt(c.rent?.minimumSqm)}</b></span><span>${located ? '🚶' : '座標'} <b>${located ? (c.nearestMrt?.distanceKm ?? '—') + ' km' : '待補'}</b></span></div></div><span class="price-chip">${labelFor(c)}</span></article>`; }).join('') || '<p class="empty-state">沒有符合的樓盤</p>';
+    list.innerHTML = shown.map((c, i) => { const nearestStation = stations.find(s => s.id === c.nearestMrt?.stationId); const located = Number.isFinite(c.lat) && Number.isFinite(c.lng); return `<article class="project-card ${c.id === selectedId ? 'active' : ''}" data-id="${c.id}" tabindex="0" role="button" aria-label="查看 ${esc(c.name)}"><span class="rank">${String(i + 1).padStart(2, '0')}</span><div class="project-copy"><strong class="project-name">${esc(c.name)}</strong><span class="project-meta">MRT ${esc(nearestStation?.name || c.station)} · ${marketCondos.has(c.id) ? `完工 ${esc(c.completedYear)}` : c.locationVerified ? '座標已核實 · Hipflat 收錄' : 'Hipflat 收錄 · 位置待核'}</span><div class="project-values"><span>售/㎡ <b>${fmt(c.sale?.minimumSqm)}</b></span><span>租/㎡/月 <b>${fmt(c.rent?.minimumSqm)}</b></span><span>${located ? (c.locationVerified ? '直線' : '🚶') : '座標'} <b>${located ? ((c.nearestMrt?.distanceKm ?? c.nearestMrt?.straightDistanceKm) ?? '—') + ' km' : '待補'}</b></span></div></div><span class="price-chip">${labelFor(c)}</span></article>`; }).join('') || '<p class="empty-state">沒有符合的樓盤</p>';
     list.querySelectorAll('.project-card').forEach(el => {
       const activate = () => select(Number(el.dataset.id));
       el.addEventListener('click', activate);
@@ -128,11 +131,13 @@
       const ddRent = `https://www.google.com/search?q=site%3Addproperty.com+${query}+for+rent`;
       const phSale = `https://www.google.com/search?q=site%3Apropertyhub.in.th+${query}+for+sale`;
       const phRent = `https://www.google.com/search?q=site%3Apropertyhub.in.th+${query}+for+rent`;
-      const station = stations.find(s => s.id === 'BL21');
+      const nearest = c.nearestMrt;
+      const station = stations.find(s => s.id === nearest?.stationId);
+      const directionsUrl = station && c.locationVerified ? `https://www.google.com/maps/dir/?api=1&origin=${c.lat},${c.lng}&destination=${station.lat},${station.lng}&travelmode=walking` : null;
       detail.classList.remove('empty');
-      detail.innerHTML = `<button class="close-detail" aria-label="關閉樓盤資訊">×</button><div class="detail-hero"><div class="detail-topline"><span class="station-pill">Hipflat · Phetchaburi MRT 周邊</span><span class="age-pill">BL21</span></div><h2 class="detail-title">${esc(c.name)}</h2><p class="detail-caption">此案已加入站點周邊樓盤索引；座標、完工年、管理費和售租樣本尚待逐案核實。</p><a class="review-link" href="${reviewsUrl(c)}" target="_blank" rel="noopener"><span>◎</span> 在 Google Maps 查看評論 <span>↗</span></a></div><section class="walk-section"><div class="walk-main"><span class="walk-symbol">🚇</span><div><span class="metric-label">參考站點 · ${esc(station?.name || 'Phetchaburi')}</span><strong>步行距離待核實</strong><small>確認樓盤座標後再計算路網距離</small></div></div><button id="showWalkingRoute" class="route-button">查看 MRT 站點</button></section><section class="detail-section"><p class="section-label">來源分工</p><p class="fee-note">Hipflat 用於搜尋樓盤；二手售價與租金由 DDproperty、PropertyHub 掛牌整理。資料尚未整理完成，暫不計算單價與投報率。</p><div class="source-links"><a href="${esc(c.discoveryUrl)}" target="_blank" rel="noopener">Hipflat 站點樓盤清單 ↗</a></div></section><section class="detail-section"><p class="section-label">二手出售搜尋</p><div class="source-links"><a href="${ddSale}" target="_blank" rel="noopener">DDproperty ↗</a><a href="${phSale}" target="_blank" rel="noopener">PropertyHub ↗</a></div></section><section class="detail-section"><p class="section-label">出租搜尋</p><div class="source-links"><a href="${ddRent}" target="_blank" rel="noopener">DDproperty ↗</a><a href="${phRent}" target="_blank" rel="noopener">PropertyHub ↗</a></div></section><section class="detail-section"><p class="section-label">資料狀態 <span>尚未啟用每日更新</span></p><p class="fee-note">售價、租金及更新日期欄位已預留；目前不執行爬蟲。</p></section>`;
+      detail.innerHTML = `<button class="close-detail" aria-label="關閉樓盤資訊">×</button><div class="detail-hero"><div class="detail-topline"><span class="station-pill">Hipflat · ${esc(station?.name || c.station)} MRT 周邊</span><span class="age-pill">${c.locationVerified ? '座標已核實' : 'BL21'}</span></div><h2 class="detail-title">${esc(c.name)}</h2><p class="detail-caption">${c.locationVerified ? '樓盤座標已由公開樓盤或地圖資料頁核對。' : '此案已加入站點周邊樓盤索引；座標、完工年、管理費和售租樣本尚待逐案核實。'}</p><a class="review-link" href="${reviewsUrl(c)}" target="_blank" rel="noopener"><span>◎</span> 在 Google Maps 查看評論 <span>↗</span></a></div><section class="walk-section"><div class="walk-main"><span class="walk-symbol">🚇</span><div><span class="metric-label">最近 MRT（直線）· ${esc(station?.name || 'Phetchaburi')}</span><strong>${c.locationVerified ? `${nearest.straightDistanceKm} 公里直線距離` : '步行距離待核實'}</strong><small>${c.locationVerified ? '步行路線請用 Google Maps 核對' : '確認樓盤座標後再計算路網距離'}</small></div></div>${directionsUrl ? `<a class="route-button" href="${directionsUrl}" target="_blank" rel="noopener">Google Maps 步行導航 ↗</a>` : '<button id="showWalkingRoute" class="route-button">查看 MRT 站點</button>'}</section><section class="detail-section"><p class="section-label">來源分工</p><p class="fee-note">Hipflat 用於搜尋樓盤；二手售價與租金由 DDproperty、PropertyHub 掛牌整理。資料尚未整理完成，暫不計算單價與投報率。</p><div class="source-links"><a href="${esc(c.discoveryUrl)}" target="_blank" rel="noopener">Hipflat 站點樓盤清單 ↗</a>${c.locationVerified ? `<a href="${esc(c.locationSourceUrl)}" target="_blank" rel="noopener">樓盤座標來源 ↗</a>` : ''}</div></section><section class="detail-section"><p class="section-label">二手出售搜尋</p><div class="source-links"><a href="${ddSale}" target="_blank" rel="noopener">DDproperty ↗</a><a href="${phSale}" target="_blank" rel="noopener">PropertyHub ↗</a></div></section><section class="detail-section"><p class="section-label">出租搜尋</p><div class="source-links"><a href="${ddRent}" target="_blank" rel="noopener">DDproperty ↗</a><a href="${phRent}" target="_blank" rel="noopener">PropertyHub ↗</a></div></section><section class="detail-section"><p class="section-label">資料狀態 <span>尚未啟用每日更新</span></p><p class="fee-note">售價、租金及更新日期欄位已預留；目前不執行爬蟲。</p></section>`;
       detail.querySelector('.close-detail').addEventListener('click', () => { detail.classList.add('empty'); document.querySelector('.explorer').classList.remove('hidden-mobile'); });
-      detail.querySelector('#showWalkingRoute').addEventListener('click', () => { const s = stations.find(x => x.id === 'BL21'); if (s) { map.setView([s.lat, s.lng], 16); stationMarkers.get(s.id)?.openPopup(); } });
+      detail.querySelector('#showWalkingRoute')?.addEventListener('click', () => { if (station) { map.setView([station.lat, station.lng], 16); stationMarkers.get(station.id)?.openPopup(); } });
       return;
     }
     const avgRate = c.rent.averageSqm;
@@ -144,7 +149,7 @@
     detail.classList.remove('empty');
     detail.innerHTML = `<button class="close-detail" aria-label="關閉樓盤資訊">×</button>
       <div class="detail-hero"><div class="detail-topline"><span class="station-pill">最近 MRT ${esc(nearestStation?.name || c.station)}</span><span class="age-pill">${c.completedYear} 完工</span></div><h2 class="detail-title">${esc(c.name)}</h2><p class="detail-caption">${c.beds || 2} 房樣本約 ${fmt(c.area, 1)} ㎡ · ${fmt(c.units)} 戶 · ${esc(c.floors || '—')}</p><a class="review-link" href="${reviewsUrl(c)}" target="_blank" rel="noopener"><span>◎</span> 在 Google Maps 查看評論 <span>↗</span></a></div>
-      <section class="walk-section"><div class="walk-main"><span class="walk-symbol">🚶</span><div><span class="metric-label">最近 MRT · ${esc(nearestStation?.name || c.station)}</span><strong>${nearest?.distanceKm ?? '—'} 公里</strong><small>步行約 ${nearest?.minutes ?? '—'} 分鐘 · 路網估算</small></div></div><button id="showWalkingRoute" class="route-button">在地圖顯示路線</button><p class="fee-note">距離以樓盤座標至站點座標估算，實際入口與步行時間可能不同。</p></section>
+      <section class="walk-section"><div class="walk-main"><span class="walk-symbol">🚶</span><div><span class="metric-label">最近 MRT（直線判定）· ${esc(nearestStation?.name || c.station)}</span><strong>${nearest?.distanceKm ?? '—'} 公里</strong><small>步行約 ${nearest?.minutes ?? '—'} 分鐘 · 路網估算</small></div></div><button id="showWalkingRoute" class="route-button">在地圖顯示路線</button><p class="fee-note">距離以樓盤座標至站點座標估算，實際入口與步行時間可能不同。</p></section>
       <section class="detail-section"><p class="section-label">二手出售 <span>${fmt(c.sale.count)} 筆 · 全房型 · ${esc(c.sale.asOf)}</span></p><div class="metric-grid"><div class="metric"><span class="metric-label">平均售價</span><b class="metric-value">${money(c.sale.average)}</b><span class="metric-sub">最低 ${money(c.sale.minimum)}</span></div><div class="metric"><span class="metric-label">售價 / ㎡</span><b class="metric-value">${money(c.sale.averageSqm)}</b><span class="metric-sub">最低 ${money(c.sale.minimumSqm)} / ㎡</span></div></div><div class="unit-price"><span>資料來源：PropertyHub 掛牌</span><b><a href="${esc(c.sale.source)}" target="_blank" rel="noopener">查看來源 ↗</a></b></div></section>
       <section class="detail-section rent-section"><p class="section-label">出租市場 <span>${fmt(c.rent.count)} 筆 · 全房型</span></p><div class="metric-grid"><div class="metric"><span class="metric-label">平均月租</span><b class="metric-value">${money(c.rent.average)}</b><span class="metric-sub">最低 ${money(c.rent.minimum)} / 月</span></div><div class="metric"><span class="metric-label">租金 / ㎡</span><b class="metric-value">${money(avgRate)}<small> / 月</small></b><span class="metric-sub">最低 ${money(minRate)} / ㎡ / 月</span></div></div><div class="unit-price"><span>平台廣告數不等於空置戶數</span><b><a href="${esc(c.rent.source)}" target="_blank" rel="noopener">查看來源 ↗</a></b></div></section>
       <section class="detail-section"><p class="section-label">管理費參考 <span>需向管委會確認</span></p>${feeText}${c.fee.source ? `<div class="source-links"><a href="${esc(c.fee.source)}" target="_blank" rel="noopener">管理費來源 ↗</a></div>` : ''}</section>
@@ -199,6 +204,7 @@
   document.getElementById('locate').addEventListener('click', () => map.setView([13.7824, 100.5763], 14));
   document.addEventListener('keydown', e => { if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); document.getElementById('search').focus(); } if (e.key === 'Escape') { detail.classList.add('empty'); document.querySelector('.explorer').classList.remove('hidden-mobile'); } });
   renderList();
+  updateMarkerDensity();
   if (selectedId) { const c = condos.find(x => x.id === selectedId); if (window.matchMedia('(max-width: 650px)').matches) detail.classList.add('empty'); else renderDetail(c); markerFor(selectedId)?.setIcon(icon(c, true)); }
   if (condos.length) {
     const narrow = window.matchMedia('(max-width: 650px)').matches;
