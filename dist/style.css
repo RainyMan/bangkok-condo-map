@@ -166,3 +166,8 @@
   .explorer.compact{top:auto;bottom:10px;left:10px;right:auto;width:220px;height:auto;min-height:0;padding:10px 12px}
   .explorer.compact .list-heading{padding:0}
 }
+
+/* Keep filter popovers inside the viewport; each group opens as a single active panel. */
+.filter-toolbar .filter-content{max-width:calc(100vw - 24px);max-height:calc(100vh - 150px);overflow:auto;overscroll-behavior:contain}
+.filter-toolbar .filter-group:nth-child(4) .filter-content{width:min(310px,calc(100vw - 24px))}
+@media(max-width:650px){.filter-toolbar .filter-content,.filter-toolbar .filter-group:nth-child(4) .filter-content{max-width:calc(100vw - 24px);max-height:45vh}}

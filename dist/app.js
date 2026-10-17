@@ -407,6 +407,34 @@
   });
   const searchInput = document.getElementById('search');
   const budgetInput = document.getElementById('budgetInput');
+  const filterGroups = [...document.querySelectorAll('.filter-toolbar .filter-group')];
+  const closeFilterGroups = except => filterGroups.forEach(group => { if (group !== except) group.open = false; });
+  const positionFilterPopover = group => {
+    if (window.matchMedia('(max-width: 650px)').matches) return;
+    const panel = group.querySelector('.filter-content');
+    const bounds = group.getBoundingClientRect();
+    panel.style.left = '0'; panel.style.right = 'auto';
+    if (bounds.left + panel.offsetWidth > window.innerWidth - 12) {
+      panel.style.left = 'auto'; panel.style.right = '0';
+    }
+  };
+  filterGroups.forEach(group => {
+    group.addEventListener('toggle', () => {
+      if (!group.open) return;
+      closeFilterGroups(group);
+      positionFilterPopover(group);
+    });
+    group.addEventListener('focusout', () => setTimeout(() => {
+      if (!group.contains(document.activeElement)) group.open = false;
+    }, 0));
+    group.querySelectorAll('input').forEach(input => input.addEventListener('keydown', event => {
+      if (event.key === 'Enter') { event.preventDefault(); input.blur(); group.open = false; }
+    }));
+  });
+  document.addEventListener('pointerdown', event => {
+    if (!event.target.closest('.filter-toolbar .filter-group')) closeFilterGroups();
+  });
+  window.addEventListener('resize', () => filterGroups.forEach(group => { if (group.open) positionFilterPopover(group); }));
   const budgetWanValue = value => {
     const raw = String(value || '').trim().replace(/[฿,\s]/g, '');
     const match = raw.match(/^([\d.]+)(萬)?$/i);
@@ -425,6 +453,7 @@
   };
   document.querySelectorAll('[data-bedrooms]').forEach(button => button.addEventListener('click', () => {
     setBedroomSelection(button.dataset.bedrooms);
+    button.closest('details').open = false;
     renderList();
   }));
   document.getElementById('applyBedroomFilter').addEventListener('click', () => {
@@ -432,6 +461,7 @@
     budgetInput.setAttribute('aria-invalid', String(amount != null && (!Number.isFinite(amount) || amount <= 0)));
     if (amount != null && (!Number.isFinite(amount) || amount <= 0)) return;
     budgetMax = amount == null ? null : amount * 10000;
+    document.getElementById('applyBedroomFilter').closest('details').open = false;
     renderList();
   });
   ['distanceMax','saleMin','saleMax','rentMin','rentMax','yieldMin','yieldMax','yearMin','yearMax'].forEach(id => {
