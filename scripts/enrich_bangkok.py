@@ -36,7 +36,7 @@ LOCK = threading.Lock()
 
 def read_projects() -> list[dict[str, Any]]:
     source = (DIST / "bangkok-catalogue.js").read_text(encoding="utf-8")
-    match = re.search(r"window\.BANGKOK_HIPFLAT_PROJECTS\s*=\s*(\[.*\]);", source, re.S)
+    match = re.search(r"window\.BANGKOK_CONDO_CATALOGUE\s*=\s*(\[.*\]);", source, re.S)
     if not match:
         raise RuntimeError("Bangkok Hipflat catalogue array was not found")
     return json.loads(match.group(1))

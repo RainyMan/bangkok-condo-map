@@ -94,7 +94,7 @@ def fetch(row: dict, projects: list[dict]) -> dict:
         return {'id': int(target['id']), 'status': 'request_failed'}
 
 def main() -> int:
-    projects = base.read_array(base.CATALOGUE, 'BANGKOK_HIPFLAT_PROJECTS')
+    projects = base.read_array(base.CATALOGUE, 'BANGKOK_CONDO_CATALOGUE')
     rows = [json.loads(line) for line in CACHE.read_text(encoding='utf-8').splitlines() if line.strip()]
     targets_by_id = {}
     for row in rows:

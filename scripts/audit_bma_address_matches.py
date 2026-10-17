@@ -100,7 +100,7 @@ def project_streets(address: str) -> tuple[set[str], set[str]]:
 def main() -> None:
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
-    projects = arr("bangkok-catalogue.js", "BANGKOK_HIPFLAT_PROJECTS")
+    projects = arr("bangkok-catalogue.js", "BANGKOK_CONDO_CATALOGUE")
     ph = {int(x["id"]): x for x in arr("bangkok-propertyhub.js", "BANGKOK_PROPERTYHUB_PROJECTS")}
     details = {str(x.get("propertyHubProjectId")): x for x in arr("bangkok-propertyhub-details.js", "BANGKOK_PROPERTYHUB_DETAILS")}
     guessed = {int(x["hipflatProjectId"]): x for x in arr("bangkok-propertyhub-guessed-details.js", "BANGKOK_PROPERTYHUB_GUESSED_DETAILS") if x.get("locationVerified")}

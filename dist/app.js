@@ -30,7 +30,7 @@
   const localListingsByProjectId = new Map((window.BANGKOK_LOCAL_LISTINGS || []).map(row => [Number(row.projectId), row]));
   const localListingFreshnessDays = 45;
   const localListingCutoff = Date.now() - localListingFreshnessDays * 24 * 60 * 60 * 1000;
-  const hipflatProjects = window.BANGKOK_HIPFLAT_PROJECTS || [];
+  const hipflatProjects = window.BANGKOK_CONDO_CATALOGUE || window.BANGKOK_HIPFLAT_PROJECTS || [];
   const matchedLegacy = new Set();
   const condos = hipflatProjects.map(project => {
     const candidates = legacyByName.get(normalizeName(project.name)) || [];

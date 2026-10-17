@@ -51,7 +51,7 @@ def fetch(row,projects):
    if attempt==2:return {'hipflatProjectId':row['id'],'propertyHubProjectId':row['propertyHubProjectId'],'name':row['name'],'status':'fetch_error','error':type(e).__name__}
    time.sleep(2*(attempt+1))
 def main():
- rows=json.loads(TARGETS.read_text(encoding='utf8')); projects=base.read_array(base.CATALOGUE,'BANGKOK_HIPFLAT_PROJECTS'); old={}
+ rows=json.loads(TARGETS.read_text(encoding='utf8')); projects=base.read_array(base.CATALOGUE,'BANGKOK_CONDO_CATALOGUE'); old={}
  if CACHE.exists():
   for l in CACHE.open(encoding='utf8'):
    try:

@@ -49,7 +49,7 @@ def has_verified_coords(row: dict | None) -> bool:
 
 
 def main() -> None:
-    projects = array(DIST / "bangkok-catalogue.js", "BANGKOK_HIPFLAT_PROJECTS")
+    projects = array(DIST / "bangkok-catalogue.js", "BANGKOK_CONDO_CATALOGUE")
     current = {int(row["id"]): row for row in array(OUTPUT, "BANGKOK_OSM_LOCATIONS")}
     propertyhub = {int(row["id"]): row for row in array(DIST / "bangkok-propertyhub.js", "BANGKOK_PROPERTYHUB_PROJECTS")}
     details = {str(row.get("propertyHubProjectId")): row for row in array(DIST / "bangkok-propertyhub-details.js", "BANGKOK_PROPERTYHUB_DETAILS")}

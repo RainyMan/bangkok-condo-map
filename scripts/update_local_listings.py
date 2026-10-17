@@ -316,7 +316,7 @@ def main() -> None:
     parser.add_argument("--inbox", type=Path, default=INBOX)
     parser.add_argument("--output", type=Path, default=OUTPUT)
     args = parser.parse_args()
-    projects = load_array(CATALOGUE, "BANGKOK_HIPFLAT_PROJECTS")
+    projects = load_array(CATALOGUE, "BANGKOK_CONDO_CATALOGUE")
     existing: dict[str, dict] = {}
     if args.output.exists():
         source = args.output.read_text(encoding="utf-8")

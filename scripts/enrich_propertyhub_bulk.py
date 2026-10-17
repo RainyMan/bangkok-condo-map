@@ -162,7 +162,7 @@ def project_match(name: str, indexes: list[tuple[int, str, set[str]]], token_ind
 
 def main() -> int:
     RESEARCH.mkdir(parents=True, exist_ok=True)
-    projects = read_array(PROJECTS_FILE, "BANGKOK_HIPFLAT_PROJECTS")
+    projects = read_array(PROJECTS_FILE, "BANGKOK_CONDO_CATALOGUE")
     indexes = [(int(row["id"]), row["name"], tokens(row["name"])) for row in projects]
     token_index: dict[str, set[int]] = defaultdict(set)
     for idx, (_, _, name_tokens) in enumerate(indexes):

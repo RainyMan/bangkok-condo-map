@@ -127,7 +127,7 @@ def fetch(candidate: dict) -> dict:
 
 
 def main() -> int:
-    catalogue = locations.arr("bangkok-catalogue.js", "BANGKOK_HIPFLAT_PROJECTS")
+    catalogue = locations.arr("bangkok-catalogue.js", "BANGKOK_CONDO_CATALOGUE")
     summaries = {int(row["id"]): row for row in locations.arr("bangkok-propertyhub-city-summaries.js", "BANGKOK_PROPERTYHUB_CITY_SUMMARIES")}
     xml = locations.SITEMAP.read_text(encoding="utf-8")
     slug_map: dict[str, list[str]] = {}

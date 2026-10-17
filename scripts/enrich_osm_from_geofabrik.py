@@ -107,7 +107,7 @@ def main() -> int:
     handler.apply_file(str(PBF), locations=True)
     report(f"Collected {len(handler.items)} named or address-tagged OSM nodes and building ways in Bangkok bounds")
 
-    projects = js_array(DIST / "bangkok-catalogue.js", "BANGKOK_HIPFLAT_PROJECTS")
+    projects = js_array(DIST / "bangkok-catalogue.js", "BANGKOK_CONDO_CATALOGUE")
     previous = {int(row["id"]): row for row in js_array(DIST / "bangkok-osm.js", "BANGKOK_OSM_LOCATIONS")}
     used_objects = {(row.get("osmType"), int(row["osmId"])) for row in previous.values() if row.get("osmType") and row.get("osmId")}
     object_tokens = []

@@ -40,7 +40,7 @@ def address_tokens(value: str) -> set[str]:
 
 def main() -> int:
     path = DIST / "bangkok-osm.js"
-    projects = {int(row["id"]): row for row in array(DIST / "bangkok-catalogue.js", "BANGKOK_HIPFLAT_PROJECTS")}
+    projects = {int(row["id"]): row for row in array(DIST / "bangkok-catalogue.js", "BANGKOK_CONDO_CATALOGUE")}
     original = array(path, "BANGKOK_OSM_LOCATIONS")
     scored = []
     for row in original:

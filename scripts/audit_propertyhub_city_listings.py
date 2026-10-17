@@ -57,7 +57,7 @@ def district(value: str) -> str | None:
 
 
 def main() -> None:
-    projects = arr("bangkok-catalogue.js", "BANGKOK_HIPFLAT_PROJECTS")
+    projects = arr("bangkok-catalogue.js", "BANGKOK_CONDO_CATALOGUE")
     propertyhub = arr("bangkok-propertyhub.js", "BANGKOK_PROPERTYHUB_PROJECTS")
     exclusions = json.loads(EXCLUSIONS.read_text(encoding="utf-8")) if EXCLUSIONS.exists() else []
     excluded_listing_ids = {str(row["listingId"]) for row in exclusions}

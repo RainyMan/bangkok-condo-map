@@ -45,7 +45,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--refresh-ids", help="Optional UTF-8 text file containing project IDs that must be recalculated")
     args = parser.parse_args()
-    projects = js_array(CATALOGUE, "BANGKOK_HIPFLAT_PROJECTS")
+    projects = js_array(CATALOGUE, "BANGKOK_CONDO_CATALOGUE")
     osm = {int(x["id"]): x for x in js_array(OSM, "BANGKOK_OSM_LOCATIONS")}
     propertyhub = {int(x["id"]): x for x in js_array(PROPERTYHUB, "BANGKOK_PROPERTYHUB_PROJECTS")}
     detail_rows = js_array(PROPERTYHUB_DETAILS, "BANGKOK_PROPERTYHUB_DETAILS") if PROPERTYHUB_DETAILS.exists() else []

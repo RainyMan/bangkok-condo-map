@@ -150,7 +150,7 @@ def write_output(rows: list[dict[str, Any]]) -> None:
 
 def main() -> int:
     RESEARCH.mkdir(parents=True, exist_ok=True)
-    projects = read_array(CATALOGUE, "BANGKOK_HIPFLAT_PROJECTS")
+    projects = read_array(CATALOGUE, "BANGKOK_CONDO_CATALOGUE")
     market = {int(x["id"]): x for x in read_array(PROPERTYHUB, "BANGKOK_PROPERTYHUB_PROJECTS")}
     known_details = {int(x.get("hipflatProjectId")): x for x in read_array(DETAILS, "BANGKOK_PROPERTYHUB_DETAILS") if x.get("hipflatProjectId")} if DETAILS.exists() else {}
     known_osm = {int(x["id"]) for x in read_array(OSM, "BANGKOK_OSM_LOCATIONS")} if OSM.exists() else set()
