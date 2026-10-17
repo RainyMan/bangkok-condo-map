@@ -158,9 +158,9 @@
     const chosenBeds = beds && c.sale?.byBedroom?.[String(beds)] ? String(beds) : defaultRoom;
     const room = chosenBeds ? c.sale?.byBedroom?.[chosenBeds] : null;
     const roomListings = chosenBeds ? (c.sale?.samples || []).filter(sample => Number(sample.beds ?? sample.bedrooms) === Number(chosenBeds) && Number(sample.price) > 0) : [];
-    // Use the source attached to the room's lowest total price first. The room
-    // summary's sourceUrl is the authoritative object for that price; choosing
-    // the lowest price-per-sqm sample can produce a different unit and area.
+    // Keep the selected bedroom's lowest total price, paired with the area and
+    // source URL recorded for that exact lowest-price listing. The general
+    // sample array may not include every listing used in the bedroom summary.
     const roomMinimum = Number(room?.minimum || 0);
     const roomSample = (room?.sourceUrl ? roomListings.find(sample => sample.url === room.sourceUrl) : null)
       || roomListings.find(sample => Number(sample.price) === roomMinimum)
@@ -168,7 +168,7 @@
     const lowestSaleSample = (c.sale?.samples || []).find(sample => sample.url === c.sale?.minimumSourceUrl)
       || (c.sale?.samples || []).find(sample => Number(sample.price) === Number(c.sale?.minimum));
     const salePrice = Number(roomMinimum || roomSample?.price || c.sale?.minimum || 0);
-    const saleArea = Number(roomSample?.area || room?.area || (!room ? c.sale?.minimumArea || lowestSaleSample?.area : null) || areaFor(c));
+    const saleArea = Number(room?.area || roomSample?.area || (!room ? c.sale?.minimumArea || lowestSaleSample?.area : null) || areaFor(c));
     const roomRent = chosenBeds ? c.rent?.byBedroom?.[chosenBeds] : null;
     const rentRate = Number(roomRent?.minimumSqm || (roomRent?.minimum && roomRent?.area ? roomRent.minimum / roomRent.area : 0) || c.rent?.minimumSqm || 0);
     return {
@@ -177,7 +177,7 @@
       rent: Math.round(rentRate * saleArea),
       beds: chosenBeds || room?.beds || c.beds || null,
       isRoomStart: Boolean(room?.minimum),
-      saleSourceUrl: roomSample?.url || room?.sourceUrl || (!room ? c.sale?.minimumSourceUrl : null),
+      saleSourceUrl: room?.sourceUrl || roomSample?.url || (!room ? c.sale?.minimumSourceUrl : null),
       rentSourceUrl: roomRent?.sourceUrl || c.rent?.minimumSqmSourceUrl || c.rent?.minimumSourceUrl,
       roomOptions,
     };
