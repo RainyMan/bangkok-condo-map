@@ -242,8 +242,10 @@
     const updated = market?.marketSummary ? '' : String(url) === String(market?.minimumSqmSourceUrl || '')
       ? market?.minimumSqmSampleUpdated : market?.minimumSampleUpdated;
     const dateLabel = updated ? ` · 更新 ${esc(String(updated).slice(0, 10))}` : '';
+    const listingStatus = market?.samples?.find(sample => sample.url === url)?.listingStatus;
+    const availabilityLabel = listingStatus === 'availability_unconfirmed_update_over_30d' ? ' · 超過 30 日未更新，現況待確認' : '';
     const label = market?.marketSummary ? '行情頁 ↗' : '物件 ↗';
-    return `<a class="sample-source" href="${esc(url)}" target="_blank" rel="noopener" aria-label="${market?.marketSummary ? '開啟Condo行情摘要' : '開啟這筆最低價物件'}" title="${updated ? `房源更新日 ${esc(String(updated).slice(0, 10))}` : market?.marketSummary ? '開啟Condo行情摘要' : '開啟這筆最低價物件'}" style="color:var(--green);font-weight:700;text-decoration:none;margin-left:4px">${label}${dateLabel}</a>`;
+    return `<a class="sample-source" href="${esc(url)}" target="_blank" rel="noopener" aria-label="${market?.marketSummary ? '開啟Condo行情摘要' : '開啟這筆最低價物件'}" title="${updated ? `房源更新日 ${esc(String(updated).slice(0, 10))}` : market?.marketSummary ? '開啟Condo行情摘要' : '開啟這筆最低價物件'}${availabilityLabel}" style="color:var(--green);font-weight:700;text-decoration:none;margin-left:4px">${label}${dateLabel}${availabilityLabel}</a>`;
   };
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const reviewsUrl = c => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${c.name} condo ${c.address || 'Bangkok Thailand'}`)}`;
