@@ -10,6 +10,7 @@
   const propertyHubById = new Map((window.BANGKOK_PROPERTYHUB_PROJECTS || []).map(row => [Number(row.id), row]));
   const propertyHubDetailsById = new Map((window.BANGKOK_PROPERTYHUB_DETAILS || []).map(row => [String(row.propertyHubProjectId), row]));
   const propertyHubGuessedDetailsById = new Map((window.BANGKOK_PROPERTYHUB_GUESSED_DETAILS || []).map(row => [Number(row.hipflatProjectId), row]));
+  const propertyHubCitySummaryById = new Map((window.BANGKOK_PROPERTYHUB_CITY_SUMMARIES || []).map(row => [Number(row.id), row]));
   const hipflatProjects = window.BANGKOK_HIPFLAT_PROJECTS || [];
   const matchedLegacy = new Set();
   const condos = hipflatProjects.map(project => {
@@ -20,6 +21,9 @@
     const propertyHubDetail = propertyHubDetailsById.get(String(propertyHubBase.propertyHubProjectId || '')) || {};
     const propertyHubGuessedDetail = propertyHubGuessedDetailsById.get(Number(project.id)) || {};
     const propertyHub = { ...propertyHubBase, ...propertyHubGuessedDetail, ...propertyHubDetail };
+    const citySummary = propertyHubCitySummaryById.get(Number(project.id)) || {};
+    if (citySummary.sale) propertyHub.sale = citySummary.sale;
+    if (citySummary.rent) propertyHub.rent = citySummary.rent;
     const osm = osmById.get(Number(project.id));
     const coordsFromProject = propertyHub.locationVerified && Number.isFinite(propertyHub.lat) && Number.isFinite(propertyHub.lng)
       ? false
@@ -66,7 +70,7 @@
   const hasRent = c => Number(c.rent?.minimumSqm) >= 100 && Number(c.rent?.minimumSqm) <= 20000;
   const hasYieldData = c => hasSale(c) && hasRent(c);
   const fmt = (n, digits = 0) => n == null || Number.isNaN(Number(n)) ? '—' : Number(n).toLocaleString('en-US', { maximumFractionDigits: digits });
-  const sampleCount = market => market.countKind === 'matched_city_index' ? `曼谷搜尋頁目前比對到 ${fmt(market.observedCount)} 筆掛牌` : market.observedCount ? `${fmt(market.observedCount)} 筆可見樣本 · 平台刊登 ${fmt(market.count)} 筆` : `${fmt(market.count)} 筆 · 全房型`;
+  const sampleCount = market => market.countKind === 'matched_city_index' ? `PropertyHub 公開頁比對到 ${fmt(market.observedCount)} 筆掛牌` : market.observedCount ? `${fmt(market.observedCount)} 筆可見樣本 · 平台刊登 ${fmt(market.count)} 筆` : `${fmt(market.count)} 筆 · 全房型`;
   const money = n => n == null ? '—' : `฿${fmt(n)}`;
   const areaFor = c => Number(c.area?.min ?? c.area ?? 1);
   const areaLabel = c => c.area && typeof c.area === 'object' ? `${fmt(c.area.min, 1)}–${fmt(c.area.max, 1)} ㎡樓型範圍` : c.area ? `約 ${fmt(c.area, 1)} ㎡` : '';

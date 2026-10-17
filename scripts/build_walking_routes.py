@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import argparse
 import pathlib
 import re
 import time
@@ -34,6 +35,9 @@ def write_output(rows: dict[int, dict]) -> None:
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--refresh-ids", help="Optional UTF-8 text file containing project IDs that must be recalculated")
+    args = parser.parse_args()
     projects = js_array(CATALOGUE, "BANGKOK_HIPFLAT_PROJECTS")
     osm = {int(x["id"]): x for x in js_array(OSM, "BANGKOK_OSM_LOCATIONS")}
     propertyhub = {int(x["id"]): x for x in js_array(PROPERTYHUB, "BANGKOK_PROPERTYHUB_PROJECTS")}
@@ -59,6 +63,9 @@ def main() -> int:
                 ph[int(item["id"])] = item
             except (ValueError, KeyError, TypeError):
                 continue
+    refresh_ids = set()
+    if args.refresh_ids:
+        refresh_ids = {int(value) for value in pathlib.Path(args.refresh_ids).read_text(encoding="utf-8").split() if value.isdigit()}
     coords = []
     for project in projects:
         pid = int(project["id"])
@@ -71,8 +78,8 @@ def main() -> int:
         lat, lon = point.get("lat"), point.get("lng")
         if isinstance(lat, (int, float)) and isinstance(lon, (int, float)):
             coords.append({"id": pid, "name": project["name"], "lat": lat, "lon": lon})
-    todo = [point for point in coords if point["id"] not in cache]
-    print(f"Verified coordinates: {len(coords)}; routes cached: {len(cache)}; pending: {len(todo)}", flush=True)
+    todo = [point for point in coords if point["id"] not in cache or point["id"] in refresh_ids]
+    print(f"Verified coordinates: {len(coords)}; routes cached: {len(cache)}; forced refresh: {len(refresh_ids)}; pending: {len(todo)}", flush=True)
     session = requests.Session()
     session.headers.update({"User-Agent": "BangkokCondoMapResearch/1.0 (OSM walking distance research)"})
     with CACHE.open("a", encoding="utf-8") as out:
@@ -120,7 +127,7 @@ def main() -> int:
                     ]
                     if options:
                         route = min(options, key=lambda x: x["distanceKm"])
-                        row = {"id": project["id"], "name": project["name"], **route, "source": "Valhalla pedestrian routing (30 nearest stations checked)", "sourceUrl": "https://valhalla1.openstreetmap.de/", "networkSourceUrl": "https://www.openstreetmap.org/copyright", "asOf": "2026-10-17"}
+                        row = {"id": project["id"], "name": project["name"], "originLat": project["lat"], "originLng": project["lon"], **route, "source": "Valhalla pedestrian routing (30 nearest stations checked)", "sourceUrl": "https://valhalla1.openstreetmap.de/", "networkSourceUrl": "https://www.openstreetmap.org/copyright", "asOf": time.strftime("%Y-%m-%d")}
                         cache[project["id"]] = row
                         out.write(json.dumps(row, ensure_ascii=False, separators=(",", ":")) + "\n")
             elif response is not None:

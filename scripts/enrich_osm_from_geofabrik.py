@@ -52,7 +52,7 @@ def norm(value: str) -> str:
 
 
 def tokens(value: str) -> set[str]:
-    return {item for item in norm(value).split() if len(item) > 1 and item not in STOP}
+    return {item for item in norm(value).split() if (len(item) > 1 or item.isdigit() or item in {"q", "i", "m", "s"}) and item not in STOP}
 
 
 def names(tags: osmium.osm.TagList) -> list[str]:
@@ -109,6 +109,7 @@ def main() -> int:
 
     projects = js_array(DIST / "bangkok-catalogue.js", "BANGKOK_HIPFLAT_PROJECTS")
     previous = {int(row["id"]): row for row in js_array(DIST / "bangkok-osm.js", "BANGKOK_OSM_LOCATIONS")}
+    used_objects = {(row.get("osmType"), int(row["osmId"])) for row in previous.values() if row.get("osmType") and row.get("osmId")}
     object_tokens = []
     by_token: dict[str, list[int]] = {}
     by_address_token: dict[str, list[int]] = {}
@@ -135,13 +136,17 @@ def main() -> int:
         matched = []
         for index in candidates:
             obj = handler.items[index]
-            if any((wanted <= named and len(named - wanted) <= 2) or (named <= wanted and len(wanted - named) <= 1) for named in obj["tokenSets"]):
-                matched.append(obj)
+            if (obj["type"], int(obj["id"])) in used_objects:
+                continue
+            best_name_score = max((len(wanted & named) / max(1, len(wanted | named)) for named in obj["tokenSets"]), default=0)
+            best_overlap = max((len(wanted & named) for named in obj["tokenSets"]), default=0)
+            if best_name_score >= 0.8 and best_overlap >= 2:
+                matched.append((best_name_score, obj))
         if len(matched) == 1:
-            obj = matched[0]
+            obj = matched[0][1]
         elif len(matched) > 1:
             project_address = tokens(project.get("address", "")) - ignore_address
-            ranked = sorted(((len(project_address & (tokens(obj.get("address", "")) - ignore_address)), obj) for obj in matched), key=lambda pair: pair[0], reverse=True)
+            ranked = sorted(((len(project_address & (tokens(obj.get("address", "")) - ignore_address)), obj) for _, obj in matched), key=lambda pair: pair[0], reverse=True)
             if ranked[0][0] > 0 and (len(ranked) == 1 or ranked[0][0] > ranked[1][0]):
                 obj = ranked[0][1]
                 address_resolved += 1
@@ -150,28 +155,12 @@ def main() -> int:
         else:
             obj = None
         if obj is None:
-            project_address = tokens(project.get("address", "")) - ignore_address
-            candidates = set(index for token in project_address for index in by_address_token.get(token, []))
-            ranked = []
-            for index in candidates:
-                item = handler.items[index]
-                item_address = item["addressTokens"] - ignore_address
-                shared = project_address & item_address
-                if len(shared) >= 3 and len(shared) / max(1, len(project_address)) >= 0.55:
-                    ranked.append((len(shared) / max(1, len(project_address)), len(shared), index))
-            ranked.sort(reverse=True)
-            if ranked:
-                best = ranked[0]
-                near_ties = [row for row in ranked if row[0] >= best[0] - 0.08 and row[1] >= best[1] - 1]
-                if len(near_ties) == 1:
-                    obj = handler.items[best[2]]
-                    address_resolved += 1
-            if obj is None:
-                ambiguous += 1
-                continue
+            ambiguous += 1
+            continue
         label = next((name for name in obj["names"] if tokens(name) == wanted or wanted <= tokens(name)), None) or (obj["names"][0] if obj["names"] else obj["address"])
         previous[project_id] = {"id": project_id, "name": project["name"], "lat": obj["lat"], "lng": obj["lng"], "osmType": obj["type"], "osmId": obj["id"], "osmName": label,
                                 "sourceUrl": f"https://www.openstreetmap.org/{obj['type']}/{obj['id']}", "sourceExtractUrl": URL}
+        used_objects.add((obj["type"], int(obj["id"])))
         added += 1
     output = DIST / "bangkok-osm.js"
     output.write_text("window.BANGKOK_OSM_LOCATIONS = " + json.dumps(list(previous.values()), ensure_ascii=False, separators=(",", ":")) + ";\n", encoding="utf-8")
