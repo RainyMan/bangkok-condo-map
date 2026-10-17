@@ -164,6 +164,8 @@
     if (market?.byBedroom && Object.keys(market.byBedroom).length) return { ...market.byBedroom };
     return Object.fromEntries((market?.bedroomRates || []).filter(row => Number(row.beds) > 0).map(row => {
       const average = Number(row.average || 0), averageSqm = Number(row.averageSqm || 0);
+      // Bedroom-rate rows are averages, not minimum listings. Leave minimum
+      // unset unless a source explicitly supplies a verified minimum record.
       return [String(row.beds), { ...row, average, averageSqm, area: average > 0 && averageSqm > 0 ? average / averageSqm : 0, marketSummary: true }];
     }));
   };
@@ -236,8 +238,9 @@
     const salePrice = Number(selectedRoomMinimum || roomAveragePrice || (!chosenBeds ? c.sale?.minimum : 0) || 0);
     const saleArea = Number((roomSample?.area) || (!selectedRoomMinimum ? roomAverageArea : null) || (!chosenBeds ? c.sale?.minimumArea || lowestSaleSample?.area : null) || 0);
     const roomRent = chosenBeds ? rentRooms[chosenBeds] : null;
-    // Prefer the room-type average-low rent per sqm; multiply it by the exact area of the lowest-priced sale. Individual listing lows are fallback data.
-    const rentRate = Number(roomRent?.averageSqm || roomRent?.minimumSqm || (roomRent?.minimum && roomRent?.area ? roomRent.minimum / roomRent.area : 0) || c.rent?.minimumSqm || 0);
+    // Use the room-type low rent rate per sqm with the area of the lowest-
+    // priced sale listing. Fall back to the room average only when no low rate exists.
+    const rentRate = Number(roomRent?.minimumSqm || (roomRent?.minimum && roomRent?.area ? roomRent.minimum / roomRent.area : 0) || roomRent?.averageSqm || c.rent?.minimumSqm || 0);
     return {
       price: salePrice || Math.round(Number(c.sale?.minimumSqm || 0) * saleArea),
       area: saleArea,
@@ -620,6 +623,18 @@
       if (yieldSourceLinks[0] && defaults.saleSourceUrl) yieldSourceLinks[0].href = defaults.saleSourceUrl;
       if (yieldSourceLinks[1] && defaults.rentSourceUrl) yieldSourceLinks[1].href = defaults.rentSourceUrl;
       recalculateYield();
+      const values = loadYieldInputs();
+      values[c.id] = {
+        price: Number(detail.querySelector('#yieldPrice').value),
+        rent: Number(detail.querySelector('#yieldRent').value),
+        area: Number(detail.querySelector('#yieldArea').value),
+        beds: detail.querySelector('#yieldBeds').value || null,
+        deductFee: detail.querySelector('#deductFee').checked,
+        deductAgent: detail.querySelector('#deductAgent').checked,
+      };
+      saveYieldInputs(values);
+      const savedNote = detail.querySelector('#yieldSavedNote');
+      if (savedNote) savedNote.textContent = '最低兩房基準已更新並儲存';
     });
     detail.querySelector('#yieldBeds')?.addEventListener('change', event => {
       const defaults = yieldDefaultsFor(c, event.currentTarget.value || null);
