@@ -206,8 +206,8 @@
     // lowest-priced listing. Only trust its minimum when its source resolves
     // to the matching listing, so purchase price and floor area always belong
     // to the same two-bedroom unit.
-    const summaryCandidate = roomSummaryMinimum > 0 && summaryUrl && (summarySample || summaryArea > 0)
-      ? { price: Number(summarySample?.price || roomSummaryMinimum), area: Number(summarySample?.area || summaryArea), url: summarySample?.url || summaryUrl }
+    const summaryCandidate = roomSummaryMinimum > 0 && summarySample
+      ? { price: Number(summarySample.price), area: Number(summarySample.area), url: summarySample.url }
       : null;
     const listingCandidates = roomListings.map(sample => ({ price: Number(sample.price), area: Number(sample.area), url: sample.url }));
     // Compare the room summary's lowest linked listing with the individual
