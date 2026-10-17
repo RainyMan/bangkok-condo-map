@@ -195,7 +195,8 @@
     });
   }
   function filtered() {
-    const shown = condos.filter(matchesQuery);
+    const read = id => { const value = document.getElementById(id)?.value; return value === '' || value == null ? null : Number(value); };
+    const shown = condos.filter(c => matchesQuery(c) && matchesSidebarFilters(c, read));
     const keyFor = c => sortMode === 'distance' ? (c.nearestMrt?.distanceKm ?? c.nearestMrt?.straightDistanceKm) : sortMode === 'sale' ? c.sale?.minimumSqm : sortMode === 'rent' ? c.rent?.minimumSqm : yieldFor(c);
     const ranked = sortMode === 'year-new' || sortMode === 'year-old' ? sortMode : null;
     return shown.sort((a, b) => {
@@ -209,6 +210,29 @@
       const delta = Number(keyFor(a) ?? Infinity) - Number(keyFor(b) ?? Infinity);
       return sortMode === 'yield' ? -delta : delta;
     });
+  }
+  let budgetMax = null;
+  function matchesSidebarFilters(c, read) {
+    if (selectedBedrooms && !(Number(c.sale?.byBedroom?.[selectedBedrooms]?.minimum) > 0)) return false;
+    const budget = budgetMax;
+    const total = selectedBedrooms ? Number(c.sale?.byBedroom?.[selectedBedrooms]?.minimum) : Number(c.sale?.minimum);
+    if (budget != null && (!Number.isFinite(total) || total > budget)) return false;
+    const distance = Number(c.nearestMrt?.distanceKm ?? c.nearestMrt?.straightDistanceKm);
+    const distanceMax = read('distanceMax');
+    if (distanceMax != null && (!Number.isFinite(distance) || distance > distanceMax)) return false;
+    const ranges = [
+      ['saleMin','saleMax',Number(c.sale?.minimumSqm)],
+      ['rentMin','rentMax',Number(c.rent?.minimumSqm)],
+      ['yieldMin','yieldMax',yieldFor(c)],
+      ['yearMin','yearMax',Number(c.completedYear)],
+    ];
+    for (const [minId, maxId, value] of ranges) {
+      const min = read(minId), max = read(maxId);
+      if ((min != null || max != null) && !Number.isFinite(value)) return false;
+      if (min != null && value < min) return false;
+      if (max != null && value > max) return false;
+    }
+    return true;
   }
   function renderList() {
     const shown = filtered();
@@ -355,14 +379,17 @@
   };
   document.querySelectorAll('[data-bedrooms]').forEach(button => button.addEventListener('click', () => {
     setBedroomSelection(button.dataset.bedrooms);
+    renderList();
   }));
   document.getElementById('applyBedroomFilter').addEventListener('click', () => {
-    const budget = Number(budgetInput.value) * 10000;
-    budgetInput.setAttribute('aria-invalid', String(!Number.isFinite(budget) || budget <= 0));
-    if (!selectedBedrooms || !Number.isFinite(budget) || budget <= 0) return;
-    searchInput.value = `${selectedBedrooms}房售價<=${budget}`;
-    query = searchInput.value;
+    const amount = budgetInput.value.trim() === '' ? null : Number(budgetInput.value);
+    budgetInput.setAttribute('aria-invalid', String(amount != null && (!Number.isFinite(amount) || amount <= 0)));
+    if (amount != null && (!Number.isFinite(amount) || amount <= 0)) return;
+    budgetMax = amount == null ? null : amount * 10000;
     renderList();
+  });
+  ['distanceMax','saleMin','saleMax','rentMin','rentMax','yieldMin','yieldMax','yearMin','yearMax'].forEach(id => {
+    document.getElementById(id).addEventListener('input', () => renderList());
   });
   searchInput.addEventListener('input', e => {
     query = e.target.value.trim();
@@ -377,6 +404,8 @@
   document.getElementById('clearSearch').addEventListener('click', () => {
     searchInput.value = ''; query = ''; selectedBedrooms = null; budgetInput.removeAttribute('aria-invalid');
     setBedroomSelection(null);
+    budgetMax = null;
+    ['distanceMax','saleMin','saleMax','rentMin','rentMax','yieldMin','yieldMax','yearMin','yearMax'].forEach(id => { document.getElementById(id).value = ''; });
     renderList();
   });
   document.getElementById('fitMap').addEventListener('click', () => { const points = [...filtered().filter(c => Number.isFinite(c.lat) && Number.isFinite(c.lng)).map(c => [c.lat,c.lng]), ...stations.map(s => [s.lat,s.lng])]; if (points.length) map.fitBounds(points, { padding: [70, 90], maxZoom: 14 }); });
