@@ -82,8 +82,16 @@
     } else {
       nearestMrt = project.nearestMrt || legacy?.nearestMrt || null;
     }
-    const mergedSale = propertyHub.sale || project.sale || legacy?.sale || null;
-    const mergedRent = propertyHub.rent || project.rent || legacy?.rent || null;
+    const mergeVerifiedSamples = (market, manual) => {
+      const additions = manual?.samples || [];
+      if (!additions.length) return market || manual || null;
+      if (!market) return manual;
+      const byUrl = new Map((market.samples || []).map(sample => [sample.url, sample]));
+      additions.forEach(sample => { if (sample.url) byUrl.set(sample.url, sample); });
+      return { ...market, samples: [...byUrl.values()] };
+    };
+    const mergedSale = mergeVerifiedSamples(propertyHub.sale || project.sale || legacy?.sale || null, manualMarket.sale);
+    const mergedRent = mergeVerifiedSamples(propertyHub.rent || project.rent || legacy?.rent || null, manualMarket.rent);
     const localListings = (localListingsByProjectId.get(Number(project.id))?.listings || []).filter(row => {
       const observedAt = Date.parse(row.observedAt || '');
       return Number.isFinite(observedAt) && observedAt >= localListingCutoff && observedAt <= Date.now() + 24 * 60 * 60 * 1000;

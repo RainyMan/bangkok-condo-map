@@ -122,13 +122,19 @@ def main() -> None:
         has_sale = in_range(sale.get("minimumSqm"), 10_000, 2_000_000)
         has_rent = in_range(rent.get("minimumSqm"), 50, 20_000)
         manual_sale_samples = manual_market.get("sale", {}).get("samples", [])
+        manual_rent_samples = manual_market.get("rent", {}).get("samples", [])
         has_manual_sale_listing = any(
             sample.get("price") and sample.get("area") and isinstance(sample.get("url"), str)
             and has_individual_listing({"minimumSourceUrl": sample["url"]})
             for sample in manual_sale_samples if isinstance(sample, dict)
         )
+        has_manual_rent_listing = any(
+            sample.get("price") and sample.get("area") and isinstance(sample.get("url"), str)
+            and has_individual_listing({"minimumSourceUrl": sample["url"]})
+            for sample in manual_rent_samples if isinstance(sample, dict)
+        )
         sale_linked = (has_sale and has_individual_listing(sale)) or has_manual_sale_listing
-        rent_linked = has_rent and has_individual_listing(rent)
+        rent_linked = (has_rent and has_individual_listing(rent)) or has_manual_rent_listing
         # Match the coordinate source actually selected by app.js instead of
         # accidentally reporting a market/search URL as the location source.
         coordinate_source = ""
