@@ -168,11 +168,12 @@
     const room = chosenBeds ? saleRooms[chosenBeds] : null;
     const roomListings = chosenBeds ? (c.sale?.samples || []).filter(sample => Number(sample.beds ?? sample.bedrooms) === Number(chosenBeds) && Number(sample.price) > 0) : [];
     // The bedroom summary covers listings beyond the 12 displayed samples.
-    // Compare both sources and always use the lowest observed total price;
-    // pair its own area and URL with that price when the listing is available.
+    // Prefer the lowest individually verified listing for this bedroom count.
+    // Only fall back to the market summary when no matching listing is cached,
+    // so the purchase price, area, and source link always refer to one unit.
     const roomSummaryMinimum = Number(room?.minimum || 0);
     const roomSampleMinimum = roomListings.reduce((lowest, sample) => Math.min(lowest, Number(sample.price) || Infinity), Infinity);
-    const roomMinimum = Math.min(...[roomSummaryMinimum, roomSampleMinimum].filter(value => Number.isFinite(value) && value > 0), Infinity);
+    const roomMinimum = Number.isFinite(roomSampleMinimum) ? roomSampleMinimum : roomSummaryMinimum;
     const selectedRoomMinimum = Number.isFinite(roomMinimum) ? roomMinimum : 0;
     const roomSample = roomListings.find(sample => Number(sample.price) === selectedRoomMinimum);
     const roomAveragePrice = !selectedRoomMinimum && Number(room?.average) > 0 ? Number(room.average) : 0;
