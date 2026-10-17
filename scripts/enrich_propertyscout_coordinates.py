@@ -96,7 +96,10 @@ def request_page(url: str) -> dict:
 def main() -> int:
     if not SITEMAP.exists():
         raise RuntimeError(f"Missing sitemap cache: {SITEMAP}")
-    catalogue = arr("bangkok-catalogue.js", "BANGKOK_HIPFLAT_PROJECTS")
+    catalogue = arr("bangkok-catalogue.js", "BANGKOK_CONDO_CATALOGUE")
+    # Keep already reviewed points when a later crawl only finds the remaining
+    # projects. This output is an accumulating verified-coordinate dataset.
+    existing_details = arr("bangkok-propertyscout-details.js", "BANGKOK_PROPERTYSCOUT_DETAILS")
     xml = SITEMAP.read_text(encoding="utf-8")
     urls = re.findall(r"<loc>(.*?)</loc>", xml)
     slug_map: dict[str, list[str]] = {}
@@ -193,11 +196,14 @@ def main() -> int:
             "locationVerificationSourceUrl": cross_check,
             "verificationMethod": "exact_project_name_and_independent_address_check" if cross_check else "exact_project_name_and_district",
         })
+    verified_by_id = {int(row["hipflatId"]): row for row in existing_details}
+    verified_by_id.update({int(row["hipflatId"]): row for row in verified})
+    merged_verified = sorted(verified_by_id.values(), key=lambda row: int(row["hipflatId"]))
     OUTPUT.write_text(
-        "window.BANGKOK_PROPERTYSCOUT_DETAILS = " + json.dumps(verified, ensure_ascii=False, separators=(",", ":")) + ";\n",
+        "window.BANGKOK_PROPERTYSCOUT_DETAILS = " + json.dumps(merged_verified, ensure_ascii=False, separators=(",", ":")) + ";\n",
         encoding="utf-8",
     )
-    print(f"Verified coordinate points: {len(verified)} / {len(rows)} fetched candidates")
+    print(f"Verified coordinate points: {len(verified)} new / {len(merged_verified)} retained total; {len(rows)} cached candidates")
     return 0
 
 

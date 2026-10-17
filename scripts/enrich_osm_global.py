@@ -71,7 +71,7 @@ class NamedBangkokObjects(osmium.SimpleHandler):
 
 
 def main() -> int:
-    projects = array(DIST / "bangkok-catalogue.js", "BANGKOK_HIPFLAT_PROJECTS")
+    projects = array(DIST / "bangkok-catalogue.js", "BANGKOK_CONDO_CATALOGUE")
     current = {int(row["id"]): row for row in array(OUTPUT, "BANGKOK_OSM_LOCATIONS")}
     used_objects = {(row.get("osmType"), int(row["osmId"])) for row in current.values() if row.get("osmType") and row.get("osmId")}
     known = set(current)
