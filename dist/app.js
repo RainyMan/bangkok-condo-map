@@ -277,9 +277,9 @@
   let sortMode = 'distance';
   const yieldOverrides = new Map();
   // Recalculate the map baseline from the current lowest two-bedroom listing.
-  // Older saved estimates remain in their previous storage key, while V4
-  // starts from the refreshed matched price/area/rent defaults.
-  const yieldStorageKey = 'bangkokCondoYieldInputsV6';
+  // Rebuild saved estimates from the refreshed lowest two-bedroom sale and
+  // matched two-bedroom rent baseline. Carry over only the user's fee choices.
+  const yieldStorageKey = 'bangkokCondoYieldInputsV7';
   const loadYieldInputs = () => {
     try {
       const current = localStorage.getItem(yieldStorageKey);
@@ -288,7 +288,7 @@
       // and the two-bedroom average-low rent rate multiplied by that same unit's area.
       // Preserve the user's fee switches, but discard old cached price/area
       // values so the map and detail cards start from the refreshed samples.
-      const previous = JSON.parse(localStorage.getItem('bangkokCondoYieldInputsV5') || '{}');
+      const previous = JSON.parse(localStorage.getItem('bangkokCondoYieldInputsV6') || localStorage.getItem('bangkokCondoYieldInputsV5') || '{}');
       const recalculated = {};
       condos.forEach(c => {
         const defaults = yieldDefaultsFor(c, '2');
