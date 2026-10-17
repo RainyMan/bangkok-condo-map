@@ -4,23 +4,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f7f8f6">
-  <meta name="description" content="以地圖探索曼谷 Huai Khwang 與 Phetchaburi MRT 周邊 condo，查看樓盤、售租行情來源與投報試算。">
-  <title>Bangkok Condo Map｜Huai Khwang + Phetchaburi</title>
+  <meta name="description" content="以地圖探索 Hipflat 收錄的曼谷 condo 專案，查看核實座標、售租掛牌來源、每平方米單價與投報試算。">
+  <title>Bangkok Condo Map｜曼谷樓盤</title>
   <link rel="stylesheet" href="vendor/leaflet.css">
-  <link rel="stylesheet" href="style.css?v=5">
+  <link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="#" aria-label="Huai Khwang Condo Map 首頁"><span class="brand-mark">H</span><span>CONDO<span class="brand-light"> MAP</span></span></a>
+    <a class="brand" href="#" aria-label="Bangkok Condo Map 首頁"><span class="brand-mark">B</span><span>CONDO<span class="brand-light"> MAP</span></span></a>
     <div class="top-divider"></div>
-    <div class="location-title"><span class="eyebrow">BANGKOK · THAILAND</span><strong>Huai Khwang + Phetchaburi</strong></div>
+    <div class="location-title"><span class="eyebrow">BANGKOK · THAILAND</span><strong>曼谷 Condo 專案全覽</strong></div>
     <div class="top-spacer"></div>
-    <a class="hipflat-link" href="https://www.hipflat.co.th/en/thailand-projects/condo/bangkok-bm/huai-khwang-hu" target="_blank" rel="noopener">Hipflat · Huai Khwang <span>↗</span></a>
-    <span class="count-pill">289 個樓盤</span>
+    <a class="hipflat-link" href="https://www.hipflat.co.th/en/thailand-projects/condo/bangkok-bm" target="_blank" rel="noopener">Hipflat · Bangkok <span>↗</span></a>
+    <span class="count-pill">3,555 個樓盤</span>
   </header>
 
   <main class="map-shell">
-    <div id="map" role="region" aria-label="Huai Khwang 與 Phetchaburi condo 地圖"></div>
+    <div id="map" role="region" aria-label="曼谷 condo 樓盤地圖"></div>
     <div class="map-wash" aria-hidden="true"></div>
 
     <section class="explorer panel" aria-label="樓盤搜尋與清單">
@@ -28,7 +28,8 @@
         <div><p class="eyebrow">AREA EXPLORER</p><h1>從地圖開始找房</h1></div>
         <button id="fitMap" class="icon-button" aria-label="顯示全部樓盤" title="顯示全部樓盤">⤢</button>
       </div>
-      <p class="panel-subtitle">Huai Khwang + Phetchaburi <span class="live-dot"></span><span id="resultCount">289 個樓盤</span></p>
+      <p class="panel-subtitle">曼谷 50 區 <span class="live-dot"></span><span id="resultCount">3,555 個樓盤</span></p>
+      <p id="coverageSummary" class="coverage-line" aria-live="polite">正在統計資料覆蓋</p>
       <label class="searchbox"><span class="search-icon">⌕</span><input id="search" type="search" placeholder="也可輸入：2房售價<=100萬" autocomplete="off" aria-label="搜尋樓盤或自訂篩選條件"><kbd>⌘ K</kbd></label>
       <div class="quick-filters" aria-label="房型與總價篩選">
         <span class="filter-caption">房型</span><div class="bedroom-options" role="group" aria-label="選擇房型">
@@ -43,16 +44,23 @@
       <div class="panel-foot"><span class="source-dot"></span><span>點選 1～4 房並輸入總價上限（可用「100萬」或「1,000,000」）；也可在搜尋欄輸入 2房售價&lt;=100萬、年:2014、售價/㎡&lt;50000、距離&lt;1。空格可疊加條件。</span></div>
     </section>
 
-    <div class="map-tools panel" aria-label="地圖工具"><button id="zoomIn" class="map-tool" aria-label="放大地圖">＋</button><button id="zoomOut" class="map-tool" aria-label="縮小地圖">−</button><div class="tool-divider"></div><button id="locate" class="map-tool locate" aria-label="回到 Huai Khwang 樓盤">◎</button></div>
+    <div class="map-tools panel" aria-label="地圖工具"><button id="zoomIn" class="map-tool" aria-label="放大地圖">＋</button><button id="zoomOut" class="map-tool" aria-label="縮小地圖">−</button><div class="tool-divider"></div><button id="locate" class="map-tool locate" aria-label="回到曼谷樓盤總覽">◎</button></div>
 
     <aside id="detailPanel" class="detail-panel panel" aria-label="樓盤資訊" aria-live="polite"></aside>
-    <div class="map-note"><span>© OpenStreetMap contributors</span><span>藍色 M 為 MRT 藍線站點</span><span>已有路線顯示路網步行距離；新核實座標先顯示直線距離並可開 Google Maps 步行導航</span></div>
+  <div class="map-note"><span>© OpenStreetMap contributors</span><span>M 為 BTS / MRT 站點</span><span>顯示樓盤至最近站的步行路網距離；未完成路網計算時標示直線距離</span></div>
   </main>
   <script src="vendor/leaflet.js"></script>
   <script src="data.js"></script>
   <script src="catalogue.js"></script>
   <script src="huai-khwang.js"></script>
-  <script src="app.js"></script>
+  <script src="bangkok-catalogue.js?v=20261017b"></script>
+  <script src="bangkok-propertyhub.js?v=20261017b"></script>
+  <script src="bangkok-propertyhub-details.js?v=20261017b"></script>
+  <script src="bangkok-propertyhub-guessed-details.js?v=20261017b"></script>
+  <script src="bangkok-osm.js?v=20261017b"></script>
+  <script src="stations.js?v=20261017b"></script>
+  <script src="bangkok-walk-routes.js?v=20261017b"></script>
+  <script src="app.js?v=20261017b"></script>
 </body>
 </html>
 
