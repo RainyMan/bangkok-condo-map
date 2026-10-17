@@ -236,7 +236,8 @@
     const salePrice = Number(selectedRoomMinimum || roomAveragePrice || (!chosenBeds ? c.sale?.minimum : 0) || 0);
     const saleArea = Number((roomSample?.area) || (!selectedRoomMinimum ? roomAverageArea : null) || (!chosenBeds ? c.sale?.minimumArea || lowestSaleSample?.area : null) || 0);
     const roomRent = chosenBeds ? rentRooms[chosenBeds] : null;
-    const rentRate = Number(roomRent?.minimumSqm || roomRent?.averageSqm || (roomRent?.minimum && roomRent?.area ? roomRent.minimum / roomRent.area : 0) || c.rent?.minimumSqm || 0);
+    // Prefer the room-type average-low rent per sqm; multiply it by the exact area of the lowest-priced sale. Individual listing lows are fallback data.
+    const rentRate = Number(roomRent?.averageSqm || roomRent?.minimumSqm || (roomRent?.minimum && roomRent?.area ? roomRent.minimum / roomRent.area : 0) || c.rent?.minimumSqm || 0);
     return {
       price: salePrice || Math.round(Number(c.sale?.minimumSqm || 0) * saleArea),
       area: saleArea,
@@ -275,16 +276,16 @@
   // Recalculate the map baseline from the current lowest two-bedroom listing.
   // Older saved estimates remain in their previous storage key, while V4
   // starts from the refreshed matched price/area/rent defaults.
-  const yieldStorageKey = 'bangkokCondoYieldInputsV5';
+  const yieldStorageKey = 'bangkokCondoYieldInputsV6';
   const loadYieldInputs = () => {
     try {
       const current = localStorage.getItem(yieldStorageKey);
       if (current) return JSON.parse(current);
       // Rebuild the saved baseline from each Condo's lowest two-bedroom sale
-      // and the two-bedroom rent rate multiplied by that same unit's area.
+      // and the two-bedroom average-low rent rate multiplied by that same unit's area.
       // Preserve the user's fee switches, but discard old cached price/area
       // values so the map and detail cards start from the refreshed samples.
-      const previous = JSON.parse(localStorage.getItem('bangkokCondoYieldInputsV4') || '{}');
+      const previous = JSON.parse(localStorage.getItem('bangkokCondoYieldInputsV5') || '{}');
       const recalculated = {};
       condos.forEach(c => {
         const defaults = yieldDefaultsFor(c, '2');
