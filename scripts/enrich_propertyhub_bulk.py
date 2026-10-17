@@ -287,7 +287,17 @@ def aggregate(projects: list[dict[str, Any]], indexes: list[tuple[int, str, set[
 
 def write_output(rows: list[dict[str, Any]]) -> None:
     target = ENRICHED_FILE.with_suffix(".js.tmp")
-    target.write_text("window.BANGKOK_PROPERTYHUB_PROJECTS = " + json.dumps(rows, ensure_ascii=False, separators=(",", ":")) + ";\n", encoding="utf-8")
+    # Project names and Hipflat discovery metadata already live in the compact
+    # catalogue payload; strip those duplicate fields from this listing layer.
+    # Keep listing samples and their direct URLs so every displayed minimum
+    # remains traceable to an individual PropertyHub listing.
+    duplicate_fields = {
+        "name", "discoverySource", "discoveryUrl", "hipflatProjectUrl",
+        "sourceDescription", "dataCompleteness", "saleSourceUrl", "rentSourceUrl",
+        "propertyHubAddress", "propertyHubProjectName",
+    }
+    compact_rows = [{key: value for key, value in row.items() if key not in duplicate_fields} for row in rows]
+    target.write_text("window.BANGKOK_PROPERTYHUB_PROJECTS = " + json.dumps(compact_rows, ensure_ascii=False, separators=(",", ":")) + ";\n", encoding="utf-8")
     target.replace(ENRICHED_FILE)
 
 
