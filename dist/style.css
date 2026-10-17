@@ -274,7 +274,7 @@
   .filter-toolbar{top:7px;left:8px;right:8px;min-height:0;padding:5px;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:38px auto;gap:5px;border-radius:12px;overflow:visible}
   .filter-toolbar>.searchbox{width:100%;min-width:0;height:38px;padding:0 9px}
   .filter-toolbar .searchbox input{min-width:0;font-size:12px}
-  .filter-toolbar .filters-window{width:100%;min-width:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,38px);gap:5px;overflow:visible;touch-action:auto;border:0}
+  .filter-toolbar .filters-window{width:100%;min-width:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(3,38px);gap:5px;overflow:visible;touch-action:auto;border:0}
   .filter-toolbar .filter-group{position:relative;min-width:0;width:100%;height:38px;flex:none;border-radius:9px}
   .filter-toolbar .filter-group summary{position:relative;justify-content:center;min-height:36px;height:36px;padding:0 16px 0 5px;gap:0;font-size:9px;white-space:nowrap;overflow:hidden}
   .filter-toolbar .filter-group summary b{font-size:0;font-weight:700}
@@ -290,7 +290,7 @@
   .filter-toolbar .budget-filter>span{font-size:9px}
   .filter-toolbar .budget-filter input{height:38px;font-size:12px}
   .filter-toolbar .apply-filter{min-height:38px;padding:0 11px}
-  .map-tools{top:145px;right:8px;padding:3px;border-radius:11px}
+  .map-tools{top:188px;right:8px;padding:3px;border-radius:11px}
   .map-tool{width:36px;height:36px}
 }
 @media(max-width:350px){
@@ -302,3 +302,29 @@
   .filter-toolbar .filter-group summary{font-size:8px}
   .filter-toolbar .filter-group summary b::before{font-size:8px}
 }
+
+.lowrise-options label{display:flex;align-items:center;gap:10px;min-height:44px;color:#40534a;font-size:12px;font-weight:600;cursor:pointer}.lowrise-options input{width:19px;height:19px;margin:0;accent-color:#087f63}
+@media(max-width:1200px) and (min-width:851px){
+  .filter-toolbar{left:12px;right:12px;gap:6px}
+  .filter-toolbar>.searchbox{flex:0 0 180px}
+  .filter-toolbar .filters-window{gap:4px}
+  .filter-toolbar .filter-group{flex:1 1 0;min-width:0}
+  .filter-toolbar .filter-group summary{padding:0 5px;gap:3px}
+  .filter-toolbar .filter-group summary b{font-size:0}
+  .filter-toolbar .filter-group summary b::before{content:attr(data-short);font-size:9px}
+  .filter-toolbar .filter-group summary span{display:none}
+}
+@media(max-width:850px) and (min-width:651px){
+  .filter-toolbar{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:38px auto;gap:5px}
+  .filter-toolbar>.searchbox{width:100%;min-width:0;flex:none}
+  .filter-toolbar .filters-window{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(2,36px);gap:5px;overflow:visible}
+  .filter-toolbar .filter-group{min-width:0;width:100%;height:36px;flex:none}
+  .filter-toolbar .filter-group summary{position:relative;justify-content:center;min-height:34px;height:34px;padding:0 16px 0 5px;font-size:9px}
+  .filter-toolbar .filter-group summary b{font-size:0}
+  .filter-toolbar .filter-group summary b::before{content:attr(data-short);font-size:9px}
+  .filter-toolbar .filter-group summary span{display:none}
+  .filter-toolbar .filter-group summary::after{position:absolute;right:5px}
+  .filter-toolbar .filter-content{position:fixed;left:12px;right:12px;width:auto;max-width:none;max-height:45vh;overflow:auto}
+  .map-tools{top:132px}
+}
+@media(max-width:350px){.map-tools{top:188px}}

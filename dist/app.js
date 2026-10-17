@@ -224,7 +224,8 @@
   }
   function filtered() {
     const read = id => { const value = document.getElementById(id)?.value; return value === '' || value == null ? null : Number(value); };
-    const shown = condos.filter(c => matchesQuery(c) && matchesSidebarFilters(c, read));
+    const lowriseOnly = document.getElementById('lowriseOnly')?.checked;
+    const shown = condos.filter(c => matchesQuery(c) && matchesSidebarFilters(c, read, lowriseOnly));
     const keyFor = c => sortMode === 'distance' ? (c.nearestMrt?.distanceKm ?? c.nearestMrt?.straightDistanceKm) : sortMode === 'sale' ? c.sale?.minimumSqm : sortMode === 'rent' ? c.rent?.minimumSqm : yieldFor(c);
     const ranked = sortMode === 'year-new' || sortMode === 'year-old' ? sortMode : null;
     return shown.sort((a, b) => {
@@ -240,7 +241,9 @@
     });
   }
   let budgetMax = null;
-  function matchesSidebarFilters(c, read) {
+  function matchesSidebarFilters(c, read, lowriseOnly) {
+    const floorCount = c.floors == null || c.floors === '' ? NaN : Number(c.floors);
+    if (lowriseOnly && (!Number.isFinite(floorCount) || floorCount > 8)) return false;
     if (selectedBedrooms && !(Number(c.sale?.byBedroom?.[selectedBedrooms]?.minimum) > 0)) return false;
     const budget = budgetMax;
     const total = selectedBedrooms ? Number(c.sale?.byBedroom?.[selectedBedrooms]?.minimum) : Number(c.sale?.minimum);
@@ -438,8 +441,14 @@
   const filterGroups = [...document.querySelectorAll('.filter-toolbar .filter-group')];
   const closeFilterGroups = except => filterGroups.forEach(group => { if (group !== except) group.open = false; });
   const positionFilterPopover = group => {
-    if (window.matchMedia('(max-width: 650px)').matches) return;
     const panel = group.querySelector('.filter-content');
+    if (window.matchMedia('(max-width: 850px)').matches) {
+      const toolbarBottom = document.querySelector('.filter-toolbar').getBoundingClientRect().bottom;
+      const maxTop = window.innerHeight - panel.offsetHeight - 12;
+      panel.style.left = '8px'; panel.style.right = '8px';
+      panel.style.top = `${Math.max(8, Math.min(toolbarBottom + 6, maxTop))}px`;
+      return;
+    }
     const bounds = group.getBoundingClientRect();
     panel.style.left = '0'; panel.style.right = 'auto';
     if (bounds.left + panel.offsetWidth > window.innerWidth - 12) {
@@ -494,7 +503,7 @@
     document.getElementById('applyBedroomFilter').closest('details').open = false;
     renderList();
   });
-  ['distanceMax','saleMin','saleMax','rentMin','rentMax','yieldMin','yieldMax','yearMin','yearMax'].forEach(id => {
+  ['distanceMax','saleMin','saleMax','rentMin','rentMax','yieldMin','yieldMax','yearMin','yearMax','lowriseOnly'].forEach(id => {
     document.getElementById(id).addEventListener('input', () => { visibleProjectCount = LIST_PAGE_SIZE; renderList(); });
   });
   searchInput.addEventListener('input', e => {
@@ -513,6 +522,7 @@
     setBedroomSelection(null);
     budgetMax = null;
     ['distanceMax','saleMin','saleMax','rentMin','rentMax','yieldMin','yieldMax','yearMin','yearMax'].forEach(id => { document.getElementById(id).value = ''; });
+    document.getElementById('lowriseOnly').checked = false;
     renderList();
   });
   document.getElementById('fitMap').addEventListener('click', () => { const points = [...filtered().filter(c => Number.isFinite(c.lat) && Number.isFinite(c.lng)).map(c => [c.lat,c.lng]), ...stations.map(s => [s.lat,s.lng])]; if (points.length) map.fitBounds(points, { padding: [70, 90], maxZoom: 14 }); });
