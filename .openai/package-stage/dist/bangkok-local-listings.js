@@ -1,0 +1,1 @@
+window.BANGKOK_LOCAL_LISTINGS = [];
