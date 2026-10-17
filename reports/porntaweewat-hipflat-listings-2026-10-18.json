@@ -1,0 +1,74 @@
+{
+  "hipflatId": 3132,
+  "projectName": "Porntaweewat Condotown Petchkasem",
+  "checkedAt": "2026-10-18",
+  "projectSource": "https://www.hipflat.co.th/en/projects/porntaweewat-condotown-petchkasem-nkmubl",
+  "saleListings": [
+    {
+      "id": "N0603024",
+      "price": 440000,
+      "area": 25,
+      "priceSqm": 17600,
+      "beds": 1,
+      "roomType": "1BR",
+      "title": "Porntaweewat Condotown Petchkasem，1 房，25 ㎡，6 樓，฿440,000",
+      "url": "https://www.hipflat.co.th/ads/l32008h78a8u39l232nec7a83u0c3el3",
+      "sourceName": "Hipflat",
+      "projectName": "Porntaweewat Condotown Petchkasem",
+      "checkedAt": "2026-10-18",
+      "updated": "2026-09-09",
+      "matchedBy": "exact_hipflat_project_page_unit",
+      "listingStatus": "listed_on_project_page_update_over_30d"
+    },
+    {
+      "id": "U5994920",
+      "price": 500000,
+      "area": 25,
+      "priceSqm": 20000,
+      "roomType": "STUDIO_OR_1BR_UNCLEAR",
+      "title": "Porntaweewat Condotown Petchkasem，25 ㎡，3 樓，฿500,000",
+      "url": "https://www.hipflat.co.th/ads/n744lehu817luac8eaa1e9hn3u0h1430",
+      "sourceName": "Hipflat",
+      "projectName": "Porntaweewat Condotown Petchkasem",
+      "checkedAt": "2026-10-18",
+      "matchedBy": "exact_hipflat_project_page_unit",
+      "listingStatus": "active_as_listed"
+    }
+  ],
+  "rentListings": [
+    {
+      "id": "U1692072",
+      "price": 3000,
+      "area": 26,
+      "priceSqm": 115.38,
+      "beds": 1,
+      "roomType": "1BR",
+      "title": "Porntaweewat Condotown Petchkasem，1 房，26 ㎡，6 樓，฿3,000/月",
+      "url": "https://www.hipflat.co.th/ads/3lutt3l1822et7u37e0l04743u0h14u4",
+      "sourceName": "Hipflat",
+      "projectName": "Porntaweewat Condotown Petchkasem",
+      "checkedAt": "2026-10-18",
+      "matchedBy": "exact_hipflat_project_page_unit",
+      "listingStatus": "active_as_listed"
+    }
+  ],
+  "coordinateCorroboration": {
+    "publishedCoordinate": [
+      13.706467,
+      100.366343
+    ],
+    "listingSource": "https://www.hipflat.co.th/ads/l32008h78a8u39l232nec7a83u0c3el3",
+    "existingProjectCoordinateSource": "https://www.thaigerproperty.com/projects/thailand/bangkok/nong-khaem/nong-khang-phlu/porntaweewat-condotown-petchkasem",
+    "existingProjectCoordinate": [
+      13.7073389,
+      100.3673272
+    ],
+    "note": "Individual listing coordinate is approximately 140 m from the Thaiger project pin and matches the same project/address; retained Thaiger project pin and added as a corroborating source."
+  },
+  "notes": [
+    "Hipflat project page lists two sale units at ฿440,000–฿500,000 and one rental at ฿3,000/month.",
+    "Lowest sale listing last updated 2026-09-09; Hipflat still lists it on the project page checked 2026-10-18.",
+    "The ฿500,000 unit page has conflicting Studio/1-bedroom text, so no bedroom count was assigned to it.",
+    "The market has no verified two-bedroom sale sample; ROI uses the one-bedroom baseline only when that room type is selected/available."
+  ]
+}
