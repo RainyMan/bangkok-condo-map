@@ -1,0 +1,148 @@
+{
+  "hipflatId": 6317,
+  "project": "Plum Condo Chaengwattana - Donmuang",
+  "checkedAt": "2026-10-18",
+  "coordinates": {
+    "lat": 13.89170753503041,
+    "lng": 100.5821633431997,
+    "source": "https://propertyhub.in.th/en/projects/plum-chaengwattana-donmuang",
+    "verification": "https://www.hipflat.co.th/en/projects/plum-condo-chaengwattana-donmuang-ncryth"
+  },
+  "completionYear": {
+    "year": 2023,
+    "source": "https://www.hipflat.co.th/en/projects/plum-condo-chaengwattana-donmuang-ncryth",
+    "discrepancy": "PropertyHub project metadata shows 2024; Hipflat project and individual unit pages state Sep 2023."
+  },
+  "managementFee": {
+    "thbPerSqmMonth": 45,
+    "source": "https://propertyhub.in.th/en/projects/plum-condo-chaengwattana-donmueang"
+  },
+  "sale": {
+    "count": 5,
+    "minimumTotal": 1600000,
+    "minimumAreaSqm": 22.94,
+    "minimumPricePerSqm": 69747,
+    "minimumUrl": "https://www.hipflat.co.th/en/ads/3h4aln998tleuctua7n0e41l3u0h1440",
+    "lowestPricePerSqmUrl": "https://www.hipflat.co.th/en/ads/3h4aln998tleuctua7n0e41l3u0h1440",
+    "allSamples": [
+      {
+        "id": "U1931771",
+        "price": 1650000,
+        "area": 23.0,
+        "beds": 1,
+        "roomType": "1BR",
+        "updated": "2026-10-18",
+        "title": "Plum Condo Chaengwattana - Donmuang · 1 房 · 23 ㎡ · ฿1,650,000",
+        "url": "https://www.hipflat.co.th/en/ads/844803148e3l1t93993lc9h03u02u94l",
+        "priceSqm": 71739,
+        "sourceName": "Hipflat 個別掛牌",
+        "projectName": "Plum Condo Chaengwattana - Donmuang",
+        "checkedAt": "2026-10-18",
+        "matchedBy": "Hipflat exact project listing and project name; same Thung Song Hong/Lak Si district",
+        "listingStatus": "active_as_listed"
+      },
+      {
+        "id": "U6663063",
+        "price": 2270000,
+        "area": 26.0,
+        "beds": 1,
+        "roomType": "1BR",
+        "updated": "2026-10-18",
+        "title": "Plum Condo Chaengwattana - Donmuang · 1 房 · 26 ㎡ · ฿2,270,000",
+        "url": "https://www.hipflat.co.th/en/ads/ula809ca8cl8tlu8311cteu43u092h0a",
+        "priceSqm": 87308,
+        "sourceName": "Hipflat 個別掛牌",
+        "projectName": "Plum Condo Chaengwattana - Donmuang",
+        "checkedAt": "2026-10-18",
+        "matchedBy": "Hipflat exact project listing and project name; same Thung Song Hong/Lak Si district",
+        "listingStatus": "active_as_listed"
+      },
+      {
+        "id": "U1402086",
+        "price": 1600000,
+        "area": 22.94,
+        "beds": 1,
+        "roomType": "1BR",
+        "updated": "2026-10-18",
+        "title": "Plum Condo Chaengwattana - Donmuang · 1 房 · 22.94 ㎡ · ฿1,600,000",
+        "url": "https://www.hipflat.co.th/en/ads/3h4aln998tleuctua7n0e41l3u0h1440",
+        "priceSqm": 69747,
+        "sourceName": "Hipflat 個別掛牌",
+        "projectName": "Plum Condo Chaengwattana - Donmuang",
+        "checkedAt": "2026-10-18",
+        "matchedBy": "Hipflat exact project listing and project name; same Thung Song Hong/Lak Si district",
+        "listingStatus": "active_as_listed"
+      },
+      {
+        "id": "CX-135704",
+        "price": 2580000,
+        "area": 35.38,
+        "beds": 1,
+        "roomType": "1BR",
+        "updated": "2026-10-18",
+        "title": "Plum Condo Chaengwattana - Donmuang · 1 房 · 35.38 ㎡ · ฿2,580,000",
+        "url": "https://www.hipflat.co.th/en/ads/a09lt8t78n332u72c941uteu3u0l1e9n",
+        "priceSqm": 72923,
+        "sourceName": "Hipflat 個別掛牌",
+        "projectName": "Plum Condo Chaengwattana - Donmuang",
+        "checkedAt": "2026-10-18",
+        "matchedBy": "Hipflat exact project listing and project name; same Thung Song Hong/Lak Si district",
+        "listingStatus": "active_as_listed"
+      },
+      {
+        "id": "CX-135707",
+        "price": 1860000,
+        "area": 26.39,
+        "beds": 1,
+        "roomType": "1BR",
+        "updated": "2026-10-18",
+        "title": "Plum Condo Chaengwattana - Donmuang · 1 房 · 26.39 ㎡ · ฿1,860,000",
+        "url": "https://www.hipflat.co.th/en/ads/9e1h49e08t0n2h438el4a2e73u0c4ac4",
+        "priceSqm": 70481,
+        "sourceName": "Hipflat 個別掛牌",
+        "projectName": "Plum Condo Chaengwattana - Donmuang",
+        "checkedAt": "2026-10-18",
+        "matchedBy": "Hipflat exact project listing and project name; same Thung Song Hong/Lak Si district",
+        "listingStatus": "active_as_listed"
+      }
+    ]
+  },
+  "rent": {
+    "count": 1,
+    "monthly": 9500,
+    "areaSqm": 26.5,
+    "pricePerSqmMonth": 358,
+    "url": "https://www.hipflat.co.th/en/ads/1ac90l0a8ht4e8u2n4tel9a23ul38t9l",
+    "allSamples": [
+      {
+        "id": "CX-161398",
+        "price": 9500,
+        "area": 26.5,
+        "beds": 1,
+        "roomType": "1BR",
+        "updated": "2026-10-18",
+        "title": "Plum Condo Chaengwattana - Donmuang · 1 房 · 26.5 ㎡ · ฿9,500/月",
+        "url": "https://www.hipflat.co.th/en/ads/1ac90l0a8ht4e8u2n4tel9a23ul38t9l",
+        "priceSqm": 358,
+        "sourceName": "Hipflat 個別掛牌",
+        "projectName": "Plum Condo Chaengwattana - Donmuang",
+        "checkedAt": "2026-10-18",
+        "matchedBy": "Hipflat exact project listing and project name; same Thung Song Hong/Lak Si district",
+        "listingStatus": "active_as_listed"
+      }
+    ]
+  },
+  "yieldEstimate": {
+    "bedrooms": 1,
+    "purchasePriceThb": 1600000,
+    "purchaseAreaSqm": 22.94,
+    "rentRateThbPerSqmMonth": 358.49056603773585,
+    "estimatedMonthlyRentThb": 8224,
+    "annualRentAfterOneAgentMonthThb": 90462,
+    "annualCommonFeeDeductedThb": 12388,
+    "netYieldPercentAfterOneAgentMonthAndManagementFee": 4.88,
+    "purchaseSource": "https://www.hipflat.co.th/en/ads/3h4aln998tleuctua7n0e41l3u0h1440",
+    "rentSource": "https://www.hipflat.co.th/en/ads/1ac90l0a8ht4e8u2n4tel9a23ul38t9l",
+    "formula": "((monthly rent × purchase area × 11 months) − (45 THB/㎡/month × purchase area × 12)) ÷ purchase price × 100"
+  }
+}
