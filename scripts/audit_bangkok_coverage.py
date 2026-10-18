@@ -190,8 +190,8 @@ def main() -> None:
                                  key=lambda sample: float(sample["price"]) / float(sample["area"]), default={})
         sale_source = manual_sale_source.get("url") or sale.get("minimumSqmSourceUrl") or sale.get("minimumSourceUrl") or sale.get("source") or ""
         rent_source = manual_rent_source.get("url") or rent.get("minimumSqmSourceUrl") or rent.get("minimumSourceUrl") or rent.get("source") or ""
-        sale_updated = manual_sale_source.get("updated") or manual_sale_source.get("checkedAt") or listing_updated(sale, research_market.get("sale") or {})
-        rent_updated = manual_rent_source.get("updated") or manual_rent_source.get("checkedAt") or listing_updated(rent, research_market.get("rent") or {})
+        sale_updated = str(manual_sale_source.get("updated") or "") if manual_sale_source else listing_updated(sale, research_market.get("sale") or {})
+        rent_updated = str(manual_rent_source.get("updated") or "") if manual_rent_source else listing_updated(rent, research_market.get("rent") or {})
         # Match the coordinate source actually selected by app.js instead of
         # accidentally reporting a market/search URL as the location source.
         coordinate_source = ""
