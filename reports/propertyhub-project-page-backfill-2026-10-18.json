@@ -1,0 +1,547 @@
+{
+  "scope": "Hipflat Bangkok exact PropertyHub project-page backfill",
+  "uniqueProjectPagesInspected": 307,
+  "projectPagesWithValidatedIdentity": 298,
+  "newSaleMarkets": 25,
+  "newRentMarkets": 16,
+  "projectsWithAtLeastOneNewMarket": 41,
+  "excludedKnownBadListings": 4,
+  "identityMismatchesRejected": 3,
+  "excludedListingsRemainingInAddedSamples": 0,
+  "asOf": "2026-10-18",
+  "projectMarkets": [
+    {
+      "hipflatId": 3475,
+      "name": "The Cube Premium Ramintra 34",
+      "markets": {
+        "sale": {
+          "observedListings": 2,
+          "minimum": 1800000.0,
+          "minimumPerSqm": 64286,
+          "minimumSource": "https://propertyhub.in.th/en/listings/a010501-the-cube-premium-ramintra-34---6428956",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-sale/project-the-cube-premium-ramintra-34"
+        }
+      }
+    },
+    {
+      "hipflatId": 3752,
+      "name": "Pandao Place",
+      "markets": {
+        "sale": {
+          "observedListings": 3,
+          "minimum": 1990000.0,
+          "minimumPerSqm": 53053,
+          "minimumSource": "https://propertyhub.in.th/en/listings/s-pdpc101-line-p2nproperty---6123084",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-sale/project-pandao-place"
+        }
+      }
+    },
+    {
+      "hipflatId": 3967,
+      "name": "The Excel Bearing",
+      "markets": {
+        "rent": {
+          "observedListings": 6,
+          "minimum": 5500.0,
+          "minimumPerSqm": 220,
+          "minimumSource": "https://propertyhub.in.th/en/listings/the-excel-bearing--9876088c---2892077",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-rent/project-the-excel-bearing"
+        }
+      }
+    },
+    {
+      "hipflatId": 3970,
+      "name": "The Unique Ladprao 26",
+      "markets": {
+        "sale": {
+          "observedListings": 1,
+          "minimum": 4200000.0,
+          "minimumPerSqm": 84000,
+          "minimumSource": "https://propertyhub.in.th/en/listings/2-br-condo-at-the-unique-ladprao-26-near-mrt-ratchadaphisek-id-3361258---6464600",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-sale/project-the-unique-ladprao-26"
+        }
+      }
+    },
+    {
+      "hipflatId": 4116,
+      "name": "HI Seacon Station",
+      "markets": {
+        "sale": {
+          "observedListings": 2,
+          "minimum": 1550000.0,
+          "minimumPerSqm": 52400,
+          "minimumSource": "https://propertyhub.in.th/en/listings/condo-for-sale-at-hi-seacon-station-located-near-the-suan-luang-rama-ix-mrt-station-and-opposite-seacon-square-srinakarin---6494673",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-sale/project-hi-seacon-station"
+        }
+      }
+    },
+    {
+      "hipflatId": 4219,
+      "name": "Pano Ville",
+      "markets": {
+        "sale": {
+          "observedListings": 1,
+          "minimum": 2500000.0,
+          "minimumPerSqm": 89286,
+          "minimumSource": "https://propertyhub.in.th/en/listings/cancelled-booking-this-price-is-unbeatable-pano-ville-condo-ready-to-transfer-ownership-md-25079689---5829775",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-sale/project-pano-ville"
+        }
+      }
+    },
+    {
+      "hipflatId": 4247,
+      "name": "PM Riverside",
+      "markets": {
+        "sale": {
+          "observedListings": 1,
+          "minimum": 27000000.0,
+          "minimumPerSqm": 97826,
+          "minimumSource": "https://propertyhub.in.th/en/listings/lth4205-8211-pm-riverside-for-sale-3-beds-4-baths-size-276-sq-m-nearby-bts-chong-nonsi-station-only-27-mb---5893945",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-sale/project-pm-riverside"
+        }
+      }
+    },
+    {
+      "hipflatId": 4429,
+      "name": "Condo One Ladprao 15",
+      "markets": {
+        "sale": {
+          "observedListings": 1,
+          "minimum": 2500000.0,
+          "minimumPerSqm": 90909,
+          "minimumSource": "https://propertyhub.in.th/en/listings/1-br-condo-at-condo-one-ladprao-15-near-mrt-lat-phrao-id-1725590---5110523",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-sale/project-condo-one-ladprao-15"
+        }
+      }
+    },
+    {
+      "hipflatId": 4525,
+      "name": "The Midtown Chaengwattana",
+      "markets": {
+        "sale": {
+          "observedListings": 1,
+          "minimum": 3050000.0,
+          "minimumPerSqm": 113047,
+          "minimumSource": "https://propertyhub.in.th/en/listings/a010378-the-midtown-chaengwattana---6296525",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-sale/project-the-midtown-chaengwattana"
+        }
+      }
+    },
+    {
+      "hipflatId": 4592,
+      "name": "Tridhos City Marina",
+      "markets": {
+        "sale": {
+          "observedListings": 1,
+          "minimum": 32000000.0,
+          "minimumPerSqm": 99379,
+          "minimumSource": "https://propertyhub.in.th/en/listings/3-br-condo-at-tridhos-city-marina-near-bts-wongwian-yai-id-2798268---5958150",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-sale/project-tridhos-city-marina"
+        }
+      }
+    },
+    {
+      "hipflatId": 4642,
+      "name": "Sathorn Happy Land Tower",
+      "markets": {
+        "sale": {
+          "observedListings": 1,
+          "minimum": 4990000.0,
+          "minimumPerSqm": 62508,
+          "minimumSource": "https://propertyhub.in.th/en/listings/hotdeal​-for-sale​-prime-location-and-special-price-condo-at-sathorn-happy-land-tower-md-95272---5398564",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-sale/project-sathorn-happy-land-tower"
+        }
+      }
+    },
+    {
+      "hipflatId": 4645,
+      "name": "HI Rise Sukhumvit 101",
+      "markets": {
+        "sale": {
+          "observedListings": 1,
+          "minimum": 1890000.0,
+          "minimumPerSqm": 55588,
+          "minimumSource": "https://propertyhub.in.th/en/listings/md-26067085-rare-item-beautiful-condo-below-market-price-high-rise-sukhumvit-101-book-now-before-it-s-gone---6350140",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-sale/project-hi-rise-sukhumvit-101"
+        }
+      }
+    },
+    {
+      "hipflatId": 4717,
+      "name": "Klos Ratchada 7",
+      "markets": {
+        "sale": {
+          "observedListings": 1,
+          "minimum": 3600000.0,
+          "minimumPerSqm": 112500,
+          "minimumSource": "https://propertyhub.in.th/en/listings/1-br-condo-at-klos-ratchada-7-near-mrt-thailand-cultural-centre-id-2472186---5642721",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-sale/project-klos-ratchada-7"
+        }
+      }
+    },
+    {
+      "hipflatId": 4794,
+      "name": "Baan Suan Sue Trong",
+      "markets": {
+        "rent": {
+          "observedListings": 1,
+          "minimum": 14900.0,
+          "minimumPerSqm": 237,
+          "minimumSource": "https://propertyhub.in.th/en/listings/r2650-for-rent-ban-suan-sue-trong---4953611",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-rent/project-baan-suan-sue-trong"
+        }
+      }
+    },
+    {
+      "hipflatId": 4802,
+      "name": "P&S Place",
+      "markets": {
+        "rent": {
+          "observedListings": 1,
+          "minimum": 29000.0,
+          "minimumPerSqm": 500,
+          "minimumSource": "https://propertyhub.in.th/en/listings/1-bed-1-bath-58-sq-m-y-o-place---5055407",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-rent/project-p-s-place"
+        }
+      }
+    },
+    {
+      "hipflatId": 4828,
+      "name": "Sukhumvit Casa",
+      "markets": {
+        "sale": {
+          "observedListings": 1,
+          "minimum": 18000000.0,
+          "minimumPerSqm": 82569,
+          "minimumSource": "https://propertyhub.in.th/en/listings/3-br-condo-at-sukhumvit-casa-condominium-near-bts-asok-id-1512935--a62d0927---4407288",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-sale/project-sukhumvit-casa"
+        }
+      }
+    },
+    {
+      "hipflatId": 5214,
+      "name": "Windsor Tower",
+      "markets": {
+        "sale": {
+          "observedListings": 1,
+          "minimum": 31000000.0,
+          "minimumPerSqm": 100649,
+          "minimumSource": "https://propertyhub.in.th/en/listings/3-br-308-sqm-condo-in-windsor-tower-near-bts-asoke-13th-floor-id-889534---4745309",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-sale/project-windsor-tower"
+        }
+      }
+    },
+    {
+      "hipflatId": 5240,
+      "name": "The Private @ Sutthisan",
+      "markets": {
+        "rent": {
+          "observedListings": 1,
+          "minimum": 13500.0,
+          "minimumPerSqm": 375,
+          "minimumSource": "https://propertyhub.in.th/en/listings/condo-for-rent-at-the-private-sutthisan-b6902054---5799781",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-rent/project-the-private-sutthisan"
+        }
+      }
+    },
+    {
+      "hipflatId": 5295,
+      "name": "Le Rich Sathorn - Satupradit",
+      "markets": {
+        "rent": {
+          "observedListings": 1,
+          "minimum": 20000.0,
+          "minimumPerSqm": 299,
+          "minimumSource": "https://propertyhub.in.th/en/listings/z4722-200269-condo-for-rent-le-rich-condo-sathorn-satupradit---5818830",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-rent/project-le-rich-sathorn-satupradit"
+        }
+      }
+    },
+    {
+      "hipflatId": 5340,
+      "name": "United Tower",
+      "markets": {
+        "sale": {
+          "observedListings": 1,
+          "minimum": 22000000.0,
+          "minimumPerSqm": 93220,
+          "minimumSource": "https://propertyhub.in.th/en/listings/4-bedroom-5-bathroom-renovated-condo-for-sale-6745830---6367028",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-sale/project-united-tower"
+        }
+      }
+    },
+    {
+      "hipflatId": 5345,
+      "name": "Ratchada Chuanchom Mansion",
+      "markets": {
+        "sale": {
+          "observedListings": 1,
+          "minimum": 1450000.0,
+          "minimumPerSqm": 48333,
+          "minimumSource": "https://propertyhub.in.th/en/listings/a010443-ratchada-chuanchom-mansion---6352934",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-sale/project-ratchada-chuanchom-mansion"
+        }
+      }
+    },
+    {
+      "hipflatId": 5453,
+      "name": "Sukhumvit Garden Place",
+      "markets": {
+        "rent": {
+          "observedListings": 2,
+          "minimum": 22000.0,
+          "minimumPerSqm": 415,
+          "minimumSource": "https://propertyhub.in.th/en/listings/1-br-condo-at-the-garden-place-condominium-near-bts-thong-lor-id-511377---4943928",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-rent/project-sukhumvit-garden-place"
+        }
+      }
+    },
+    {
+      "hipflatId": 5457,
+      "name": "Aritier Penthouse At Ari",
+      "markets": {
+        "rent": {
+          "observedListings": 1,
+          "minimum": 78000.0,
+          "minimumPerSqm": 709,
+          "minimumSource": "https://propertyhub.in.th/en/listings/penthouse-2-beds-large-room-luxury-room-low-rise-fully-furnished-good-loction-close-to-bts-ari-aritier-penthouse-at-ari---5688104",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-rent/project-aritier-penthouse-at-ari"
+        }
+      }
+    },
+    {
+      "hipflatId": 5502,
+      "name": "Royal Park 3 Ari - Paholyothin",
+      "markets": {
+        "rent": {
+          "observedListings": 1,
+          "minimum": 30000.0,
+          "minimumPerSqm": 314,
+          "minimumSource": "https://propertyhub.in.th/en/listings/available-now-royal-park-3-ari-phahonyothin-book-before-it-s-gone-md-25044860---6380584",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-rent/project-royal-park-3-ari-paholyothin"
+        }
+      }
+    },
+    {
+      "hipflatId": 5553,
+      "name": "Fak Khao Pode",
+      "markets": {
+        "rent": {
+          "observedListings": 1,
+          "minimum": 15000.0,
+          "minimumPerSqm": 278,
+          "minimumSource": "https://propertyhub.in.th/en/listings/condo-for-rent-at-fak-khao-pode-f6909089-id-line-pccenter---6427875",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-rent/project-fak-khao-pode"
+        }
+      }
+    },
+    {
+      "hipflatId": 5572,
+      "name": "Feel Condo Pinklao - Charan 59",
+      "markets": {
+        "rent": {
+          "observedListings": 1,
+          "minimum": 25000.0,
+          "minimumPerSqm": 758,
+          "minimumSource": "https://propertyhub.in.th/en/listings/1-br-feel-condo-pinklao-charan-59-near-mrt-bang-yi-khan-id-2883830---6402099",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-rent/project-feel-condo-pinklao-charan-59"
+        }
+      }
+    },
+    {
+      "hipflatId": 5590,
+      "name": "Tara Ruankaew",
+      "markets": {
+        "sale": {
+          "observedListings": 1,
+          "minimum": 5350000.0,
+          "minimumPerSqm": 42460,
+          "minimumSource": "https://propertyhub.in.th/en/listings/for-sale-condo-tara-ruankaew-nice-view-high-floor-wide-frontage-mrt-ministry-phlapphla-wang-thong-lang-bangkok-cx-169756-live-chat-with-us-add-line-connexproperty---6400272",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-sale/project-tara-ruankaew"
+        }
+      }
+    },
+    {
+      "hipflatId": 5739,
+      "name": "The Unique Ekamai-Ramintra",
+      "markets": {
+        "sale": {
+          "observedListings": 4,
+          "minimum": 2800000.0,
+          "minimumPerSqm": 73684,
+          "minimumSource": "https://propertyhub.in.th/en/listings/for-sale-condo-the-unique-ekamai-ramintra-khlong-chao-khun-sing-wang-thong-lang-bangkok-cx-80890-live-chat-with-us-add-line-connexproperty---6165103",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-sale/project-the-unique-ekamai-ramintra"
+        }
+      }
+    },
+    {
+      "hipflatId": 5779,
+      "name": "Somkid Place",
+      "markets": {
+        "rent": {
+          "observedListings": 1,
+          "minimum": 40000.0,
+          "minimumPerSqm": 408,
+          "minimumSource": "https://propertyhub.in.th/en/listings/z292-condo-for-rent-somkid-place---5105855",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-rent/project-somkid-place"
+        }
+      }
+    },
+    {
+      "hipflatId": 5788,
+      "name": "Panchasarp Suite Ratchada - Ladprao",
+      "markets": {
+        "rent": {
+          "observedListings": 1,
+          "minimum": 19000.0,
+          "minimumPerSqm": 86,
+          "minimumSource": "https://propertyhub.in.th/en/listings/4-br-condo-at-panchasarp-suite-ratchada-ladphrao-condominium-close-to-chok-chai-4-id-2317525---5436344",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-rent/project-panchasarp-suite-ratchada-ladprao"
+        }
+      }
+    },
+    {
+      "hipflatId": 5834,
+      "name": "Tanommit Park",
+      "markets": {
+        "sale": {
+          "observedListings": 1,
+          "minimum": 590000.0,
+          "minimumPerSqm": 21071,
+          "minimumSource": "https://propertyhub.in.th/en/listings/tanormmit-park-condo-floo3-build-15---6494225",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-sale/project-tanommit-park"
+        }
+      }
+    },
+    {
+      "hipflatId": 5864,
+      "name": "The Rich Ploenchit - Nana",
+      "markets": {
+        "rent": {
+          "observedListings": 1,
+          "minimum": 42700.0,
+          "minimumPerSqm": 1226,
+          "minimumSource": "https://propertyhub.in.th/en/listings/1-br-condo-at-the-rich-ploenchit-nana-near-bts-nana-id-2334417---5463133",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-rent/project-the-rich-ploenchit-nana"
+        }
+      }
+    },
+    {
+      "hipflatId": 5915,
+      "name": "Sriwara Garden Condominium",
+      "markets": {
+        "sale": {
+          "observedListings": 1,
+          "minimum": 1590000.0,
+          "minimumPerSqm": 45429,
+          "minimumSource": "https://propertyhub.in.th/en/listings/a046090-sriwara-garden-condominium---6187035",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-sale/project-sriwara-garden-condominium"
+        }
+      }
+    },
+    {
+      "hipflatId": 5921,
+      "name": "The Tree Privata",
+      "markets": {
+        "rent": {
+          "observedListings": 2,
+          "minimum": 7500.0,
+          "minimumPerSqm": 268,
+          "minimumSource": "https://propertyhub.in.th/en/listings/the-tree--a51408f4---405081",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-rent/project-the-tree-privata"
+        }
+      }
+    },
+    {
+      "hipflatId": 6217,
+      "name": "Sukhumvit House",
+      "markets": {
+        "sale": {
+          "observedListings": 5,
+          "minimum": 12900000.0,
+          "minimumPerSqm": 75882,
+          "minimumSource": "https://propertyhub.in.th/en/listings/cozy-house-for-sale-phra-khanong-family-home-best-value-near-bts-phra-khanong-12-900-000-thb-lthc14785---5928602",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-sale/project-sukhumvit-house"
+        }
+      }
+    },
+    {
+      "hipflatId": 6317,
+      "name": "Plum Condo Chaengwattana - Donmuang",
+      "markets": {
+        "sale": {
+          "observedListings": 1,
+          "minimum": 1980000.0,
+          "minimumPerSqm": 74717,
+          "minimumSource": "https://propertyhub.in.th/en/listings/sc16311-sell-plum-chaengwattana-donmuang𝑪𝒐𝒏𝒕𝒂𝒄𝒕𝑳𝑰𝑵𝑬-𝒔𝒆𝒄𝒓𝒆𝒕𝒑𝒓𝒐𝒑𝒆𝒓𝒕𝒚---6315550",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-sale/project-plum-chaengwattana-donmuang"
+        }
+      }
+    },
+    {
+      "hipflatId": 6421,
+      "name": "Lumpini Ville Phra Mae Maree - Sathorn",
+      "markets": {
+        "sale": {
+          "observedListings": 4,
+          "minimum": 1850000.0,
+          "minimumPerSqm": 57509,
+          "minimumSource": "https://propertyhub.in.th/en/listings/s100029-lumpini-ville-phra-mae-maree-sathorn---6406792",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-sale/project-lumpini-ville-phra-mae-maree-sathorn"
+        }
+      }
+    },
+    {
+      "hipflatId": 6443,
+      "name": "River House Condominium",
+      "markets": {
+        "sale": {
+          "observedListings": 1,
+          "minimum": 25000000.0,
+          "minimumPerSqm": 125000,
+          "minimumSource": "https://propertyhub.in.th/en/listings/3-br-200-sqm-river-house-condominium-near-mrt-hua-lamphong-id-3247835---6344188",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-sale/project-river-house-condominium"
+        }
+      }
+    },
+    {
+      "hipflatId": 6445,
+      "name": "Bliz Condominium Ladprao 107",
+      "markets": {
+        "sale": {
+          "observedListings": 2,
+          "minimum": 1550000.0,
+          "minimumPerSqm": 53745,
+          "minimumSource": "https://propertyhub.in.th/en/listings/a034164-bliz-condominium-ladprao-107---6005381",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-sale/project-bliz-condominium-ladprao-107"
+        }
+      }
+    },
+    {
+      "hipflatId": 6482,
+      "name": "Billion Tower Condominium",
+      "markets": {
+        "rent": {
+          "observedListings": 1,
+          "minimum": 25000.0,
+          "minimumPerSqm": 189,
+          "minimumSource": "https://propertyhub.in.th/en/listings/spacious-2-bedroom-132-sqm-condo-at-billion-tower-chom-thong-id-1521719---6424349",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-rent/project-billion-tower"
+        }
+      }
+    },
+    {
+      "hipflatId": 6554,
+      "name": "Maison Garden Chaeng Watthana",
+      "markets": {
+        "rent": {
+          "observedListings": 1,
+          "minimum": 13000.0,
+          "minimumPerSqm": 289,
+          "minimumSource": "https://propertyhub.in.th/en/listings/for-rent-condo-maison-garden-ready-to-move---4894992",
+          "projectPage": "https://propertyhub.in.th/en/condo-for-rent/project-maison-garden-chaeng-watthana"
+        }
+      }
+    }
+  ]
+}
