@@ -1,0 +1,53 @@
+{
+  "project": "Supapong Place",
+  "hipflatId": 3765,
+  "checkedAt": "2026-10-18",
+  "sources": {
+    "hipflatProject": "https://www.hipflat.co.th/en/projects/supapong-place-fyvkhz",
+    "saleProject": "https://propertyhub.in.th/en/condo-for-sale/project-supapong-place",
+    "rentProject": "https://propertyhub.in.th/en/condo-for-rent/project-supapong-place",
+    "saleListing": "https://propertyhub.in.th/en/listings/a033874-supapong-place---6005652",
+    "rentListing": "https://propertyscout.co.th/en/2-br-condo-supapong-place-near-mrt-ratchadaphisek-3316018/"
+  },
+  "sale": {
+    "twoBedroomListingsOnExactProjectPage": 1,
+    "twoBedroomMinimum": {
+      "priceThb": 2400000,
+      "areaSqm": 60.0,
+      "pricePerSqmThb": 40000,
+      "listingId": "6005652",
+      "updated": "2026-08-17",
+      "availability": "Unconfirmed; project-page card was last updated 2026-08-17."
+    }
+  },
+  "rent": {
+    "propertyHubExactProjectPage": "No matched properties for rent at check time.",
+    "twoBedroomSample": {
+      "priceThbPerMonth": 14000,
+      "areaSqm": 68.0,
+      "pricePerSqmMonthThb": 205.88,
+      "listingId": "3316018",
+      "listed": "2026-09-14",
+      "availability": "PropertyScout marked confirmed available about one month before 2026-10-18; current availability is unconfirmed."
+    }
+  },
+  "yieldEstimate": {
+    "bedrooms": 2,
+    "purchasePriceThb": 2400000,
+    "purchaseAreaSqm": 60.0,
+    "rentRateThbPerSqmMonth": 205.8824,
+    "estimatedMonthlyRentAtPurchaseAreaThb": 12353,
+    "grossAnnualYieldPercent": 6.18,
+    "afterOneAgentMonthBeforeCommonFeePercent": 5.66,
+    "commonFee": "Unverified; excluded.",
+    "formula": "((14,000 / 68) * 60 * 11) / 2,400,000 * 100",
+    "purchaseSource": "https://propertyhub.in.th/en/listings/a033874-supapong-place---6005652",
+    "rentSource": "https://propertyscout.co.th/en/2-br-condo-supapong-place-near-mrt-ratchadaphisek-3316018/"
+  },
+  "notes": [
+    "The lowest total two-bedroom sale sample in the exact PropertyHub project results is ฿2,400,000 for 60 sqm; the other displayed sale listings are one-bedroom.",
+    "The only current two-bedroom rent sample found in the checked PropertyScout project results is ฿14,000/month for 68 sqm; it is not a confirmed current vacancy.",
+    "The lowest total listed rent on PropertyScout includes one-bedroom units, so the yield uses a same-bedroom two-bedroom rate.",
+    "The rent rate is used to scale rent to the 60 sqm purchase unit; one month of rent is deducted for agent management. Common fee is not published as an amount and is not deducted."
+  ]
+}
