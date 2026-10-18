@@ -1,18 +1,11 @@
 {
-  "projectPagesChecked": 253,
-  "projectsWithMatchedProjectPage": 247,
-  "projectsWithNewListings": 1,
+  "projectPagesChecked": 252,
+  "projectsWithMatchedProjectPage": 246,
+  "projectsWithNewListings": 0,
   "newSaleMarkets": 0,
-  "newRentMarkets": 1,
-  "projectCoordinatesFromPropertyHubPages": 247,
+  "newRentMarkets": 0,
+  "projectCoordinatesFromPropertyHubPages": 246,
   "identityMismatchesRejected": [],
   "checkedAt": "2026-10-19",
-  "examples": [
-    {
-      "hipflatId": 3953,
-      "slug": "the-knight-sukhumvit-107",
-      "sale": false,
-      "rent": true
-    }
-  ]
+  "examples": []
 }

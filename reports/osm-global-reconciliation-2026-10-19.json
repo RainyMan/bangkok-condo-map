@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-10-19",
+  "method": "Local Bangkok OSM PBF, global project-name search, conservative name and address scoring, then strict OSM match audit",
+  "globalSearch": {
+    "unlocatedCandidatesSearched": 1132,
+    "additionalHighConfidenceCoordinates": 0
+  },
+  "audit": {
+    "previousOsmMatches": 455,
+    "retainedOsmMatches": 450,
+    "removed": 5,
+    "reason": "Each removed project/object name pair had fewer than two project-specific name tokens after generic terms were discarded; insufficient to uniquely verify the building. No unresolved object conflicts remained."
+  },
+  "removedMatches": [
+    {"hipflatId": 5443, "project": "Sahai Place", "osm": "https://www.openstreetmap.org/way/340074036"},
+    {"hipflatId": 5613, "project": "Sawasdee Bangkok", "osm": "https://www.openstreetmap.org/node/2886681748"},
+    {"hipflatId": 5973, "project": "Greenery Place", "osm": "https://www.openstreetmap.org/way/476861789"},
+    {"hipflatId": 5983, "project": "Union Tower", "osm": "https://www.openstreetmap.org/way/1066039414"},
+    {"hipflatId": 6232, "project": "The Bangkok Sathorn", "osm": "https://www.openstreetmap.org/way/539353978"}
+  ],
+  "coverageAfter": {
+    "hipflatProjects": 3555,
+    "verifiedCoordinates": 3042,
+    "saleMarkets": 1966,
+    "rentMarkets": 1962,
+    "saleIndividualListingLinks": 1909,
+    "rentIndividualListingLinks": 1910,
+    "bothSaleAndRentMarkets": 1776
+  }
+}
