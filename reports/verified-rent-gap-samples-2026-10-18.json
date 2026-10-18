@@ -1,0 +1,111 @@
+{
+  "checkedAt": "2026-10-18",
+  "additions": [
+    {
+      "hipflatId": 5474,
+      "name": "Baan Ruenrom Bangna",
+      "rent": {
+        "count": 2,
+        "observedCount": 2,
+        "countKind": "manual_verified_listing",
+        "average": 14500,
+        "minimum": 14500,
+        "minimumArea": 72,
+        "minimumSampleUpdated": "2026-10-18",
+        "averageSqm": 214,
+        "minimumSqm": 201,
+        "minimumSqmSampleUpdated": "2026-10-18",
+        "asOf": "2026-10-18",
+        "sourceName": "DDproperty 兩筆可見掛牌",
+        "source": "https://www.ddproperty.com/en/condo-for-rent/at-baan-ruenrom-bangna-1758/partially-furnished",
+        "minimumSourceUrl": "https://www.ddproperty.com/property/baan-ruenrom-bangna-%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%99%E0%B8%A3%E0%B8%A1%E0%B8%A2%E0%B9%8C-%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%99%E0%B8%B2-%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E-%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2-500643578",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/property/baan-ruenrom-bangna-%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%99%E0%B8%A3%E0%B8%A1%E0%B8%A2%E0%B9%8C-%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%99%E0%B8%B2-%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E-%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2-500643578",
+        "samples": [
+          {
+            "id": "500643578",
+            "price": 14500,
+            "area": 72,
+            "priceSqm": 201,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Baan Ruenrom Bangna，2 房，72 ㎡，฿14,500/月",
+            "url": "https://www.ddproperty.com/property/baan-ruenrom-bangna-%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%99%E0%B8%A3%E0%B8%A1%E0%B8%A2%E0%B9%8C-%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%99%E0%B8%B2-%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E-%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2-500643578",
+            "sourceName": "DDproperty",
+            "projectName": "Baan Ruenrom Bangna",
+            "checkedAt": "2026-10-18",
+            "updated": "2026-10-18",
+            "matchedBy": "exact_project_name_and_project_details_address_floor_area_bedrooms",
+            "listingStatus": "active_as_listed"
+          },
+          {
+            "id": "10392381",
+            "price": 14500,
+            "area": 64,
+            "priceSqm": 227,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Baan Ruenrom Bangna，2 房，64 ㎡，฿14,500/月",
+            "url": "https://www.ddproperty.com/en/property/baan-ruenrom-bangna-bangkok-for-rent-10392381",
+            "sourceName": "DDproperty",
+            "projectName": "Baan Ruenrom Bangna",
+            "checkedAt": "2026-10-18",
+            "updated": "2026-10-18",
+            "matchedBy": "exact_project_name_and_project_details_address_floor_area_bedrooms",
+            "listingStatus": "active_as_listed"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 3777,
+      "name": "Namchoke Condominium",
+      "rent": {
+        "count": 1,
+        "observedCount": 1,
+        "countKind": "manual_verified_listing",
+        "average": 3200,
+        "minimum": 3200,
+        "minimumArea": 30.5,
+        "minimumSampleUpdated": "2026-09-14",
+        "averageSqm": 105,
+        "minimumSqm": 105,
+        "minimumSqmSampleUpdated": "2026-09-14",
+        "asOf": "2026-10-18",
+        "sourceName": "Zmyhome 單筆掛牌",
+        "source": "https://zmyhome.com/property/V61052",
+        "minimumSourceUrl": "https://zmyhome.com/property/V61052",
+        "minimumSqmSourceUrl": "https://zmyhome.com/property/V61052",
+        "samples": [
+          {
+            "id": "V61052",
+            "price": 3200,
+            "area": 30.5,
+            "priceSqm": 105,
+            "beds": 0,
+            "roomType": "STUDIO",
+            "title": "Namchoke Condominium，Studio，30.5 ㎡，11 樓，฿3,200/月",
+            "url": "https://zmyhome.com/property/V61052",
+            "sourceName": "Zmyhome",
+            "projectName": "Namchoke Condominium",
+            "checkedAt": "2026-10-18",
+            "updated": "2026-09-14",
+            "matchedBy": "exact_project_name_address_building_floor_and_active_listing_status",
+            "listingStatus": "active_as_listed"
+          }
+        ]
+      }
+    }
+  ],
+  "baanRuenromTwoBedroomEstimate": {
+    "salePrice": 2699000,
+    "saleAreaSqm": 65,
+    "saleListingUrl": "https://propertyhub.in.th/en/listings/for-sale-baan-ruanrom-bangna-no-112---6490387",
+    "lowestRentPerSqm": 201.39,
+    "rentScaledToSaleArea": 13090,
+    "agentFeeMonthsDeducted": 1,
+    "commonFeeDeducted": false,
+    "netYieldPercent": 5.33,
+    "formula": "(monthly rent × 11) ÷ purchase price × 100; no verified common fee available"
+  },
+  "namchokeYield": "No default two-bedroom yield: available linked sale samples are one-bedroom and rental sample is a studio."
+}
