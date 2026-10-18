@@ -1,0 +1,25 @@
+{
+  "hipflatId": 3054,
+  "project": "Wisetsuk Nakorn Condo",
+  "checkedAt": "2026-10-18",
+  "correctedCoordinate": {
+    "lat": 13.633713110107,
+    "lng": 100.50511835365,
+    "sourceUrl": "https://map.longdo.com/p/A00316287"
+  },
+  "crossCheck": {
+    "hipflatProjectUrl": "https://www.hipflat.co.th/en/projects/wisetsuk-nakorn-condo-npkjeq",
+    "facts": "Soi Muban Wiset Suk Nakhon, Thung Khru; completed Jan 1992; 595 units; 5 floors.",
+    "longdoRecord": "Approved Wisetsuk Nakhon Condominium, Soi Sap Bunchai 2, Thung Khru."
+  },
+  "rejectedCoordinate": {
+    "lat": 13.70204589724699,
+    "lng": 100.4076823242259,
+    "locationSourceUrl": "https://propertyhub.in.th/en/projects/wisetsuk-nakorn-condo",
+    "reason": "The same-name PropertyHub project is indexed in Bang Khae. Its area does not match the Hipflat Thung Khru project and is not used as the coordinate source."
+  },
+  "marketSamples": {
+    "sale": "No active sale listing confirmed for this Thung Khru project in the checked project pages. A same-name PropertyHub 790,000 THB listing is in Bang Khae and is excluded.",
+    "rent": "No active rent listing confirmed for this Thung Khru project in the checked project pages."
+  }
+}
