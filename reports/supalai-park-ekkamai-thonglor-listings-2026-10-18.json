@@ -1,0 +1,82 @@
+{
+  "project": "Supalai Park Ekkamai - Thonglor",
+  "hipflatId": 3866,
+  "checkedAt": "2026-10-18",
+  "coordinates": {
+    "lat": 13.7435959,
+    "lng": 100.58939540000006,
+    "source": "https://propertyhub.in.th/en/condo-for-sale/project-supalai-park-ekkamai-thonglor",
+    "crossCheck": [
+      "https://www.hipflat.co.th/en/projects/supalai-park-ekamai-thonglor-00cut23717nte07a0l0l4l20nce2lh2h",
+      "https://wanderlog.com/place/details/5417666/supalai-park-ekkamai-thonglor"
+    ]
+  },
+  "nearestWalkingTransit": {
+    "stationId": "E6",
+    "distanceKm": 2.936,
+    "minutes": 37,
+    "method": "Valhalla pedestrian routing (30 nearest stations checked)",
+    "source": "https://valhalla1.openstreetmap.de/"
+  },
+  "sources": {
+    "saleProject": "https://propertyhub.in.th/en/condo-for-sale/project-supalai-park-ekkamai-thonglor",
+    "rentProject": "https://propertyhub.in.th/en/condo-for-rent/project-supalai-park-ekkamai-thonglor",
+    "saleListing": "https://propertyhub.in.th/en/listings/30th-floor-2-br-supalai-park-ekamai-thonglor-near-arl-ramkhamhaeng-id-3240351---6341897",
+    "rentListing": "https://propertyhub.in.th/en/listings/line-id-habitant-with-%EF%B8%8F-supalai-park-ekkamai-thonglor-fully-furnished-credit-cards-accepted---6244627"
+  },
+  "enumeration": {
+    "saleStructuredRows": 107,
+    "twoBedroomSaleRows": 55,
+    "rentStructuredRows": 158,
+    "twoBedroomRentRows": 63,
+    "discrepancy": "Rendered sale project page says Found 110 properties while structured page pagination totals 107; the selected two-bedroom minimum was compared across all 107 structured rows. The selected rent minimum was compared across all 158 structured rows."
+  },
+  "saleMinimumTwoBedroom": {
+    "priceThb": 4990000,
+    "areaSqm": 82.0,
+    "pricePerSqmThb": 60854,
+    "listingId": "6341897",
+    "source": "https://propertyhub.in.th/en/listings/30th-floor-2-br-supalai-park-ekamai-thonglor-near-arl-ramkhamhaeng-id-3240351---6341897",
+    "updated": "2026-10-18"
+  },
+  "rentMinimumTwoBedroomRate": {
+    "monthlyThb": 24000,
+    "areaSqm": 82.27,
+    "pricePerSqmMonthThb": 291.72,
+    "listingId": "6244627",
+    "source": "https://propertyhub.in.th/en/listings/line-id-habitant-with-%EF%B8%8F-supalai-park-ekkamai-thonglor-fully-furnished-credit-cards-accepted---6244627",
+    "contractTerms": {
+      "oneYearThbPerMonth": 25000,
+      "twoYearThbPerMonth": 24000
+    },
+    "areaDiscrepancy": "Page summary, top-level facts and project card report 82.27 sqm; one descriptive sentence states 84.27 sqm. Calculations use the repeated structured/list-card area 82.27 sqm."
+  },
+  "yieldEstimate": {
+    "bedrooms": 2,
+    "purchasePriceThb": 4990000,
+    "purchaseAreaSqm": 82.0,
+    "rentRateThbPerSqmMonth": 291.7224,
+    "estimatedMonthlyRentAtPurchaseAreaThb": 23921,
+    "grossAnnualYieldPercent": 5.75,
+    "afterOneAgentMonthBeforeCommonFeePercent": 5.27,
+    "commonFee": "Unverified; excluded.",
+    "purchaseSource": "https://propertyhub.in.th/en/listings/30th-floor-2-br-supalai-park-ekamai-thonglor-near-arl-ramkhamhaeng-id-3240351---6341897",
+    "rentSource": "https://propertyhub.in.th/en/listings/line-id-habitant-with-%EF%B8%8F-supalai-park-ekkamai-thonglor-fully-furnished-credit-cards-accepted---6244627",
+    "formula": "((24,000 / 82.27) * 82 * 11) / 4,990,000 * 100"
+  },
+  "completionYear": {
+    "year": 2015,
+    "source": "https://propertyhub.in.th/en/condo-for-sale/project-supalai-park-ekkamai-thonglor"
+  },
+  "managementFee": {
+    "status": "unverified",
+    "projectPageValue": "- THB/sq.m."
+  },
+  "notes": [
+    "The sale and rent minimums are exact two-bedroom PropertyHub listings, checked across both pages of each current exact-project result set.",
+    "PropertyHub structured pagination and rendered total-count labels differ; neither discrepancy changes the selected minimum among structured rows.",
+    "The lowest-rent listing shows a two-year contract at THB 24,000/month and a one-year contract at THB 25,000/month.",
+    "The rent listing has a 82.27/84.27 sqm text inconsistency; the 82.27 sqm area is repeated in structured listing fields and project result cards.",
+    "Common fee is not published as an amount and is not deducted from the estimate."
+  ]
+}
