@@ -1,0 +1,37 @@
+{
+  "hipflatId": 3295,
+  "projectName": "The Brill Condominium Vibhavadi 60",
+  "checkedAt": "2026-10-18",
+  "listing": {
+    "id": "BCV07-0001",
+    "price": 15000,
+    "area": 83,
+    "priceSqm": 181,
+    "beds": 1,
+    "roomType": "1BR",
+    "title": "The Brill Condominium Vibhavadi 60 · 1 房 · 83 ㎡ · ฿15,000/月 · 已出租",
+    "url": "https://www.scancondo.com/%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2/%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/144599/BCV07-0001/%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%A5%E0%B8%A5%E0%B9%8C-%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B8%A7%E0%B8%B4%E0%B8%A0%E0%B8%B2%E0%B8%A7%E0%B8%94%E0%B8%B5-60-%E0%B8%8A%E0%B8%B1%E0%B9%89%E0%B8%99-6-%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%81%E0%B8%A7%E0%B9%89%E0%B8%B2%E0%B8%87-%E0%B8%AD%E0%B8%A2%E0%B8%B9%E0%B9%88%E0%B8%AA%E0%B8%9A%E0%B8%B2%E0%B8%A2-%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B9%80%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%AD%E0%B8%A2%E0%B8%B9%E0%B9%88-%E0%B8%88%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A5%E0%B8%A2-%E0%B8%AB%E0%B9%89%E0%B8%B2%E0%B8%A1%E0%B8%9E%E0%B8%A5%E0%B8%B2%E0%B8%94",
+    "sourceName": "Scancondo",
+    "projectName": "The Brill Condominium Vibhavadi 60",
+    "checkedAt": "2026-10-18",
+    "matchedBy": "Exact project name and listing code BCV07-0001",
+    "availability": "The direct unit page explicitly says this unit is already rented; keep only as a historical rental sample.",
+    "listingStatus": "confirmed_unavailable"
+  },
+  "details": {
+    "bedrooms": "1 bedroom in structured unit facts; descriptive copy says 'combined room', so no bathroom count is recorded",
+    "floor": 6,
+    "areaSqm": 83,
+    "monthlyRentTHB": 15000,
+    "rentTHBPerSqmMonthExact": 180.72289156626505,
+    "availability": "confirmed unavailable: direct page says already rented",
+    "sourcePage": "https://www.scancondo.com/%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2/%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/144599/BCV07-0001/%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%A5%E0%B8%A5%E0%B9%8C-%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B8%A7%E0%B8%B4%E0%B8%A0%E0%B8%B2%E0%B8%A7%E0%B8%94%E0%B8%B5-60-%E0%B8%8A%E0%B8%B1%E0%B9%89%E0%B8%99-6-%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%81%E0%B8%A7%E0%B9%89%E0%B8%B2%E0%B8%87-%E0%B8%AD%E0%B8%A2%E0%B8%B9%E0%B9%88%E0%B8%AA%E0%B8%9A%E0%B8%B2%E0%B8%A2-%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B9%80%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%AD%E0%B8%A2%E0%B8%B9%E0%B9%88-%E0%B8%88%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A5%E0%B8%A2-%E0%B8%AB%E0%B9%89%E0%B8%B2%E0%B8%A1%E0%B8%9E%E0%B8%A5%E0%B8%B2%E0%B8%94"
+  },
+  "yieldNote": "This is a historical one-bedroom asking-rent sample; current availability is false. It must not be presented as a live rental listing. It does not qualify a two-bedroom ROI by itself.",
+  "evidence": {
+    "direct_listing": "https://www.scancondo.com/%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2/%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/144599/BCV07-0001/%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%A5%E0%B8%A5%E0%B9%8C-%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B8%A7%E0%B8%B4%E0%B8%A0%E0%B8%B2%E0%B8%A7%E0%B8%94%E0%B8%B5-60-%E0%B8%8A%E0%B8%B1%E0%B9%89%E0%B8%99-6-%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%81%E0%B8%A7%E0%B9%89%E0%B8%B2%E0%B8%87-%E0%B8%AD%E0%B8%A2%E0%B8%B9%E0%B9%88%E0%B8%AA%E0%B8%9A%E0%B8%B2%E0%B8%A2-%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B9%80%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%AD%E0%B8%A2%E0%B8%B9%E0%B9%88-%E0%B8%88%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A5%E0%B8%A2-%E0%B8%AB%E0%B9%89%E0%B8%B2%E0%B8%A1%E0%B8%9E%E0%B8%A5%E0%B8%B2%E0%B8%94",
+    "direct_listing_evidence": "Page BCV07-0001 identifies the project, rent ฿15,000/month, structured 1 bedroom, floor 6, 83 sqm, and explicitly says already rented.",
+    "project_match": "Exact English and Thai project name plus listing code BCV07-0001.",
+    "conflict": "The descriptive paragraph says 'combined room' and 2 bathrooms, while the structured listing facts show 1 bedroom and 1 bathroom. Only bedroom count is retained; bathroom details are excluded."
+  }
+}
