@@ -1,0 +1,38 @@
+{
+  "hipflatId": 3122,
+  "projectName": "Belgravia Ratchada 17",
+  "checkedAt": "2026-10-19",
+  "sale": {
+    "status": "no_matched_listings",
+    "activeListingCount": 0,
+    "projectSourceUrl": "https://propertyhub.in.th/en/condo-for-sale/project-the-belgravia-ratchada-17",
+    "verifiedAt": "2026-10-19"
+  },
+  "rent": {
+    "projectListingCount": 65,
+    "projectSourceUrl": "https://propertyhub.in.th/en/condo-for-rent/project-the-belgravia-ratchada-17",
+    "verifiedListingCount": 1,
+    "samples": [
+      {
+        "listingId": "6170172",
+        "bedrooms": 2,
+        "monthlyRentTHB": 18000,
+        "areaSqm": 34,
+        "rentTHBPerSqmMonth": 529.41,
+        "url": "https://propertyhub.in.th/en/listings/for-rent-belgavia-ratchada-17---6170172",
+        "listingStatus": "availability_unconfirmed_date_unknown"
+      }
+    ]
+  },
+  "coordinates": {
+    "status": "already_verified",
+    "sourceUrl": "https://propertyhub.in.th/en/projects/the-belgravia-ratchada-17"
+  },
+  "yieldEstimate": null,
+  "yieldReason": "No verified sale listing was found, so no purchase baseline or investment yield is calculated.",
+  "notes": [
+    "PropertyHub project sale page explicitly reports no matched properties for sale.",
+    "The selected rental detail confirms the exact project name, two bedrooms, 34 sqm, and ฿18,000 monthly rent. Its individual Last Update field is blank, so current availability needs confirmation.",
+    "A project page showed 65 rentals at the time checked; this count can change and is not used as a sample count."
+  ]
+}
