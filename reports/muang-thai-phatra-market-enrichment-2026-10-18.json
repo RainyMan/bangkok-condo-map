@@ -1,0 +1,76 @@
+{
+  "hipflatId": 3479,
+  "projectName": "Muang Thai - Phatra Complex",
+  "checkedAt": "2026-10-18",
+  "projectSourceUrl": "https://www.hipflat.co.th/en/projects/muang-thai-phatra-complex-hhgufs",
+  "coordinate": {
+    "lat": 13.78686855345889,
+    "lng": 100.57416101765932,
+    "sourceUrl": "https://propertyhub.in.th/en/projects/mueng-thai-patara-complex",
+    "status": "existing exact-project PropertyHub point retained; this batch adds no coordinate override"
+  },
+  "saleListing": {
+    "id": "LI-3129186",
+    "price": 5000000,
+    "area": 87.28,
+    "priceSqm": 57287,
+    "beds": 1,
+    "roomType": "1BR",
+    "title": "Muang Thai - Phatra Complex · 1 房 · 87.28 ㎡ · ฿5,000,000",
+    "url": "https://www.livinginsider.com/detail/condo-for-sale-muang-thai-phatra-complex-1bedroom-3129186",
+    "sourceName": "LivingInsider",
+    "projectName": "Muang Thai - Phatra Complex",
+    "updated": "2026-09-25",
+    "created": "2026-06-29",
+    "checkedAt": "2026-10-18",
+    "matchedBy": "exact project-name label and direct condo listing detail",
+    "listingStatus": "listed_recently_bumped_under_30d"
+  },
+  "saleListingEvidence": {
+    "projectPageUrl": "https://www.livinginsider.com/project/muang-thai-phatra-complex-condo-buysell",
+    "projectPageCount": 1,
+    "directDetailStates": "1 bedroom, 87.28 sqm, floor range 11-20, price ฿5,000,000 (฿57,287/sqm)",
+    "lastBumped": "2026-09-25",
+    "note": "The direct listing does not explicitly show an in-stock badge. Its project page and detail were accessible at the 2026-10-18 check; no 2-bedroom residential sale listing with a recent availability confirmation was found in this batch."
+  },
+  "rentListing": {
+    "id": "ZMY-V98839",
+    "price": 29000,
+    "area": 78,
+    "priceSqm": 372,
+    "beds": 1,
+    "roomType": "1BR",
+    "title": "Muang Thai - Phatra Complex · 1 房 · 78 ㎡ · ฿29,000/月",
+    "url": "https://zmyhome.com/property/V98839",
+    "sourceName": "ZmyHome",
+    "projectName": "Muang Thai - Phatra Complex",
+    "checkedAt": "2026-10-18",
+    "matchedBy": "direct owner listing names the exact Muangthai-Phatra Complex Condominium project",
+    "listingStatus": "availability_unconfirmed_date_unknown"
+  },
+  "rentListingEvidence": {
+    "directPageUrl": "https://zmyhome.com/property/V98839",
+    "directPageDetails": "1 bedroom, 78 sqm, floor 17, ฿29,000/month (฿371.79/sqm/month)",
+    "availability": "The listing source showed InStock in its structured page data when directly checked; the search index last crawled it about two weeks before this audit, so availability is conservatively flagged unconfirmed in the app."
+  },
+  "existingTwoBedroomRentBaseline": {
+    "sourceUrl": "https://propertyhub.in.th/en/listings/t1429-condo-for-rent-muang-thai-phatra-complex-beautiful-room-fully-furnished-special-price---3812341",
+    "monthlyRentTHB": 25000,
+    "areaSqm": 90,
+    "bedrooms": 2,
+    "pricePerSqmMonthTHB": 278,
+    "note": "Retained from the existing PropertyHub data; two listings on the project page have identical unit price, area, bedroom count and floor and may be syndicated duplicates."
+  },
+  "yieldEstimate": {
+    "bedrooms": 1,
+    "purchasePriceTHB": 5000000,
+    "purchaseAreaSqm": 87.28,
+    "rentRateTHBPerSqmMonth": 371.79,
+    "estimatedMonthlyRentTHB": 32450,
+    "annualRentAfterOneAgentMonthTHB": 356953,
+    "commonFeeDeducted": false,
+    "netAnnualYieldPercentBeforeCommonFee": 7.14,
+    "formula": "((29000 / 78) * 87.28 * 11) / 5000000 * 100",
+    "note": "Indicative 1-bedroom cross-listing estimate; management fee is not verified. The default 2-bedroom yield remains unavailable because this batch found no recent, checkable 2-bedroom sale listing."
+  }
+}
