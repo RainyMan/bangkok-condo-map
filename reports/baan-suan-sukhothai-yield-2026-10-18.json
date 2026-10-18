@@ -1,0 +1,52 @@
+{
+  "hipflatId": 3460,
+  "projectName": "Baan Suan Sukhothai",
+  "checkedAt": "2026-10-18",
+  "projectSourceUrl": "https://www.hipflat.co.th/en/projects/baan-suan-sukhothai-mdigyz",
+  "rentListing": {
+    "id": "500301121",
+    "price": 18000,
+    "area": 44,
+    "priceSqm": 409.09,
+    "beds": 1,
+    "roomType": "1BR",
+    "title": "Baan Suan Sukhothai，1 房，44 ㎡，4 樓，฿18,000/月",
+    "url": "https://www.ddproperty.com/property/baan-suan-sukhothai-%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%B8%E0%B9%82%E0%B8%82%E0%B8%97%E0%B8%B1%E0%B8%A2-%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E-%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2-500301121",
+    "sourceName": "DDproperty",
+    "projectName": "Baan Suan Sukhothai",
+    "updated": "2026-09-30",
+    "checkedAt": "2026-10-18",
+    "matchedBy": "DDproperty direct listing names Baan Suan Sukhothai, one bedroom, 44 sqm, floor 4, building 4, and THB 18,000/month",
+    "listingStatus": "active_as_listed"
+  },
+  "saleListing": {
+    "priceTHB": 5500000,
+    "areaSqm": 67,
+    "bedrooms": 2,
+    "sourceUrl": "https://propertyhub.in.th/en/listings/2-br-condo-at-baan-suan-sukhothai-near-mrt-bang-phlat-id-2240593---5889375",
+    "updated": "2026-10-16"
+  },
+  "yieldEstimate": {
+    "calculation": "((18,000 / 44 sqm) × 67 sqm × 11 months) / 5,500,000 × 100",
+    "purchasePriceTHB": 5500000,
+    "purchaseAreaSqm": 67,
+    "rentSampleBedroomCount": 1,
+    "rentRateTHBPerSqmMonth": 409.09,
+    "estimatedMonthlyRentTHB": 27409,
+    "deductAgentMonths": 1,
+    "annualRentAfterAgentTHB": 301499,
+    "commonFeeTHBPerSqmMonthly": null,
+    "annualCommonFeeDeductedTHB": 0,
+    "netAnnualYieldPercent": 5.48
+  },
+  "notes": [
+    "DDproperty direct listing was published 2026-09-30 and checked 2026-10-18; it identifies Baan Suan Sukhothai, one bedroom, 44 sqm, floor 4, and rent of THB 18,000 per month.",
+    "The lowest linked two-bedroom sale listing is THB 5,500,000 for 67 sqm, refreshed 2026-10-16.",
+    "No two-bedroom rent sample or verifiable common-fee amount was found. The interface will label the rent-rate fallback as one-bedroom and deducts one agent month by default. Yield is 5.48% before common fee."
+  ],
+  "sources": {
+    "HipflatProject": "https://www.hipflat.co.th/en/projects/baan-suan-sukhothai-mdigyz",
+    "DDpropertyRent": "https://www.ddproperty.com/property/baan-suan-sukhothai-%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%B8%E0%B9%82%E0%B8%82%E0%B8%97%E0%B8%B1%E0%B8%A2-%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E-%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2-500301121",
+    "PropertyHubSale": "https://propertyhub.in.th/en/listings/2-br-condo-at-baan-suan-sukhothai-near-mrt-bang-phlat-id-2240593---5889375"
+  }
+}

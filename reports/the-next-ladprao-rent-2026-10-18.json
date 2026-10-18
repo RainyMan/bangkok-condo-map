@@ -1,0 +1,52 @@
+{
+  "hipflatId": 3472,
+  "projectName": "The Next Ladprao",
+  "checkedAt": "2026-10-18",
+  "projectSourceUrl": "https://www.hipflat.co.th/en/projects/the-next-ladprao-ucclbd",
+  "rentListing": {
+    "id": "U1635652",
+    "price": 12000,
+    "area": 46,
+    "priceSqm": 260.87,
+    "beds": 1,
+    "roomType": "1BR",
+    "title": "The Next Ladprao，1 房，46 ㎡，3 樓，฿12,000/月",
+    "url": "https://www.hipflat.co.th/en/ads/ul0h4t8h83uahu3001n0n2tu3u0he3he",
+    "sourceName": "Hipflat",
+    "projectName": "The Next Ladprao",
+    "updated": "2026-10-18",
+    "checkedAt": "2026-10-18",
+    "matchedBy": "Hipflat exact project page links to this unit; direct unit page names The Next Ladprao",
+    "listingStatus": "active_as_listed"
+  },
+  "rentSourceEvidence": {
+    "priceTHBMonthly": 12000,
+    "areaSqm": 46,
+    "bedrooms": 1,
+    "floor": 3,
+    "listed": "2026-02-12",
+    "lastUpdatedAtCheck": "1 hour ago",
+    "pageStatesAvailableForRent": true
+  },
+  "saleListing": {
+    "priceTHB": 3699000,
+    "areaSqm": 66,
+    "bedrooms": 2,
+    "sourceUrl": "https://propertyhub.in.th/en/listings/for-sale-the-next-ladprao-44-large-2-bedroom-condo-next-to-mrt-phawana-special-price---5972290"
+  },
+  "yieldEstimate": {
+    "calculation": "((monthly rent estimate × 11 months) − annual common fee) / lowest 2BR purchase total",
+    "rentRateSource": "1BR rent sample scaled to the 2BR sale listing's 66 sqm area because no 2BR rental is shown",
+    "estimatedMonthlyRentTHB": 17217,
+    "commonFeeTHBPerSqmMonthly": 30,
+    "deductAgentMonths": 1,
+    "annualRentAfterAgentTHB": 189387,
+    "annualCommonFeeTHB": 23760,
+    "netAnnualYieldPercent": 4.48
+  },
+  "notes": [
+    "Hipflat project page links to the direct rental unit page. The unit page identifies The Next Ladprao, 1 bedroom, 46 sqm, floor 3, ฿12,000/month, listed 2026-02-12 and updated one hour before the 2026-10-18 check.",
+    "The default investment estimate uses the lowest linked 2-bedroom PropertyHub sale listing at ฿3,699,000 for 66 sqm. The direct sale detail independently confirms 2 bedrooms, 66 sqm, and the same total.",
+    "No 2-bedroom rental is published on the checked Hipflat project page. The app therefore labels the ROI rent as a 1-bedroom per-sqm rate scaled to the 2-bedroom sale unit's area. Defaults deduct one agent month and the PropertyHub-published indicative common fee of ฿30/sqm/month."
+  ]
+}
