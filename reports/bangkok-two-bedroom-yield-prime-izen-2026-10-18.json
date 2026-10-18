@@ -1,0 +1,40 @@
+{
+  "checkedAt": "2026-10-18",
+  "hipflatId": 3085,
+  "project": "Prime I-Zen Condo Ladprao 71",
+  "coordinates": {
+    "lat": 13.799393,
+    "lng": 100.606006,
+    "verified": true,
+    "source": "https://propertyhub.in.th/en/projects/prime-i-zen-condo-ladprao-71"
+  },
+  "sale": {
+    "bedrooms": 2,
+    "selection": "lowest verified total asking price among two-bedroom listings",
+    "priceTHB": 2800000,
+    "areaSqm": 53,
+    "pricePerSqmTHB": 52830,
+    "source": "https://propertyhub.in.th/en/listings/a010277-prime-i-zen-condo-ladprao-71---6158951",
+    "updatedAt": "2026-10-16"
+  },
+  "rent": {
+    "bedrooms": 2,
+    "monthlyRentTHB": 25000,
+    "areaSqm": 100,
+    "rentPerSqmTHBMonthly": 250,
+    "source": "https://www.fazwaz.co.th/en/property-rent/2-bedroom-condo-for-rent-at-prime-i-zen-condo-ladprao-71-in-lat-phrao-bangkok-u1980742",
+    "availability": "future",
+    "availableFrom": "2027-05-01",
+    "listingUpdated": "2026-09"
+  },
+  "yield": {
+    "modeledMonthlyRentTHB": 13250,
+    "agentMonthsDeducted": 1,
+    "managementFeeTHBPerSqmMonthly": null,
+    "managementFeeDeducted": false,
+    "netAnnualYieldPercent": 5.21,
+    "formula": "(modeled monthly rent * 11 - annual management fee when verified) / lowest two-bedroom sale total * 100",
+    "calculation": "(13250 * 11) / 2800000 * 100",
+    "note": "Management fee is unverified and excluded. Rental listing states availability from 2027-05-01."
+  }
+}
