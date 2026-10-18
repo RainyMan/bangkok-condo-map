@@ -1,0 +1,42 @@
+{
+  "hipflatId": 3679,
+  "projectName": "Lucky Star Condo",
+  "checkedAt": "2026-10-18",
+  "projectPage": "https://www.hipflat.co.th/projects/lucky-star-condo-cixvtd",
+  "listing": {
+    "id": "U1970420",
+    "price": 4363,
+    "area": 30,
+    "priceSqm": 145,
+    "beds": 1,
+    "roomType": "1BR",
+    "title": "Lucky Star Condo · 1 房 · 30 ㎡ · ฿4,363/月",
+    "url": "https://www.hipflat.co.th/ads/9en8tua18t00la4u2aa7n9h03u0h14a3",
+    "sourceName": "Hipflat",
+    "projectName": "Lucky Star Condo",
+    "updated": "2026-10-18 (頁面顯示 16 小時前更新)",
+    "checkedAt": "2026-10-18",
+    "matchedBy": "Exact Hipflat project name, unit address and unit ID U1970420",
+    "availability": "Direct listing shows ฿4,363/month, 1 bedroom, 30 sqm, and unit ID U1970420; page was refreshed 16 hours before the check.",
+    "listingStatus": "active_as_listed"
+  },
+  "details": {
+    "bedrooms": 1,
+    "areaSqm": 30,
+    "monthlyRentTHB": 4363,
+    "rentTHBPerSqmMonthExact": 145.43333333333334,
+    "pageUpdated": "16 hours before check"
+  },
+  "crossCheck": {
+    "coordinateProjectPage": "https://propertyhub.in.th/en/projects/lucky-star-condo",
+    "coordinateFinding": "PropertyHub project detail matches the exact Lucky Star Condo at 240/85 Soi Ratchadaphisek 36, Yaek 19-8."
+  },
+  "oneBedroomYieldInput": {
+    "monthlyRentTHBPerSqm": 145.43333333333334,
+    "purchasePriceTHB": 920000,
+    "purchaseAreaSqm": 28,
+    "estimatedMonthlyRentTHB": 4072.133333333333,
+    "grossAnnualYieldPercent": 5.311478260869565
+  },
+  "yieldNote": "The rent sample is 1 bedroom and is paired only with the lowest 1-bedroom sale estimate; no 2-bedroom rent sample was found for this project."
+}
