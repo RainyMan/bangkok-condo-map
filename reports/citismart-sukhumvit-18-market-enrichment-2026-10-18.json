@@ -1,0 +1,64 @@
+{
+  "checkedAt": "2026-10-18",
+  "project": {
+    "hipflatId": 4158,
+    "name": "CitiSmart Sukhumvit 18",
+    "coordinate": [
+      13.735018,
+      100.562226
+    ],
+    "coordinateSource": "https://propertyscout.co.th/en/bangkok/condo/citi-smart-sukhumvit-18/",
+    "completedYear": 2005,
+    "completedYearSource": "https://propertyhub.in.th/en/condo-for-rent/project-citi-smart-sukhumvit-18"
+  },
+  "saleListing": {
+    "id": "6065846",
+    "price": 10000000,
+    "area": 75,
+    "priceSqm": 133333,
+    "beds": 2,
+    "roomType": "2BR",
+    "title": "A036282 CitiSmart Sukhumvit 18，2 房，75 ㎡，฿10,000,000",
+    "url": "https://propertyhub.in.th/en/listings/a036282-citismart-sukhumvit-18---6065846",
+    "sourceName": "PropertyHub",
+    "projectName": "CitiSmart Sukhumvit 18",
+    "checkedAt": "2026-10-18",
+    "updated": "2026-10-17",
+    "matchedBy": "exact_project_name_listing_id_bedrooms_area_and_current_project_inventory",
+    "listingStatus": "availability_unconfirmed_update_under_30d"
+  },
+  "rentalListing": {
+    "id": "3932325",
+    "price": 35000,
+    "area": 75,
+    "priceSqm": 467,
+    "beds": 2,
+    "roomType": "2BR",
+    "title": "Citi Smart Sukhumvit 18 CX-83519，2 房，75 ㎡，฿35,000/月",
+    "url": "https://propertyhub.in.th/en/listings/for-rent-condo-citi-smart-sukhumvit-18-bts-asok-khlong-toei-khlong-toei-bangkok-cx-83519-live-chat-with-us-add-line-connexproperty--aa270910---3932325",
+    "sourceName": "PropertyHub",
+    "projectName": "CitiSmart Sukhumvit 18",
+    "checkedAt": "2026-10-18",
+    "updated": "2026-10-18",
+    "matchedBy": "exact_project_name_listing_id_bedrooms_area_and_same_day_listing_update",
+    "listingStatus": "availability_unconfirmed_update_under_30d"
+  },
+  "twoBedroomYieldEstimate": {
+    "purchasePrice": 10000000,
+    "purchaseAreaSqm": 75,
+    "saleSource": "https://propertyhub.in.th/en/listings/a036282-citismart-sukhumvit-18---6065846",
+    "monthlyRentPerSqm": 466.6666666666667,
+    "estimatedMonthlyRentAtSaleArea": 35000,
+    "rentSource": "https://propertyhub.in.th/en/listings/for-rent-condo-citi-smart-sukhumvit-18-bts-asok-khlong-toei-khlong-toei-bangkok-cx-83519-live-chat-with-us-add-line-connexproperty--aa270910---3932325",
+    "agentMonthsDeducted": 1,
+    "commonFeeDeducted": false,
+    "netYieldPercent": 3.85,
+    "formula": "(2BR rent per sqm × lowest linked 2BR sale area × 11) ÷ lowest linked 2BR sale total × 100",
+    "note": "The observed sale price/area are one linked two-bedroom unit; rent is also a same-bedroom direct listing. No verified common fee is available, so it is not deducted."
+  },
+  "limitations": [
+    "The 10M sale listing was refreshed in the PropertyHub project inventory on 2026-10-17; its unit detail page does not expose a separate last-update date, so current availability still needs confirmation.",
+    "The 35,000/month rent listing page reports an update on 2026-10-18.",
+    "PropertyHub listing availability does not independently confirm the unit remains available for sale or rent."
+  ]
+}
