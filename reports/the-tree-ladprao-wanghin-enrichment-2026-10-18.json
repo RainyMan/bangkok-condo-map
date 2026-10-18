@@ -1,0 +1,44 @@
+{
+  "hipflatId": 3348,
+  "project": "The Tree Ladprao-Wanghin",
+  "checkedAt": "2026-10-18",
+  "hipflatProjectUrl": "https://www.hipflat.co.th/en/projects/the-tree-ladprao-wanghin-48h3t19c1tenunuttn20hn7hu0ch9l9h",
+  "coordinate": {
+    "hipflatId": 3348,
+    "name": "The Tree Ladprao-Wanghin",
+    "lat": 13.8044875,
+    "lng": 100.590640625,
+    "locationVerified": true,
+    "sourceName": "PropertyHub 出租物件所附 Google Maps 專案點位（Plus Code）",
+    "sourceUrl": "https://maps.app.goo.gl/Ukqb7WU2FgiJ3EG39?g_st=com.google.maps.preview.copy",
+    "verificationSourceUrl": "https://www.hipflat.co.th/en/projects/the-tree-ladprao-wanghin-48h3t19c1tenunuttn20hn7hu0ch9l9h",
+    "corroborationSourceUrl": "https://propertyhub.in.th/listings/r3399-%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2-the-tree-ladprao-wanghin---5035047",
+    "verificationMethod": "google_maps_place_name_and_plus_code_at_lat_phrao_wang_hin_12_crosschecked_with_exact_hipflat_project_street_address",
+    "asOf": "2026-10-18"
+  },
+  "sale": {
+    "price": 1350000,
+    "areaSqm": 28.0,
+    "priceSqm": 48214,
+    "bedrooms": 1,
+    "url": "https://propertyhub.in.th/en/listings/a033228-the-tree-ladprao-ladprao-wang-hin--b2cc0996---6003543"
+  },
+  "rent": {
+    "monthlyRent": 13500,
+    "areaSqm": 58.22,
+    "rentSqm": 232,
+    "bedrooms": 1,
+    "url": "https://propertyhub.in.th/listings/r3399-%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2-the-tree-ladprao-wanghin---5035047"
+  },
+  "yieldEstimate": {
+    "bedrooms": 1,
+    "salePrice": 1350000,
+    "saleAreaSqm": 28.0,
+    "rentPerSqm": 232,
+    "estimatedMonthlyRentOnSaleArea": 6496,
+    "annualRentWithOneAgentMonthDeducted": 71456,
+    "yieldBeforeCommonFee": 5.29,
+    "managementFee": "unverified; not deducted"
+  },
+  "sourceIdentityNote": "The PropertyHub project page's long description mentions a conflicting Lat Phrao 15 address, but its project inventory (334 units, 2 buildings), Lat Phrao Wang Hin nearby-area records, the R3399 direct listing's exact Google Maps point, and the Hipflat 129/2 Lat Phrao Wang Hin 12 project address align with this Wanghin project. Broader PropertyHub project aggregates are excluded; only the two direct listings are used."
+}
