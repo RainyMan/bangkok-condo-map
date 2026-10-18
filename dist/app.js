@@ -201,12 +201,10 @@
       }
     });
     const roomOptions = Object.entries(saleRooms).filter(([, row]) => Number(row.minimum || row.average) > 0);
-    const lowestRoom = roomOptions.sort((a, b) => Number(a[1].minimum || a[1].average) - Number(b[1].minimum || b[1].average))[0];
-    const defaultRoom = saleRooms['2']
-      ? '2' : lowestRoom?.[0] || null;
+    const defaultRoom = saleRooms['2'] ? '2' : null;
     // An explicit room choice must never silently fall back to another room type.
     const chosenBeds = beds ? (saleRooms[String(beds)] ? String(beds) : null) : defaultRoom;
-    if (beds && !chosenBeds) return { price: 0, area: 0, rent: 0, beds: String(beds), isRoomStart: false, isRoomAverage: false, saleSourceUrl: null, rentSourceUrl: null, roomOptions };
+    if ((beds && !chosenBeds) || (!beds && !chosenBeds)) return { price: 0, area: 0, rent: 0, beds: beds ? String(beds) : null, isRoomStart: false, isRoomAverage: false, saleSourceUrl: null, rentSourceUrl: null, roomOptions };
     const room = chosenBeds ? saleRooms[chosenBeds] : null;
     const roomListings = chosenBeds ? saleSamples.filter(sample => bedroomCountForSample(sample) === Number(chosenBeds) && Number(sample.price) > 0 && Number(sample.area) > 0 && sample.url) : [];
     // Use the lowest verified total price for the selected bedroom count.
@@ -291,20 +289,18 @@
   // Recompute generated baselines against the lowest linked two-bedroom sale
   // and keep its area paired with that same listing. User-edited values that
   // do not match an old generated baseline remain intact.
-  const yieldStorageKey = 'bangkokCondoYieldInputsV42';
+  const yieldStorageKey = 'bangkokCondoYieldInputsV43';
   const loadYieldInputs = () => {
     try {
       const current = localStorage.getItem(yieldStorageKey);
       if (current) return JSON.parse(current);
-      const previous = JSON.parse(localStorage.getItem('bangkokCondoYieldInputsV41') || localStorage.getItem('bangkokCondoYieldInputsV40') || localStorage.getItem('bangkokCondoYieldInputsV39') || localStorage.getItem('bangkokCondoYieldInputsV38') || localStorage.getItem('bangkokCondoYieldInputsV37') || localStorage.getItem('bangkokCondoYieldInputsV36') || localStorage.getItem('bangkokCondoYieldInputsV35') || localStorage.getItem('bangkokCondoYieldInputsV34') || localStorage.getItem('bangkokCondoYieldInputsV33') || localStorage.getItem('bangkokCondoYieldInputsV32') || localStorage.getItem('bangkokCondoYieldInputsV31') || localStorage.getItem('bangkokCondoYieldInputsV30') || localStorage.getItem('bangkokCondoYieldInputsV29') || localStorage.getItem('bangkokCondoYieldInputsV28') || localStorage.getItem('bangkokCondoYieldInputsV27') || localStorage.getItem('bangkokCondoYieldInputsV26') || localStorage.getItem('bangkokCondoYieldInputsV25') || localStorage.getItem('bangkokCondoYieldInputsV24') || localStorage.getItem('bangkokCondoYieldInputsV23') || localStorage.getItem('bangkokCondoYieldInputsV22') || localStorage.getItem('bangkokCondoYieldInputsV21') || localStorage.getItem('bangkokCondoYieldInputsV20') || localStorage.getItem('bangkokCondoYieldInputsV19') || localStorage.getItem('bangkokCondoYieldInputsV18') || localStorage.getItem('bangkokCondoYieldInputsV17') || localStorage.getItem('bangkokCondoYieldInputsV16') || localStorage.getItem('bangkokCondoYieldInputsV15') || localStorage.getItem('bangkokCondoYieldInputsV14') || localStorage.getItem('bangkokCondoYieldInputsV13') || localStorage.getItem('bangkokCondoYieldInputsV12') || localStorage.getItem('bangkokCondoYieldInputsV11') || localStorage.getItem('bangkokCondoYieldInputsV10') || localStorage.getItem('bangkokCondoYieldInputsV9') || localStorage.getItem('bangkokCondoYieldInputsV8') || localStorage.getItem('bangkokCondoYieldInputsV7') || localStorage.getItem('bangkokCondoYieldInputsV6') || localStorage.getItem('bangkokCondoYieldInputsV5') || '{}');
+      const previous = JSON.parse(localStorage.getItem('bangkokCondoYieldInputsV42') || localStorage.getItem('bangkokCondoYieldInputsV41') || localStorage.getItem('bangkokCondoYieldInputsV40') || localStorage.getItem('bangkokCondoYieldInputsV39') || localStorage.getItem('bangkokCondoYieldInputsV38') || localStorage.getItem('bangkokCondoYieldInputsV37') || localStorage.getItem('bangkokCondoYieldInputsV36') || localStorage.getItem('bangkokCondoYieldInputsV35') || localStorage.getItem('bangkokCondoYieldInputsV34') || localStorage.getItem('bangkokCondoYieldInputsV33') || localStorage.getItem('bangkokCondoYieldInputsV32') || localStorage.getItem('bangkokCondoYieldInputsV31') || localStorage.getItem('bangkokCondoYieldInputsV30') || localStorage.getItem('bangkokCondoYieldInputsV29') || localStorage.getItem('bangkokCondoYieldInputsV28') || localStorage.getItem('bangkokCondoYieldInputsV27') || localStorage.getItem('bangkokCondoYieldInputsV26') || localStorage.getItem('bangkokCondoYieldInputsV25') || localStorage.getItem('bangkokCondoYieldInputsV24') || localStorage.getItem('bangkokCondoYieldInputsV23') || localStorage.getItem('bangkokCondoYieldInputsV22') || localStorage.getItem('bangkokCondoYieldInputsV21') || localStorage.getItem('bangkokCondoYieldInputsV20') || localStorage.getItem('bangkokCondoYieldInputsV19') || localStorage.getItem('bangkokCondoYieldInputsV18') || localStorage.getItem('bangkokCondoYieldInputsV17') || localStorage.getItem('bangkokCondoYieldInputsV16') || localStorage.getItem('bangkokCondoYieldInputsV15') || localStorage.getItem('bangkokCondoYieldInputsV14') || localStorage.getItem('bangkokCondoYieldInputsV13') || localStorage.getItem('bangkokCondoYieldInputsV12') || localStorage.getItem('bangkokCondoYieldInputsV11') || localStorage.getItem('bangkokCondoYieldInputsV10') || localStorage.getItem('bangkokCondoYieldInputsV9') || localStorage.getItem('bangkokCondoYieldInputsV8') || localStorage.getItem('bangkokCondoYieldInputsV7') || localStorage.getItem('bangkokCondoYieldInputsV6') || localStorage.getItem('bangkokCondoYieldInputsV5') || '{}');
       const recalculated = {};
       condos.forEach(c => {
         const old = previous[c.id] || {};
         const previousBeds = String(old.beds || '2');
         const twoBedroomDefaults = yieldDefaultsFor(c, '2');
-        const defaults = Number(twoBedroomDefaults.price) > 0 && Number(twoBedroomDefaults.area) > 0
-          ? twoBedroomDefaults : yieldDefaultsFor(c);
-        if (!(Number(defaults.price) > 0) || !(Number(defaults.area) > 0) || !(Number(defaults.rent) > 0)) return;
+        const defaults = twoBedroomDefaults;
         const oldSaleRoom = c.sale?.byBedroom?.[previousBeds] || {};
         const oldRentRoom = c.rent?.byBedroom?.[previousBeds] || {};
         const saleCandidates = [
@@ -333,6 +329,10 @@
         const oldSaleMatchesGeneratedParts = knownSalePrices.includes(Number(old.price)) && knownSaleAreas.includes(Number(old.area));
         const oldRentMatches = rentRates.some(rate => Math.abs(Number(old.rent) - Math.round(rate * Number(old.area))) <= 1);
         const wasAutoBaseline = (oldSaleMatches || oldSaleMatchesGeneratedParts) && oldRentMatches;
+        if (!(Number(defaults.price) > 0) || !(Number(defaults.area) > 0) || !(Number(defaults.rent) > 0)) {
+          if (old.price > 0 && old.rent > 0 && old.area > 0 && !wasAutoBaseline) recalculated[c.id] = old;
+          return;
+        }
         const useRefreshedBaseline = !old.price || wasAutoBaseline;
         recalculated[c.id] = {
           price: useRefreshedBaseline ? defaults.price : Number(old.price),
