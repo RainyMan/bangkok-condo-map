@@ -1,0 +1,132 @@
+{
+  "hipflatId": 3443,
+  "project": "Nirund Residence 9 Udom Suk",
+  "checkedAt": "2026-10-18",
+  "coordinates": {
+    "hipflatId": 3443,
+    "name": "Nirund Residence 9 Udom Suk",
+    "lat": 13.67725,
+    "lng": 100.63569,
+    "locationVerified": true,
+    "sourceName": "ZmyHome 同專案房源 Google Maps 點位",
+    "sourceUrl": "https://zmyhome.com/property/V195616",
+    "verificationSourceUrl": "https://propertyhub.in.th/en/projects/niran-residence-9-udom-suk---14279",
+    "corroborationSourceUrl": "https://mapcarta.com/N4778503555",
+    "verificationMethod": "ZmyHome listing map pin lies within Niran Residence 9 Udom Suk; exact project name and Soi Udom Suk 56 address cross-checked against Hipflat and PropertyHub, and nearby OSM labels identify Niran Residence 9 Buildings A-D."
+  },
+  "sale": {
+    "count": 3,
+    "minimumTotal": 450000,
+    "minimumAreaSqm": 28.62,
+    "minimumPricePerSqm": 15723,
+    "minimumUrl": "https://propertyhub.in.th/listings/%E0%B8%82%E0%B8%B2%E0%B8%A2%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B8%99%E0%B8%B4%E0%B8%A3%E0%B8%B1%E0%B8%99%E0%B8%94%E0%B8%A3%E0%B9%8C-%E0%B9%80%E0%B8%A3%E0%B8%AA%E0%B8%8B%E0%B8%B4%E0%B9%80%E0%B8%94%E0%B8%99%E0%B8%8B%E0%B9%8C-9-%E0%B8%8B%E0%B8%AD%E0%B8%A2%E0%B8%AD%E0%B8%B8%E0%B8%94%E0%B8%A1%E0%B8%B8%E0%B8%82-56-%E0%B9%83%E0%B8%81%E0%B8%A5%E0%B9%89bts-%E0%B8%AD%E0%B8%B8%E0%B8%94%E0%B8%A1%E0%B8%B8%E0%B8%82-%E0%B9%80%E0%B8%8B%E0%B9%87%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%B1%E0%B8%A5%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%99%E0%B8%B2---6244436",
+    "lowestPricePerSqmUrl": "https://propertyhub.in.th/listings/%E0%B8%82%E0%B8%B2%E0%B8%A2%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B8%99%E0%B8%B4%E0%B8%A3%E0%B8%B1%E0%B8%99%E0%B8%94%E0%B8%A3%E0%B9%8C-%E0%B9%80%E0%B8%A3%E0%B8%AA%E0%B8%8B%E0%B8%B4%E0%B9%80%E0%B8%94%E0%B8%99%E0%B8%8B%E0%B9%8C-9-%E0%B8%8B%E0%B8%AD%E0%B8%A2%E0%B8%AD%E0%B8%B8%E0%B8%94%E0%B8%A1%E0%B8%B8%E0%B8%82-56-%E0%B9%83%E0%B8%81%E0%B8%A5%E0%B9%89bts-%E0%B8%AD%E0%B8%B8%E0%B8%94%E0%B8%A1%E0%B8%B8%E0%B8%82-%E0%B9%80%E0%B8%8B%E0%B9%87%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%B1%E0%B8%A5%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%99%E0%B8%B2---6244436",
+    "allSamples": [
+      {
+        "id": "6244436",
+        "price": 450000,
+        "area": 28.62,
+        "beds": 1,
+        "roomType": "1BR",
+        "updated": "2026-10-15",
+        "title": "Niran Residence 9 Udom Suk · 1 房 · 28.62 ㎡ · ฿450,000",
+        "url": "https://propertyhub.in.th/listings/%E0%B8%82%E0%B8%B2%E0%B8%A2%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B8%99%E0%B8%B4%E0%B8%A3%E0%B8%B1%E0%B8%99%E0%B8%94%E0%B8%A3%E0%B9%8C-%E0%B9%80%E0%B8%A3%E0%B8%AA%E0%B8%8B%E0%B8%B4%E0%B9%80%E0%B8%94%E0%B8%99%E0%B8%8B%E0%B9%8C-9-%E0%B8%8B%E0%B8%AD%E0%B8%A2%E0%B8%AD%E0%B8%B8%E0%B8%94%E0%B8%A1%E0%B8%B8%E0%B8%82-56-%E0%B9%83%E0%B8%81%E0%B8%A5%E0%B9%89bts-%E0%B8%AD%E0%B8%B8%E0%B8%94%E0%B8%A1%E0%B8%B8%E0%B8%82-%E0%B9%80%E0%B8%8B%E0%B9%87%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%B1%E0%B8%A5%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%99%E0%B8%B2---6244436",
+        "priceSqm": 15723,
+        "sourceName": "PropertyHub",
+        "projectName": "Nirund Residence 9 Udom Suk",
+        "checkedAt": "2026-10-18",
+        "matchedBy": "exact_project_name_and_Soi_Udom_Suk_56_address",
+        "listingStatus": "active_as_listed"
+      },
+      {
+        "id": "6245010",
+        "price": 550000,
+        "area": 28.76,
+        "beds": 1,
+        "roomType": "1BR",
+        "updated": "2026-10-15",
+        "title": "Niran Residence 9 Udom Suk · 1 房 · 28.76 ㎡ · ฿550,000",
+        "url": "https://propertyhub.in.th/listings/%E0%B8%82%E0%B8%B2%E0%B8%A2%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B8%99%E0%B8%B4%E0%B8%A3%E0%B8%B1%E0%B8%99%E0%B8%94%E0%B8%A3%E0%B9%8C-%E0%B9%80%E0%B8%A3%E0%B8%AA%E0%B8%8B%E0%B8%B4%E0%B9%80%E0%B8%94%E0%B8%99%E0%B8%8B%E0%B9%8C-9-%E0%B8%8B-%E0%B8%AD%E0%B8%B8%E0%B8%94%E0%B8%A1%E0%B8%B8%E0%B8%82-56-%E0%B9%83%E0%B8%81%E0%B8%A5%E0%B9%89bts-%E0%B8%AD%E0%B8%B8%E0%B8%94%E0%B8%A1%E0%B8%B8%E0%B8%82%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%99%E0%B8%B2-28-76-%E0%B8%95%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%87%E0%B9%80%E0%B8%A1%E0%B8%95%E0%B8%A3---6245010",
+        "priceSqm": 19124,
+        "sourceName": "PropertyHub",
+        "projectName": "Nirund Residence 9 Udom Suk",
+        "checkedAt": "2026-10-18",
+        "matchedBy": "exact_project_name_and_Soi_Udom_Suk_56_address",
+        "listingStatus": "active_as_listed"
+      },
+      {
+        "id": "6245214",
+        "price": 550000,
+        "area": 28.35,
+        "beds": 1,
+        "roomType": "1BR",
+        "updated": "2026-10-15",
+        "title": "Niran Residence 9 Udom Suk · 1 房 · 28.35 ㎡ · ฿550,000",
+        "url": "https://propertyhub.in.th/listings/%E0%B8%82%E0%B8%B2%E0%B8%A2%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B8%99%E0%B8%B4%E0%B8%A3%E0%B8%B1%E0%B8%99%E0%B8%94%E0%B8%A3%E0%B9%8C-%E0%B9%80%E0%B8%A3%E0%B8%AA%E0%B8%8B%E0%B8%B4%E0%B9%80%E0%B8%94%E0%B8%99%E0%B8%8B%E0%B9%8C-9-%E0%B8%8B%E0%B8%AD%E0%B8%A2%E0%B8%AD%E0%B8%B8%E0%B8%94%E0%B8%A1%E0%B8%B8%E0%B8%82-56-%E0%B9%83%E0%B8%81%E0%B8%A5%E0%B9%89bts-%E0%B8%AD%E0%B8%B8%E0%B8%94%E0%B8%A1%E0%B8%B8%E0%B8%82-%E0%B9%80%E0%B8%8B%E0%B9%87%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%B1%E0%B8%A5%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%99%E0%B8%B2-28-35-%E0%B8%95%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%87%E0%B9%80%E0%B8%A1%E0%B8%95%E0%B8%A3---6245214",
+        "priceSqm": 19400,
+        "sourceName": "PropertyHub",
+        "projectName": "Nirund Residence 9 Udom Suk",
+        "checkedAt": "2026-10-18",
+        "matchedBy": "exact_project_name_and_Soi_Udom_Suk_56_address",
+        "listingStatus": "active_as_listed"
+      }
+    ]
+  },
+  "rent": {
+    "count": 2,
+    "minimumTotal": 4000,
+    "minimumAreaSqm": 25,
+    "minimumPricePerSqm": 160,
+    "lowestPricePerSqmUrl": "https://propertyhub.in.th/en/listings/condo-for-rent-at-niran9-udom-suk-56-studio-room-fully-furnished-only-thb-4-000-month-near-bts-udom-suk-government-electricity-rate---6147443",
+    "allSamples": [
+      {
+        "id": "6291556",
+        "price": 4900,
+        "area": 30,
+        "beds": 1,
+        "roomType": "1BR",
+        "updated": "2026-10-04",
+        "title": "Niran Residence 9 Udom Suk · 1 房 · 30 ㎡ · ฿4,900/月",
+        "url": "https://propertyhub.in.th/listings/ให้เช่า-คอนโด-อุดมสุข-56-ห้องใหญ่-31-ตร-ม-แต่งครบ-พร้อมเข้าอยู่-เพียง-4900-บ-เดือน---6291556",
+        "priceSqm": 163,
+        "sourceName": "PropertyHub",
+        "projectName": "Nirund Residence 9 Udom Suk",
+        "checkedAt": "2026-10-18",
+        "matchedBy": "PropertyHub_listing_project_name_Niran_Residence_9_and_Udom_Suk_56_address",
+        "listingStatus": "active_as_listed"
+      },
+      {
+        "id": "6147443",
+        "price": 4000,
+        "area": 25,
+        "beds": 0,
+        "roomType": "Studio",
+        "updated": "2026-10-04",
+        "title": "Niran Residence 9 Udom Suk · Studio · 25 ㎡ · ฿4,000/月",
+        "url": "https://propertyhub.in.th/en/listings/condo-for-rent-at-niran9-udom-suk-56-studio-room-fully-furnished-only-thb-4-000-month-near-bts-udom-suk-government-electricity-rate---6147443",
+        "priceSqm": 160,
+        "sourceName": "PropertyHub",
+        "projectName": "Nirund Residence 9 Udom Suk",
+        "checkedAt": "2026-10-18",
+        "matchedBy": "PropertyHub_listing_project_name_Niran_Residence_9_and_Udom_Suk_56_address",
+        "listingStatus": "active_as_listed"
+      }
+    ]
+  },
+  "roiEstimate": {
+    "bedrooms": 1,
+    "purchasePriceThb": 450000,
+    "purchaseAreaSqm": 28.62,
+    "rentRateThbPerSqmMonth": 163.33,
+    "estimatedMonthlyRentThb": 4675,
+    "annualRentAfterOneAgentMonthThb": 51421,
+    "annualCommonFeeDeductedThb": 0,
+    "yieldBeforeUnknownCommonFeePercent": 11.43,
+    "sourceUrl": "https://propertyhub.in.th/listings/%E0%B8%82%E0%B8%B2%E0%B8%A2%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B8%99%E0%B8%B4%E0%B8%A3%E0%B8%B1%E0%B8%99%E0%B8%94%E0%B8%A3%E0%B9%8C-%E0%B9%80%E0%B8%A3%E0%B8%AA%E0%B8%8B%E0%B8%B4%E0%B9%80%E0%B8%94%E0%B8%99%E0%B8%8B%E0%B9%8C-9-%E0%B8%8B%E0%B8%AD%E0%B8%A2%E0%B8%AD%E0%B8%B8%E0%B8%94%E0%B8%A1%E0%B8%B8%E0%B8%82-56-%E0%B9%83%E0%B8%81%E0%B8%A5%E0%B9%89bts-%E0%B8%AD%E0%B8%B8%E0%B8%94%E0%B8%A1%E0%B8%B8%E0%B8%82-%E0%B9%80%E0%B8%8B%E0%B9%87%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%B1%E0%B8%A5%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%99%E0%B8%B2---6244436",
+    "rentSourceUrl": "https://propertyhub.in.th/listings/ให้เช่า-คอนโด-อุดมสุข-56-ห้องใหญ่-31-ตร-ม-แต่งครบ-พร้อมเข้าอยู่-เพียง-4900-บ-เดือน---6291556",
+    "note": "No verified fee per square metre; common fee excluded. Sale listing is over 30 days old and availability needs reconfirmation."
+  },
+  "completionYear": 1997,
+  "completionYearSource": "https://www.hipflat.co.th/en/projects/nirund-residence-9-udom-suk-uflewq",
+  "fee": "not verified"
+}
