@@ -1,0 +1,38 @@
+{
+  "hipflatId": 3224,
+  "projectName": "Ratdamnoen Condominium",
+  "checkedAt": "2026-10-18",
+  "listing": {
+    "id": "U1670124",
+    "price": 15000,
+    "area": 92,
+    "priceSqm": 163,
+    "beds": 2,
+    "roomType": "2BR",
+    "title": "Ratdamnoen Condominium · 2 房 · 92 ㎡ · ฿15,000/月 · 超過一年未更新",
+    "url": "https://www.fazwaz.com/property-rent/2-bedroom-condo-for-rent-at-ratdamnoen-condominium-in-wat-sommanat-bangkok-u1670124",
+    "sourceName": "FazWaz",
+    "projectName": "Ratdamnoen Condominium",
+    "checkedAt": "2026-10-18",
+    "matchedBy": "Exact project name, address district, and unit ID U1670124",
+    "availability": "The direct unit page lists this as rent ฿15,000/month, but says updated over one year ago; current availability is unconfirmed.",
+    "listingStatus": "availability_unconfirmed_stale_over_year"
+  },
+  "details": {
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "floor": 7,
+    "areaSqm": 92,
+    "monthlyRentTHB": 15000,
+    "rentTHBPerSqmMonthExact": 163.04347826086956,
+    "listedOn": "2023-09-20",
+    "updated": "over one year ago, exact date not given",
+    "availability": "unconfirmed due to stale listing",
+    "sourcePage": "https://www.fazwaz.com/property-rent/2-bedroom-condo-for-rent-at-ratdamnoen-condominium-in-wat-sommanat-bangkok-u1670124"
+  },
+  "crossCheck": {
+    "source": "https://www.thailand-property.com/condo/3696/ratdamnoen-condominium",
+    "finding": "The project page reports three current rental units from ฿15,000 to ฿25,000 and completion in 1984; the direct unit detail is used for exact unit attributes."
+  },
+  "yieldNote": "This is a two-bedroom rental sample. The rate is useful for a same-bedroom estimate, but availability is unconfirmed because the unit page has not been updated in over a year."
+}
