@@ -1,0 +1,32 @@
+{
+  "hipflatId": 3182,
+  "project": "Arrow Place",
+  "checkedAt": "2026-10-18",
+  "coordinates": {
+    "lat": 13.91247312,
+    "lng": 100.582138,
+    "sourceUrl": "https://thinkofliving.com/project/%E0%B9%81%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B9%82%E0%B8%A3-%E0%B9%80%E0%B8%9E%E0%B8%A5%E0%B8%AA-10028/",
+    "crossCheckUrl": "https://www.hipflat.co.th/en/projects/arrow-place-xiyzra",
+    "verified": true
+  },
+  "sale": {
+    "id": "U5735529",
+    "price": 1000000,
+    "area": 43,
+    "priceSqm": 23256,
+    "beds": 0,
+    "roomType": "STUDIO",
+    "title": "Arrow Place studio · 43 sqm · THB 1,000,000",
+    "url": "https://www.hipflat.co.th/en/ads/271c0tth8ae4neaut813tc1t3u0h14u9",
+    "sourceName": "Hipflat",
+    "projectName": "Arrow Place",
+    "updated": "2026-10-18",
+    "checkedAt": "2026-10-18",
+    "matchedBy": "Hipflat exact project page links the unit; unit page names Arrow Place",
+    "listingStatus": "active_as_listed"
+  },
+  "rent": {
+    "status": "No rental listings shown on the checked Hipflat project page; no rent or yield imputed.",
+    "sourceUrl": "https://www.hipflat.co.th/en/projects/arrow-place-xiyzra"
+  }
+}
