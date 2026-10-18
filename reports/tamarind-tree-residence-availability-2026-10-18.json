@@ -1,0 +1,32 @@
+{
+  "hipflatId": 3171,
+  "project": "Tamarind Tree Residence",
+  "checkedAt": "2026-10-18",
+  "projectSource": "https://www.hipflat.co.th/en/projects/tamarind-tree-residence-jprzey",
+  "projectPageEvidence": "The exact Hipflat project page states: currently no properties available in Tamarind Tree Residence.",
+  "marketAvailability": {
+    "sale": {
+      "status": "no_current_matching_listing",
+      "currentSampleCount": 0,
+      "source": "https://www.hipflat.co.th/en/projects/tamarind-tree-residence-jprzey"
+    },
+    "rent": {
+      "status": "no_current_matching_listing",
+      "currentSampleCount": 0,
+      "source": "https://www.hipflat.co.th/en/projects/tamarind-tree-residence-jprzey"
+    }
+  },
+  "excludedHistoricalSource": {
+    "url": "https://8.condoable.com/ad_24827_%E0%B8%82%E0%B8%B2%E0%B8%A2%E0%B8%94%E0%B8%B2%E0%B8%A7%E0%B8%99%E0%B9%8C%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94%E0%B8%A1%E0%B8%B4%E0%B9%80%E0%B8%99%E0%B8%B5%E0%B8%A2%E0%B8%A1tamarindtreeresidence.htm",
+    "description": "Exact-project down-payment advertisement, about 13.4 years old; no current availability confirmed.",
+    "usedForCurrentMarketOrROI": false
+  },
+  "roi": {
+    "status": "not_calculable",
+    "reason": "No current, exact-project sale or rental listings were available on the source check date."
+  },
+  "coordinates": {
+    "status": "unverified",
+    "reason": "The available project page provides a soi-level address and does not expose an exact project pin; no coordinate added."
+  }
+}

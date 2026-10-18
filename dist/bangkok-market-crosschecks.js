@@ -285,5 +285,32 @@ window.BANGKOK_MARKET_CROSSCHECKS = [
         "statusLabel": "฿750,000 · 26㎡ · 1 房；2018-02 已售，不列現行行情或投報"
       }
     ]
+  },
+  {
+    "hipflatId": 3171,
+    "projectName": "Tamarind Tree Residence",
+    "asOf": "2026-10-18",
+    "sourceName": "Hipflat",
+    "projectSourceUrl": "https://www.hipflat.co.th/en/projects/tamarind-tree-residence-jprzey",
+    "sale": {
+      "activeListingCount": 0,
+      "sourceUrl": "https://www.hipflat.co.th/en/projects/tamarind-tree-residence-jprzey"
+    },
+    "rent": {
+      "activeListingCount": 0,
+      "sourceUrl": "https://www.hipflat.co.th/en/projects/tamarind-tree-residence-jprzey"
+    },
+    "availabilitySources": [
+      {
+        "sourceName": "Hipflat 專案頁",
+        "url": "https://www.hipflat.co.th/en/projects/tamarind-tree-residence-jprzey",
+        "statusLabel": "目前無出售或出租房源"
+      },
+      {
+        "sourceName": "Condoable 歷史出售訂金廣告",
+        "url": "https://8.condoable.com/ad_24827_%E0%B8%82%E0%B8%B2%E0%B8%A2%E0%B8%94%E0%B8%B2%E0%B8%A7%E0%B8%99%E0%B9%8C%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94%E0%B8%A1%E0%B8%B4%E0%B9%80%E0%B8%99%E0%B8%B5%E0%B8%A2%E0%B8%A1tamarindtreeresidence.htm",
+        "statusLabel": "約 13 年前刊登；日期及現況過舊，不作現行價格或投報依據"
+      }
+    ]
   }
 ];
