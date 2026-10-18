@@ -1,0 +1,68 @@
+{
+  "checkedAt": "2026-10-18",
+  "hipflatProjectIds": [
+    3848,
+    5521
+  ],
+  "projectAliases": [
+    "Lumpini Place Narathiwas-Chaopraya",
+    "Lumpini Place Narathiwas - Chaopraya"
+  ],
+  "aliasEvidence": "Both Hipflat entries resolve to the same verified PropertyScout project coordinate (13.683371, 100.548909) and the exact PropertyHub project name, address district, and 68 sqm two-bedroom unit type.",
+  "coordinateSource": "https://propertyscout.co.th/en/bangkok/condo/lumpini-place-narathiwat-chaopraya/",
+  "sale": {
+    "projectPage": "https://propertyhub.in.th/en/condo-for-sale/project-lumpini-place-narathiwas-chaopraya",
+    "listing": {
+      "id": "6352799",
+      "price": 4600000,
+      "area": 68,
+      "priceSqm": 67647,
+      "beds": 2,
+      "roomType": "TWO_BED_ROOM",
+      "title": "Lumpini Place Narathiwat-Chaopraya，2 房，68 ㎡，฿4,600,000",
+      "url": "https://propertyhub.in.th/en/listings/2-br-condo-at-lumpini-place-narathiwat-chaopraya-close-to-phra-ram-3-id-3260053---6352799",
+      "sourceName": "PropertyHub（PropertyScout 掛牌）",
+      "projectName": "Lumpini Place Narathiwas - Chaopraya",
+      "updated": "2026-10-16",
+      "checkedAt": "2026-10-18",
+      "matchedBy": "exact_project_name_and_unit_details",
+      "listingStatus": "active_as_listed"
+    },
+    "verification": "The exact-project PropertyHub sale page shows 2-bedroom listings at 68 sqm; the linked individual PropertyHub listing confirms the project, 2 bedrooms, 68 sqm, THB 4,600,000, and was refreshed 2026-10-16. It is the lowest total price among the two-bedroom listings shown on the exact-project sale page when checked."
+  },
+  "rent": {
+    "projectPage": "https://propertyhub.in.th/en/condo-for-rent/project-lumpini-place-narathiwas-chaopraya",
+    "listing": {
+      "id": "4397609",
+      "price": 20000,
+      "area": 68,
+      "priceSqm": 294,
+      "beds": 2,
+      "roomType": "TWO_BED_ROOM",
+      "title": "Lumpini Place Narathiwas - Chaopraya，2 房，68 ㎡，฿20,000／月",
+      "url": "https://propertyhub.in.th/en/listings/for-rent-condo-lumpini-place-narathiwas-chaopraya-chong-nonsi-yannawa-bangkok-cx-52999-live-chat-with-us-add-line-connexproperty--a6ed096d---4397609",
+      "sourceName": "PropertyHub（Connex Property）",
+      "projectName": "Lumpini Place Narathiwas - Chaopraya",
+      "updated": "2026-10-18",
+      "checkedAt": "2026-10-18",
+      "matchedBy": "exact_project_name_and_unit_details",
+      "listingStatus": "active_as_listed"
+    },
+    "verification": "The exact-project PropertyHub rent page shows two-bedroom listings at 68 sqm; the linked individual listing confirms the project, 2 bedrooms, 68 sqm, THB 20,000/month, and an update timestamp of 2026-10-18. It is the lowest two-bedroom monthly rent shown on the exact-project rent page when checked."
+  },
+  "yieldBaseline": {
+    "bedrooms": 2,
+    "purchasePriceThb": 4600000,
+    "purchaseAreaSqm": 68,
+    "rentRateThbPerSqmMonth": 294.12,
+    "estimatedMonthlyRentThb": 20000,
+    "annualYieldAfterOneAgentMonthBeforeUnverifiedCommonFeePercent": 4.78,
+    "note": "The estimate uses 11 rent months after a one-month agent fee. The available source labels a 25 THB/sqm charge as Utility Fee; it is not treated as a confirmed common-area management fee and is not deducted.",
+    "saleSourceUrl": "https://propertyhub.in.th/en/listings/2-br-condo-at-lumpini-place-narathiwat-chaopraya-close-to-phra-ram-3-id-3260053---6352799",
+    "rentSourceUrl": "https://propertyhub.in.th/en/listings/for-rent-condo-lumpini-place-narathiwas-chaopraya-chong-nonsi-yannawa-bangkok-cx-52999-live-chat-with-us-add-line-connexproperty--a6ed096d---4397609"
+  },
+  "manualSamplesAddedToHipflatIds": [
+    3848,
+    5521
+  ]
+}
