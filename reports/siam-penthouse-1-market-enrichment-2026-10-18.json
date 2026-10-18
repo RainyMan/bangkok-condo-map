@@ -1,0 +1,52 @@
+{
+  "checkedAt": "2026-10-18",
+  "project": {
+    "hipflatId": 3325,
+    "name": "Siam Penthouse 1"
+  },
+  "saleListings": [
+    {
+      "id": "500031329",
+      "price": 7500000,
+      "area": 80,
+      "priceSqm": 93750,
+      "beds": 2,
+      "roomType": "2BR",
+      "title": "Siam Penthouse 1，2 房，80 ㎡，฿7,500,000",
+      "url": "https://www.ddproperty.com/property/siam-penthouse-1-%E0%B8%AA%E0%B8%A2%E0%B8%B2%E0%B8%A1-%E0%B9%80%E0%B8%9E%E0%B8%99%E0%B8%97%E0%B9%8C-%E0%B9%80%E0%B8%AE%E0%B8%B2%E0%B8%AA%E0%B9%8C-1-%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87-%E0%B9%80%E0%B8%97%E0%B8%9E-%E0%B8%82%E0%B8%B2%E0%B8%A2-500031329",
+      "sourceName": "DDproperty",
+      "projectName": "Siam Penthouse 1",
+      "checkedAt": "2026-10-18",
+      "updated": "2026-09-25",
+      "matchedBy": "exact_project_name_address_bedrooms_floor_area_and_project_identity",
+      "listingStatus": "availability_unconfirmed_update_under_30d"
+    },
+    {
+      "id": "10917691",
+      "price": 10900000,
+      "area": 120,
+      "priceSqm": 90833,
+      "beds": 3,
+      "roomType": "3BR",
+      "title": "Siam Penthouse 1，3 房，120 ㎡，฿10,900,000",
+      "url": "https://www.ddproperty.com/en/property/siam-penthouse-1-bangkok-for-sale-10917691",
+      "sourceName": "DDproperty",
+      "projectName": "Siam Penthouse 1",
+      "checkedAt": "2026-10-18",
+      "updated": "2026-09-15",
+      "matchedBy": "exact_project_name_address_bedrooms_floor_area_and_project_identity",
+      "listingStatus": "availability_unconfirmed_update_over_30d"
+    }
+  ],
+  "twoBedroomSaleAndRentYield": {
+    "purchasePrice": 7500000,
+    "purchaseAreaSqm": 80,
+    "monthlyRentPerSqm": 337.5,
+    "estimatedMonthlyRent": 27000,
+    "agentMonthsDeducted": 1,
+    "commonFeeDeducted": false,
+    "netYieldPercent": 3.96,
+    "formula": "(2-bedroom rent per sqm × lowest 2-bedroom sale area × 11) ÷ lowest 2-bedroom sale price × 100",
+    "note": "The two-bedroom sale price and area are from the same lowest-total-price listing. Management fee is not known and is not deducted."
+  }
+}
