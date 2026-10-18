@@ -168,10 +168,12 @@ window.BANGKOK_MARKET_CROSSCHECKS = [
     "sourceName": "DDproperty",
     "projectSourceUrl": "https://www.ddproperty.com/en/project/8486-ruamrudee-penthouse",
     "sale": {
-      "activeListingCount": 0
+      "activeListingCount": 0,
+      "sourceUrl": "https://www.ddproperty.com/en/condo-for-sale/at-ruamrudee-penthouse-8486"
     },
     "rent": {
       "activeListingCount": 2,
+      "sourceUrl": "https://www.ddproperty.com/en/condo-for-rent/at-ruamrudee-penthouse-8486",
       "listings": [
         {
           "id": "500174798",
@@ -180,7 +182,9 @@ window.BANGKOK_MARKET_CROSSCHECKS = [
           "priceSqm": 400,
           "bedrooms": 3,
           "listedAt": "2026-09-17",
-          "url": "https://www.ddproperty.com/en/property/ruamrudee-penthouse-bangkok-for-rent-500174798"
+          "url": "https://www.ddproperty.com/en/property/ruamrudee-penthouse-bangkok-for-rent-500174798",
+          "sourceName": "DDproperty",
+          "potentialCrossPost": true
         },
         {
           "id": "500560313",
@@ -188,12 +192,24 @@ window.BANGKOK_MARKET_CROSSCHECKS = [
           "area": 295,
           "priceSqm": 407,
           "bedrooms": 3,
-          "listedAt": "2026-09-16",
-          "url": "https://www.ddproperty.com/en/property/ruamrudee-penthouse-bangkok-for-rent-500560313"
+          "listedAt": "2026-10-18",
+          "url": "https://www.ddproperty.com/en/property/ruamrudee-penthouse-bangkok-for-rent-500560313",
+          "sourceName": "DDproperty"
         }
-      ],
-      "sourceUrl": "https://www.ddproperty.com/en/condo-for-rent/at-ruamrudee-penthouse-8486"
-    }
+      ]
+    },
+    "availabilitySources": [
+      {
+        "sourceName": "Hipflat 租盤",
+        "url": "https://www.hipflat.co.th/en/ads/4lh747ac878a4c1318hh3hc83u0heue7",
+        "statusLabel": "1 筆 3 房／300㎡／฿120,000/月，頁面顯示更新於 2026-10-18"
+      },
+      {
+        "sourceName": "BKK Finder 座標與專案",
+        "url": "https://www.bkkfinder.com/en/project/60l8p8x/ruam-rudee-penthouse",
+        "statusLabel": "Google Maps 導向座標 13.73742,100.54896；所示 ฿13.5M 為資料頁參考價，不當作售屋掛牌"
+      }
+    ]
   },
   {
     "hipflatId": 3018,
