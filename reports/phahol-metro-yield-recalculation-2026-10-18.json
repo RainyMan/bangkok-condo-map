@@ -1,0 +1,41 @@
+{
+  "hipflatId": 6334,
+  "name": "Phahol Metro",
+  "checkedAt": "2026-10-18",
+  "coordinate": {
+    "lat": 13.786506,
+    "lng": 100.5482,
+    "source": "https://propertyhub.in.th/en/projects/phahol-metro",
+    "crossCheck": "https://www.hipflat.co.th/en/projects/phahol-metro-rxvpxy"
+  },
+  "projectDetails": {
+    "completedYear": 2005,
+    "units": 164,
+    "floors": 8,
+    "source": "https://propertyhub.in.th/en/projects/phahol-metro"
+  },
+  "sale": {
+    "price": 5500000,
+    "areaSqm": 65.65,
+    "priceSqm": 83778,
+    "bedrooms": 2,
+    "url": "https://www.condothai.co.th/room/21807/%E0%B8%9E%E0%B8%AB%E0%B8%A5%20%E0%B9%80%E0%B8%A1%E0%B9%82%E0%B8%97%E0%B8%A3%20%5BPhahol%20Metro%5D/0/?distance=3&lang=en",
+    "sourceNote": "lowest linked 2-bedroom total in currently verified direct samples; listing page says over 30 days old"
+  },
+  "rent": {
+    "monthlyRent": 18000,
+    "areaSqm": 65,
+    "rentPerSqm": 276.9230769230769,
+    "bedrooms": 2,
+    "url": "https://www.condothai.co.th/room/37530/%E0%B8%9E%E0%B8%AB%E0%B8%A5%20%E0%B9%80%E0%B8%A1%E0%B9%82%E0%B8%97%E0%B8%A3%20%5BPhahol%20Metro%5D/12/?budget=20000&distance=3",
+    "sourceNote": "lowest verified 2-bedroom rent rate observed; one-year rent ฿18,000; page says over 30 days since update; current vacancy unconfirmed"
+  },
+  "yieldCalculation": {
+    "formula": "(฿18,000 / 65㎡) × 65.65㎡ = monthly rent estimate; × 12 ÷ ฿5,500,000",
+    "estimatedMonthlyRentAtSaleArea": 18180,
+    "grossAnnualYieldPercent": 3.9665454545454546,
+    "netAfterOneAgentMonthPercent": 3.636,
+    "managementFeeDeducted": false,
+    "managementFeeNote": "No reliable project-management fee source found; omitted rather than guessed."
+  }
+}
