@@ -58,10 +58,10 @@
       : project.locationVerified && Number.isFinite(project.lat) && Number.isFinite(project.lng);
     const coordsFromPropertyHub = propertyHub.locationVerified && Number.isFinite(propertyHub.lat) && Number.isFinite(propertyHub.lng);
     const coordsFromOsm = !coordsFromProject && osm;
-    const coordsFromPropertyScout = !coordsFromPropertyHub && !coordsFromProject && !coordsFromOsm && propertyScoutDetail.locationVerified && Number.isFinite(propertyScoutDetail.lat) && Number.isFinite(propertyScoutDetail.lng);
-    const coordsFromVerifiedSource = !coordsFromPropertyHub && !coordsFromProject && !coordsFromOsm && !coordsFromPropertyScout && verifiedCoordinate.locationVerified && Number.isFinite(verifiedCoordinate.lat) && Number.isFinite(verifiedCoordinate.lng);
-    const lat = coordsFromPropertyHub ? propertyHub.lat : coordsFromProject ? project.lat : coordsFromOsm ? osm.lat : coordsFromPropertyScout ? propertyScoutDetail.lat : coordsFromVerifiedSource ? verifiedCoordinate.lat : legacy?.lat ?? null;
-    const lng = coordsFromPropertyHub ? propertyHub.lng : coordsFromProject ? project.lng : coordsFromOsm ? osm.lng : coordsFromPropertyScout ? propertyScoutDetail.lng : coordsFromVerifiedSource ? verifiedCoordinate.lng : legacy?.lng ?? null;
+    const coordsFromVerifiedSource = !coordsFromPropertyHub && !coordsFromProject && !coordsFromOsm && verifiedCoordinate.locationVerified && Number.isFinite(verifiedCoordinate.lat) && Number.isFinite(verifiedCoordinate.lng);
+    const coordsFromPropertyScout = !coordsFromPropertyHub && !coordsFromProject && !coordsFromOsm && !coordsFromVerifiedSource && propertyScoutDetail.locationVerified && Number.isFinite(propertyScoutDetail.lat) && Number.isFinite(propertyScoutDetail.lng);
+    const lat = coordsFromPropertyHub ? propertyHub.lat : coordsFromProject ? project.lat : coordsFromOsm ? osm.lat : coordsFromVerifiedSource ? verifiedCoordinate.lat : coordsFromPropertyScout ? propertyScoutDetail.lat : legacy?.lat ?? null;
+    const lng = coordsFromPropertyHub ? propertyHub.lng : coordsFromProject ? project.lng : coordsFromOsm ? osm.lng : coordsFromVerifiedSource ? verifiedCoordinate.lng : coordsFromPropertyScout ? propertyScoutDetail.lng : legacy?.lng ?? null;
     const locationVerified = Boolean(coordsFromPropertyHub || coordsFromProject || coordsFromOsm || coordsFromPropertyScout || coordsFromVerifiedSource || legacy?.locationVerified);
     let nearestMrt = null;
     const walkingRoute = walkingById.get(Number(project.id));
@@ -141,9 +141,9 @@
     const completedYear = rawCompletedYear >= 2400 && rawCompletedYear <= 2700 ? rawCompletedYear - 543 : rawCompletedYear || null;
     return { ...legacy, ...project, ...propertyHub, lat, lng, locationVerified,
       manualSaleSamples: (manualMarket.sale?.samples || []).filter(sample => sample.specialAsset === true),
-      locationSourceUrl: coordsFromPropertyHub ? propertyHub.locationSourceUrl : coordsFromProject ? project.locationSourceUrl : coordsFromOsm ? osm.sourceUrl : coordsFromPropertyScout ? propertyScoutDetail.locationSourceUrl : coordsFromVerifiedSource ? verifiedCoordinate.sourceUrl : project.locationSourceUrl || legacy?.locationSourceUrl,
-      locationVerificationSourceUrl: coordsFromPropertyScout ? (propertyScoutDetail.locationVerificationSourceUrl || propertyScoutMarket.locationVerificationSourceUrl) : coordsFromVerifiedSource ? (verifiedCoordinate.corroborationSourceUrl || verifiedCoordinate.verificationSourceUrl) : null,
-      locationSourceName: coordsFromPropertyHub ? propertyHub.locationSourceName : coordsFromOsm ? 'OpenStreetMap 建物／地址' : coordsFromPropertyScout ? propertyScoutDetail.locationSourceName : coordsFromVerifiedSource ? verifiedCoordinate.sourceName : project.locationSourceName || legacy?.locationSourceName,
+      locationSourceUrl: coordsFromPropertyHub ? propertyHub.locationSourceUrl : coordsFromProject ? project.locationSourceUrl : coordsFromOsm ? osm.sourceUrl : coordsFromVerifiedSource ? verifiedCoordinate.sourceUrl : coordsFromPropertyScout ? propertyScoutDetail.locationSourceUrl : project.locationSourceUrl || legacy?.locationSourceUrl,
+      locationVerificationSourceUrl: coordsFromVerifiedSource ? (verifiedCoordinate.corroborationSourceUrl || verifiedCoordinate.verificationSourceUrl) : coordsFromPropertyScout ? (propertyScoutDetail.locationVerificationSourceUrl || propertyScoutMarket.locationVerificationSourceUrl) : null,
+      locationSourceName: coordsFromPropertyHub ? propertyHub.locationSourceName : coordsFromOsm ? 'OpenStreetMap 建物／地址' : coordsFromVerifiedSource ? verifiedCoordinate.sourceName : coordsFromPropertyScout ? propertyScoutDetail.locationSourceName : project.locationSourceName || legacy?.locationSourceName,
       sale: cleanSale, rent: cleanRent, localListings,
       completedYear,
       startedYear: propertyHub.startedYear || project.startedYear || propertyScoutMarket.startedYear || legacy?.startedYear || null,

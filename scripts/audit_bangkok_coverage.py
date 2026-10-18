@@ -154,8 +154,8 @@ def main() -> None:
             (market, market.get("locationSourceUrl")),
             (project, project.get("locationSourceUrl")),
             (osm.get(project_id, {}), osm.get(project_id, {}).get("sourceUrl")),
-            (scout_location, scout_location.get("locationSourceUrl")),
             (verified_location, verified_location.get("sourceUrl")),
+            (scout_location, scout_location.get("locationSourceUrl")),
             (legacy, legacy.get("locationSourceUrl")),
         ):
             if row.get("locationVerified") and row.get("lat") is not None and row.get("lng") is not None:

@@ -64,6 +64,8 @@ def district_from_address(address: str | None) -> str:
 
 def current_coordinate_ids(catalogue: list[dict]) -> set[int]:
     osm = {int(row["id"]): row for row in arr("bangkok-osm.js", "BANGKOK_OSM_LOCATIONS")}
+    verified = {int(row["hipflatId"]): row for row in arr("bangkok-verified-coordinates.js", "BANGKOK_VERIFIED_COORDINATES")}
+    scout = {int(row["hipflatId"]): row for row in arr("bangkok-propertyscout-details.js", "BANGKOK_PROPERTYSCOUT_DETAILS")}
     base = {int(row["id"]): row for row in arr("bangkok-propertyhub.js", "BANGKOK_PROPERTYHUB_PROJECTS")}
     details = {str(row["propertyHubProjectId"]): row for row in arr("bangkok-propertyhub-details.js", "BANGKOK_PROPERTYHUB_DETAILS")}
     guessed = {int(row["hipflatProjectId"]): row for row in arr("bangkok-propertyhub-guessed-details.js", "BANGKOK_PROPERTYHUB_GUESSED_DETAILS")}
@@ -72,7 +74,7 @@ def current_coordinate_ids(catalogue: list[dict]) -> set[int]:
         project_id = int(project["id"])
         property_hub = base.get(project_id, {})
         detail = details.get(str(property_hub.get("propertyHubProjectId", "")), {})
-        candidates = (detail, property_hub, guessed.get(project_id, {}), osm.get(project_id, {}))
+        candidates = (detail, property_hub, guessed.get(project_id, {}), osm.get(project_id, {}), verified.get(project_id, {}), scout.get(project_id, {}))
         if any(row.get("lat") is not None and row.get("lng") is not None and
                (row.get("locationVerified") or row in (osm.get(project_id, {}),)) for row in candidates):
             found.add(project_id)
@@ -172,6 +174,8 @@ def main() -> int:
     AUDIT.write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding="utf-8")
     verified = []
     for row in rows:
+        if int(row["hipflatId"]) in already_located:
+            continue
         district = norm(row.get("propertyScoutDistrict"))
         district = {"vadhana": "watthana", "sathorn": "sathon"}.get(district, district)
         expected_district = {"vadhana": "watthana", "sathorn": "sathon"}.get(norm(row.get("expectedDistrict")), norm(row.get("expectedDistrict")))
