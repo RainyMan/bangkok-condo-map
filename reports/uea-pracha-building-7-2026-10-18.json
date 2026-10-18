@@ -1,0 +1,23 @@
+{
+  "hipflatId": 3119,
+  "project": "Uea Pracha Condo Town Building 7",
+  "address": "Soi Nak Niwat 48 Yaek 18, Lat Phrao, Bangkok 10230, THA",
+  "addressSource": "https://npa.sam.or.th/site/index.php/npa/map_preview/13636/",
+  "identityCrossCheck": {
+    "hipflat": "https://www.hipflat.co.th/projects/uea-pracha-condo-town-building-7-sqnbxh",
+    "baanfinder": "https://www.baanfinder.com/en/project/uea-pracha-condotown-7--33427"
+  },
+  "addressEvidence": "SAM record 8Z4427 identifies unit 41/209 in Condominium Uea Pracha Condo Town Building 7 at Soi Nak Niwat 48 Yaek 18, Lat Phrao. BaanFinder separately lists Uea Pracha Condotown 7 at Nak Niwat 48 Yaek 18. Hipflat's 169 Srinagarindra address conflicts with both exact-building sources.",
+  "saleSample": {
+    "price": 259000,
+    "areaSqm": 30.48,
+    "pricePerSqm": 8497,
+    "source": "https://npa.sam.or.th/site/index.php/npa/map_preview/13636/",
+    "specialAsset": true,
+    "listingStatus": "SAM page displays for sale; source page does not provide an update date."
+  },
+  "rentSample": null,
+  "coordinates": null,
+  "coordinateStatus": "pending; no building-level map point verified yet",
+  "checkedAt": "2026-10-18"
+}
