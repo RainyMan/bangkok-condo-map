@@ -1,0 +1,132 @@
+{
+  "hipflatId": 3925,
+  "projectName": "My Condo Ladprao 27",
+  "checkedAt": "2026-10-18",
+  "projectPage": "https://www.fazwaz.co.th/en/property-for-rent/thailand/bangkok/chatuchak/chantharakasem/at-my-condo-ladprao-27",
+  "sampleCount": 4,
+  "rent": {
+    "count": 4,
+    "observedCount": 4,
+    "countKind": "manual_verified_listing",
+    "average": 10875,
+    "minimum": 9000,
+    "minimumArea": 26,
+    "averageSqm": 330,
+    "minimumSqm": 255,
+    "minimumSourceUrl": "https://www.fazwaz.co.th/en/property-rent/studio-condo-for-rent-at-my-condo-ladprao-27-in-chantharakasem-bangkok-u1659004",
+    "minimumSqmSourceUrl": "https://www.fazwaz.co.th/en/property-rent/2-bedroom-condo-for-rent-at-my-condo-ladprao-27-in-chantharakasem-bangkok-u1725214",
+    "asOf": "2026-10-18",
+    "sourceName": "FazWaz 個別租賃掛牌（頁面列明未來可入住日）",
+    "source": "https://www.fazwaz.co.th/en/property-for-rent/thailand/bangkok/chatuchak/chantharakasem/at-my-condo-ladprao-27",
+    "snapshotMethod": "Checked four direct FazWaz unit pages against the exact My Condo Ladprao 27 project; each page states the project, rent, area, bedroom type, unit ID, and availability date.",
+    "byBedroom": {
+      "1": {
+        "count": 2,
+        "minimum": 9500,
+        "area": 25.34,
+        "minimumSqm": 342.85714285714283,
+        "minimumSqmSourceUrl": "https://www.fazwaz.co.th/en/property-rent/1-bedroom-condo-for-rent-at-my-condo-ladprao-27-in-chantharakasem-bangkok-u1851828",
+        "sourceUrl": "https://www.fazwaz.co.th/en/property-rent/1-bedroom-condo-for-rent-at-my-condo-ladprao-27-in-chantharakasem-bangkok-u5548750"
+      },
+      "2": {
+        "count": 1,
+        "minimum": 13000,
+        "area": 51,
+        "minimumSqm": 254.90196078431373,
+        "minimumSqmSourceUrl": "https://www.fazwaz.co.th/en/property-rent/2-bedroom-condo-for-rent-at-my-condo-ladprao-27-in-chantharakasem-bangkok-u1725214",
+        "sourceUrl": "https://www.fazwaz.co.th/en/property-rent/2-bedroom-condo-for-rent-at-my-condo-ladprao-27-in-chantharakasem-bangkok-u1725214"
+      }
+    },
+    "samples": [
+      {
+        "id": "U1725214",
+        "price": 13000,
+        "area": 51,
+        "priceSqm": 255,
+        "beds": 2,
+        "roomType": "2BR",
+        "title": "My Condo Ladprao 27 · 2 房 · 51 ㎡ · ฿13,000/月",
+        "url": "https://www.fazwaz.co.th/en/property-rent/2-bedroom-condo-for-rent-at-my-condo-ladprao-27-in-chantharakasem-bangkok-u1725214",
+        "sourceName": "FazWaz",
+        "projectName": "My Condo Ladprao 27",
+        "listed": "2024-01-30",
+        "updated": "2 months ago",
+        "checkedAt": "2026-10-18",
+        "matchedBy": "Exact project name, project unit count and FazWaz unit ID U1725214",
+        "availability": "Source lists this unit for rent at ฿13,000/month and 51 sqm; stated availability is 2027-03-01.",
+        "availableFrom": "2027-03-01",
+        "listingStatus": "active_future_availability"
+      },
+      {
+        "id": "U5548750",
+        "price": 9500,
+        "area": 25.34,
+        "priceSqm": 375,
+        "beds": 1,
+        "roomType": "1BR",
+        "title": "My Condo Ladprao 27 · 1 房 · 25.34 ㎡ · ฿9,500/月",
+        "url": "https://www.fazwaz.co.th/en/property-rent/1-bedroom-condo-for-rent-at-my-condo-ladprao-27-in-chantharakasem-bangkok-u5548750",
+        "sourceName": "FazWaz",
+        "projectName": "My Condo Ladprao 27",
+        "listed": "2025-05-29",
+        "updated": "1 month ago",
+        "checkedAt": "2026-10-18",
+        "matchedBy": "Exact project name, project unit count and FazWaz unit ID U5548750",
+        "availability": "Source lists this unit for rent at ฿9,500/month and 25.34 sqm; stated availability is 2027-06-01.",
+        "availableFrom": "2027-06-01",
+        "listingStatus": "active_future_availability"
+      },
+      {
+        "id": "U1659004",
+        "price": 9000,
+        "area": 26,
+        "priceSqm": 346,
+        "beds": 0,
+        "roomType": "STUDIO",
+        "title": "My Condo Ladprao 27 · 套房 · 26 ㎡ · ฿9,000/月",
+        "url": "https://www.fazwaz.co.th/en/property-rent/studio-condo-for-rent-at-my-condo-ladprao-27-in-chantharakasem-bangkok-u1659004",
+        "sourceName": "FazWaz",
+        "projectName": "My Condo Ladprao 27",
+        "listed": "2023-08-31",
+        "updated": "1 month ago",
+        "checkedAt": "2026-10-18",
+        "matchedBy": "Exact project name, project unit count and FazWaz unit ID U1659004",
+        "availability": "Source lists this unit for rent at ฿9,000/month and 26 sqm; stated availability is 2027-10-01.",
+        "availableFrom": "2027-10-01",
+        "listingStatus": "active_future_availability"
+      },
+      {
+        "id": "U1851828",
+        "price": 12000,
+        "area": 35,
+        "priceSqm": 343,
+        "beds": 1,
+        "roomType": "1BR",
+        "title": "My Condo Ladprao 27 · 1 房 · 35 ㎡ · ฿12,000/月",
+        "url": "https://www.fazwaz.co.th/en/property-rent/1-bedroom-condo-for-rent-at-my-condo-ladprao-27-in-chantharakasem-bangkok-u1851828",
+        "sourceName": "FazWaz",
+        "projectName": "My Condo Ladprao 27",
+        "listed": "2024-05-28",
+        "updated": "7 months ago",
+        "checkedAt": "2026-10-18",
+        "matchedBy": "Exact project name, project unit count and FazWaz unit ID U1851828",
+        "availability": "Source lists this unit for rent at ฿12,000/month and 35 sqm; stated availability is 2027-03-01.",
+        "availableFrom": "2027-03-01",
+        "listingStatus": "active_future_availability_update_7mo"
+      }
+    ]
+  },
+  "matchingTwoBedroomSale": {
+    "minimumTHB": 2790000,
+    "areaSqm": 51.05,
+    "source": "https://propertyhub.in.th/en/listings/for-sale-condo-my-condo-ladprao-27-mrt-lat-phrao-chankasem-chatuchak-bangkok-cx-120431-live-chat-with-us-add-line-connexproperty--a8990927---5680475"
+  },
+  "twoBedroomYieldInput": {
+    "monthlyRentTHBPerSqm": 254.90196078431373,
+    "purchasePriceTHB": 2790000,
+    "purchaseAreaSqm": 51.05,
+    "estimatedMonthlyRentTHB": 13012.745098039215,
+    "grossAnnualYieldPercent": 5.596879612059877,
+    "note": "Rental unit is listed for availability on 2027-03-01; this is a forward asking-rent estimate, not confirmed immediate occupancy."
+  }
+}
