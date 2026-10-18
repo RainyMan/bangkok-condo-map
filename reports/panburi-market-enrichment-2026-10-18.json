@@ -1,0 +1,68 @@
+{
+  "hipflatId": 3007,
+  "project": "Panburi",
+  "checkedAt": "2026-10-18",
+  "coordinates": {
+    "status": "verified",
+    "latitude": 13.722216,
+    "longitude": 100.523773,
+    "source": "https://propertyhub.in.th/en/projects/panburi",
+    "crossCheck": "https://www.hipflat.co.th/en/projects/panburi-iwhglk"
+  },
+  "completion": {
+    "year": 2002,
+    "source": "https://www.hipflat.co.th/en/projects/panburi-iwhglk"
+  },
+  "sale": {
+    "status": "no_current_matching_listing",
+    "sampleCount": 0,
+    "source": "https://propertyhub.in.th/en/condo-for-sale/project-panburi"
+  },
+  "rent": {
+    "status": "current_project_listings_cross_checked",
+    "propertyHubSample": {
+      "monthlyRentThb": 160000,
+      "areaSqm": 450,
+      "bedrooms": 4,
+      "url": "https://propertyhub.in.th/en/listings/panburi-4-bedrooms-for-rent---3771788",
+      "lastUpdate": "2026-10-17T02:48:52.624Z"
+    },
+    "ddpropertyActiveListingCount": 3,
+    "ddpropertyListings": [
+      {
+        "listingId": "500429267",
+        "price": 170000,
+        "area": 450,
+        "bedrooms": 4,
+        "listedAt": "2026-10-12",
+        "url": "https://www.ddproperty.com/en/property/panburi-apartments-bangkok-for-rent-500429267",
+        "rentThbPerSqmMonth": 377.78
+      },
+      {
+        "listingId": "500614034",
+        "price": 155000,
+        "area": 450,
+        "bedrooms": 4,
+        "listedAt": "2026-10-02",
+        "url": "https://www.ddproperty.com/en/property/panburi-apartments-bangkok-for-rent-500614034",
+        "rentThbPerSqmMonth": 344.44
+      },
+      {
+        "listingId": "500431182",
+        "price": 160000,
+        "area": 450,
+        "bedrooms": 4,
+        "listedAt": "2026-09-22",
+        "url": "https://www.ddproperty.com/en/property/panburi-apartments-bangkok-for-rent-500431182",
+        "rentThbPerSqmMonth": 355.56
+      }
+    ],
+    "ddpropertyProjectSource": "https://www.ddproperty.com/en/property-for-rent/at-panburi-apartments-1311",
+    "deduplicationNote": "The ฿160,000/450㎡ PropertyHub ad may cross-post the DDproperty ฿160,000/450㎡ unit; platform feeds are kept separate and are not added together.",
+    "availabilityCaveat": "Listings are visible on project feeds; the advertisers have not confirmed current vacancy."
+  },
+  "yield": {
+    "status": "not_calculable",
+    "reason": "No verified current sale listing is available for a purchase-price baseline."
+  }
+}

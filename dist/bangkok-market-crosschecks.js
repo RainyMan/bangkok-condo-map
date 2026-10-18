@@ -102,6 +102,66 @@ window.BANGKOK_MARKET_CROSSCHECKS = [
     }
   },
   {
+    "hipflatId": 3007,
+    "projectName": "Panburi",
+    "asOf": "2026-10-18",
+    "sourceName": "DDproperty",
+    "projectSourceUrl": "https://www.ddproperty.com/en/property-for-rent/at-panburi-apartments-1311",
+    "rent": {
+      "activeListingCount": 3,
+      "sourceUrl": "https://www.ddproperty.com/en/property-for-rent/at-panburi-apartments-1311",
+      "listings": [
+        {
+          "listingId": "500429267",
+          "price": 170000,
+          "area": 450,
+          "bedrooms": 4,
+          "listedAt": "2026-10-12",
+          "url": "https://www.ddproperty.com/en/property/panburi-apartments-bangkok-for-rent-500429267",
+          "sourceName": "DDproperty",
+          "priceSqm": 377.78
+        },
+        {
+          "listingId": "500614034",
+          "price": 155000,
+          "area": 450,
+          "bedrooms": 4,
+          "listedAt": "2026-10-02",
+          "url": "https://www.ddproperty.com/en/property/panburi-apartments-bangkok-for-rent-500614034",
+          "sourceName": "DDproperty",
+          "priceSqm": 344.44
+        },
+        {
+          "listingId": "500431182",
+          "price": 160000,
+          "area": 450,
+          "bedrooms": 4,
+          "listedAt": "2026-09-22",
+          "url": "https://www.ddproperty.com/en/property/panburi-apartments-bangkok-for-rent-500431182",
+          "sourceName": "DDproperty",
+          "priceSqm": 355.56
+        }
+      ]
+    },
+    "availabilitySources": [
+      {
+        "sourceName": "PropertyHub 出售",
+        "url": "https://propertyhub.in.th/en/condo-for-sale/project-panburi",
+        "statusLabel": "目前 0 筆；未找到可核實出售掛牌"
+      },
+      {
+        "sourceName": "PropertyHub 出租",
+        "url": "https://propertyhub.in.th/en/listings/panburi-4-bedrooms-for-rent---3771788",
+        "statusLabel": "1 筆連結樣本，฿160,000/月；更新日未提供"
+      },
+      {
+        "sourceName": "Hipflat",
+        "url": "https://www.hipflat.co.th/en/projects/panburi-iwhglk",
+        "statusLabel": "專案頁顯示目前租盤，未見出售樣本"
+      }
+    ]
+  },
+  {
     "hipflatId": 3009,
     "projectName": "Ruam Rudee Penthouse",
     "asOf": "2026-10-18",
