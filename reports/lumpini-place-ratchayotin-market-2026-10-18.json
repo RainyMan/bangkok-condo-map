@@ -1,0 +1,113 @@
+{
+  "hipflatId": 4074,
+  "projectName": "Lumpini Place Ratchayotin",
+  "checkedAt": "2026-10-18",
+  "coordinates": {
+    "selected": [
+      13.830093,
+      100.571178
+    ],
+    "source": "https://propertyscout.co.th/en/bangkok/condo/lumpini-place-ratchayothin/",
+    "crossChecks": [
+      {
+        "source": "https://thinkofliving.com/project/%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/199/",
+        "coordinates": [
+          13.8300252843,
+          100.5709312368
+        ],
+        "distanceFromSelectedMeters": 27.7
+      },
+      {
+        "source": "https://www.livinginsider.com/livingdetail_en/2650440/Lumpini-Place-Ratchayothin-Condominium-for-sale-in-Chatuchak-Bangkok.html",
+        "coordinates": [
+          13.83035302,
+          100.57104245
+        ],
+        "distanceFromSelectedMeters": 32.4
+      }
+    ]
+  },
+  "propertyHubProject": "https://propertyhub.in.th/en/projects/lumpini-place-ratchayothin",
+  "saleListing": {
+    "id": "5999717",
+    "price": 2480000,
+    "area": 28.5,
+    "priceSqm": 87018,
+    "beds": 1,
+    "roomType": "ONE_BED_ROOM",
+    "title": "For Sell Condo LUMPINI PLACE RATCHAYOTHIN Building B, Floor 2, 1 bedroom, 28.5 sqm",
+    "url": "https://propertyhub.in.th/en/listings/for-sell-condo-lumpini-place-ratchayothin-building-b-floor-2-1-bed-room-room-size-28-5-sqm---5999717",
+    "sourceName": "PropertyHub",
+    "projectName": "Lumpini Place Ratchayothin",
+    "updated": "2026-09-15T12:01:00+07:00",
+    "checkedAt": "2026-10-18",
+    "listingStatus": "availability_unconfirmed_update_over_30d",
+    "matchedBy": "exact_project_page_listing_and_direct_unit_page"
+  },
+  "rentListings": [
+    {
+      "id": "6335611",
+      "price": 11000,
+      "area": 28,
+      "priceSqm": 392.86,
+      "beds": 1,
+      "roomType": "ONE_BED_ROOM",
+      "title": "For Rent Lumpini Place Ratchayothin Z5150, 1 bedroom, 28 sqm",
+      "url": "https://propertyhub.in.th/en/listings/for-rent-lumpini-place-ratchayothin-add-line-id-zcondo-with-z5150---6335611",
+      "sourceName": "PropertyHub",
+      "projectName": "Lumpini Place Ratchayothin",
+      "updated": "2026-09-15T12:13:00+07:00",
+      "checkedAt": "2026-10-18",
+      "listingStatus": "availability_unconfirmed_update_over_30d",
+      "matchedBy": "exact_project_page_listing_and_direct_unit_page"
+    },
+    {
+      "id": "6131955",
+      "price": 23500,
+      "area": 56,
+      "priceSqm": 419.64,
+      "beds": 2,
+      "roomType": "TWO_BED_ROOM",
+      "title": "Lumpini Place Ratchayothin for Rent, 2 bedrooms, 56 sqm",
+      "url": "https://propertyhub.in.th/en/listings/lumpini-place-ratchayothin-for-rent--b43a09c7---6131955",
+      "sourceName": "PropertyHub",
+      "projectName": "Lumpini Place Ratchayothin",
+      "updated": "2026-10-11T14:18:00+07:00",
+      "checkedAt": "2026-10-18",
+      "listingStatus": "availability_unconfirmed_update_under_30d",
+      "matchedBy": "exact_project_page_listing_and_direct_unit_page"
+    }
+  ],
+  "yieldEstimate": {
+    "bedrooms": 1,
+    "purchasePriceThb": 2480000,
+    "saleAreaSqm": 28.5,
+    "rentRateThbPerSqmMonth": 392.86,
+    "estimatedMonthlyRentOnSaleAreaThb": 11196,
+    "annualYieldAfterOneAgentMonthPercent": 4.97,
+    "commonFeeDeducted": false,
+    "reason": "PropertyHub project details show no common-fee amount. A verified two-bedroom sale listing was not found, so a default two-bedroom yield is not inferred; the selected one-bedroom baseline uses a linked 1BR sale and rental sample."
+  },
+  "sources": [
+    {
+      "url": "https://propertyhub.in.th/en/projects/lumpini-place-ratchayothin",
+      "finding": "Exact project page identifies Lumpini Place Ratchayothin, 1,822 units, completed 2011; common fee is not published."
+    },
+    {
+      "url": "https://propertyhub.in.th/en/listings/for-sell-condo-lumpini-place-ratchayothin-building-b-floor-2-1-bed-room-room-size-28-5-sqm---5999717",
+      "finding": "Individual PropertyHub sale listing: 1BR, 28.5 sqm, ฿2,480,000."
+    },
+    {
+      "url": "https://propertyhub.in.th/en/listings/for-rent-lumpini-place-ratchayothin-add-line-id-zcondo-with-z5150---6335611",
+      "finding": "Individual PropertyHub rental listing: 1BR, 28 sqm, ฿11,000/month."
+    },
+    {
+      "url": "https://propertyhub.in.th/en/listings/lumpini-place-ratchayothin-for-rent--b43a09c7---6131955",
+      "finding": "Individual PropertyHub rental listing: 2BR, 56 sqm, ฿23,500/month."
+    }
+  ],
+  "limitations": [
+    "Listing page refresh dates do not confirm that the units remain available.",
+    "No current individual two-bedroom sale page was verified; no default two-bedroom yield is displayed."
+  ]
+}
