@@ -1,4 +1,4 @@
-"""Record a direct Pinklao Pavilion rental listing as a historical sample."""
+"""Add verified location and direct market listings for Pinklao Pavilion."""
 from __future__ import annotations
 
 import csv
@@ -12,16 +12,15 @@ REPORTS = ROOT / "reports"
 PROJECT_ID = 3794
 NAME = "Pinklao Pavilion"
 CHECKED = "2026-10-18"
-RENT_URL = (
-    "https://connex.in.th/detail/"
-    "%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-"
-    "%E0%B8%9B%E0%B8%B4%E0%B9%88%E0%B8%99%E0%B9%80%E0%B8%81%E0%B8%A5%E0%B9%89%E0%B8%B2-"
-    "%E0%B8%9E%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%A5%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99-"
-    "mrt-%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%A2%E0%B8%B5%E0%B9%88%E0%B8%82%E0%B8%B1%E0%B8%99-"
-    "%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%9A%E0%B8%B3%E0%B8%AB%E0%B8%A3%E0%B8%B8-"
-    "%E0%B9%80%E0%B8%82%E0%B8%95-%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%9E%E0%B8%A5%E0%B8%B1%E0%B8%94-"
-    "%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E-cx-138669"
-)
+LAT, LNG = 13.7842597961, 100.4760437012
+SALE_PRICE, SALE_AREA = 1_890_000, 55.13
+RENT_PRICE, RENT_AREA = 7_000, 54.0
+SALE_URL = "https://propertyhub.in.th/en/listings/condo-for-sale-pinkrao-pavilion-property-code-lnp-c14638---6369727"
+RENT_URL = "https://zmyhome.com/property/V122685"
+HIPFLAT_URL = "https://www.hipflat.co.th/en/projects/pinklao-pavilion-aawhlz"
+PROPERTYHUB_PROJECT_URL = "https://propertyhub.in.th/en/projects/pinkrao-pavilion"
+ZMYHOME_RENT_PROJECT_URL = "https://zmyhome.com/rent/condo/project-list/13599/owner"
+GOOGLE_MAPS_URL = f"https://www.google.com/maps/search/?api=1&query={LAT}%2C{LNG}"
 
 
 def read_array(filename: str, symbol: str) -> tuple[Path, list[dict]]:
@@ -45,126 +44,221 @@ def write_array(path: Path, symbol: str, rows: list[dict]) -> None:
     )
 
 
-def main() -> None:
-    price, area, beds = 7_500, 54, 2
-    exact_rate = price / area
-    sample = {
-        "id": "CX-138669",
-        "price": price,
-        "area": area,
-        "priceSqm": round(exact_rate),
-        "beds": beds,
-        "roomType": "2BR",
-        "title": f"{NAME} · 2 房 · 54 ㎡ · ฿7,500/月 · 目前不可租",
-        "url": RENT_URL,
-        "sourceName": "Connex",
-        "projectName": NAME,
-        "checkedAt": CHECKED,
-        "matchedBy": "Exact Pinklao Pavilion project name, address, and unit ID CX-138669",
-        "availability": "The individual listing says status ไม่ว่าง (unavailable); preserve as a historical sample, not a currently rentable unit.",
-        "listingStatus": "confirmed_unavailable",
-    }
-    manual_path, rows = read_array(
-        "bangkok-manual-market-samples.js", "BANGKOK_MANUAL_MARKET_SAMPLES"
-    )
-    project = next(
-        (row for row in rows if int(row.get("hipflatId", -1)) == PROJECT_ID), None
-    )
-    if project is None:
-        project = {"hipflatId": PROJECT_ID, "name": NAME}
-        rows.append(project)
-    project["name"] = NAME
-    old_samples = project.get("rent", {}).get("samples", [])
-    unique = {row.get("url"): row for row in old_samples if row.get("url")}
-    unique[RENT_URL] = sample
-    samples = list(unique.values())
-    lowest_total = min(samples, key=lambda row: float(row["price"]))
-    lowest_rate = min(samples, key=lambda row: float(row["price"]) / float(row["area"]))
-    rates = [float(row["price"]) / float(row["area"]) for row in samples]
-    beds_samples = [row for row in samples if int(row.get("beds") or 0) == beds]
-    lowest_bed_total = min(beds_samples, key=lambda row: float(row["price"]))
-    lowest_bed_rate = min(beds_samples, key=lambda row: float(row["price"]) / float(row["area"]))
-    project["rent"] = {
-        "count": len(samples),
-        "observedCount": len(samples),
-        "countKind": "manual_verified_listing",
-        "average": round(sum(float(row["price"]) for row in samples) / len(samples)),
-        "minimum": float(lowest_total["price"]),
-        "minimumArea": float(lowest_total["area"]),
-        "averageSqm": round(sum(rates) / len(rates)),
-        "minimumSqm": round(float(lowest_rate["price"]) / float(lowest_rate["area"])),
-        "minimumSourceUrl": lowest_total["url"],
-        "minimumSqmSourceUrl": lowest_rate["url"],
-        "asOf": CHECKED,
-        "sourceName": "Connex 個別租賃掛牌（目前不可租，歷史樣本）",
-        "source": RENT_URL,
-        "snapshotMethod": "Direct Connex unit page CX-138669. The indexed detail reports 2 bedrooms, 54 sqm, ฿7,500/month and status unavailable.",
-        "byBedroom": {
-            str(beds): {
-                "count": len(beds_samples),
-                "minimum": float(lowest_bed_total["price"]),
-                "area": float(lowest_bed_total["area"]),
-                "minimumSqm": float(lowest_bed_rate["price"]) / float(lowest_bed_rate["area"]),
-                "minimumSqmSourceUrl": lowest_bed_rate["url"],
-                "sourceUrl": lowest_bed_total["url"],
-            }
-        },
-        "samples": samples,
-    }
-    rows.sort(key=lambda row: int(row["hipflatId"]))
-    write_array(manual_path, "BANGKOK_MANUAL_MARKET_SAMPLES", rows)
+sale = {
+    "id": "6369727",
+    "price": SALE_PRICE,
+    "area": SALE_AREA,
+    "priceSqm": round(SALE_PRICE / SALE_AREA),
+    "beds": 1,
+    "roomType": "ONE_BED_ROOM",
+    "title": "Pinkrao Pavilion · 1BR · 55.13 sqm · ฿1,890,000",
+    "url": SALE_URL,
+    "sourceName": "PropertyHub",
+    "projectName": NAME,
+    "updated": "2026-10-16",
+    "checkedAt": CHECKED,
+    "matchedBy": "PropertyHub exact project page links listing 6369727; direct page confirms Pinkrao Pavilion, 1 bedroom, 55.13 sqm and ฿1,890,000. Project identity cross-checked against Hipflat name/address and 234 units / 8 floors / 2008 completion.",
+    "listingStatus": "active_as_listed",
+}
+rent = {
+    "id": "V122685",
+    "price": RENT_PRICE,
+    "area": RENT_AREA,
+    "priceSqm": round(RENT_PRICE / RENT_AREA),
+    "beds": 2,
+    "roomType": "TWO_BED_ROOM",
+    "title": "Pinklao Pavilion · 2BR · 54 sqm · ฿7,000/month",
+    "url": RENT_URL,
+    "sourceName": "ZmyHome",
+    "projectName": NAME,
+    "updated": "2026-09-20",
+    "checkedAt": CHECKED,
+    "matchedBy": "Direct ZmyHome listing V122685 states Pinklao Pavilion, Soi Borommaratchachonnani 6, Building B, 2 bedrooms, 54 sqm and ฿7,000/month. The project comparison table showed the listing refreshed 28 days before the 2026-10-18 check; stored date is approximate.",
+    "availability": "Listed on the source as a live rental and refreshed 28 days before the check; vacancy has not been independently confirmed.",
+    "listingStatus": "availability_unconfirmed_update_under_30d",
+}
 
-    (REPORTS / "pinklao-pavilion-rent-enrichment-2026-10-18.json").write_text(
-        json.dumps(
-            {
-                "hipflatId": PROJECT_ID,
-                "projectName": NAME,
-                "checkedAt": CHECKED,
-                "listing": sample,
-                "details": {
-                    "bedrooms": 2,
-                    "bathrooms": 2,
-                    "floor": 2,
-                    "areaSqm": area,
-                    "monthlyRentTHB": price,
-                    "rentTHBPerSqmMonthExact": exact_rate,
-                    "availability": "unavailable per direct listing status",
-                    "sourcePage": RENT_URL,
-                },
-                "crossCheck": {
-                    "source": "https://zmyhome.com/rent/condo/project-list/13599/owner",
-                    "finding": "The project-specific rent page also lists Pinklao Pavilion's 2-bedroom, 54 sqm unit at ฿7,000/month; this corroborates project and room type but is not used as the sample because it does not expose an individual unit URL.",
-                },
-                "yieldNote": "This is a historical two-bedroom asking-rent sample marked unavailable. It is included as market evidence and should not be interpreted as current availability.",
-            },
-            ensure_ascii=False,
-            indent=2,
-        )
-        + "\n",
-        encoding="utf-8",
-    )
+manual_path, rows = read_array(
+    "bangkok-manual-market-samples.js", "BANGKOK_MANUAL_MARKET_SAMPLES"
+)
+project = next(
+    (row for row in rows if int(row.get("hipflatId", -1)) == PROJECT_ID), None
+)
+if project is None:
+    project = {"hipflatId": PROJECT_ID, "name": NAME}
+    rows.append(project)
+project["name"] = NAME
+project["asOf"] = CHECKED
+sale_rows = project.setdefault("sale", {})
+sale_samples = {sample.get("url"): sample for sample in sale_rows.get("samples", []) if sample.get("url")}
+sale_samples[SALE_URL] = sale
+sale_rows["samples"] = list(sale_samples.values())
 
-    coverage_path = REPORTS / "bangkok-coverage-2026-10-18.csv"
-    with coverage_path.open(encoding="utf-8-sig", newline="") as handle:
-        coverage = list(csv.DictReader(handle))
-        headers = list(coverage[0])
-    target = next(item for item in coverage if item["hipflat_id"] == str(PROJECT_ID))
-    target.update(
-        {
-            "rent_sample": "yes",
-            "rent_individual_listing_link": "yes",
-            "rent_source": RENT_URL,
-            "rent_sample_updated": "",
-            "missing": "",
+# Retain the older direct Connex record for audit history, while market minimums
+# and the two-bedroom rate point to the recently refreshed ZmyHome listing.
+rent_rows = project.setdefault("rent", {})
+old_samples = {sample.get("url"): sample for sample in rent_rows.get("samples", []) if sample.get("url")}
+old_samples[RENT_URL] = rent
+rent_rows.update({
+    "count": 1,
+    "observedCount": 1,
+    "countKind": "manual_verified_listing",
+    "average": RENT_PRICE,
+    "minimum": RENT_PRICE,
+    "minimumArea": RENT_AREA,
+    "averageSqm": round(RENT_PRICE / RENT_AREA),
+    "minimumSqm": RENT_PRICE / RENT_AREA,
+    "minimumSourceUrl": RENT_URL,
+    "minimumSqmSourceUrl": RENT_URL,
+    "minimumSampleUpdated": "2026-09-20",
+    "minimumSqmSampleUpdated": "2026-09-20",
+    "asOf": CHECKED,
+    "sourceName": "ZmyHome 個別出租掛牌（更新未滿 30 日，現況待確認）",
+    "source": RENT_URL,
+    "snapshotMethod": "Direct ZmyHome listing V122685; the project comparison table reported this listing refreshed 28 days before the 2026-10-18 check. Its 2-bedroom details are preserved as a direct unit sample.",
+    "byBedroom": {
+        "2": {
+            "count": 1,
+            "minimum": RENT_PRICE,
+            "area": RENT_AREA,
+            "minimumSqm": RENT_PRICE / RENT_AREA,
+            "minimumSqmSourceUrl": RENT_URL,
+            "sourceUrl": RENT_URL,
         }
-    )
-    with coverage_path.open("w", encoding="utf-8-sig", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=headers)
-        writer.writeheader()
-        writer.writerows(coverage)
+    },
+    "samples": list(old_samples.values()),
+})
+rows.sort(key=lambda row: int(row["hipflatId"]))
+write_array(manual_path, "BANGKOK_MANUAL_MARKET_SAMPLES", rows)
 
-    print(json.dumps({"hipflatId": PROJECT_ID, "price": price, "area": area, "THBperSqmMonth": exact_rate, "beds": beds, "listingStatus": sample["listingStatus"], "source": RENT_URL}, ensure_ascii=False))
+coordinate_path, coordinates = read_array(
+    "bangkok-verified-coordinates.js", "BANGKOK_VERIFIED_COORDINATES"
+)
+coordinates = [row for row in coordinates if int(row.get("hipflatId", -1)) != PROJECT_ID]
+coordinates.append({
+    "hipflatId": PROJECT_ID,
+    "name": NAME,
+    "lat": LAT,
+    "lng": LNG,
+    "locationVerified": True,
+    "sourceName": "ZmyHome 物件頁 Google Maps 點位",
+    "sourceUrl": GOOGLE_MAPS_URL,
+    "verificationSourceUrl": HIPFLAT_URL,
+    "corroborationSourceUrl": RENT_URL,
+    "verificationMethod": "Google Maps coordinates linked from the exact ZmyHome listing for Pinklao Pavilion; exact project name and Soi Borommaratchachonnani 6 address match Hipflat. ZmyHome and PropertyHub identify the project as 234 units, 8 floors, completed 2008.",
+    "asOf": CHECKED,
+})
+coordinates.sort(key=lambda row: int(row["hipflatId"]))
+write_array(coordinate_path, "BANGKOK_VERIFIED_COORDINATES", coordinates)
 
+# This exact-name PropertyHub map pin has higher source precedence than the
+# coordinate cache in app.js, so keep the verified Google Maps point aligned.
+guessed_path, guessed_rows = read_array(
+    "bangkok-propertyhub-guessed-details.js", "BANGKOK_PROPERTYHUB_GUESSED_DETAILS"
+)
+guessed = next(
+    (row for row in guessed_rows if int(row.get("hipflatProjectId", -1)) == PROJECT_ID),
+    None,
+)
+if guessed is None:
+    raise ValueError("Expected exact-project PropertyHub identity match is missing")
+guessed.update({
+    "lat": LAT,
+    "lng": LNG,
+    "locationSourceName": "ZmyHome 物件頁 Google Maps 點位（Hipflat 地址交叉核實）",
+    "locationSourceUrl": GOOGLE_MAPS_URL,
+    "coordinateSourceVerified": True,
+    "coordinateVerificationSourceUrl": RENT_URL,
+    "coordinateVerificationMethod": "Google Maps coordinates linked from direct ZmyHome Pinklao Pavilion listing V122685; exact project name and Soi Borommaratchachonnani 6 address match Hipflat.",
+    "asOf": CHECKED,
+})
+write_array(guessed_path, "BANGKOK_PROPERTYHUB_GUESSED_DETAILS", guessed_rows)
 
-if __name__ == "__main__":
-    main()
+route = {
+    "id": PROJECT_ID,
+    "name": NAME,
+    "originLat": LAT,
+    "originLng": LNG,
+    "distanceKm": 2.694,
+    "minutes": 33,
+    "stationId": "BL05",
+    "source": "Valhalla pedestrian routing (30 nearest stations checked)",
+    "sourceUrl": "https://valhalla1.openstreetmap.de/",
+    "networkSourceUrl": "https://www.openstreetmap.org/copyright",
+    "asOf": CHECKED,
+}
+route_path, route_rows = read_array("bangkok-walk-routes.js", "BANGKOK_WALK_ROUTES")
+route_rows = [row for row in route_rows if int(row.get("id", -1)) != PROJECT_ID]
+route_rows.append(route)
+route_rows.sort(key=lambda row: int(row["id"]))
+write_array(route_path, "BANGKOK_WALK_ROUTES", route_rows)
+
+report = {
+    "hipflatId": PROJECT_ID,
+    "projectName": NAME,
+    "checkedAt": CHECKED,
+    "identity": {
+        "hipflatProject": HIPFLAT_URL,
+        "propertyHubProject": PROPERTYHUB_PROJECT_URL,
+        "crossCheck": "Both project pages identify the Bang Phlat condo; Hipflat gives 119 Soi Borommaratchachonnani 6, 234 units, 8 floors, completed 2008. The PropertyHub project spelling is Pinkrao Pavilion.",
+    },
+    "coordinates": {"lat": LAT, "lng": LNG, "source": GOOGLE_MAPS_URL},
+    "walkingRoute": {
+        "station": "MRT Blue Line Bang Yi Khan (BL05)",
+        "distanceKm": 2.694,
+        "minutes": 33,
+        "method": route["source"],
+    },
+    "saleSample": sale,
+    "rentSample": rent,
+    "availabilityCrossCheck": {
+        "propertyHubRentProject": PROPERTYHUB_PROJECT_URL,
+        "finding": "PropertyHub showed 0 rental listings when checked. ZmyHome supplied an exact-project individual listing refreshed 28 days before the check; current vacancy remains unconfirmed.",
+        "zmyHomeProjectRentPage": ZMYHOME_RENT_PROJECT_URL,
+    },
+    "managementFee": {
+        "publishedValue": 648,
+        "unit": "THB/month",
+        "source": RENT_URL,
+        "note": "ZmyHome direct page lists 648 THB/month but does not make clear whether this is a per-unit amount or a project-wide rate. It is not converted to THB/sqm and is not deducted in ROI.",
+    },
+    "roi": {
+        "status": "not calculated",
+        "reason": "No same-bedroom sale listing was found: the lowest current PropertyHub sale sample is one bedroom, while the recent ZmyHome rental is two bedrooms. Do not mix room types for the default yield.",
+    },
+}
+(REPORTS / "pinklao-pavilion-rent-enrichment-2026-10-18.json").write_text(
+    json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+)
+
+coverage_path = REPORTS / "bangkok-coverage-2026-10-18.csv"
+with coverage_path.open(encoding="utf-8-sig", newline="") as handle:
+    coverage = list(csv.DictReader(handle))
+    headers = list(coverage[0])
+target = next(item for item in coverage if item["hipflat_id"] == str(PROJECT_ID))
+target.update({
+    "coordinates": "yes",
+    "coordinate_source": GOOGLE_MAPS_URL,
+    "sale_sample": "yes",
+    "sale_individual_listing_link": "yes",
+    "sale_source": SALE_URL,
+    "sale_sample_updated": sale["updated"],
+    "rent_sample": "yes",
+    "rent_individual_listing_link": "yes",
+    "rent_source": RENT_URL,
+    "rent_sample_updated": "2026-09-20 (approx.; source said 28 days before check)",
+    "missing": "同房型出售樣本（投報暫不可估）",
+})
+with coverage_path.open("w", encoding="utf-8-sig", newline="") as handle:
+    writer = csv.DictWriter(handle, fieldnames=headers)
+    writer.writeheader()
+    writer.writerows(coverage)
+
+print(json.dumps({
+    "hipflatId": PROJECT_ID,
+    "coordinates": [LAT, LNG],
+    "walkToMrtKm": route["distanceKm"],
+    "sale": [SALE_PRICE, SALE_AREA, round(SALE_PRICE / SALE_AREA)],
+    "rent": [RENT_PRICE, RENT_AREA, round(RENT_PRICE / RENT_AREA, 2)],
+    "roi": report["roi"]["status"],
+}, ensure_ascii=False))

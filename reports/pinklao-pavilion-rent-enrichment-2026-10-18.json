@@ -2,35 +2,68 @@
   "hipflatId": 3794,
   "projectName": "Pinklao Pavilion",
   "checkedAt": "2026-10-18",
-  "listing": {
-    "id": "CX-138669",
-    "price": 7500,
-    "area": 54,
-    "priceSqm": 139,
-    "beds": 2,
-    "roomType": "2BR",
-    "title": "Pinklao Pavilion · 2 房 · 54 ㎡ · ฿7,500/月 · 目前不可租",
-    "url": "https://connex.in.th/detail/%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B8%9B%E0%B8%B4%E0%B9%88%E0%B8%99%E0%B9%80%E0%B8%81%E0%B8%A5%E0%B9%89%E0%B8%B2-%E0%B8%9E%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%A5%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99-mrt-%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%A2%E0%B8%B5%E0%B9%88%E0%B8%82%E0%B8%B1%E0%B8%99-%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%9A%E0%B8%B3%E0%B8%AB%E0%B8%A3%E0%B8%B8-%E0%B9%80%E0%B8%82%E0%B8%95-%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%9E%E0%B8%A5%E0%B8%B1%E0%B8%94-%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E-cx-138669",
-    "sourceName": "Connex",
+  "identity": {
+    "hipflatProject": "https://www.hipflat.co.th/en/projects/pinklao-pavilion-aawhlz",
+    "propertyHubProject": "https://propertyhub.in.th/en/projects/pinkrao-pavilion",
+    "crossCheck": "Both project pages identify the Bang Phlat condo; Hipflat gives 119 Soi Borommaratchachonnani 6, 234 units, 8 floors, completed 2008. The PropertyHub project spelling is Pinkrao Pavilion."
+  },
+  "coordinates": {
+    "lat": 13.7842597961,
+    "lng": 100.4760437012,
+    "source": "https://www.google.com/maps/search/?api=1&query=13.7842597961%2C100.4760437012"
+  },
+  "walkingRoute": {
+    "station": "MRT Blue Line Bang Yi Khan (BL05)",
+    "distanceKm": 2.694,
+    "minutes": 33,
+    "method": "Valhalla pedestrian routing (30 nearest stations checked)"
+  },
+  "saleSample": {
+    "id": "6369727",
+    "price": 1890000,
+    "area": 55.13,
+    "priceSqm": 34283,
+    "beds": 1,
+    "roomType": "ONE_BED_ROOM",
+    "title": "Pinkrao Pavilion · 1BR · 55.13 sqm · ฿1,890,000",
+    "url": "https://propertyhub.in.th/en/listings/condo-for-sale-pinkrao-pavilion-property-code-lnp-c14638---6369727",
+    "sourceName": "PropertyHub",
     "projectName": "Pinklao Pavilion",
+    "updated": "2026-10-16",
     "checkedAt": "2026-10-18",
-    "matchedBy": "Exact Pinklao Pavilion project name, address, and unit ID CX-138669",
-    "availability": "The individual listing says status ไม่ว่าง (unavailable); preserve as a historical sample, not a currently rentable unit.",
-    "listingStatus": "confirmed_unavailable"
+    "matchedBy": "PropertyHub exact project page links listing 6369727; direct page confirms Pinkrao Pavilion, 1 bedroom, 55.13 sqm and ฿1,890,000. Project identity cross-checked against Hipflat name/address and 234 units / 8 floors / 2008 completion.",
+    "listingStatus": "active_as_listed"
   },
-  "details": {
-    "bedrooms": 2,
-    "bathrooms": 2,
-    "floor": 2,
-    "areaSqm": 54,
-    "monthlyRentTHB": 7500,
-    "rentTHBPerSqmMonthExact": 138.88888888888889,
-    "availability": "unavailable per direct listing status",
-    "sourcePage": "https://connex.in.th/detail/%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B8%9B%E0%B8%B4%E0%B9%88%E0%B8%99%E0%B9%80%E0%B8%81%E0%B8%A5%E0%B9%89%E0%B8%B2-%E0%B8%9E%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%A5%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99-mrt-%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%A2%E0%B8%B5%E0%B9%88%E0%B8%82%E0%B8%B1%E0%B8%99-%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%9A%E0%B8%B3%E0%B8%AB%E0%B8%A3%E0%B8%B8-%E0%B9%80%E0%B8%82%E0%B8%95-%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%9E%E0%B8%A5%E0%B8%B1%E0%B8%94-%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E-cx-138669"
+  "rentSample": {
+    "id": "V122685",
+    "price": 7000,
+    "area": 54.0,
+    "priceSqm": 130,
+    "beds": 2,
+    "roomType": "TWO_BED_ROOM",
+    "title": "Pinklao Pavilion · 2BR · 54 sqm · ฿7,000/month",
+    "url": "https://zmyhome.com/property/V122685",
+    "sourceName": "ZmyHome",
+    "projectName": "Pinklao Pavilion",
+    "updated": "2026-09-20",
+    "checkedAt": "2026-10-18",
+    "matchedBy": "Direct ZmyHome listing V122685 states Pinklao Pavilion, Soi Borommaratchachonnani 6, Building B, 2 bedrooms, 54 sqm and ฿7,000/month. The project comparison table showed the listing refreshed 28 days before the 2026-10-18 check; stored date is approximate.",
+    "availability": "Listed on the source as a live rental and refreshed 28 days before the check; vacancy has not been independently confirmed.",
+    "listingStatus": "availability_unconfirmed_update_under_30d"
   },
-  "crossCheck": {
-    "source": "https://zmyhome.com/rent/condo/project-list/13599/owner",
-    "finding": "The project-specific rent page also lists Pinklao Pavilion's 2-bedroom, 54 sqm unit at ฿7,000/month; this corroborates project and room type but is not used as the sample because it does not expose an individual unit URL."
+  "availabilityCrossCheck": {
+    "propertyHubRentProject": "https://propertyhub.in.th/en/projects/pinkrao-pavilion",
+    "finding": "PropertyHub showed 0 rental listings when checked. ZmyHome supplied an exact-project individual listing refreshed 28 days before the check; current vacancy remains unconfirmed.",
+    "zmyHomeProjectRentPage": "https://zmyhome.com/rent/condo/project-list/13599/owner"
   },
-  "yieldNote": "This is a historical two-bedroom asking-rent sample marked unavailable. It is included as market evidence and should not be interpreted as current availability."
+  "managementFee": {
+    "publishedValue": 648,
+    "unit": "THB/month",
+    "source": "https://zmyhome.com/property/V122685",
+    "note": "ZmyHome direct page lists 648 THB/month but does not make clear whether this is a per-unit amount or a project-wide rate. It is not converted to THB/sqm and is not deducted in ROI."
+  },
+  "roi": {
+    "status": "not calculated",
+    "reason": "No same-bedroom sale listing was found: the lowest current PropertyHub sale sample is one bedroom, while the recent ZmyHome rental is two bedrooms. Do not mix room types for the default yield."
+  }
 }
