@@ -1,0 +1,38 @@
+{
+  "projectId": 3322,
+  "name": "Chewathai Hallmark Ladprao - Chokchai 4",
+  "checkedAt": "2026-10-18",
+  "saleListing": {
+    "priceThb": 3950000,
+    "bedrooms": 2,
+    "areaSqm": 45,
+    "priceThbPerSqm": 87778,
+    "url": "https://propertyhub.in.th/en/listings/a050287-chewathai-hallmark-ladprao-chokchai-4---6346585",
+    "projectPageUpdatedAt": "2026-10-17T10:21",
+    "availability": "unconfirmed with advertiser"
+  },
+  "rentListing": {
+    "monthlyRentThb": 21000,
+    "bedrooms": 2,
+    "areaSqm": 46,
+    "rentThbPerSqmMonth": 456.52,
+    "url": "https://propertyhub.in.th/en/listings/condo-for-rent-at-chewathai-hallmark-ladprao-chokchai-4-c6910019-id-line-condo44---6476456",
+    "projectPageUpdatedAt": "2026-10-18T09:00",
+    "availability": "unconfirmed with advertiser"
+  },
+  "managementFee": {
+    "rateThbPerSqmMonth": 45,
+    "source": "https://propertyhub.in.th/en/condo-for-rent/project-chewathai-hallmark-ladprao-chokchai-4",
+    "note": "Published PropertyHub project information; confirm with juristic office."
+  },
+  "yieldEstimate": {
+    "purchasePriceThb": 3950000,
+    "purchaseAreaSqm": 45,
+    "monthlyRentAtPurchaseAreaThb": 20543,
+    "agentMonthsDeducted": 1,
+    "annualRentAfterAgentThb": 225973,
+    "annualCommonFeeThb": 24300,
+    "netYieldPercent": 5.11,
+    "formula": "(estimated monthly rent × 11 − management fee × purchase area × 12) ÷ purchase price"
+  }
+}
