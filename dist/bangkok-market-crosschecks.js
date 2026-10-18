@@ -1,46 +1,35 @@
 window.BANGKOK_MARKET_CROSSCHECKS = [
   {
-    "hipflatId": 3018,
-    "projectName": "Paragon 31",
+    "hipflatId": 3004,
+    "projectName": "LK Tower",
     "asOf": "2026-10-18",
-    "sourceName": "DDproperty",
-    "projectSourceUrl": "https://www.ddproperty.com/en/project/10614-paragon-31",
+    "sourceName": "PropertyHub",
+    "projectSourceUrl": "https://propertyhub.in.th/en/condo-for-sale/project-lk-tower---20199",
     "sale": {
-      "activeListingCount": 0
+      "activeListingCount": 0,
+      "sourceUrl": "https://propertyhub.in.th/en/condo-for-sale/project-lk-tower---20199"
     },
     "rent": {
-      "activeListingCount": 3,
-      "listings": [
-        {
-          "id": "500140265",
-          "price": 75000,
-          "area": 65,
-          "priceSqm": 1154,
-          "bedrooms": 2,
-          "listedAt": "2026-10-14",
-          "url": "https://www.ddproperty.com/en/property/paragon-31-bangkok-for-rent-500140265"
-        },
-        {
-          "id": "500015821",
-          "price": 75000,
-          "area": 75,
-          "priceSqm": 1000,
-          "bedrooms": 2,
-          "listedAt": "2026-10-14",
-          "url": "https://www.ddproperty.com/en/property/paragon-31-bangkok-for-rent-500015821"
-        },
-        {
-          "id": "500015725",
-          "price": 65000,
-          "area": 65,
-          "priceSqm": 1000,
-          "bedrooms": 2,
-          "listedAt": "2026-10-14",
-          "url": "https://www.ddproperty.com/en/property/paragon-31-bangkok-for-rent-500015725"
-        }
-      ],
-      "sourceUrl": "https://www.ddproperty.com/en/condo-for-rent/at-paragon-31-10614"
-    }
+      "activeListingCount": 0,
+      "sourceUrl": "https://propertyhub.in.th/en/condo-for-rent/project-lk-tower---20199"
+    },
+    "availabilitySources": [
+      {
+        "sourceName": "Hipflat",
+        "url": "https://www.hipflat.co.th/projects/lk-tower-yvbgnf",
+        "statusLabel": "目前無可用房源"
+      },
+      {
+        "sourceName": "Scancondo 出售",
+        "url": "https://eng.scancondo.com/buy-sell/condo/Condo-LK-Tower",
+        "statusLabel": "目前 0 筆"
+      },
+      {
+        "sourceName": "Scancondo 出租",
+        "url": "https://eng.scancondo.com/rent-condo/Condo-LK-Tower",
+        "statusLabel": "目前 0 筆"
+      }
+    ]
   },
   {
     "hipflatId": 3006,
@@ -117,6 +106,49 @@ window.BANGKOK_MARKET_CROSSCHECKS = [
         }
       ],
       "sourceUrl": "https://www.ddproperty.com/en/condo-for-rent/at-ruamrudee-penthouse-8486"
+    }
+  },
+  {
+    "hipflatId": 3018,
+    "projectName": "Paragon 31",
+    "asOf": "2026-10-18",
+    "sourceName": "DDproperty",
+    "projectSourceUrl": "https://www.ddproperty.com/en/project/10614-paragon-31",
+    "sale": {
+      "activeListingCount": 0
+    },
+    "rent": {
+      "activeListingCount": 3,
+      "listings": [
+        {
+          "id": "500140265",
+          "price": 75000,
+          "area": 65,
+          "priceSqm": 1154,
+          "bedrooms": 2,
+          "listedAt": "2026-10-14",
+          "url": "https://www.ddproperty.com/en/property/paragon-31-bangkok-for-rent-500140265"
+        },
+        {
+          "id": "500015821",
+          "price": 75000,
+          "area": 75,
+          "priceSqm": 1000,
+          "bedrooms": 2,
+          "listedAt": "2026-10-14",
+          "url": "https://www.ddproperty.com/en/property/paragon-31-bangkok-for-rent-500015821"
+        },
+        {
+          "id": "500015725",
+          "price": 65000,
+          "area": 65,
+          "priceSqm": 1000,
+          "bedrooms": 2,
+          "listedAt": "2026-10-14",
+          "url": "https://www.ddproperty.com/en/property/paragon-31-bangkok-for-rent-500015725"
+        }
+      ],
+      "sourceUrl": "https://www.ddproperty.com/en/condo-for-rent/at-paragon-31-10614"
     }
   }
 ];

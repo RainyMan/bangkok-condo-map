@@ -1,0 +1,58 @@
+{
+  "hipflatId": 3004,
+  "project": "LK Tower",
+  "asOf": "2026-10-18",
+  "location": {
+    "latitude": 13.82200134,
+    "longitude": 100.6426991,
+    "verified": true,
+    "coordinateSource": "https://www.home.co.th/condo/lk-tower-10919",
+    "projectIdentityCrosscheck": "https://www.hipflat.co.th/projects/lk-tower-yvbgnf",
+    "method": "Home.co.th project-page coordinates matched exact project name, Nuanchan Road address, developer Link Property, and 340-unit project facts; coordinate is within about 4 m of the ZmyHome area-search center (which is not used as a listing sample)."
+  },
+  "projectFacts": {
+    "completedYear": 2021,
+    "floors": 8,
+    "units": 340,
+    "source": "https://www.hipflat.co.th/projects/lk-tower-yvbgnf",
+    "crosscheckSource": "https://www.home.co.th/condo/lk-tower-10919"
+  },
+  "nearestStationWalkingRoute": {
+    "id": 3004,
+    "name": "LK Tower",
+    "originLat": 13.82200134,
+    "originLng": 100.6426991,
+    "distanceKm": 3.784,
+    "minutes": 46,
+    "stationId": "PK22",
+    "source": "Valhalla pedestrian routing (30 nearest stations checked)",
+    "sourceUrl": "https://valhalla1.openstreetmap.de/",
+    "networkSourceUrl": "https://www.openstreetmap.org/copyright",
+    "asOf": "2026-10-18"
+  },
+  "marketAvailability": {
+    "sale": {
+      "status": "no_current_matching_listing",
+      "sampleCount": 0,
+      "sources": [
+        "https://propertyhub.in.th/en/condo-for-sale/project-lk-tower---20199",
+        "https://eng.scancondo.com/buy-sell/condo/Condo-LK-Tower",
+        "https://www.hipflat.co.th/projects/lk-tower-yvbgnf"
+      ]
+    },
+    "rent": {
+      "status": "no_current_matching_listing",
+      "sampleCount": 0,
+      "sources": [
+        "https://propertyhub.in.th/en/condo-for-rent/project-lk-tower---20199",
+        "https://eng.scancondo.com/rent-condo/Condo-LK-Tower",
+        "https://www.hipflat.co.th/projects/lk-tower-yvbgnf"
+      ]
+    },
+    "roi": {
+      "status": "not_calculable",
+      "reason": "No exact-project sale or rental listing is available to form a linked purchase/rent pair."
+    },
+    "excludedComparables": "ZmyHome returns nearby 1 km area listings under other project names; none are attributed to LK Tower."
+  }
+}
