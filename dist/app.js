@@ -188,7 +188,10 @@
       const count = bedroomCountForSample(sample);
       if (!count || !(Number(sample.price) > 0) || !(Number(sample.area) > 0)) return;
       const key = String(count), current = saleRooms[key] || {};
-      if (!(Number(current.minimum) > 0) || Number(sample.price) < Number(current.minimum)) {
+      // A direct listing is the authoritative source for both total price and
+      // its matching floor area. Prefer it on ties so a summary cannot leave a
+      // different unit's area attached to the same minimum price.
+      if (!(Number(current.minimum) > 0) || Number(sample.price) <= Number(current.minimum)) {
         saleRooms[key] = { ...current, beds: count, minimum: Number(sample.price), minimumArea: Number(sample.area), area: Number(sample.area), minimumSourceUrl: sample.url, sourceUrl: sample.url };
       }
     });
@@ -214,8 +217,11 @@
     // Keep price, floor area, and source URL from the same listing together;
     // bedroom summaries are valid only when they provide all three.
     const roomSummaryMinimum = Number(room?.minimum || 0);
-    const summaryArea = Number(room?.minimumArea || (room?.marketSummary ? 0 : room?.area) || 0);
-    const summaryUrl = room?.minimumSourceUrl || room?.sourceUrl || room?.listingUrl || null;
+    // Bedroom summary minima are usable only when the data explicitly binds
+    // that price, area and URL to one individual listing. Generic `area` fields
+    // can describe a room-type average and must not be paired with a minimum.
+    const summaryArea = Number(room?.minimumArea || 0);
+    const summaryUrl = room?.minimumSourceUrl || null;
     const isDirectListingUrl = url => typeof url === 'string' && /\/(?:ads|listings|property|property-for-sale|property-for-rent)\//i.test(url);
     // Only use a bedroom summary as a candidate when its source points to an
     // individual listing. A project or market-summary page can have a minimum
