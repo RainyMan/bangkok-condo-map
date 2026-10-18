@@ -281,29 +281,31 @@
   const yieldOverrides = new Map();
   // Refresh auto-generated baselines when new exact listings arrive while
   // keeping values the user intentionally edited and saved.
-  const yieldStorageKey = 'bangkokCondoYieldInputsV16';
+  const yieldStorageKey = 'bangkokCondoYieldInputsV17';
   const loadYieldInputs = () => {
     try {
       const current = localStorage.getItem(yieldStorageKey);
       if (current) return JSON.parse(current);
-      const previous = JSON.parse(localStorage.getItem('bangkokCondoYieldInputsV15') || localStorage.getItem('bangkokCondoYieldInputsV14') || localStorage.getItem('bangkokCondoYieldInputsV13') || localStorage.getItem('bangkokCondoYieldInputsV12') || localStorage.getItem('bangkokCondoYieldInputsV11') || localStorage.getItem('bangkokCondoYieldInputsV10') || localStorage.getItem('bangkokCondoYieldInputsV9') || localStorage.getItem('bangkokCondoYieldInputsV8') || localStorage.getItem('bangkokCondoYieldInputsV7') || localStorage.getItem('bangkokCondoYieldInputsV6') || localStorage.getItem('bangkokCondoYieldInputsV5') || '{}');
+      const previous = JSON.parse(localStorage.getItem('bangkokCondoYieldInputsV16') || localStorage.getItem('bangkokCondoYieldInputsV15') || localStorage.getItem('bangkokCondoYieldInputsV14') || localStorage.getItem('bangkokCondoYieldInputsV13') || localStorage.getItem('bangkokCondoYieldInputsV12') || localStorage.getItem('bangkokCondoYieldInputsV11') || localStorage.getItem('bangkokCondoYieldInputsV10') || localStorage.getItem('bangkokCondoYieldInputsV9') || localStorage.getItem('bangkokCondoYieldInputsV8') || localStorage.getItem('bangkokCondoYieldInputsV7') || localStorage.getItem('bangkokCondoYieldInputsV6') || localStorage.getItem('bangkokCondoYieldInputsV5') || '{}');
       const recalculated = {};
       condos.forEach(c => {
         const old = previous[c.id] || {};
-        const beds = String(old.beds || '2');
-        const defaults = yieldDefaultsFor(c, beds);
+        const previousBeds = String(old.beds || '2');
+        const twoBedroomDefaults = yieldDefaultsFor(c, '2');
+        const defaults = Number(twoBedroomDefaults.price) > 0 && Number(twoBedroomDefaults.area) > 0
+          ? twoBedroomDefaults : yieldDefaultsFor(c);
         if (!(Number(defaults.price) > 0) || !(Number(defaults.area) > 0) || !(Number(defaults.rent) > 0)) return;
-        const oldSaleRoom = c.sale?.byBedroom?.[beds] || {};
-        const oldRentRoom = c.rent?.byBedroom?.[beds] || {};
+        const oldSaleRoom = c.sale?.byBedroom?.[previousBeds] || {};
+        const oldRentRoom = c.rent?.byBedroom?.[previousBeds] || {};
         const saleCandidates = [
-          ...(c.sale?.samples || []).filter(sample => bedroomCountForSample(sample) === Number(beds)).map(sample => ({ price: Number(sample.price), area: Number(sample.area) })),
+          ...(c.sale?.samples || []).filter(sample => bedroomCountForSample(sample) === Number(previousBeds)).map(sample => ({ price: Number(sample.price), area: Number(sample.area) })),
           { price: Number(oldSaleRoom.minimum), area: Number(oldSaleRoom.area) },
           { price: Number(c.sale?.minimum), area: Number(c.sale?.minimumArea) },
           { price: Number(oldSaleRoom.average), area: Number(oldSaleRoom.average) / Number(oldSaleRoom.averageSqm) },
         ].filter(candidate => candidate.price > 0 && candidate.area > 0);
         const rentRates = [
           Number(oldRentRoom.minimumSqm), Number(oldRentRoom.averageSqm),
-          ...(c.rent?.samples || []).filter(sample => bedroomCountForSample(sample) === Number(beds) && Number(sample.price) > 0 && Number(sample.area) > 0).map(sample => Number(sample.price) / Number(sample.area)),
+          ...(c.rent?.samples || []).filter(sample => bedroomCountForSample(sample) === Number(previousBeds) && Number(sample.price) > 0 && Number(sample.area) > 0).map(sample => Number(sample.price) / Number(sample.area)),
           Number(c.rent?.minimumSqm),
         ].filter(rate => rate > 0);
         const oldSaleMatches = saleCandidates.some(candidate => Number(old.price) === candidate.price && Number(old.area) === candidate.area);
@@ -314,7 +316,7 @@
           price: useRefreshedBaseline ? defaults.price : Number(old.price),
           rent: useRefreshedBaseline ? defaults.rent : Number(old.rent),
           area: useRefreshedBaseline ? defaults.area : Number(old.area),
-          beds: beds,
+          beds: useRefreshedBaseline ? String(defaults.beds || '2') : previousBeds,
           deductFee: old.deductFee ?? true,
           deductAgent: old.deductAgent ?? true,
         };
