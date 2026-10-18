@@ -1,0 +1,36 @@
+{
+  "checkedAt": "2026-10-18",
+  "hipflatId": 3019,
+  "project": "Chalermnit Art De Maison",
+  "coordinates": {
+    "verified": true,
+    "source": "https://propertyhub.in.th/en/projects/chalermnit-art-de-maison-sukhumvit-53"
+  },
+  "sale": {
+    "bedrooms": 2,
+    "priceTHB": 24030000,
+    "areaSqm": 86.1,
+    "listingUpdated": "2026-10-16",
+    "source": "https://propertyhub.in.th/en/listings/2-beds-86-17-sqm-chalermnit-art-de-maison---5095068"
+  },
+  "rent": {
+    "bedrooms": 2,
+    "priceTHBPerMonth": 55000,
+    "areaSqm": 86.17,
+    "priceTHBPerSqmPerMonth": 638.27,
+    "listedAt": "2026-09-25",
+    "availability": "unconfirmed; listing date within 30 days of review",
+    "source": "https://www.ddproperty.com/en/property/chalermnit-art-de-maison-bangkok-for-rent-500314406"
+  },
+  "commonFeeTHBPerSqmPerMonth": {
+    "value": 50,
+    "source": "https://www.ddproperty.com/en/property/chalermnit-art-de-maison-bangkok-for-rent-500314406"
+  },
+  "yield": {
+    "projectedMonthlyRentTHB": 54955,
+    "agentMonthsDeductedPerYear": 1,
+    "commonFeeDeducted": true,
+    "netAnnualYieldPercent": 2.3,
+    "formula": "(projectedMonthlyRent * 11 - commonFeePerSqm * saleAreaSqm * 12) / lowestTwoBedroomSalePrice * 100"
+  }
+}
