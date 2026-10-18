@@ -1,0 +1,36 @@
+{
+  "hipflatId": 3794,
+  "projectName": "Pinklao Pavilion",
+  "checkedAt": "2026-10-18",
+  "listing": {
+    "id": "CX-138669",
+    "price": 7500,
+    "area": 54,
+    "priceSqm": 139,
+    "beds": 2,
+    "roomType": "2BR",
+    "title": "Pinklao Pavilion · 2 房 · 54 ㎡ · ฿7,500/月 · 目前不可租",
+    "url": "https://connex.in.th/detail/%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B8%9B%E0%B8%B4%E0%B9%88%E0%B8%99%E0%B9%80%E0%B8%81%E0%B8%A5%E0%B9%89%E0%B8%B2-%E0%B8%9E%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%A5%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99-mrt-%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%A2%E0%B8%B5%E0%B9%88%E0%B8%82%E0%B8%B1%E0%B8%99-%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%9A%E0%B8%B3%E0%B8%AB%E0%B8%A3%E0%B8%B8-%E0%B9%80%E0%B8%82%E0%B8%95-%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%9E%E0%B8%A5%E0%B8%B1%E0%B8%94-%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E-cx-138669",
+    "sourceName": "Connex",
+    "projectName": "Pinklao Pavilion",
+    "checkedAt": "2026-10-18",
+    "matchedBy": "Exact Pinklao Pavilion project name, address, and unit ID CX-138669",
+    "availability": "The individual listing says status ไม่ว่าง (unavailable); preserve as a historical sample, not a currently rentable unit.",
+    "listingStatus": "confirmed_unavailable"
+  },
+  "details": {
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "floor": 2,
+    "areaSqm": 54,
+    "monthlyRentTHB": 7500,
+    "rentTHBPerSqmMonthExact": 138.88888888888889,
+    "availability": "unavailable per direct listing status",
+    "sourcePage": "https://connex.in.th/detail/%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B8%9B%E0%B8%B4%E0%B9%88%E0%B8%99%E0%B9%80%E0%B8%81%E0%B8%A5%E0%B9%89%E0%B8%B2-%E0%B8%9E%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%A5%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99-mrt-%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%A2%E0%B8%B5%E0%B9%88%E0%B8%82%E0%B8%B1%E0%B8%99-%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%9A%E0%B8%B3%E0%B8%AB%E0%B8%A3%E0%B8%B8-%E0%B9%80%E0%B8%82%E0%B8%95-%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%9E%E0%B8%A5%E0%B8%B1%E0%B8%94-%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E-cx-138669"
+  },
+  "crossCheck": {
+    "source": "https://zmyhome.com/rent/condo/project-list/13599/owner",
+    "finding": "The project-specific rent page also lists Pinklao Pavilion's 2-bedroom, 54 sqm unit at ฿7,000/month; this corroborates project and room type but is not used as the sample because it does not expose an individual unit URL."
+  },
+  "yieldNote": "This is a historical two-bedroom asking-rent sample marked unavailable. It is included as market evidence and should not be interpreted as current availability."
+}
