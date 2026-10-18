@@ -1,0 +1,56 @@
+{
+  "hipflatId": 3139,
+  "name": "Varrzon Residence Sukhumvit 36",
+  "checkedAt": "2026-10-18",
+  "location": {
+    "status": "verified_project_poi",
+    "lat": 13.722641799133,
+    "lng": 100.57552233338,
+    "sourceUrl": "https://map.longdo.com/p/A10174793",
+    "corroboratingProjectUrl": "https://www.hipflat.co.th/en/projects/varrzon-residence-sukhumvit-36-zlyrxc",
+    "method": "approved_longdo_poi_exact_name_and_thai_address_cross_checked_with_hipflat_project",
+    "evidence": "Longdo approved POI A10174793 has the exact Thai/English project name and Soi Naphasap 2 address; its canonical map page embeds coordinates 13.722641799133, 100.57552233338. Hipflat's exact project page has the same project name and address."
+  },
+  "walkingRoute": {
+    "distanceKm": 0.556,
+    "minutes": 7,
+    "stationId": "E6",
+    "id": 3139,
+    "name": "Varrzon Residence Sukhumvit 36",
+    "originLat": 13.722641799133,
+    "originLng": 100.57552233338,
+    "source": "Valhalla pedestrian routing (30 nearest stations checked)",
+    "sourceUrl": "https://valhalla1.openstreetmap.de/",
+    "networkSourceUrl": "https://www.openstreetmap.org/copyright",
+    "asOf": "2026-10-18"
+  },
+  "market": {
+    "sale": {
+      "status": "no_current_individual_listing_verified",
+      "sources": [
+        {
+          "url": "https://www.ddproperty.com/en/project/13621-%E0%B8%A7%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%8B%E0%B8%AD%E0%B8%93-%E0%B9%80%E0%B8%A3%E0%B8%AA%E0%B8%8B%E0%B8%B4%E0%B9%80%E0%B8%94%E0%B9%89%E0%B8%99%E0%B8%97%E0%B9%8C-%E0%B8%AA%E0%B8%B8%E0%B8%82%E0%B8%B8%E0%B8%A1%E0%B8%A7%E0%B8%B4%E0%B8%97-36-varrzon-residence-sukhumvit-36/",
+          "finding": "DDproperty project page search result reports 0 sale listings; individual unit-level listing not found."
+        }
+      ]
+    },
+    "rent": {
+      "status": "summary_present_individual_active_listing_not_verified",
+      "sources": [
+        {
+          "url": "https://www.hipflat.co.th/en/projects/varrzon-residence-sukhumvit-36-zlyrxc",
+          "finding": "Hipflat project result reports 6 rentals and shows two-bedroom cards at ฿38,000–50,000/month for 50 sqm, but the 38,000 individual ad resolves to Rhythm Sukhumvit 36-38, a different project. Do not import that card as a Varrzon sample."
+        },
+        {
+          "url": "https://www.thailand-property.com/ads/2-bedroom-apartment-for-rent-in-varrzon-residence-sukhumvit-36-khlong-tan-bangkok-near-bts-thong-lo_9886b13066a1-3900-c642-ce0b-6a4cc089",
+          "finding": "Exact Varrzon 2-bedroom, 50 sqm, ฿50,000/month apartment page was indexed about five months ago; current availability cannot be confirmed, so it is excluded from current rent statistics and ROI."
+        },
+        {
+          "url": "https://www.renthub.in.th/en/varrzon-residence-sukhumvit-36",
+          "finding": "Building rental page lists studio and one-bedroom rates with rooms available, but it identifies serviced apartment rooms and does not provide a current individually linked Varrzon two-bedroom condo listing."
+        }
+      ]
+    },
+    "yield": "not calculated: no current verified sale sample and no current individual rent sample that can be safely matched to the project"
+  }
+}
