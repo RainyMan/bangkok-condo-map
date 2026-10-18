@@ -1,0 +1,172 @@
+{
+  "hipflatId": 3150,
+  "name": "Thanapat Vipha",
+  "checkedAt": "2026-10-18",
+  "projectIdentity": {
+    "hipflatProjectUrl": "https://www.hipflat.co.th/en/projects/thanapat-vipha-sfaaic",
+    "propertyHubProjectUrl": "https://propertyhub.in.th/en/projects/sym-vibha-ladprao",
+    "identitySourceUrl": "https://www.bkkcitismart.com/en/buy/project/P24121101",
+    "match": "BKK CitySmart names SYM Vibha-Ladprao's previous project name as Thanapat Vipha and gives the same Vibhavadi Rangsit Soi 9 / Soi Choei Phuang address, 29 floors and 728 units as the Hipflat record."
+  },
+  "location": {
+    "status": "verified_exact_project_map_point",
+    "lat": 13.80661558110686,
+    "lng": 100.5597865287567,
+    "sourceUrl": "https://propertyhub.in.th/en/projects/sym-vibha-ladprao",
+    "corroboratingSourceUrl": "https://www.bkkfinder.com/en/project/j9zyfax/sym-vibha-ladprao",
+    "method": "coordinates read from exact PropertyHub project page's embedded project.location object; BKK Finder project pin is within about 15 metres."
+  },
+  "projectDetails": {
+    "completedYear": 2010,
+    "units": 728,
+    "floors": 29,
+    "areaSqm": "27-78",
+    "commonFeeThbPerSqmMonth": 30,
+    "sourceUrl": "https://propertyhub.in.th/en/projects/sym-vibha-ladprao",
+    "corroboratingSourceUrl": "https://www.lazudi.com/th-en/bangkok/project/sym-vibha-ladprao-2813",
+    "yearConflict": "BKK CitySmart shows 2013; PropertyHub, BKK Finder and Lazudi show 2010. The direct PropertyHub listing's generic overview says around 2010-2011 and one old ad snippet says 2014. UI uses 2010; keep discrepancy visible for future manual verification."
+  },
+  "marketSamples": {
+    "sale": {
+      "sourceUrl": "https://propertyhub.in.th/en/condo-for-sale/project-sym-vibha-ladprao",
+      "platformListings": 20,
+      "verifiedIndividualSamples": 5,
+      "samples": [
+        {
+          "id": "6145197",
+          "price": 2300000,
+          "area": 27.71,
+          "beds": 0,
+          "roomType": "Studio",
+          "updated": "2026-09-12T05:19:00+07:00",
+          "title": "SYM Vipah Ladphrao Studio，27.71㎡",
+          "url": "https://propertyhub.in.th/en/listings/condo-for-sale-sym-vipah-ladphrao---6145197"
+        },
+        {
+          "id": "6192178",
+          "price": 2700000,
+          "area": 37.0,
+          "beds": 1,
+          "roomType": "1 Bedroom",
+          "updated": "2026-09-12T12:00:00+07:00",
+          "title": "SYM Vibha-Ladprao 1 房，37㎡",
+          "url": "https://propertyhub.in.th/en/listings/for-sell-condo-sym-vibha-ladprao-building-1-floor-17-1-bed-room-room-size-37-sqm--aa2008e6---6192178"
+        },
+        {
+          "id": "6325521",
+          "price": 4990000,
+          "area": 53.75,
+          "beds": 2,
+          "roomType": "2 Bedroom",
+          "updated": "2026-09-12T05:13:00+07:00",
+          "title": "SYM Vibha-Ladprao 2 房，53.75㎡",
+          "url": "https://propertyhub.in.th/en/listings/a050264-sym-vibha-ladprao---6325521"
+        },
+        {
+          "id": "6324630",
+          "price": 5170000,
+          "area": 53.75,
+          "beds": 2,
+          "roomType": "2 Bedroom",
+          "updated": "2026-09-11T13:09:00+07:00",
+          "title": "SYM Vibha-Ladprao 2 房，53.75㎡",
+          "url": "https://propertyhub.in.th/en/listings/23rd-floor-2-br-sym-vibha-ladprao-near-bts-mo-chit-id-3224959---6324630"
+        },
+        {
+          "id": "6082248",
+          "price": 5200000,
+          "area": 53.7,
+          "beds": 2,
+          "roomType": "2 Bedroom",
+          "updated": "2026-09-11T01:29:00+07:00",
+          "title": "SYM Vipha-Ladprao 2 房，53.7㎡",
+          "url": "https://propertyhub.in.th/en/listings/sym-vipha-ladprao-condo-for-sale---6082248"
+        }
+      ],
+      "lowestTwoBedroom": {
+        "priceThb": 4990000,
+        "areaSqm": 53.75,
+        "priceThbPerSqm": 92837,
+        "url": "https://propertyhub.in.th/en/listings/a050264-sym-vibha-ladprao---6325521"
+      }
+    },
+    "rent": {
+      "sourceUrl": "https://propertyhub.in.th/en/condo-for-rent/project-sym-vibha-ladprao",
+      "platformListings": 54,
+      "verifiedIndividualSamples": 4,
+      "samples": [
+        {
+          "id": "6145234",
+          "price": 12000,
+          "area": 27.71,
+          "beds": 0,
+          "roomType": "Studio",
+          "updated": "2026-10-08T17:05:00+07:00",
+          "title": "SYM Vipah Ladphrao Studio，27.71㎡",
+          "url": "https://propertyhub.in.th/en/listings/condo-for-rent-sym-vipah-ladphrao---6145234"
+        },
+        {
+          "id": "6404908",
+          "price": 13000,
+          "area": 34.0,
+          "beds": 1,
+          "roomType": "1 Bedroom",
+          "updated": "2026-10-11T16:00:00+07:00",
+          "title": "SYM Vibha-Ladprao 1 房，34㎡",
+          "url": "https://propertyhub.in.th/en/listings/condo-for-rent-at-sym-vibha-ladprao-p6909023---6404908"
+        },
+        {
+          "id": "5493259",
+          "price": 22500,
+          "area": 53.0,
+          "beds": 2,
+          "roomType": "2 Bedroom",
+          "updated": "2026-10-11T14:45:00+07:00",
+          "title": "SYM Vibha-Ladprao 2 房，53㎡",
+          "url": "https://propertyhub.in.th/en/listings/z2740141068-condo-for-rent-sym-vipha-ladphrao-condominium---5493259"
+        },
+        {
+          "id": "5744615",
+          "price": 25000,
+          "area": 53.0,
+          "beds": 2,
+          "roomType": "2 Bedroom",
+          "updated": "2026-10-10T10:00:00+07:00",
+          "title": "SYM Vibha-Ladprao 2 房，53㎡",
+          "url": "https://propertyhub.in.th/en/listings/for-rent-sym-vibhaladprao-condominium-fully-furnished-close-to-bts-mo-chit-chomphon-area-chatuchak-district-bangkok-rw007482---5744615"
+        }
+      ],
+      "lowestTwoBedroomBySqm": {
+        "monthlyRentThb": 22500,
+        "areaSqm": 53.0,
+        "rentThbPerSqmMonth": 424.53,
+        "url": "https://propertyhub.in.th/en/listings/z2740141068-condo-for-rent-sym-vipha-ladphrao-condominium---5493259"
+      }
+    }
+  },
+  "yieldEstimate": {
+    "bedrooms": 2,
+    "purchasePriceThb": 4990000,
+    "saleAreaSqm": 53.75,
+    "rentSourceRateThbPerSqmMonth": 424.53,
+    "estimatedMonthlyRentAtSaleAreaThb": 22818,
+    "deductAgentMonths": 1,
+    "annualCommonFeeThb": 19350.0,
+    "netAnnualYieldPercent": 4.64,
+    "formula": "(estimated monthly rent × 11 − common fee × sale area × 12) / lowest two-bedroom sale total × 100",
+    "caveat": "Rent is estimated from the lowest-rent-per-sqm current two-bedroom listing. Both individual listing pages omit a last-update timestamp, but their project index cards show recent refresh dates. Availability must still be confirmed with the poster."
+  },
+  "walkingRoute": {
+    "id": 3150,
+    "name": "Thanapat Vipha",
+    "originLat": 13.80661558110686,
+    "originLng": 100.5597865287567,
+    "distanceKm": 1.099,
+    "minutes": 14,
+    "stationId": "N8",
+    "source": "Valhalla pedestrian routing (30 nearest stations checked)",
+    "sourceUrl": "https://valhalla1.openstreetmap.de/",
+    "networkSourceUrl": "https://www.openstreetmap.org/copyright",
+    "asOf": "2026-10-18"
+  }
+}
