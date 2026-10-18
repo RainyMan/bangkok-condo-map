@@ -1,0 +1,74 @@
+{
+  "hipflatId": 6498,
+  "project": "North Park Place",
+  "checkedAt": "2026-10-18",
+  "sources": {
+    "project": "https://www.hipflat.co.th/en/projects/north-park-place-iqoecm",
+    "managementFee": "https://propertyhub.in.th/en/projects/north-park-place",
+    "saleLowest": "https://www.thaihometown.com/%EF%BF%BD%CD%B9%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%CA%B9%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD-%EF%BF%BD%EF%BF%BD%EF%BF%BD%C3%B6%E4%BF%BF%EF%BF%BD%EF%BF%BD-%EF%BF%BD%CD%B9%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%D4%B7%EF%BF%BD%EF%BF%BD%EF%BF%BD-%EF%BF%BD%EF%BF%BD%EF%BF%BD%C3%B6%E4%BF%BF%EF%BF%BD%EF%BF%BD-5239010.html",
+    "saleRecent": "https://www.hipflat.co.th/en/ads/4t8eth498ae12a9t904c3t243ul33ah0",
+    "rentRecent": "https://www.hipflat.co.th/en/ads/4t8eth498ae12a9t904c3t243ul33ah0",
+    "rentLowestPerSqm": "https://propertyhub.in.th/en/listings/condo-168-sq-m-for-rent-north-park-place-live-like-5-star-hotel-free-wi-fi-and-maid--ac3a091a---2966511"
+  },
+  "saleSamples": [
+    {
+      "id": "5239010",
+      "price": 13900000,
+      "area": 175.36,
+      "priceSqm": 79266,
+      "beds": 2,
+      "roomType": "2BR",
+      "title": "ขายคอนโด North Park Place 2 ห้องนอน 175.36 ตร.ม. (ประกาศ 13 ก.ค. 2569)",
+      "url": "https://www.thaihometown.com/%EF%BF%BD%CD%B9%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%CA%B9%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD-%EF%BF%BD%EF%BF%BD%EF%BF%BD%C3%B6%E4%BF%BF%EF%BF%BD%EF%BF%BD-%EF%BF%BD%CD%B9%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%D4%B7%EF%BF%BD%EF%BF%BD%EF%BF%BD-%EF%BF%BD%EF%BF%BD%EF%BF%BD%C3%B6%E4%BF%BF%EF%BF%BD%EF%BF%BD-5239010.html",
+      "sourceName": "ThaiHometown",
+      "projectName": "North Park Place",
+      "updated": "2026-07-13",
+      "checkedAt": "2026-10-18",
+      "matchedBy": "listing_text_names_North_Park_Place_and_address_Tha_Sai_1_Thung_Song_Hong_Lak_Si",
+      "listingStatus": "availability_unconfirmed_update_over_30d"
+    },
+    {
+      "id": "U6680163",
+      "price": 18500000,
+      "area": 167,
+      "priceSqm": 110778,
+      "beds": 2,
+      "roomType": "2BR",
+      "title": "For sale and for rent 2 bedrooms condo in Lak Si, Bangkok · U6680163",
+      "url": "https://www.hipflat.co.th/en/ads/4t8eth498ae12a9t904c3t243ul33ah0",
+      "sourceName": "Hipflat",
+      "projectName": "North Park Place",
+      "updated": "2026-10-18",
+      "checkedAt": "2026-10-18",
+      "matchedBy": "Hipflat_direct_ad_names_North_Park_Place_and_lists_2_bed_167_sqm_sale_price_and_rent",
+      "listingStatus": "active_as_listed"
+    }
+  ],
+  "rentSample": {
+    "id": "U6680163",
+    "price": 55000,
+    "area": 167,
+    "priceSqm": 329,
+    "beds": 2,
+    "roomType": "2BR",
+    "title": "For sale and for rent 2 bedrooms condo in Lak Si, Bangkok · U6680163",
+    "url": "https://www.hipflat.co.th/en/ads/4t8eth498ae12a9t904c3t243ul33ah0",
+    "sourceName": "Hipflat",
+    "projectName": "North Park Place",
+    "updated": "2026-10-18",
+    "checkedAt": "2026-10-18",
+    "matchedBy": "Hipflat_direct_ad_names_North_Park_Place_and_lists_2_bed_167_sqm_rent_55000_per_month",
+    "listingStatus": "active_as_listed"
+  },
+  "yieldEstimate": {
+    "bedrooms": 2,
+    "purchasePrice": 13900000,
+    "purchaseAreaSqm": 175.36,
+    "rentLowPerSqmPerMonth": 316,
+    "estimatedMonthlyRent": 55414,
+    "annualRentAfterOneAgentMonth": 609554,
+    "annualCommonFee": 94694,
+    "netYieldPercent": 3.7,
+    "note": "Uses the lowest observed linked two-bedroom sale listing; its availability is unconfirmed because the posted listing is over 30 days old."
+  }
+}

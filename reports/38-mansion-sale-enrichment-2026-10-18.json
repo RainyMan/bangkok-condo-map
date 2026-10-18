@@ -1,0 +1,40 @@
+{
+  "hipflatId": 4675,
+  "project": "38 Mansion",
+  "checkedAt": "2026-10-18",
+  "sale": {
+    "id": "500402398",
+    "price": 5990000,
+    "area": 68.44,
+    "priceSqm": 87522,
+    "beds": 1,
+    "roomType": "1BR",
+    "title": "38 Mansion 1-bedroom serviced apartment · 68.44 sqm · THB 5,990,000",
+    "url": "https://www.ddproperty.com/en/property/38-mansion-bangkok-for-sale-500402398",
+    "sourceName": "DDproperty",
+    "projectName": "38 Mansion",
+    "updated": "2026-09-02",
+    "checkedAt": "2026-10-18",
+    "matchedBy": "DDproperty_individual_listing_names_38_Mansion_and_identifies_1992_building_near_Thong_Lo_BTS",
+    "listingStatus": "availability_unconfirmed_update_over_30d"
+  },
+  "rentBaseline": {
+    "bedrooms": 1,
+    "pricePerSqmPerMonth": 439,
+    "sourceUrl": "https://propertyhub.in.th/en/listings/aa689638-1bed-1bath-bts-thong-lo-57sqm-thb-25-000-mo-fl-1-38-mansion-thonglor---6423582"
+  },
+  "yieldEstimate": {
+    "purchasePrice": 5990000,
+    "purchaseAreaSqm": 68.44,
+    "estimatedMonthlyRent": 30045,
+    "annualRentAfterOneAgentMonth": 330495,
+    "yieldBeforeCommonFee": 5.52,
+    "commonFee": "not verified; excluded",
+    "note": "The linked DDproperty unit was listed over 30 days ago; current availability is unconfirmed."
+  },
+  "sources": {
+    "DDpropertyProject": "https://www.ddproperty.com/en/project/324-38-mansion",
+    "DDpropertyListing": "https://www.ddproperty.com/en/property/38-mansion-bangkok-for-sale-500402398",
+    "PropertyHubRent": "https://propertyhub.in.th/en/listings/aa689638-1bed-1bath-bts-thong-lo-57sqm-thb-25-000-mo-fl-1-38-mansion-thonglor---6423582"
+  }
+}
