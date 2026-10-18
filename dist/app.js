@@ -293,7 +293,7 @@
   // Recompute generated baselines against the lowest linked two-bedroom sale
   // and keep its area paired with that same listing. User-edited values that
   // do not match an old generated baseline remain intact.
-  const yieldStorageKey = 'bangkokCondoYieldInputsV57';
+  const yieldStorageKey = 'bangkokCondoYieldInputsV58';
   const loadYieldInputs = () => {
     try {
       const current = localStorage.getItem(yieldStorageKey);
