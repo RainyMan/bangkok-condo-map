@@ -1,0 +1,66 @@
+{
+  "hipflatId": 4258,
+  "projectName": "Sathon Heritage Residences",
+  "checkedAt": "2026-10-18",
+  "saleListing": {
+    "id": "5893715",
+    "price": 11900000,
+    "area": 116,
+    "priceSqm": 102586,
+    "beds": 2,
+    "roomType": "TWO_BED_ROOM",
+    "title": "LTH2841 – Sathorn Heritage FOR SALE 2 beds 2 baths size 116 Sq.M.",
+    "url": "https://asset-direct-v2.propertyhub.in.th/en/listings/lth2841-sathorn-heritage-for-sale-2-beds-2-baths-size-116-sq-m-nearby-bts-chong-nonsi-station-only-11-9-mb---5893715",
+    "sourceName": "PropertyHub",
+    "projectName": "Sathorn Heritage",
+    "updated": "2026-10-11",
+    "checkedAt": "2026-10-18",
+    "matchedBy": "exact_project_page_and_direct_listing_page",
+    "listingStatus": "availability_unconfirmed_update_under_30d"
+  },
+  "rentListing": {
+    "id": "2999130",
+    "price": 45000,
+    "area": 116,
+    "priceSqm": 388,
+    "beds": 2,
+    "roomType": "TWO_BED_ROOM",
+    "title": "1 bed Good Location BTS Surasak Sathorn Heritage Residences / Condo For Rent",
+    "url": "https://propertyhub.in.th/en/listings/1-bed-good-location-bts-surasak-sathorn-heritage-residences-condo-for-rent-sathorn-heritage-residences---2999130",
+    "sourceName": "PropertyHub",
+    "projectName": "Sathorn Heritage",
+    "updated": "2026-09-30",
+    "checkedAt": "2026-10-18",
+    "matchedBy": "exact_project_page_and_direct_listing_page",
+    "listingStatus": "availability_unconfirmed_update_under_30d"
+  },
+  "yieldEstimate": {
+    "bedrooms": 2,
+    "purchasePriceThb": 11900000,
+    "saleAreaSqm": 116,
+    "rentRateThbPerSqmMonth": 387.93,
+    "estimatedMonthlyRentOnSaleAreaThb": 45000.0,
+    "grossAnnualYieldPercent": 4.54,
+    "annualYieldAfterOneAgentMonthPercent": 4.16,
+    "commonFeeDeducted": false,
+    "reason": "Two bedroom sale and rent listing pages both identify the same project. Rent uses the 2BR listing rate per sqm multiplied by the 116 sqm sale unit area. Property management fee is not available as a verified amount."
+  },
+  "sources": [
+    {
+      "url": "https://asset-direct-v2.propertyhub.in.th/en/listings/lth2841-sathorn-heritage-for-sale-2-beds-2-baths-size-116-sq-m-nearby-bts-chong-nonsi-station-only-11-9-mb---5893715",
+      "finding": "Direct sale item page: Sathorn Heritage, 2 bedrooms, 116 sqm, THB 11,900,000. Project listing index showed refresh on 11 October 2026."
+    },
+    {
+      "url": "https://propertyhub.in.th/en/listings/1-bed-good-location-bts-surasak-sathorn-heritage-residences-condo-for-rent-sathorn-heritage-residences---2999130",
+      "finding": "Direct rent item page: Sathorn Heritage, 2 bedrooms, 116 sqm, THB 45,000/month. Current project listing index showed refresh on 30 September 2026."
+    },
+    {
+      "url": "https://propertyhub.in.th/en/projects/sathorn-heritage--2",
+      "finding": "Exact PropertyHub project page identifies the 2BR unit types and current sale and rent listings."
+    }
+  ],
+  "limitations": [
+    "Listing refresh dates do not guarantee that the rooms remain available; confirm with the advertiser.",
+    "No verified common fee was found, so the yield estimate does not deduct it."
+  ]
+}
