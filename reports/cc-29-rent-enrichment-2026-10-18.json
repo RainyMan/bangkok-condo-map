@@ -1,0 +1,36 @@
+{
+  "hipflatId": 3545,
+  "projectName": "C&C 29 Condo",
+  "checkedAt": "2026-10-18",
+  "saleSample": {
+    "priceThb": 4000000,
+    "bedrooms": 2,
+    "areaSqm": 35,
+    "source": "https://propertyhub.in.th/en/listings/a046297-c-c-29-condo---6213853",
+    "projectPageLastRefreshed": "2026-10-17"
+  },
+  "rentSample": {
+    "monthlyRentThb": 16000,
+    "bedrooms": 2,
+    "areaSqm": 35,
+    "rentThbPerSqmMonth": 457.14,
+    "source": "https://www.ddproperty.com/en/property/c-c-29-condo-bangkok-for-rent-60204711",
+    "matchedCrossPostReference": "CX-133306",
+    "propertyHubLastRefreshed": "2026-10-16",
+    "availability": "unconfirmed with advertiser"
+  },
+  "managementFee": {
+    "rateThbPerSqmMonth": null,
+    "status": "not verified; excluded from yield"
+  },
+  "yieldEstimate": {
+    "purchasePriceThb": 4000000,
+    "purchaseAreaSqm": 35,
+    "monthlyRentThbAtPurchaseArea": 16000,
+    "agentMonthsDeducted": 1,
+    "annualRentAfterAgentThb": 176000,
+    "annualCommonFeeThb": 0,
+    "netYieldPercent": 4.4,
+    "formula": "(monthly rent × 11 − verified annual common fee) ÷ purchase price"
+  }
+}
