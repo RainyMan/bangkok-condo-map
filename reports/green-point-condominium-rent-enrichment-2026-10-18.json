@@ -1,0 +1,62 @@
+{
+  "hipflatId": 3697,
+  "projectName": "Green Point Condominium",
+  "checkedAt": "2026-10-18",
+  "coordinate": {
+    "lat": 13.841357155876963,
+    "lng": 100.85076428780098,
+    "source": "https://propertyhub.in.th/en/projects/green-point-condo",
+    "identityCheck": "https://www.hipflat.co.th/projects/green-point-condominium-e3l1te0a11nl0elc47t1u189nn083u02",
+    "evidence": "Exact PropertyHub Green Point Condo page and Hipflat Green Point Condominium page identify the same project in Nong Chok."
+  },
+  "saleListing": {
+    "bedrooms": 1,
+    "priceTHB": 719100,
+    "areaSqm": 21.15,
+    "url": "https://propertyhub.in.th/en/listings/great-value-condo-for-sale-at-green-poin-near-min-buri---6309349",
+    "updated": "2026-10-16"
+  },
+  "rentListing": {
+    "id": "U1827480",
+    "price": 3000,
+    "area": 21.19,
+    "priceSqm": 141.58,
+    "beds": 1,
+    "roomType": "STUDIO",
+    "title": "Green Point Condominium · studio · 21.19 ㎡ · ฿3,000/月",
+    "url": "https://www.hipflat.co.th/ja/ads/739209ch8ctu7l1804732nnt3u0h14ue",
+    "sourceName": "Hipflat",
+    "projectName": "Green Point Condominium",
+    "updated": "2026-02-11 (最後更新顯示 16 小時前)",
+    "checkedAt": "2026-10-18",
+    "matchedBy": "Hipflat direct ad U1827480 names Green Point Condominium and states 21.19 sqm, studio and THB 3,000/month; PropertyHub and Hipflat project pages corroborate identity.",
+    "availability": "Hipflat direct listing says available for rent; posted 2026-02-11 and refreshed 16 hours before check. Thailand-Property exact-project page also shows one rental unit from ฿2,999.",
+    "listingStatus": "active_as_listed"
+  },
+  "managementFee": {
+    "monthlyPerUnitTHB": 500,
+    "unitAreaSqm": 21.19,
+    "rateTHBPerSqmMonth": 23.596035865974514,
+    "source": "https://www.hipflat.co.th/ja/ads/739209ch8ctu7l1804732nnt3u0h14ue",
+    "note": "As stated in the direct listing description; not independently confirmed by the juristic office."
+  },
+  "yieldEstimate": {
+    "bedrooms": 1,
+    "purchasePriceTHB": 719100,
+    "purchaseAreaSqm": 21.15,
+    "rentTHBPerSqmMonth": 141.57621519584708,
+    "estimatedMonthlyRentAtPurchaseAreaTHB": 2994.3369513921657,
+    "grossAnnualYieldPercent": 4.996807595147543,
+    "afterOneAgentMonthAndManagementFeePercent": 3.7476056963606577,
+    "annualCommonFeeDeductedTHB": 5988.673902784331,
+    "formula": "((monthly rent per sqm × paired 1BR purchase area × 11 months) − (฿500 monthly common fee scaled by purchase area × 12)) ÷ lowest 1BR sale price."
+  },
+  "crossChecks": {
+    "secondaryExactProjectRentPage": "https://www.thailand-property.com/condo/39481/green-point-condominium",
+    "status": "one rental unit from ฿2,999 per month"
+  },
+  "notes": [
+    "Same-room 1BR/studio sample pair. Listing is currently shown as available and refreshed 16 hours before checking.",
+    "The listing description states a ฿500 monthly common fee for the unit; the juristic office should confirm current fee."
+  ]
+}
