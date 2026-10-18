@@ -1,0 +1,93 @@
+{
+  "hipflatId": 6184,
+  "project": "ASHER Ratchada - Huai Khwang",
+  "checkedAt": "2026-10-18",
+  "projectSource": "https://propertyhub.in.th/en/projects/asher-ratchada-huai-khwang",
+  "projectFacts": {
+    "completedYear": 2021,
+    "floors": 8,
+    "units": 121,
+    "commonFeePerSqmPerMonth": 49,
+    "unitTypes": "PropertyHub lists 1-bedroom units, 25–33 sqm; no 2-bedroom type shown."
+  },
+  "saleSamples": [
+    {
+      "id": "6005497",
+      "price": 1899000,
+      "area": 28,
+      "priceSqm": 67821,
+      "beds": 1,
+      "roomType": "ONE_BED_ROOM",
+      "title": "ASHER Ratchada - Huai Khwang，1 房，28 ㎡，฿1,899,000",
+      "url": "https://propertyhub.in.th/en/listings/a033620-asher-ratchada-huai-khwang--9f3408cd---6005497",
+      "sourceName": "PropertyHub",
+      "projectName": "ASHER Ratchada - Huai Khwang",
+      "checkedAt": "2026-10-18",
+      "listingStatus": "availability_unconfirmed_date_unknown",
+      "matchedBy": "exact_project_page_listing_and_direct_unit_page"
+    },
+    {
+      "id": "5110456",
+      "price": 3050000,
+      "area": 31.2,
+      "priceSqm": 97756,
+      "beds": 1,
+      "roomType": "ONE_BED_ROOM",
+      "title": "ASHER Ratchada - Huai Khwang，1 房，31.2 ㎡，฿3,050,000",
+      "url": "https://propertyhub.in.th/en/listings/1-br-condo-at-asher-ratchada-huai-khwang-near-mrt-sutthisan-id-1345612---5110456",
+      "sourceName": "PropertyHub",
+      "projectName": "ASHER Ratchada - Huai Khwang",
+      "updated": "2026-03-28",
+      "checkedAt": "2026-10-18",
+      "listingStatus": "availability_unconfirmed_update_over_30d",
+      "matchedBy": "exact_project_page_listing_and_direct_unit_page"
+    }
+  ],
+  "rentSamples": [
+    {
+      "id": "6332874",
+      "price": 13000,
+      "area": 30,
+      "priceSqm": 433.33,
+      "beds": 1,
+      "roomType": "ONE_BED_ROOM",
+      "title": "ASHER Ratchada - Huai Khwang，1 房，30 ㎡，฿13,000/月",
+      "url": "https://propertyhub.in.th/en/listings/%EF%B8%8Fp-10067-asher-ratchada-huai-khwang-modern-design-1-bed-near-mrt-sutthisan-13-000-thb-line-id-easycondoplus-099-229-6397--aa9e091b---6332874",
+      "sourceName": "PropertyHub",
+      "projectName": "ASHER Ratchada - Huai Khwang",
+      "updated": "2026-10-17T14:34:00+07:00",
+      "checkedAt": "2026-10-18",
+      "listingStatus": "availability_unconfirmed_update_under_30d",
+      "matchedBy": "exact_project_page_listing_and_direct_unit_page"
+    },
+    {
+      "id": "5033907",
+      "price": 14000,
+      "area": 30.63,
+      "priceSqm": 457.07,
+      "beds": 1,
+      "roomType": "ONE_BED_ROOM",
+      "title": "ASHER Ratchada - Huai Khwang，1 房，30.63 ㎡，฿14,000/月",
+      "url": "https://propertyhub.in.th/en/listings/r3365-for-rent-asher-ratchada-huaikhwang---5033907",
+      "sourceName": "PropertyHub",
+      "projectName": "ASHER Ratchada - Huai Khwang",
+      "updated": "2026-10-17T07:45:00+07:00",
+      "checkedAt": "2026-10-18",
+      "listingStatus": "availability_unconfirmed_update_under_30d",
+      "matchedBy": "exact_project_page_listing_and_direct_unit_page"
+    }
+  ],
+  "yieldScenario": {
+    "bedrooms": 1,
+    "purchasePriceTHB": 1899000,
+    "saleAreaSqm": 28,
+    "roomRentLowTHBPerSqmPerMonth": 433.33,
+    "estimatedMonthlyRentOnSaleAreaTHB": 12133,
+    "deductAgentMonths": 1,
+    "annualCommonFeeTHB": 16464,
+    "estimatedNetAnnualYieldPercent": 6.16,
+    "availabilityCaveat": "Rental listing page has no individual update date; the exact-project listing index showed a refresh on 2026-10-17. Confirm current availability before relying on the estimate."
+  },
+  "twoBedroomYield": null,
+  "coordinateNote": "Existing verified coordinate retained; this update corrects the PropertyHub project match and market samples."
+}
