@@ -1,0 +1,36 @@
+{
+  "hipflatId": 3205,
+  "project": "NOTTING HILL Hydepark-Sapanmai",
+  "checkedAt": "2026-10-19",
+  "coordinates": {
+    "status": "verified_successor_project_site",
+    "lat": 13.888451,
+    "lng": 100.610435,
+    "coordinateSource": "https://www.homenayoo.com/the-origin-phahol-sapanmai/",
+    "googleMapsPoint": "https://www.google.com/maps/place/13.888451,100.610435",
+    "identityCrosscheck": "https://www.hipflat.co.th/en/projects/notting-hill-hydeparksapanmai-mjwjbh",
+    "method": "The Origin Phahol-Saphanmai is documented as the full redesign/successor of Notting Hill Hyde Park-Sapanmai; DDproperty confirms the former project name, 439/1 Thepharak Road, and 2019 completion."
+  },
+  "projectDetails": {
+    "completedYear": 2019,
+    "floors": 14,
+    "units": 536,
+    "detailsSource": "https://www.ddproperty.com/en/project/6734-notting-hill-hyde-park-sapanmai"
+  },
+  "marketAvailability": {
+    "sale": {
+      "status": "no_current_matching_listing",
+      "sampleCount": 0,
+      "source": "https://www.hipflat.co.th/en/projects/notting-hill-hydeparksapanmai-mjwjbh"
+    },
+    "rent": {
+      "status": "no_current_matching_listing",
+      "sampleCount": 0,
+      "source": "https://www.hipflat.co.th/en/projects/notting-hill-hydeparksapanmai-mjwjbh"
+    }
+  },
+  "roi": {
+    "status": "not_calculable",
+    "reason": "No current exact-project sale or rental listings were available on the check date."
+  }
+}
