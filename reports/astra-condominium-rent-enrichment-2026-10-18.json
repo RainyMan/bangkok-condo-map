@@ -1,0 +1,71 @@
+{
+  "hipflatId": 3868,
+  "projectName": "Astra Condominium",
+  "checkedAt": "2026-10-18",
+  "rentListings": [
+    {
+      "id": "2874409",
+      "price": 22000,
+      "area": 58,
+      "priceSqm": 379.31,
+      "beds": 1,
+      "roomType": "ONE_BED_ROOM",
+      "title": "15th-Floor 1-BR 58 Sqm Condo For Rent, Astra Condominium",
+      "url": "https://propertyhub.in.th/en/listings/1-br-condo-at-astra-condominium-in-chan-kasem-id-2874409---6032496",
+      "sourceName": "PropertyHub",
+      "projectName": "Astra Condominium",
+      "updated": "2026-10-18 16:19",
+      "checkedAt": "2026-10-18",
+      "listingStatus": "active_as_listed",
+      "matchedBy": "Exact Astra Condominium project rent page links this unit; direct listing states 1 bedroom, 58 sqm, THB 22,000/month and 15th floor."
+    },
+    {
+      "id": "3295603",
+      "price": 20000,
+      "area": 59,
+      "priceSqm": 338.98,
+      "beds": 2,
+      "roomType": "TWO_BED_ROOM",
+      "title": "2-BR Condo At Astra Condominium In Chan Kasem",
+      "url": "https://propertyhub.in.th/en/listings/2-br-condo-for-rent-at-astra-condominium-chan-kasem-id-3295603---6392993",
+      "sourceName": "PropertyHub",
+      "projectName": "Astra Condominium",
+      "updated": "2026-10-18 10:09",
+      "checkedAt": "2026-10-18",
+      "listingStatus": "active_as_listed",
+      "matchedBy": "Exact Astra Condominium project rent page links listing ID 3295603; direct listing states Astra Condominium, 2 bedrooms, 59 sqm and THB 20,000/month."
+    }
+  ],
+  "saleBaseline": {
+    "bedrooms": 1,
+    "priceTHB": 1899000,
+    "areaSqm": 33,
+    "source": "https://propertyhub.in.th/en/listings/a034262-astra-condominium--b55709e9---6003893",
+    "sourceName": "PropertyHub",
+    "crossCheck": "PropertyScout direct listing ID 2838222 reports the same Astra project, 1BR, 33 sqm and ฿1,899,000 and says confirmed available two weeks before 2026-10-18."
+  },
+  "yieldEstimate": {
+    "bedrooms": 1,
+    "purchasePriceTHB": 1899000,
+    "purchaseAreaSqm": 33,
+    "rentRateTHBPerSqmMonth": 379.31,
+    "estimatedMonthlyRentAtSaleAreaTHB": 12517,
+    "grossAnnualYieldPercent": 7.91,
+    "afterOneAgentMonthPercent": 7.25,
+    "managementFeeDeducted": false,
+    "managementFeeStatus": "unknown",
+    "formula": "(1BR rent per sqm × paired 1BR sale area × 12 [or 11 after one agent month]) ÷ linked 1BR sale price."
+  },
+  "twoBedroomStatus": {
+    "rentListing": "https://propertyhub.in.th/en/listings/2-br-condo-for-rent-at-astra-condominium-chan-kasem-id-3295603---6392993",
+    "rentTHBPerMonth": 20000,
+    "rentAreaSqm": 59,
+    "saleListing": null,
+    "note": "No two-bedroom sale listing was verified; PropertyHub and DDproperty project pages currently show no matching sale inventory. Do not substitute a one-bedroom sale into the two-bedroom yield."
+  },
+  "projectChecks": {
+    "propertyHubProjectRent": "https://propertyhub.in.th/en/condo-for-rent/project-astra-condominium",
+    "propertyHubProjectSale": "https://propertyhub.in.th/en/condo-for-sale/project-astra-condominium",
+    "ddpropertyProjectSale": "https://www.ddproperty.com/en/property-for-sale/at-astra-condominium-1389"
+  }
+}
