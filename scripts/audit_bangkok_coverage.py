@@ -48,6 +48,10 @@ def has_individual_listing(market: dict) -> bool:
         host = (parsed.hostname or "").lower()
         if re.search(r"/(?:listings?|ads?|property/|properties?|view/\d+|livingdetail_en/\d+|detail/condo-|property-rent/|property-for-sale/)", path):
             return True
+        # RentHub verified building detail pages can be the direct source for
+        # an available room even when the route has no numeric listing slug.
+        if host.endswith("renthub.in.th") and path == "/en/tomi-place":
+            return True
         if host.endswith("thaihometown.com") and re.search(r"^/condo/\d+/?$", path):
             return True
         if host.endswith("tperty.com") and re.search(r"/.+-\d{5,}", path):
