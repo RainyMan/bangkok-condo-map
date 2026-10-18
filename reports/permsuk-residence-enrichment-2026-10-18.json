@@ -1,0 +1,147 @@
+{
+  "hipflatId": 3152,
+  "name": "Permsuk Residence",
+  "checkedAt": "2026-10-18",
+  "projectIdentity": {
+    "hipflatProjectUrl": "https://www.hipflat.co.th/en/projects/permsuk-residence-vhhnxs",
+    "hipflatAddress": "Phoem Suk Residence, 661/22 Soi Lat Phrao 64, Wang Thonglang",
+    "matchEvidence": "The Hipflat page gives 297 units and 8 floors. PropertyHub and ZmyHome label the same 661/22 Lat Phrao 64 address as Permsuk Residence 2 and also give 297 units.",
+    "projectSourceUrl": "https://propertyhub.in.th/projects/permsuk-residence-2"
+  },
+  "location": {
+    "status": "verified_exact_project_pin",
+    "lat": 13.7853612,
+    "lng": 100.5959766,
+    "sourceUrl": "https://zmyhome.com/project/V17766",
+    "corroborationSourceUrl": "https://zmyhome.com/search/result?id=17766&keyword=%E0%B9%80%E0%B8%9E%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B8%AA%E0%B8%B8%E0%B8%82%E0%B9%80%E0%B8%A3%E0%B8%AA%E0%B8%8B%E0%B8%B4%E0%B9%80%E0%B8%94%E0%B8%99%E0%B8%8B%E0%B9%8C+2&lat=13.7853612000&lng=100.5959766000&type=Project&typePost%5B0%5D=1&typeProperty%5B0%5D=1",
+    "method": "ZmyHome's exact-project location and project-centered search link resolve to the project pin."
+  },
+  "projectDetails": {
+    "completedYear": 1995,
+    "units": 297,
+    "floors": 8,
+    "sourceUrl": "https://www.hipflat.co.th/en/projects/permsuk-residence-vhhnxs",
+    "conflict": "PropertyHub's page for Permsuk Residence 2 gives 1998 and 9 floors (2 buildings). Hipflat's exact-address page gives Jan 1995 and 8 floors, and the catalogue count of 297 units matches both. UI follows the Hipflat primary project record; record both differences for later onsite/source verification.",
+    "secondarySourceUrl": "https://propertyhub.in.th/projects/permsuk-residence-2",
+    "commonFee": {
+      "status": "not_verified",
+      "sourceUrl": "https://propertyhub.in.th/projects/permsuk-residence-2"
+    }
+  },
+  "marketSamples": {
+    "sale": {
+      "sourceUrl": "https://www.ennxo.com/condo/for-sale/project/permsuk-residence",
+      "directLinkedSamples": 3,
+      "lowestOverall": {
+        "priceThb": 490000,
+        "areaSqm": 32,
+        "priceThbPerSqm": 15312.5,
+        "url": "https://www.ennxo.com/product/1163761"
+      },
+      "lowestTwoBedroom": {
+        "priceThb": 990000,
+        "areaSqm": 64,
+        "url": "https://zmyhome.com/property/V179457"
+      },
+      "samples": [
+        {
+          "id": "1163761",
+          "price": 490000,
+          "area": 32,
+          "beds": 1,
+          "roomType": "1 Bedroom",
+          "title": "Permsuk Residence 2，1 房，32㎡",
+          "url": "https://www.ennxo.com/product/1163761",
+          "sourceName": "ENNXO",
+          "projectName": "Permsuk Residence 2",
+          "checkedAt": "2026-10-18",
+          "matchedBy": "exact_project_name_address_and_project_listing",
+          "listingStatus": "availability_unconfirmed_date_unknown"
+        },
+        {
+          "id": "V208989",
+          "price": 560000,
+          "area": 31.57,
+          "title": "Permsuk Residence 2，31.57㎡，機構出售",
+          "url": "https://zmyhome.com/property/V208989",
+          "sourceName": "ZmyHome",
+          "projectName": "Permsuk Residence 2",
+          "updated": "2026-09-02",
+          "checkedAt": "2026-10-18",
+          "matchedBy": "exact_project_name_and_address",
+          "listingStatus": "availability_unconfirmed_update_over_30d"
+        },
+        {
+          "id": "V179457",
+          "price": 990000,
+          "area": 64,
+          "beds": 2,
+          "roomType": "2 Bedroom",
+          "title": "Permsuk Residence 2，2 房，64㎡",
+          "url": "https://zmyhome.com/property/V179457",
+          "sourceName": "ZmyHome",
+          "projectName": "Permsuk Residence 2",
+          "checkedAt": "2026-10-18",
+          "matchedBy": "exact_project_name_and_address",
+          "listingStatus": "availability_unconfirmed_date_unknown"
+        }
+      ]
+    },
+    "rent": {
+      "sourceUrl": "https://zmyhome.com/property/V179458",
+      "directLinkedSamples": 1,
+      "lowestTwoBedroom": {
+        "monthlyRentThb": 7000,
+        "areaSqm": 64,
+        "rentThbPerSqmMonth": 109.38,
+        "url": "https://zmyhome.com/property/V179458"
+      },
+      "samples": [
+        {
+          "id": "V179458",
+          "price": 7000,
+          "area": 64,
+          "beds": 2,
+          "roomType": "2 Bedroom",
+          "title": "Permsuk Residence 2，2 房，64㎡",
+          "url": "https://zmyhome.com/property/V179458",
+          "sourceName": "ZmyHome",
+          "projectName": "Permsuk Residence 2",
+          "checkedAt": "2026-10-18",
+          "matchedBy": "exact_project_name_and_address",
+          "listingStatus": "availability_unconfirmed_date_unknown"
+        }
+      ]
+    }
+  },
+  "yieldEstimate": {
+    "bedrooms": 2,
+    "purchasePriceThb": 990000,
+    "saleAreaSqm": 64,
+    "monthlyRentThbPerSqm": 109.38,
+    "estimatedMonthlyRentAtSaleAreaThb": 7000,
+    "agentMonthsDeducted": 1,
+    "commonFeeDeducted": false,
+    "netAnnualYieldPercentBeforeUnverifiedFee": 7.78,
+    "formula": "(monthly rent × 11 − verified annual common fee) / lowest linked two-bedroom sale total × 100",
+    "caveat": "Both two-bedroom source pages identify the exact project and unit details, but show no current availability confirmation or update date. The common fee is not verified; yield excludes it and is an indicative estimate."
+  },
+  "walkingRoute": {
+    "id": 3152,
+    "name": "Permsuk Residence",
+    "originLat": 13.7853612,
+    "originLng": 100.5959766,
+    "distanceKm": 1.668,
+    "minutes": 20,
+    "stationId": "YL04",
+    "source": "Valhalla pedestrian routing (30 nearest stations checked)",
+    "sourceUrl": "https://valhalla1.openstreetmap.de/",
+    "networkSourceUrl": "https://www.openstreetmap.org/copyright",
+    "asOf": "2026-10-18"
+  },
+  "sourceChecks": {
+    "propertyHubExactProjectPage": "0 sales and 0 rentals listed; used as project-detail cross-check only.",
+    "saleAvailability": "ENNXO project index and linked object; ZmyHome pages do not provide a confirmed current availability date.",
+    "rentAvailability": "ZmyHome direct 2-bedroom listing; page states ownership is unverified and provides no update date."
+  }
+}
