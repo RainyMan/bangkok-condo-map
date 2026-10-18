@@ -1,0 +1,45 @@
+{
+  "hipflatId": 3172,
+  "project": "The shine sukhumvit 39",
+  "checkedAt": "2026-10-18",
+  "location": {
+    "latitude": 13.7377054,
+    "longitude": 100.5743707,
+    "verified": true,
+    "coordinateSource": "https://www.google.com/maps/place/The+Shine/data=!4m7!3m6!1s0x30e29eff599772a9:0x78c8d032011e0dd3!8m2!3d13.7377054!4d100.5743707",
+    "identityCrosschecks": [
+      "https://yoshida.co.th/the-shine/",
+      "https://www.hipflat.co.th/en/projects/the-shine-sukhumvit-39-aucpzr"
+    ],
+    "method": "Google Maps identifies The Shine at 12 Phrom Si 2 Alley; Yoshida names The Shine Sukhumvit 39 at 12 Sukhumvit Soi 39 (Promsri 2); Hipflat links The shine sukhumvit 39 to 39 Boutique Suites&Spa, Soi Sukhumvit 49/13."
+  },
+  "marketAvailability": {
+    "sale": {
+      "status": "no_current_matching_listing",
+      "sampleCount": 0,
+      "sources": [
+        "https://www.hipflat.co.th/en/projects/the-shine-sukhumvit-39-aucpzr",
+        "https://nestopa.com/th-en/project/%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%8A%E0%B8%99-%E0%B8%AA%E0%B8%82%E0%B8%A1%E0%B8%A7%E0%B8%97-39-3011"
+      ]
+    },
+    "rent": {
+      "status": "no_current_matching_listing",
+      "sampleCount": 0,
+      "sources": [
+        "https://www.hipflat.co.th/en/projects/the-shine-sukhumvit-39-aucpzr",
+        "https://nestopa.com/th-en/project/%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%8A%E0%B8%99-%E0%B8%AA%E0%B8%82%E0%B8%A1%E0%B8%A7%E0%B8%97-39-3011"
+      ]
+    }
+  },
+  "excludedPriceReference": {
+    "url": "https://yoshida.co.th/the-shine/",
+    "detail": "The source lists room-type monthly rent ranges, not currently available unit-level listings; excluded from samples and yield."
+  },
+  "roi": {
+    "status": "not_calculable",
+    "reason": "No current exact-project unit listings for sale or rent."
+  },
+  "projectFacts": {
+    "note": "Completion year and floor count omitted because sources disagree (2016/2017 and 7/8/9 floors)."
+  }
+}

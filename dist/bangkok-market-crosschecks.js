@@ -312,5 +312,37 @@ window.BANGKOK_MARKET_CROSSCHECKS = [
         "statusLabel": "約 13 年前刊登；日期及現況過舊，不作現行價格或投報依據"
       }
     ]
+  },
+  {
+    "hipflatId": 3172,
+    "projectName": "The shine sukhumvit 39",
+    "asOf": "2026-10-18",
+    "sourceName": "Hipflat",
+    "projectSourceUrl": "https://www.hipflat.co.th/en/projects/the-shine-sukhumvit-39-aucpzr",
+    "sale": {
+      "activeListingCount": 0,
+      "sourceUrl": "https://www.hipflat.co.th/en/projects/the-shine-sukhumvit-39-aucpzr"
+    },
+    "rent": {
+      "activeListingCount": 0,
+      "sourceUrl": "https://www.hipflat.co.th/en/projects/the-shine-sukhumvit-39-aucpzr"
+    },
+    "availabilitySources": [
+      {
+        "sourceName": "Hipflat 專案頁",
+        "url": "https://www.hipflat.co.th/en/projects/the-shine-sukhumvit-39-aucpzr",
+        "statusLabel": "目前無出售或出租房源"
+      },
+      {
+        "sourceName": "Nestopa 專案頁",
+        "url": "https://nestopa.com/th-en/project/%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%8A%E0%B8%99-%E0%B8%AA%E0%B8%82%E0%B8%A1%E0%B8%A7%E0%B8%97-39-3011",
+        "statusLabel": "專案頁顯示出售 0 筆、出租 0 筆"
+      },
+      {
+        "sourceName": "Yoshida 房型租金表",
+        "url": "https://yoshida.co.th/the-shine/",
+        "statusLabel": "列出 1–2 房租金區間，未列現行單筆空房，不作掛牌樣本"
+      }
+    ]
   }
 ];
