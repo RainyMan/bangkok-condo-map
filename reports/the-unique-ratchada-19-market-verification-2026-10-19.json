@@ -1,0 +1,85 @@
+{
+  "hipflatId": 3333,
+  "projectName": "The Unique Ratchada 19",
+  "checkedAt": "2026-10-19",
+  "coordinate": {
+    "lat": 13.8019155,
+    "lng": 100.5722579,
+    "source": "https://www.google.com/maps/place/The+Unique+Ratchada+19/@13.8019155,100.5722579,17z/",
+    "crossCheck": "https://www.hipflat.co.th/en/projects/the-unique-ratchada-19-efxana"
+  },
+  "completedYear": {
+    "year": 2015,
+    "source": "https://propertyhub.in.th/projects/the-unique-19"
+  },
+  "saleSamples": [
+    {
+      "id": "3237231",
+      "price": 1800000,
+      "area": 26,
+      "priceSqm": 69231,
+      "beds": 1,
+      "roomType": "1BR",
+      "title": "The Unique Ratchada 19，1 房，26 ㎡，฿1,800,000",
+      "url": "https://www.livinginsider.com/en/detail/condo-for-sale-condo-the-unique-ratchada-19-1bedroom-3237231",
+      "sourceName": "LivingInsider",
+      "projectName": "The Unique Ratchada 19",
+      "checkedAt": "2026-10-19",
+      "updated": "2026-10-12",
+      "matchedBy": "exact_project_name_and_listing_detail",
+      "listingStatus": "active_as_listed",
+      "verificationNote": "Listing page identifies this exact project, 1 bedroom, 26 sqm, THB 1,800,000; page reported updated about one week before the check."
+    },
+    {
+      "id": "6402229",
+      "price": 4650000,
+      "area": 63,
+      "priceSqm": 73810,
+      "beds": 2,
+      "roomType": "2BR",
+      "title": "The Unique 19，2 房，63 ㎡，5 樓，฿4,650,000",
+      "url": "https://propertyhub.in.th/listings/%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-2-%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B8%AD%E0%B8%99-the-unique-19-%E0%B9%83%E0%B8%81%E0%B8%A5%E0%B9%89-mrt-%E0%B8%A3%E0%B8%B1%E0%B8%8A%E0%B8%94%E0%B8%B2%E0%B8%A0%E0%B8%B4%E0%B9%80%E0%B8%A9%E0%B8%81-300-%E0%B9%80%E0%B8%A1%E0%B8%95%E0%B8%A3-id-2862346---6402229",
+      "sourceName": "PropertyHub",
+      "projectName": "The Unique Ratchada 19",
+      "checkedAt": "2026-10-19",
+      "updated": "2026-10-19",
+      "matchedBy": "exact_propertyhub_project_and_direct_listing_page",
+      "listingStatus": "active_as_listed",
+      "verificationNote": "Direct listing page confirmed the exact project, 2 bedrooms, 63 sqm, THB 4,650,000, floor 5; page showed an update on 2026-10-19."
+    }
+  ],
+  "rentSamples": [
+    {
+      "id": "6280324",
+      "price": 22000,
+      "area": 63,
+      "priceSqm": 349,
+      "beds": 2,
+      "roomType": "2BR",
+      "title": "The Unique 19，2 房，63 ㎡，2 樓，฿22,000/月",
+      "url": "https://propertyhub.in.th/listings/%E0%B8%A7%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%AD%E0%B8%A2%E0%B8%B9%E0%B9%88-the-unique-19-2%E0%B8%99%E0%B8%AD%E0%B8%99-63%E0%B8%95%E0%B8%A3-%E0%B8%A1-line-id-pfagent---6280324",
+      "sourceName": "PropertyHub",
+      "projectName": "The Unique Ratchada 19",
+      "checkedAt": "2026-10-19",
+      "updated": "2026-09-22",
+      "matchedBy": "exact_propertyhub_project_and_direct_listing_page",
+      "listingStatus": "active_as_listed",
+      "verificationNote": "Direct listing page identifies The Unique 19, 2 bedrooms, 63 sqm, THB 22,000/month, floor 2; the project page listed it as ready to move in and updated 2026-09-22."
+    }
+  ],
+  "twoBedroomYieldInputs": {
+    "purchasePrice": 4650000,
+    "purchaseAreaSqm": 63,
+    "rentMonthly": 22000,
+    "rentPerSqmMonthly": 349.21,
+    "grossYieldPercent": 5.68,
+    "afterOneAgentMonthPercent": 5.2,
+    "commonFee": "Not found in checked project/listing pages; excluded until a project-specific published rate is verified."
+  },
+  "sourceNotes": [
+    "PropertyHub direct sale listing 6402229 was opened and showed the 2-bedroom, 63 sqm, THB 4,650,000 unit updated 2026-10-19.",
+    "PropertyHub direct rental listing 6280324 was opened and showed the 2-bedroom, 63 sqm, THB 22,000/month unit; the project index showed it updated 2026-09-22.",
+    "LivingInsider listing CX-174822 identifies the exact project and a 1-bedroom, 26 sqm, THB 1,800,000 sale, reported updated about one week before 2026-10-19.",
+    "No project-specific common-fee rate was verified; the estimate therefore does not deduct common fees."
+  ]
+}
