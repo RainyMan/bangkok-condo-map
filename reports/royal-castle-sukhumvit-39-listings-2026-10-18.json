@@ -1,0 +1,60 @@
+{
+  "checkedAt": "2026-10-18",
+  "hipflatId": 3804,
+  "project": "Royal Castle Sukhumvit 39",
+  "propertyHubProjectSaleUrl": "https://propertyhub.in.th/en/condo-for-sale/project-royal-castle",
+  "propertyHubProjectRentUrl": "https://propertyhub.in.th/en/condo-for-rent/project-royal-castle",
+  "sale": {
+    "id": "5890139",
+    "price": 15500000,
+    "area": 140.0,
+    "priceSqm": 110714,
+    "beds": 2,
+    "roomType": "TWO_BED_ROOM",
+    "title": "2 Bed 2 Bath 140 SQ.M. Royal Castle Sukhumvit",
+    "url": "https://propertyhub.in.th/en/listings/2-bed-2-bath-140-sq-m-royal-castle-sukhumvit--b296096a---5890139",
+    "sourceName": "PropertyHub",
+    "projectName": "Royal Castle",
+    "updated": "2026-10-04",
+    "checkedAt": "2026-10-18",
+    "matchedBy": "PropertyHub exact-project sale page links the listing; direct page identifies Royal Castle, 2 bedrooms, 140 sqm, and ฿15,500,000",
+    "listingStatus": "active_as_listed",
+    "lowestTwoBedroomObservedOnProjectPage": true,
+    "scopeNote": "The exact project page showed two two-bedroom sale units at ฿15,500,000 and ฿16,200,000; this is the lower linked two-bedroom total."
+  },
+  "rent": {
+    "id": "5627195",
+    "price": 45000,
+    "area": 110.0,
+    "priceSqm": 409,
+    "beds": 2,
+    "roomType": "TWO_BED_ROOM",
+    "title": "LTH13724 · Royal Castle Sukhumvit 39 · 2 bedrooms · 110 sqm · ฿45,000/month",
+    "url": "https://propertyhub.in.th/en/listings/lth13724-condo-for-rent-royal-castle-sukhumvit-110-sqm-2-beds-2-baths-near-bts-phrom-phong-45k-month---5627195",
+    "sourceName": "PropertyHub",
+    "projectName": "Royal Castle",
+    "updated": "2026-10-10",
+    "checkedAt": "2026-10-18",
+    "matchedBy": "PropertyHub exact-project rent page links the listing; direct page identifies Royal Castle Sukhumvit 39, 2 bedrooms, 110 sqm, and ฿45,000/month",
+    "listingStatus": "active_as_listed",
+    "lowestTwoBedroomCurrentVisibleRentPerSqmOnProjectPage": true,
+    "rentPerSqmMonthExact": 409.09,
+    "scopeNote": "The project page shows the ฿45,000 / 110 sqm two-bedroom listing updated 2026-10-10. A ฿50,000 / 140 sqm two-bedroom card is dated 2026-05-24 and is excluded from the current listing baseline due to age."
+  },
+  "yieldEstimate": {
+    "bedrooms": 2,
+    "purchasePriceThb": 15500000,
+    "purchaseAreaSqm": 140.0,
+    "rentRateThbPerSqmMonth": 409.09,
+    "estimatedRentAtPurchaseAreaThbPerMonth": 57273,
+    "annualRentAfterOneAgentMonthThb": 630003,
+    "yieldAfterOneAgentMonthBeforeUnverifiedCommonFeePercent": 4.06,
+    "commonFeeDeducted": false,
+    "formula": "(45,000 / 110 × 140 × 11) / 15,500,000 × 100",
+    "limitations": [
+      "Direct listing pages show no Last Update timestamp; project pages list the sale and rent cards as updated on 2026-10-04 and 2026-10-10 respectively.",
+      "Live availability is not independently confirmed with advertisers.",
+      "No verified project management fee was found; estimate excludes common fee, vacancy, tax, repairs, and transaction costs."
+    ]
+  }
+}
