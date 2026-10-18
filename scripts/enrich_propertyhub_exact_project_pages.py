@@ -13,7 +13,14 @@ def arr(file,symbol):
  t=(DIST/file).read_text(encoding='utf-8'); m=re.search(r'window\.'+re.escape(symbol)+r'\s*=\s*(\[.*\]);',t,re.S)
  if not m: raise RuntimeError(f'Cannot read {symbol}')
  return json.loads(m.group(1))
-def write(file,symbol,rows): (DIST/file).write_text(f'window.{symbol} = '+json.dumps(rows,ensure_ascii=False,separators=(',',':'))+';\n',encoding='utf-8')
+def write(file,symbol,rows):
+ target=DIST/file; temporary=target.with_suffix(target.suffix+'.tmp')
+ encoder=json.JSONEncoder(ensure_ascii=False,separators=(',',':'))
+ with temporary.open('w',encoding='utf-8',newline='\n') as stream:
+  stream.write(f'window.{symbol} = ')
+  for chunk in encoder.iterencode(rows): stream.write(chunk)
+  stream.write(';\n')
+ temporary.replace(target)
 def fetch_page(url):
  for n in range(3):
   try:
@@ -57,6 +64,7 @@ def parse_market(pid,kind,slug,expected_ph_id):
  if project_ids and project_ids != {str(project.get('id'))}: return {'kind':kind,'error':'listing_project_id_mismatch'}
  return {'kind':kind,'project':project,'cards':allcards,'totalCount':total_count,'sourceUrl':f'https://propertyhub.in.th/en/condo-for-{kind}/project-{slug}'}
 def norm(s): return set(re.findall(r'[a-z0-9]+',str(s or '').lower()))-{'the','condo','condominium','project','residence','residences','apartment','place','tower','bangkok'}
+def norm_full_name(s): return ' '.join(re.findall(r'[a-z0-9]+',str(s or '').lower()))
 def main():
  global EXCLUDED
  for item in json.loads((ROOT/'scripts'/'propertyhub_listing_exclusions.json').read_text(encoding='utf-8')):
@@ -100,7 +108,7 @@ def main():
   pname=str((result.get('project') or {}).get('nameEnglish') or (result.get('project') or {}).get('name') or '')
   a,b=norm(cat.get('name')),norm(pname)
   overlap=a&b
-  identity_ok=bool(expected and str((result.get('project') or {}).get('id'))==expected) or (len(overlap)>=2 or any(len(x)>=7 for x in overlap))
+  identity_ok=bool(expected and str((result.get('project') or {}).get('id'))==expected) or (norm_full_name(cat.get('name')) == norm_full_name(pname)) or (len(overlap)>=2 or any(len(x)>=7 for x in overlap))
   if result.get('project') and not identity_ok:
    rejected.append({'hipflatId':pid,'hipflatName':cat.get('name'),'propertyHubName':pname,'overlap':sorted(overlap)}); continue
   if result.get('project'): good.append((result,success))
