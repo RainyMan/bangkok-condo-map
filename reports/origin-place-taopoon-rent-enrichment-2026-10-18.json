@@ -1,0 +1,40 @@
+{
+  "hipflatId": 3585,
+  "projectName": "Origin Place Taopoon Interchange",
+  "checkedAt": "2026-10-18",
+  "hipflatProjectUrl": "https://www.hipflat.co.th/en/projects/origin-place-taopoon-interchange-uanal8981a1e883aa9ce973lalttl33u",
+  "coordinate": {
+    "status": "Existing map coordinate retained; this enrichment adds no coordinate override.",
+    "sourceUrl": "https://propertyhub.in.th/en/projects/origin-place-taopoon-interchange"
+  },
+  "saleMarket": {
+    "sourceUrl": "https://asset-direct-next.propertyhub.in.th/en/projects/origin-place-taopoon-interchange",
+    "twoBedroomMinimumPriceTHB": 5190000,
+    "twoBedroomAreaSqm": 51,
+    "twoBedroomListingUrl": "https://propertyhub.in.th/en/listings/2-br-condo-at-origin-place-taopoon-interchange-near-mrt-tao-poon-id-1792243---5821883",
+    "listingUpdated": "2026-10-18"
+  },
+  "rentListing": {
+    "id": "PS-2328041",
+    "price": 25000,
+    "area": 28,
+    "priceSqm": 893,
+    "beds": 1,
+    "roomType": "1BR",
+    "title": "Origin Place Taopoon Interchange · 1 房 · 28 ㎡ · ฿25,000/月",
+    "url": "https://propertyscout.co.th/en/1-br-condo-origin-place-taopoon-interchange-near-mrt-tao-poon-2328041/",
+    "sourceName": "PropertyScout",
+    "projectName": "Origin Place Taopoon Interchange",
+    "checkedAt": "2026-10-18",
+    "matchedBy": "exact project name and direct PropertyScout condo listing detail",
+    "availability": "AVAILABILITY UPON REQUEST",
+    "listingStatus": "availability_unconfirmed_update_over_30d"
+  },
+  "rentEvidence": {
+    "projectPageUrl": "https://propertyscout.co.th/en/bangkok/condo/origin-place-taopoon-interchange/",
+    "projectPageReportsOneRental": true,
+    "directListingDetails": "1 bedroom, 1 bathroom, 28 sqm, ฿25,000/month (฿892.86/sqm/month), 440m to MRT Tao Poon.",
+    "availability": "PropertyScout labels it AVAILABILITY UPON REQUEST. The detail page says it was updated about two months before this check. It is included as an individual price sample, but its current availability is unconfirmed and marked so in the app."
+  },
+  "yieldNote": "The available rent listing is one bedroom while the lowest linked sale listing is two bedrooms. The app therefore labels the default two-bedroom calculation as a cross-bedroom estimate until a two-bedroom rental source is found."
+}
