@@ -1,0 +1,75 @@
+{
+  "hipflatId": 3491,
+  "projectName": "Citi Resort Sukhumvit 49",
+  "checkedAt": "2026-10-18",
+  "coordinates": {
+    "hipflatId": 3491,
+    "name": "Citi Resort Sukhumvit 49",
+    "lat": 13.73113,
+    "lng": 100.57543,
+    "locationVerified": true,
+    "sourceName": "OpenStreetMap 建築點位（Mapcarta）",
+    "sourceUrl": "https://mapcarta.com/W324275320",
+    "corroborationSourceUrl": "https://citiresort.com/en/sukhumvit-49-en/",
+    "verificationSourceUrl": "https://www.hipflat.co.th/en/projects/citi-resort-sukhumvit-49-wukkrw",
+    "verificationMethod": "exact_project_name_address_and_OSM_building_ID_corroborated_by_official_Google_Maps_pin"
+  },
+  "rentSamples": [
+    {
+      "id": "500096572",
+      "price": 70000,
+      "area": 163,
+      "priceSqm": 429.45,
+      "beds": 2,
+      "roomType": "2BR",
+      "title": "Citi Resort Sukhumvit 49，2 房，163 ㎡，฿70,000/月",
+      "url": "https://www.ddproperty.com/en/property/citi-resort-sukhumvit-49-bangkok-for-rent-500096572",
+      "sourceName": "DDproperty",
+      "projectName": "Citi Resort Sukhumvit 49",
+      "updated": "2026-10-05",
+      "checkedAt": "2026-10-18",
+      "matchedBy": "exact_ddproperty_project_and_listing_detail",
+      "listingStatus": "active_as_listed"
+    },
+    {
+      "id": "500446562",
+      "price": 45000,
+      "area": 72,
+      "priceSqm": 625,
+      "beds": 2,
+      "roomType": "2BR",
+      "title": "Citi Resort Sukhumvit 49，2 房，72 ㎡，฿45,000/月",
+      "url": "https://www.ddproperty.com/en/property/citi-resort-sukhumvit-49-for-rent-500446562",
+      "sourceName": "DDproperty",
+      "projectName": "Citi Resort Sukhumvit 49",
+      "updated": "2026-10-14",
+      "checkedAt": "2026-10-18",
+      "matchedBy": "exact_ddproperty_project_and_listing_detail",
+      "listingStatus": "active_as_listed"
+    }
+  ],
+  "saleBaseline": {
+    "price": 19900000,
+    "area": 111,
+    "bedrooms": 2,
+    "url": "https://propertyhub.in.th/en/listings/2-bedroom-2-bathroom-111-sq-m-citi-resort-sukhumvit-49---5890880",
+    "availability": "PropertyHub project-index count remains visible; detail page has no update date."
+  },
+  "roi": {
+    "bedrooms": 2,
+    "purchasePrice": 19900000,
+    "purchaseAreaSqm": 111,
+    "rentRatePerSqm": 429.45,
+    "estimatedMonthlyRentAtPurchaseArea": 47669,
+    "agentMonthsDeducted": 1,
+    "commonFee": "not found; excluded from numeric calculation",
+    "netAnnualYieldBeforeUnknownCommonFeePercent": 2.63
+  },
+  "notes": [
+    "DDproperty direct detail pages identify both rent units as Citi Resort Sukhumvit 49 at 39 Sukhumvit 49, and list them on 2026-10-05 and 2026-10-14; both were accessible on 2026-10-18.",
+    "The two-bedroom lowest rent per sqm is 70,000 / 163 = 429.45 THB/sqm/month. Lowest total rent is a separate unit at 45,000 / 72; both source links are stored independently.",
+    "PropertyHub direct sale detail identifies 2 bedrooms, 111 sqm, and THB 19,900,000, the lowest two-bedroom total in the existing project summary. Its individual update date is blank, so availability is not confirmed.",
+    "The official CITI RESORT page provides the exact project name/address and a Google Maps link; Mapcarta's OSM building ID 324275320 matches the building and is used as the map centroid.",
+    "Common fee could not be verified; the displayed numeric yield deducts one agent month but not an unknown common fee. Confirm the sale listing and management fee before purchase decisions."
+  ]
+}
