@@ -1,5 +1,13 @@
 [
   {
+    "listingId": "6429069",
+    "hipflatProjectId": 3006,
+    "propertyHubProjectId": "6787",
+    "kind": "rent",
+    "sourceUrl": "https://propertyhub.in.th/en/listings/aa29894-studio-5bath-bts-ekkamai-35sqm-thb-14-000-mo-fl-3-sukhumvit-65-bangkok---6429069",
+    "reason": "PropertyHub linked this 35 sqm, ฿14,000 studio advertised for BTS Ekkamai/Sukhumvit 65 to 31 Residence on Sukhumvit 31. DDproperty's current project-specific rental page lists only Sukhumvit 31 units at ฿84,000–95,000/month; exclude the incompatible location listing."
+  },
+  {
     "listingId": "5893289",
     "hipflatProjectId": 3047,
     "propertyHubProjectId": "668",
@@ -16,11 +24,11 @@
     "reason": "PropertyHub project page linked a Jomtien Yacht Club Pattaya listing to Juldis Mansion in Bangkok; the listing title and location show it is a different project."
   },
   {
-    "listingId": "6429069",
-    "hipflatProjectId": 3006,
-    "propertyHubProjectId": "6787",
-    "kind": "rent",
-    "sourceUrl": "https://propertyhub.in.th/en/listings/aa29894-studio-5bath-bts-ekkamai-35sqm-thb-14-000-mo-fl-3-sukhumvit-65-bangkok---6429069",
-    "reason": "PropertyHub linked this 35 sqm, ฿14,000 studio advertised for BTS Ekkamai/Sukhumvit 65 to 31 Residence on Sukhumvit 31. DDproperty's current project-specific rental page lists only Sukhumvit 31 units at ฿84,000–95,000/month; exclude the incompatible location listing."
+    "listingId": "6312926",
+    "hipflatProjectId": 3537,
+    "propertyHubProjectId": "4844",
+    "kind": "sale",
+    "sourceUrl": "https://propertyhub.in.th/en/listings/good-value-condo-for-sale-at-motif-condo-intharaphithak-bts-wongwian-yai---6312926",
+    "reason": "The listing title and full detail identify Motif Condo Sathorn-Wongwian Yai at Intharaphithak Road near BTS Wongwian Yai; it states a 23rd floor and building A, while Motive Condominium Chaengwattana is an 8-floor project in Lak Si. PropertyHub cross-linked this distinct project to Motive; exclude the misattributed sale listing."
   }
 ]

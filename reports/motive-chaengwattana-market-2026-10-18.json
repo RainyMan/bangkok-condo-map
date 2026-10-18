@@ -1,0 +1,60 @@
+{
+  "hipflatId": 3537,
+  "projectName": "Motive Condominium Chaengwattana",
+  "checkedAt": "2026-10-18",
+  "saleProjectSource": "https://propertyhub.in.th/en/condo-for-sale/project-motive-condominium-chaengwattana",
+  "saleListing": {
+    "id": "6428940",
+    "price": 1750000,
+    "area": 27.97,
+    "priceSqm": 62567,
+    "beds": 1,
+    "roomType": "1BR",
+    "title": "A010466 Motive Condominium Chaengwattana，1 房，27.97 ㎡，3 樓，฿1,750,000",
+    "url": "https://propertyhub.in.th/en/listings/a010466-motive-condominium-chaengwattana---6428940",
+    "sourceName": "PropertyHub",
+    "projectName": "Motive Condominium Chaengwattana",
+    "checkedAt": "2026-10-18",
+    "updated": "2026-10-10",
+    "matchedBy": "exact_project_and_individual_listing_detail",
+    "listingStatus": "active_as_listed"
+  },
+  "rentProjectSource": "https://propertyhub.in.th/en/condo-for-rent/project-motive-condominium-chaengwattana",
+  "rentListing": {
+    "id": "4165911",
+    "price": 7500,
+    "area": 29,
+    "priceSqm": 258.62,
+    "beds": 1,
+    "roomType": "1BR",
+    "title": "Motive Condominium Chaengwattana，1 房，29 ㎡，7 樓，฿7,500/月",
+    "url": "https://propertyhub.in.th/listings/รวมคอนโดนนนทบุรีให้เช่า️⚠️🛋️🛌motive-แจ้งวัฒนะ---4165911",
+    "sourceName": "PropertyHub",
+    "projectName": "Motive Condominium Chaengwattana",
+    "checkedAt": "2026-10-18",
+    "updated": "2026-10-17",
+    "matchedBy": "exact_project_card_and_individual_listing_detail",
+    "listingStatus": "availability_unconfirmed_date_unknown"
+  },
+  "feeSource": "https://propertyhub.in.th/en/projects/motive-condominium-chaengwattana",
+  "defaultYieldEstimate": {
+    "bedrooms": 1,
+    "purchasePrice": 1750000,
+    "purchaseAreaSqm": 27.97,
+    "sourceRentMonthly": 7500,
+    "sourceRentAreaSqm": 29,
+    "estimatedMonthlyRentAtPurchaseArea": 7233.62,
+    "commonFeePerSqmMonthly": 35,
+    "deductAgentMonths": 1,
+    "annualRentAfterAgent": 79569.83,
+    "annualCommonFee": 11747.4,
+    "netAnnualYieldPercent": 3.8756
+  },
+  "notes": [
+    "PropertyHub exact project sale page showed A010466 at ฿1,750,000, 27.97 sqm, 1 bedroom and floor 3, refreshed 2026-10-10; direct listing details confirm the project and unit data.",
+    "The other lower-looking sale listing was excluded: its direct title, location, BTS Wongwian Yai, Intharaphithak Road, building A and 23rd floor identify Motif Condo Sathorn-Wongwian Yai, a distinct project that PropertyHub cross-linked to Motive Chaengwattana.",
+    "PropertyHub exact project rent page showed two listings, including a 1-bedroom, 29 sqm, ฿7,500/month card refreshed 2026-10-17. The direct listing page confirms project, rent, size, room type and floor; its own last-update field is blank, so availability remains unconfirmed. Only this one rental detail was manually verified.",
+    "The PropertyHub project page lists common fee ฿35/sqm/month, 2014 completion, 391 units and 8 floors.",
+    "Default net yield uses the lowest verified 1-bedroom sale total and its 27.97 sqm area; rent rate (฿7,500/29 sqm) is scaled to that area. It deducts one agent month and 12 months of common fee; net annual yield is approximately 3.88%."
+  ]
+}
