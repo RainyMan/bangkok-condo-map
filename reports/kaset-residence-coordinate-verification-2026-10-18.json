@@ -1,0 +1,25 @@
+{
+  "hipflatId": 3992,
+  "name": "Kaset Residence",
+  "checkedAt": "2026-10-18",
+  "coordinate": {
+    "lat": 13.8376235962,
+    "lng": 100.5870666504,
+    "googleMaps": "https://www.google.com/maps/search/?api=1&query=13.8376235962%2C100.5870666504",
+    "sourceProjectPage": "https://zmyhome.com/project/V12737",
+    "hipflatCrosscheck": "https://www.hipflat.co.th/en/projects/kaset-residence-e4l4074a119lcnu71c2331941797e990",
+    "ddpropertyCrosscheck": "https://www.ddproperty.com/en/condo-for-sale/at-kaset-residence-12092",
+    "identity": "Kaset Residence, Soi Phahonyothin 34, Sena Nikhom, Chatuchak; same name, district and road across Hipflat, ZmyHome and DDproperty."
+  },
+  "marketAvailability": {
+    "sale": "DDproperty project search and PropertyHub direct sale listings both show units; project page indicates sale price starts ฿450,000 for studio 25 sqm. Existing sale data is linked.",
+    "rent": "ZmyHome project page includes historical direct listings of ฿4,000/month (26 sqm, 1BR) and ฿4,000/month (26 sqm, studio), last updated March 2019; Thailand-Property unit page is dated June 2024. These are retained as unavailable/stale evidence only and are not added to current rent sample/ROI.",
+    "roi": "Not recalculated from old rental prices. Need a currently dated, directly verifiable rental listing and bedroom-matched sale listing before showing current yield."
+  },
+  "sources": {
+    "zmyhomeProject": "https://zmyhome.com/project/V12737",
+    "zmyhomeRentSearch": "https://zmyhome.com/rent/condo/project-list/12737",
+    "oldStudioRental": "https://www.samuitimes.com/property-rent/studio-condo-for-rent-at-kaset-residence-in-sena-nikhom-bangkok-u1887001",
+    "ddpropertySale": "https://www.ddproperty.com/en/condo-for-sale/at-kaset-residence-12092"
+  }
+}
