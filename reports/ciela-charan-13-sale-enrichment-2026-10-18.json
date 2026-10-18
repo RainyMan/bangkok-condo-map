@@ -1,0 +1,28 @@
+{
+  "projectId": 3905,
+  "name": "Ciela Charan 13 Station",
+  "checkedAt": "2026-10-18",
+  "saleListing": {
+    "price": 2790000,
+    "bedrooms": 1,
+    "areaSqm": 21.23,
+    "pricePerSqm": 131418,
+    "url": "https://propertyscout.co.th/en/1-br-condo-ciela-charan-13-station-near-mrt-tha-phra-1441724/",
+    "availability": "confirmed today; updated today"
+  },
+  "rentBaseline": {
+    "rentPerSqmMonth": 426,
+    "source": "https://propertyhub.in.th/en/listings/s2934-for-rent-ciela-charan-13-station---4981463",
+    "note": "Existing PropertyHub one-bedroom low rent per-sqm sample."
+  },
+  "fee": {
+    "rateThbPerSqmMonth": 55,
+    "source": "https://propertyhub.in.th/en/projects/ciela-charan-13-station"
+  },
+  "yieldEstimate": {
+    "monthlyRent": 9044,
+    "agentMonthsDeducted": 1,
+    "annualFee": 14011.8,
+    "yieldAfterOneMonthAgentAndFeePct": 3.06
+  }
+}
