@@ -216,10 +216,11 @@
     const roomSummaryMinimum = Number(room?.minimum || 0);
     const summaryArea = Number(room?.minimumArea || (room?.marketSummary ? 0 : room?.area) || 0);
     const summaryUrl = room?.minimumSourceUrl || room?.sourceUrl || room?.listingUrl || null;
-    // The bedroom summary stores the lowest total price, that listing's area,
-    // and its individual source URL together. The listing may be outside the
-    // limited samples cache, so use the linked summary record directly.
-    const summaryCandidate = roomSummaryMinimum > 0 && summaryArea > 0 && summaryUrl
+    const isDirectListingUrl = url => typeof url === 'string' && /\/(?:ads|listings|property|property-for-sale|property-for-rent)\//i.test(url);
+    // Only use a bedroom summary as a candidate when its source points to an
+    // individual listing. A project or market-summary page can have a minimum
+    // value, but it cannot prove which two-bedroom unit supplied that price.
+    const summaryCandidate = roomSummaryMinimum > 0 && summaryArea > 0 && isDirectListingUrl(summaryUrl)
       ? { price: roomSummaryMinimum, area: summaryArea, url: summaryUrl }
       : null;
     const listingCandidates = roomListings.map(sample => ({ price: Number(sample.price), area: Number(sample.area), url: sample.url }));
