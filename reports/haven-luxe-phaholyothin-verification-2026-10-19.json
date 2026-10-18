@@ -1,0 +1,95 @@
+{
+  "hipflatId": 3362,
+  "projectName": "Haven Luxe Phaholyothin",
+  "asOf": "2026-10-19",
+  "coordinate": {
+    "lat": 13.7879637,
+    "lng": 100.5529549,
+    "googleMaps": "https://www.google.com/maps/place/Haven+luxe/@13.7879637,100.5529549,17z/",
+    "projectAddress": "Sutthisan Winitchai Road (Soi Inthamara 4), Sam Sen Nai, Phaya Thai",
+    "verification": "Google Maps point at 39 Soi Inthamara 4 matches Hipflat project description."
+  },
+  "completionYear": {
+    "year": 2014,
+    "source": "https://www.hipflat.co.th/en/projects/haven-luxe-phaholyothin-imqgji"
+  },
+  "saleSamples": [
+    {
+      "id": "6389907",
+      "price": 3450000,
+      "area": 37.5,
+      "priceSqm": 92000,
+      "beds": 1,
+      "roomType": "ONE_BED_ROOM",
+      "title": "Haven Luxe Phaholyothin, 1 bedroom, 37.5 sqm",
+      "url": "https://propertyhub.in.th/en/listings/md-26067199-rare-find-beautiful-unit-at-a-below-market-price-at-haven-luxe-phaholyothinbook-now-before-it-s-gone---6389907",
+      "updated": "2026-09-13",
+      "sourceName": "PropertyHub",
+      "projectName": "Haven Luxe Phaholyothin",
+      "matchedBy": "Exact project result and direct listing; 1 bedroom, 37.5 sqm and THB 3,450,000. Older than 30 days.",
+      "listingStatus": "availability_unconfirmed_update_over_30d"
+    },
+    {
+      "id": "500166264",
+      "price": 4990000,
+      "area": 50,
+      "priceSqm": 99800,
+      "beds": 2,
+      "roomType": "TWO_BED_ROOM",
+      "title": "Haven Luxe, 2 bedrooms, 50 sqm, THB 4,990,000",
+      "url": "https://www.ddproperty.com/en/property/haven-luxe-for-sale-500166264",
+      "updated": "2026-02-23",
+      "sourceName": "DDproperty",
+      "projectName": "Haven Luxe Phaholyothin",
+      "matchedBy": "Direct DDproperty listing states Haven Luxe at 39 Soi Inthamara 4, 2 bedrooms, 50 sqm and THB 4,990,000. Older than 30 days.",
+      "listingStatus": "availability_unconfirmed_update_over_30d"
+    }
+  ],
+  "rentSamples": [
+    {
+      "id": "CX-78207",
+      "price": 14000,
+      "area": 35,
+      "priceSqm": 400,
+      "beds": 1,
+      "roomType": "ONE_BED_ROOM",
+      "title": "Haven Luxe Phaholyothin, 1 bedroom, 35 sqm, THB 14,000/month",
+      "url": "https://www.hipflat.co.th/en/ads/t0e3leu08u203cuch12a7nnt3ul3t9ln",
+      "updated": "2026-09-12",
+      "sourceName": "Hipflat",
+      "projectName": "Haven Luxe Phaholyothin",
+      "matchedBy": "Direct Hipflat listing states exact project, Soi Inthamara 4, 1 bedroom, 35 sqm and THB 14,000/month; refresh date conflicts with page header.",
+      "listingStatus": "availability_unconfirmed_date_conflict"
+    },
+    {
+      "id": "500278250",
+      "price": 23000,
+      "area": 50,
+      "priceSqm": 460,
+      "beds": 2,
+      "roomType": "TWO_BED_ROOM",
+      "title": "Haven Luxe, 2 bedrooms, 50 sqm, THB 23,000/month",
+      "url": "https://www.ddproperty.com/property/haven-luxe-%25E0%25B8%25AE%25E0%25B8%25B2%25E0%25B9%2580%25E0%25B8%25A7%25E0%25B9%2588%25E0%25B8%2599-%25E0%25B8%25A5%25E0%25B8%25B8%25E0%25B8%2584%25E0%25B8%258B%25E0%25B8%258C-%25E0%25B8%2581%25E0%25B8%25A3%25E0%25B8%25B8%25E0%25B8%2587-%25E0%25B8%2597%25E0%25B8%259E-%25E0%25B9%2583%25E0%25B8%25AB%25E0%25B9%2589%25E0%25B8%258A%25E0%25B9%2588%25E0%25B8%25B2-500278250",
+      "updated": "2026-04-30",
+      "sourceName": "DDproperty",
+      "projectName": "Haven Luxe Phaholyothin",
+      "matchedBy": "Direct DDproperty listing identifies Haven Luxe, 2 bedrooms, 50 sqm and THB 23,000/month; older than 30 days.",
+      "listingStatus": "availability_unconfirmed_update_over_30d"
+    }
+  ],
+  "twoBedroomRent": {
+    "priceThbPerMonth": 23000,
+    "areaSqm": 50,
+    "rentThbPerSqmMonth": 460,
+    "url": "https://www.ddproperty.com/property/haven-luxe-%25E0%25B8%25AE%25E0%25B8%25B2%25E0%25B9%2580%25E0%25B8%25A7%25E0%25B9%2588%25E0%25B8%2599-%25E0%25B8%25A5%25E0%25B8%25B8%25E0%25B8%2584%25E0%25B8%258B%25E0%25B8%258C-%25E0%25B8%2581%25E0%25B8%25A3%25E0%25B8%25B8%25E0%25B8%2587-%25E0%25B8%2597%25E0%25B8%259E-%25E0%25B9%2583%25E0%25B8%25AB%25E0%25B9%2589%25E0%25B8%258A%25E0%25B9%2588%25E0%25B8%25B2-500278250",
+    "projectIndexUrl": "https://www.ddproperty.com/en/condo-for-rent/at-haven-luxe-4309",
+    "listedDate": "2026-04-30",
+    "status": "availability_unconfirmed_update_over_30d"
+  },
+  "fee": {
+    "rateThbPerSqm": 40,
+    "source": "https://assets3.propertyhub.in.th/en/condo-for-sale/project-haven-luxe",
+    "note": "Utility-fee billing period not confirmed; deducting it remains indicative."
+  },
+  "yield": "Two-bedroom sale and rent references both exceed 30 days. Kept as clickable historical asking prices; excluded from automatic current-yield estimate until availability is reconfirmed."
+}
