@@ -112,6 +112,9 @@ def main() -> None:
     audit_rows: list[dict[str, str]] = []
     for project in projects:
         project_id = str(project["id"])
+        project_name_key = re.sub(r"[^a-z0-9]+", " ", str(project.get("name", "")).lower()).strip()
+        legacy_matches = legacy_by_name.get(project_name_key, [])
+        legacy = legacy_matches[0] if len(legacy_matches) == 1 else {}
         base = propertyhub.get(project_id, {})
         propertyhub_id = str(base.get("propertyHubProjectId", ""))
         # Match app.js source precedence for project and market data.
@@ -141,9 +144,6 @@ def main() -> None:
         )
         scout_location = scout_details.get(project_id, {})
         verified_location = verified_coordinates.get(project_id, {})
-        project_name_key = re.sub(r"[^a-z0-9]+", " ", str(project.get("name", "")).lower()).strip()
-        legacy_matches = legacy_by_name.get(project_name_key, [])
-        legacy = legacy_matches[0] if len(legacy_matches) == 1 else {}
         has_coords = any((row.get("locationVerified") and row.get("lat") is not None and row.get("lng") is not None)
                          for row in (market, project, scout_location, verified_location, legacy)) or (
             osm.get(project_id, {}).get("lat") is not None and osm[project_id].get("lng") is not None
