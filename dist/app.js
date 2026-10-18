@@ -288,12 +288,12 @@
   const yieldOverrides = new Map();
   // Refresh auto-generated baselines when new exact listings arrive while
   // keeping values the user intentionally edited and saved.
-  const yieldStorageKey = 'bangkokCondoYieldInputsV32';
+  const yieldStorageKey = 'bangkokCondoYieldInputsV33';
   const loadYieldInputs = () => {
     try {
       const current = localStorage.getItem(yieldStorageKey);
       if (current) return JSON.parse(current);
-      const previous = JSON.parse(localStorage.getItem('bangkokCondoYieldInputsV31') || localStorage.getItem('bangkokCondoYieldInputsV30') || localStorage.getItem('bangkokCondoYieldInputsV29') || localStorage.getItem('bangkokCondoYieldInputsV28') || localStorage.getItem('bangkokCondoYieldInputsV27') || localStorage.getItem('bangkokCondoYieldInputsV26') || localStorage.getItem('bangkokCondoYieldInputsV25') || localStorage.getItem('bangkokCondoYieldInputsV24') || localStorage.getItem('bangkokCondoYieldInputsV23') || localStorage.getItem('bangkokCondoYieldInputsV22') || localStorage.getItem('bangkokCondoYieldInputsV21') || localStorage.getItem('bangkokCondoYieldInputsV20') || localStorage.getItem('bangkokCondoYieldInputsV19') || localStorage.getItem('bangkokCondoYieldInputsV18') || localStorage.getItem('bangkokCondoYieldInputsV17') || localStorage.getItem('bangkokCondoYieldInputsV16') || localStorage.getItem('bangkokCondoYieldInputsV15') || localStorage.getItem('bangkokCondoYieldInputsV14') || localStorage.getItem('bangkokCondoYieldInputsV13') || localStorage.getItem('bangkokCondoYieldInputsV12') || localStorage.getItem('bangkokCondoYieldInputsV11') || localStorage.getItem('bangkokCondoYieldInputsV10') || localStorage.getItem('bangkokCondoYieldInputsV9') || localStorage.getItem('bangkokCondoYieldInputsV8') || localStorage.getItem('bangkokCondoYieldInputsV7') || localStorage.getItem('bangkokCondoYieldInputsV6') || localStorage.getItem('bangkokCondoYieldInputsV5') || '{}');
+      const previous = JSON.parse(localStorage.getItem('bangkokCondoYieldInputsV32') || localStorage.getItem('bangkokCondoYieldInputsV31') || localStorage.getItem('bangkokCondoYieldInputsV30') || localStorage.getItem('bangkokCondoYieldInputsV29') || localStorage.getItem('bangkokCondoYieldInputsV28') || localStorage.getItem('bangkokCondoYieldInputsV27') || localStorage.getItem('bangkokCondoYieldInputsV26') || localStorage.getItem('bangkokCondoYieldInputsV25') || localStorage.getItem('bangkokCondoYieldInputsV24') || localStorage.getItem('bangkokCondoYieldInputsV23') || localStorage.getItem('bangkokCondoYieldInputsV22') || localStorage.getItem('bangkokCondoYieldInputsV21') || localStorage.getItem('bangkokCondoYieldInputsV20') || localStorage.getItem('bangkokCondoYieldInputsV19') || localStorage.getItem('bangkokCondoYieldInputsV18') || localStorage.getItem('bangkokCondoYieldInputsV17') || localStorage.getItem('bangkokCondoYieldInputsV16') || localStorage.getItem('bangkokCondoYieldInputsV15') || localStorage.getItem('bangkokCondoYieldInputsV14') || localStorage.getItem('bangkokCondoYieldInputsV13') || localStorage.getItem('bangkokCondoYieldInputsV12') || localStorage.getItem('bangkokCondoYieldInputsV11') || localStorage.getItem('bangkokCondoYieldInputsV10') || localStorage.getItem('bangkokCondoYieldInputsV9') || localStorage.getItem('bangkokCondoYieldInputsV8') || localStorage.getItem('bangkokCondoYieldInputsV7') || localStorage.getItem('bangkokCondoYieldInputsV6') || localStorage.getItem('bangkokCondoYieldInputsV5') || '{}');
       const recalculated = {};
       condos.forEach(c => {
         const old = previous[c.id] || {};
@@ -305,12 +305,15 @@
         const oldSaleRoom = c.sale?.byBedroom?.[previousBeds] || {};
         const oldRentRoom = c.rent?.byBedroom?.[previousBeds] || {};
         const saleCandidates = [
+          ...Object.values(bedroomRows(c.sale)).flatMap(row => [
+            { price: Number(row.minimum), area: Number(row.area) },
+            { price: Number(row.average), area: Number(row.average) / Number(row.averageSqm) },
+          ]),
           ...(c.sale?.samples || []).filter(sample => bedroomCountForSample(sample) === Number(previousBeds)).map(sample => ({ price: Number(sample.price), area: Number(sample.area) })),
-          { price: Number(oldSaleRoom.minimum), area: Number(oldSaleRoom.area) },
           { price: Number(c.sale?.minimum), area: Number(c.sale?.minimumArea) },
-          { price: Number(oldSaleRoom.average), area: Number(oldSaleRoom.average) / Number(oldSaleRoom.averageSqm) },
         ].filter(candidate => candidate.price > 0 && candidate.area > 0);
         const rentRates = [
+          ...Object.values(bedroomRows(c.rent)).flatMap(row => [Number(row.minimumSqm), Number(row.averageSqm), Number(row.minimum) / Number(row.area)]),
           Number(oldRentRoom.minimumSqm), Number(oldRentRoom.averageSqm),
           ...(c.rent?.samples || []).filter(sample => bedroomCountForSample(sample) === Number(previousBeds) && Number(sample.price) > 0 && Number(sample.area) > 0).map(sample => Number(sample.price) / Number(sample.area)),
           Number(c.rent?.minimumSqm),
