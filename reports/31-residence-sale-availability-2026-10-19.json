@@ -1,0 +1,33 @@
+{
+  "hipflatId": 3006,
+  "project": "31 Residence",
+  "checkedAt": "2026-10-19",
+  "saleAvailability": {
+    "status": "no_current_exact_project_listing",
+    "count": 0,
+    "sources": [
+      {
+        "url": "https://www.ddproperty.com/en/project/6787-31-residence",
+        "evidence": "DDproperty project page reports 0 units for sale."
+      },
+      {
+        "url": "https://propertyhub.in.th/en/condo-for-sale/project-31-residence",
+        "evidence": "PropertyHub project sale page reports no listing."
+      },
+      {
+        "url": "https://therealtors.net/project/31-residence",
+        "evidence": "The Realtors project data reports 0 sale units."
+      }
+    ]
+  },
+  "rentAvailability": {
+    "status": "current_rent_samples_present",
+    "directListingCount": 3,
+    "source": "https://www.ddproperty.com/en/condo-for-rent/at-31-residence-6787"
+  },
+  "roi": {
+    "status": "not_calculable",
+    "reason": "No current verified sale price is available; rental listings alone do not support an ROI calculation."
+  },
+  "note": "No area-level prices or nearby-project listings were substituted for an exact 31 Residence sale listing."
+}
