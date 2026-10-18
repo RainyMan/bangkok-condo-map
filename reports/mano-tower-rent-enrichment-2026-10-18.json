@@ -1,0 +1,53 @@
+{
+  "hipflatId": 3738,
+  "projectName": "Mano Tower",
+  "checkedAt": "2026-10-18",
+  "coordinate": {
+    "lat": 13.7441503200277,
+    "lng": 100.5726899483859,
+    "source": "https://propertyhub.in.th/en/projects/mano-tower",
+    "identityCheck": "https://www.hipflat.co.th/en/projects/mano-tower-ocwgrq",
+    "evidence": "PropertyHub exact Mano Tower project page location; project page and listing identify the same Mano Tower in Khlong Tan Nuea, Watthana."
+  },
+  "saleListing": {
+    "bedrooms": 3,
+    "priceTHB": 26000000,
+    "areaSqm": 220,
+    "url": "https://propertyhub.in.th/en/listings/3-bedroom-3-bathroom-220-sq-m-mano-tower---5093826",
+    "asOf": "2026-10-17"
+  },
+  "rentListing": {
+    "id": "U6827524",
+    "price": 90000,
+    "area": 326,
+    "priceSqm": 276.07,
+    "beds": 3,
+    "roomType": "3BR",
+    "title": "Mano Tower · 3 房 · 326 ㎡ · ฿90,000/月",
+    "url": "https://www.fazwaz.co.th/en/property-rent/3-bedroom-condo-for-rent-at-mano-tower-in-khlong-tan-nuea-bangkok-u6827524",
+    "sourceName": "FazWaz",
+    "projectName": "Mano Tower",
+    "updated": "2026-10-18 (頁面顯示 2 小時前更新)",
+    "checkedAt": "2026-10-18",
+    "matchedBy": "Exact project title Mano Tower, Khlong Tan Nuea address, and project completion year 1990",
+    "availability": "Direct unit page shows 3 bedrooms, 326 sqm, ฿90,000/month, one-year contract, listed 2026-10-01 and refreshed 2 hours before check; availability date is shown as N/A.",
+    "listingStatus": "availability_unconfirmed_date_unknown"
+  },
+  "yieldEstimate": {
+    "bedrooms": 3,
+    "purchasePriceTHB": 26000000,
+    "purchaseAreaSqm": 220,
+    "rentTHBPerSqmMonth": 276.07361963190186,
+    "estimatedMonthlyRentAtPurchaseAreaTHB": 60736.19631901841,
+    "grossAnnualYieldPercent": 2.803209060877773,
+    "afterOneAgentMonthPercent": 2.569608305804625,
+    "annualCommonFeeDeductedTHB": 0,
+    "managementFee": "unknown; not deducted",
+    "formula": "(3BR rent per sqm × lowest linked 3BR sale area × 12 months) ÷ lowest linked 3BR sale total; 11 months when deducting one agent month."
+  },
+  "notes": [
+    "This project has a 3-bedroom sale/rent pairing; no two-bedroom sale baseline is shown. Select 3 bedrooms to view the matching ROI estimate.",
+    "The rent page was refreshed 2 hours before checking, but availability date is N/A; availability is unconfirmed.",
+    "The listing states a one-year rental contract; common fee not found and not deducted."
+  ]
+}
