@@ -1,0 +1,49 @@
+{
+  "hipflatId": 3267,
+  "projectName": "LAKE AVENUE Sukhumvit 16",
+  "checkedAt": "2026-10-18",
+  "projectPage": "https://www.hipflat.co.th/en/projects/lake-avenue-sukhumvit-16-ofsqrc",
+  "propertyHubProjectPage": "https://propertyhub.in.th/en/projects/lake-avenue",
+  "saleSample": {
+    "id": "5640578",
+    "price": 10490000,
+    "area": 126,
+    "beds": 2,
+    "roomType": "2BR",
+    "title": "For Sale!! Prime Location!! LAKE AVENUE Sukhumvit 16 MD-25085538",
+    "url": "https://propertyhub.in.th/en/listings/for-sale-prime-location-lake-avenue-sukhumvit-16-md-25085538---5640578",
+    "priceSqm": 83254,
+    "sourceName": "PropertyHub",
+    "projectName": "Lake Avenue",
+    "checkedAt": "2026-10-18",
+    "matchedBy": "exact_propertyhub_project_page_unit",
+    "listingStatus": "availability_unconfirmed_date_unknown",
+    "verification": "PropertyHub direct listing states Lake Avenue, sale price, 2 bedrooms, and 126 sqm; exact listing is linked from the Lake Avenue project listing results."
+  },
+  "rentSample": {
+    "id": "5602448",
+    "price": 48000,
+    "area": 130,
+    "beds": 2,
+    "roomType": "2BR",
+    "title": "Lake Avenue | Very Spacious 2 Bed Condo For Rent in Asoke - BR14424CD",
+    "url": "https://propertyhub.in.th/en/listings/lake-avenue-very-spacious-2-bed-condo-for-rent-in-asoke-br14424cd---5602448",
+    "priceSqm": 369,
+    "sourceName": "PropertyHub",
+    "projectName": "Lake Avenue",
+    "checkedAt": "2026-10-18",
+    "matchedBy": "exact_propertyhub_project_page_unit",
+    "listingStatus": "availability_unconfirmed_date_unknown",
+    "verification": "PropertyHub direct listing states Lake Avenue, rent, 2 bedrooms, and 130 sqm; exact listing is linked from the Lake Avenue project listing results."
+  },
+  "freshness": "Both individual listing pages omit an update date, so availability remains unconfirmed.",
+  "yieldInputs": {
+    "bedrooms": 2,
+    "saleTotalThb": 10490000,
+    "saleAreaSqm": 126,
+    "rentRateThbPerSqmMonth": 369.23,
+    "monthlyRentForSaleAreaThb": 46523,
+    "netYieldWithOneAgentMonthPercent": 4.88,
+    "commonFee": "Not publicly verified; excluded from this estimate."
+  }
+}
