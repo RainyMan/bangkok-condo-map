@@ -176,6 +176,22 @@ def main() -> None:
         )
         sale_linked = (has_sale and has_individual_listing(sale)) or has_manual_sale_listing
         rent_linked = (has_rent and has_individual_listing(rent)) or has_manual_rent_listing
+        direct_sale_samples = [sample for sample in manual_sale_samples if isinstance(sample, dict)
+                               and sample.get("price") and sample.get("area") and sample.get("url")
+                               and has_individual_listing({"minimumSourceUrl": sample["url"]})]
+        direct_rent_samples = [sample for sample in manual_rent_samples if isinstance(sample, dict)
+                               and sample.get("price") and sample.get("area") and sample.get("url")
+                               and has_individual_listing({"minimumSourceUrl": sample["url"]})]
+        # Prefer a clickable direct property page in the coverage report over a
+        # market or project summary URL whenever an independently verified
+        # individual listing sample is available.
+        manual_sale_source = min(direct_sale_samples, key=lambda sample: float(sample["price"]), default={})
+        manual_rent_source = min(direct_rent_samples,
+                                 key=lambda sample: float(sample["price"]) / float(sample["area"]), default={})
+        sale_source = manual_sale_source.get("url") or sale.get("minimumSqmSourceUrl") or sale.get("minimumSourceUrl") or sale.get("source") or ""
+        rent_source = manual_rent_source.get("url") or rent.get("minimumSqmSourceUrl") or rent.get("minimumSourceUrl") or rent.get("source") or ""
+        sale_updated = manual_sale_source.get("updated") or manual_sale_source.get("checkedAt") or listing_updated(sale, research_market.get("sale") or {})
+        rent_updated = manual_rent_source.get("updated") or manual_rent_source.get("checkedAt") or listing_updated(rent, research_market.get("rent") or {})
         # Match the coordinate source actually selected by app.js instead of
         # accidentally reporting a market/search URL as the location source.
         coordinate_source = ""
@@ -216,12 +232,12 @@ def main() -> None:
             "sale_sample": "yes" if has_sale or has_manual_sale_listing else "no",
             "sale_market_value": "yes" if has_sale else "no",
             "sale_individual_listing_link": "yes" if sale_linked else "no",
-            "sale_source": str(sale.get("minimumSqmSourceUrl") or sale.get("minimumSourceUrl") or sale.get("source") or ""),
-            "sale_sample_updated": listing_updated(sale, research_market.get("sale") or {}),
+            "sale_source": str(sale_source),
+            "sale_sample_updated": str(sale_updated),
             "rent_sample": "yes" if has_rent else "no",
             "rent_individual_listing_link": "yes" if rent_linked else "no",
-            "rent_source": str(rent.get("minimumSqmSourceUrl") or rent.get("minimumSourceUrl") or rent.get("source") or ""),
-            "rent_sample_updated": listing_updated(rent, research_market.get("rent") or {}),
+            "rent_source": str(rent_source),
+            "rent_sample_updated": str(rent_updated),
             "missing": ", ".join(missing),
         })
 

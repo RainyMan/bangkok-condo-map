@@ -200,8 +200,8 @@
       if (!count || !(price > 0) || !(area > 0) || !sample.url) return;
       const key = String(count), current = rentRooms[key] || {}, sampleRate = price / area;
       const currentRate = Number(current.minimumSqm || current.averageSqm || (current.minimum && current.area ? current.minimum / current.area : 0));
-      if (!(currentRate > 0) || sampleRate < currentRate) {
-        rentRooms[key] = { ...current, beds: count, minimum: price, area, minimumSqm: sampleRate, minimumSourceUrl: sample.url, minimumSqmSourceUrl: sample.url, sourceUrl: sample.url };
+      if (!(currentRate > 0) || current.marketSummary === true || sampleRate < currentRate) {
+        rentRooms[key] = { ...current, beds: count, minimum: price, area, minimumSqm: sampleRate, minimumSourceUrl: sample.url, minimumSqmSourceUrl: sample.url, sourceUrl: sample.url, marketSummary: false };
       }
     });
     const roomOptions = Object.entries(saleRooms).filter(([, row]) => Number(row.minimum || row.average) > 0);

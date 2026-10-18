@@ -1,0 +1,54 @@
+{
+  "hipflatId": 5054,
+  "name": "HI Sutthisan Condo",
+  "checkedAt": "2026-10-18",
+  "roomData": {
+    "sale": {
+      "id": "6296501",
+      "price": 1800000,
+      "area": 30.21,
+      "priceSqm": 59583,
+      "beds": 1,
+      "roomType": "1BR",
+      "title": "HI Sutthisan · 1BR · 30.21 sqm · ฿1,800,000",
+      "url": "https://propertyhub.in.th/en/listings/a050232-hi-sutthisan-condo---6296501",
+      "sourceName": "PropertyHub",
+      "projectName": "HI Sutthisan Condo",
+      "checkedAt": "2026-10-18",
+      "updated": "2026-09-14",
+      "matchedBy": "Direct PropertyHub listing A050232, project HI SUTTHISAN, 1 bedroom, 30.21 sqm, ฿1,800,000; project page lists this as HI SUTTHISAN.",
+      "availability": "Page has no update date; current availability not independently confirmed.",
+      "listingStatus": "availability_unconfirmed_over_30d"
+    },
+    "rent": {
+      "id": "3110184",
+      "price": 12000,
+      "area": 29.21,
+      "priceSqm": 411,
+      "beds": 1,
+      "roomType": "1BR",
+      "title": "HI Sutthisan · 1BR plus · 29.21 sqm · ฿12,000/month",
+      "url": "https://www.livinginsider.com/detail/condo-for-rent-condo-hi-sutthisan-1bedroom-3110184",
+      "sourceName": "LivingInsider",
+      "projectName": "HI Sutthisan Condo",
+      "checkedAt": "2026-10-18",
+      "updated": "2026-10-11",
+      "matchedBy": "Direct LivingInsider listing states HI Sutthisan Condo, 1-bedroom (1 bed plus), 29.21 sqm, ฿12,000/month, Building A, floor 5; created 2026-06-13 and extended about one week before 2026-10-18 check.",
+      "availability": "Recently extended on source, but vacancy has not been independently confirmed.",
+      "listingStatus": "availability_unconfirmed_update_under_30d"
+    },
+    "managementFeeTHBPerSqmPerMonth": 37,
+    "feeSource": "https://propertyhub.in.th/en/projects/hi-sutthisan"
+  },
+  "yieldForSelectableOneBedroom": {
+    "rentPerSqmPerMonth": 410.8182129407737,
+    "saleAreaSqm": 30.21,
+    "estimatedMonthlyRent": 12410.818212940774,
+    "purchasePrice": 1800000,
+    "grossAnnualPercent": 8.273878808627183,
+    "netAfterOneAgentMonthBeforeFeePercent": 7.5843889079082505,
+    "netAfterOneAgentMonthAndPublishedFeePercent": 6.839208907908249,
+    "note": "These are one-bedroom estimates only; do not substitute for the default two-bedroom scenario. Sale availability is older/unconfirmed; rent listing was extended within 7 days but vacancy is unconfirmed."
+  },
+  "twoBedroomYield": "Not calculated: no directly verified two-bedroom sale listing available in the currently checked samples. Do not mix one-bedroom rent and sale data with two-bedroom."
+}
