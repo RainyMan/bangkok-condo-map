@@ -68,6 +68,10 @@ def has_individual_listing(market: dict) -> bool:
             return True
         if host.endswith("scancondo.com") and re.search(r"/(?:sell|rent)/\d+/[a-z0-9-]+/", path):
             return True
+        # Thai-language Scancondo detail routes use a numeric condo ID followed
+        # by the rental/sale listing ID, rather than the English /rent/... URL.
+        if host.endswith("scancondo.com") and re.search(r"/\d{5,}/[a-z]{2,}\d{2}-\d{4}/", path):
+            return True
     return False
 
 

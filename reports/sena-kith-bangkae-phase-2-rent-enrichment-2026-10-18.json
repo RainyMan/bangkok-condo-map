@@ -1,0 +1,40 @@
+{
+  "hipflatId": 4993,
+  "projectName": "Sena Kith MRT - Bangkae Phase 2",
+  "checkedAt": "2026-10-18",
+  "hipflatProjectUrl": "https://www.hipflat.co.th/en/projects/sena-kith-mrt-bangkae-phase-2-xpkowx",
+  "coordinate": {
+    "status": "Existing map coordinate retained; this enrichment adds no coordinate override.",
+    "sourceUrl": "https://propertyhub.in.th/en/projects/sena-kith-mrt-bangkae-phase-2"
+  },
+  "saleMarket": {
+    "sourceUrl": "https://propertyhub.in.th/en/condo-for-sale/bangkok",
+    "minimumPriceTHB": 1360000,
+    "minimumAreaSqm": 26.25,
+    "listingUrl": "https://propertyhub.in.th/en/listings/condo-for-sale-fully-furnished-fully-furnished-near-mrt-bang-khae-sena-kith-mrt-bangkae-phase-2---6125912",
+    "roomType": "1 bedroom",
+    "updated": "2026-10-16"
+  },
+  "rentListing": {
+    "id": "SK31-0017",
+    "price": 8500,
+    "area": 26.4,
+    "priceSqm": 322,
+    "beds": 1,
+    "roomType": "1BR",
+    "title": "Sena Kith MRT - Bangkae Phase 2 · 1 房 · 26.4 ㎡ · ฿8,500/月",
+    "url": "https://www.scancondo.com/%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2/%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/172443/SK31-0017/%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2-sena-kith-mrt-bangkae-phase-2-%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%A3%E0%B8%AD%E0%B8%8A%E0%B9%89%E0%B8%B2",
+    "sourceName": "Scancondo",
+    "projectName": "Sena Kith MRT - Bangkae Phase 2",
+    "checkedAt": "2026-10-18",
+    "matchedBy": "exact project name, rent listing identifier, and direct Scancondo project/rental detail",
+    "availability": "Scancondo page marks this unit as available for rent",
+    "listingStatus": "active_as_listed"
+  },
+  "rentEvidence": {
+    "directListingDetails": "Listing SK31-0017, one bedroom, 26.4 sqm, 6th floor, ฿8,500/month (about ฿322/sqm/month). The page displays its vacancy status.",
+    "projectMatchingEvidence": "The Scancondo page names Sena Kith MRT Bangkae Phase 2; its project details state 378 units, two buildings and eight floors, matching the Hipflat project.",
+    "listingPageUrl": "https://www.scancondo.com/%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2/%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/172443/SK31-0017/%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2-sena-kith-mrt-bangkae-phase-2-%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%A3%E0%B8%AD%E0%B8%8A%E0%B9%89%E0%B8%B2"
+  },
+  "yieldNote": "The direct sale market sample is also one bedroom, so the same-bedroom lowest sale and rental figures can support a one-bedroom yield estimate. No two-bedroom sale sample is currently verified; the default two-bedroom estimate remains unavailable."
+}
