@@ -1,0 +1,39 @@
+{
+  "hipflatId": 3050,
+  "project": "Regent Royal Place 1",
+  "checkedAt": "2026-10-18",
+  "sale": {
+    "source": "Dot Property",
+    "url": "https://www.dotproperty.co.th/en/ads/2-bedroom-condo-for-sale-in-regent-royal-place-1-lumphini-bangkok_9a2fa1b9be2c-9ea1-f2d6-4c4a-a036e7e6",
+    "listingId": "U36809S",
+    "bedrooms": 2,
+    "areaSqm": 84,
+    "priceThb": 3000000,
+    "pricePerSqmThb": 35714,
+    "floor": 18,
+    "updatedAt": "2026-08-09",
+    "availability": "unconfirmed; listing page is accessible, but its update date is over 30 days old"
+  },
+  "rentBaseline": {
+    "source": "PropertyHub two-bedroom project listing snapshot",
+    "url": "https://propertyhub.in.th/en/listings/for-rent-condo-regent-royal-place-1-bts-ratchadamri-lumpini-pathum-wan-bangkok-cx-124891-live-chat-with-us-add-line-connexproperty---5245746",
+    "rentPerSqmPerMonthThb": 273,
+    "asOf": "2026-10-17",
+    "calculatedMonthlyRentThb": 22932
+  },
+  "yieldEstimate": {
+    "purchasePriceThb": 3000000,
+    "purchaseAreaSqm": 84,
+    "estimatedAnnualRentAfterOneAgentMonthThb": 252252,
+    "netAnnualYieldBeforeUnknownCommonFeePercent": 8.41,
+    "formula": "(273 THB/sqm/month × 84 sqm × 11 months) ÷ 3,000,000 THB × 100",
+    "commonFee": "not verified; not deducted",
+    "otherExcludedCosts": [
+      "tax",
+      "maintenance",
+      "vacancy",
+      "purchase transaction costs"
+    ]
+  },
+  "decision": "Included as a direct two-bedroom listing sample with an explicit availability warning; do not treat its current availability as confirmed."
+}
