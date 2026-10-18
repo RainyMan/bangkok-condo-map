@@ -30,5 +30,21 @@
     "kind": "sale",
     "sourceUrl": "https://propertyhub.in.th/en/listings/good-value-condo-for-sale-at-motif-condo-intharaphithak-bts-wongwian-yai---6312926",
     "reason": "The listing title and full detail identify Motif Condo Sathorn-Wongwian Yai at Intharaphithak Road near BTS Wongwian Yai; it states a 23rd floor and building A, while Motive Condominium Chaengwattana is an 8-floor project in Lak Si. PropertyHub cross-linked this distinct project to Motive; exclude the misattributed sale listing."
+  },
+  {
+    "listingId": "6184765",
+    "hipflatProjectId": 3054,
+    "propertyHubProjectId": "2853",
+    "kind": "sale",
+    "sourceUrl": "https://propertyhub.in.th/en/listings/condo-for-sale-at-wisetsuk-nakorn-condo-bang-khae-large-corner-unit-51-sq-m-fully-furnished-and-ready-to-move-in---6184765",
+    "reason": "PropertyHub classifies this same-name listing under Bang Khae, while Hipflat and independent project references place Wisetsuk Nakorn Condo in Thung Khru. The conflicting districts indicate a different same-name project; do not merge this listing into the Thung Khru project."
+  },
+  {
+    "listingId": "6441391",
+    "hipflatProjectId": 5410,
+    "propertyHubProjectId": "3961",
+    "kind": "rent",
+    "sourceUrl": "https://propertyhub.in.th/en/listings/aa696937-2bed-3bath-bts-phrom-phong-136-71sqm-thb-180-000-mo-fl-16-vittorio-sukhumvit-39-sukhumvit---6441391",
+    "reason": "The listing page headline and details identify Vittorio Sukhumvit 39 and a 136.71 sqm unit, while Walden Sukhumvit 39 is listed as 31–88 sqm in Hipflat. The PropertyHub page also contradicts itself about the project name, so this is excluded as a cross-linked listing."
   }
 ]

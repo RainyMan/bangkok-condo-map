@@ -286,12 +286,12 @@
   const yieldOverrides = new Map();
   // Refresh auto-generated baselines when new exact listings arrive while
   // keeping values the user intentionally edited and saved.
-  const yieldStorageKey = 'bangkokCondoYieldInputsV21';
+  const yieldStorageKey = 'bangkokCondoYieldInputsV22';
   const loadYieldInputs = () => {
     try {
       const current = localStorage.getItem(yieldStorageKey);
       if (current) return JSON.parse(current);
-      const previous = JSON.parse(localStorage.getItem('bangkokCondoYieldInputsV20') || localStorage.getItem('bangkokCondoYieldInputsV19') || localStorage.getItem('bangkokCondoYieldInputsV18') || localStorage.getItem('bangkokCondoYieldInputsV17') || localStorage.getItem('bangkokCondoYieldInputsV16') || localStorage.getItem('bangkokCondoYieldInputsV15') || localStorage.getItem('bangkokCondoYieldInputsV14') || localStorage.getItem('bangkokCondoYieldInputsV13') || localStorage.getItem('bangkokCondoYieldInputsV12') || localStorage.getItem('bangkokCondoYieldInputsV11') || localStorage.getItem('bangkokCondoYieldInputsV10') || localStorage.getItem('bangkokCondoYieldInputsV9') || localStorage.getItem('bangkokCondoYieldInputsV8') || localStorage.getItem('bangkokCondoYieldInputsV7') || localStorage.getItem('bangkokCondoYieldInputsV6') || localStorage.getItem('bangkokCondoYieldInputsV5') || '{}');
+      const previous = JSON.parse(localStorage.getItem('bangkokCondoYieldInputsV21') || localStorage.getItem('bangkokCondoYieldInputsV20') || localStorage.getItem('bangkokCondoYieldInputsV19') || localStorage.getItem('bangkokCondoYieldInputsV18') || localStorage.getItem('bangkokCondoYieldInputsV17') || localStorage.getItem('bangkokCondoYieldInputsV16') || localStorage.getItem('bangkokCondoYieldInputsV15') || localStorage.getItem('bangkokCondoYieldInputsV14') || localStorage.getItem('bangkokCondoYieldInputsV13') || localStorage.getItem('bangkokCondoYieldInputsV12') || localStorage.getItem('bangkokCondoYieldInputsV11') || localStorage.getItem('bangkokCondoYieldInputsV10') || localStorage.getItem('bangkokCondoYieldInputsV9') || localStorage.getItem('bangkokCondoYieldInputsV8') || localStorage.getItem('bangkokCondoYieldInputsV7') || localStorage.getItem('bangkokCondoYieldInputsV6') || localStorage.getItem('bangkokCondoYieldInputsV5') || '{}');
       const recalculated = {};
       condos.forEach(c => {
         const old = previous[c.id] || {};
@@ -314,8 +314,17 @@
           Number(c.rent?.minimumSqm),
         ].filter(rate => rate > 0);
         const oldSaleMatches = saleCandidates.some(candidate => Number(old.price) === candidate.price && Number(old.area) === candidate.area);
+        // Older saved baselines sometimes paired a valid low total with a
+        // different listing's area. Recognize that generated pattern so the
+        // migration can replace it with the price and area from one listing.
+        const knownSalePrices = saleCandidates.map(candidate => candidate.price);
+        const knownSaleAreas = [
+          ...saleCandidates.map(candidate => candidate.area),
+          Number(oldSaleRoom.area), Number(c.sale?.minimumArea),
+        ].filter(area => area > 0);
+        const oldSaleMatchesGeneratedParts = knownSalePrices.includes(Number(old.price)) && knownSaleAreas.includes(Number(old.area));
         const oldRentMatches = rentRates.some(rate => Math.abs(Number(old.rent) - Math.round(rate * Number(old.area))) <= 1);
-        const wasAutoBaseline = oldSaleMatches && oldRentMatches;
+        const wasAutoBaseline = (oldSaleMatches || oldSaleMatchesGeneratedParts) && oldRentMatches;
         const useRefreshedBaseline = !old.price || wasAutoBaseline;
         recalculated[c.id] = {
           price: useRefreshedBaseline ? defaults.price : Number(old.price),

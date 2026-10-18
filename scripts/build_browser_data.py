@@ -42,7 +42,7 @@ if __name__ == "__main__":
         summary = summaries.get(int(project["id"]), {})
         for market in ("sale", "rent"):
             excluded_ids = excluded_by_project_kind.get((int(project["id"]), market), set())
-            if excluded_ids and any(str(sample.get("id") or "") in excluded_ids
+            if excluded_ids and any(str(sample.get("id") or sample.get("listingId") or "") in excluded_ids
                                     for sample in (project.get(market) or {}).get("samples", [])):
                 # Clear the contaminated aggregate if the independently
                 # audited city feed has no clean replacement.

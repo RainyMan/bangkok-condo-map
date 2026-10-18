@@ -272,7 +272,7 @@ def aggregate(projects: list[dict[str, Any]], indexes: list[tuple[int, str, set[
                         room["area"] = room_sample["area"]
                         room["priceSqm"] = room_sample.get("priceSqm")
             excluded_samples = [sample for sample in previous.get("samples", [])
-                                if str(sample.get("id") or "") in excluded_ids]
+                                if str(sample.get("id") or sample.get("listingId") or "") in excluded_ids]
             # A previously cached project-page summary can contain a portal-side
             # project-linking error. Discard that summary and rebuild only from
             # the independently matched city listing cards below.
