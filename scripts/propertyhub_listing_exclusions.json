@@ -1,5 +1,13 @@
 [
   {
+    "listingId": "6492364",
+    "hipflatProjectId": 6071,
+    "propertyHubProjectId": "52",
+    "kind": "sale",
+    "sourceUrl": "https://propertyhub.in.th/en/listings/for-sale-the-pano-rama-3-condo-only-15-500-000-thb---6492364",
+    "reason": "The listing title says ฿15,500,000, but PropertyHub's Bangkok listing card data was parsed as ฿1,550,000. Exclude the inconsistent card so it cannot distort The Pano's price summary or two-bedroom investment baseline."
+  },
+  {
     "listingId": "6242213",
     "hipflatProjectId": 3005,
     "kind": "rent",

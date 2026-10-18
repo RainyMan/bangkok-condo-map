@@ -6,6 +6,7 @@ import pathlib
 import re
 import unicodedata
 from collections import Counter, defaultdict
+from datetime import date
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
@@ -14,6 +15,7 @@ PAGES = RESEARCH / "propertyhub-bangkok-pages.jsonl"
 OUTPUT = RESEARCH / "propertyhub-city-listing-match-audit.json"
 SUMMARY_OUTPUT = DIST / "bangkok-propertyhub-city-summaries.js"
 EXCLUSIONS = pathlib.Path(__file__).with_name("propertyhub_listing_exclusions.json")
+VERIFIED_ALIASES = pathlib.Path(__file__).with_name("propertyhub_verified_project_aliases.json")
 DISTRICTS = (
     "Pom Prap Sattru Phai", "Thawi Watthana", "Khlong Sam Wa", "Bang Khun Thian", "Bang Kho Laem", "Saphan Sung",
     "Bangkok Yai", "Bangkok Noi", "Phaya Thai", "Phra Khanong", "Ratchathewi", "Samphanthawong", "Wang Thonglang",
@@ -102,6 +104,18 @@ def main() -> None:
         listing_project_id = detail.get("propertyHubListingProjectId") or detail.get("propertyHubProjectId")
         fuzzy_detail_by_ph_id[str(listing_project_id)] = target
 
+    verified_alias_by_ph_id = {}
+    for alias in json.loads(VERIFIED_ALIASES.read_text(encoding="utf-8")):
+        ph_id = str(alias["propertyHubProjectId"])
+        target = by_id.get(int(alias["hipflatProjectId"]))
+        expected_district = district(alias.get("propertyHubDistrict", ""))
+        target_district = district((target or {}).get("address", ""))
+        if not target or not expected_district or expected_district != target_district:
+            raise RuntimeError(f"Verified alias {ph_id} has no matching catalogue target district")
+        if ph_id in by_ph_id or ph_id in project_detail_by_ph_id or ph_id in fuzzy_detail_by_ph_id:
+            raise RuntimeError(f"Verified alias {ph_id} conflicts with an existing project mapping")
+        verified_alias_by_ph_id[ph_id] = (target, alias)
+
     listings: dict[tuple[int, str], dict[str, dict]] = defaultdict(dict)
     match_methods: Counter = Counter()
     unresolved_name: Counter = Counter()
@@ -131,6 +145,13 @@ def main() -> None:
                 owner = fuzzy_detail_by_ph_id.get(str(item.get("projectId") or ""))
                 if owner is not None:
                     method = "verified_propertyhub_project_id_fuzzy_name_and_district"
+            if owner is None:
+                alias_match = verified_alias_by_ph_id.get(str(item.get("projectId") or ""))
+                if (alias_match
+                        and norm(item.get("projectName", "")) == norm(alias_match[1]["propertyHubProjectName"])
+                        and district(item.get("address", "")) == district(alias_match[1]["propertyHubDistrict"])):
+                    owner = alias_match[0]
+                    method = "verified_propertyhub_project_id_alias_and_district"
             if owner is None:
                 candidates = by_name_key.get(catalogue_name_key(item.get("projectName", "")), [])
                 listing_district = district(item.get("address", ""))
@@ -244,7 +265,7 @@ def main() -> None:
                 "minimumArea": lowest_total["area"],
                 "minimumSampleUpdated": lowest_total.get("updated"),
                 "averageSqm": int(round(sum(row["priceSqm"] for row in rows) / len(rows))),
-                "minimumSqm": lowest_sqm["priceSqm"], "minimumSqmSampleUpdated": lowest_sqm.get("updated"), "asOf": "2026-10-17",
+                "minimumSqm": lowest_sqm["priceSqm"], "minimumSqmSampleUpdated": lowest_sqm.get("updated"), "asOf": date.today().isoformat(),
                 "source": "https://propertyhub.in.th/en/condo-for-sale/bangkok" if kind == "sale" else "https://propertyhub.in.th/en/condo-for-rent/bangkok",
                 "minimumSourceUrl": lowest_total["url"], "minimumSqmSourceUrl": lowest_sqm["url"],
                 "samples": sorted(rows, key=lambda row: (row["priceSqm"], row["price"]))[:12],

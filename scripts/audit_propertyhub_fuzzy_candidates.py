@@ -49,6 +49,9 @@ def main() -> None:
     known = {str(row["propertyHubProjectId"]) for row in ph if row.get("propertyHubProjectId")}
     known.update(str(row["propertyHubProjectId"]) for row in details if row.get("propertyHubProjectId"))
     known.update(str(row["propertyHubListingProjectId"]) for row in details if row.get("propertyHubListingProjectId"))
+    known.update(str(row["propertyHubProjectId"]) for row in json.loads(
+        (pathlib.Path(__file__).with_name("propertyhub_verified_project_aliases.json")).read_text(encoding="utf-8")
+    ))
     catalogue_by_district: dict[str, list[dict]] = defaultdict(list)
     for row in projects:
         d = audit.district(row.get("address", ""))

@@ -1,0 +1,58 @@
+[
+  {
+    "propertyHubProjectId": "523",
+    "propertyHubProjectName": "Nara 9",
+    "propertyHubProjectUrl": "https://propertyhub.in.th/en/projects/nara-9",
+    "propertyHubDistrict": "Sathon",
+    "hipflatProjectId": 6075,
+    "evidence": "PropertyHub's Nara 9 project page is in Sathon and its linked unit cards identify Nara 9 by Eastern Star; Hipflat's Nara 9 by Eastern Star is at Naradhiwas Rajanagarindra Road in Sathon."
+  },
+  {
+    "propertyHubProjectId": "52",
+    "propertyHubProjectName": "The Pano",
+    "propertyHubProjectUrl": "https://propertyhub.in.th/en/projects/the-pano",
+    "propertyHubDistrict": "Yan Nawa",
+    "hipflatProjectId": 6071,
+    "evidence": "PropertyHub explicitly lists The Pano Rama 3 as another name for The Pano, with 397 units and completion in 2010; Hipflat's The Pano Rama 3 is at 858 Rama III Road in Yan Nawa."
+  },
+  {
+    "propertyHubProjectId": "1538",
+    "propertyHubProjectName": "The Met Sathorn",
+    "propertyHubProjectUrl": "https://propertyhub.in.th/en/projects/the-met-sathorn",
+    "propertyHubDistrict": "Sathon",
+    "hipflatProjectId": 4492,
+    "evidence": "PropertyHub's The Met Sathorn page and listings identify the same South Sathorn project; Hipflat's The Met is at Soi Sathon 5. Both are in Sathon and the completion year is 2009."
+  },
+  {
+    "propertyHubProjectId": "4442",
+    "propertyHubProjectName": "COCO PARC Rama 4",
+    "propertyHubProjectUrl": "https://propertyhub.in.th/en/projects/coco-parc-rama-4",
+    "propertyHubDistrict": "Khlong Toei",
+    "hipflatProjectId": 5253,
+    "evidence": "PropertyHub's COCO PARC Rama 4 page identifies the Khlong Toei project and 444 units; Hipflat's COCO Parc is at 1150 Rama 4 Road in Khlong Toei."
+  },
+  {
+    "propertyHubProjectId": "3881",
+    "propertyHubProjectName": "The Tree Hua Mak Interchange",
+    "propertyHubProjectUrl": "https://propertyhub.in.th/en/projects/the-tree-hua-mak-interchange",
+    "propertyHubDistrict": "Bang Kapi",
+    "hipflatProjectId": 4342,
+    "evidence": "PropertyHub lists The Tree Hua Mak and The Tree Hua Mak Interchange as names for the same Pruksa project, 589 units, on Ramkhamhaeng Road in Bang Kapi; Hipflat's The Tree Hua Mak is in Hua Mak, Bang Kapi."
+  },
+  {
+    "propertyHubProjectId": "431",
+    "propertyHubProjectName": "The Prague",
+    "propertyHubProjectUrl": "https://propertyhub.in.th/en/projects/the-prague",
+    "propertyHubDistrict": "Pom Prap Sattru Phai",
+    "hipflatProjectId": 5737,
+    "evidence": "PropertyHub's The Prague page lists 156 units in Pom Prap Sattru Phai; Hipflat's The Prague Condominium is at Damrong Rak Road in Khlong Maha Nak, the same district, and is completed in 2015."
+  },
+  {
+    "propertyHubProjectId": "4155",
+    "propertyHubProjectName": "FYNN Asoke",
+    "propertyHubProjectUrl": "https://propertyhub.in.th/en/projects/fynn-asoke",
+    "propertyHubDistrict": "Khlong Toei",
+    "hipflatProjectId": 4307,
+    "evidence": "PropertyHub's FYNN Asoke page places the 263-unit project in Sukhumvit Soi 10, Khlong Toei; Hipflat's FYNN Asoke Sukhumvit 10 is at 28 Sukhumvit 10, Khlong Toei."
+  }
+]
