@@ -1,0 +1,29 @@
+{
+  "projectId": 3127,
+  "name": "Nana Condo",
+  "checkedAt": "2026-10-18",
+  "coordinates": {
+    "lat": 13.739703,
+    "lng": 100.553408,
+    "source": "https://propertyscout.co.th/en/2-br-condo-nana-condo-near-bts-nana-3169405/",
+    "corroboratedBy": "https://www.hipflat.co.th/en/projects/nana-condo-setbyl"
+  },
+  "saleListing": {
+    "price": 1890000,
+    "bedrooms": 2,
+    "areaSqm": 52,
+    "pricePerSqm": 36346,
+    "url": "https://propertyscout.co.th/en/2-br-condo-nana-condo-near-bts-nana-3169405/",
+    "listed": "2026-07-06",
+    "availability": "unconfirmed; page says availability upon request and was updated over 30 days ago"
+  },
+  "yieldBaseline": {
+    "purchasePrice": 1890000,
+    "purchaseAreaSqm": 52,
+    "rentRateThbPerSqmMonth": 403,
+    "estimatedMonthlyRent": 20956,
+    "grossYield12MonthsPct": 13.31,
+    "yield11MonthsPct": 12.2,
+    "note": "Rent baseline is the existing one-bedroom per-sqm low; a two-bedroom rental listing is not yet verified. Common fee is unknown."
+  }
+}
