@@ -1,0 +1,53 @@
+{
+  "hipflatId": 3147,
+  "name": "SHAA Asoke",
+  "checkedAt": "2026-10-18",
+  "identity": {
+    "hipflatProjectUrl": "https://www.hipflat.co.th/en/projects/shaa-asoke-hsnrho",
+    "propertyHubProjectUrl": "https://propertyhub.in.th/en/projects/shaa-asoke---20338",
+    "addressMatch": "Hipflat lists 29-31 Soi Sukhumvit 19; PropertyHub identifies the same SHAA Asoke project in Watthana. The PropertyHub map point is taken from its exact project page's embedded project-location data."
+  },
+  "location": {
+    "status": "verified_exact_project_map_point",
+    "lat": 13.7399539,
+    "lng": 100.55991130000007,
+    "sourceUrl": "https://propertyhub.in.th/en/condo-for-sale/project-shaa-asoke---20338",
+    "corroboratingProjectUrl": "https://www.hipflat.co.th/en/projects/shaa-asoke-hsnrho",
+    "verificationMethod": "exact_propertyhub_project_page_map_coordinates_and_hipflat_project_identity"
+  },
+  "projectDetails": {
+    "completedYear": 2023,
+    "units": 143,
+    "floors": 24,
+    "sourceUrl": "https://propertyhub.in.th/en/condo-for-sale/project-shaa-asoke---20338",
+    "crosscheckUrl": "https://www.scancondo.com/เช่าคอนโด/คอนโด-ฌา-อโศก",
+    "note": "PropertyHub specifies completed 2566 BE, 143 units and 24 floors; Scancondo project details also specify 143 units and 24 floors. Scancondo's descriptive paragraph later says 40 floors, conflicting with its own structured details and the PropertyHub page, so that isolated discrepancy was not used."
+  },
+  "walkingRoute": {
+    "id": 3147,
+    "name": "SHAA Asoke",
+    "originLat": 13.7399539,
+    "originLng": 100.55991130000007,
+    "distanceKm": 0.538,
+    "minutes": 7,
+    "stationId": "BL22",
+    "source": "Valhalla pedestrian routing (30 nearest stations checked)",
+    "sourceUrl": "https://valhalla1.openstreetmap.de/",
+    "networkSourceUrl": "https://www.openstreetmap.org/copyright",
+    "asOf": "2026-10-18"
+  },
+  "market": {
+    "sale": {
+      "status": "no_current_individual_sale_listing_found",
+      "sourceUrl": "https://propertyhub.in.th/en/condo-for-sale/project-shaa-asoke---20338",
+      "finding": "The exact PropertyHub project sale page, checked 2026-10-18, reports no matched properties for sale."
+    },
+    "rent": {
+      "status": "no_current_individual_rent_listing_found",
+      "sourceUrl": "https://propertyhub.in.th/en/condo-for-rent/project-shaa-asoke---20338",
+      "crosscheckUrl": "https://www.scancondo.com/เช่าคอนโด/คอนโด-ฌา-อโศก",
+      "finding": "The exact PropertyHub project rent page, checked 2026-10-18, reports no matched properties for rent. Scancondo project search also shows no rental listings."
+    },
+    "yield": "not calculated because no direct sale or rent listing sample was available"
+  }
+}

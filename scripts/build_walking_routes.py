@@ -91,6 +91,8 @@ def main() -> int:
         market = propertyhub.get(pid) or {}
         project_detail = details.get(str(market.get("propertyHubProjectId") or "")) or {}
         point = enriched if enriched.get("locationVerified") else project_detail if project_detail.get("locationVerified") else guessed.get(pid) if guessed.get(pid) else None
+        if not point and market.get("locationVerified") and isinstance(market.get("lat"), (int, float)) and isinstance(market.get("lng"), (int, float)):
+            point = market
         if not point and project.get("locationVerified"):
             point = project
         if not point:
