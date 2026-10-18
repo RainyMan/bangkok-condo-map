@@ -1,0 +1,64 @@
+{
+  "hipflatId": 3005,
+  "project": "Chatuchak Condominium",
+  "asOf": "2026-10-18",
+  "location": {
+    "latitude": 13.792577735276529,
+    "longitude": 100.54728879471045,
+    "verified": true,
+    "coordinateSource": "https://propertyhub.in.th/en/projects/chatuchak-condominium",
+    "identitySource": "https://www.hipflat.co.th/en/projects/chatuchak-condominium-cpdwry",
+    "method": "PropertyHub project coordinate and exact Phaya Thai project page cross-checked against Hipflat name/address; no nearby listings used as coordinates or samples."
+  },
+  "projectFacts": {
+    "completedYear": 1983,
+    "floors": 4,
+    "units": 45,
+    "source": "https://www.hipflat.co.th/en/projects/chatuchak-condominium-cpdwry"
+  },
+  "nearestStationWalkingRoute": {
+    "id": 3005,
+    "name": "Chatuchak Condominium",
+    "originLat": 13.792577735276529,
+    "originLng": 100.54728879471045,
+    "distanceKm": 0.847,
+    "minutes": 11,
+    "stationId": "N7",
+    "source": "Valhalla pedestrian routing (30 nearest stations checked)",
+    "sourceUrl": "https://valhalla1.openstreetmap.de/",
+    "networkSourceUrl": "https://www.openstreetmap.org/copyright",
+    "asOf": "2026-10-17"
+  },
+  "marketAvailability": {
+    "sale": {
+      "status": "no_current_matching_listing",
+      "sampleCount": 0,
+      "sources": [
+        "https://propertyhub.in.th/en/condo-for-sale/project-chatuchak-condominium",
+        "https://www.hipflat.co.th/en/projects/chatuchak-condominium-cpdwry"
+      ]
+    },
+    "rent": {
+      "status": "historical_listing_expired",
+      "sampleCount": 0,
+      "sources": [
+        "https://propertyhub.in.th/en/condo-for-rent/project-chatuchak-condominium",
+        "https://www.hipflat.co.th/en/projects/chatuchak-condominium-cpdwry"
+      ],
+      "historicalListing": {
+        "url": "https://propertyhub.in.th/en/listings/%EF%B8%8F-64-2-sq-m-condo-for-rent-high-floor-stunning-chatuchak-park-view-fully-furnished-move-in-ready---6242213",
+        "listingId": "6242213",
+        "price": 33000,
+        "areaSqm": 64,
+        "bedrooms": 2,
+        "availableUntil": "2026-06-30",
+        "excludedFromCurrentMarket": true
+      }
+    },
+    "roi": {
+      "status": "not_calculable",
+      "reason": "No current exact-project sale listing and no current exact-project rental listing."
+    }
+  },
+  "excludedComparables": "Nearby Phaya Thai and Chatuchak listings with different project names, including IDEO and other Pradiphat projects, were not assigned to this condo."
+}

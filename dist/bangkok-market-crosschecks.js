@@ -32,6 +32,33 @@ window.BANGKOK_MARKET_CROSSCHECKS = [
     ]
   },
   {
+    "hipflatId": 3005,
+    "projectName": "Chatuchak Condominium",
+    "asOf": "2026-10-18",
+    "sourceName": "PropertyHub",
+    "projectSourceUrl": "https://propertyhub.in.th/en/condo-for-sale/project-chatuchak-condominium",
+    "sale": {
+      "activeListingCount": 0,
+      "sourceUrl": "https://propertyhub.in.th/en/condo-for-sale/project-chatuchak-condominium"
+    },
+    "rent": {
+      "activeListingCount": 0,
+      "sourceUrl": "https://propertyhub.in.th/en/condo-for-rent/project-chatuchak-condominium"
+    },
+    "availabilitySources": [
+      {
+        "sourceName": "Hipflat",
+        "url": "https://www.hipflat.co.th/en/projects/chatuchak-condominium-cpdwry",
+        "statusLabel": "目前無可用房源"
+      },
+      {
+        "sourceName": "PropertyHub 過期租盤",
+        "url": "https://propertyhub.in.th/en/listings/%EF%B8%8F-64-2-sq-m-condo-for-rent-high-floor-stunning-chatuchak-park-view-fully-furnished-move-in-ready---6242213",
+        "statusLabel": "頁面標示可租至 2026-06-30；不列現租樣本"
+      }
+    ]
+  },
+  {
     "hipflatId": 3006,
     "projectName": "31 Residence",
     "asOf": "2026-10-18",

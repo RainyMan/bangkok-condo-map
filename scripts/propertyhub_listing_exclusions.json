@@ -1,5 +1,12 @@
 [
   {
+    "listingId": "6242213",
+    "hipflatProjectId": 3005,
+    "kind": "rent",
+    "sourceUrl": "https://propertyhub.in.th/en/listings/%EF%B8%8F-64-2-sq-m-condo-for-rent-high-floor-stunning-chatuchak-park-view-fully-furnished-move-in-ready---6242213",
+    "reason": "Exact-project listing identifies Chatuchak Condominium and 2BR/64 sqm/฿33,000 per month, but its stated availability date is 2026-06-30, before the 2026-10-18 check. Exclude it from current rent and ROI; retain the source in the availability cross-check."
+  },
+  {
     "listingId": "6429069",
     "hipflatProjectId": 3006,
     "propertyHubProjectId": "6787",
@@ -24,20 +31,20 @@
     "reason": "PropertyHub project page linked a Jomtien Yacht Club Pattaya listing to Juldis Mansion in Bangkok; the listing title and location show it is a different project."
   },
   {
-    "listingId": "6312926",
-    "hipflatProjectId": 3537,
-    "propertyHubProjectId": "4844",
-    "kind": "sale",
-    "sourceUrl": "https://propertyhub.in.th/en/listings/good-value-condo-for-sale-at-motif-condo-intharaphithak-bts-wongwian-yai---6312926",
-    "reason": "The listing title and full detail identify Motif Condo Sathorn-Wongwian Yai at Intharaphithak Road near BTS Wongwian Yai; it states a 23rd floor and building A, while Motive Condominium Chaengwattana is an 8-floor project in Lak Si. PropertyHub cross-linked this distinct project to Motive; exclude the misattributed sale listing."
-  },
-  {
     "listingId": "6184765",
     "hipflatProjectId": 3054,
     "propertyHubProjectId": "2853",
     "kind": "sale",
     "sourceUrl": "https://propertyhub.in.th/en/listings/condo-for-sale-at-wisetsuk-nakorn-condo-bang-khae-large-corner-unit-51-sq-m-fully-furnished-and-ready-to-move-in---6184765",
     "reason": "PropertyHub classifies this same-name listing under Bang Khae, while Hipflat and independent project references place Wisetsuk Nakorn Condo in Thung Khru. The conflicting districts indicate a different same-name project; do not merge this listing into the Thung Khru project."
+  },
+  {
+    "listingId": "6312926",
+    "hipflatProjectId": 3537,
+    "propertyHubProjectId": "4844",
+    "kind": "sale",
+    "sourceUrl": "https://propertyhub.in.th/en/listings/good-value-condo-for-sale-at-motif-condo-intharaphithak-bts-wongwian-yai---6312926",
+    "reason": "The listing title and full detail identify Motif Condo Sathorn-Wongwian Yai at Intharaphithak Road near BTS Wongwian Yai; it states a 23rd floor and building A, while Motive Condominium Chaengwattana is an 8-floor project in Lak Si. PropertyHub cross-linked this distinct project to Motive; exclude the misattributed sale listing."
   },
   {
     "listingId": "6441391",
