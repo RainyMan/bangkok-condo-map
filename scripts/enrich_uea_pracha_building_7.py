@@ -14,7 +14,9 @@ PROJECT_NAME = "Uea Pracha Condo Town Building 7"
 SAM_URL = "https://npa.sam.or.th/site/index.php/npa/map_preview/13636/"
 HIPFLAT_URL = "https://www.hipflat.co.th/projects/uea-pracha-condo-town-building-7-sqnbxh"
 BAANFINDER_URL = "https://www.baanfinder.com/en/project/uea-pracha-condotown-7--33427"
+ZMYHOME_URL = "https://zmyhome.com/project/V14206"
 CORRECT_ADDRESS = "Soi Nak Niwat 48 Yaek 18, Lat Phrao, Bangkok 10230, THA"
+LAT, LNG = 13.8195648193, 100.6175842285
 
 
 def load_array(path: Path, symbol: str) -> list[dict]:
@@ -50,10 +52,16 @@ def main() -> None:
             "addressVerificationNote": "SAM's unit record identifies Building 7 at Soi Nak Niwat 48 Yaek 18, Lat Phrao; BaanFinder independently lists Uea Pracha Condotown 7 at the same soi. Hipflat's Srinagarindra address conflicts with these exact-building sources.",
             "units": 103,
             "floors": 5,
-            "locationVerified": False,
-            "lat": None,
-            "lng": None,
-            "locationSourceUrl": None,
+            "lat": LAT,
+            "lng": LNG,
+            "locationVerified": True,
+            "locationSourceUrl": ZMYHOME_URL,
+            "locationSourceName": "ZmyHome 專案頁嵌入 Google Maps 園區座標",
+            "locationVerificationSourceUrl": SAM_URL,
+            "locationVerificationMethod": "zmyhome_compound_map_pin_cross_checked_with_sam_exact_building_7_address_and_baanfinder_project_name_and_soi",
+            "completedYear": 2004,
+            "completedYearSourceUrl": ZMYHOME_URL,
+            "fee": {"rate": 10, "note": "ZmyHome 專案頁公布管理費 10 ฿/㎡；頁面未列公告日期，請向管委會確認現行費率。", "source": ZMYHOME_URL, "status": "published_indicative"},
         })
         write_array(path, symbol, rows)
 
@@ -93,7 +101,7 @@ def main() -> None:
     html = index_path.read_text(encoding="utf-8")
     replacements = {
         r"bangkok-catalogue\.js\?v=[^\"']+": "bangkok-catalogue.js?v=20261018c-uea-pracha-building-7-address-correction",
-        r"bangkok-propertyhub-map\.js\?v=[^\"']+": "bangkok-propertyhub-map.js?v=20261018h-uea-pracha-building-7-address-correction",
+        r"bangkok-propertyhub-map\.js\?v=[^\"']+": "bangkok-propertyhub-map.js?v=20261018i-uea-pracha-building-7-map-pin",
         r"bangkok-manual-market-samples\.js\?v=[^\"']+": "bangkok-manual-market-samples.js?v=20261018h-uea-pracha-building-7-special-asset",
         r"bangkok-propertyhub-details\.js\?v=[^\"']+": "bangkok-propertyhub-details.js?v=20261018d-propertyhub-incremental-details",
     }
@@ -110,14 +118,18 @@ def main() -> None:
         "addressSource": SAM_URL,
         "identityCrossCheck": {"hipflat": HIPFLAT_URL, "baanfinder": BAANFINDER_URL},
         "addressEvidence": "SAM record 8Z4427 identifies unit 41/209 in Condominium Uea Pracha Condo Town Building 7 at Soi Nak Niwat 48 Yaek 18, Lat Phrao. BaanFinder separately lists Uea Pracha Condotown 7 at Nak Niwat 48 Yaek 18. Hipflat's 169 Srinagarindra address conflicts with both exact-building sources.",
+        "coordinates": {"lat": LAT, "lng": LNG},
+        "coordinateSource": ZMYHOME_URL,
+        "coordinateEvidence": "ZmyHome project page embeds a Google Maps location at 13.8195648193,100.6175842285 for the shared 8-building compound. SAM's record identifies Building 7 within this compound. This is a compound-level pin, not a surveyed Building 7 footprint.",
+        "completedYear": 2004,
+        "feeBahtPerSqm": 10,
         "saleSample": {"price": 259000, "areaSqm": 30.48, "pricePerSqm": round(259000 / 30.48), "source": SAM_URL, "specialAsset": True, "listingStatus": "SAM page displays for sale; source page does not provide an update date."},
         "rentSample": None,
-        "coordinates": None,
-        "coordinateStatus": "pending; no building-level map point verified yet",
+        "coordinateStatus": "verified compound-level pin; individual building footprint not separately mapped",
         "checkedAt": date.today().isoformat(),
     }
     REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(json.dumps({"hipflatId": PROJECT_ID, "address": CORRECT_ADDRESS, "specialSaleSample": sample, "coordinatesVerified": False}, ensure_ascii=False))
+    print(json.dumps({"hipflatId": PROJECT_ID, "address": CORRECT_ADDRESS, "specialSaleSample": sample, "compoundCoordinatesVerified": True, "individualBuildingFootprint": False}, ensure_ascii=False))
 
 
 if __name__ == "__main__":
