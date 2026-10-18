@@ -1,0 +1,30 @@
+{
+  "hipflatId": 3038,
+  "projectName": "Ussakan Place Twin Condo",
+  "checkedAt": "2026-10-18",
+  "rentalListing": {
+    "id": "CX-118532",
+    "monthlyRentThb": 8000,
+    "areaSqm": 38,
+    "rentThbPerSqmMonth": 210.53,
+    "bedrooms": 1,
+    "updatedAt": "2026-10-18T00:40:02",
+    "projectPage": "https://www.hipflat.co.th/projects/ussakan-place-twin-condo-uprazd",
+    "listingPage": "https://www.hipflat.co.th/ads/2a0a0aa081tl8cnn841984eu3ul38t9u",
+    "verification": "Hipflat project page links to this exact listing; listing detail confirms project name, rent, area, bedroom count, and update timestamp."
+  },
+  "locationReview": {
+    "status": "project_coordinates_verified; listing address conflict noted",
+    "coordinates": {
+      "lat": 13.8102772,
+      "lng": 100.5628531
+    },
+    "coordinateSource": "https://www.thaigerproperty.com/projects/thailand/bangkok/chatuchak/chomphon/ussakan-place-twin-condo",
+    "crossCheckSource": "https://www.hipflat.co.th/projects/ussakan-place-twin-condo-uprazd",
+    "reason": "The current coordinate feed matches Thaiger Property's exact project slug and the Hipflat project page's Chatuchak address. The linked rental advert's lower description also mentions Ramkhamhaeng 105/1, Hua Mak/Bang Kapi, while the advert header and project-page relationship identify Ussakan Place Twin Condo in Chatuchak. Keep the project pin from the independently cross-checked project pages and flag the conflicting advert text for later reconciliation."
+  },
+  "yield": {
+    "status": "not_calculated",
+    "reason": "No linked sale listing is available in this sample, so a project purchase baseline cannot be paired with this rent sample."
+  }
+}
