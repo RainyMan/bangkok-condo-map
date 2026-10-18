@@ -1,0 +1,59 @@
+{
+  "hipflatId": 3791,
+  "condo": "Aspire Vipha-Victory",
+  "checkedAt": "2026-10-18",
+  "coordinate": {
+    "status": "verified",
+    "latitude": 13.763674107368944,
+    "longitude": 100.54746122245038,
+    "source": "https://propertyscout.co.th/en/bangkok/condo/aspire-vibha-victory/",
+    "method": "exact_project_name_and_district"
+  },
+  "sale": {
+    "id": "6277901",
+    "price": 7000000,
+    "area": 60,
+    "priceSqm": 116667,
+    "beds": 2,
+    "roomType": "2BR",
+    "title": "Aspire Vibha-Victory，2 房，60 ㎡，฿7,000,000",
+    "url": "https://propertyhub.in.th/en/listings/rare-item-beautiful-condo-at-below-market-price-aspire-vibha-victory-book-now-before-its-gone---6277901",
+    "sourceName": "PropertyHub",
+    "projectName": "Aspire Vibha - Victory",
+    "updated": "2026-10-17",
+    "checkedAt": "2026-10-18",
+    "matchedBy": "exact_project_name_and_listing_id",
+    "listingStatus": "active_as_listed"
+  },
+  "rent": {
+    "id": "6316910",
+    "price": 28000,
+    "area": 56,
+    "priceSqm": 500,
+    "beds": 2,
+    "roomType": "2BR",
+    "title": "Aspire Vibha-Victory，2 房，56 ㎡，฿28,000/月",
+    "url": "https://propertyhub.in.th/en/listings/2-br-condo-for-rent-at-aspire-vibha-victory-near-bts-sanam-pao-id-3207201---6316910",
+    "sourceName": "PropertyHub",
+    "projectName": "Aspire Vibha - Victory",
+    "updated": "2026-10-18",
+    "checkedAt": "2026-10-18",
+    "matchedBy": "exact_project_name_and_listing_id",
+    "listingStatus": "active_as_listed"
+  },
+  "roi": {
+    "roomType": "2BR",
+    "purchasePriceTHB": 7000000,
+    "floorAreaSqm": 60,
+    "rentRateTHBPerSqmPerMonth": 500,
+    "estimatedMonthlyRentTHB": 30000,
+    "agencyMonthsDeducted": 1,
+    "annualNetYieldPercentBeforeCommonFee": 4.71,
+    "managementFee": "not verified; not deducted"
+  },
+  "notes": [
+    "The active PropertyHub sale project page showed one two-bedroom listing at ฿7,000,000 / 60 sqm when checked.",
+    "A lower ฿5,640,000 indexed listing redirected to the project page and was excluded as not directly available.",
+    "The rental listing was refreshed on 2026-10-18 at ฿28,000 / 56 sqm."
+  ]
+}
