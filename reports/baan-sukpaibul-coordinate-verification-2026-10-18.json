@@ -1,0 +1,16 @@
+{
+  "hipflatId": 3194,
+  "project": "Baan Sukpaibul",
+  "checkedAt": "2026-10-18",
+  "coordinates": {
+    "lat": 13.779718,
+    "lng": 100.550462
+  },
+  "sources": {
+    "primaryMapAndAddress": "https://www.oneday.co.th/th_TH/สิ่งปลูกสร้าง/บ้านสุขไพบูลย์/",
+    "hipflatProject": "https://www.hipflat.co.th/en/projects/baan-sukpaibul-rkmbxf",
+    "ddpropertyProject": "https://www.ddproperty.com/en/project/15255-baan-sukpaibul"
+  },
+  "crossCheckedFacts": "OneDay exact project page: 35 Soi Sai Lom 2, Phaya Thai; page map coordinates 13.779718, 100.550462; 8 floors and 22 apartments. Hipflat project page confirms Baan Sukpaibul and Soi Sai Lom 2, Sam Sen Nai, Phaya Thai; DDproperty confirms Baan Sukpaibul and Soi Sai Lom 2, Phaya Thai.",
+  "marketStatus": "Hipflat currently reports no properties available; no expired rent or sale prices were added as active listing samples."
+}
