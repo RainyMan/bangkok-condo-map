@@ -1,0 +1,44 @@
+{
+  "hipflatId": 3149,
+  "project": "The Grand Regent",
+  "checkedAt": "2026-10-18",
+  "sale": {
+    "source": "Accomasia",
+    "url": "https://www.accomasia.co.th/property/thegrandregent-for-rent-for-sale-ploenchit-bts-ratchadamri-bangkok-aa23254",
+    "listingId": "AA23254",
+    "bedrooms": 1,
+    "areaSqm": 80,
+    "priceThb": 3200000,
+    "pricePerSqmThb": 40000,
+    "availability": "page accessible on check date; source asks the user to confirm because units sell or rent quickly"
+  },
+  "sameListingRent": {
+    "source": "Accomasia",
+    "url": "https://www.accomasia.co.th/property/thegrandregent-for-rent-for-sale-ploenchit-bts-ratchadamri-bangkok-aa23254",
+    "monthlyRentThb": 35000,
+    "bedrooms": 1,
+    "areaSqm": 80,
+    "note": "Same property code AA23254 is also offered for rent; excluded from PropertyHub rent-market aggregates."
+  },
+  "propertyHubRentBaseline": {
+    "source": "PropertyHub",
+    "url": "https://propertyhub.in.th/en/listings/for-rent-the-grand-regent-studio-bts-ratchadamri-fully-furnished-gtn-1008---6470781",
+    "monthlyRentThb": 15000,
+    "areaSqm": 42,
+    "roomType": "Studio (also labeled 1 bed on the listing page)",
+    "rentPerSqmPerMonthThb": 357,
+    "availability": "listing says available 2026-11-11; keep as a future-dated rental sample"
+  },
+  "yieldEstimate": {
+    "formula": "(357 THB/sqm/month × 80 sqm × 11 months) / 3,200,000 THB × 100",
+    "netAnnualYieldBeforeUnknownCommonFeePercent": 9.82,
+    "commonFee": "not verified; not deducted",
+    "otherExcludedCosts": [
+      "tax",
+      "maintenance",
+      "vacancy",
+      "purchase transaction costs"
+    ],
+    "note": "The calculator uses the lowest 1-room-type rent rate in the existing market dataset rather than the same listing's 35,000 THB/month advertised rent."
+  }
+}
