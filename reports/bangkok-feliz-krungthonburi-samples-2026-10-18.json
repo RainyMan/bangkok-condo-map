@@ -1,0 +1,67 @@
+{
+  "hipflatId": 3572,
+  "projectName": "Bangkok Feliz @ Krungthonburi Station",
+  "propertyHubProjectName": "Bangkok Feliz @ Krungthonburi 5 - 2",
+  "checkedAt": "2026-10-18",
+  "coordinates": {
+    "lat": 13.722483146819094,
+    "lng": 100.50438775063618,
+    "source": "https://propertyscout.co.th/en/bangkok/condo/bangkok-feliz-krungthonburi-station/",
+    "method": "exact_project_name_and_district"
+  },
+  "samples": {
+    "sale": {
+      "id": "4063636",
+      "price": 4000000,
+      "area": 54,
+      "priceSqm": 74074,
+      "beds": 2,
+      "roomType": "2BR",
+      "title": "Bangkok Feliz @ Krungthonburi，2 房，54 ㎡，฿4,000,000",
+      "url": "https://asset-direct-v2.propertyhub.in.th/en/listings/for-sale-condo-bangkok-feliz-krungthonburi-bts-krung-thon-buri-khlong-ton-sai-khlong-san-bangkok-cx-87544-live-chat-with-us-add-line-connexproperty---4063636",
+      "updated": "2026-10-17",
+      "sourceName": "PropertyHub",
+      "projectName": "Bangkok Feliz @ Krungthonburi 5 - 2",
+      "checkedAt": "2026-10-18",
+      "matchedBy": "exact_project_name_and_propertyhub_project_listing",
+      "listingStatus": "active_as_listed"
+    },
+    "rent": {
+      "id": "6236797",
+      "price": 20000,
+      "area": 52.22,
+      "priceSqm": 383,
+      "beds": 2,
+      "roomType": "2BR",
+      "title": "Bangkok Feliz @ Krungthonburi，2 房，52.22 ㎡，฿20,000/月",
+      "url": "https://asset-direct-v2.propertyhub.in.th/en/listings/2-br-condo-for-rent-bangkok-feliz-krung-thon-buri-200m-id-2870687---6236797",
+      "updated": "2026-10-06",
+      "sourceName": "PropertyHub",
+      "projectName": "Bangkok Feliz @ Krungthonburi 5 - 2",
+      "checkedAt": "2026-10-18",
+      "matchedBy": "exact_project_name_and_propertyhub_project_listing",
+      "listingStatus": "active_as_listed"
+    }
+  },
+  "fee": {
+    "rate": 45,
+    "status": "public",
+    "note": "PropertyHub 專案頁列 Utility Fee ฿45/㎡，請向管委會確認是否為當期管理費。",
+    "source": "https://propertyhub.in.th/en/projects/bangkok-feliz-krungthonburi-5-2"
+  },
+  "roiBaseline": {
+    "bedrooms": 2,
+    "purchasePriceTHB": 4000000,
+    "purchaseAreaSqm": 54,
+    "rentRateTHBPerSqmPerMonth": 383.0,
+    "estimatedMonthlyRentTHB": 20682,
+    "annualCommonFeeDeductionTHB": 29160,
+    "agentFeeDeductedMonths": 1,
+    "netYieldPct": 4.96
+  },
+  "evidenceUrls": [
+    "https://propertyhub.in.th/en/projects/bangkok-feliz-krungthonburi-5-2",
+    "https://propertyhub.in.th/en/condo-for-sale/project-bangkok-feliz-krungthonburi-5-2",
+    "https://propertyhub.in.th/en/condo-for-rent/project-bangkok-feliz-krungthonburi-5-2"
+  ]
+}

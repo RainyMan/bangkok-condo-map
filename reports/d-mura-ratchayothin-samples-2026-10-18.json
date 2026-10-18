@@ -1,0 +1,60 @@
+{
+  "hipflatId": 3551,
+  "projectName": "D' Mura Ratchayothin",
+  "checkedAt": "2026-10-18",
+  "coordinates": {
+    "lat": 13.837318,
+    "lng": 100.583207,
+    "source": "https://propertyscout.co.th/en/bangkok/condo/d-mura-ratchayothin/",
+    "method": "exact_project_name_and_district"
+  },
+  "samples": {
+    "sale": {
+      "sourceName": "PropertyHub",
+      "projectName": "D' Mura Ratchayothin",
+      "checkedAt": "2026-10-18",
+      "matchedBy": "exact_project_name_and_propertyhub_project_listing",
+      "listingStatus": "active_as_listed",
+      "id": "6034267",
+      "price": 4400000,
+      "area": 53.69,
+      "priceSqm": 81952,
+      "beds": 2,
+      "roomType": "2BR",
+      "title": "D' Mura Ratchayothin，2 房，53.69 ㎡，฿4,400,000",
+      "url": "https://propertyhub.in.th/en/listings/condo-53-69-sq-m-chatuchak-bangkok-for-4-4m---6034267",
+      "updated": "2026-10-18"
+    },
+    "rent": {
+      "sourceName": "PropertyHub",
+      "projectName": "D' Mura Ratchayothin",
+      "checkedAt": "2026-10-18",
+      "matchedBy": "exact_project_name_and_propertyhub_project_listing",
+      "listingStatus": "active_as_listed",
+      "id": "4815878",
+      "price": 18000,
+      "area": 54,
+      "priceSqm": 333,
+      "beds": 2,
+      "roomType": "2BR",
+      "title": "D' Mura Ratchayothin，2 房，54 ㎡，฿18,000/月",
+      "url": "https://propertyhub.in.th/listings/d-mura-ratchayothin-%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B8%A7%E0%B8%A2-%E0%B8%A3%E0%B8%B2%E0%B8%84%E0%B8%B2%E0%B8%94%E0%B8%B5-%E0%B8%AA%E0%B%E0%B8%9A%E0%B8%96%E0%B8%B2%E0%B8%A1%E0%B9%80%E0%B8%9E%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B9%80%E0%B8%95%E0%B8%B4%E0%B8%A1%E0%B9%84%E0%B8%94%E0%B9%89%E0%B8%97%E0%B8%B5%E0%B9%88-line-condorental---4815878",
+      "updated": "2026-10-18"
+    }
+  },
+  "roiBaseline": {
+    "bedrooms": 2,
+    "purchasePriceTHB": 4400000,
+    "purchaseAreaSqm": 53.69,
+    "rentBasis": "PropertyScout 房型行情低點 331 THB/sqm/month; direct observed listing 333.33 THB/sqm/month",
+    "estimatedMonthlyRentTHB": 17771,
+    "netYieldAfterOneMonthAgentFeePct": 4.44,
+    "commonFeeDeducted": false,
+    "note": "Project-specific direct listing pages; rental detail Last Update is blank, while the project page currently lists this as UPDATE. Sale project card was refreshed 2026-10-18 10:59; rental project card 2026-10-18 11:33."
+  },
+  "evidenceUrls": [
+    "https://propertyhub.in.th/en/projects/d-mura-ratchayothin",
+    "https://propertyhub.in.th/en/condo-for-sale/project-d-mura-ratchayothin",
+    "https://propertyhub.in.th/en/condo-for-rent/project-d-mura-ratchayothin"
+  ]
+}
