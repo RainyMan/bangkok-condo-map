@@ -1,0 +1,58 @@
+{
+  "hipflatId": 4064,
+  "projectName": "D.D. Tower",
+  "checkedAt": "2026-10-18",
+  "coordinate": {
+    "lat": 13.77476678633347,
+    "lng": 100.56165651720289,
+    "point": "https://propertyhub.in.th/en/projects/d-d-tower",
+    "independentOSMCrossCheck": {
+      "lat": 13.7740501,
+      "lng": 100.5613139,
+      "url": "https://www.openstreetmap.org/way/333223536"
+    },
+    "identityCrossChecks": [
+      "https://propertyhub.in.th/en/projects/d-d-tower",
+      "https://www.hipflat.co.th/en/projects/dd-tower-pkedkj"
+    ],
+    "evidence": "The live map coordinate is the exact PropertyHub project page location; OpenStreetMap independently maps a named D.D. Tower building at the matching Soi Prachasongkhro 20 address in Din Daeng."
+  },
+  "rentListing": {
+    "id": "500560873",
+    "price": 75000,
+    "area": 240,
+    "priceSqm": 312.5,
+    "beds": 3,
+    "roomType": "3BR",
+    "title": "D.D. Tower · 3 房 · 240 ㎡ · ฿75,000/月",
+    "url": "https://www.ddproperty.com/en/property/d-d-tower-bangkok-for-rent-500560873",
+    "sourceName": "DDproperty",
+    "projectName": "D.D. Tower",
+    "updated": "2026-09-16",
+    "checkedAt": "2026-10-18",
+    "matchedBy": "DDproperty_direct_listing_project_name_and_Prachasongkhro_20_address_cross_checked_against_project_detail",
+    "listingStatus": "availability_unconfirmed_update_over_30d",
+    "availability": "DDproperty individual listing remains published as checked 2026-10-18; listing date 2026-09-16. PropertyHub exact-project rent page currently reports zero matched rental units, so confirm availability and project association before relying on this estimate."
+  },
+  "rentStatusCrossCheck": {
+    "propertyHubProjectPage": "https://propertyhub.in.th/en/projects/d-d-tower",
+    "status": "0 matched rentals at check",
+    "note": "External direct listing remains shown, but freshness and exact association are not fully confirmed."
+  },
+  "twoBedroomYieldBaseline": {
+    "salePriceTHB": 2899000,
+    "saleAreaSqm": 71,
+    "saleSourceUrl": "https://propertyhub.in.th/en/listings/for-sell-condo-d-d-tower-building-1-floor-16-2-bed-room-room-size-71-sqm--9b280866---6210412",
+    "rentalRoomType": "3BR fallback; no verified 2BR rent found",
+    "rentalRateTHBPerSqmMonth": 312.5,
+    "estimatedMonthlyRentAtSaleAreaTHB": 22187.5,
+    "grossAnnualYieldPercent": 9.18420144877544,
+    "afterOneAgentMonthPercent": 8.418851328044154,
+    "formula": "3BR rent listing monthly rate × lowest 2BR sale area; annualize by 12 (or 11 months after one agent month), divided by lowest 2BR sale price."
+  },
+  "limitations": [
+    "PropertyHub exact-project rental page shows zero matched listings.",
+    "The DDproperty listing is dated 2026-09-16 and is over 30 days old at check time.",
+    "Three-bedroom listing area (240 sqm) exceeds this project source’s typical range; treat cross-room yield as indicative and confirm listing association and current availability."
+  ]
+}
