@@ -108,6 +108,7 @@ def main() -> None:
     verified_coordinates = index(load_array("bangkok-verified-coordinates.js", "BANGKOK_VERIFIED_COORDINATES"), "hipflatId")
     scout_markets = index(load_array("bangkok-propertyscout-markets.js", "BANGKOK_PROPERTYSCOUT_MARKETS"), "hipflatId")
     manual_markets = index(load_array("bangkok-manual-market-samples.js", "BANGKOK_MANUAL_MARKET_SAMPLES"), "hipflatId")
+    market_crosschecks = index(load_array("bangkok-market-crosschecks.js", "BANGKOK_MARKET_CROSSCHECKS"), "hipflatId")
     legacy_rows = (
         load_array("data.js", "CONDO_DATA")
         + load_array("catalogue.js", "CATALOGUE_PROJECTS")
@@ -139,6 +140,7 @@ def main() -> None:
         scout_market = scout_markets.get(project_id, {})
         manual_market = manual_markets.get(project_id, {})
         research_market = propertyhub_research.get(project_id, {})
+        crosscheck = market_crosschecks.get(project_id, {})
         # app.js also falls back to an exact, unique legacy-name match after
         # the Hipflat project and its market enrichments. Include those rows
         # here so the report describes the market data the map actually shows.
@@ -164,6 +166,8 @@ def main() -> None:
         has_rent = in_range(rent.get("minimumSqm"), 50, 20_000)
         manual_sale_samples = manual_market.get("sale", {}).get("samples", [])
         manual_rent_samples = manual_market.get("rent", {}).get("samples", [])
+        cross_sale_samples = crosscheck.get("sale", {}).get("listings", [])
+        cross_rent_samples = crosscheck.get("rent", {}).get("listings", [])
         has_manual_sale_listing = any(
             sample.get("price") and sample.get("area") and isinstance(sample.get("url"), str)
             and has_individual_listing({"minimumSourceUrl": sample["url"]})
@@ -174,8 +178,18 @@ def main() -> None:
             and has_individual_listing({"minimumSourceUrl": sample["url"]})
             for sample in manual_rent_samples if isinstance(sample, dict)
         )
-        sale_linked = (has_sale and has_individual_listing(sale)) or has_manual_sale_listing
-        rent_linked = (has_rent and has_individual_listing(rent)) or has_manual_rent_listing
+        has_cross_sale_listing = any(
+            sample.get("price") and sample.get("area") and isinstance(sample.get("url"), str)
+            and has_individual_listing({"minimumSourceUrl": sample["url"]})
+            for sample in cross_sale_samples if isinstance(sample, dict)
+        )
+        has_cross_rent_listing = any(
+            sample.get("price") and sample.get("area") and isinstance(sample.get("url"), str)
+            and has_individual_listing({"minimumSourceUrl": sample["url"]})
+            for sample in cross_rent_samples if isinstance(sample, dict)
+        )
+        sale_linked = (has_sale and has_individual_listing(sale)) or has_manual_sale_listing or has_cross_sale_listing
+        rent_linked = (has_rent and has_individual_listing(rent)) or has_manual_rent_listing or has_cross_rent_listing
         direct_sale_samples = [sample for sample in manual_sale_samples if isinstance(sample, dict)
                                and sample.get("price") and sample.get("area") and sample.get("url")
                                and has_individual_listing({"minimumSourceUrl": sample["url"]})]
@@ -188,10 +202,12 @@ def main() -> None:
         manual_sale_source = min(direct_sale_samples, key=lambda sample: float(sample["price"]), default={})
         manual_rent_source = min(direct_rent_samples,
                                  key=lambda sample: float(sample["price"]) / float(sample["area"]), default={})
-        sale_source = manual_sale_source.get("url") or sale.get("minimumSqmSourceUrl") or sale.get("minimumSourceUrl") or sale.get("source") or ""
-        rent_source = manual_rent_source.get("url") or rent.get("minimumSqmSourceUrl") or rent.get("minimumSourceUrl") or rent.get("source") or ""
-        sale_updated = str(manual_sale_source.get("updated") or "") if manual_sale_source else listing_updated(sale, research_market.get("sale") or {})
-        rent_updated = str(manual_rent_source.get("updated") or "") if manual_rent_source else listing_updated(rent, research_market.get("rent") or {})
+        cross_sale_source = min((sample for sample in cross_sale_samples if isinstance(sample, dict) and sample.get("price") and sample.get("area") and sample.get("url")), key=lambda sample: float(sample["price"]), default={})
+        cross_rent_source = min((sample for sample in cross_rent_samples if isinstance(sample, dict) and sample.get("price") and sample.get("area") and sample.get("url")), key=lambda sample: float(sample["price"]) / float(sample["area"]), default={})
+        sale_source = manual_sale_source.get("url") or cross_sale_source.get("url") or sale.get("minimumSqmSourceUrl") or sale.get("minimumSourceUrl") or sale.get("source") or ""
+        rent_source = manual_rent_source.get("url") or cross_rent_source.get("url") or rent.get("minimumSqmSourceUrl") or rent.get("minimumSourceUrl") or rent.get("source") or ""
+        sale_updated = str(manual_sale_source.get("updated") or "") if manual_sale_source else (str(cross_sale_source.get("listedAt") or "") if cross_sale_source else listing_updated(sale, research_market.get("sale") or {}))
+        rent_updated = str(manual_rent_source.get("updated") or "") if manual_rent_source else (str(cross_rent_source.get("listedAt") or "") if cross_rent_source else listing_updated(rent, research_market.get("rent") or {}))
         # Match the coordinate source actually selected by app.js instead of
         # accidentally reporting a market/search URL as the location source.
         coordinate_source = ""

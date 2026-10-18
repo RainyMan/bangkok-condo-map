@@ -32,6 +32,10 @@ def strip_samples(value):
 
 if __name__ == "__main__":
     projects = load_array("bangkok-propertyhub.js", "BANGKOK_PROPERTYHUB_PROJECTS")
+    # Preserve hand-verified browser fields when a refreshed research row is
+    # still incomplete. This prevents a feed rebuild from erasing an older
+    # verified coordinate, completion date, or directly linked market.
+    previous_map = {int(row["id"]): row for row in load_array("bangkok-propertyhub-map.js", "BANGKOK_PROPERTYHUB_PROJECTS")}
     summaries = {int(row["id"]): row for row in load_array("bangkok-propertyhub-city-summaries.js", "BANGKOK_PROPERTYHUB_CITY_SUMMARIES")}
     exclusions = json.loads(EXCLUSIONS.read_text(encoding="utf-8")) if EXCLUSIONS.exists() else []
     excluded_by_project_kind = {}
@@ -39,6 +43,7 @@ if __name__ == "__main__":
         key = (int(item["hipflatProjectId"]), str(item["kind"]))
         excluded_by_project_kind.setdefault(key, set()).add(str(item["listingId"]))
     for project in projects:
+        previous = previous_map.get(int(project["id"]), {})
         summary = summaries.get(int(project["id"]), {})
         for market in ("sale", "rent"):
             excluded_ids = excluded_by_project_kind.get((int(project["id"]), market), set())
@@ -49,6 +54,16 @@ if __name__ == "__main__":
                 project[market] = None
             if summary.get(market):
                 project[market] = summary[market]
+        for field in (
+            "address", "completedYear", "completedYearSourceUrl", "fee", "floors", "hipflatSummary",
+            "lat", "lng", "locationSourceName", "locationSourceUrl", "locationVerified", "nearestMrt",
+            "propertyHubProjectId", "propertyHubProjectUrl", "propertyHubRentUrl", "propertyHubSaleUrl",
+            "rent", "sale", "station", "units",
+        ):
+            if project.get(field) is None or (field == "locationVerified" and project.get(field) is False):
+                old_value = previous.get(field)
+                if old_value is not None and not (field == "locationVerified" and old_value is False):
+                    project[field] = old_value
     browser_fields = {
         "address", "area", "beds", "completedYear", "fee", "floors", "hipflatSummary", "id", "lat", "lng",
         "locationSourceName", "locationSourceUrl", "locationVerified", "nearestMrt", "propertyHubProjectId",

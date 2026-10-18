@@ -72,8 +72,10 @@ def main():
   slug=urlparse(row['propertyHubProjectUrl']).path.rstrip('/').split('/')[-1]
   if not slug: continue
   kinds=[]
-  for kind,label in [('sale','sale_sample'),('rent','rent_sample')]:
-   if coverage.get(label)=='no' and not manual_row.get(kind): kinds.append(kind)
+  for kind,label in [('sale','sale_individual_listing_link'),('rent','rent_individual_listing_link')]:
+   # Backfill direct, individually clickable listings even when another
+   # provider already supplies a project-level price summary.
+   if coverage.get(label)!='yes': kinds.append(kind)
   if kinds: tasks.append((pid,slug,str(row.get('propertyHubProjectId') or ''),kinds))
  print(f'Exact PropertyHub project pages to inspect: {len(tasks)}; eligible markets: {sum(len(x[3]) for x in tasks)}',flush=True)
  results=[]
