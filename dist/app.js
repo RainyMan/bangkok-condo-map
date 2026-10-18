@@ -142,7 +142,7 @@
     return { ...legacy, ...project, ...propertyHub, lat, lng, locationVerified,
       manualSaleSamples: (manualMarket.sale?.samples || []).filter(sample => sample.specialAsset === true),
       locationSourceUrl: coordsFromPropertyHub ? propertyHub.locationSourceUrl : coordsFromProject ? project.locationSourceUrl : coordsFromOsm ? osm.sourceUrl : coordsFromVerifiedSource ? verifiedCoordinate.sourceUrl : coordsFromPropertyScout ? propertyScoutDetail.locationSourceUrl : project.locationSourceUrl || legacy?.locationSourceUrl,
-      locationVerificationSourceUrl: coordsFromVerifiedSource ? (verifiedCoordinate.corroborationSourceUrl || verifiedCoordinate.verificationSourceUrl) : coordsFromPropertyScout ? (propertyScoutDetail.locationVerificationSourceUrl || propertyScoutMarket.locationVerificationSourceUrl) : null,
+      locationVerificationSourceUrl: coordsFromVerifiedSource ? (verifiedCoordinate.corroborationSourceUrl || verifiedCoordinate.verificationSourceUrl) : coordsFromPropertyScout ? (propertyScoutDetail.locationVerificationSourceUrl || propertyScoutMarket.locationVerificationSourceUrl) : coordsFromPropertyHub ? propertyHub.locationVerificationSourceUrl || null : null,
       locationSourceName: coordsFromPropertyHub ? propertyHub.locationSourceName : coordsFromOsm ? 'OpenStreetMap 建物／地址' : coordsFromVerifiedSource ? verifiedCoordinate.sourceName : coordsFromPropertyScout ? propertyScoutDetail.locationSourceName : project.locationSourceName || legacy?.locationSourceName,
       sale: cleanSale, rent: cleanRent, localListings,
       completedYear,

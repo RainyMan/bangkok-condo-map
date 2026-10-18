@@ -1,0 +1,52 @@
+{
+  "hipflatId": 3281,
+  "projectName": "Above Sukhumvit 39",
+  "checkedAt": "2026-10-18",
+  "location": {
+    "latitude": 13.737113,
+    "longitude": 100.571052,
+    "source": "https://www.condonayoo.com/above-sukhumvit-39/",
+    "crossCheckSource": "https://thinkofliving.com/project/คอนโด/5411/",
+    "address": "122 Phrom Chit Alley, Khlong Tan Nuea, Watthana District, Bangkok 10110, Thailand"
+  },
+  "projectDetails": {
+    "completedYear": 2017,
+    "units": 41,
+    "floors": 25,
+    "source": "https://propertyscout.co.th/en/1-br-condo-above-sukhumvit-39-near-bts-phrom-phong-2884009/",
+    "conflictingSource": "PropertyHub project overview displays Buddhist year 2559 (2016); the individual listing and two other project sources identify 2017. Displayed year follows the latter two-source agreement."
+  },
+  "saleListing": {
+    "priceThb": 12500000,
+    "bedrooms": 1,
+    "areaSqm": 85,
+    "priceThbPerSqm": 147059,
+    "source": "https://propertyhub.in.th/en/listings/1-br-85-sqm-for-sale-at-above-sukhumvit-39-near-bts-phrom-phong-id-2918509---6403343",
+    "updated": "2026-10-16"
+  },
+  "rentListing": {
+    "monthlyRentThb": 25000,
+    "bedrooms": 1,
+    "areaSqm": 35,
+    "rentThbPerSqmMonth": 714.29,
+    "source": "https://propertyscout.co.th/en/1-br-condo-above-sukhumvit-39-near-bts-phrom-phong-2884009/",
+    "lastAvailabilityConfirmation": "PropertyScout page said confirmed available about one month before 2026-10-18; exact date and current vacancy not confirmed directly with advertiser"
+  },
+  "managementFee": {
+    "rateThbPerSqmMonth": null,
+    "status": "not verified; excluded from estimate"
+  },
+  "yieldEstimate": {
+    "purchasePriceThb": 12500000,
+    "purchaseAreaSqm": 85,
+    "bedrooms": 1,
+    "monthlyRentRateThbPerSqm": 714.29,
+    "monthlyRentAtSaleAreaThb": 60714,
+    "agentMonthsDeducted": 1,
+    "annualRentAfterAgentThb": 667857,
+    "annualCommonFeeThb": 0,
+    "netYieldPercent": 5.34,
+    "formula": "((฿25,000 ÷ 35㎡) × 85㎡ × 11) ÷ ฿12,500,000 × 100; common fee omitted because it is unverified",
+    "limitations": "The rent sample's availability was last described as confirmed about one month before the check date; the exact date and current vacancy have not been reconfirmed with the advertiser."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "hipflatId": 3006,
+  "projectName": "31 Residence",
+  "checkedAt": "2026-10-18",
+  "coordinates": {
+    "status": "verified",
+    "source": "https://propertyhub.in.th/en/projects/31-residence",
+    "latitude": 13.73879969843466,
+    "longitude": 100.5671876103064
+  },
+  "rentListing": {
+    "monthlyRentThb": 77000,
+    "bedrooms": 2,
+    "areaSqm": 160,
+    "rentThbPerSqmMonth": 481.25,
+    "url": "https://propertyhub.in.th/en/listings/superb-2-bedroom-apartment-for-rent-in-phrom-phong-area-br20889ap---6075482",
+    "crossCheckUrl": "https://www.ddproperty.com/en/property/31-residence-bangkok-for-rent-60211462",
+    "projectPageRefreshed": "2026-10-17",
+    "availability": "active as listed; vacancy not confirmed with advertiser"
+  },
+  "saleListing": {
+    "status": "no matching project listing found",
+    "source": "https://propertyhub.in.th/en/condo-for-sale/project-31-residence"
+  },
+  "managementFee": {
+    "status": "not published",
+    "deducted": false
+  },
+  "yieldEstimate": {
+    "status": "not calculated because no verified sale listing is available"
+  }
+}
