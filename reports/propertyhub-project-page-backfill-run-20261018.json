@@ -1,0 +1,36 @@
+{
+  "projectPagesChecked": 266,
+  "projectsWithMatchedProjectPage": 257,
+  "projectsWithNewListings": 0,
+  "newSaleMarkets": 0,
+  "newRentMarkets": 0,
+  "projectCoordinatesFromPropertyHubPages": 257,
+  "identityMismatchesRejected": [
+    {
+      "hipflatId": 3006,
+      "hipflatName": "31 Residence",
+      "propertyHubName": "31 Residence",
+      "overlap": [
+        "31"
+      ]
+    },
+    {
+      "hipflatId": 3087,
+      "hipflatName": "The Midst Condo",
+      "propertyHubName": "The Midst Condo  ",
+      "overlap": [
+        "midst"
+      ]
+    },
+    {
+      "hipflatId": 3093,
+      "hipflatName": "The Peace",
+      "propertyHubName": "The Peace",
+      "overlap": [
+        "peace"
+      ]
+    }
+  ],
+  "checkedAt": "2026-10-18",
+  "examples": []
+}
