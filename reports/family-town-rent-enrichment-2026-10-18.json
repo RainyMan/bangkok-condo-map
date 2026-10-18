@@ -1,0 +1,32 @@
+{
+  "hipflatId": 3642,
+  "projectName": "Family Town",
+  "checkedAt": "2026-10-18",
+  "listing": {
+    "id": "23048",
+    "price": 8000,
+    "area": 30,
+    "priceSqm": 267,
+    "beds": 1,
+    "roomType": "1BR",
+    "title": "Family Town · 1 房 · 30 ㎡ · ฿8,000/月",
+    "url": "https://www.rightmove.condothai.co.th/room/23048/%E0%B9%81%E0%B8%9F%E0%B8%A1%E0%B8%A1%E0%B8%B4%E0%B8%A5%E0%B8%B5%E0%B9%88%20%E0%B8%97%E0%B8%B2%E0%B8%A7%E0%B8%99%E0%B9%8C%20%5BFamily%20Town%5D/12/?distance=3",
+    "sourceName": "Condothai",
+    "projectName": "Family Town",
+    "checkedAt": "2026-10-18",
+    "matchedBy": "Exact Family Town project and direct Condothai rental unit 23048",
+    "availability": "The direct listing says it was last updated more than 30 days ago; current availability is unconfirmed.",
+    "listingStatus": "availability_unconfirmed_update_over_30d"
+  },
+  "details": {
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "floor": 5,
+    "areaSqm": 30,
+    "monthlyRentTHB": 8000,
+    "rentTHBPerSqmMonthExact": 266.6666666666667,
+    "availability": "unconfirmed; source says last updated more than 30 days ago",
+    "sourcePage": "https://www.rightmove.condothai.co.th/room/23048/%E0%B9%81%E0%B8%9F%E0%B8%A1%E0%B8%A1%E0%B8%B4%E0%B8%A5%E0%B8%B5%E0%B9%88%20%E0%B8%97%E0%B8%B2%E0%B8%A7%E0%B8%99%E0%B9%8C%20%5BFamily%20Town%5D/12/?distance=3"
+  },
+  "yieldNote": "This is a one-bedroom historical rental reference. A current two-bedroom ROI still requires a verified two-bedroom sale and rent sample."
+}

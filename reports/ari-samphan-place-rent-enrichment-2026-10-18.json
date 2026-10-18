@@ -1,0 +1,35 @@
+{
+  "hipflatId": 3432,
+  "projectName": "Ari Samphan Place",
+  "checkedAt": "2026-10-18",
+  "listing": {
+    "id": "1286667",
+    "price": 14500,
+    "area": 65,
+    "priceSqm": 223,
+    "beds": 2,
+    "roomType": "2BR",
+    "title": "Ari Samphan Place · 2 房 · 65 ㎡ · ฿14,500/月",
+    "url": "https://propertyscout.co.th/en/2-br-condo-ari-samphan-place-near-bts-sanam-pao-1286667/",
+    "sourceName": "PropertyScout",
+    "projectName": "Ari Samphan Place",
+    "updated": "2026-10-16",
+    "checkedAt": "2026-10-18",
+    "matchedBy": "Exact PropertyScout listing and project name; unit details match two bedrooms and 65 sqm",
+    "availability": "Updated two days before the check, but the page says availability upon request.",
+    "listingStatus": "availability_unconfirmed_date_unknown"
+  },
+  "details": {
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "areaSqm": 65,
+    "monthlyRentTHB": 14500,
+    "rentTHBPerSqmMonthExact": 223.07692307692307,
+    "availability": "unconfirmed; source page says availability upon request",
+    "listedOn": "2023-09-08",
+    "updatedOn": "2026-10-16",
+    "sourcePage": "https://propertyscout.co.th/en/2-br-condo-ari-samphan-place-near-bts-sanam-pao-1286667/"
+  },
+  "projectMatchEvidence": "The direct page names Ari Samphan Place and lists 50 units, 8 floors and 1997 completion, matching the Hipflat project.",
+  "yieldNote": "This exact two-bedroom rent is eligible as the two-bedroom rent basis. Use the lowest linked two-bedroom sale and its paired area for a same-room yield estimate; confirm vacancy with the source."
+}
