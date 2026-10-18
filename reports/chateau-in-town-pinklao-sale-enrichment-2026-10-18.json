@@ -1,0 +1,48 @@
+{
+  "checkedAt": "2026-10-18",
+  "project": {
+    "hipflatId": 3384,
+    "name": "Chateau In Town Pinklao"
+  },
+  "coordinateCrosscheck": {
+    "source": "https://thinkofliving.com/project/%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/15090/",
+    "latitude": 13.7658407,
+    "longitude": 100.4889871,
+    "existingProjectPinLatitude": 13.76589958034631,
+    "existingProjectPinLongitude": 100.48908002357877,
+    "separationMeters": 8
+  },
+  "saleListing": {
+    "id": "500029043",
+    "price": 2390000,
+    "area": 29.0,
+    "priceSqm": 82414,
+    "beds": 1,
+    "roomType": "1BR",
+    "title": "Chateau In Town Pinklao-Siriraj，1 房，29 ㎡，฿2,390,000",
+    "url": "https://www.ddproperty.com/property/chateau-in-town-pinklao-siriraj-%E0%B8%8A%E0%B8%B2%E0%B9%82%E0%B8%95%E0%B8%A7%E0%B9%8C-%E0%B8%AD%E0%B8%B4%E0%B8%99%E0%B8%97%E0%B8%B2%E0%B8%A7%E0%B8%99%E0%B9%8C-%E0%B8%9B%E0%B8%B4%E0%B9%88%E0%B8%99%E0%B9%80%E0%B8%81%E0%B8%A5%E0%B9%89%E0%B8%B2-%E0%B8%A8%E0%B8%B4%E0%B8%A3%E0%B8%B4%E0%B8%A3%E0%B8%B2%E0%B8%8A-%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E-%E0%B8%82%E0%B8%B2%E0%B8%A2-500029043",
+    "sourceName": "DDproperty",
+    "projectName": "Chateau In Town Pinklao-Siriraj",
+    "checkedAt": "2026-10-18",
+    "updated": "2026-09-19",
+    "matchedBy": "exact_project_name_address_completion_year_and_210_unit_project_details",
+    "listingStatus": "availability_unconfirmed_update_under_30d"
+  },
+  "rentalBaseline": {
+    "monthlyPrice": 11000,
+    "areaSqm": 29.19,
+    "minimumRentPerSqm": 377,
+    "url": "https://propertyhub.in.th/en/listings/chateau-in-town-pinklao--be6c0a3b---6437186"
+  },
+  "oneBedroomNetYieldEstimate": {
+    "purchasePrice": 2390000,
+    "purchaseAreaSqm": 29.0,
+    "rentPerSqmPerMonth": 377,
+    "estimatedMonthlyRent": 10933,
+    "agentMonthsDeducted": 1,
+    "commonFeeDeducted": false,
+    "netYieldPercent": 5.03,
+    "formula": "(lowest one-bedroom rent per sqm × sale listing area × 11) ÷ sale listing price × 100",
+    "note": "Estimate is for one bedroom only; there is no linked two-bedroom sale listing for the default two-bedroom estimate."
+  }
+}
