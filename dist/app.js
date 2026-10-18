@@ -212,8 +212,8 @@
     // Keep price, floor area, and source URL from the same listing together;
     // bedroom summaries are valid only when they provide all three.
     const roomSummaryMinimum = Number(room?.minimum || 0);
-    const summaryArea = Number(room?.area || 0);
-    const summaryUrl = room?.sourceUrl || null;
+    const summaryArea = Number(room?.minimumArea || room?.area || 0);
+    const summaryUrl = room?.minimumSourceUrl || room?.sourceUrl || room?.listingUrl || null;
     // The bedroom summary stores the lowest total price, that listing's area,
     // and its individual source URL together. The listing may be outside the
     // limited samples cache, so use the linked summary record directly.
@@ -226,7 +226,8 @@
     // not present in the limited sample array, so don't ignore it just because
     // another same-room listing is available.
     const roomSample = [...listingCandidates, ...(summaryCandidate ? [summaryCandidate] : [])]
-      .sort((a, b) => a.price - b.price || Number(Boolean(b.url)) - Number(Boolean(a.url)))[0] || null;
+      .filter(sample => Number(sample.price) > 0 && Number(sample.area) > 0 && sample.url)
+      .sort((a, b) => Number(a.price) - Number(b.price) || Number(Boolean(b.url)) - Number(Boolean(a.url)))[0] || null;
     const selectedRoomMinimum = Number(roomSample?.price || 0);
     // A two-bedroom estimate must be backed by the lowest linked listing.
     // Do not label an average as the lowest total when the listing is missing.

@@ -1,0 +1,76 @@
+{
+  "hipflatId": 3223,
+  "projectName": "Baan Pakapun",
+  "checkedAt": "2026-10-18",
+  "coordinates": {
+    "status": "verified",
+    "source": "https://www.thaigerproperty.com/projects/thailand/bangkok/khlong-toei/khlong-tan/baan-pakapun",
+    "corroboratedBy": "https://www.hipflat.co.th/en/projects/baan-pakapan-hcpziy"
+  },
+  "rentalListings": [
+    {
+      "id": "11097960",
+      "price": 70000,
+      "area": 140,
+      "beds": 2,
+      "roomType": "2BR",
+      "updated": "2026-10-09",
+      "title": "Baan Pakapun，2 房，140 ㎡，฿70,000/月",
+      "url": "https://www.ddproperty.com/en/property/baan-pakapun-bangkok-for-rent-11097960",
+      "priceSqm": 500,
+      "sourceName": "DDproperty",
+      "projectName": "Baan Pakapun",
+      "checkedAt": "2026-10-18",
+      "matchedBy": "exact_DDproperty_project_id_6801_and_project_address",
+      "listingStatus": "active_as_listed"
+    },
+    {
+      "id": "11097944",
+      "price": 95000,
+      "area": 250,
+      "beds": 3,
+      "roomType": "3BR",
+      "updated": "2026-10-07",
+      "title": "Baan Pakapun，3 房，250 ㎡，฿95,000/月",
+      "url": "https://www.ddproperty.com/en/property/baan-pakapun-bangkok-for-rent-11097944",
+      "priceSqm": 380,
+      "sourceName": "DDproperty",
+      "projectName": "Baan Pakapun",
+      "checkedAt": "2026-10-18",
+      "matchedBy": "exact_DDproperty_project_id_6801_and_project_address",
+      "listingStatus": "active_as_listed"
+    },
+    {
+      "id": "60192183",
+      "price": 140000,
+      "area": 385,
+      "beds": 4,
+      "roomType": "4BR Duplex/Penthouse",
+      "updated": "2026-10-03",
+      "title": "Baan Pakapun，4+1 房 Duplex，385 ㎡，฿140,000/月",
+      "url": "https://www.ddproperty.com/en/property/baan-pakapun-bangkok-for-rent-60192183",
+      "priceSqm": 364,
+      "sourceName": "DDproperty",
+      "projectName": "Baan Pakapun",
+      "checkedAt": "2026-10-18",
+      "matchedBy": "exact_DDproperty_project_id_6801_and_project_address",
+      "listingStatus": "active_as_listed"
+    }
+  ],
+  "rentalSummary": {
+    "count": 3,
+    "averageMonthlyRentThb": 101667,
+    "minimumMonthlyRentThb": 70000,
+    "minimumRentPsmThb": 363.64,
+    "averageRentPsmThb": 414.55
+  },
+  "saleAvailability": {
+    "status": "no_active_listing_found",
+    "source": "https://www.ddproperty.com/en/condo-for-sale/at-baan-pakapun-6801",
+    "projectSource": "https://www.ddproperty.com/en/project/6801-baan-pakapun"
+  },
+  "roi": {
+    "status": "not_calculated",
+    "reason": "DDproperty 精確出售專案頁沒有現行掛牌，Hipflat 也沒有出售起價；缺少購入價格基準。"
+  }
+}

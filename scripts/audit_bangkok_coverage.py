@@ -126,10 +126,19 @@ def main() -> None:
         scout_market = scout_markets.get(project_id, {})
         manual_market = manual_markets.get(project_id, {})
         research_market = propertyhub_research.get(project_id, {})
-        sale = market.get("sale") or scout_market.get("sale") or manual_market.get("sale") or {}
+        # app.js also falls back to an exact, unique legacy-name match after
+        # the Hipflat project and its market enrichments. Include those rows
+        # here so the report describes the market data the map actually shows.
+        sale = (
+            market.get("sale") or scout_market.get("sale") or manual_market.get("sale")
+            or project.get("sale") or legacy.get("sale") or {}
+        )
         if manual_market.get("replaceSale") and manual_market.get("sale"):
             sale = manual_market["sale"]
-        rent = market.get("rent") or scout_market.get("rent") or manual_market.get("rent") or {}
+        rent = (
+            market.get("rent") or scout_market.get("rent") or manual_market.get("rent")
+            or project.get("rent") or legacy.get("rent") or {}
+        )
         scout_location = scout_details.get(project_id, {})
         verified_location = verified_coordinates.get(project_id, {})
         project_name_key = re.sub(r"[^a-z0-9]+", " ", str(project.get("name", "")).lower()).strip()
