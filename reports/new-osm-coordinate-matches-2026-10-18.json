@@ -1,0 +1,57 @@
+[
+  {
+    "id": 5443,
+    "name": "Sahai Place",
+    "lat": 13.7252627,
+    "lng": 100.5676851,
+    "osmType": "way",
+    "osmId": 340074036,
+    "osmName": "Sahai Place",
+    "sourceUrl": "https://www.openstreetmap.org/way/340074036",
+    "sourceExtractUrl": "https://download.bbbike.org/osm/bbbike/Bangkok/Bangkok.osm.pbf"
+  },
+  {
+    "id": 5613,
+    "name": "Sawasdee Bangkok",
+    "lat": 13.6981845,
+    "lng": 100.6396376,
+    "osmType": "node",
+    "osmId": 2886681748,
+    "osmName": "Sawasdee Bangkok Condominium",
+    "sourceUrl": "https://www.openstreetmap.org/node/2886681748",
+    "sourceExtractUrl": "https://download.bbbike.org/osm/bbbike/Bangkok/Bangkok.osm.pbf"
+  },
+  {
+    "id": 5973,
+    "name": "Greenery Place",
+    "lat": 13.7241005,
+    "lng": 100.5828166,
+    "osmType": "way",
+    "osmId": 476861789,
+    "osmName": "Greenery Place",
+    "sourceUrl": "https://www.openstreetmap.org/way/476861789",
+    "sourceExtractUrl": "https://download.bbbike.org/osm/bbbike/Bangkok/Bangkok.osm.pbf"
+  },
+  {
+    "id": 5983,
+    "name": "Union Tower",
+    "lat": 13.7445677,
+    "lng": 100.5870349,
+    "osmType": "way",
+    "osmId": 1066039414,
+    "osmName": "Union Tower",
+    "sourceUrl": "https://www.openstreetmap.org/way/1066039414",
+    "sourceExtractUrl": "https://download.bbbike.org/osm/bbbike/Bangkok/Bangkok.osm.pbf"
+  },
+  {
+    "id": 6232,
+    "name": "The Bangkok Sathorn",
+    "lat": 13.7179574,
+    "lng": 100.5205862,
+    "osmType": "way",
+    "osmId": 539353978,
+    "osmName": "The Bangkok Sathorn",
+    "sourceUrl": "https://www.openstreetmap.org/way/539353978",
+    "sourceExtractUrl": "https://download.bbbike.org/osm/bbbike/Bangkok/Bangkok.osm.pbf"
+  }
+]
