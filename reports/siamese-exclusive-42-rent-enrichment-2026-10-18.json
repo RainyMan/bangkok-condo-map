@@ -1,0 +1,30 @@
+{
+  "projectId": 3538,
+  "name": "Siamese Exclusive 42",
+  "checkedAt": "2026-10-18",
+  "rentListing": {
+    "monthlyRentThb": 42000,
+    "bedrooms": 2,
+    "areaSqm": 64,
+    "rentThbPerSqmMonth": 656.25,
+    "url": "https://propertyhub.in.th/en/listings/well-located-2-br-condo-at-siamese-exclusive-42-300m-to-bts-ekkamai-id-2989853---6276823",
+    "availability": "unconfirmed; listing has no update date"
+  },
+  "yieldEstimate": {
+    "saleListing": {
+      "priceThb": 12300000,
+      "areaSqm": 53.63,
+      "url": "https://propertyhub.in.th/en/listings/siamese-exclusive-sukhumvit-42-pn-00003960---4974130"
+    },
+    "rentPerSqmMonth": 656.25,
+    "monthlyRentAtSaleUnitAreaThb": 35195,
+    "deductedAgentMonths": 1,
+    "commonFeeDeducted": false,
+    "netYieldBeforeCommonFeePercent": 3.15,
+    "note": "Uses two-bedroom rent per sqm from a direct listing and the area of the project's lowest linked two-bedroom sale listing. Management fee is unavailable; rental listing availability and current terms are unconfirmed."
+  },
+  "sources": {
+    "rentProjectPage": "https://propertyhub.in.th/en/condo-for-rent/project-siamese-exclusive-sukhumvit-42",
+    "propertyScoutMarketSummary": "https://propertyscout.co.th/en/bangkok/condo/siamese-exclusive-42/"
+  }
+}
