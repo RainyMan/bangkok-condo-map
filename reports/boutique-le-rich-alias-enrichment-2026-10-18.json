@@ -1,0 +1,70 @@
+{
+  "hipflatId": 3654,
+  "project": "Boutique Le Rich Ratchada-Sutthisan",
+  "checkedAt": "2026-10-18",
+  "aliasMapping": {
+    "propertyHubProjectId": "1327",
+    "propertyHubName": "Le Rich Ratchada - Sutthisarn",
+    "matchingAddress": "Le Rich Condominium Office, Le Rich Condominium, 1224 Sutthisan Winitchai Rd., Ratchadaphisek, Din Daeng, Bangkok 10400",
+    "hipflatProjectUrl": "https://www.hipflat.co.th/en/projects/boutique-le-rich-ratchadasutthisan-wvfzho",
+    "propertyHubProjectUrl": "https://propertyhub.in.th/en/projects/le-rich-ratchada-sutthisarn"
+  },
+  "location": {
+    "latitude": 13.78982059309066,
+    "longitude": 100.57195598141152,
+    "verified": true,
+    "coordinateSource": "https://propertyhub.in.th/en/condo-for-sale/project-le-rich-ratchada-sutthisarn",
+    "identityCrosscheck": "https://www.hipflat.co.th/en/projects/boutique-le-rich-ratchadasutthisan-wvfzho",
+    "method": "PropertyHub project map for project ID 1327 provides the point; both Hipflat ID 3654 and PropertyHub ID 1327 show the exact same full 1224 Sutthisan Winitchai Rd address."
+  },
+  "saleSamples": [
+    {
+      "price": 2800000,
+      "areaSqm": 46.7,
+      "bedrooms": 2,
+      "url": "https://propertyhub.in.th/en/listings/for-sale-condo-le-rich-ratchada-sutthisarn-corner-unit-ratchadaphisek-din-daeng-bangkok-cx-143314-live-chat-with-us-add-line-connexproperty---6400243"
+    },
+    {
+      "price": 2950000,
+      "areaSqm": 46,
+      "bedrooms": 2,
+      "url": "https://www.hipflat.co.th/en/ads/7lnal2798lhlaeh40h043h3e3u0cea89"
+    }
+  ],
+  "rentSamples": [
+    {
+      "monthlyRent": 14000,
+      "areaSqm": 46.7,
+      "bedrooms": 2,
+      "url": "https://www.hipflat.co.th/en/ads/714tt8n087h2u9011310thcn3ulu1ea9"
+    },
+    {
+      "monthlyRent": 13000,
+      "areaSqm": 38,
+      "bedrooms": 1,
+      "url": "https://propertyhub.in.th/en/listings/condo-for-rent-at-le-rich-ratchada-sutthisarn-b6907045---6246903"
+    }
+  ],
+  "managementFee": {
+    "rateBahtPerSqmPerMonth": 35,
+    "source": "https://propertyhub.in.th/en/projects/le-rich-ratchada-sutthisarn",
+    "status": "published_indicative"
+  },
+  "roi": {
+    "status": "estimated_from_verified_two_bedroom_sale_and_rent_listings",
+    "purchasePriceBaht": 2800000,
+    "areaSqm": 46.7,
+    "monthlyRentBaht": 14000,
+    "deductAgentOneMonth": true,
+    "deductAnnualManagementFee": 19614.0,
+    "netAnnualRoiPercent": 4.7995,
+    "formula": "(฿14,000 × 11 − ฿35 × 46.7 × 12) ÷ ฿2,800,000 × 100",
+    "note": "One current two-bedroom rental sample was found; it is the room-type low point. Estimate excludes tax, repairs, vacancy and transaction costs."
+  },
+  "walkingRoute": {
+    "distanceKm": 0.254,
+    "minutes": 3,
+    "stationId": "BL17",
+    "source": "Valhalla pedestrian routing"
+  }
+}
