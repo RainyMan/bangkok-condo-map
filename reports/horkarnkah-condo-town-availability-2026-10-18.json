@@ -1,0 +1,68 @@
+{
+  "hipflatId": 3026,
+  "project": "Horkarnkah Condo Town",
+  "checkedAt": "2026-10-18",
+  "location": {
+    "latitude": 13.7806739807,
+    "longitude": 100.5630645752,
+    "verified": true,
+    "coordinateSource": "https://www.google.com/maps/search/?api=1&query=13.7806739807%2C100.5630645752",
+    "sourceListing": "https://zmyhome.com/property/V52657",
+    "projectIdentityCrosschecks": [
+      "https://www.hipflat.co.th/en/projects/horkarnkah-condo-town-nmdevf",
+      "https://propertyhub.in.th/en/projects/horkarnkah-condo-town"
+    ],
+    "method": "ZmyHome item V52657 identifies Horkarnkah Condotown, Soi Inthamara 40, Din Daeng and links to this Google Maps pin. The pin is approximately 18 m from the existing PropertyHub project pin."
+  },
+  "projectFacts": {
+    "completedYear": 2000,
+    "floors": 9,
+    "identitySource": "https://www.hipflat.co.th/en/projects/horkarnkah-condo-town-nmdevf"
+  },
+  "nearestStationWalkingRoute": {
+    "id": 3026,
+    "name": "Horkarnkah Condo Town",
+    "originLat": 13.7806739807,
+    "originLng": 100.5630645752,
+    "distanceKm": 1.391,
+    "minutes": 17,
+    "stationId": "BL18",
+    "source": "Valhalla pedestrian routing (30 nearest stations checked)",
+    "sourceUrl": "https://valhalla1.openstreetmap.de/",
+    "networkSourceUrl": "https://www.openstreetmap.org/copyright",
+    "asOf": "2026-10-18"
+  },
+  "marketAvailability": {
+    "sale": {
+      "status": "no_current_matching_listing",
+      "sampleCount": 0,
+      "sources": [
+        "https://propertyhub.in.th/en/condo-for-sale/project-horkarnkah-condo-town",
+        "https://www.hipflat.co.th/en/projects/horkarnkah-condo-town-nmdevf"
+      ],
+      "historicalListing": {
+        "url": "https://zmyhome.com/property/V52657",
+        "listingId": "V52657",
+        "price": 750000,
+        "areaSqm": 26,
+        "bedrooms": 1,
+        "soldAt": "2018-02",
+        "excludedFromCurrentMarket": true
+      }
+    },
+    "rent": {
+      "status": "no_current_matching_listing",
+      "sampleCount": 0,
+      "sources": [
+        "https://propertyhub.in.th/en/condo-for-rent/project-horkarnkah-condo-town",
+        "https://www.hipflat.co.th/en/projects/horkarnkah-condo-town-nmdevf",
+        "https://thaicozy.com/en/residence/horkarnkah-condo-town"
+      ]
+    },
+    "roi": {
+      "status": "not_calculable",
+      "reason": "No current exact-project sale listing or current rental listing; the only linked sale object is marked sold in February 2018."
+    }
+  },
+  "excludedComparables": "Nearby Din Daeng and Huai Khwang listings with different project names were not assigned to this condo."
+}

@@ -44,6 +44,8 @@ def write_output(rows: dict[int, dict]) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--refresh-ids", help="Optional UTF-8 text file containing project IDs that must be recalculated")
+    parser.add_argument("--prefer-verified-coordinate-id", type=int, action="append", default=[],
+                        help="Use the verified-coordinate record as the routing origin for this project ID")
     args = parser.parse_args()
     projects = js_array(CATALOGUE, "BANGKOK_CONDO_CATALOGUE")
     osm = {int(x["id"]): x for x in js_array(OSM, "BANGKOK_OSM_LOCATIONS")}
@@ -84,13 +86,16 @@ def main() -> int:
     refresh_ids = set()
     if args.refresh_ids:
         refresh_ids = {int(value) for value in pathlib.Path(args.refresh_ids).read_text(encoding="utf-8").split() if value.isdigit()}
+    verified_origin_ids = set(args.prefer_verified_coordinate_id)
     coords = []
     for project in projects:
         pid = int(project["id"])
         enriched = ph.get(pid) or {}
         market = propertyhub.get(pid) or {}
         project_detail = details.get(str(market.get("propertyHubProjectId") or "")) or {}
-        point = enriched if enriched.get("locationVerified") else project_detail if project_detail.get("locationVerified") else guessed.get(pid) if guessed.get(pid) else None
+        point = verified.get(pid) if pid in verified_origin_ids and verified.get(pid) else None
+        if not point:
+            point = enriched if enriched.get("locationVerified") else project_detail if project_detail.get("locationVerified") else guessed.get(pid) if guessed.get(pid) else None
         if not point and market.get("locationVerified") and isinstance(market.get("lat"), (int, float)) and isinstance(market.get("lng"), (int, float)):
             point = market
         if not point and project.get("locationVerified"):

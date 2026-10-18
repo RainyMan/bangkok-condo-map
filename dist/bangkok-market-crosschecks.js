@@ -253,5 +253,37 @@ window.BANGKOK_MARKET_CROSSCHECKS = [
       ],
       "sourceUrl": "https://www.ddproperty.com/en/condo-for-rent/at-paragon-31-10614"
     }
+  },
+  {
+    "hipflatId": 3026,
+    "projectName": "Horkarnkah Condo Town",
+    "asOf": "2026-10-18",
+    "sourceName": "PropertyHub",
+    "projectSourceUrl": "https://propertyhub.in.th/en/condo-for-sale/project-horkarnkah-condo-town",
+    "sale": {
+      "activeListingCount": 0,
+      "sourceUrl": "https://propertyhub.in.th/en/condo-for-sale/project-horkarnkah-condo-town"
+    },
+    "rent": {
+      "activeListingCount": 0,
+      "sourceUrl": "https://propertyhub.in.th/en/condo-for-rent/project-horkarnkah-condo-town"
+    },
+    "availabilitySources": [
+      {
+        "sourceName": "Hipflat",
+        "url": "https://www.hipflat.co.th/en/projects/horkarnkah-condo-town-nmdevf",
+        "statusLabel": "目前無可用房源"
+      },
+      {
+        "sourceName": "ThaiCozy",
+        "url": "https://thaicozy.com/en/residence/horkarnkah-condo-town",
+        "statusLabel": "專案頁顯示目前 0 筆出售、0 筆出租"
+      },
+      {
+        "sourceName": "ZmyHome 歷史出售物件",
+        "url": "https://zmyhome.com/property/V52657",
+        "statusLabel": "฿750,000 · 26㎡ · 1 房；2018-02 已售，不列現行行情或投報"
+      }
+    ]
   }
 ];
