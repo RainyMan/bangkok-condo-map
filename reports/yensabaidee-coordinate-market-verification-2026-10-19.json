@@ -1,0 +1,69 @@
+{
+  "hipflatId": 3209,
+  "projectName": "Yensabaidee Condo",
+  "checkedAt": "2026-10-19",
+  "coordinate": {
+    "lat": 13.793960490320215,
+    "lng": 100.62730791483092,
+    "source": "https://www.yensabaideecondo.com/",
+    "verificationSource": "https://www.hipflat.co.th/en/projects/yensabaidee-condo-ocpiwe"
+  },
+  "saleSamples": [
+    {
+      "id": "3204759",
+      "price": 1699500,
+      "area": 26,
+      "priceSqm": 65365,
+      "beds": 1,
+      "roomType": "1BR",
+      "title": "Yensabaidee Condo，1 房，26 ㎡，฿1,699,500",
+      "url": "https://www.livinginsider.com/en/detail/condo-for-sale-yensabaidee-condo-ladprao-101-1bedroom-3204759",
+      "sourceName": "Livinginsider",
+      "projectName": "Yensabaidee Condo",
+      "updated": "2026-08-27；頁面核對時顯示 8 小時前更新",
+      "checkedAt": "2026-10-19",
+      "matchedBy": "exact_project_name_and_ladprao_101_project",
+      "listingStatus": "active_as_listed"
+    },
+    {
+      "id": "3184864",
+      "price": 1900000,
+      "area": 27,
+      "priceSqm": 70370,
+      "beds": 1,
+      "roomType": "1BR",
+      "title": "Yen Sabaidee Condo，1 房，27 ㎡，฿1,900,000",
+      "url": "https://www.livinginsider.com/detail/condo-for-sale-yen-sabaidee-condo-1bedroom-3184864",
+      "sourceName": "Livinginsider",
+      "projectName": "Yensabaidee Condo",
+      "updated": "2026-08-13；頁面核對時顯示 1 週前更新",
+      "checkedAt": "2026-10-19",
+      "matchedBy": "exact_project_name_and_ladprao_101_project",
+      "listingStatus": "active_as_listed"
+    }
+  ],
+  "rentSample": {
+    "id": "han8tnla82nhe89hh07718au3u0hent7",
+    "price": 14000,
+    "area": 49,
+    "priceSqm": 286,
+    "beds": 2,
+    "roomType": "2BR",
+    "title": "Yensabaidee Condo，2 房，49 ㎡，฿14,000/月",
+    "url": "https://www.hipflat.co.th/en/ads/han8tnla82nhe89hh07718au3u0hent7",
+    "sourceName": "Hipflat",
+    "projectName": "Yensabaidee Condo",
+    "updated": "2026-02-12；頁面核對時顯示 1 小時前更新",
+    "checkedAt": "2026-10-19",
+    "matchedBy": "exact_hipflat_project_and_direct_listing_detail",
+    "listingStatus": "active_as_listed"
+  },
+  "excludedSample": {
+    "url": "https://www.hipflat.co.th/en/ads/7t9e41a18a3tn1443c8l9uc33u0c4uha",
+    "reason": "The direct Hipflat advertisement page identifies a D Condo in Rayong and Rayong landmarks; it is mislinked and not a Yensabaidee Bangkok sample."
+  },
+  "yield": {
+    "status": "unavailable",
+    "reason": "Only 1-bedroom sale listings and a 2-bedroom rental listing were verified. A 2-bedroom yield requires the lowest verified 2-bedroom sale total and that same unit’s area; those sale data are not available. Do not combine different bedroom types."
+  }
+}
