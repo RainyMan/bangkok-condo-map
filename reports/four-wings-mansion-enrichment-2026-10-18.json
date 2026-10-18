@@ -1,0 +1,40 @@
+{
+  "hipflatId": 3160,
+  "projectName": "Four Wings Mansion",
+  "checkedAt": "2026-10-18",
+  "coordinates": {
+    "lat": 13.7465183,
+    "lng": 100.5552571,
+    "googlePlaceId": "ChIJm_C_iOie4jAR-TOWeEOSgRs",
+    "googleMapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJm_C_iOie4jAR-TOWeEOSgRs",
+    "verificationListing": "https://www.superagent.co/en/listing/3-bed-condo-four-wings-mansion-901386",
+    "address": "32/1-4 Soi Sukhumvit 3, Khlong Toei Nuea, Watthana, Bangkok 10110",
+    "note": "DDproperty project/listing address fields say Soi 11, while listing description, Google place pin, and independent building address source identify Sukhumvit Soi 3. Map coordinates use the Google place pin for the exact building."
+  },
+  "completionYear": 1993,
+  "rentListing": {
+    "status": "listed; vacancy not confirmed",
+    "source": "https://www.ddproperty.com/en/property/four-wings-mansion-for-rent-11230056",
+    "crossCheck": "https://www.hipflat.co.th/en/ads/31aht4h881hh80un7hhhne973u09ec8c",
+    "bedrooms": 3,
+    "monthlyRentThb": 65000,
+    "areaSqm": 220,
+    "rentThbPerSqmMonth": 295.45,
+    "listedOrRefreshed": "2026-08-30"
+  },
+  "excludedRentCandidate": {
+    "url": "https://www.hipflat.co.th/en/ads/22c20eu98u9luu0nu3l7c8c93ul3n8ln",
+    "reason": "Although displayed in the related-project listings, the unit title identifies BTS Bang Na, so it is not counted for Four Wings Mansion."
+  },
+  "saleListing": {
+    "status": "no linked current individual listing verified",
+    "projectPage": "https://www.ddproperty.com/en/project/6576-four-wings-mansion",
+    "candidateUrlExcluded": "https://www.ddproperty.com/property/four-wings-mansion-%E0%B9%82%E0%B8%9F%E0%B8%A3%E0%B9%8C%E0%B8%A7%E0%B8%B4%E0%B8%87%E0%B8%AA%E0%B9%8C-%E0%B9%81%E0%B8%A1%E0%B8%99%E0%B8%8A%E0%B8%B1%E0%B9%88%E0%B8%99-%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E-%E0%B8%82%E0%B8%B2%E0%B8%A2-500645052",
+    "reason": "Candidate item URL redirects to the project result page, which currently reports 0 units to buy."
+  },
+  "managementFee": {
+    "status": "not published",
+    "deducted": false
+  },
+  "yieldEstimate": "not calculated because no current linked sale listing is available"
+}
