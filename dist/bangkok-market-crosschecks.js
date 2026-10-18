@@ -84,5 +84,39 @@ window.BANGKOK_MARKET_CROSSCHECKS = [
       ],
       "sourceUrl": "https://www.ddproperty.com/en/condo-for-rent/at-31-residence-6787"
     }
+  },
+  {
+    "hipflatId": 3009,
+    "projectName": "Ruam Rudee Penthouse",
+    "asOf": "2026-10-18",
+    "sourceName": "DDproperty",
+    "projectSourceUrl": "https://www.ddproperty.com/en/project/8486-ruamrudee-penthouse",
+    "sale": {
+      "activeListingCount": 0
+    },
+    "rent": {
+      "activeListingCount": 2,
+      "listings": [
+        {
+          "id": "500174798",
+          "price": 120000,
+          "area": 300,
+          "priceSqm": 400,
+          "bedrooms": 3,
+          "listedAt": "2026-09-17",
+          "url": "https://www.ddproperty.com/en/property/ruamrudee-penthouse-bangkok-for-rent-500174798"
+        },
+        {
+          "id": "500560313",
+          "price": 120000,
+          "area": 295,
+          "priceSqm": 407,
+          "bedrooms": 3,
+          "listedAt": "2026-09-16",
+          "url": "https://www.ddproperty.com/en/property/ruamrudee-penthouse-bangkok-for-rent-500560313"
+        }
+      ],
+      "sourceUrl": "https://www.ddproperty.com/en/condo-for-rent/at-ruamrudee-penthouse-8486"
+    }
   }
 ];
