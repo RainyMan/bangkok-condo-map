@@ -1,0 +1,68 @@
+{
+  "hipflatId": 3240,
+  "projectName": "Fare Tower",
+  "checkedAt": "2026-10-19",
+  "coordinates": {
+    "hipflatId": 3240,
+    "name": "Fare Tower",
+    "lat": 13.705521582913672,
+    "lng": 100.59691215866356,
+    "locationVerified": true,
+    "sourceName": "OpenStreetMap 建物輪廓：Fair Tower",
+    "sourceUrl": "https://www.openstreetmap.org/way/387351098",
+    "verificationSourceUrl": "https://www.ddproperty.com/en/project/310-fare-tower",
+    "verificationMethod": "exact_building_name_and_Sukhumvit_50_project_address; OSM polygon centroid"
+  },
+  "saleListing": {
+    "id": "500507966",
+    "price": 6990000,
+    "areaSqm": 75.0,
+    "bedrooms": 2,
+    "priceThbPerSqm": 93200,
+    "updated": "2026-10-17",
+    "url": "https://www.ddproperty.com/property/fare-tower-%E0%B9%81%E0%B8%9F%E0%B8%A3%E0%B9%8C-%E0%B8%97%E0%B8%B2%E0%B8%A7%E0%B9%80%E0%B8%A7%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B8%82%E0%B8%B2%E0%B8%A2-500507966"
+  },
+  "rentListing": {
+    "id": "500579179",
+    "priceThbPerMonth": 45000,
+    "areaSqm": 86.92,
+    "bedrooms": 2,
+    "rentThbPerSqmMonth": 517.72,
+    "updated": "2026-09-23",
+    "url": "https://www.ddproperty.com/en/property/fare-tower-bangkok-for-rent-500579179"
+  },
+  "yieldEstimate": {
+    "bedrooms": 2,
+    "purchasePriceThb": 6990000,
+    "purchaseAreaSqm": 75.0,
+    "rentRateThbPerSqmMonth": 517.72,
+    "estimatedMonthlyRentOnSaleAreaThb": 38829,
+    "grossAnnualYieldPercent": 6.67,
+    "annualYieldAfterOneAgentMonthPercent": 6.11,
+    "commonFeeDeducted": false,
+    "reason": "Paired direct 2-bedroom sale and rent listings; monthly rent rate is multiplied by the lowest observed two-bedroom sale unit area. No verified common fee available."
+  },
+  "sources": [
+    {
+      "url": "https://www.openstreetmap.org/way/387351098",
+      "finding": "OSM building footprint named Fair Tower, tagged building=yes and 12 levels; map point uses footprint centroid."
+    },
+    {
+      "url": "https://www.ddproperty.com/en/project/310-fare-tower",
+      "finding": "DDproperty project page identifies Fare Tower at Soi Sukhumvit 50 and describes Fair Tower Condominium."
+    },
+    {
+      "url": "https://www.ddproperty.com/property/fare-tower-%E0%B9%81%E0%B8%9F%E0%B8%A3%E0%B9%8C-%E0%B8%97%E0%B8%B2%E0%B8%A7%E0%B9%80%E0%B8%A7%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B8%82%E0%B8%B2%E0%B8%A2-500507966",
+      "finding": "Direct sale listing: 2 bedrooms, 75 sqm, THB 6,990,000; listed/reposted 17 Oct 2026."
+    },
+    {
+      "url": "https://www.ddproperty.com/en/property/fare-tower-bangkok-for-rent-500579179",
+      "finding": "Direct rent listing: 2 bedrooms, 86.92 sqm, THB 45,000/month; listed 23 Sep 2026."
+    }
+  ],
+  "limitations": [
+    "Listing pages show recent posting dates but present availability should be confirmed with advertisers.",
+    "Common area fee not verified; yield estimate does not deduct it.",
+    "Hipflat completion metadata (1996) and DDproperty descriptions (1991/1992) differ; existing completion year was not overwritten."
+  ]
+}

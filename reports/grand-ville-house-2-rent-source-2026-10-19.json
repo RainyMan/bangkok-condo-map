@@ -1,0 +1,29 @@
+{
+  "hipflatId": 4211,
+  "projectName": "Grand Ville House 2",
+  "checkedAt": "2026-10-19",
+  "rentListing": {
+    "id": "500566084",
+    "propertyScoutId": "2857453",
+    "priceThbPerMonth": 100000,
+    "areaSqm": 250.0,
+    "bedrooms": 3,
+    "rentThbPerSqmMonth": 400.0,
+    "updated": "2026-09-18",
+    "url": "https://www.ddproperty.com/en/property/grand-ville-house-2-bangkok-for-rent-500566084"
+  },
+  "sources": [
+    {
+      "url": "https://www.ddproperty.com/en/property/grand-ville-house-2-bangkok-for-rent-500566084",
+      "finding": "Direct listing page identifies Grand Ville House 2, 3 bedrooms, 250 sqm, THB 100,000/month, PropertyScout ID 2857453."
+    },
+    {
+      "url": "https://www.ddproperty.com/en/project/6468-grand-ville-house-2",
+      "finding": "DDproperty project page identifies Grand Ville House 2 at Sukhumvit 19, Watthana."
+    }
+  ],
+  "limitations": [
+    "Listing update date is over 30 days old; current availability is unconfirmed.",
+    "This is a 3-bedroom sample and does not supply the missing direct 2-bedroom rent basis for investment yield."
+  ]
+}
