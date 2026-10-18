@@ -11,6 +11,8 @@ PROJECT_ID = 3054
 NAME = "Wisetsuk Nakorn Condo"
 LAT = 13.633713110107
 LNG = 100.50511835365
+REJECTED_LAT = 13.70204589724699
+REJECTED_LNG = 100.4076823242259
 LONGDO_URL = "https://map.longdo.com/p/A00316287"
 HIPFLAT_URL = "https://www.hipflat.co.th/en/projects/wisetsuk-nakorn-condo-npkjeq"
 REPORT_PATH = ROOT / "reports" / "wisetsuk-nakorn-coordinate-correction-2026-10-19.json"
@@ -36,7 +38,7 @@ project = next((row for row in projects if int(row.get("id", 0)) == PROJECT_ID),
 if project is None:
     raise ValueError(f"Project {PROJECT_ID} not found in PropertyHub map overlay")
 old = {key: project.get(key) for key in ("lat", "lng", "locationSourceUrl")}
-if project.get("locationSourceUrl") != "https://propertyhub.in.th/en/projects/wisetsuk-nakorn-condo":
+if project.get("locationSourceUrl") not in (None, "https://propertyhub.in.th/en/projects/wisetsuk-nakorn-condo"):
     raise ValueError("The current coordinate source differs from the mismatch being corrected")
 project.update({
     "lat": None,
@@ -61,7 +63,7 @@ source_start = source_text.find('{"id":3054,')
 if source_start < 0:
     raise ValueError("Project 3054 not found in the unbundled PropertyHub feed")
 source_project, source_end = json.JSONDecoder().raw_decode(source_text, source_start)
-if source_project.get("locationSourceUrl") != "https://propertyhub.in.th/en/projects/wisetsuk-nakorn-condo":
+if source_project.get("locationSourceUrl") not in (None, "https://propertyhub.in.th/en/projects/wisetsuk-nakorn-condo"):
     raise ValueError("The unbundled PropertyHub coordinate source differs from the mismatch being corrected")
 source_project.update({
     "lat": None,
@@ -76,6 +78,28 @@ source_project.update({
 })
 source_text = source_text[:source_start] + json.dumps(source_project, ensure_ascii=False, separators=(",", ":")) + source_text[source_end:]
 source_path.write_text(source_text, encoding="utf-8")
+
+# A fuzzy-name candidate also mapped the same Bang Khae project onto this
+# Hipflat ID, and app.js merges that candidate after the project feed.
+guessed_path = DIST / "bangkok-propertyhub-guessed-details.js"
+guessed_text = guessed_path.read_text(encoding="utf-8")
+guessed_match = re.fullmatch(r"window\.BANGKOK_PROPERTYHUB_GUESSED_DETAILS\s*=\s*(\[.*\]);\s*", guessed_text, re.S)
+if not guessed_match:
+    raise ValueError("Unexpected guessed-details format")
+guessed_rows = json.loads(guessed_match.group(1))
+guessed = next((row for row in guessed_rows if int(row.get("hipflatProjectId", 0)) == PROJECT_ID), None)
+if guessed is None or guessed.get("projectAddress") != "Bang Khae Bangkok":
+    raise ValueError("The expected same-name Bang Khae candidate was not found")
+guessed.update({
+    "lat": None,
+    "lng": None,
+    "locationVerified": False,
+    "locationSourceName": None,
+    "locationSourceUrl": None,
+    "propertyHubProjectId": None,
+    "coordinateConflictNote": "Same-name Bang Khae project is not the Hipflat Thung Khru building; excluded from location and market merges.",
+})
+guessed_path.write_text("window.BANGKOK_PROPERTYHUB_GUESSED_DETAILS = " + json.dumps(guessed_rows, ensure_ascii=False, separators=(",", ":")) + ";\n", encoding="utf-8")
 
 verified = load_array("bangkok-verified-coordinates.js", "BANGKOK_VERIFIED_COORDINATES")
 record = next((row for row in verified if int(row.get("hipflatId", 0)) == PROJECT_ID), None)
@@ -99,6 +123,7 @@ index_path = DIST / "index.html"
 index_text = index_path.read_text(encoding="utf-8")
 for asset, version in (
     ("bangkok-propertyhub-map.js", "20261019a-wisetsuk-same-name-mismatch-corrected"),
+    ("bangkok-propertyhub-guessed-details.js", "20261019a-wisetsuk-same-name-candidate-excluded"),
     ("bangkok-verified-coordinates.js", "20261019a-wisetsuk-longdo-coordinate"),
 ):
     index_text, n = re.subn(
@@ -122,7 +147,9 @@ report = {
         "longdoRecord": "Approved Wisetsuk Nakhon Condominium, Soi Sap Bunchai 2, Thung Khru.",
     },
     "rejectedCoordinate": {
-        **old,
+        "lat": REJECTED_LAT,
+        "lng": REJECTED_LNG,
+        "locationSourceUrl": "https://propertyhub.in.th/en/projects/wisetsuk-nakorn-condo",
         "reason": "The same-name PropertyHub project is indexed in Bang Khae. Its area does not match the Hipflat Thung Khru project and is not used as the coordinate source.",
     },
     "marketSamples": {
