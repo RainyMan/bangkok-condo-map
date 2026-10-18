@@ -1,0 +1,13 @@
+{
+  "hipflatId": 3073,
+  "project": "A-Pa Place",
+  "coordinates": {
+    "lat": 13.81843758868402,
+    "lng": 100.58861314472551
+  },
+  "coordinateSource": "https://propertyhub.in.th/projects/arpa-place",
+  "projectIdentityCrosscheck": "https://www.hipflat.co.th/en/projects/apa-place-ufwlfe",
+  "identityEvidence": "PropertyHub project title Arpa Place and Thai name อาภา เพลส; Hipflat A-Pa Place page carries the same Thai name and Soi Chamchuri, Chan Kasem, Chatuchak address.",
+  "mapEvidence": "PropertyHub project page embedded project location object with these latitude/longitude values.",
+  "checkedAt": "2026-10-18"
+}
