@@ -286,12 +286,12 @@
   const yieldOverrides = new Map();
   // Refresh auto-generated baselines when new exact listings arrive while
   // keeping values the user intentionally edited and saved.
-  const yieldStorageKey = 'bangkokCondoYieldInputsV20';
+  const yieldStorageKey = 'bangkokCondoYieldInputsV21';
   const loadYieldInputs = () => {
     try {
       const current = localStorage.getItem(yieldStorageKey);
       if (current) return JSON.parse(current);
-      const previous = JSON.parse(localStorage.getItem('bangkokCondoYieldInputsV19') || localStorage.getItem('bangkokCondoYieldInputsV18') || localStorage.getItem('bangkokCondoYieldInputsV17') || localStorage.getItem('bangkokCondoYieldInputsV16') || localStorage.getItem('bangkokCondoYieldInputsV15') || localStorage.getItem('bangkokCondoYieldInputsV14') || localStorage.getItem('bangkokCondoYieldInputsV13') || localStorage.getItem('bangkokCondoYieldInputsV12') || localStorage.getItem('bangkokCondoYieldInputsV11') || localStorage.getItem('bangkokCondoYieldInputsV10') || localStorage.getItem('bangkokCondoYieldInputsV9') || localStorage.getItem('bangkokCondoYieldInputsV8') || localStorage.getItem('bangkokCondoYieldInputsV7') || localStorage.getItem('bangkokCondoYieldInputsV6') || localStorage.getItem('bangkokCondoYieldInputsV5') || '{}');
+      const previous = JSON.parse(localStorage.getItem('bangkokCondoYieldInputsV20') || localStorage.getItem('bangkokCondoYieldInputsV19') || localStorage.getItem('bangkokCondoYieldInputsV18') || localStorage.getItem('bangkokCondoYieldInputsV17') || localStorage.getItem('bangkokCondoYieldInputsV16') || localStorage.getItem('bangkokCondoYieldInputsV15') || localStorage.getItem('bangkokCondoYieldInputsV14') || localStorage.getItem('bangkokCondoYieldInputsV13') || localStorage.getItem('bangkokCondoYieldInputsV12') || localStorage.getItem('bangkokCondoYieldInputsV11') || localStorage.getItem('bangkokCondoYieldInputsV10') || localStorage.getItem('bangkokCondoYieldInputsV9') || localStorage.getItem('bangkokCondoYieldInputsV8') || localStorage.getItem('bangkokCondoYieldInputsV7') || localStorage.getItem('bangkokCondoYieldInputsV6') || localStorage.getItem('bangkokCondoYieldInputsV5') || '{}');
       const recalculated = {};
       condos.forEach(c => {
         const old = previous[c.id] || {};
