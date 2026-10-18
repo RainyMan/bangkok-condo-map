@@ -1,0 +1,19 @@
+{
+  "hipflatId": 3090,
+  "project": "My villa Bang Na",
+  "coordinates": {
+    "lat": 13.672199118675103,
+    "lng": 100.59919231480234
+  },
+  "coordinateSource": "https://propertyhub.in.th/en/projects/my-villa-bangna---16716",
+  "projectIdentityCrosscheck": "https://www.hipflat.co.th/en/projects/my-villa-bang-na-ofsmjs",
+  "identityEvidence": "PropertyHub gives the same project name, 365 units and 12 floors; Hipflat names My villa Bang Na at 32 Soi Rom Pho, Bang Na Tai, Bang Na.",
+  "mapEvidence": "PropertyHub project page embedded project location object with these latitude/longitude values.",
+  "completionYear": 2018,
+  "currentListings": {
+    "sale": 0,
+    "rent": 0,
+    "evidence": "https://propertyhub.in.th/en/projects/my-villa-bangna---16716"
+  },
+  "checkedAt": "2026-10-18"
+}
