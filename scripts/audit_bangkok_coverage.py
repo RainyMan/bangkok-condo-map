@@ -146,6 +146,8 @@ def main() -> None:
             market.get("rent") or scout_market.get("rent") or manual_market.get("rent")
             or project.get("rent") or legacy.get("rent") or {}
         )
+        if manual_market.get("replaceRent") and manual_market.get("rent"):
+            rent = manual_market["rent"]
         scout_location = scout_details.get(project_id, {})
         verified_location = verified_coordinates.get(project_id, {})
         has_coords = any((row.get("locationVerified") and row.get("lat") is not None and row.get("lng") is not None)
