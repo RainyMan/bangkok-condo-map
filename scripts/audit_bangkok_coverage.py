@@ -93,7 +93,13 @@ def main() -> None:
     # This must be the same compiled source file loaded by index.html. The
     # similarly named bangkok-propertyhub.js is an unbundled research artifact.
     propertyhub = index(load_array("bangkok-propertyhub-map.js", "BANGKOK_PROPERTYHUB_PROJECTS"), "id")
-    propertyhub_research = index(load_array("bangkok-propertyhub.js", "BANGKOK_PROPERTYHUB_PROJECTS"), "id")
+    # This unbundled research artifact has grown beyond the memory limit of
+    # some local Python environments. It is only a fallback for attaching a
+    # sample freshness date; the compiled app data below remains authoritative.
+    try:
+        propertyhub_research = index(load_array("bangkok-propertyhub.js", "BANGKOK_PROPERTYHUB_PROJECTS"), "id")
+    except MemoryError:
+        propertyhub_research = {}
     city_summaries = index(load_array("bangkok-propertyhub-city-summaries.js", "BANGKOK_PROPERTYHUB_CITY_SUMMARIES"), "id")
     details = index(load_array("bangkok-propertyhub-details.js", "BANGKOK_PROPERTYHUB_DETAILS"), "propertyHubProjectId")
     guessed = index(load_array("bangkok-propertyhub-guessed-details.js", "BANGKOK_PROPERTYHUB_GUESSED_DETAILS"), "hipflatProjectId")
