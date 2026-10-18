@@ -1,0 +1,48 @@
+{
+  "hipflatId": 3251,
+  "projectName": "I CONDO Sukhapiban 2",
+  "checkedAt": "2026-10-18",
+  "coordinates": {
+    "lat": 13.78338371,
+    "lng": 100.67113909,
+    "source": "https://www.tperty.com/%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%B2%E0%B8%A8/%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94%E0%B8%A1%E0%B8%B4%E0%B9%80%E0%B8%99%E0%B8%B5%E0%B8%A2%E0%B8%A1-%E0%B9%80%E0%B8%99%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%97%E0%B8%B5%E0%B9%88-3105-%E0%B8%95%E0%B8%A3%E0%B8%A1-%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3-%E0%B9%84%E0%B8%AD%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B8%AA%E0%B8%B8%E0%B8%82-1520310",
+    "corroboration": "https://assets.propertyhub.in.th/listings/%E0%B8%82%E0%B8%B2%E0%B8%A2-%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B8%8A%E0%B8%B1%E0%B9%89%E0%B8%99%E0%B8%AA%E0%B8%B9%E0%B8%87-%E0%B8%A7%E0%B8%B4%E0%B8%A7%E0%B8%AA%E0%B8%A7%E0%B8%A2-icondo-sukhapiban-2-31-05-%E0%B8%95%E0%B8%A3%E0%B8%A1-%E0%B9%80%E0%B8%AB%E0%B9%87%E0%B8%99%E0%B8%AA%E0%B8%A3%E0%B8%B0%E0%B8%A7%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B8%99%E0%B9%89%E0%B8%B3---6060509",
+    "method": "Tperty identifies the exact project address between Seri Thai 43 and 45 and publishes coordinates 13.78338371,100.67113909; a separate PropertyHub listing Google Maps pin is 13.783599,100.671184, about 24 m away."
+  },
+  "projectRentalCheck": {
+    "hipflatProjectUrl": "https://www.hipflat.co.th/en/projects/i-condo-sukhapiban-2-sesfrg",
+    "hipflatAdvertisedCount": 3,
+    "includedRecentListings": 1,
+    "excludedStaleListingLastUpdate": "2026-09-09",
+    "propertyHubRentUrl": "https://propertyhub.in.th/en/condo-for-rent/project-i-condo-sukhapiban-2",
+    "propertyHubStatus": "No matched properties for rent"
+  },
+  "rentListing": {
+    "id": "U1636514",
+    "bedrooms": 1,
+    "monthlyRent": 7500,
+    "areaSqm": 31.05,
+    "rentPerSqm": 241.55,
+    "url": "https://www.hipflat.co.th/ads/8cuu0at1817110c37alacc1a3u0h14at",
+    "listingStatus": "active_as_listed"
+  },
+  "twoBedroomSaleBaseline": {
+    "price": 1750000,
+    "areaSqm": 47,
+    "bedrooms": 2,
+    "sourceUrl": "https://propertyhub.in.th/en/listings/for-sell-condo-icondo-sukhapiban-2-building-a2-floor-4-2-bed-room-room-size-47-sqm--af4a09b3---5515729",
+    "sourceCheck": "Direct detail page confirms exact project, 2 beds, 47 sqm, ฿1,750,000; project page refreshed listing 2026-10-17."
+  },
+  "yieldEstimate": {
+    "rentRateFallback": "The only currently recent rent listing is one-bedroom; its per-sqm rate is used as a clearly linked fallback for the two-bedroom purchase baseline because PropertyHub and Hipflat have no recent exact two-bedroom rental sample.",
+    "estimatedMonthlyRentAtPurchaseArea": 11352.66,
+    "commonFeePerSqmMonthly": 25,
+    "deductAgentMonths": 1,
+    "netAnnualYieldPercent": 6.33
+  },
+  "notes": [
+    "The two other Hipflat rent listings show last updated 2026-09-09 and were not included in current sample statistics.",
+    "PropertyHub exact-project rental page states no matched rental properties.",
+    "The yield is an estimate with a one-bedroom market rent-rate proxy; a verified two-bedroom rental listing is still needed to produce a same-room-type yield."
+  ]
+}
