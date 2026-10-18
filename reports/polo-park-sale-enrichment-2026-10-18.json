@@ -1,0 +1,36 @@
+{
+  "hipflatId": 3099,
+  "project": "Polo Park",
+  "checkedAt": "2026-10-18",
+  "sale": {
+    "source": "ThaiHometown / Incube Realty",
+    "url": "https://www.thaihometown.com/condo/4682807",
+    "reference": "P17CR2006073 / page #4682807",
+    "listedAt": "2024-10-28",
+    "bedrooms": 2,
+    "areaSqm": 241,
+    "priceThb": 38000000,
+    "pricePerSqmThb": 157676,
+    "availability": "historical listing; no current availability or price confirmation",
+    "decision": "Included with an explicit over-one-year stale label as a linked historical sample. It is not represented as current inventory."
+  },
+  "rentBaseline": {
+    "source": "PropertyHub individual listing",
+    "url": "https://propertyhub.in.th/en/listings/polo-park-condominium-luxurious-2-bed-condo-in-ratchadamri-br9559cd---5602848",
+    "bedrooms": 2,
+    "monthlyRentThb": 90000,
+    "areaSqm": 250,
+    "rentPerSqmPerMonthThb": 360,
+    "updatedAt": "2026-10-15"
+  },
+  "yieldEstimate": {
+    "purchasePriceThb": 38000000,
+    "purchaseAreaSqm": 241,
+    "estimatedMonthlyRentThb": 86760,
+    "estimatedAnnualRentAfterOneAgentMonthThb": 954360,
+    "yieldPercentBeforeUnknownCommonFee": 2.51,
+    "formula": "(360 THB/sqm/month × 241 sqm × 11 months) ÷ 38000000 THB × 100",
+    "commonFee": "not independently verified; not deducted",
+    "caveat": "Yield is indicative only because the sale baseline is from a 2024 listing and current availability and sale price are unconfirmed."
+  }
+}

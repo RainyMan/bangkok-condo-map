@@ -268,7 +268,7 @@
     const dateLabel = updated ? ` · 更新 ${esc(String(updated).slice(0, 10))}` : '';
     const sourceSample = market?.samples?.find(sample => sample.url === url);
     const listingStatus = sourceSample?.listingStatus;
-    const availabilityLabel = listingStatus === 'availability_unconfirmed_update_over_30d' ? ' · 超過 30 日未更新，現況待確認' : listingStatus === 'availability_unconfirmed_date_unknown' ? ' · 未提供更新日，現況待確認' : listingStatus === 'availability_unconfirmed_date_conflict' ? ' · 刊登租期日期矛盾，現況待確認' : '';
+    const availabilityLabel = listingStatus === 'availability_unconfirmed_stale_over_year' ? ' · 歷史樣本，超過一年未更新，現況待確認' : listingStatus === 'availability_unconfirmed_update_over_30d' ? ' · 超過 30 日未更新，現況待確認' : listingStatus === 'availability_unconfirmed_date_unknown' ? ' · 未提供更新日，現況待確認' : listingStatus === 'availability_unconfirmed_date_conflict' ? ' · 刊登租期日期矛盾，現況待確認' : '';
     const label = market?.marketSummary ? '行情頁 ↗' : '物件 ↗';
     return `<a class="sample-source" href="${esc(url)}" target="_blank" rel="noopener" aria-label="${market?.marketSummary ? '開啟Condo行情摘要' : '開啟這筆最低價物件'}" title="${updated ? `房源更新日 ${esc(String(updated).slice(0, 10))}` : market?.marketSummary ? '開啟Condo行情摘要' : '開啟這筆最低價物件'}${availabilityLabel}" style="color:var(--green);font-weight:700;text-decoration:none;margin-left:4px">${label}${dateLabel}${availabilityLabel}</a>`;
   };
