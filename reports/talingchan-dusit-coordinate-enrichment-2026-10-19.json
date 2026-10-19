@@ -1,0 +1,112 @@
+{
+  "checkedAt": "2026-10-19",
+  "work": "Verified five unresolved coordinates, corrected one conflicting address, and recorded project-specific no-current-listing evidence without inventing prices or ROI.",
+  "coordinates": [
+    {
+      "hipflatId": 3248,
+      "name": "Dusit Condominium",
+      "lat": 13.778310388,
+      "lng": 100.522663339,
+      "source": "https://www.google.com/maps/search/?api=1&query=13.778310388%2C100.522663339"
+    },
+    {
+      "hipflatId": 3343,
+      "name": "Pannup 2",
+      "lat": 13.746408882433,
+      "lng": 100.462267697073,
+      "source": "https://www.google.com/maps/search/?api=1&query=13.746408882433%2C100.462267697073"
+    },
+    {
+      "hipflatId": 3363,
+      "name": "Nontarom Condo Park Building B",
+      "lat": 13.763033088186,
+      "lng": 100.453337365973,
+      "source": "https://www.google.com/maps/search/?api=1&query=13.763033088186%2C100.453337365973"
+    },
+    {
+      "hipflatId": 3583,
+      "name": "Nontarom Condo Park",
+      "lat": 13.7784358,
+      "lng": 100.4564521,
+      "source": "https://www.google.com/maps/search/?api=1&query=13.7784358%2C100.4564521"
+    },
+    {
+      "hipflatId": 5278,
+      "name": "Nontarom Talingchan",
+      "lat": 13.778848272645,
+      "lng": 100.455296216745,
+      "source": "https://www.google.com/maps/search/?api=1&query=13.778848272645%2C100.455296216745"
+    }
+  ],
+  "market": {
+    "currentDirectSaleSamplesAdded": 1,
+    "currentDirectRentSamplesAdded": 0,
+    "noHipflatInventoryProjectPages": [
+      3248,
+      3343,
+      3363,
+      5278
+    ],
+    "saleSampleAdded": {
+      "projectId": 3248,
+      "priceTHB": 3564000,
+      "areaSqm": 271.5,
+      "bedrooms": 3,
+      "pricePerSqm": 13127.07,
+      "source": "https://www.bam.co.th/th/npa/property/141563"
+    },
+    "notCalculatedYield": [
+      3248,
+      3343,
+      3363,
+      5278
+    ],
+    "existingCurrentSamplesPreserved": {
+      "projectId": 3583,
+      "saleUrl": "https://www.hipflat.co.th/ads/t393ll8a81a2aaca7t7nahn43u04u42e",
+      "rentUrl": "https://www.hipflat.co.th/ads/99484t1u814a0tu7h7897ne83u0h14a3",
+      "note": "The umbrella Nontarom Condo Park listing samples remain attached only to project 3583; no samples were copied to the separate Building B record 3363 or Nontarom Talingchan 5278."
+    }
+  },
+  "limitations": [
+    "Tamarind Tree Residence (3171) has only a street-level geocode match; it was left unmapped pending a project-specific point.",
+    "Tropical Garden (3315) resolves only to Soi Phrom Chit rather than the exact condominium footprint; it was left unmapped pending a project-specific point."
+  ],
+  "sources": [
+    {
+      "hipflatId": 3248,
+      "name": "Dusit Condominium",
+      "mapPoint": "https://www.google.com/maps/search/?api=1&query=13.778310388%2C100.522663339",
+      "geocoder": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=Dusit+Condominium+Nakhon+Chai+Si+Dusit+Bangkok&f=json&outFields=%2A&maxLocations=1",
+      "project": "https://www.hipflat.co.th/en/projects/dusit-condominium-yyjuao"
+    },
+    {
+      "hipflatId": 3343,
+      "name": "Pannup 2",
+      "mapPoint": "https://www.google.com/maps/search/?api=1&query=13.746408882433%2C100.462267697073",
+      "geocoder": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=409%2F4+Soi+Charan+Sanitwong+25%2C+Charan+Sanitwong+Rd%2C+Bang+Khun+Si%2C+Bangkok+Noi%2C+Bangkok+10700&f=json&outFields=%2A&maxLocations=1",
+      "project": "https://www.hipflat.co.th/en/projects/pannup-2-wyabco"
+    },
+    {
+      "hipflatId": 3363,
+      "name": "Nontarom Condo Park Building B",
+      "mapPoint": "https://www.google.com/maps/search/?api=1&query=13.763033088186%2C100.453337365973",
+      "geocoder": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=634+Soi+Kaeo+Ngoen+Thong+14%2C+Kaeo+Ngoen+Thong+Rd%2C+Khlong+Chak+Phra%2C+Taling+Chan%2C+Bangkok+10170&f=json&outFields=%2A&maxLocations=1",
+      "project": "https://www.hipflat.co.th/en/projects/nontarom-condo-park-building-b-suljbp"
+    },
+    {
+      "hipflatId": 3583,
+      "name": "Nontarom Condo Park",
+      "mapPoint": "https://www.google.com/maps/search/?api=1&query=13.7784358%2C100.4564521",
+      "geocoder": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=Nontarom+Condo+Park%2C+Taling+Chan%2C+Bangkok&f=json&outFields=%2A&maxLocations=1",
+      "project": "https://www.hipflat.co.th/en/projects/nontarom-condo-park-yslcxr"
+    },
+    {
+      "hipflatId": 5278,
+      "name": "Nontarom Talingchan",
+      "mapPoint": "https://www.google.com/maps/search/?api=1&query=13.778848272645%2C100.455296216745",
+      "geocoder": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=44%2F16+Soi+Chakphra+30%2C+Chak+Phra+Rd%2C+Taling+Chan%2C+Bangkok+10170&f=json&outFields=%2A&maxLocations=1",
+      "project": "https://www.hipflat.co.th/en/projects/nontarom-talingchan-xizstv"
+    }
+  ]
+}

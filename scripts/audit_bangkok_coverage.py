@@ -176,8 +176,8 @@ def main() -> None:
                          for row in (market, project, scout_location, verified_location, legacy)) or (
             osm.get(project_id, {}).get("lat") is not None and osm[project_id].get("lng") is not None
         )
-        manual_sale_samples = manual_market.get("sale", {}).get("samples", [])
-        manual_rent_samples = manual_market.get("rent", {}).get("samples", [])
+        manual_sale_samples = (manual_market.get("sale") or {}).get("samples", [])
+        manual_rent_samples = (manual_market.get("rent") or {}).get("samples", [])
         cross_sale_samples = crosscheck.get("sale", {}).get("listings", [])
         cross_rent_samples = crosscheck.get("rent", {}).get("listings", [])
         direct_current_sale = any(
