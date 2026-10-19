@@ -1,0 +1,96 @@
+{
+  "hipflatId": 3175,
+  "project": "The Great Condo Petchkasem 48",
+  "checkedAt": "2026-10-19",
+  "coordinates": {
+    "selected": {
+      "lat": 13.7214584,
+      "lng": 100.4406967,
+      "source": "https://rentcondobkk.com/index.php/เช่าคอนโด/เดอะเกรท-คอนโด-เพชรเกษม-48"
+    },
+    "crossCheck": {
+      "lat": 13.721198,
+      "lng": 100.440833,
+      "source": "https://www.condonayoo.com/the-great-condo-petchkasem-48/"
+    },
+    "distanceBetweenPinsM": 32,
+    "decision": "Use the property page GeoCoordinates and retain the independent project Google Maps point as corroboration."
+  },
+  "sale": {
+    "bedrooms": 2,
+    "priceTHB": 1899000,
+    "areaSqm": 57,
+    "source": "https://assets.propertyhub.in.th/listings/a033746-the-great-condo-petchkasem-48---6005471",
+    "updated": "2026-10-17"
+  },
+  "rent": {
+    "verifiedDirectListings": [
+      {
+        "id": "46736",
+        "price": 4000,
+        "area": 30,
+        "priceSqm": 133.33,
+        "beds": 1,
+        "roomType": "1BR",
+        "title": "The Great Condo Petchkasem 48 · 1 房 · 30 ㎡ · ฿4,000/月",
+        "url": "https://rentcondobkk.com/index.php/ให้เช่า/คอนโด/46736/GC31-0001",
+        "sourceName": "RentcondoBkk",
+        "projectName": "The Great Condo Petchkasem 48",
+        "checkedAt": "2026-10-19",
+        "matchedBy": "exact_project_and_direct_listing_page",
+        "listingStatus": "availability_unconfirmed_date_unknown",
+        "verificationNote": "單筆頁列 1 房、30㎡、฿4,000/月，另註明公用費 ฿445/月；專案彙整頁同一代碼列 ฿4,500/月，採直接單筆頁金額並標示待向刊登者確認。"
+      },
+      {
+        "id": "171056",
+        "price": 5000,
+        "area": 31,
+        "priceSqm": 161.29,
+        "beds": 1,
+        "roomType": "1BR",
+        "title": "The Great Condo Petchkasem 48 · 1 房 · 31 ㎡ · ฿5,000/月",
+        "url": "https://rentcondobkk.com/index.php/ให้เช่า/คอนโด/171056/GC31-0010",
+        "sourceName": "RentcondoBkk",
+        "projectName": "The Great Condo Petchkasem 48",
+        "checkedAt": "2026-10-19",
+        "matchedBy": "exact_project_and_direct_listing_page",
+        "listingStatus": "availability_unconfirmed_date_unknown",
+        "verificationNote": "專案頁顯示此單筆代碼 1 房、31㎡、฿5,000/月；單筆詳情頁核對樓層與面積，頁面未標刊登更新日。"
+      },
+      {
+        "id": "92914",
+        "price": 5500,
+        "area": 30,
+        "priceSqm": 183.33,
+        "beds": 0,
+        "roomType": "Studio",
+        "title": "The Great Condo Petchkasem 48 · Studio · 30 ㎡ · ฿5,500/月",
+        "url": "https://rentcondobkk.com/index.php/ให้เช่า/คอนโด/92914/GC31-0002",
+        "sourceName": "RentcondoBkk",
+        "projectName": "The Great Condo Petchkasem 48",
+        "checkedAt": "2026-10-19",
+        "matchedBy": "exact_project_and_direct_listing_page",
+        "listingStatus": "availability_unconfirmed_date_unknown",
+        "verificationNote": "專案頁顯示此單筆代碼 Studio、30㎡、฿5,500/月；單筆詳情頁核對房型與面積，頁面未標刊登更新日。"
+      }
+    ],
+    "lowestOneBedroomTHBPerMonth": 4000,
+    "lowestOneBedroomAreaSqm": 30,
+    "lowestOneBedroomRateTHBPerSqmMonth": 133.33,
+    "availability": "unconfirmed_date_unknown",
+    "crossSourceConflict": "PropertyHub and DDproperty show zero rent listings, while RentcondoBkk lists three. The GC31-0001 summary shows ฿4,500/month but its individual page says ฿4,000/month plus ฿445 common fee; use the direct page price with the conflict disclosed."
+  },
+  "yield": {
+    "calculated": false,
+    "reason": "The lowest verified sale is two-bedroom; the checked rents are one-bedroom and studio only."
+  },
+  "sources": [
+    "https://www.hipflat.co.th/en/projects/the-great-condo-petchkasem-48-jvfwpo",
+    "https://propertyhub.in.th/en/projects/the-great-condo",
+    "https://propertyhub.in.th/en/condo-for-rent/project-the-great-condo",
+    "https://www.ddproperty.com/en/project/9755-the-great-condo-petchkasem-48",
+    "https://rentcondobkk.com/index.php/เช่าคอนโด/เดอะเกรท-คอนโด-เพชรเกษม-48",
+    "https://www.condonayoo.com/the-great-condo-petchkasem-48/",
+    "https://assets.propertyhub.in.th/listings/a033746-the-great-condo-petchkasem-48---6005471"
+  ]
+}

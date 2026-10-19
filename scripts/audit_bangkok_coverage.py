@@ -63,6 +63,8 @@ def has_individual_listing(market: dict) -> bool:
             return True
         if host.endswith("property-hua-hin.com") and re.search(r"/.+-u\d{5,}", path):
             return True
+        if host.endswith("rentcondobkk.com") and re.search(r"/index\.php/.+/\d+/gc\d{2}-\d{4}(?:/|$)", path):
+            return True
         if host.endswith("propertyscout.co.th") and re.search(r"/.+-\d{6,}/?$", path):
             return True
         if host.endswith("sam.or.th") and re.search(r"^/site/index\.php/npa/map_preview/\d+/?$", path):
