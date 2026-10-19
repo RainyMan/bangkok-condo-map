@@ -17,6 +17,10 @@
       {
         "url": "https://therealtors.net/project/31-residence",
         "evidence": "The Realtors project data reports 0 sale units."
+      },
+      {
+        "url": "https://www.hipflat.co.th/en/projects/31-residence-krkcne",
+        "evidence": "Hipflat project page displays rental units but no current sale listing."
       }
     ]
   },
