@@ -317,7 +317,9 @@
     // Do not silently substitute another room type or a project-wide minimum.
     const rentRate = roomRentRate;
     return {
-      price: salePrice || Math.round(Number(c.sale?.minimumSqm || 0) * saleArea),
+      // Keep the exact lowest same-bedroom sale total. Missing matching rent
+      // evidence must not trigger an unrelated project-wide price/sqm fallback.
+      price: salePrice,
       area: saleArea,
       rent: Math.round(rentRate * saleArea),
       beds: chosenBeds || room?.beds || c.beds || null,
@@ -361,7 +363,7 @@
   // do not match an old generated baseline remain intact.
   // Recompute saved generated baselines after refreshing the two-bedroom
   // lowest-price unit and its paired floor area, while preserving edits.
-  const yieldStorageKey = 'bangkokCondoYieldInputsV209';
+  const yieldStorageKey = 'bangkokCondoYieldInputsV210';
   const loadYieldInputs = () => {
     try {
       const current = localStorage.getItem(yieldStorageKey);
@@ -384,7 +386,7 @@
         return refreshed;
       }
       let previous = {};
-      for (let version = 207; version >= 5; version--) {
+      for (let version = 209; version >= 5; version--) {
         const stored = localStorage.getItem(`bangkokCondoYieldInputsV${version}`);
         if (stored) { previous = JSON.parse(stored); break; }
       }
@@ -445,8 +447,7 @@
           ...(c.sale?.samples || []).filter(sample => bedroomCountForSample(sample) === 2).map(sample => Number(sample.price)),
         ].filter(price => price > 0);
         const savedMatchesTwoBedroomListing = previousBeds === '2'
-          && knownTwoBedroomPrices.includes(Number(old.price))
-          && (oldRentMatches || oldSaleMatches || oldSaleMatchesGeneratedParts);
+          && knownTwoBedroomPrices.includes(Number(old.price));
         const useRefreshedBaseline = !old.price || wasAutoBaseline || savedMatchesTwoBedroomListing;
         recalculated[c.id] = {
           price: useRefreshedBaseline ? defaults.price : Number(old.price),
