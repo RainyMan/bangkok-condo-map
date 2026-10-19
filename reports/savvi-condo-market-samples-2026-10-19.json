@@ -1,0 +1,138 @@
+{
+  "hipflatId": 3320,
+  "projectName": "Savvi Condo",
+  "asOf": "2026-10-19",
+  "coordinate": {
+    "hipflatId": 3320,
+    "name": "Savvi Condo",
+    "lat": 13.7783517,
+    "lng": 100.5465974,
+    "locationVerified": true,
+    "sourceName": "PropertyHub 房源的 Google Maps 專案點位",
+    "sourceUrl": "https://maps.app.goo.gl/6NmnzR7ZzUotZFNr5",
+    "verificationSourceUrl": "https://www.ddproperty.com/en/project/11748-savvi-phahol-ari",
+    "verificationMethod": "Google Maps 短連結解析至 SAVVI Phahol - Ari 專案點；Hipflat 完整地址與 PropertyHub 專案別名及 DDproperty 地址相符"
+  },
+  "saleSamples": [
+    {
+      "id": "5680452",
+      "price": 4500000,
+      "area": 35,
+      "priceSqm": 128571,
+      "beds": 1,
+      "roomType": "1BR",
+      "title": "Savvi Phahol-Ari，1 房，35 ㎡，฿4,500,000",
+      "url": "https://propertyhub.in.th/en/listings/for-sale-condo-savvi-phahol-ari-bts-ari-sam-sen-nai-phaya-thai-bangkok-cx-140337-live-chat-with-us-add-line-connexproperty--b1f509a8---5680452",
+      "sourceName": "PropertyHub",
+      "projectName": "Savvi Phahol - Ari",
+      "updated": "2026-10-06",
+      "checkedAt": "2026-10-19",
+      "matchedBy": "exact_project_name_and_listing_id_on_project_sale_index",
+      "listingStatus": "availability_unconfirmed_update_under_30d"
+    },
+    {
+      "id": "5729680",
+      "price": 6350000,
+      "area": 46,
+      "priceSqm": 138043,
+      "beds": 2,
+      "roomType": "2BR",
+      "title": "Savvi Phahol-Ari，2 房，46 ㎡，฿6,350,000（兩房最低總價）",
+      "url": "https://propertyhub.in.th/en/listings/selling-a-burden-special-price-condo-good-location-savvi-phahol-ari-md-25044869--b36d09f7---5729680",
+      "sourceName": "PropertyHub",
+      "projectName": "Savvi Phahol - Ari",
+      "updated": "2026-10-06",
+      "checkedAt": "2026-10-19",
+      "matchedBy": "exact_project_name_direct_listing_and_project_index_refresh",
+      "listingStatus": "availability_unconfirmed_update_under_30d"
+    },
+    {
+      "id": "3769913",
+      "price": 11590000,
+      "area": 67.06,
+      "priceSqm": 172830,
+      "beds": 2,
+      "roomType": "2BR",
+      "title": "Savvi Phahol-Ari，2 房，67.06 ㎡，฿11,590,000",
+      "url": "https://propertyhub.in.th/en/listings/savvi-phahol-ari-2-bedrooms-for-sale---3769913",
+      "sourceName": "PropertyHub",
+      "projectName": "Savvi Phahol - Ari",
+      "updated": "2026-09-22",
+      "checkedAt": "2026-10-19",
+      "matchedBy": "exact_project_name_direct_listing_and_project_index_refresh",
+      "listingStatus": "availability_unconfirmed_update_under_30d"
+    }
+  ],
+  "rentSamples": [
+    {
+      "id": "6015260",
+      "price": 18000,
+      "area": 30,
+      "priceSqm": 600,
+      "beds": 1,
+      "roomType": "1BR",
+      "title": "Savvi Phahol-Ari，1 房，30 ㎡，฿18,000/月",
+      "url": "https://propertyhub.in.th/en/listings/condo-for-rent-at-savvi-phahol-ari-j6904001---6015260",
+      "sourceName": "PropertyHub",
+      "projectName": "Savvi Phahol - Ari",
+      "updated": "2026-10-06",
+      "checkedAt": "2026-10-19",
+      "matchedBy": "exact_project_name_and_direct_listing_page",
+      "listingStatus": "availability_unconfirmed_update_under_30d"
+    }
+  ],
+  "yield": {
+    "status": "unavailable_same_bedroom_rent_missing",
+    "note": "預設採兩房最低售價 ฿6,350,000，面積 46㎡，來源連結指向同一個最低價房源。尚無可核實的同案兩房租盤，因此不將一房租金或相鄰 Savvi Phahol 2 的租金混入兩房投報。",
+    "twoBedroomPurchasePriceTHB": 6350000,
+    "twoBedroomAreaSqm": 46,
+    "twoBedroomSaleSourceUrl": "https://propertyhub.in.th/en/listings/selling-a-burden-special-price-condo-good-location-savvi-phahol-ari-md-25044869--b36d09f7---5729680"
+  },
+  "sources": [
+    {
+      "sourceName": "Hipflat 專案地址及完工資料",
+      "url": "https://www.hipflat.co.th/en/projects/savvi-condo-zbpnsr",
+      "statusLabel": "Savvi Condo，35 Soi Phahon Yothin 2，2017 年 1 月完工；8 層。"
+    },
+    {
+      "sourceName": "PropertyHub 專案資料／管理費",
+      "url": "https://propertyhub.in.th/en/projects/savvi-phahol-ari",
+      "statusLabel": "別名 Savvi Phahol-Ari；66 戶、8 層、2017 年完工，公共管理費 ฿60/㎡/月。"
+    },
+    {
+      "sourceName": "兩房最低出售掛牌",
+      "url": "https://propertyhub.in.th/en/listings/selling-a-burden-special-price-condo-good-location-savvi-phahol-ari-md-25044869--b36d09f7---5729680",
+      "statusLabel": "PropertyHub 房源 5729680：兩房、46㎡、฿6,350,000；投報購入基準使用此最低兩房總價及同一房源面積。"
+    },
+    {
+      "sourceName": "另一筆兩房出售掛牌",
+      "url": "https://propertyhub.in.th/en/listings/savvi-phahol-ari-2-bedrooms-for-sale---3769913",
+      "statusLabel": "PropertyHub 房源 3769913：兩房、67.06㎡、฿11,590,000；作為同案比較樣本。"
+    },
+    {
+      "sourceName": "一房最低出售掛牌",
+      "url": "https://propertyhub.in.th/en/listings/for-sale-condo-savvi-phahol-ari-bts-ari-sam-sen-nai-phaya-thai-bangkok-cx-140337-live-chat-with-us-add-line-connexproperty--b1f509a8---5680452",
+      "statusLabel": "PropertyHub 房源 5680452：一房、35㎡、฿4,500,000；不會蓋過兩房投報的購入基準。"
+    },
+    {
+      "sourceName": "目前可核對的出租掛牌",
+      "url": "https://propertyhub.in.th/en/listings/condo-for-rent-at-savvi-phahol-ari-j6904001---6015260",
+      "statusLabel": "PropertyHub 房源 6015260：一房、30㎡、฿18,000/月；因沒有同案兩房租金，兩房投報顯示待補。"
+    },
+    {
+      "sourceName": "座標來源（Google Maps）",
+      "url": "https://maps.app.goo.gl/6NmnzR7ZzUotZFNr5",
+      "statusLabel": "PropertyHub 專案房源的 Google Maps 短連結指向 SAVVI Phahol - Ari，解析座標 13.7783517, 100.5465974。"
+    },
+    {
+      "sourceName": "名稱／地址交叉核對",
+      "url": "https://www.ddproperty.com/en/project/11748-savvi-phahol-ari",
+      "statusLabel": "DDproperty 專案頁確認 SAVVI Phahol-Ari、Soi Phahon Yothin 2、2017 年、66 戶及 8 層；排除 2021 年的 Savvi Phahol 2。"
+    }
+  ],
+  "caveats": [
+    "掛牌在架狀態尚未向仲介確認。",
+    "未找到同案可核實的兩房出租掛牌，兩房投報保持待補。",
+    "Savvi Phahol 2 是另一個 2021 年建案，沒有合併其售租資料。"
+  ]
+}
