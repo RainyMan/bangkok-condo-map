@@ -1,0 +1,35 @@
+{
+  "hipflatId": 3093,
+  "project": "The Peace",
+  "checkedAt": "2026-10-20",
+  "historicalSearchCandidate": {
+    "id": "4583413",
+    "price": 25000,
+    "area": 76,
+    "priceSqm": 328.95,
+    "beds": 2,
+    "roomType": "2BR",
+    "title": "Peace Private Place 2 bedrooms, for rent",
+    "url": "https://propertyhub.in.th/en/listings/peace-private-place-2-bedrooms-for-rent---4583413",
+    "sourceName": "PropertyHub",
+    "projectName": "The Peace",
+    "updated": "2026-09-24",
+    "checkedAt": "2026-10-20",
+    "matchedBy": "exact_propertyhub_project_listing_page",
+    "listingStatus": "confirmed_unavailable_redirects_to_empty_project_page",
+    "verificationNote": "搜尋快取曾列 2 房、76㎡、฿25,000/月；2026-10-20 個別網址已轉到本案出租專案頁，而專案頁顯示 No matched properties for Rent，故不作為現行樣本。"
+  },
+  "projectPage": "https://propertyhub.in.th/en/projects/the-peace",
+  "currentRentPage": {
+    "url": "https://propertyhub.in.th/en/condo-for-rent/project-the-peace",
+    "result": "No matched properties for Rent",
+    "checkedAt": "2026-10-20"
+  },
+  "candidateListingUrlOutcome": "The old listing URL canonicalizes to the empty project rental page; not counted as a current listing.",
+  "saleAvailability": {
+    "count": 0,
+    "sourceUrl": "https://propertyhub.in.th/en/condo-for-sale/project-the-peace",
+    "checkedAt": "2026-10-20"
+  },
+  "yieldStatus": "not_calculated_no_current_sale_or_rent_listing"
+}

@@ -259,15 +259,10 @@
       }
     });
     const roomOptions = Object.entries(saleRooms).filter(([, row]) => Number(row.minimum || row.average) > 0);
-    // Prefer the lowest two-bedroom sale whenever one is available. If the
-    // project has no two-bedroom sale, use the lowest bedroom count with both
-    // sale and rent data rather than mixing different room types.
-    const comparableRoomOptions = Object.keys(saleRooms)
-      .filter(key => Number(saleRooms[key]?.minimum || saleRooms[key]?.average) > 0
-        && Number(rentRooms[key]?.minimumSqm || rentRooms[key]?.averageSqm || 0) > 0)
-      .sort((a, b) => Number(a) - Number(b));
-    const defaultRoom = saleRooms['2'] && Number(saleRooms['2']?.minimum || saleRooms['2']?.average) > 0
-      ? '2' : comparableRoomOptions[0] || null;
+    // Default to the lowest verified two-bedroom sale. If no two-bedroom
+    // sale exists, leave the baseline unavailable instead of substituting a
+    // different room type; users may still explicitly select another type.
+    const defaultRoom = saleRooms['2'] && Number(saleRooms['2']?.minimum) > 0 ? '2' : null;
     // An explicit room choice must never silently fall back to another room type.
     const chosenBeds = beds ? (saleRooms[String(beds)] ? String(beds) : null) : defaultRoom;
     if ((beds && !chosenBeds) || (!beds && !chosenBeds)) return { price: 0, area: 0, rent: 0, beds: String(beds || '2'), isRoomStart: false, isRoomAverage: false, saleSourceUrl: null, rentSourceUrl: null, roomOptions };
@@ -316,9 +311,6 @@
     const roomRent = chosenBeds ? rentRooms[chosenBeds] : null;
     const roomRentUrl = roomRent?.minimumSqmSourceUrl || roomRent?.sourceUrl;
     const roomRentRate = roomRent && yieldSourceIsCurrent(rentSamples, roomRentUrl) ? Number(roomRent.minimumSqm || (roomRent.minimum && roomRent.area ? roomRent.minimum / roomRent.area : 0) || roomRent.averageSqm || 0) : 0;
-    const rentFallbackBed = chosenBeds && !(roomRentRate > 0)
-      ? Object.entries(rentRooms).filter(([, row]) => Number(row.minimumSqm || row.averageSqm || 0) > 0).sort((a, b) => Number(a[1].minimumSqm || a[1].averageSqm || 0) - Number(b[1].minimumSqm || b[1].averageSqm || 0))[0]?.[0] || null
-      : null;
     // Use the room-type low rent rate per sqm with the area of the lowest-
     // priced sale listing. Fall back to the room average only when no low rate exists.
     // A bedroom-specific yield must use a rent rate for the same bedroom count.
@@ -332,7 +324,7 @@
       isRoomStart: Boolean(selectedRoomMinimum), isRoomAverage: Boolean(!selectedRoomMinimum && roomAveragePrice),
       saleSourceUrl: roomSample?.url || (!room ? c.sale?.minimumSourceUrl : null),
       rentSourceUrl: roomRent?.minimumSqmSourceUrl || roomRent?.sourceUrl || c.rent?.minimumSqmSourceUrl || c.rent?.minimumSourceUrl,
-      rentFallback: Boolean(rentFallbackBed), rentFallbackBeds: rentFallbackBed,
+      rentFallback: false, rentFallbackBeds: null,
       roomOptions,
     };
   };
@@ -369,7 +361,7 @@
   // do not match an old generated baseline remain intact.
   // Recompute saved generated baselines after refreshing the two-bedroom
   // lowest-price unit and its paired floor area, while preserving edits.
-  const yieldStorageKey = 'bangkokCondoYieldInputsV208';
+  const yieldStorageKey = 'bangkokCondoYieldInputsV209';
   const loadYieldInputs = () => {
     try {
       const current = localStorage.getItem(yieldStorageKey);
