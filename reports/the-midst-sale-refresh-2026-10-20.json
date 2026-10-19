@@ -13,7 +13,7 @@
     "url": "https://www.livinginsider.com/detail/condo-for-sale-ladprao-central-ladprao-1bedroom-3057798",
     "sourceName": "LivingInsider",
     "projectName": "The Midst Condo Ratchada-Lat Phrao",
-    "updated": "2026-10-20",
+    "updated": "2026-10-13",
     "listingStatus": "availability_unconfirmed_update_under_30d",
     "matchedBy": "direct_listing_title_and_description_name_The_Midst_Condo_Ratchada_Lat_Phrao_and_Chan_Kasem; listing_page_project_field_is_unspecified",
     "note": "Listing created 2026-04-29 and was bumped about one week before the 2026-10-20 check. Price and 22 sqm area are explicit; project name appears in title/description, but listing page's project field is unspecified. Treat as a current candidate with availability and project match to confirm."
@@ -25,6 +25,18 @@
     "bedrooms": 1,
     "url": "https://www.fazwaz.com/property-rent/1-bedroom-condo-for-rent-at-the-midst-condo-in-chantharakasem-bangkok-u6729242",
     "status": "availability_unconfirmed_update_under_30d"
+  },
+  "provisionalYield": {
+    "bedrooms": 1,
+    "purchasePriceTHB": 2826240,
+    "purchaseAreaSqm": 22,
+    "rentListingMonthlyTHB": 10000,
+    "rentListingAreaSqm": 28.8,
+    "estimatedMonthlyRentAtPurchaseAreaTHB": 7639,
+    "deductOneAgentMonth": true,
+    "commonFeeDeducted": false,
+    "netAnnualYieldPercentBeforeCommonFee": 2.97,
+    "status": "candidate_only; project match and current sale availability need confirmation"
   },
   "treatment": "One-bedroom cross-platform candidate only; no two-bedroom sale evidence. Crosswalk uncertainty and availability remain visible. Existing two-bedroom ROI must not be inferred."
 }

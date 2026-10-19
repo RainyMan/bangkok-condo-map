@@ -47,7 +47,7 @@ sale_sample = {
     "url": SALE_URL,
     "sourceName": "LivingInsider",
     "projectName": "The Midst Condo Ratchada-Lat Phrao",
-    "updated": AS_OF,
+    "updated": "2026-10-13",
     "listingStatus": "availability_unconfirmed_update_under_30d",
     "matchedBy": "direct_listing_title_and_description_name_The_Midst_Condo_Ratchada_Lat_Phrao_and_Chan_Kasem; listing_page_project_field_is_unspecified",
     "note": "Listing created 2026-04-29 and was bumped about one week before the 2026-10-20 check. Price and 22 sqm area are explicit; project name appears in title/description, but listing page's project field is unspecified. Treat as a current candidate with availability and project match to confirm.",
@@ -62,9 +62,9 @@ sale.update({
     "countKind": "manual_verified_listing",
     "minimum": 2_826_240,
     "minimumArea": 22,
-    "minimumSampleUpdated": AS_OF,
+    "minimumSampleUpdated": "2026-10-13",
     "minimumSqm": 128_465,
-    "minimumSqmSampleUpdated": AS_OF,
+    "minimumSqmSampleUpdated": "2026-10-13",
     "average": 2_826_240,
     "averageSqm": 128_465,
     "asOf": AS_OF,
@@ -110,7 +110,7 @@ availability.extend([
 ])
 cross["availabilitySources"] = availability
 cross["yieldStatus"] = "one_bedroom_candidate_yield_unconfirmed"
-cross["yieldNote"] = "沒有可核實兩房出售樣本。若接受這筆一房候選售盤及目前 1 房租盤，試算只能標示一房估算；售盤專案欄未指定且現況待確認，暫不把候選值當作確定市場投報。"
+cross["yieldNote"] = "僅能作一房候選估算：購入 ฿2,826,240、22㎡；同房型租金฿10,000/28.8㎡折算至22㎡約฿7,639/月。扣一個月仲介費後約2.97%/年，未扣管理費（費率未核實）。售盤專案欄未指定且在架狀態待確認；沒有可核實兩房出售樣本，不得標示為兩房投報。"
 write_array(DIST / "bangkok-market-crosschecks.js", cross_prefix, cross_rows, cross_suffix)
 
 report = {
@@ -121,6 +121,18 @@ report = {
     "rentSample": {
         "id": "U6729242", "price": 10_000, "area": 28.8, "bedrooms": 1,
         "url": RENT_URL, "status": "availability_unconfirmed_update_under_30d",
+    },
+    "provisionalYield": {
+        "bedrooms": 1,
+        "purchasePriceTHB": 2_826_240,
+        "purchaseAreaSqm": 22,
+        "rentListingMonthlyTHB": 10_000,
+        "rentListingAreaSqm": 28.8,
+        "estimatedMonthlyRentAtPurchaseAreaTHB": round(10_000 / 28.8 * 22),
+        "deductOneAgentMonth": True,
+        "commonFeeDeducted": False,
+        "netAnnualYieldPercentBeforeCommonFee": round(((10_000 / 28.8 * 22 * 11) / 2_826_240) * 100, 2),
+        "status": "candidate_only; project match and current sale availability need confirmation",
     },
     "treatment": "One-bedroom cross-platform candidate only; no two-bedroom sale evidence. Crosswalk uncertainty and availability remain visible. Existing two-bedroom ROI must not be inferred.",
 }
