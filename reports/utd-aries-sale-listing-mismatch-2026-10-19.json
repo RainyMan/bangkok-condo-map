@@ -1,0 +1,48 @@
+{
+  "hipflatId": 3047,
+  "project": "UTD Aries Hotel & residence",
+  "checkedAt": "2026-10-19",
+  "projectLocation": {
+    "hipflatUrl": "https://www.hipflat.co.th/en/projects/utd-aries-hotel-residence-yfpfkb",
+    "location": "UTD Aries Soi On Nut 17 Yaek 16, Suan Luang, Bangkok 10250"
+  },
+  "saleAvailability": {
+    "hipflat": {
+      "url": "https://www.hipflat.co.th/en/projects/utd-aries-hotel-residence-yfpfkb",
+      "displayedRentUnits": 7,
+      "displayedSaleUnits": 0
+    },
+    "propertyHubProject": {
+      "url": "https://propertyhub.in.th/projects/utd-aries-hotel-residence",
+      "displayedSaleUnits": 1
+    },
+    "propertyHubLinkedListing": {
+      "url": "https://propertyhub.in.th/en/listings/for-sale-condo-1-bedroom-at-la-green-hotel-residence---5893289",
+      "listingId": "5893289",
+      "shownPriceTHB": 5500000,
+      "shownAreaSqm": 30,
+      "mismatch": "The direct listing body says the property location is Bang Tao, Phuket, despite its project association showing UTD Aries Hotel & residence, Suan Luang, Bangkok.",
+      "decision": "Exclude from Bangkok project sale samples and ROI."
+    },
+    "decision": "No current sale sample verified for this Bangkok project."
+  },
+  "rent": {
+    "url": "https://www.hipflat.co.th/ads/874a40428anc71194c73nua13u0h14a2",
+    "priceTHBPerMonth": 6500,
+    "areaSqm": 20,
+    "roomType": "Studio",
+    "priceTHBPerSqmPerMonth": 325,
+    "updatedAt": "2026-10-17",
+    "status": "Retain the existing direct Hipflat sample; it matches the exact project page."
+  },
+  "yield": {
+    "calculated": false,
+    "reason": "No project-matched current sale listing is available for the purchase-price baseline."
+  },
+  "sources": [
+    "https://www.hipflat.co.th/en/projects/utd-aries-hotel-residence-yfpfkb",
+    "https://propertyhub.in.th/projects/utd-aries-hotel-residence",
+    "https://propertyhub.in.th/en/listings/for-sale-condo-1-bedroom-at-la-green-hotel-residence---5893289",
+    "https://www.hipflat.co.th/ads/874a40428anc71194c73nua13u0h14a2"
+  ]
+}
