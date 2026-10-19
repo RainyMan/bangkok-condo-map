@@ -1,0 +1,70 @@
+{
+  "hipflatId": 4019,
+  "project": "Sirin Residence Pattanakarn",
+  "checkedAt": "2026-10-20",
+  "identity": {
+    "hipflatProjectUrl": "https://www.hipflat.co.th/en/projects/sirin-residence-pattanakarn-fgphiu",
+    "propertyHubProjectUrl": "https://propertyhub.in.th/en/projects/sirin-residence-pattanakarn",
+    "propertyHubProjectName": "Sirin Residence Pattanakarn",
+    "propertyHubAddress": "Suan Luang, Bangkok",
+    "floors": 8,
+    "units": 77
+  },
+  "excludedMismatchedListing": {
+    "url": "https://propertyhub.in.th/en/listings/great-value-condo-for-sale-at-sirin-residence-phahonyothin-area-near-bts-sai-yud---6308923",
+    "listedProjectLabel": "Sirin Residence Pattanakarn",
+    "detailsAddress": "Phahonyothin Road, Anusawari, Bang Khen, Bangkok",
+    "reason": "Bang Khen / Sai Yud location conflicts with the exact Pattanakarn project location in Suan Luang."
+  },
+  "saleSamples": [
+    {
+      "id": "6130985",
+      "price": 1890000,
+      "area": 29,
+      "priceSqm": 65172,
+      "beds": 0,
+      "roomType": "Studio",
+      "title": "Sirin Residence Pattanakarn studio · 29 sqm · THB 1,890,000",
+      "url": "https://asset-direct-v2.propertyhub.in.th/en/listings/for-sale-sirin-residence-pattanakan-near-hua-mak-station---6130985",
+      "sourceName": "PropertyHub",
+      "projectName": "Sirin Residence Pattanakarn",
+      "updated": "2026-09-28",
+      "checkedAt": "2026-10-20",
+      "matchedBy": "exact PropertyHub project page; Pattanakarn/Hua Mak listing",
+      "listingStatus": "availability_unconfirmed_update_under_30d"
+    },
+    {
+      "id": "2173652",
+      "price": 1900000,
+      "area": 37,
+      "priceSqm": 51351,
+      "beds": 1,
+      "roomType": "1 Bedroom",
+      "title": "Sirin Residence Pattanakarn 1 bedroom · 37 sqm · THB 1,900,000",
+      "url": "https://propertyscout.co.th/%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-1-%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B8%AD%E0%B8%99-%E0%B8%97%E0%B8%B5%E0%B9%88-%E0%B8%A8%E0%B8%B4%E0%B8%A3%E0%B8%B4%E0%B8%99-%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B8%9E%E0%B8%B1%E0%B8%92%E0%B8%99%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A3-%E0%B9%83%E0%B8%81%E0%B8%A5%E0%B9%89-arl-%E0%B8%A3%E0%B8%B2%E0%B8%A1%E0%B8%84%E0%B8%B3%E0%B9%81%E0%B8%AB%E0%B8%87-2173652/",
+      "sourceName": "PropertyScout",
+      "projectName": "Sirin Residence Pattanakarn",
+      "updated": "2026-10-18",
+      "checkedAt": "2026-10-20",
+      "matchedBy": "exact project name and Suan Luang address; availability checked 2 days before observation",
+      "listingStatus": "active_as_listed"
+    }
+  ],
+  "rent": {
+    "status": "no_confirmed_current_unit_sample",
+    "projectPage": "https://propertyhub.in.th/en/condo-for-rent/project-sirin-residence-pattanakarn",
+    "note": "The latest available PropertyHub project snapshot shows 0 rental listings; snapshot age is not stated, so rent and ROI remain unavailable until a current unit listing is verified."
+  },
+  "yield": {
+    "status": "not_calculable",
+    "reason": "未核實到有可用租金與同房型對應的當前出租物件；不以歷史或異專案租盤代算。"
+  },
+  "sources": {
+    "propertyHubProject": "https://propertyhub.in.th/en/projects/sirin-residence-pattanakarn",
+    "propertyHubSale": "https://propertyhub.in.th/en/condo-for-sale/project-sirin-residence-pattanakarn",
+    "propertyHubRent": "https://propertyhub.in.th/en/condo-for-rent/project-sirin-residence-pattanakarn",
+    "lowestTotalSale": "https://asset-direct-v2.propertyhub.in.th/en/listings/for-sale-sirin-residence-pattanakan-near-hua-mak-station---6130985",
+    "lowestOneBedroomRate": "https://propertyscout.co.th/%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-1-%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B8%AD%E0%B8%99-%E0%B8%97%E0%B8%B5%E0%B9%88-%E0%B8%A8%E0%B8%B4%E0%B8%A3%E0%B8%B4%E0%B8%99-%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B8%9E%E0%B8%B1%E0%B8%92%E0%B8%99%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A3-%E0%B9%83%E0%B8%81%E0%B8%A5%E0%B9%89-arl-%E0%B8%A3%E0%B8%B2%E0%B8%A1%E0%B8%84%E0%B8%B3%E0%B9%81%E0%B8%AB%E0%B8%87-2173652/",
+    "excludedMismatchedSale": "https://propertyhub.in.th/en/listings/great-value-condo-for-sale-at-sirin-residence-phahonyothin-area-near-bts-sai-yud---6308923"
+  }
+}
