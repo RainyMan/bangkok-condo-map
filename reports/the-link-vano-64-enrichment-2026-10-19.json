@@ -1,0 +1,111 @@
+{
+  "hipflatId": 4271,
+  "name": "The Link Vano 64",
+  "asOf": "2026-10-19",
+  "identityAndLocation": {
+    "hipflatProjectUrl": "https://www.hipflat.co.th/en/projects/the-link-vano-64-yobsua",
+    "propertyHubProjectUrl": "https://propertyhub.in.th/en/projects/the-link-vano-sukhumvit-64",
+    "propertyHubProjectId": "1743",
+    "coordinates": {
+      "lat": 13.68695128906525,
+      "lng": 100.6063688211051
+    },
+    "coordinateMatch": "PropertyHub project page name, district and project address match the Hipflat project; embedded project coordinates"
+  },
+  "saleSamples": [
+    {
+      "id": "60169385",
+      "price": 2290000,
+      "area": 36,
+      "priceSqm": 63611,
+      "beds": 1,
+      "roomType": "1BR",
+      "url": "https://www.ddproperty.com/en/property/the-link-vano-64-bangkok-for-sale-60169385",
+      "title": "The Link Vano 64，1 房，36 ㎡，฿2,290,000",
+      "sourceName": "DDproperty",
+      "projectName": "The Link Vano 64",
+      "checkedAt": "2026-10-19",
+      "updated": "2026-09-23",
+      "matchedBy": "exact_project_name_and_listing_address",
+      "listingStatus": "active_as_listed"
+    },
+    {
+      "id": "500547096",
+      "price": 4500000,
+      "area": 60,
+      "priceSqm": 75000,
+      "beds": 2,
+      "roomType": "2BR",
+      "url": "https://www.ddproperty.com/en/property/the-link-vano-64-bangkok-for-sale-500547096",
+      "title": "The Link Vano 64，2 房，60 ㎡，฿4,500,000",
+      "sourceName": "DDproperty",
+      "projectName": "The Link Vano 64",
+      "checkedAt": "2026-10-19",
+      "updated": "2026-10-05",
+      "listedAt": "2026-09-11",
+      "matchedBy": "exact_project_name_and_listing_address_reposted_on_project_results",
+      "listingStatus": "active_as_listed"
+    }
+  ],
+  "rentSamples": [
+    {
+      "id": "500590032",
+      "price": 12000,
+      "area": 36,
+      "priceSqm": 333,
+      "beds": 1,
+      "roomType": "1BR",
+      "url": "https://www.ddproperty.com/en/property/the-link-vano-64-bangkok-for-rent-500590032",
+      "title": "The Link Vano 64，1 房，36 ㎡，฿12,000／月",
+      "sourceName": "DDproperty",
+      "projectName": "The Link Vano 64",
+      "checkedAt": "2026-10-19",
+      "updated": "2026-09-25",
+      "matchedBy": "exact_project_name_and_listing_address",
+      "listingStatus": "active_as_listed"
+    },
+    {
+      "id": "FX-001957",
+      "price": 25000,
+      "area": 61,
+      "priceSqm": 410,
+      "beds": 2,
+      "roomType": "2BR",
+      "url": "https://www.livinginsider.com/en/detail/condo-for-rent-condo-the-link-vano-sukhumvit-64-2bedroom-3236554",
+      "title": "The Link Vano Sukhumvit 64，2 房，61 ㎡，฿25,000／月",
+      "sourceName": "Livinginsider",
+      "projectName": "The Link Vano 64",
+      "checkedAt": "2026-10-19",
+      "updated": "2026-09-25",
+      "listedAt": "2026-09-19",
+      "availableFrom": "2026-09-29",
+      "matchedBy": "exact_project_name_and_listing_detail",
+      "listingStatus": "active_as_listed"
+    }
+  ],
+  "fee": {
+    "rate": 40,
+    "note": "DDproperty 專案資料公布的公共管理費；實際現行費率請向管委會確認。",
+    "source": "https://www.ddproperty.com/en/property/the-link-vano-64-bangkok-for-sale-500547096",
+    "status": "published_indicative"
+  },
+  "yieldScenario": {
+    "beds": 2,
+    "purchasePriceTHB": 4500000,
+    "purchaseAreaSqm": 60,
+    "saleSourceUrl": "https://www.ddproperty.com/en/property/the-link-vano-64-bangkok-for-sale-500547096",
+    "rentRateTHBPerSqmPerMonth": 409.84,
+    "estimatedMonthlyRentTHB": 24590,
+    "rentSourceUrl": "https://www.livinginsider.com/en/detail/condo-for-rent-condo-the-link-vano-sukhumvit-64-2bedroom-3236554",
+    "deductOneAgentMonth": true,
+    "annualCommonFeeTHB": 28800,
+    "deductCommonFee": true,
+    "netAnnualYieldPercent": 5.37,
+    "formula": "((round(25000 / 61 * 60) * 11 - 40 * 60 * 12) / 4500000) * 100"
+  },
+  "completionYearConflict": {
+    "propertyHubProjectPage": 2014,
+    "ddPropertyProjectSummaryAndListingMetadata": 2016,
+    "status": "unresolved; completion year not changed automatically"
+  }
+}
