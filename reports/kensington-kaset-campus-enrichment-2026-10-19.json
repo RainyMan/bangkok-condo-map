@@ -1,0 +1,77 @@
+{
+  "hipflatIds": [
+    4527,
+    5610
+  ],
+  "name": "Kensington Kaset Campus",
+  "asOf": "2026-10-19",
+  "duplicateProjectRecords": "Both Hipflat IDs resolve to the same named project and PropertyScout coordinate/source; identical direct listing samples are attached to both records.",
+  "hipflatProjectUrls": [
+    "https://www.hipflat.co.th/en/projects/kensington-kaset-campus-lrpmsz",
+    "https://www.hipflat.co.th/en/projects/kensington-kaset-campus-u4t4l0en13ne0l1h2elt1han4lell1ha"
+  ],
+  "propertyhubProjectUrl": "https://propertyhub.in.th/en/projects/kensington-kaset-campus",
+  "coordinates": {
+    "lat": 13.857099,
+    "lng": 100.576844,
+    "source": "https://propertyscout.co.th/en/bangkok/condo/kensington-kaset-campus/"
+  },
+  "completedYear": 2018,
+  "feeTHBPerSqmPerMonth": 40,
+  "saleSamples": [
+    {
+      "id": "CX-135284",
+      "price": 3790000,
+      "area": 42.02,
+      "priceSqm": 90195,
+      "beds": 2,
+      "roomType": "2BR",
+      "url": "https://propertyhub.in.th/en/listings/for-sale-condo-kensington-kaset-campus-bts-bang-bua-lat-yao-chatuchak-bangkok-cx-135284-live-chat-with-us-add-line-connexproperty--b9b209b6",
+      "title": "Kensington Kaset Campus，2 房 2 衛，42.02 ㎡，฿3,790,000",
+      "sourceName": "PropertyHub",
+      "projectName": "Kensington Kaset Campus",
+      "checkedAt": "2026-10-19",
+      "updated": "2026-10-17",
+      "matchedBy": "exact_project_listing_name_room_type_and_price_on_project_page",
+      "listingStatus": "active_as_listed"
+    }
+  ],
+  "rentSamples": [
+    {
+      "id": "6237061",
+      "price": 18000,
+      "area": 42,
+      "priceSqm": 429,
+      "beds": 2,
+      "roomType": "2BR",
+      "url": "https://propertyhub.in.th/en/listings/2-br-condo-for-rent-kensington-kaset-campus-lat-yao-id-2899532---6237061",
+      "title": "Kensington Kaset Campus，2 房 2 衛，42 ㎡，฿18,000／月",
+      "sourceName": "PropertyHub",
+      "projectName": "Kensington Kaset Campus",
+      "checkedAt": "2026-10-19",
+      "updated": "2026-10-02",
+      "matchedBy": "exact_project_listing_name_room_type_and_area_on_project_page",
+      "listingStatus": "active_as_listed"
+    }
+  ],
+  "excludedLowerMislabelledSale": {
+    "priceTHB": 2690000,
+    "areaSqm": 32,
+    "reason": "The project-page record labelled 2 bedrooms has direct-detail text describing one bedroom; excluded from verified two-bedroom minimum.",
+    "source": "https://propertyhub.in.th/en/listings/condo-for-sell-kensington-kaset-campus-tel-0999983897---4327105"
+  },
+  "yieldScenario": {
+    "beds": 2,
+    "purchasePriceTHB": 3790000,
+    "purchaseAreaSqm": 42.02,
+    "saleSourceUrl": "https://propertyhub.in.th/en/listings/for-sale-condo-kensington-kaset-campus-bts-bang-bua-lat-yao-chatuchak-bangkok-cx-135284-live-chat-with-us-add-line-connexproperty--b9b209b6",
+    "rentRateTHBPerSqmPerMonth": 428.57,
+    "estimatedMonthlyRentTHB": 18009,
+    "rentSourceUrl": "https://propertyhub.in.th/en/listings/2-br-condo-for-rent-kensington-kaset-campus-lat-yao-id-2899532---6237061",
+    "deductOneAgentMonth": true,
+    "deductCommonFee": true,
+    "annualCommonFeeTHB": 20170,
+    "netAnnualYieldPercent": 4.69,
+    "formula": "((round((18000 / 42) * 42.02) * 11 - 40 * 42.02 * 12) / 3790000) * 100"
+  }
+}
