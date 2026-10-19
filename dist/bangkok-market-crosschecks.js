@@ -4460,5 +4460,65 @@ window.BANGKOK_MARKET_CROSSCHECKS =[
     ],
     "yieldStatus": "not_calculated_no_verified_sale_listing",
     "yieldNote": "已核實兩筆個別出租物件，但目前沒有可核實的出售掛牌，因此不估算投報率。"
+  },
+  {
+    "hipflatId": 3413,
+    "projectName": "L8 Residence",
+    "asOf": "2026-10-20",
+    "sourceName": "DDproperty + Hipflat",
+    "projectSourceUrl": "https://www.hipflat.co.th/en/projects/l8-residence-xxvfpy",
+    "sale": {
+      "activeListingCount": 0,
+      "displayedResultCount": 0,
+      "observedCount": 0,
+      "sourceUrl": "https://www.ddproperty.com/en/condo-for-sale/at-l8-residence-6838",
+      "note": "DDproperty 專案出售頁於核對時沒有掛牌；Hipflat 專案頁目前亦未顯示出售單位。沒有可核實的購入價基準，不計投報率。",
+      "listings": []
+    },
+    "rent": {
+      "activeListingCount": 1,
+      "displayedResultCount": 1,
+      "observedCount": 1,
+      "sourceUrl": "https://www.ddproperty.com/en/condo-for-rent/at-l8-residence-6838",
+      "note": "DDproperty 單筆頁於 2026-10-16 刊登 3 房、175㎡、฿75,000/月。專案頁將 L8 Residence 分類為 apartment and condo；單筆分類為 Apartment，房型與價格列為同專案租屋樣本並保留分類差異。可租狀態待刊登者確認。",
+      "listings": [
+        {
+          "listingId": "500653943",
+          "price": 75000,
+          "area": 175,
+          "priceSqm": 428.57142857142856,
+          "bedrooms": 3,
+          "listedAt": "2026-10-16",
+          "url": "https://www.ddproperty.com/en/property/l8-residence-bangkok-for-rent-500653943",
+          "sourceName": "DDproperty",
+          "propertyType": "apartment",
+          "statusLabel": "10/16 刊登；Apartment 分類；現況待刊登者確認"
+        }
+      ]
+    },
+    "availabilitySources": [
+      {
+        "sourceName": "Google Maps 點位（Lazudi 專案頁嵌入地圖）",
+        "url": "https://www.google.com/maps/search/?api=1&query=13.747004%2C100.549181",
+        "statusLabel": "座標 13.747004, 100.549181；Lazudi 專案地址與地圖定位於 Pathum Wan。"
+      },
+      {
+        "sourceName": "Lazudi L8 Residence 專案頁",
+        "url": "https://lazudi.com/th-en/bangkok/project/l8-residence-1377",
+        "statusLabel": "地址 23/1 Thanon Witthayu, Lumphini, Pathum Wan, Bangkok 10330；頁面 Google Maps 嵌入點位與本案座標相符。"
+      },
+      {
+        "sourceName": "DDproperty 出租單筆",
+        "url": "https://www.ddproperty.com/en/property/l8-residence-bangkok-for-rent-500653943",
+        "statusLabel": "3 房，175㎡，฿75,000/月；2026-10-16 刊登，單筆分類 Apartment。"
+      },
+      {
+        "sourceName": "DDproperty 出售專案頁",
+        "url": "https://www.ddproperty.com/en/condo-for-sale/at-l8-residence-6838",
+        "statusLabel": "目前沒有出售掛牌，因此不計投報率。"
+      }
+    ],
+    "yieldStatus": "not_calculated_no_current_sale_listing",
+    "yieldNote": "目前無可核實出售掛牌；雖已找到 3 房直連出租樣本，仍缺購入價基準，不計投報率。出租來源將房源分類為 Apartment，L8 Residence 專案來源則列為 apartment and condo。"
   }
 ];

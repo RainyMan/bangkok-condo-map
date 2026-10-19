@@ -1,0 +1,46 @@
+{
+  "hipflatId": 3413,
+  "projectName": "L8 Residence",
+  "checkedAt": "2026-10-20",
+  "coordinates": {
+    "verified": true,
+    "lat": 13.747004,
+    "lng": 100.549181,
+    "canonicalAddress": "7 Soi Nai Lert, Witthayu Road, Lumphini, Pathum Wan, Bangkok 10330, THA",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=13.747004%2C100.549181",
+    "verificationSourceUrl": "https://lazudi.com/th-en/bangkok/project/l8-residence-1377"
+  },
+  "rentSample": {
+    "id": "500653943",
+    "price": 75000,
+    "area": 175,
+    "priceSqm": 429,
+    "beds": 3,
+    "roomType": "3BR",
+    "title": "L8 Residence，3 房，175 ㎡，฿75,000/月（來源分類：Apartment）",
+    "url": "https://www.ddproperty.com/en/property/l8-residence-bangkok-for-rent-500653943",
+    "sourceName": "DDproperty",
+    "projectName": "L8 Residence",
+    "updated": "2026-10-16",
+    "checkedAt": "2026-10-20",
+    "matchedBy": "exact_project_name_and_canonical_address",
+    "listingStatus": "availability_unconfirmed_update_under_30d",
+    "propertyType": "apartment",
+    "verificationNote": "DDproperty 單筆頁於 2026-10-16 刊登，列 ฿75,000/月、3 房、175㎡；地址為 7 Soi Nai Lert, Wireless Road, Lumphini, Pathum Wan。來源將單位分類為 Apartment；Hipflat 專案頁亦將 L8 Residence 列為 apartment and condo，故作為同專案出租樣本保留，類別差異需留意。可租狀態仍待刊登者確認。"
+  },
+  "saleStatus": "No current sale results on checked DDproperty project page or Hipflat project page.",
+  "yieldStatus": "Not calculated: no current sale listing.",
+  "sources": [
+    "https://www.hipflat.co.th/en/projects/l8-residence-xxvfpy",
+    "https://lazudi.com/th-en/bangkok/project/l8-residence-1377",
+    "https://www.ddproperty.com/en/condo-for-rent/at-l8-residence-6838",
+    "https://www.ddproperty.com/en/property/l8-residence-bangkok-for-rent-500653943",
+    "https://www.ddproperty.com/en/condo-for-sale/at-l8-residence-6838"
+  ],
+  "notes": [
+    "Lazudi project page's Google Maps embed resolves to 13.747004,100.549181; DDproperty independently places the exact project at 7 Soi Nai Lert, Wireless Road, Lumphini, Pathum Wan.",
+    "Hipflat's 1673 Witthayu Rd, Makkasan, Ratchathewi, 10400 address variant conflicts with the project-page address corroborated by Lazudi and DDproperty; the map now uses the latter.",
+    "DDproperty direct rental listing 500653943 was listed 2026-10-16: 3 bedrooms, 175 sqm, ฿75,000/month (฿428.57/sqm/month). The listing is classified as Apartment; the project is described by Hipflat as apartment and condo.",
+    "No current sale listing was found, so no yield is calculated."
+  ]
+}
