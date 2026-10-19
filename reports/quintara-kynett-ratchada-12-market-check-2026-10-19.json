@@ -1,0 +1,61 @@
+{
+  "hipflatId": 3382,
+  "project": "Quintara Kynett Ratchada 12",
+  "checkedAt": "2026-10-19",
+  "coordinate": {
+    "lat": 13.774717,
+    "lng": 100.574669,
+    "source": "https://thinkofliving.com/%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/project/quintara-kynett-%E0%B8%A3%E0%B8%B1%E0%B8%8A%E0%B8%94%E0%B8%B2-12-599491/",
+    "corroboration": "https://www.homenayoo.com/quintara-kynett-ratchada-12/",
+    "status": "verified"
+  },
+  "completionYear": {
+    "selected": 2021,
+    "source": "https://www.ddproperty.com/en/project/7445-quintara-kynett-ratchada-12",
+    "conflict": {
+      "year": 2024,
+      "source": "https://propertyscout.co.th/en/1-br-condo-quintara-kynett-ratchada-12-near-mrt-huai-khwang-2236641/"
+    }
+  },
+  "managementFee": {
+    "bahtPerSqmPerMonth": 55,
+    "source": "https://www.idealproperty.com.sg/quintara-kynett-ratchada-12/",
+    "status": "historical_indicative"
+  },
+  "sale": {
+    "status": "no_verified_individual_listing",
+    "excluded": {
+      "price": 4100000,
+      "areaSqm": 50,
+      "source": "https://www.ddproperty.com/en/property/quintara-kynett-ratchada-12-bangkok-for-sale-500523860",
+      "reason": "The individual listing description identifies Cool House Ratchada 12, not Quintara Kynett."
+    }
+  },
+  "rent": {
+    "unconfirmedListing": {
+      "price": 14000,
+      "areaSqm": 22,
+      "listedAt": "2026-08-30",
+      "source": "https://www.livinginsider.com/en/detail/condo-for-rent-condo-quintara-kynett-ratchada-12-studio-3207926",
+      "roomTypeConflict": "LivingInsider calls it studio; PropertyScout describes a 1-bedroom unit with the same area and floor.",
+      "status": "availability_unconfirmed_update_over_30d"
+    },
+    "corroboratingPage": "https://propertyscout.co.th/en/1-br-condo-quintara-kynett-ratchada-12-near-mrt-huai-khwang-2236641/"
+  },
+  "roi": {
+    "calculated": false,
+    "reason": "No verified sale baseline; rent availability and room type are unconfirmed."
+  },
+  "sources": [
+    "https://www.hipflat.co.th/projects/quintara-kynett-ratchada-12-xlrzjc",
+    "https://thinkofliving.com/%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/project/quintara-kynett-%E0%B8%A3%E0%B8%B1%E0%B8%8A%E0%B8%94%E0%B8%B2-12-599491/",
+    "https://www.homenayoo.com/quintara-kynett-ratchada-12/",
+    "https://www.ddproperty.com/en/project/7445-quintara-kynett-ratchada-12",
+    "https://www.ddproperty.com/en/property/quintara-kynett-ratchada-12-bangkok-for-sale-500523860",
+    "https://propertyhub.in.th/en/condo-for-sale/project-quintara-kynett-ratchada-12",
+    "https://propertyhub.in.th/en/condo-for-rent/project-quintara-kynett-ratchada-12",
+    "https://www.livinginsider.com/en/detail/condo-for-rent-condo-quintara-kynett-ratchada-12-studio-3207926",
+    "https://propertyscout.co.th/en/1-br-condo-quintara-kynett-ratchada-12-near-mrt-huai-khwang-2236641/",
+    "https://www.idealproperty.com.sg/quintara-kynett-ratchada-12/"
+  ]
+}
