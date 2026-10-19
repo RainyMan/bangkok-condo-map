@@ -369,13 +369,13 @@
   // do not match an old generated baseline remain intact.
   // Recompute saved generated baselines after refreshing the two-bedroom
   // lowest-price unit and its paired floor area, while preserving edits.
-  const yieldStorageKey = 'bangkokCondoYieldInputsV204';
+  const yieldStorageKey = 'bangkokCondoYieldInputsV205';
   const loadYieldInputs = () => {
     try {
       const current = localStorage.getItem(yieldStorageKey);
       if (current) return JSON.parse(current);
       let previous = {};
-      for (let version = 203; version >= 5; version--) {
+      for (let version = 204; version >= 5; version--) {
         const stored = localStorage.getItem(`bangkokCondoYieldInputsV${version}`);
         if (stored) { previous = JSON.parse(stored); break; }
       }
@@ -534,7 +534,7 @@
   function matchesQuery(c) {
     if (!query.trim()) return true;
     const stationName = stationsById.get(c.nearestMrt?.stationId)?.name || c.station || '';
-    const haystack = `${c.name} ${stationName} ${c.completedYear || ''}`.toLowerCase();
+    const haystack = `${c.name} ${c.currentProjectName || ''} ${(c.nameAliases || []).join(' ')} ${stationName} ${c.completedYear || ''}`.toLowerCase();
     const normalizedQuery = query.trim()
       .replace(/(?:年)?投報率\s*(<=|>=|<|>|=|:)?\s*([\d,.]+)\s*[%％]/gi, (_, operator, amount) => `投報率${operator || '>='}${amount.replace(/,/g, '')}`)
       .replace(/(\d+)\s*房\s*[,，·]?\s*([\d,.]+)\s*萬\s*(?:元)?\s*(?:內|以下)/gi, (_, beds, amount) => `${beds}房售價<=${Number(amount.replace(/,/g, '')) * 10000}`)

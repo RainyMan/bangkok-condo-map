@@ -4596,5 +4596,121 @@ window.BANGKOK_MARKET_CROSSCHECKS =[
     ],
     "yieldStatus": "not_calculated_rent_availability_unconfirmed",
     "yieldNote": "有可核對的出售掛牌，但租盤最後刷新於 2026-08-04 且另一平台顯示 0 筆出租；為避免用過期租金冒充現行報酬率，暫不計投報。"
+  },
+  {
+    "hipflatId": 3436,
+    "projectName": "GALERIE rue de 39",
+    "currentProjectName": "Vittorio Sukhumvit 39",
+    "asOf": "2026-10-20",
+    "sourceName": "Hipflat + PropertyHub + CondoNayoo + DDproperty",
+    "projectSourceUrl": "https://www.hipflat.co.th/en/projects/galerie-rue-de-39-xjxfpx",
+    "sale": {
+      "activeListingCount": 71,
+      "displayedResultCount": 71,
+      "observedCount": 3,
+      "sourceUrl": "https://propertyhub.in.th/en/condo-for-sale/project-vittorio-sukhumvit-39",
+      "note": "PropertyHub 專案出售頁列出 71 筆；本批核對 3 筆 2 房個別物件，最低總價฿32,350,000（100㎡）。",
+      "listings": [
+        {
+          "listingId": "5890552",
+          "price": 32350000,
+          "area": 100.0,
+          "priceSqm": 323500.0,
+          "bedrooms": 2,
+          "lastRefreshed": "2026-10-18",
+          "url": "https://propertyhub.in.th/en/listings/2-bedrooms-2-bathrooms-101-sq-m-vittorio--9c4808d7---5890552",
+          "sourceName": "PropertyHub",
+          "statusLabel": "PropertyHub 個別 2 房掛牌；狀態按頁面刷新日標示"
+        },
+        {
+          "listingId": "4718794",
+          "price": 32500000,
+          "area": 102.0,
+          "priceSqm": 318627.45098039217,
+          "bedrooms": 2,
+          "lastRefreshed": "2026-09-30",
+          "url": "https://propertyhub.in.th/en/listings/2-beds-with-bathtub-102-sq-m-ultra-luxury-condo-good-location-bts-phrom-phong-150-m-at-vittorio-condo-for-sale---4718794",
+          "sourceName": "PropertyHub",
+          "statusLabel": "PropertyHub 個別 2 房掛牌；狀態按頁面刷新日標示"
+        },
+        {
+          "listingId": "6394475",
+          "price": 33000000,
+          "area": 102.0,
+          "priceSqm": 323529.4117647059,
+          "bedrooms": 2,
+          "lastRefreshed": "2026-10-17",
+          "url": "https://propertyhub.in.th/en/listings/vittorio-sukhumvit-39-contemporary-2-bed-luxury-condo-br16517cd---6394475",
+          "sourceName": "PropertyHub",
+          "statusLabel": "PropertyHub 個別 2 房掛牌；狀態按頁面刷新日標示"
+        }
+      ]
+    },
+    "rent": {
+      "activeListingCount": 145,
+      "displayedResultCount": 145,
+      "observedCount": 3,
+      "sourceUrl": "https://propertyhub.in.th/en/condo-for-rent/project-vittorio-sukhumvit-39",
+      "note": "PropertyHub 專案出租頁列出 145 筆；本批核對 3 筆 2 房個別物件，最低單價฿846.86/㎡/月（฿120,000、141.67㎡）。",
+      "listings": [
+        {
+          "listingId": "6422794",
+          "price": 120000,
+          "area": 141.67,
+          "priceSqm": 847.038893202513,
+          "bedrooms": 2,
+          "lastRefreshed": "2026-10-19",
+          "url": "https://propertyhub.in.th/en/listings/2-br-condo-at-vittorio-sukhumvit-39-near-bts-phrom-phong-id-3311436---6422794",
+          "sourceName": "PropertyHub",
+          "statusLabel": "PropertyHub 個別 2 房掛牌；狀態按頁面刷新日標示"
+        },
+        {
+          "listingId": "6419027",
+          "price": 120000,
+          "area": 137.0,
+          "priceSqm": 875.9124087591241,
+          "bedrooms": 2,
+          "lastRefreshed": "2026-10-19",
+          "url": "https://propertyhub.in.th/en/listings/100m-to-bts-phrom-phong-2-br-vittorio-sukhumvit-39-id-3311263---6419027",
+          "sourceName": "PropertyHub",
+          "statusLabel": "PropertyHub 個別 2 房掛牌；狀態按頁面刷新日標示"
+        },
+        {
+          "listingId": "3931663",
+          "price": 100000,
+          "area": 110.0,
+          "priceSqm": 909.0909090909091,
+          "bedrooms": 2,
+          "lastRefreshed": "2026-10-16",
+          "url": "https://propertyhub.in.th/en/listings/for-rent-condo-vittorio-sukhumvit-39-bts-phrom-phong-watthana-watthana-bangkok-cx-77902-live-chat-with-us-add-line-connexproperty--a31c0913---3931663",
+          "sourceName": "PropertyHub",
+          "statusLabel": "PropertyHub 個別 2 房掛牌；狀態按頁面刷新日標示"
+        }
+      ]
+    },
+    "availabilitySources": [
+      {
+        "sourceName": "CondoNayoo 專案身分、規模與座標",
+        "url": "https://www.condonayoo.com/vittorio-sukhumvit-39/",
+        "statusLabel": "確認 GALERIE rue de 39 為 Vittorio Sukhumvit 39 舊名；28 層、88 戶、2017 完工，Google Maps 座標 13.730786, 100.570792；管理費฿120/㎡/月。"
+      },
+      {
+        "sourceName": "Google Maps 點位",
+        "url": "https://www.google.com/maps/search/?api=1&query=13.730786%2C100.570792",
+        "statusLabel": "13.730786, 100.570792"
+      },
+      {
+        "sourceName": "DDproperty 舊名專案頁",
+        "url": "https://www.ddproperty.com/en/project/2084-galerie-rue-de-39",
+        "statusLabel": "GALERIE rue de 39 專案、Sukhumvit 39 地址交叉核對。"
+      },
+      {
+        "sourceName": "PropertyHub 售租專案頁",
+        "url": "https://propertyhub.in.th/en/condo-for-sale/project-vittorio-sukhumvit-39",
+        "statusLabel": "現行品牌名 Vittorio Sukhumvit 39；專案頁列售租掛牌。"
+      }
+    ],
+    "yieldStatus": "estimated_from_current_two_bedroom_listing_samples_and_published_common_fee",
+    "yieldNote": "以兩房最低售價฿32,350,000、同一物件面積100㎡，乘兩房最低租金單價฿847.04/㎡/月估租฿84,704/月；扣一個月仲介費及已查證管理費฿120/㎡/月後，估算淨年投報率2.44%。"
   }
 ];
