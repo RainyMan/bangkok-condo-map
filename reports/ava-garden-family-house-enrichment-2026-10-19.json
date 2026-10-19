@@ -1,0 +1,34 @@
+{
+  "hipflatId": 3289,
+  "project": "Ava Garden Family House",
+  "checkedAt": "2026-10-19",
+  "coordinates": {
+    "lat": 13.80122,
+    "lng": 100.604207,
+    "sourceUrl": "https://thinkofliving.com/project/%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/2432/",
+    "crosscheckUrl": "https://www.ddproperty.com/en/project/2432-ava-garden-family-house",
+    "hipflatUrl": "https://www.hipflat.co.th/en/projects/ava-garden-family-house-vhniib"
+  },
+  "projectFacts": {
+    "address": "Soi Nak Niwat 13 (Soi Pengsuk), Lat Phrao 71 Road, Lat Phrao, Bangkok 10230",
+    "completedYear": 2013,
+    "floors": 5,
+    "units": 45,
+    "sourceUrl": "https://www.ddproperty.com/en/project/2432-ava-garden-family-house",
+    "corroboratingSourceUrl": "https://www.hipflat.co.th/en/projects/ava-garden-family-house-vhniib"
+  },
+  "availability": {
+    "saleVerifiedCurrentListings": 0,
+    "rentVerifiedCurrentListings": 0,
+    "statusSourceUrl": "https://www.ddproperty.com/en/reviews/2432-ava-garden-family-house"
+  },
+  "yield": {
+    "calculated": false,
+    "reason": "沒有本案可核實的現行單筆出售與出租樣本，不能可靠計算投報率。"
+  },
+  "exclusions": [
+    "Home.co.th historical new-project starting price is not a resale listing.",
+    "PropertyHub Avacas Garden Family House is a different project in Min Buri."
+  ],
+  "locationConflict": "Hipflat page header/address summary includes Wang Thonglang / Huai Khwang while its project narrative names Soi Nak Niwat 13, Lat Phrao; DDproperty and ThinkOfLiving agree on the Lat Phrao project and location."
+}
