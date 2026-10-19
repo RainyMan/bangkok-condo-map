@@ -1,0 +1,24 @@
+{
+  "hipflatId": 3498,
+  "coordinates": [
+    13.8042,
+    100.5781
+  ],
+  "coordinateSource": "https://www.tooktee.com/en/project/2359/murraya-place-ladprao-27",
+  "saleSource": "https://propertyhub.in.th/listings/%E0%B8%82%E0%B8%B2%E0%B8%A2-%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B9%80%E0%B8%A1%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A3%E0%B8%B2%E0%B8%8D%E0%B8%B2-%E0%B9%80%E0%B8%9E%E0%B8%A5%E0%B8%AA-%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%A7-27-murraya-place-ladprao-27-%E0%B9%83%E0%B8%81%E0%B8%A5%E0%B9%89-mrt-%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%A7---6312448",
+  "sale": {
+    "price": 1700000,
+    "areaSqm": 34.18,
+    "beds": 1,
+    "updatedAt": "2026-10-18"
+  },
+  "rentSource": "https://propertyhub.in.th/listings/r8629-050169-%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-murraya%E2%80%8B-place-ladproa27-condo---5689038",
+  "rent": {
+    "pricePerMonth": 19000,
+    "areaSqm": 60,
+    "beds": 2,
+    "updatedAt": "2026-10-17"
+  },
+  "yield": "Not calculated: sale and rent samples are different room types.",
+  "checkedAt": "2026-10-20"
+}
