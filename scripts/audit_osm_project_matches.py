@@ -38,6 +38,28 @@ def address_tokens(value: str) -> set[str]:
     return {part for part in parts if (len(part) > 1 or part.isdigit()) and part not in stop}
 
 
+def localized_address_match(row: dict, project: dict) -> bool:
+    """Allow a transliterated/local-language name only with exact address evidence."""
+    evidence = row.get("matchEvidence") or {}
+    project_text = re.sub(r"\s+", "", str(project.get("sourceDescription", "")))
+    localized_name = re.sub(r"\s+", "", str(evidence.get("projectLocalizedName", "")))
+    osm_localized_name = re.sub(r"\s+", "", str(evidence.get("osmLocalizedName", "")))
+    project_address = address_tokens(str(project.get("address", "")))
+    house_number_match = str(evidence.get("houseNumber", "")) in project_address
+    street_tokens = tokens(str(evidence.get("street", "")))
+    street_match = bool(street_tokens & project_address)
+    postcode_match = str(evidence.get("postcode", "")) in project_address
+    return bool(
+        localized_name
+        and osm_localized_name
+        and localized_name in project_text
+        and localized_name in osm_localized_name
+        and house_number_match
+        and street_match
+        and postcode_match
+    )
+
+
 def main() -> int:
     path = DIST / "bangkok-osm.js"
     projects = {int(row["id"]): row for row in array(DIST / "bangkok-catalogue.js", "BANGKOK_CONDO_CATALOGUE")}
@@ -56,7 +78,9 @@ def main() -> int:
         address_overlap = project_address & object_address
         address_supported = len(address_overlap) >= 2 and len(address_overlap) / max(1, len(project_address)) >= 0.5
         evidenced_score = float(row.get("nameMatchScore", score))
-        if (evidenced_score >= 0.8 and len(overlap) >= 2) or (evidenced_score >= 0.6 and len(overlap) >= 2 and address_supported):
+        if ((evidenced_score >= 0.8 and len(overlap) >= 2)
+                or (evidenced_score >= 0.6 and len(overlap) >= 2 and address_supported)
+                or localized_address_match(row, project or {})):
             scored.append((row, evidenced_score, project_name == object_name))
 
     by_object: dict[tuple[str, int], list[tuple[dict, float, bool]]] = defaultdict(list)

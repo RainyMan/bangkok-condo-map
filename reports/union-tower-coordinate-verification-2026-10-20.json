@@ -1,0 +1,34 @@
+{
+  "projectId": 5983,
+  "project": "Union Tower",
+  "coordinate": {
+    "lat": 13.7445684,
+    "lng": 100.587033725,
+    "method": "arithmetic mean of four OSM way vertex coordinates"
+  },
+  "osm": {
+    "type": "way",
+    "id": 1066039414,
+    "url": "https://www.openstreetmap.org/way/1066039414",
+    "apiUrl": "https://api.openstreetmap.org/api/0.6/way/1066039414/full",
+    "tags": {
+      "name": "Union Tower",
+      "name:en": "Urban Residence",
+      "name:th": "อาคารยูเนี่ยนทาวเวอร์",
+      "addr:housenumber": "2355",
+      "addr:street": "New Petchaburi Rd",
+      "addr:postcode": "10310",
+      "building": "apartments"
+    }
+  },
+  "crossCheck": {
+    "hipflatProjectUrl": "https://www.hipflat.co.th/en/projects/union-tower-ovydus",
+    "sourceDescriptionContains": "ยูเนี่ยน ทาวเวอร์",
+    "addressDescription": "ถนนเพชรบุรี บางกะปิ ห้วยขวาง กรุงเทพมหานคร 10310",
+    "projectNameThaiNormalized": "ยูเนี่ยนทาวเวอร์",
+    "osmThaiNameContainsProjectName": true
+  },
+  "previousCatalogueAddress": "Cafe Amazon, Makkasan, Ratchathewi, Bangkok 10310, THA",
+  "correctedAddress": "2355 New Petchaburi Rd, Bang Kapi, Huai Khwang, Bangkok 10310, Thailand",
+  "verifiedOn": "2026-10-20"
+}

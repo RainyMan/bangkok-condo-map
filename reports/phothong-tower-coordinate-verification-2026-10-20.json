@@ -1,0 +1,12 @@
+{
+  "hipflatId": 3400,
+  "project": "Phothong Tower",
+  "coordinate": {
+    "lat": 13.883552,
+    "lng": 100.584961
+  },
+  "coordinateSource": "https://www.oneday.co.th/th_TH/สิ่งปลูกสร้าง/โพธิ์ทอง-ทาวเวอร์/",
+  "crossCheck": "OneDay page identifies the building as Phothong Tower and embeds buildingMapGeocode at this exact point; address is 208/2 Chaeng Watthana Road, Talat Bang Khen, Lak Si, Bangkok 10210.",
+  "mapPointLink": "https://www.openstreetmap.org/?mlat=13.883552&mlon=100.584961#map=19/13.883552/100.584961",
+  "asOf": "2026-10-20"
+}
