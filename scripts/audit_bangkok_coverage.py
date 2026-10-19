@@ -67,6 +67,9 @@ def has_individual_listing(market: dict) -> bool:
             return True
         if host.endswith("property-hua-hin.com") and re.search(r"/.+-u\d{5,}", path):
             return True
+        # FazWaz individual listing URLs end in a unit ID such as -u1883468.
+        if host.endswith("fazwaz.co.th") and re.search(r"-u\d{5,}/?$", path):
+            return True
         if host.endswith("rentcondobkk.com") and re.search(r"/index\.php/.+/\d+/gc\d{2}-\d{4}(?:/|$)", path):
             return True
         if host.endswith("propertyscout.co.th") and re.search(r"/.+-\d{6,}/?$", path):

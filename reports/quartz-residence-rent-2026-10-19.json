@@ -1,0 +1,35 @@
+{
+  "hipflatId": 3079,
+  "project": "Quartz Residence",
+  "checkedAt": "2026-10-19",
+  "sale": {
+    "status": "no_current_verified_listing",
+    "source": "https://www.ddproperty.com/en/project/12612-quartz-residence",
+    "evidence": "DDproperty project page displays For Sale (0). No current project-specific sale listing found during this check."
+  },
+  "rent": {
+    "status": "direct_sample_added",
+    "sample": {
+      "id": "u1883468",
+      "price": 46000,
+      "area": 82,
+      "priceSqm": 561,
+      "beds": 2,
+      "roomType": "2BR",
+      "title": "Quartz Residence · 2 房 · 82 ㎡ · ฿46,000/月",
+      "url": "https://www.fazwaz.co.th/%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99/%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2-2-%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B8%AD%E0%B8%99-%E0%B8%97%E0%B8%B5%E0%B9%88-quartz-residence-%E0%B9%83%E0%B8%99-%E0%B8%84%E0%B8%A5%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%95%E0%B8%A2-%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A3-u1883468",
+      "sourceName": "FazWaz",
+      "projectName": "Quartz Residence",
+      "updated": "2026-10-18",
+      "checkedAt": "2026-10-19",
+      "matchedBy": "exact_project_page_listing_card_and_direct_unit_url",
+      "listingStatus": "active_as_listed"
+    },
+    "projectSource": "https://www.fazwaz.co.th/%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A3/%E0%B8%84%E0%B8%A5%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%95%E0%B8%A2/%E0%B8%84%E0%B8%A5%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%95%E0%B8%A2/quartz-residence",
+    "evidence": "FazWaz project listing card shows vacant status, 2 bedrooms, 82 sqm, THB 46,000/month, updated one day earlier; direct unit URL is linked from the project page."
+  },
+  "yield": {
+    "status": "not_calculated",
+    "reason": "No current verified sale sample for this project."
+  }
+}
