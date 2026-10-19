@@ -1,0 +1,63 @@
+{
+  "hipflatId": 4315,
+  "project": "Aspen Condo Lasalle",
+  "checkedAt": "2026-10-19",
+  "sale": {
+    "id": "6340897",
+    "price": 1300000,
+    "area": 24.0,
+    "priceSqm": 54167,
+    "beds": 1,
+    "roomType": "1BR",
+    "title": "Aspen Condo Lasalle Phase A，1 房，24 ㎡，฿1,300,000",
+    "url": "https://propertyhub.in.th/en/listings/huge-loss-sale-below-market-priceonly-1-3-million-aspen-lasalle-opposite-sikarin-hospital-sri-lasalle-mrt---6340897",
+    "sourceName": "PropertyHub",
+    "projectName": "Aspen Condo Lasalle",
+    "updated": "2026-10-14",
+    "checkedAt": "2026-10-19",
+    "matchedBy": "PropertyHub_project_feed_names_Aspen_Lasalle_Phase_A_and_direct_listing_names_project_and_gives_1BR_24sqm_price",
+    "listingStatus": "active_as_listed"
+  },
+  "rent": {
+    "id": "6468860",
+    "price": 7500,
+    "area": 24.0,
+    "priceSqm": 313,
+    "beds": 1,
+    "roomType": "1BR",
+    "title": "Aspen Lasalle Phase A，多種面積可選；1 房 24 ㎡，฿7,500/月",
+    "url": "https://propertyhub.in.th/en/listings/%EF%B8%8F-dm-us-on-line-multiple-units-available-aspen-available-sizes-24-27-35-sq-m-bts-bearing-mrt-sri-la-salle--ac9109a8---6468860",
+    "sourceName": "PropertyHub",
+    "projectName": "Aspen Condo Lasalle",
+    "updated": "2026-10-06",
+    "checkedAt": "2026-10-19",
+    "matchedBy": "PropertyHub_A_phase_project_feed_and_direct_multi_unit_listing_match_24sqm_1BR_option_at_7500_month",
+    "listingStatus": "active_as_listed"
+  },
+  "saleProjectPage": {
+    "url": "https://propertyhub.in.th/en/condo-for-sale/project-aspen-lasalle-phase-a",
+    "visibleListings": 26
+  },
+  "rentProjectPage": {
+    "url": "https://propertyhub.in.th/en/condo-for-rent/project-aspen-lasalle-phase-a",
+    "visibleListings": 28
+  },
+  "commonFee": {
+    "thbPerSqmMonth": 35,
+    "sourceUrl": "https://propertyhub.in.th/en/condo-for-rent/project-aspen-lasalle-phase-a"
+  },
+  "yield": {
+    "status": "not_calculated",
+    "reason": "核對到的直接出售／出租樣本都是 1 房；此站點的投報基準要求同房型最低兩房售價與租金，不能混用一房行情。"
+  },
+  "limitations": [
+    "PropertyHub 專案結果卡顯示出售掛牌於 2026-10-14 更新，出租選項於 2026-10-06 更新；未聯絡刊登者再次確認空置或售出狀態。",
+    "出租掛牌列出多種面積；PropertyHub 專案結果列明 ฿7,500/月對應 24 ㎡的一房選項。"
+  ],
+  "sources": {
+    "saleProject": "https://propertyhub.in.th/en/condo-for-sale/project-aspen-lasalle-phase-a",
+    "saleListing": "https://propertyhub.in.th/en/listings/huge-loss-sale-below-market-priceonly-1-3-million-aspen-lasalle-opposite-sikarin-hospital-sri-lasalle-mrt---6340897",
+    "rentProject": "https://propertyhub.in.th/en/condo-for-rent/project-aspen-lasalle-phase-a",
+    "rentListing": "https://propertyhub.in.th/en/listings/%EF%B8%8F-dm-us-on-line-multiple-units-available-aspen-available-sizes-24-27-35-sq-m-bts-bearing-mrt-sri-la-salle--ac9109a8---6468860"
+  }
+}
