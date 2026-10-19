@@ -336,7 +336,7 @@
       condos.forEach(c => {
         const old = previous[c.id] || {};
         const previousBeds = String(old.beds || '2');
-        const defaults = yieldDefaultsFor(c, null);
+        const defaults = yieldDefaultsFor(c, previousBeds);
         const oldSaleRoom = c.sale?.byBedroom?.[previousBeds] || {};
         const oldRentRoom = c.rent?.byBedroom?.[previousBeds] || {};
         const saleCandidates = [
