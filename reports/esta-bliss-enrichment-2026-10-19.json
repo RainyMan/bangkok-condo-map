@@ -1,0 +1,97 @@
+{
+  "hipflatId": 3473,
+  "projectName": "Esta Bliss",
+  "asOf": "2026-10-19",
+  "coordinates": {
+    "lat": 13.812556,
+    "lng": 100.715134,
+    "source": "https://www.homenayoo.com/esta-bliss/",
+    "crosscheck": "https://www.bangkokre.com/projects/1323",
+    "crosscheckDistanceMeters": 44
+  },
+  "propertyData": {
+    "completedYear": 2016,
+    "floors": 8,
+    "units": 634,
+    "hipflatSource": "https://www.hipflat.co.th/en/projects/esta-bliss-iffskg"
+  },
+  "saleSamples": [
+    {
+      "id": "ph-esta-bliss-sale-2190000",
+      "price": 2190000,
+      "area": 36.07,
+      "priceSqm": 60715,
+      "beds": 2,
+      "roomType": "TWO_BED_ROOM",
+      "title": "Esta Bliss Ramintra，2 房，36.07 ㎡，฿2,190,000",
+      "url": "https://propertyhub.in.th/en/listings/sale-esta-bliss-ramintra-minburi-brand-new-never-occupied-unblocked-view-fully-furnished-ready-to-move-in-near-mrt-pink-line",
+      "sourceName": "PropertyHub",
+      "projectName": "Esta Bliss",
+      "updated": "2026-10-02",
+      "checkedAt": "2026-10-19",
+      "matchedBy": "PropertyHub exact-project feed names Esta Bliss Ramintra and lists this individual two-bedroom unit at 36.07 sqm for THB 2,190,000.",
+      "listingStatus": "availability_unconfirmed_update_under_30d"
+    },
+    {
+      "id": "a37608e7",
+      "price": 2900000,
+      "area": 47,
+      "priceSqm": 61702,
+      "beds": 2,
+      "roomType": "TWO_BED_ROOM",
+      "title": "Esta Bliss Ramintra，2 房，47 ㎡，฿2,900,000",
+      "url": "https://propertyhub.in.th/en/listings/for-sell-condo-esta-bliss-building-b-floor-8-2-bed-room-room-size-47-sqm--a37608e7",
+      "sourceName": "PropertyHub",
+      "projectName": "Esta Bliss",
+      "updated": "2026-10-02",
+      "checkedAt": "2026-10-19",
+      "matchedBy": "PropertyHub exact-project feed names Esta Bliss Building B and lists this individual two-bedroom unit at 47 sqm for THB 2,900,000.",
+      "listingStatus": "availability_unconfirmed_update_under_30d"
+    }
+  ],
+  "rentSamples": [
+    {
+      "id": "lnp-c14784",
+      "price": 12000,
+      "area": 36,
+      "priceSqm": 333,
+      "beds": 2,
+      "roomType": "TWO_BED_ROOM",
+      "title": "Esta Bliss Ramintra，2 房，36 ㎡，฿12,000/月",
+      "url": "https://propertyhub.in.th/en/listings/condo-for-rent-esta-bliss-ramintra-property-code-lnp-c14784",
+      "sourceName": "PropertyHub",
+      "projectName": "Esta Bliss",
+      "updated": "2026-10-02",
+      "checkedAt": "2026-10-19",
+      "matchedBy": "PropertyHub exact-project feed names Esta Bliss Ramintra Property Code LNP-C14784 and lists this two-bedroom unit at 36 sqm for THB 12,000 per month.",
+      "listingStatus": "availability_unconfirmed_update_under_30d"
+    }
+  ],
+  "managementFee": {
+    "rate": 50,
+    "source": "https://www.hipflat.co.th/en/projects/esta-bliss-iffskg",
+    "conflictingSourceRate": 45,
+    "conflictingSource": "https://propertyhub.in.th/en/projects/esta-bliss-ramintra--add50a04",
+    "note": "Neither source states the billing period."
+  },
+  "yieldBaseline": {
+    "bedrooms": 2,
+    "purchasePrice": 2190000,
+    "purchaseArea": 36.07,
+    "rentPerSqm": 333,
+    "rentPerMonthAtPurchaseArea": 12023,
+    "netPercentAfterOneAgentMonthAndIndicativeFee": 5.05
+  },
+  "sources": {
+    "hipflat": "https://www.hipflat.co.th/en/projects/esta-bliss-iffskg",
+    "propertyHubProject": "https://propertyhub.in.th/en/projects/esta-bliss-ramintra--add50a04",
+    "saleProject": "https://assets3.propertyhub.in.th/en/condo-for-sale/project-esta-bliss-ramintra--add50a04",
+    "rentProject": "https://assets3.propertyhub.in.th/en/condo-for-rent/project-esta-bliss-ramintra--add50a04",
+    "developerDisclosure": "https://www.thaibma.or.th/Download/prospetus/ASW277A/%283%29130201_25680702.pdf"
+  },
+  "notes": [
+    "Listing feeds were checked on 2026-10-19; sampled units were last refreshed 2026-10-02, within 30 days.",
+    "PropertyHub labels the 36.07 sqm two-bedroom rent as 12,000 THB/month; a separate 36 sqm listing is also 12,000 THB/month. The sample used for the rent-per-sqm low is the 36 sqm direct listing.",
+    "Management fee is published as ฿50/sqm by Hipflat and ฿45/sqm by PropertyHub; the actual billing period and current juristic rate remain unconfirmed."
+  ]
+}
