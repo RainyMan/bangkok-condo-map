@@ -198,13 +198,17 @@
   const money = n => n == null ? '—' : `฿${fmt(n)}`;
   const areaFor = c => Number(c.area?.min ?? c.area ?? 1);
   const bedroomRows = market => {
-    if (market?.byBedroom && Object.keys(market.byBedroom).length) return { ...market.byBedroom };
-    return Object.fromEntries((market?.bedroomRates || []).filter(row => Number(row.beds) > 0).map(row => {
+    const summaries = Object.fromEntries((market?.bedroomRates || []).filter(row => Number(row.beds) > 0).map(row => {
       const average = Number(row.average || 0), averageSqm = Number(row.averageSqm || 0);
       // Bedroom-rate rows are averages, not minimum listings. Leave minimum
       // unset unless a source explicitly supplies a verified minimum record.
       return [String(row.beds), { ...row, average, averageSqm, area: average > 0 && averageSqm > 0 ? average / averageSqm : 0, marketSummary: true }];
     }));
+    // Preserve room types from market summaries while letting a verified
+    // same-bedroom listing supply the lower linked purchase price and area.
+    return Object.fromEntries(Object.entries({ ...summaries, ...(market?.byBedroom || {}) }).map(([beds, row]) => [
+      beds, { ...(summaries[beds] || {}), ...row },
+    ]));
   };
   const bedroomCountForSample = sample => {
     const raw = sample?.beds ?? sample?.bedrooms;
