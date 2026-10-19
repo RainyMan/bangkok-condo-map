@@ -1,0 +1,42 @@
+{
+  "hipflatId": 3797,
+  "project": "Supalai Park Ekamai - Thonglor",
+  "checkedAt": "2026-10-19",
+  "coordinates": {
+    "status": "existing_verified",
+    "source": "https://propertyscout.co.th/en/bangkok/condo/supalai-park-ekamai-thonglor/",
+    "latitude": 13.742949,
+    "longitude": 100.588961
+  },
+  "sale": {
+    "price": 4990000,
+    "areaSqm": 82,
+    "bedrooms": 2,
+    "listingId": "6341897",
+    "feedUpdated": "2026-10-18",
+    "url": "https://propertyhub.in.th/en/listings/30th-floor-2-br-supalai-park-ekamai-thonglor-near-arl-ramkhamhaeng-id-3240351---6341897"
+  },
+  "rent": {
+    "pricePerMonth": 25000,
+    "areaSqm": 82,
+    "bedrooms": 2,
+    "listingId": "6223334",
+    "minimumContractYears": 1,
+    "feedUpdated": "2026-10-18",
+    "url": "https://propertyhub.in.th/en/listings/for-rent-condo-supalai-park-ekkamai-thonglor-building-1-floor-17-2-bed-room-room-size-82-sqm--add9092e---6223334"
+  },
+  "yield": {
+    "formula": "(monthly rent rate × lowest 2BR sale area × 11 months) ÷ lowest linked 2BR sale price",
+    "beforeCommonFeePercent": 5.51,
+    "commonFeeDeducted": false,
+    "commonFeeReason": "未核實管理費",
+    "availability": "近期專案清單更新；單筆頁未標示更新日，仍需聯絡確認實際可租售。"
+  },
+  "scopeNote": "฿4,990,000 是此次可直達並核對之兩房出售樣本最低總價，不宣稱為所有在架掛牌的絕對最低價。",
+  "sources": [
+    "https://propertyhub.in.th/en/condo-for-sale/project-supalai-park-ekkamai-thonglor",
+    "https://propertyhub.in.th/en/condo-for-rent/project-supalai-park-ekkamai-thonglor",
+    "https://propertyhub.in.th/en/listings/30th-floor-2-br-supalai-park-ekamai-thonglor-near-arl-ramkhamhaeng-id-3240351---6341897",
+    "https://propertyhub.in.th/en/listings/for-rent-condo-supalai-park-ekkamai-thonglor-building-1-floor-17-2-bed-room-room-size-82-sqm--add9092e---6223334"
+  ]
+}
