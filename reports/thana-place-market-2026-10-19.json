@@ -1,0 +1,144 @@
+{
+  "hipflatId": 3218,
+  "projectName": "Thana Place",
+  "checkedAt": "2026-10-19",
+  "coordinates": {
+    "lat": 13.824167,
+    "lng": 100.6151273,
+    "source": "https://www.kaibaanthai.com/en/projects/thailand/bangkok/lat-phrao/lat-phrao/thana-place-condominium",
+    "crossCheck": "https://www.hipflat.co.th/en/projects/thana-place-gkghzc"
+  },
+  "completedYear": {
+    "year": 1997,
+    "source": "https://www.hipflat.co.th/en/projects/thana-place-gkghzc"
+  },
+  "fee": {
+    "rate": 22,
+    "note": "PropertyHub 個別出售頁標示每平方米每月 ฿22 管理費；僅作公開刊載參考，請向管委會核實。",
+    "source": "https://propertyhub.in.th/en/listings/condo-for-sale-at-thana-place-building-60c-sukhonthasawat-lat-phrao-with-an-unobstructed-view---6461769",
+    "status": "published_indicative"
+  },
+  "sale": {
+    "count": 2,
+    "observedCount": 2,
+    "countKind": "manual_verified_listing",
+    "average": 1220000,
+    "minimum": 1150000,
+    "minimumArea": 42,
+    "averageSqm": 24440,
+    "minimumSqm": 21500,
+    "minimumSampleUpdated": "2026-10-19",
+    "asOf": "2026-10-19",
+    "snapshotMethod": "兩筆直接物件頁，分別核對一房最低總價與兩房最低總價；Hipflat 專案頁交叉核對在架項目及售價。",
+    "sourceName": "Hipflat / PropertyHub 個別出售掛牌",
+    "source": "https://www.hipflat.co.th/en/projects/thana-place-gkghzc",
+    "minimumSourceUrl": "https://www.hipflat.co.th/ja/ads/autc0ah089a8tnlle2l3c1et3ul34434",
+    "minimumSqmSourceUrl": "https://propertyhub.in.th/en/listings/condo-for-sale-at-thana-place-building-60c-sukhonthasawat-lat-phrao-with-an-unobstructed-view---6461769",
+    "samples": [
+      {
+        "id": "CX-175650",
+        "price": 1150000,
+        "area": 42,
+        "priceSqm": 27380.95,
+        "beds": 1,
+        "roomType": "1BR",
+        "title": "Thana Place · 1 房 · 42 ㎡ · ฿1,150,000",
+        "url": "https://www.hipflat.co.th/ja/ads/autc0ah089a8tnlle2l3c1et3ul34434",
+        "sourceName": "Hipflat / Connex Property",
+        "projectName": "Thana Place",
+        "checkedAt": "2026-10-19",
+        "updated": "2026-10-19",
+        "listingStatus": "active_as_listed",
+        "matchedBy": "Hipflat direct listing CX-175650 names Thana Place, 1 bedroom, 42 sqm, ฿1,150,000; its project page currently lists six sale units from ฿1,150,000 and the page reports an update 8 hours before the 2026-10-19 check."
+      },
+      {
+        "id": "6461769",
+        "price": 1290000,
+        "area": 60,
+        "priceSqm": 21500,
+        "beds": 2,
+        "roomType": "2BR",
+        "title": "Thana Place · 2 房最低總價樣本 · 60 ㎡ · ฿1,290,000",
+        "url": "https://propertyhub.in.th/en/listings/condo-for-sale-at-thana-place-building-60c-sukhonthasawat-lat-phrao-with-an-unobstructed-view---6461769",
+        "sourceName": "PropertyHub / Thai Property Investor",
+        "projectName": "Thana Place",
+        "checkedAt": "2026-10-19",
+        "listingStatus": "availability_unconfirmed_update_under_30d",
+        "matchedBy": "PropertyHub direct listing 6461769 explicitly identifies Thana Place Building 60C, 2 bedrooms, 60 sqm, ฿1,290,000 and describes it as the best-priced unit in the project; Hipflat's project page lists this same 2BR/60sqm/8th-floor unit and price."
+      }
+    ],
+    "byBedroom": {
+      "1": {
+        "count": 1,
+        "minimum": 1150000,
+        "area": 42,
+        "minimumArea": 42,
+        "priceSqm": 27381,
+        "minimumSqm": 27381,
+        "minimumSourceUrl": "https://www.hipflat.co.th/ja/ads/autc0ah089a8tnlle2l3c1et3ul34434",
+        "sourceUrl": "https://www.hipflat.co.th/ja/ads/autc0ah089a8tnlle2l3c1et3ul34434"
+      },
+      "2": {
+        "count": 1,
+        "minimum": 1290000,
+        "area": 60,
+        "minimumArea": 60,
+        "priceSqm": 21500,
+        "minimumSqm": 21500,
+        "minimumSourceUrl": "https://propertyhub.in.th/en/listings/condo-for-sale-at-thana-place-building-60c-sukhonthasawat-lat-phrao-with-an-unobstructed-view---6461769",
+        "sourceUrl": "https://propertyhub.in.th/en/listings/condo-for-sale-at-thana-place-building-60c-sukhonthasawat-lat-phrao-with-an-unobstructed-view---6461769"
+      }
+    }
+  },
+  "rent": {
+    "count": 1,
+    "observedCount": 1,
+    "countKind": "manual_verified_listing",
+    "average": 8000,
+    "minimum": 8000,
+    "minimumArea": 45,
+    "averageSqm": 178,
+    "minimumSqm": 177.78,
+    "minimumSampleUpdated": "2026-10-19",
+    "minimumSqmSampleUpdated": "2026-10-19",
+    "asOf": "2026-10-19",
+    "snapshotMethod": "Hipflat 專案頁顯示一筆現有出租單位；個別 Hipflat 物件頁核對房型、面積及最近更新，泰文專案頁核對泰銖租金與每平方米租金。",
+    "sourceName": "Hipflat 個別出租掛牌",
+    "source": "https://www.hipflat.co.th/en/projects/thana-place-gkghzc",
+    "minimumSourceUrl": "https://www.hipflat.co.th/en/ads/u0h2th9l88lah731214acn773u077n2t",
+    "minimumSqmSourceUrl": "https://www.hipflat.co.th/en/ads/u0h2th9l88lah731214acn773u077n2t",
+    "samples": [
+      {
+        "id": "U1750728R",
+        "price": 8000,
+        "area": 45,
+        "priceSqm": 177.78,
+        "beds": 1,
+        "roomType": "1BR",
+        "title": "Thana Place · 1 房 · 45 ㎡ · ฿8,000/月",
+        "url": "https://www.hipflat.co.th/en/ads/u0h2th9l88lah731214acn773u077n2t",
+        "sourceName": "Hipflat（泰文專案頁核價）",
+        "projectName": "Thana Place",
+        "checkedAt": "2026-10-19",
+        "listingStatus": "availability_unconfirmed_update_under_30d",
+        "matchedBy": "Hipflat direct rental listing identifies unit U1750728R in Thana Place, 1 bedroom, 45 sqm and floor 4; the current Hipflat Thai project page lists one available rental at ฿8,000/month and ฿177/sqm, while the direct unit page reports a recent update within 30 days.",
+        "priceReferenceUrl": "https://www.hipflat.co.th/en/projects/thana-place-gkghzc"
+      }
+    ],
+    "byBedroom": {
+      "1": {
+        "count": 1,
+        "minimum": 8000,
+        "area": 45,
+        "minimumSqm": 177.78,
+        "minimumSourceUrl": "https://www.hipflat.co.th/en/ads/u0h2th9l88lah731214acn773u077n2t",
+        "minimumSqmSourceUrl": "https://www.hipflat.co.th/en/ads/u0h2th9l88lah731214acn773u077n2t",
+        "sourceUrl": "https://www.hipflat.co.th/en/ads/u0h2th9l88lah731214acn773u077n2t"
+      }
+    }
+  },
+  "yield": {
+    "1BR": "可按最低 1BR 售價樣本與 1BR 最低租金單價試算",
+    "2BR": "不估算；目前沒有可核實的同房型出租樣本"
+  }
+}
