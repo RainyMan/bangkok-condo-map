@@ -1,0 +1,40 @@
+{
+  "hipflatId": 4476,
+  "project": "Good Day Sukhumvit 93",
+  "checkedAt": "2026-10-19",
+  "coordinates": {
+    "status": "existing_verified",
+    "source": "https://propertyscout.co.th/en/bangkok/condo/good-day-sukhumvit-93/",
+    "address": "149/114 Soi Sukhumvit 93, Sukhumvit Rd, Bang Chak, Phra Khanong, Bangkok 10260"
+  },
+  "sale": {
+    "status": "direct_listing_cross_checked",
+    "price": 4400000,
+    "areaSqm": 52,
+    "bedrooms": 2,
+    "updated": "2026-10-07",
+    "url": "https://propertyhub.in.th/en/listings/2-br-condo-at-good-day-sukhumvit-93-near-bts-bang-chak-id-3028194---6169503",
+    "mirrorUrl": "https://www.ddproperty.com/en/property/good-day-sukhumvit-93-bangkok-for-sale-500608688"
+  },
+  "rent": {
+    "status": "historical_availability_unconfirmed",
+    "pricePerMonth": 15000,
+    "areaSqm": 35,
+    "bedrooms": 2,
+    "indexedRefreshDate": "2026-09-15",
+    "url": "https://propertyhub.in.th/en/listings/for-rent-good-day-sukhumvit-93-brand-new-condo-near-bts-bang-chak-ready-to-move-in-90condo---6268353"
+  },
+  "yield": {
+    "calculated": false,
+    "reason": "No confirmed current two-bedroom rental sample; the only matched unit is over 30 days old."
+  },
+  "sources": [
+    "https://www.hipflat.co.th/en/projects/good-day-sukhumvit-93-4a1e40u8189383391ctutnn17lna7unc",
+    "https://propertyhub.in.th/en/projects/good-day-sukhumvit-93",
+    "https://propertyhub.in.th/en/condo-for-sale/project-good-day-sukhumvit-93",
+    "https://propertyhub.in.th/en/condo-for-rent/project-good-day-sukhumvit-93",
+    "https://propertyhub.in.th/en/listings/2-br-condo-at-good-day-sukhumvit-93-near-bts-bang-chak-id-3028194---6169503",
+    "https://www.ddproperty.com/en/property/good-day-sukhumvit-93-bangkok-for-sale-500608688",
+    "https://propertyhub.in.th/en/listings/for-rent-good-day-sukhumvit-93-brand-new-condo-near-bts-bang-chak-ready-to-move-in-90condo---6268353"
+  ]
+}
