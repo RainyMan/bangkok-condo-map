@@ -1,4 +1,4 @@
-window.BANGKOK_MARKET_CROSSCHECKS = [
+window.BANGKOK_MARKET_CROSSCHECKS =[
   {
     "hipflatId": 3004,
     "projectName": "LK Tower",
@@ -2534,6 +2534,47 @@ window.BANGKOK_MARKET_CROSSCHECKS = [
     }
   },
   {
+    "hipflatId": 4423,
+    "projectName": "Living @ 24",
+    "asOf": "2026-10-19",
+    "sourceName": "DDproperty / PropertyHub 專案與個別房源核對",
+    "projectSourceUrl": "https://www.hipflat.co.th/en/projects/living-at-24-dbjaxq",
+    "sale": {
+      "activeListingCount": 0,
+      "sourceUrl": "https://www.ddproperty.com/en/condo-for-sale/at-living-24-7572",
+      "note": "DDproperty 與 PropertyHub 專案出售頁目前均列 0 筆；未找到可核實的現行出售單筆掛牌，因此不填售價、不估投報。"
+    },
+    "rent": {
+      "activeListingCount": 11,
+      "sourceUrl": "https://www.ddproperty.com/en/condo-for-rent/at-living-24-7572",
+      "note": "DDproperty 專案出租頁列有 11 筆；另以 30 日內更新的個別房源建立租金樣本。"
+    },
+    "availabilitySources": [
+      {
+        "sourceName": "DDproperty 專案出售頁",
+        "url": "https://www.ddproperty.com/en/condo-for-sale/at-living-24-7572",
+        "statusLabel": "目前顯示 0 筆出售房源。"
+      },
+      {
+        "sourceName": "PropertyHub 專案頁",
+        "url": "https://propertyhub.in.th/en/projects/living-24---14524",
+        "statusLabel": "目前顯示 0 筆出售房源；租金行情以個別房源核對。"
+      },
+      {
+        "sourceName": "DDproperty 專案出租頁",
+        "url": "https://www.ddproperty.com/en/condo-for-rent/at-living-24-7572",
+        "statusLabel": "DDproperty 專案頁顯示 11 筆出租房源。"
+      },
+      {
+        "sourceName": "DDproperty 個別出租房源",
+        "url": "https://www.ddproperty.com/property/living-24-%E0%B8%A5%E0%B8%B4%E0%B8%9F%E0%B8%A7%E0%B8%B4%E0%B9%88%E0%B8%87-%E0%B9%81%E0%B8%AD%E0%B8%97-%E0%B8%97%E0%B9%80%E0%B8%A7%E0%B8%99%E0%B8%95%E0%B8%B5%E0%B9%89%E0%B9%82%E0%B8%9F%E0%B8%A3%E0%B9%8C-%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E-%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2-11408941",
+        "statusLabel": "2 房，฿65,000/月，90㎡；刊登更新 2026-09-25，目前可租狀態待刊登者確認。"
+      }
+    ],
+    "yieldStatus": "not_calculated",
+    "yieldNote": "目前未找到本案可核實的出售單筆掛牌，缺少購入價基準，不計投報率。"
+  },
+  {
     "hipflatId": 4430,
     "projectName": "JW CONDO @DONMUANG",
     "asOf": "2026-10-19",
@@ -2598,6 +2639,47 @@ window.BANGKOK_MARKET_CROSSCHECKS = [
         "statusLabel": "JW Condo @ Donmuang 專案點位；13.924070, 100.598357。"
       }
     ]
+  },
+  {
+    "hipflatId": 4445,
+    "projectName": "Phirom Garden Residence",
+    "asOf": "2026-10-19",
+    "sourceName": "DDproperty / PropertyHub 專案與個別房源核對",
+    "projectSourceUrl": "https://www.hipflat.co.th/en/projects/phirom-garden-residence-uuvcvx",
+    "sale": {
+      "activeListingCount": 0,
+      "sourceUrl": "https://www.ddproperty.com/en/condo-for-sale/at-phirom-garden-residence-6788",
+      "note": "DDproperty 與 PropertyHub 專案出售頁目前均列 0 筆；未找到可核實的現行出售單筆掛牌，因此不填售價、不估投報。"
+    },
+    "rent": {
+      "activeListingCount": 7,
+      "sourceUrl": "https://www.ddproperty.com/en/condo-for-rent/at-phirom-garden-residence-6788",
+      "note": "DDproperty 專案出租頁列有 7 筆；另以 30 日內更新的個別房源建立租金樣本。"
+    },
+    "availabilitySources": [
+      {
+        "sourceName": "DDproperty 專案出售頁",
+        "url": "https://www.ddproperty.com/en/condo-for-sale/at-phirom-garden-residence-6788",
+        "statusLabel": "目前顯示 0 筆出售房源。"
+      },
+      {
+        "sourceName": "PropertyHub 專案頁",
+        "url": "https://propertyhub.in.th/en/projects/phirom-garden-residence",
+        "statusLabel": "目前顯示 0 筆出售房源；租金行情以個別房源核對。"
+      },
+      {
+        "sourceName": "DDproperty 專案出租頁",
+        "url": "https://www.ddproperty.com/en/condo-for-rent/at-phirom-garden-residence-6788",
+        "statusLabel": "DDproperty 專案頁顯示 7 筆出租房源。"
+      },
+      {
+        "sourceName": "DDproperty 個別出租房源",
+        "url": "https://www.ddproperty.com/en/property/phirom-garden-residence-bangkok-for-rent-11372336",
+        "statusLabel": "3 房，฿150,000/月，280㎡；刊登更新 2026-09-25，目前可租狀態待刊登者確認。"
+      }
+    ],
+    "yieldStatus": "not_calculated",
+    "yieldNote": "目前未找到本案可核實的出售單筆掛牌，缺少購入價基準，不計投報率。"
   },
   {
     "hipflatId": 4474,

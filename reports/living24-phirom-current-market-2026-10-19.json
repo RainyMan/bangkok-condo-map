@@ -1,0 +1,44 @@
+{
+  "asOf": "2026-10-19",
+  "projects": [
+    {
+      "hipflatId": 4423,
+      "name": "Living @ 24",
+      "coordinateSource": "https://propertyhub.in.th/en/projects/living-24---14524",
+      "saleStatus": "No active project-matched listings on DDproperty and PropertyHub project sale pages.",
+      "saleSources": [
+        "https://www.ddproperty.com/en/condo-for-sale/at-living-24-7572",
+        "https://propertyhub.in.th/en/projects/living-24---14524"
+      ],
+      "rent": {
+        "priceTHBPerMonth": 65000,
+        "areaSqm": 90,
+        "bedrooms": 2,
+        "rateTHBPerSqmPerMonth": 722.22,
+        "updated": "2026-09-25",
+        "individualListing": "https://www.ddproperty.com/property/living-24-%E0%B8%A5%E0%B8%B4%E0%B8%9F%E0%B8%A7%E0%B8%B4%E0%B9%88%E0%B8%87-%E0%B9%81%E0%B8%AD%E0%B8%97-%E0%B8%97%E0%B9%80%E0%B8%A7%E0%B8%99%E0%B8%95%E0%B8%B5%E0%B9%89%E0%B9%82%E0%B8%9F%E0%B8%A3%E0%B9%8C-%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E-%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2-11408941"
+      },
+      "projectRentSource": "https://www.ddproperty.com/en/condo-for-rent/at-living-24-7572"
+    },
+    {
+      "hipflatId": 4445,
+      "name": "Phirom Garden Residence",
+      "coordinateSource": "https://propertyhub.in.th/en/projects/phirom-garden-residence",
+      "saleStatus": "No active project-matched listings on DDproperty and PropertyHub project sale pages.",
+      "saleSources": [
+        "https://www.ddproperty.com/en/condo-for-sale/at-phirom-garden-residence-6788",
+        "https://propertyhub.in.th/en/projects/phirom-garden-residence"
+      ],
+      "rent": {
+        "priceTHBPerMonth": 150000,
+        "areaSqm": 280,
+        "bedrooms": 3,
+        "rateTHBPerSqmPerMonth": 535.71,
+        "updated": "2026-09-25",
+        "individualListing": "https://www.ddproperty.com/en/property/phirom-garden-residence-bangkok-for-rent-11372336"
+      },
+      "projectRentSource": "https://www.ddproperty.com/en/condo-for-rent/at-phirom-garden-residence-6788"
+    }
+  ],
+  "method": "Only direct project-matched listings refreshed within 30 days are used as current rental samples. Sale counts are recorded as zero only where both DDproperty and PropertyHub project sale pages show no units."
+}
