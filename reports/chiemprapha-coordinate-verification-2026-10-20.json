@@ -1,0 +1,20 @@
+{
+  "hipflatId": 3469,
+  "project": "Chiemprapha Mansion",
+  "checkedAt": "2026-10-20",
+  "coordinates": {
+    "lat": 13.730846995662,
+    "lng": 100.57237762299
+  },
+  "sources": [
+    {
+      "url": "https://map.longdo.com/p/A00313337",
+      "evidence": "Approved named POI A00313337; page's embedded map snippet gives lat=13.730846995662, long=100.57237762299 and names Soi Sukhumwit 41 (Phirom)."
+    },
+    {
+      "url": "https://www.hipflat.co.th/en/projects/chiemprapha-mansion-ezrsuj",
+      "evidence": "Bangkok condo project page uses the exact corresponding name Chiemprapha Mansion and address Soi Phirom, Khlong Tan Nuea, Watthana."
+    }
+  ],
+  "method": "Longdo named POI A00313337 (Thai name แจ่มประภา) and exact Soi Sukhumwit 41/Phirom address match the Hipflat project address Soi Phirom, Khlong Tan Nuea, Watthana"
+}
