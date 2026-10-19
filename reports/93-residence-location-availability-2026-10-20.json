@@ -1,0 +1,33 @@
+{
+  "hipflatId": 3502,
+  "project": "93 Residence",
+  "checkedAt": "2026-10-20",
+  "coordinates": {
+    "lat": 13.700915,
+    "lng": 100.609726,
+    "source": "https://www.thailand-property.com/condo/1044/93-residence",
+    "matchedProjectSource": "https://www.hipflat.co.th/en/projects/93-residence-xfiznp"
+  },
+  "currentListingCheck": {
+    "sale": {
+      "count": 0,
+      "sources": [
+        "https://www.hipflat.co.th/en/projects/93-residence-xfiznp",
+        "https://www.thailand-property.com/condo/1044/93-residence",
+        "https://therealtors.net/th/project/93-residence-21"
+      ]
+    },
+    "rent": {
+      "count": 0,
+      "sources": [
+        "https://www.hipflat.co.th/en/projects/93-residence-xfiznp",
+        "https://www.thailand-property.com/condo/1044/93-residence",
+        "https://therealtors.net/th/project/93-residence-21"
+      ]
+    }
+  },
+  "yield": {
+    "status": "not_calculated",
+    "reason": "No current direct sale and rent listings."
+  }
+}
