@@ -1,0 +1,43 @@
+{
+  "hipflatId": 4055,
+  "project": "Yong Charoen Complex",
+  "checkedAt": "2026-10-19",
+  "hipflatProject": "https://www.hipflat.co.th/en/projects/yong-charoen-complex-bqjeur",
+  "projectVerificationSource": "https://propertyhub.in.th/en/projects/yong-charoen-complex",
+  "sale": {
+    "priceThb": 520000,
+    "areaSqm": 25,
+    "pricePerSqmThb": 20800.0,
+    "sourceUrl": "https://propertyhub.in.th/listings/%E0%B8%82%E0%B8%B2%E0%B8%A2%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B8%A2%E0%B8%87%E0%B9%80%E0%B8%88%E0%B8%A3%E0%B8%B4%E0%B8%8D-%E0%B8%A8%E0%B8%A3%E0%B8%B5%E0%B8%99%E0%B8%84%E0%B8%A3%E0%B8%B4%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B9%8C40---6350516",
+    "note": "PropertyHub individual project listing states studio, 25 sqm, 1 bedroom, ฿520,000; unit page lists common fee ฿325/month. Project page count showed one sale listing and zero rent listings."
+  },
+  "rent": {
+    "priceThbPerMonth": 3200,
+    "areaSqm": 27,
+    "pricePerSqmThbPerMonth": 118.51851851851852,
+    "sourceUrl": "https://zmyhome.com/property/V56241",
+    "updated": "2026-10-13",
+    "roomType": "Studio",
+    "note": "ZmyHome's individual listing page matches project name and Soi Suphapong 3, shows Studio, 27 sqm, ฿3,200/month; listing table reported it updated six days before the check."
+  },
+  "yield": {
+    "matchedRoomType": "Studio (normalized to the source data's 1-bedroom convention)",
+    "purchasePriceThb": 520000,
+    "purchaseAreaSqm": 25,
+    "rentRateThbPerSqmMonth": 118.52,
+    "estimatedMonthlyRentAtPurchaseAreaThb": 2963,
+    "annualRentAfterOneAgentMonthThb": 32593,
+    "annualCommonFeeThb": 3900,
+    "netAnnualYieldPercent": 5.52,
+    "saleSourceUrl": "https://propertyhub.in.th/listings/%E0%B8%82%E0%B8%B2%E0%B8%A2%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B8%A2%E0%B8%87%E0%B9%80%E0%B8%88%E0%B8%A3%E0%B8%B4%E0%B8%8D-%E0%B8%A8%E0%B8%A3%E0%B8%B5%E0%B8%99%E0%B8%84%E0%B8%A3%E0%B8%B4%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B9%8C40---6350516",
+    "rentSourceUrl": "https://zmyhome.com/property/V56241",
+    "note": "Estimate deducts one month's rent for agent management and ฿325/month common fee reported for the selected 25 sqm unit. Excludes vacancy, taxes, repairs, and transaction costs; confirm listing availability and fee with the publisher/juristic office."
+  },
+  "coordinate": {
+    "lat": 13.69322717614331,
+    "lng": 100.63930675959591,
+    "sourceUrl": "https://propertyhub.in.th/en/projects/yong-charoen-complex",
+    "crossCheckUrl": "https://www.hipflat.co.th/en/projects/yong-charoen-complex-bqjeur",
+    "status": "existing verified project coordinate; corroborated against Hipflat project identity/address"
+  }
+}
