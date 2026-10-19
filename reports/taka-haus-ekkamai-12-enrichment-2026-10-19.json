@@ -1,0 +1,101 @@
+{
+  "hipflatId": 5056,
+  "name": "Taka Haus Ekamai 12",
+  "asOf": "2026-10-19",
+  "projectSources": {
+    "hipflat": "https://www.hipflat.co.th/en/projects/taka-haus-ekamai-12-wkhnod",
+    "propertyhub": "https://propertyhub.in.th/en/projects/taka-haus-ekkamai",
+    "locationEvidence": "Project address and PropertyScout map pin correspond to Taka Haus Ekkamai 12; existing verified coordinate retained.",
+    "completedYear": 2019,
+    "completedYearSource": "https://propertyhub.in.th/en/projects/taka-haus-ekkamai",
+    "feeTHBPerSqmPerMonth": 77,
+    "feeSource": "https://propertyhub.in.th/en/projects/taka-haus-ekkamai"
+  },
+  "coordinates": {
+    "lat": 13.729154,
+    "lng": 100.591906,
+    "source": "https://propertyscout.co.th/en/bangkok/condo/taka-haus-ekamai-12/"
+  },
+  "saleSamples": [
+    {
+      "id": "6352791",
+      "price": 5800000,
+      "area": 47.5,
+      "priceSqm": 122105,
+      "beds": 2,
+      "roomType": "2BR",
+      "url": "https://propertyhub.in.th/en/listings/2-br-condo-for-sale-at-taka-haus-ekamai-12-near-bts-ekkamai-id-3257743---6352791",
+      "title": "Taka Haus Ekkamai 12，2 房，47.5 ㎡，฿5,800,000",
+      "sourceName": "PropertyHub",
+      "projectName": "Taka Haus Ekamai 12",
+      "checkedAt": "2026-10-19",
+      "updated": "2026-10-02",
+      "matchedBy": "exact_project_listing_on_propertyhub_project_page",
+      "listingStatus": "active_as_listed"
+    },
+    {
+      "id": "3335555",
+      "price": 7990000,
+      "area": 62,
+      "priceSqm": 128871,
+      "beds": 2,
+      "roomType": "2BR",
+      "url": "https://propertyhub.in.th/en/listings/2-br-condo-for-sale-at-taka-haus-ekamai-12-near-bts-ekkamai-id-3335555",
+      "title": "Taka Haus Ekkamai 12，2 房，62 ㎡，฿7,990,000",
+      "sourceName": "PropertyHub",
+      "projectName": "Taka Haus Ekamai 12",
+      "checkedAt": "2026-10-19",
+      "updated": "2026-10-17",
+      "matchedBy": "exact_project_listing_on_propertyhub_project_page",
+      "listingStatus": "active_as_listed"
+    }
+  ],
+  "rentSamples": [
+    {
+      "id": "6401257",
+      "price": 25000,
+      "area": 48,
+      "priceSqm": 521,
+      "beds": 2,
+      "roomType": "2BR",
+      "url": "https://propertyhub.in.th/en/listings/2-br-condo-at-taka-haus-ekamai-12-near-bts-ekkamai-id-2883975---6401257",
+      "title": "Taka Haus Ekkamai 12，2 房，48 ㎡，฿25,000／月",
+      "sourceName": "PropertyHub",
+      "projectName": "Taka Haus Ekamai 12",
+      "checkedAt": "2026-10-19",
+      "updated": "2026-10-17",
+      "matchedBy": "exact_project_listing_on_propertyhub_project_page",
+      "listingStatus": "active_as_listed"
+    },
+    {
+      "id": "4665174",
+      "price": 29000,
+      "area": 49,
+      "priceSqm": 592,
+      "beds": 2,
+      "roomType": "2BR",
+      "url": "https://propertyhub.in.th/en/listings/2-br-condo-at-taka-haus-ekamai-12-near-bts-ekkamai-id-1805859---4665174",
+      "title": "Taka Haus Ekkamai 12，2 房，49 ㎡，฿29,000／月",
+      "sourceName": "PropertyHub",
+      "projectName": "Taka Haus Ekamai 12",
+      "checkedAt": "2026-10-19",
+      "updated": "2026-10-17",
+      "matchedBy": "exact_project_listing_on_propertyhub_project_page",
+      "listingStatus": "active_as_listed"
+    }
+  ],
+  "yieldScenario": {
+    "beds": 2,
+    "purchasePriceTHB": 5800000,
+    "purchaseAreaSqm": 47.5,
+    "saleSourceUrl": "https://propertyhub.in.th/en/listings/2-br-condo-for-sale-at-taka-haus-ekamai-12-near-bts-ekkamai-id-3257743---6352791",
+    "rentRateTHBPerSqmPerMonth": 520.83,
+    "estimatedMonthlyRentTHB": 24740,
+    "rentSourceUrl": "https://propertyhub.in.th/en/listings/2-br-condo-at-taka-haus-ekamai-12-near-bts-ekkamai-id-2883975---6401257",
+    "deductOneAgentMonth": true,
+    "deductCommonFee": true,
+    "annualCommonFeeTHB": 43890,
+    "netAnnualYieldPercent": 3.94,
+    "formula": "((round((25000 / 48) * 47.5) * 11 - 77 * 47.5 * 12) / 5800000) * 100"
+  }
+}
