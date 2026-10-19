@@ -1,0 +1,121 @@
+{
+  "hipflatId": 3389,
+  "projectName": "Elio Condo",
+  "asOf": "2026-10-19",
+  "coordinate": {
+    "hipflatId": 3389,
+    "name": "Elio Condo",
+    "lat": 13.68524746,
+    "lng": 100.6042924,
+    "locationVerified": true,
+    "sourceName": "PropertyScout 專案地圖座標",
+    "sourceUrl": "https://propertyscout.co.th/en/bangkok/condo/elio-sukhumvit-64/",
+    "verificationSourceUrl": "https://thelivinginsight.com/elio-sukhumvit-64/",
+    "verificationMethod": "exact_project_name_and_full_Hipflat_address_cross_checked_with_independent_Google_Maps_coordinates"
+  },
+  "saleSamples": [
+    {
+      "id": "6445422",
+      "price": 1230000,
+      "area": 22,
+      "priceSqm": 55909,
+      "beds": 1,
+      "roomType": "1BR",
+      "title": "A010571 Elio Sukhumvit 64，1 房，22 ㎡，฿1,230,000",
+      "url": "https://assets2.propertyhub.in.th/en/listings/a010571-elio-sukhumvit-64---6445422",
+      "sourceName": "PropertyHub",
+      "projectName": "Elio Sukhumvit 64",
+      "updated": "2026-10-15",
+      "checkedAt": "2026-10-19",
+      "matchedBy": "exact_project_name_and_listing_id_on_project_sale_index",
+      "listingStatus": "availability_unconfirmed_update_under_30d"
+    }
+  ],
+  "rentSamples": [
+    {
+      "id": "6489425",
+      "price": 8000,
+      "area": 22,
+      "priceSqm": 364,
+      "beds": 0,
+      "roomType": "STUDIO",
+      "title": "P-57284 Elio Sukhumvit 64，Studio，22 ㎡，฿8,000/月（不含洗衣機）",
+      "url": "https://propertyhub.in.th/en/listings/p-57284-condo-for-rent-elio-sukhumvit-64-near-bts-udom-suk-line-easythaihome-085-592-2897---6489425",
+      "sourceName": "PropertyHub",
+      "projectName": "Elio Sukhumvit 64",
+      "updated": "2026-10-17",
+      "checkedAt": "2026-10-19",
+      "matchedBy": "exact_project_name_and_direct_listing_page",
+      "listingStatus": "availability_unconfirmed_update_under_30d"
+    },
+    {
+      "id": "5225134",
+      "price": 11000,
+      "area": 30,
+      "priceSqm": 367,
+      "beds": 1,
+      "roomType": "1BR",
+      "title": "Elio Sukhumvit 64，1 房，30 ㎡，8 樓，฿11,000/月",
+      "url": "https://propertyhub.in.th/en/listings/for-rent-elio-sukhumvit-64-near-bts-udomsuk-and-bts-punnawithi-line-id-condobkk-with-code-h2824---5225134",
+      "sourceName": "PropertyHub",
+      "projectName": "Elio Sukhumvit 64",
+      "updated": "2026-10-17",
+      "checkedAt": "2026-10-19",
+      "matchedBy": "exact_project_name_and_direct_listing_page",
+      "listingStatus": "availability_unconfirmed_update_under_30d"
+    }
+  ],
+  "yield": {
+    "status": "estimated_from_matched_room_type",
+    "purchasePriceTHB": 1230000,
+    "purchaseAreaSqm": 22,
+    "matchedRentListing": "https://propertyhub.in.th/en/listings/for-rent-elio-sukhumvit-64-near-bts-udomsuk-and-bts-punnawithi-line-id-condobkk-with-code-h2824---5225134",
+    "rentRateTHBPerSqmPerMonth": 366.67,
+    "imputedMonthlyRentTHB": 8067,
+    "commonFeeTHBPerSqmPerMonth": 45,
+    "netAfterOneMonthAgentAndCommonFeePercent": 6.25,
+    "formula": "((1 房月租 11,000 ÷ 30㎡ × 最低 1 房出售樣本 22㎡ × 11 個收租月) − 45 × 22㎡ × 12) ÷ 1,230,000 × 100",
+    "note": "未找到可核實兩房買賣掛牌，因此未混用房型；按目前可配對的最低一房出售掛牌及一房出租樣本估算。"
+  },
+  "sources": [
+    {
+      "sourceName": "Hipflat 專案頁",
+      "url": "https://www.hipflat.co.th/en/projects/elio-condo-neiweo",
+      "statusLabel": "Hipflat 名稱 Elio Condo，完整地址指向 Elio Sukhumvit 64，115 Soi Sukhumvit 64。"
+    },
+    {
+      "sourceName": "PropertyHub 專案資料",
+      "url": "https://propertyhub.in.th/en/projects/elio-sukhumvit-64",
+      "statusLabel": "同案別名 Elio Condo；2014 完工、4 棟、8 層、962 戶，管理費 45 THB/㎡/月。"
+    },
+    {
+      "sourceName": "最低出售單筆掛牌",
+      "url": "https://assets2.propertyhub.in.th/en/listings/a010571-elio-sukhumvit-64---6445422",
+      "statusLabel": "PropertyHub 專案列表於 2026-10-15 更新 A010571；1 房、22㎡、฿1,230,000。"
+    },
+    {
+      "sourceName": "Studio 出租單筆掛牌",
+      "url": "https://propertyhub.in.th/en/listings/p-57284-condo-for-rent-elio-sukhumvit-64-near-bts-udom-suk-line-easythaihome-085-592-2897---6489425",
+      "statusLabel": "P-57284 頁列 22㎡ Studio、無洗衣機方案฿8,000/月；頁面亦列含洗衣機฿8,500/月。"
+    },
+    {
+      "sourceName": "1 房出租單筆掛牌",
+      "url": "https://propertyhub.in.th/en/listings/for-rent-elio-sukhumvit-64-near-bts-udomsuk-and-bts-punnawithi-line-id-condobkk-with-code-h2824---5225134",
+      "statusLabel": "H2824 頁列 Elio Sukhumvit 64、1 房、30㎡、฿11,000/月。"
+    },
+    {
+      "sourceName": "座標來源",
+      "url": "https://propertyscout.co.th/en/bangkok/condo/elio-sukhumvit-64/",
+      "statusLabel": "PropertyScout 專案頁提供 13.68524746,100.6042924；同頁列 2014 完工、962 戶、8 層。"
+    },
+    {
+      "sourceName": "Google Maps 座標交叉核對",
+      "url": "https://thelivinginsight.com/elio-sukhumvit-64/",
+      "statusLabel": "TheLivingInsight 標示專案 Google Maps 點位 13.685225,100.604271，與主座標相距約 3 公尺。"
+    }
+  ],
+  "caveats": [
+    "售租掛牌的現況尚未向刊登者確認。",
+    "目前找到的出售掛牌均未證實為兩房，故以同房型一房售租配對估算，未假設兩房資料。"
+  ]
+}
