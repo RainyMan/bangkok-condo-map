@@ -1,0 +1,43 @@
+{
+  "hipflatId": 3228,
+  "projectName": "SiriMetro Ratchada-Vipawadee",
+  "asOf": "2026-10-20",
+  "verifiedSaleSample": {
+    "listingId": "6187051",
+    "roomType": "Studio",
+    "priceTHB": 1390000,
+    "areaSqm": 23,
+    "url": "https://propertyhub.in.th/en/listings/a045611-sirimetro-ratchada-vipawadee---6187051"
+  },
+  "rentAvailability": "conflicted; excluded from current rent and yield",
+  "rentCandidate": {
+    "roomType": "Studio",
+    "priceTHBPerMonth": 8000,
+    "areaSqm": 24,
+    "listingId": "SRV10-0007",
+    "url": "https://www.rentcondobkk.com/%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2/%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/134639/SRV10-0007/%E0%B8%9B%E0%B8%A5%E0%B9%88%E0%B8%AD%E0%B8%A2%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2-%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B8%AA%E0%B8%B4%E0%B8%A3%E0%B8%B4%E0%B9%80%E0%B8%A1%E0%B9%82%E0%B8%97%E0%B8%A3-%E0%B8%A3%E0%B8%B1%E0%B8%8A%E0%B8%94%E0%B8%B2-%E0%B8%A7%E0%B8%B4%E0%B8%A0%E0%B8%B2%E0%B8%A7%E0%B8%94%E0%B8%B5-%E0%B8%8A%E0%B8%B1%E0%B9%89%E0%B8%99-2-%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B8%95%E0%B8%B9%E0%B8%94%E0%B8%B4%E0%B9%82%E0%B8%AD-%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%AA%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B8%AD%E0%B8%B3%E0%B8%99%E0%B8%A7%E0%B8%A2%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%AA%E0%B8%B0%E0%B8%94%E0%B8%A7%E0%B8%81-%E0%B8%9A%E0%B8%AD%E0%B8%81%E0%B9%80%E0%B8%A5%E0%B8%A2%E0%B8%AB%E0%B9%89%E0%B8%B2%E0%B8%A1%E0%B8%9E%E0%B8%A5%E0%B8%B2%E0%B8%94"
+  },
+  "crossChecks": [
+    {
+      "source": "PropertyHub",
+      "url": "https://propertyhub.in.th/en/condo-for-rent/project-sirimetro-ratchada-vipawadee",
+      "result": "0 matched rent listings"
+    },
+    {
+      "source": "iBangkokCondo",
+      "url": "https://www.ibangkokcondo.com/index.php/rent-condo/Sirimetro-Ratchada-Vipawadee",
+      "result": "0 current rentals"
+    },
+    {
+      "source": "Scancondo",
+      "url": "https://www.scancondo.com/%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B8%AA%E0%B8%B4%E0%B8%A3%E0%B8%B4%E0%B9%80%E0%B8%A1%E0%B9%82%E0%B8%97%E0%B8%A3-%E0%B8%A3%E0%B8%B1%E0%B8%8A%E0%B8%94%E0%B8%B2-%E0%B8%A7%E0%B8%B4%E0%B8%A0%E0%B8%B2%E0%B8%A7%E0%B8%94%E0%B8%B5",
+      "result": "SRV10-0007 marked rented"
+    },
+    {
+      "source": "RentCondoBKK",
+      "url": "https://www.rentcondobkk.com/%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2/%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/134639/SRV10-0007/%E0%B8%9B%E0%B8%A5%E0%B9%88%E0%B8%AD%E0%B8%A2%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2-%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B8%AA%E0%B8%B4%E0%B8%A3%E0%B8%B4%E0%B9%80%E0%B8%A1%E0%B9%82%E0%B8%97%E0%B8%A3-%E0%B8%A3%E0%B8%B1%E0%B8%8A%E0%B8%94%E0%B8%B2-%E0%B8%A7%E0%B8%B4%E0%B8%A0%E0%B8%B2%E0%B8%A7%E0%B8%94%E0%B8%B5-%E0%B8%8A%E0%B8%B1%E0%B9%89%E0%B8%99-2-%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B8%95%E0%B8%B9%E0%B8%94%E0%B8%B4%E0%B9%82%E0%B8%AD-%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%AA%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B8%AD%E0%B8%B3%E0%B8%99%E0%B8%A7%E0%B8%A2%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%AA%E0%B8%B0%E0%B8%94%E0%B8%A7%E0%B8%81-%E0%B8%9A%E0%B8%AD%E0%B8%81%E0%B9%80%E0%B8%A5%E0%B8%A2%E0%B8%AB%E0%B9%89%E0%B8%B2%E0%B8%A1%E0%B8%9E%E0%B8%A5%E0%B8%B2%E0%B8%94",
+      "result": "฿8,000/month; availability/date not independently established"
+    }
+  ],
+  "yield": "not calculated because rental availability is contradictory"
+}
