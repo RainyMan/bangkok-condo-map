@@ -41,13 +41,9 @@ if not record:
     raise RuntimeError('Nana Condo record not found')
 record['replaceSale'] = True
 record['sale'] = {
-    'count': 1, 'observedCount': 1, 'countKind': 'manual_verified_listing', 'average': 1890000,
-    'minimum': 1890000, 'minimumArea': 29, 'minimumSampleUpdated': '2026-08', 'averageSqm': 65172,
-    'minimumSqm': 65172, 'minimumSqmSampleUpdated': '2026-08', 'asOf': '2026-10-19',
-    'sourceName': 'PropertyScout 單筆房源', 'source': sale_url, 'minimumSourceUrl': sale_detail,
-    'minimumSqmSourceUrl': sale_detail, 'samples': [sample_sale],
-    'byBedroom': {'1': {'count': 1, 'minimum': 1890000, 'area': 29, 'priceSqm': 65172,
-                        'minimumSqm': 65172, 'sourceUrl': sale_detail, 'minimumSqmSourceUrl': sale_detail}}
+    'count': 0, 'observedCount': 0, 'countKind': 'availability_unconfirmed', 'asOf': '2026-10-19',
+    'sourceName': 'PropertyScout / PropertyHub 專案核對', 'source': sale_url,
+    'samples': [], 'byBedroom': {}
 }
 record['replaceRent'] = True
 record['rent'] = {
@@ -90,15 +86,15 @@ save_array(cross)
 
 index = DIST / 'index.html'
 text = index.read_text(encoding='utf-8')
-text = re.sub(r'bangkok-manual-market-samples\.js\?v=[^"\']+', 'bangkok-manual-market-samples.js?v=20261019-nana-current-samples', text, count=1)
-text = re.sub(r'bangkok-market-crosschecks\.js\?v=[^"\']+', 'bangkok-market-crosschecks.js?v=20261019-nana-sale-rent-check', text, count=1)
-text = re.sub(r'app\.js\?v=[^"\']+', 'app.js?v=20261019-yield-recalculation-v177', text, count=1)
+text = re.sub(r'bangkok-manual-market-samples\.js\?v=[^"\']+', 'bangkok-manual-market-samples.js?v=20261019-nana-current-samples-v2', text, count=1)
+text = re.sub(r'bangkok-market-crosschecks\.js\?v=[^"\']+', 'bangkok-market-crosschecks.js?v=20261019-nana-sale-rent-check-v2', text, count=1)
+text = re.sub(r'app\.js\?v=[^"\']+', 'app.js?v=20261019-yield-recalculation-v178', text, count=1)
 index.write_text(text, encoding='utf-8')
 
 app = DIST / 'app.js'
 text = app.read_text(encoding='utf-8')
-text = text.replace("bangkokCondoYieldInputsV172", "bangkokCondoYieldInputsV173")
-text = text.replace("for (let version = 171; version >= 5; version--)", "for (let version = 172; version >= 5; version--)")
+text = text.replace("bangkokCondoYieldInputsV173", "bangkokCondoYieldInputsV174")
+text = text.replace("for (let version = 172; version >= 5; version--)", "for (let version = 173; version >= 5; version--)")
 app.write_text(text, encoding='utf-8')
 
 print(json.dumps({'project': record['name'], 'saleSample': sample_sale, 'rentSample': sample_rent, 'crosscheck': cc}, ensure_ascii=True))
