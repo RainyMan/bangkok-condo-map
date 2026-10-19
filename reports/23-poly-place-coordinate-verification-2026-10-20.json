@@ -1,0 +1,13 @@
+{
+  "hipflatId": 3453,
+  "project": "23 Poly Place @ Phaholyothin 23",
+  "checkedAt": "2026-10-20",
+  "coordinates": {
+    "lat": 13.82645,
+    "lng": 100.5609
+  },
+  "source": "https://yusabuy.com/2017/03/09/poly-place-%E0%B8%9E%E0%B8%AB%E0%B8%A5%E0%B9%82%E0%B8%A2%E0%B8%98%E0%B8%B4%E0%B8%99-23-preview/",
+  "crosscheck": "https://www.hipflat.co.th/en/projects/23-poly-place-at-phaholyothin-23-jsoslk",
+  "method": "exact_project_name_and_project_description_match; published_gps_coordinate",
+  "marketData": "No current direct sale or rent listing was verified in this pass; no ROI calculated."
+}
