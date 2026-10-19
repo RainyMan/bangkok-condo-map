@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-19",
+  "hipflat": {
+    "id": 5099,
+    "name": "Pesidence Place",
+    "url": "https://www.hipflat.co.th/en/projects/pesidence-place-xrlrld",
+    "district": "Pathum Wan",
+    "completedYear": 2000,
+    "units": 168
+  },
+  "propertyhub": {
+    "id": "1909",
+    "name": "President Place",
+    "url": "https://propertyhub.in.th/en/projects/president-place",
+    "address": "Pathum Wan Bangkok",
+    "district": "Pathum Wan",
+    "completedYear": 2000,
+    "units": 168,
+    "lat": 13.74614487312692,
+    "lng": 100.54163616148503
+  },
+  "previousCandidateRejected": {
+    "propertyHubProjectId": "614",
+    "name": "Pesidence Place",
+    "sourceReason": "Separate exact-name page reports one total unit, inconsistent with Hipflat's 168-unit record."
+  },
+  "identityChecks": [
+    "Exact PropertyHub project page ID 1909",
+    "Project name alias President/Pesidence corroborated with Hipflat title and matching building metadata",
+    "Same Bangkok district",
+    "Current city snapshot listing IDs consistently identify President Place and Pathum Wan",
+    "Coordinates in Bangkok bounds"
+  ],
+  "marketCapture": {
+    "saleCount": 3,
+    "salePlatformCount": 4,
+    "rentCount": 24,
+    "rentPlatformCount": 24,
+    "saleMinimum": 2000000.0,
+    "saleMinimumArea": 48.0,
+    "saleMinimumSourceUrl": "https://propertyhub.in.th/en/listings/studio-condo-at-president-place-near-bts-chit-lom-id-2248788---5318729",
+    "rentMinimum": 25000.0,
+    "rentMinimumSourceUrl": "https://propertyhub.in.th/en/listings/1-br-condo-at-president-place-near-bts-chit-lom-id-2136267---5155535",
+    "twoBedroomSale": null,
+    "twoBedroomRent": {
+      "count": 9,
+      "minimum": 57000.0,
+      "area": 90.0,
+      "minimumArea": 90.0,
+      "priceSqm": 633,
+      "minimumSqm": 481,
+      "sourceUrl": "https://propertyhub.in.th/en/listings/16th-floor-2-br-president-place-200m-to-bts-chit-lom-id-2834742---6401355",
+      "minimumSourceUrl": "https://propertyhub.in.th/en/listings/16th-floor-2-br-president-place-200m-to-bts-chit-lom-id-2834742---6401355",
+      "minimumSqmSourceUrl": "https://propertyhub.in.th/en/listings/president-place-spacious-2-bedroom-condo-for-rent-in-chit-lom-br9990cd--b72209a5---5936638"
+    },
+    "excludedLeasehold": {
+      "id": "6214384",
+      "url": "https://propertyhub.in.th/en/listings/president-place-you-won-t-find-a-better-deal-ratchadamri-the-best-location-in-bangkok-leasehold---6214384",
+      "price": 1700000,
+      "area": 48,
+      "reason": "Separate visible special-sale listing; excluded from freehold baseline and ROI because remaining lease term is unknown."
+    }
+  },
+  "cityListingSnapshotCardsForProjectId": 30
+}

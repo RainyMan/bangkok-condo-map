@@ -176,6 +176,7 @@
     const completedYear = rawCompletedYear >= 2400 && rawCompletedYear <= 2700 ? rawCompletedYear - 543 : rawCompletedYear || null;
     return { ...legacy, ...project, ...propertyHub, lat, lng, locationVerified,
       manualSaleSamples: (manualMarket.sale?.samples || []).filter(sample => sample.specialAsset === true),
+      manualSaleSamplesNote: manualMarket.sale?.specialSaleNotice || null,
       verifiedMarketSamples: {
         sale: (manualMarket.sale?.samples || []).filter(sample => sample.specialAsset !== true && sample.url && Number(sample.price) > 0 && Number(sample.area) > 0),
         rent: (manualMarket.rent?.samples || []).filter(sample => sample.specialAsset !== true && sample.url && Number(sample.price) > 0 && Number(sample.area) > 0),
@@ -236,7 +237,7 @@
       const linkedSample = samples.find(sample => sample.url === url);
       return !linkedSample || yieldSampleIsCurrent(linkedSample);
     };
-    saleSamples.filter(sample => yieldSampleIsCurrent(sample) && isDirectListingUrl(sample?.url)).forEach(sample => {
+    saleSamples.filter(sample => sample?.specialAsset !== true && yieldSampleIsCurrent(sample) && isDirectListingUrl(sample?.url)).forEach(sample => {
       const count = bedroomCountForSample(sample);
       if (!count || !(Number(sample.price) > 0) || !(Number(sample.area) > 0)) return;
       const key = String(count), current = saleRooms[key] || {};
@@ -247,7 +248,7 @@
         saleRooms[key] = { ...current, beds: count, minimum: Number(sample.price), minimumArea: Number(sample.area), area: Number(sample.area), minimumSourceUrl: sample.url, sourceUrl: sample.url };
       }
     });
-    rentSamples.filter(sample => yieldSampleIsCurrent(sample) && isDirectListingUrl(sample?.url)).forEach(sample => {
+    rentSamples.filter(sample => sample?.specialAsset !== true && yieldSampleIsCurrent(sample) && isDirectListingUrl(sample?.url)).forEach(sample => {
       const count = bedroomCountForSample(sample), price = Number(sample.price), area = Number(sample.area);
       if (!count || !(price > 0) || !(area > 0) || !sample.url) return;
       const key = String(count), current = rentRooms[key] || {}, sampleRate = price / area;
@@ -271,7 +272,7 @@
     const chosenBeds = beds ? (saleRooms[String(beds)] ? String(beds) : null) : defaultRoom;
     if ((beds && !chosenBeds) || (!beds && !chosenBeds)) return { price: 0, area: 0, rent: 0, beds: String(beds || '2'), isRoomStart: false, isRoomAverage: false, saleSourceUrl: null, rentSourceUrl: null, roomOptions };
     const room = chosenBeds ? saleRooms[chosenBeds] : null;
-    const roomListings = chosenBeds ? saleSamples.filter(sample => yieldSampleIsCurrent(sample) && isDirectListingUrl(sample?.url) && bedroomCountForSample(sample) === Number(chosenBeds) && Number(sample.price) > 0 && Number(sample.area) > 0) : [];
+    const roomListings = chosenBeds ? saleSamples.filter(sample => sample?.specialAsset !== true && yieldSampleIsCurrent(sample) && isDirectListingUrl(sample?.url) && bedroomCountForSample(sample) === Number(chosenBeds) && Number(sample.price) > 0 && Number(sample.area) > 0) : [];
     // Use the lowest verified total price for the selected bedroom count, including two-bedroom listings.
     // Keep price, floor area, and source URL from the same listing together;
     // bedroom summaries are valid only when they provide all three.
@@ -366,13 +367,13 @@
   // Recompute generated baselines against the lowest linked same-bedroom sale
   // and keep its area paired with that same listing. User-edited values that
   // do not match an old generated baseline remain intact.
-  const yieldStorageKey = 'bangkokCondoYieldInputsV156';
+  const yieldStorageKey = 'bangkokCondoYieldInputsV158';
   const loadYieldInputs = () => {
     try {
       const current = localStorage.getItem(yieldStorageKey);
       if (current) return JSON.parse(current);
       let previous = {};
-      for (let version = 155; version >= 5; version--) {
+      for (let version = 157; version >= 5; version--) {
         const stored = localStorage.getItem(`bangkokCondoYieldInputsV${version}`);
         if (stored) { previous = JSON.parse(stored); break; }
       }
@@ -410,7 +411,15 @@
         ].filter(area => area > 0);
         const oldSaleMatchesGeneratedParts = knownSalePrices.includes(Number(old.price)) && knownSaleAreas.includes(Number(old.area));
         const oldRentMatches = rentRates.some(rate => Math.abs(Number(old.rent) - Math.round(rate * Number(old.area))) <= 1);
-        const wasAutoBaseline = (oldSaleMatches || oldSaleMatchesGeneratedParts) && oldRentMatches;
+        // Earlier generated baselines could have the right lowest two-bedroom
+        // price but an area copied from a different listing. Treat a matching
+        // current lowest-room price plus a rent calculated from a known rent
+        // rate as generated, even when that stale area no longer exists in the
+        // current market rows. Manual values outside this pattern stay intact.
+        const matchesCurrentLowestRoomPrice = previousBeds === String(defaults.beds || '2')
+          && Number(old.price) === Number(defaults.price);
+        const wasAutoBaseline = ((oldSaleMatches || oldSaleMatchesGeneratedParts) && oldRentMatches)
+          || (matchesCurrentLowestRoomPrice && oldRentMatches);
         if (!(Number(defaults.price) > 0) || !(Number(defaults.area) > 0) || !(Number(defaults.rent) > 0)) {
           if (old.price > 0 && old.rent > 0 && old.area > 0 && !wasAutoBaseline) recalculated[c.id] = old;
           return;
@@ -652,7 +661,7 @@
   }
   function renderDetail(c) {
     detail.classList.remove('compact');
-    const manualSaleSection = c.manualSaleSamples?.length ? `<section class="detail-section"><p class="section-label">特殊出售掛牌 <span>不納入一般行情／投報</span></p><div class="source-links">${c.manualSaleSamples.map(row => `<a href="${esc(row.url)}" target="_blank" rel="noopener">${esc(row.sourceName || '來源')} · ${esc(row.title || c.name)} · ฿${fmt(row.price)} · ${fmt(row.area, 2)} ㎡ · ฿${fmt(row.priceSqm)} / ㎡ ↗</a>`).join('')}</div><p class="fee-note">此為銀行資產特惠售價，與一般市場掛牌差異較大；保留原始物件來源，暫不納入平均售價、最低市場單價及投報率。</p></section>` : '';
+    const manualSaleSection = c.manualSaleSamples?.length ? `<section class="detail-section"><p class="section-label">特殊出售掛牌 <span>不納入一般行情／投報</span></p><div class="source-links">${c.manualSaleSamples.map(row => `<a href="${esc(row.url)}" target="_blank" rel="noopener">${esc(row.sourceName || '來源')} · ${esc(row.title || c.name)} · ฿${fmt(row.price)} · ${fmt(row.area, 2)} ㎡ · ฿${fmt(row.priceSqm)} / ㎡ ↗</a>`).join('')}</div><p class="fee-note">${esc(c.manualSaleSamplesNote || '此為銀行資產特惠售價，與一般市場掛牌差異較大；保留原始物件來源，暫不納入平均售價、最低市場單價及投報率。')}</p></section>` : '';
     if (!hasSale(c) || !hasRent(c)) {
       const query = encodeURIComponent(`${c.name} condo Bangkok`);
       const ddSale = `https://www.google.com/search?q=site%3Addproperty.com+${query}+for+sale`;

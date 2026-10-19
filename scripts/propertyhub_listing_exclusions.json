@@ -61,5 +61,13 @@
     "kind": "rent",
     "sourceUrl": "https://propertyhub.in.th/en/listings/aa696937-2bed-3bath-bts-phrom-phong-136-71sqm-thb-180-000-mo-fl-16-vittorio-sukhumvit-39-sukhumvit---6441391",
     "reason": "The listing page headline and details identify Vittorio Sukhumvit 39 and a 136.71 sqm unit, while Walden Sukhumvit 39 is listed as 31–88 sqm in Hipflat. The PropertyHub page also contradicts itself about the project name, so this is excluded as a cross-linked listing."
+  },
+  {
+    "listingId": "6214384",
+    "hipflatProjectId": 5099,
+    "propertyHubProjectId": "1909",
+    "kind": "sale",
+    "sourceUrl": "https://propertyhub.in.th/en/listings/president-place-you-won-t-find-a-better-deal-ratchadamri-the-best-location-in-bangkok-leasehold---6214384",
+    "reason": "The PropertyHub title explicitly marks this unit Leasehold. Keep its direct source in the Condo detail card, but exclude it from freehold market minima and ROI because remaining lease term and transfer terms are not provided."
   }
 ]
