@@ -1,0 +1,45 @@
+{
+  "hipflatId": 6477,
+  "projectName": "Whizdom 101",
+  "asOf": "2026-10-19",
+  "location": {
+    "verified": true,
+    "sourceUrl": "https://www.thaigerproperty.com/projects/thailand/bangkok/phra-khanong/bang-chak/whizdom-101",
+    "coordinates": [
+      13.6856974,
+      100.6107152
+    ]
+  },
+  "completedYear": 2020,
+  "saleSample": {
+    "priceThb": 5200000,
+    "areaSqm": 40,
+    "bedrooms": 2,
+    "priceThbPerSqm": 130000,
+    "sourceUrl": "https://www.108siam.com/en/property-sales/2-bedroom-condo-for-sale-at-whizdom-101-in-bang-chak-bangkok-u6794249"
+  },
+  "rentSamples": [
+    {
+      "priceThbPerMonth": 15000,
+      "areaSqm": 29,
+      "bedrooms": 1,
+      "sourceUrl": "https://www.dotproperty.co.th/en/ads/1-bedroom-condo-for-rent-in-whizdom-101-bang-chak-bangkok_39323d681d90-a2df-e792-9413-6502d089"
+    },
+    {
+      "priceThbPerMonth": 22000,
+      "areaSqm": 40,
+      "bedrooms": 2,
+      "sourceUrl": "https://www.dotproperty.co.th/en/ads/2-bedroom-condo-for-rent-in-whizdom-101-bang-chak-bangkok_78f290ddcd00-9500-5d62-7371-3734e089"
+    }
+  ],
+  "yieldCalculation": {
+    "purchasePriceThb": 5200000,
+    "pairedSaleAreaSqm": 40,
+    "twoBedroomRentThbPerSqmPerMonth": 550,
+    "impliedMonthlyRentThb": 22000,
+    "annualYieldBeforeDeductionsPercent": 5.08,
+    "annualYieldAfterOneAgentMonthPercent": 4.65,
+    "formula": "(22,000 × 11) ÷ 5,200,000 × 100; no management fee deducted because no reliable project fee was found."
+  },
+  "note": "Public listing offers observed on 2026-10-19; the sale record says the unit is tenant-occupied through 2027-07-03. Advertiser must confirm availability and final terms."
+}
