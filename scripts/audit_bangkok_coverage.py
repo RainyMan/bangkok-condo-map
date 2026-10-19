@@ -244,8 +244,8 @@ def main() -> None:
                                  key=lambda sample: float(sample["price"]) / float(sample["area"]), default={})
         cross_sale_source = min((sample for sample in cross_sale_samples if isinstance(sample, dict) and sample.get("price") and sample.get("area") and sample.get("url")), key=lambda sample: float(sample["price"]), default={})
         cross_rent_source = min((sample for sample in cross_rent_samples if isinstance(sample, dict) and sample.get("price") and sample.get("area") and sample.get("url")), key=lambda sample: float(sample["price"]) / float(sample["area"]), default={})
-        sale_source = manual_sale_source.get("url") or cross_sale_source.get("url") or sale.get("minimumSqmSourceUrl") or sale.get("minimumSourceUrl") or sale.get("source") or ""
-        rent_source = manual_rent_source.get("url") or cross_rent_source.get("url") or rent.get("minimumSqmSourceUrl") or rent.get("minimumSourceUrl") or rent.get("source") or ""
+        sale_source = manual_sale_source.get("url") or cross_sale_source.get("url") or sale.get("minimumSqmSourceUrl") or sale.get("minimumSourceUrl") or sale.get("source") or crosscheck.get("sale", {}).get("sourceUrl") or ""
+        rent_source = manual_rent_source.get("url") or cross_rent_source.get("url") or rent.get("minimumSqmSourceUrl") or rent.get("minimumSourceUrl") or rent.get("source") or crosscheck.get("rent", {}).get("sourceUrl") or ""
         sale_updated = str(manual_sale_source.get("updated") or "") if manual_sale_source else (str(cross_sale_source.get("listedAt") or "") if cross_sale_source else listing_updated(sale, research_market.get("sale") or {}))
         rent_updated = str(manual_rent_source.get("updated") or "") if manual_rent_source else (str(cross_rent_source.get("listedAt") or "") if cross_rent_source else listing_updated(rent, research_market.get("rent") or {}))
         # Match the coordinate source actually selected by app.js instead of
@@ -290,10 +290,16 @@ def main() -> None:
             "sale_individual_listing_link": "yes" if sale_linked else "no",
             "sale_source": str(sale_source),
             "sale_sample_updated": str(sale_updated),
+            "sale_availability_checked": str(crosscheck.get("sale", {}).get("activeListingCount", "")),
+            "sale_availability_note": str(crosscheck.get("sale", {}).get("note", "")),
             "rent_sample": "yes" if has_rent else "no",
             "rent_individual_listing_link": "yes" if rent_linked else "no",
             "rent_source": str(rent_source),
             "rent_sample_updated": str(rent_updated),
+            "rent_availability_checked": str(crosscheck.get("rent", {}).get("activeListingCount", "")),
+            "rent_availability_note": str(crosscheck.get("rent", {}).get("note", "")),
+            "yield_status": str(crosscheck.get("yieldStatus", "")),
+            "yield_note": str(crosscheck.get("yieldNote", "")),
             "missing": ", ".join(missing),
         })
 
