@@ -17,7 +17,7 @@ def write(path,symbol,rows): path.write_text(f'window.{symbol} = {json.dumps(row
 p=DIST/'bangkok-market-crosschecks.js'; rows=load(p,'BANGKOK_MARKET_CROSSCHECKS')
 r=next(x for x in rows if int(x['hipflatId'])==ID)
 r['asOf']=DATE; r['sourceName']='DDproperty / PropertyHub'; r['projectSourceUrl']=DD
-r['sale']={'activeListingCount':0,'sourceUrl':PH}
+r['sale']={'activeListingCount':0,'sourceUrl':PH,'note':'PropertyHub 專案出售頁顯示無掛牌；DDproperty 專案頁列 0 間出售；The Realtors 亦列 0 間出售。Hipflat 專案頁目前只有出租庫存。'}
 r['rent']={**(r.get('rent') or {}),'activeListingCount':3,'sourceUrl':RENT}
 r['yieldStatus']='no_current_sale_listing'
 r['yieldNote']='PropertyHub、DDproperty 與專案行情頁均未顯示可核實的本案出售掛牌；雖有出租樣本，但沒有購入價基準，暫不計投報率。'
@@ -44,5 +44,5 @@ for row in coverage_rows:
   row['missing']='出售（已查核：目前無掛牌）；投報待售價'
 with coverage.open('w',encoding='utf-8-sig',newline='') as f:
  w=csv.DictWriter(f,fieldnames=fields);w.writeheader();w.writerows(coverage_rows)
-idx=DIST/'index.html'; html=idx.read_text(encoding='utf-8'); html=re.sub(r'bangkok-market-crosschecks\.js\?v=[^"\']+','bangkok-market-crosschecks.js?v=20261019-31-residence-sale-check',html,count=1); idx.write_text(html,encoding='utf-8')
+idx=DIST/'index.html'; html=idx.read_text(encoding='utf-8'); html=re.sub(r'bangkok-market-crosschecks\.js\?v=[^"\']+','bangkok-market-crosschecks.js?v=20261019-panburi-sale-audit',html,count=1); idx.write_text(html,encoding='utf-8')
 print(json.dumps({'hipflatId':ID,'sale':'zero current listings cross-checked across 4 sources','rent':'3 direct samples retained','roi':'not calculable'},ensure_ascii=False))
