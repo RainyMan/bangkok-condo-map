@@ -1,0 +1,46 @@
+{
+  "hipflatId": 3127,
+  "project": "Nana Condo",
+  "checkedAt": "2026-10-19",
+  "projectListingCount": 1,
+  "listing": {
+    "id": "U5641529",
+    "price": 2700000,
+    "area": 40,
+    "priceSqm": 67500,
+    "beds": 0,
+    "roomType": "STUDIO",
+    "title": "Nana Condo studio 40 sqm ฿2,700,000",
+    "url": "https://www.hipflat.co.th/en/ads/1h9cl7h48122lau13e11aetn3u0h14nu",
+    "priceReferenceUrl": "https://www.fazwaz.co.th/en/property-sales/studio-condo-for-sale-at-nana-condo-in-khlong-toei-bangkok-u5641529",
+    "sourceName": "Hipflat／FazWaz",
+    "projectName": "Nana Condo",
+    "updated": "2026-05 (approx)",
+    "checkedAt": "2026-10-19",
+    "matchedBy": "hipflat_project_card_and_fazwaz_unit_id_U5641529",
+    "listingStatus": "availability_unconfirmed_update_over_30d",
+    "verificationNote": "Hipflat 專案頁於 2026-10-16 左右仍列 1 筆出售並連到此物件；FazWaz 個別頁核對 Unit ID U5641529、Studio、40㎡、฿2,700,000，但該頁顯示約 5 個月前更新。刊登者現況待確認，不納入現行售價或投報基準。"
+  },
+  "saleSearch": {
+    "hipflatProject": "https://www.hipflat.co.th/en/projects/nana-condo-setbyl",
+    "fazwazIndividual": "https://www.fazwaz.co.th/en/property-sales/studio-condo-for-sale-at-nana-condo-in-khlong-toei-bangkok-u5641529",
+    "result": "Project page continued to display one sale listing when crawled around 2026-10-16; the direct FazWaz listing showed an update about five months earlier. Current availability not independently confirmed."
+  },
+  "rentSample": {
+    "priceThb": 13000,
+    "areaSqm": 28,
+    "bedrooms": 1,
+    "url": "https://propertyscout.co.th/en/1-br-condo-nana-condo-near-bts-nana-3224759/",
+    "status": "confirmed_available_within_7d"
+  },
+  "yield": {
+    "status": "not_calculated",
+    "reason": "The sale sample is stale and availability-unconfirmed, and it is a studio while the verified rent sample is one-bedroom."
+  },
+  "sources": {
+    "hipflatProject": "https://www.hipflat.co.th/en/projects/nana-condo-setbyl",
+    "hipflatDirectListing": "https://www.hipflat.co.th/en/ads/1h9cl7h48122lau13e11aetn3u0h14nu",
+    "fazwazDirectUnit": "https://www.fazwaz.co.th/en/property-sales/studio-condo-for-sale-at-nana-condo-in-khlong-toei-bangkok-u5641529",
+    "propertyscoutCurrentRent": "https://propertyscout.co.th/en/1-br-condo-nana-condo-near-bts-nana-3224759/"
+  }
+}

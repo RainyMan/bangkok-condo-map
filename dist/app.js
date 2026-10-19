@@ -683,6 +683,9 @@
       const verifiedSampleLink = (sample, kind) => {
         const statusLabel = sample.listingStatus === 'confirmed_unavailable'
           ? kind === 'rent' && sample.availableUntil ? ` · 已過租期 ${esc(sample.availableUntil)}` : ' · 歷史掛牌'
+          : sample.listingStatus === 'availability_unconfirmed_update_over_30d' ? ' · 超過30日未更新，現況待確認'
+          : sample.listingStatus === 'availability_unconfirmed_update_under_30d' ? ' · 30日內更新，現況仍待確認'
+          : sample.listingStatus === 'availability_unconfirmed_date_unknown' ? ' · 更新日不明，現況待確認'
           : '';
         return `<span class="verified-sample-source"><a href="${esc(sample.url)}" target="_blank" rel="noopener">${esc(sample.sourceName || '房源')} ${kind === 'sale' ? '出售' : '出租'} · ${sample.beds ? `${fmt(sample.beds)} 房 · ` : ''}${money(sample.price)}${kind === 'rent' ? ' / 月' : ''} · ${fmt(sample.area, 1)} ㎡ · ฿${fmt(Number(sample.price) / Number(sample.area))} / ㎡${kind === 'rent' ? ' / 月' : ''}${sample.updated ? ` · 更新 ${esc(String(sample.updated).slice(0, 10))}` : ''}${statusLabel} ↗</a>${sample.priceReferenceUrl ? ` <a href="${esc(sample.priceReferenceUrl)}" target="_blank" rel="noopener">泰銖價格核對 ↗</a>` : ''}</span>`;
       };
