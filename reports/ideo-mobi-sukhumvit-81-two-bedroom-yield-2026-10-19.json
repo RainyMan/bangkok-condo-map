@@ -1,0 +1,77 @@
+{
+  "hipflatId": 6367,
+  "project": "Ideo Mobi Sukhumvit 81",
+  "checkedAt": "2026-10-19",
+  "sale": {
+    "id": "6437639",
+    "price": 4790000,
+    "area": 43.0,
+    "priceSqm": 111395,
+    "beds": 2,
+    "bedrooms": 2,
+    "roomType": "2BR",
+    "title": "Ideo Mobi Sukhumvit 81，2 房，43 ㎡，฿4,790,000",
+    "url": "https://propertyhub.in.th/en/listings/for-sale-ideo-mobi-sukhumvit-81-2-bedrooms-corner-room-high-floor-open-view-next-to-bts-on-nut-30-m-under-the-building-there-is-maxvalu-24-hrs---6437639",
+    "sourceName": "PropertyHub",
+    "projectName": "Ideo Mobi Sukhumvit 81",
+    "updated": "2026-10-19",
+    "checkedAt": "2026-10-19",
+    "matchedBy": "PropertyHub_exact_project_feed_and_direct_listing_names_ID_6437639_2BR_43sqm_4790000",
+    "listingStatus": "active_as_listed"
+  },
+  "rent": {
+    "id": "3892206",
+    "price": 25000,
+    "area": 45.0,
+    "priceSqm": 556,
+    "beds": 2,
+    "bedrooms": 2,
+    "roomType": "2BR",
+    "title": "Ideo Mobi Sukhumvit 81，2 房，45 ㎡，฿25,000/月",
+    "url": "https://propertyhub.in.th/en/listings/dl23080659-condo-for-rent-ideo-mobi-sukhumvit-near-bts-on-nut-ready-to-move-in-call-urgently-0653619502-lineid-897iyzll---3892206",
+    "sourceName": "PropertyHub",
+    "projectName": "Ideo Mobi Sukhumvit 81",
+    "updated": "2026-09-22",
+    "checkedAt": "2026-10-19",
+    "matchedBy": "PropertyHub_exact_project_listing_ID_3892206_2BR_45sqm_25000_month_project_feed_shows_current_listing",
+    "listingStatus": "active_as_listed"
+  },
+  "saleProjectPage": {
+    "url": "https://propertyhub.in.th/en/condo-for-sale/project-ideo-mobi-sukhumvit",
+    "visibleResults": 128
+  },
+  "rentProjectPage": {
+    "url": "https://propertyhub.in.th/en/condo-for-rent/project-ideo-mobi-sukhumvit",
+    "visibleResults": 359
+  },
+  "projectFacts": {
+    "completedYear": 2014,
+    "buildings": 2,
+    "floors": "23,25",
+    "units": 935,
+    "publishedUtilityFeeThbPerSqmMonth": 45,
+    "feeSourceUrl": "https://propertyhub.in.th/en/condo-for-sale/project-ideo-mobi-sukhumvit",
+    "utilityFeeNotTreatedAsVerifiedCommonAreaFee": true
+  },
+  "yieldRecalculation": {
+    "bedrooms": 2,
+    "purchasePriceThb": 4790000,
+    "purchaseAreaSqmFromSameLowestSaleListing": 43.0,
+    "rentListingPriceThbPerMonth": 25000,
+    "rentListingAreaSqm": 45.0,
+    "sameBedroomRentRateThbPerSqmMonth": 555.56,
+    "estimatedMonthlyRentAtSaleAreaThb": 23889,
+    "grossAnnualYieldPercent": 5.98,
+    "annualYieldAfterOneAgentMonthPercent": 5.49,
+    "managementFeeDeductedThb": 0,
+    "managementFeeReason": "PropertyHub labels ฿45/sqm as Utility Fee; not verified as common-area management fee, so excluded.",
+    "sourceSaleUrl": "https://propertyhub.in.th/en/listings/for-sale-ideo-mobi-sukhumvit-81-2-bedrooms-corner-room-high-floor-open-view-next-to-bts-on-nut-30-m-under-the-building-there-is-maxvalu-24-hrs---6437639",
+    "sourceRentUrl": "https://propertyhub.in.th/en/listings/dl23080659-condo-for-rent-ideo-mobi-sukhumvit-near-bts-on-nut-ready-to-move-in-call-urgently-0653619502-lineid-897iyzll---3892206",
+    "defaultNetYieldPercent": 5.49
+  },
+  "limitations": [
+    "PropertyHub shows the 2BR sale listing refreshed 2026-10-18; availability has not been reconfirmed with advertiser.",
+    "The rent listing was updated 2026-09-22 and appears in current PropertyHub project results; availability has not been reconfirmed directly.",
+    "Return estimate assumes 11 paid rental months by default, excludes taxes, maintenance, transaction costs, vacancy beyond one agent month and unverified common fee."
+  ]
+}
