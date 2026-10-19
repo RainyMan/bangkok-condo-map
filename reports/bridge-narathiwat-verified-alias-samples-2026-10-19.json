@@ -1,0 +1,66 @@
+{
+  "hipflatId": 3438,
+  "project": "Bridge Narathiwat",
+  "checkedAt": "2026-10-19",
+  "identityMatch": {
+    "hipflatProjectUrl": "https://www.hipflat.co.th/en/projects/bridge-narathiwat-zhocxc",
+    "matchedProjectName": "Bridge Sathorn-Narathiwas",
+    "matchedPropertyHubProjectId": "1247",
+    "evidence": "Hipflat's own project description names Bridge Sathorn-Narathiwas, developer Prinsiri, 8 floors, 91 units, unit sizes and the Narathiwat Rajanagarindra Road location; the PropertyHub direct project and listing pages name the same project.",
+    "duplicateHipflatId": 5491
+  },
+  "coordinate": {
+    "lat": 13.703568,
+    "lng": 100.539973,
+    "sourceUrl": "https://thinkofliving.com/คอนโด/bridge-สาทร-นราธิวาส-คอนโด-low-rise-สไตล์-modern-loft-luxury-จากปริญสิริ-รีวิวฉบับที่-528-127058-รีวิวโครงการ/",
+    "verificationUrl": "https://www.hipflat.co.th/en/projects/bridge-narathiwat-zhocxc",
+    "verification": "ThinkOfLiving publishes this exact project pin; Hipflat and DDproperty independently identify the matching Bridge project and Naradhiwas Rajanagarindra Road address."
+  },
+  "projectFacts": {
+    "completedYear": 2015,
+    "floors": 8,
+    "units": 91,
+    "feeThbPerSqmMonth": 55,
+    "sourceUrl": "https://www.hipflat.co.th/en/projects/bridge-narathiwat-zhocxc",
+    "completionYearNote": "PropertyHub project details show 2014, while Hipflat and Thailand-Property show 2015. The map follows the Hipflat-listed Hipflat ID's 2015 completion year; the conflict is retained for follow-up."
+  },
+  "sale": {
+    "saleFeedUrl": "https://propertyhub.in.th/en/condo-for-sale/project-bridge-sathorn-narathiwas",
+    "lowestTotalSample": {
+      "priceThb": 3290000,
+      "areaSqm": 33,
+      "bedrooms": 1,
+      "url": "https://propertyhub.in.th/en/listings/cs543-for-sale-bridge-sathorn-narathiwast-brt-chan-road-064-665-4666---6043171",
+      "updatedAt": "2026-10-16T14:50:30.511Z"
+    },
+    "sourceNote": "PropertyHub project listing results show the matching 1-bedroom project sample. Hipflat lists active sale units for the project."
+  },
+  "rent": {
+    "rentFeedUrl": "https://propertyhub.in.th/en/condo-for-rent/project-bridge-sathorn-narathiwas",
+    "lowestPsmSample": {
+      "monthlyRentThb": 22000,
+      "areaSqm": 45,
+      "bedrooms": 1,
+      "rentThbPerSqmMonth": 489,
+      "url": "https://propertyhub.in.th/en/listings/condo-1-bedroom-for-rent-at-bridge-sathorn-narathiwas-near-central-rama-3-ref-a17230142---4834461",
+      "updatedAt": "2026-10-16T02:14:54.991Z"
+    },
+    "sourceNote": "PropertyHub project listing results and Hipflat's available-unit page report rental listings for the same project."
+  },
+  "yield": {
+    "status": "estimated_from_1br_because_no_2br_pair_was_found",
+    "formula": "(((22,000 THB/month ÷ 45 sqm) × 33 sqm × 11 months) − (55 THB/sqm/month × 33 sqm × 12 months)) ÷ 3,290,000 THB × 100",
+    "netAnnualYieldPercent": 4.73,
+    "assumptions": [
+      "One-month agent management fee deducted",
+      "Common fee deducted",
+      "No sale/rent pair for a two-bedroom unit was found in the checked project feed"
+    ]
+  },
+  "sources": {
+    "hipflatProject": "https://www.hipflat.co.th/en/projects/bridge-narathiwat-zhocxc",
+    "propertyHubProject": "https://propertyhub.in.th/en/projects/bridge-sathorn-narathiwas",
+    "thinkOfLivingCoordinate": "https://thinkofliving.com/คอนโด/bridge-สาทร-นราธิวาส-คอนโด-low-rise-สไตล์-modern-loft-luxury-จากปริญสิริ-รีวิวฉบับที่-528-127058-รีวิวโครงการ/",
+    "ddpropertyAddressCheck": "https://www.ddproperty.com/en/property/bridge-sathorn-narathiwas-bangkok-for-sale-500296082"
+  }
+}
