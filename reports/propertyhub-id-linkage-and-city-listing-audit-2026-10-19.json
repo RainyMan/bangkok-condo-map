@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-19",
+  "work": "Connected verified PropertyHub project IDs to exact Hipflat Condo records, then re-audited the PropertyHub Bangkok listing snapshot.",
+  "exact_project_id_mappings_added": 369,
+  "identity_checks": "PropertyHub project ID/page URL, verified coordinate record, project name or reviewed alias, Bangkok district, and uniqueness against existing mappings.",
+  "city_snapshot_before": {
+    "pages": 3722,
+    "cards": 443177,
+    "sale_projects": 1789,
+    "rent_projects": 1764,
+    "both_market_projects": 1563,
+    "unique_sale_listings": 57237,
+    "unique_rent_listings": 115586,
+    "district_conflict_cards": 4658
+  },
+  "city_snapshot_after": {
+    "pages": 3722,
+    "cards": 443177,
+    "sale_projects": 1819,
+    "rent_projects": 1795,
+    "both_market_projects": 1585,
+    "unique_sale_listings": 57856,
+    "unique_rent_listings": 116812,
+    "district_conflict_cards": 41
+  },
+  "incremental_listing_snapshot_matches": {
+    "sale_projects": 30,
+    "rent_projects": 31,
+    "both_market_projects": 22,
+    "unique_sale_listing_links": 619,
+    "unique_rent_listing_links": 1226
+  },
+  "coverage_after": {
+    "projects": 3555,
+    "verified_coordinates": 3050,
+    "sale_market_data": 1992,
+    "rent_market_data": 1995,
+    "individual_sale_listing_links": 1951,
+    "individual_rent_listing_links": 1962,
+    "both_markets": 1802
+  },
+  "source_files": [
+    "dist/bangkok-propertyhub-guessed-details.js",
+    "dist/bangkok-propertyhub.js",
+    "dist/bangkok-propertyhub-map.js",
+    "dist/bangkok-propertyhub-city-summaries.js",
+    "C:/Users/j654v/Desktop/codex/condo_research/bangkok/propertyhub-bangkok-pages.jsonl"
+  ]
+}
