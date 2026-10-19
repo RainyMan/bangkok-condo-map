@@ -61,6 +61,23 @@
       "listingStatus": "active_as_listed",
       "crossListedSourceUrl": "https://www.hipflat.co.th/en/ads/928n422n88a2c28hh1t1hul33u0l0ehn",
       "verificationNote": "PropertyHub 專案頁列出此筆並標示 2026-10-17 更新；個別房源頁核對 31 Residence、3 房、270㎡及 ฿95,000/月。Hipflat 有同房型、面積和價格的交叉刊登，視作同一樣本，不重複計數。現況需向刊登者確認。"
+    },
+    {
+      "id": "U1110486",
+      "price": 78000,
+      "area": 142,
+      "priceSqm": 549,
+      "beds": 2,
+      "roomType": "2BR",
+      "title": "31 Residence，2 房，142 ㎡，฿78,000/月",
+      "url": "https://www.hipflat.co.th/en/ads/a1a7ta078ut44h0l7424ae383u0heu27",
+      "sourceName": "Hipflat",
+      "projectName": "31 Residence",
+      "updated": "2026-10-19",
+      "checkedAt": "2026-10-19",
+      "matchedBy": "exact_hipflat_project_and_direct_listing_page",
+      "listingStatus": "active_as_listed",
+      "verificationNote": "Hipflat 專案頁列出此出租單位；個別頁核對 31 Residence、2 房、142㎡、฿78,000/月，頁面顯示約 32 分鐘前更新。現況仍以刊登者回覆為準。"
     }
   ],
   "historicalSamplesExcludedFromCurrentMetrics": [
@@ -98,31 +115,31 @@
     }
   ],
   "rentSummary": {
-    "count": 3,
-    "observedCount": 3,
+    "count": 18,
+    "observedCount": 4,
     "countKind": "manual_verified_listing",
-    "average": 82333,
+    "average": 81250,
     "minimum": 75000,
-    "minimumArea": 170.0,
+    "minimumArea": 170,
     "minimumSampleUpdated": "2026-10-18",
-    "averageSqm": 425,
+    "averageSqm": 456,
     "minimumSqm": 351.85,
     "minimumSqmSampleUpdated": "2026-10-17",
     "asOf": "2026-10-19",
-    "snapshotMethod": "Direct Hipflat and PropertyHub rental listings; matched project names, unit bedrooms, area and rent on individual listing pages. Old entries over 30 days are kept as history but excluded from current metrics.",
+    "snapshotMethod": "Hipflat exact project page lists 18 available rental units; four direct unit pages are currently checked, including three two-bedroom units and the lowest-rate sampled unit.",
     "sourceName": "Hipflat／PropertyHub 個別出租掛牌",
-    "source": "https://propertyhub.in.th/en/condo-for-rent/project-31-residence",
+    "source": "https://www.hipflat.co.th/en/projects/31-residence-krkcne",
     "minimumSourceUrl": "https://www.hipflat.co.th/en/ads/le7at2e78l17nthcu7ucta073u02u980",
     "minimumSqmSourceUrl": "https://propertyhub.in.th/en/listings/expansive-3-bedroom-penthouse-apartment-in-phrom-phong-br0684ap---5583590",
     "byBedroom": {
       "2": {
-        "count": 2,
+        "count": 3,
         "minimum": 75000,
-        "area": 170.0,
-        "minimumArea": 170.0,
+        "area": 170,
+        "minimumArea": 170,
         "priceSqm": 441,
         "minimumSqm": 441.18,
-        "averageSqm": 461.21,
+        "averageSqm": 490.57,
         "sourceUrl": "https://www.hipflat.co.th/en/ads/le7at2e78l17nthcu7ucta073u02u980",
         "minimumSourceUrl": "https://www.hipflat.co.th/en/ads/le7at2e78l17nthcu7ucta073u02u980",
         "minimumSqmSourceUrl": "https://www.hipflat.co.th/en/ads/le7at2e78l17nthcu7ucta073u02u980"
@@ -130,8 +147,8 @@
       "3": {
         "count": 1,
         "minimum": 95000,
-        "area": 270.0,
-        "minimumArea": 270.0,
+        "area": 270,
+        "minimumArea": 270,
         "priceSqm": 352,
         "minimumSqm": 351.85,
         "averageSqm": 351.85,
@@ -174,6 +191,23 @@
         "matchedBy": "exact_project_name_and_direct_listing_page",
         "listingStatus": "active_as_listed",
         "verificationNote": "PropertyHub 專案頁列出此筆並標示 2026-10-17 更新；個別房源頁核對專案名、2 房、160㎡及 ฿77,000/月。頁面提醒現況可能變動，應向刊登者確認。"
+      },
+      {
+        "id": "U1110486",
+        "price": 78000,
+        "area": 142,
+        "priceSqm": 549,
+        "beds": 2,
+        "roomType": "2BR",
+        "title": "31 Residence，2 房，142 ㎡，฿78,000/月",
+        "url": "https://www.hipflat.co.th/en/ads/a1a7ta078ut44h0l7424ae383u0heu27",
+        "sourceName": "Hipflat",
+        "projectName": "31 Residence",
+        "updated": "2026-10-19",
+        "checkedAt": "2026-10-19",
+        "matchedBy": "exact_hipflat_project_and_direct_listing_page",
+        "listingStatus": "active_as_listed",
+        "verificationNote": "Hipflat 專案頁列出此出租單位；個別頁核對 31 Residence、2 房、142㎡、฿78,000/月，頁面顯示約 32 分鐘前更新。現況仍以刊登者回覆為準。"
       },
       {
         "id": "6058105",
@@ -228,8 +262,9 @@
     ]
   },
   "notes": [
-    "The lowest directly verified two-bedroom rental asking price in this refreshed sample is ฿75,000/month for 170 sqm; the same listing supplies both price and area.",
-    "The PropertyHub project page shows 7 rental results; three direct unit pages were checked for this snapshot. The display sample count therefore means verified samples, not the project-wide listing count.",
-    "Availability can change; confirm directly with each listing publisher."
+    "Hipflat 專案頁當日顯示 18 筆出租；已直接核對四筆近期更新的個別房源，其中三筆為兩房。",
+    "最低總租金仍為兩房 170㎡、฿75,000/月；新核實兩房 142㎡、฿78,000/月，更新時間約在檢查前 32 分鐘。",
+    "最低每平方米租金樣本為三房 270㎡、฿95,000/月，PropertyHub 個別頁標示 2026-10-17 更新。",
+    "PropertyHub 與 DDproperty 專案出售頁均沒有本案現行出售物件，所以無購入價基準，不計投報率。"
   ]
 }
