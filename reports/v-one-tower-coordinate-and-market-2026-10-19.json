@@ -1,0 +1,18 @@
+{
+  "hipflatId": 3433,
+  "project": "V One Tower",
+  "checkedAt": "2026-10-19",
+  "coordinate": {
+    "status": "verified",
+    "lat": 13.755878696690804,
+    "lng": 100.57222081960728,
+    "primarySource": "https://propertyscout.co.th/en/bangkok/commercial/v-one-tower/",
+    "crossCheck": "https://www.v-onetower.com/en/",
+    "method": "PropertyScout project point matched the official V.ONE Tower project and its 123 Rama 9 Road address."
+  },
+  "residentialMarket": {
+    "sale": "No direct residential listing verified.",
+    "rent": "One PropertyScout office listing (72 sqm, THB 86,400/month) is excluded because the source classifies this as a commercial building.",
+    "yield": "not calculated; no verified residential sale and rental listing pair."
+  }
+}
