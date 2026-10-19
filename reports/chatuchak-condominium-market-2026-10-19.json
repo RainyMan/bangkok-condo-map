@@ -5,31 +5,26 @@
   "sources": {
     "propertyhubRentProject": "https://propertyhub.in.th/en/condo-for-rent/project-chatuchak-condominium",
     "propertyhubSaleProject": "https://propertyhub.in.th/en/condo-for-sale/project-chatuchak-condominium",
-    "rentListing": "https://propertyhub.in.th/en/listings/%EF%B8%8F-64-2-sq-m-condo-for-rent-high-floor-stunning-chatuchak-park-view-fully-furnished-move-in-ready---6242213"
+    "rentListing": "https://propertyhub.in.th/en/listings/%EF%B8%8F-64-2-sq-m-condo-for-rent-high-floor-stunning-chatuchak-park-view-fully-furnished-move-in-ready---6242213",
+    "hipflatProject": "https://www.hipflat.co.th/en/projects/chatuchak-condominium-cpdwry"
   },
   "rent": {
-    "status": "verified_direct_listing",
-    "countOnProjectPage": 1,
+    "status": "historical_listing_expired",
+    "projectPageDisplayedResults": 1,
     "priceTHBPerMonth": 33000,
     "areaSqm": 64,
     "bedrooms": 2,
     "priceTHBPerSqmPerMonth": 515.625,
-    "updated": "2026-10-14",
-    "availabilityText": "Available for rent 30/06/2026; page showed one project listing when checked 2026-10-19."
+    "availableUntil": "2026-06-30",
+    "treatment": "Retained as a directly linked historical sample. Excluded from current rent metrics and yield calculations."
   },
   "sale": {
     "status": "no_current_project_listing",
-    "countOnProjectPage": 0,
-    "evidence": "PropertyHub project page displayed No matched properties for Sale when checked 2026-10-19."
+    "projectPageDisplayedResults": 0,
+    "treatment": "No sale basis; do not calculate ROI."
   },
   "yield": {
-    "status": "not_calculated",
-    "reason": "No verified sale sample exists, so a purchase-price basis for yield cannot be established."
-  },
-  "projectFacts": {
-    "floors": 4,
-    "units": 45,
-    "completionYear": null,
-    "source": "https://propertyhub.in.th/en/condo-for-rent/project-chatuchak-condominium"
+    "status": "not_calculable",
+    "reason": "No verified current sale and rent listing pair."
   }
 }

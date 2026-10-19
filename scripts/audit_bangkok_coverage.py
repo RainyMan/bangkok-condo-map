@@ -37,6 +37,11 @@ def in_range(value: object, low: int, high: int) -> bool:
         return False
 
 
+def sample_is_current(sample: dict) -> bool:
+    status = str(sample.get("listingStatus") or "")
+    return not re.search(r"(confirmed_unavailable|future_availability)", status, re.I)
+
+
 def has_individual_listing(market: dict) -> bool:
     urls = [market.get("minimumSourceUrl"), market.get("minimumSqmSourceUrl")]
     urls.extend(sample.get("url") for sample in market.get("samples", []) if isinstance(sample, dict))
@@ -170,11 +175,13 @@ def main() -> None:
         cross_rent_samples = crosscheck.get("rent", {}).get("listings", [])
         has_manual_sale_listing = any(
             sample.get("price") and sample.get("area") and isinstance(sample.get("url"), str)
+            and sample_is_current(sample)
             and has_individual_listing({"minimumSourceUrl": sample["url"]})
             for sample in manual_sale_samples if isinstance(sample, dict)
         )
         has_manual_rent_listing = any(
             sample.get("price") and sample.get("area") and isinstance(sample.get("url"), str)
+            and sample_is_current(sample)
             and has_individual_listing({"minimumSourceUrl": sample["url"]})
             for sample in manual_rent_samples if isinstance(sample, dict)
         )
@@ -192,9 +199,11 @@ def main() -> None:
         rent_linked = (has_rent and has_individual_listing(rent)) or has_manual_rent_listing or has_cross_rent_listing
         direct_sale_samples = [sample for sample in manual_sale_samples if isinstance(sample, dict)
                                and sample.get("price") and sample.get("area") and sample.get("url")
+                               and sample_is_current(sample)
                                and has_individual_listing({"minimumSourceUrl": sample["url"]})]
         direct_rent_samples = [sample for sample in manual_rent_samples if isinstance(sample, dict)
                                and sample.get("price") and sample.get("area") and sample.get("url")
+                               and sample_is_current(sample)
                                and has_individual_listing({"minimumSourceUrl": sample["url"]})]
         # Prefer a clickable direct property page in the coverage report over a
         # market or project summary URL whenever an independently verified

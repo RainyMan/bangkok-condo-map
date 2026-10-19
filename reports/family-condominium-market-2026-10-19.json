@@ -1,0 +1,51 @@
+{
+  "hipflatId": 3859,
+  "project": "Family Condominium",
+  "checkedAt": "2026-10-19",
+  "sale": {
+    "status": "direct_propertyhub_listing",
+    "priceTHB": 950000,
+    "areaSqm": 27,
+    "priceTHBPerSqm": 35185,
+    "bedroomLabel": "PropertyHub says Studio; listing details and matched feed classify as 1 bedroom.",
+    "source": "https://propertyhub.in.th/en/listings/condo-for-sale-at-family-condominium-bts-saphan-khwai---6350597"
+  },
+  "rent": {
+    "currentSample": {
+      "priceTHBPerMonth": 27000,
+      "areaSqm": 45,
+      "bedrooms": 1,
+      "rateTHBPerSqmPerMonth": 600,
+      "listedOn": "2026-09-24",
+      "source": "https://www.ddproperty.com/en/property/family-condominium-bangkok-for-rent-500584623"
+    },
+    "olderSample": {
+      "priceTHBPerMonth": 25000,
+      "areaSqm": 33,
+      "bedrooms": 1,
+      "listedOn": "2026-09-16",
+      "status": "availability_unconfirmed_update_over_30d",
+      "source": "https://www.ddproperty.com/en/property/family-condominium-bangkok-for-rent-500558512"
+    }
+  },
+  "yieldScenario": {
+    "bedrooms": 1,
+    "purchasePriceTHB": 950000,
+    "purchaseAreaSqm": 27,
+    "referenceMonthlyRentTHB": 16200,
+    "rentMethod": "Same-bedroom rent rate (THB 600/sqm/month) multiplied by the selected lowest direct sale sample area (27 sqm).",
+    "annualRentAfterOneAgentMonthTHB": 178200,
+    "yieldAfterOneAgentMonthPercent": 18.76,
+    "yieldBeforeAgentMonthPercent": 20.46,
+    "commonFee": "Not found in checked project pages; not deducted.",
+    "twoBedroomDefault": "Unavailable: no two-bedroom direct sale listing was verified. The 1-bedroom scenario is selectable in the calculator."
+  },
+  "completionYear": {
+    "value": 2002,
+    "sources": [
+      "Hipflat project page",
+      "DDproperty listing/project data"
+    ],
+    "conflict": "PropertyHub project details says 2012; unresolved."
+  }
+}
