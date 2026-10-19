@@ -1,0 +1,34 @@
+{
+  "hipflatId": 3583,
+  "project": "Nontarom Condo Park",
+  "checkedAt": "2026-10-19",
+  "coordinates": {
+    "lat": 13.77909,
+    "lng": 100.45626,
+    "source": "https://homestock.co.th/place/the-walk-ratchaphruek",
+    "projectIdentitySource": "https://www.hipflat.co.th/projects/nontarom-condo-park-yslcxr",
+    "addressCorroboration": "https://www.ddproperty.com/en/project/1435-nontarom-condo-park-talingchun",
+    "evidence": "HomeStock lists Nontarom Condo Park at 13.77909, 100.45626. Hipflat identifies the project as 14/1 Soi Chak Phra 26 with 120 units; DDproperty describes the same Nontarom 3-building, 120-unit complex at 314 Chak Phra Road, Taling Chan."
+  },
+  "sale": {
+    "priceThb": 1290000,
+    "areaSqm": 32,
+    "pricePerSqmThb": 40312.5,
+    "bedrooms": 1,
+    "url": "https://www.hipflat.co.th/ads/t393ll8a81a2aaca7t7nahn43u04u42e"
+  },
+  "rent": {
+    "monthlyThb": 5000,
+    "areaSqm": 24,
+    "rentPerSqmMonthThb": 208.33,
+    "bedrooms": 1,
+    "url": "https://www.hipflat.co.th/ads/99484t1u814a0tu7h7897ne83u0h14a3"
+  },
+  "roiEstimate": {
+    "monthlyRentAtSaleUnitAreaThb": 6667,
+    "assumption": "Apply the 1-bedroom rent listing's per-sqm rate to the 32 sqm sale listing; the sale and rent are distinct units.",
+    "afterOneAgentMonthPercent": 5.69,
+    "managementFee": "Not verified; excluded from this estimate."
+  },
+  "sourceNote": "The Hipflat project page showed and linked one sale and one rental unit when checked. Availability is not independently confirmed with the advertisers."
+}
