@@ -1,0 +1,40 @@
+{
+  "project": "Supapong Place",
+  "hipflatId": 3765,
+  "checkedAt": "2026-10-20",
+  "sources": {
+    "saleProject": "https://propertyhub.in.th/en/condo-for-sale/project-supapong-place",
+    "rentProject": "https://propertyhub.in.th/en/condo-for-rent/project-supapong-place",
+    "lowestSaleListing": "https://propertyhub.in.th/en/listings/s-sppp101-line-p2nproperty---4550347",
+    "twoBedroomSaleListing": "https://propertyhub.in.th/en/listings/a033874-supapong-place---6005652"
+  },
+  "sale": {
+    "projectPageDisplayedCards": 10,
+    "deduplicatedDirectListings": [
+      {
+        "id": "4550347",
+        "bedrooms": 1,
+        "priceThb": 1499000,
+        "areaSqm": 30.5,
+        "updated": "2026-10-16"
+      },
+      {
+        "id": "6005652",
+        "bedrooms": 2,
+        "priceThb": 2400000,
+        "areaSqm": 60,
+        "updated": "2026-10-17"
+      }
+    ],
+    "note": "Only direct listing URLs independently identified and checked against the exact project page are counted; duplicate cards are omitted."
+  },
+  "rent": {
+    "activeMatchedListingCount": 0,
+    "evidence": "Live exact-project page returned No matched properties for Rent on 2026-10-20.",
+    "url": "https://propertyhub.in.th/en/condo-for-rent/project-supapong-place"
+  },
+  "yield": {
+    "status": "not_calculated",
+    "note": "No current same-project rent listing is available to support an ROI estimate."
+  }
+}
