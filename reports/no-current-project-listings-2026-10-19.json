@@ -1,0 +1,47 @@
+{
+  "checkedAt": "2026-10-19",
+  "projects": [
+    {
+      "hipflatId": 3063,
+      "projectName": "Thong Thai Condominium",
+      "propertyHubProjectId": "4327",
+      "propertyHubProjectName": "Thong Thai Condominium 3",
+      "propertyHubProjectUrl": "https://propertyhub.in.th/en/projects/thong-thai-condominium-3",
+      "hipflatProjectUrl": "https://www.hipflat.co.th/en/projects/thong-thai-condominium-zcpcep",
+      "sale": {
+        "activeListingCount": 0,
+        "displayedResultCount": 0,
+        "sourceUrl": "https://propertyhub.in.th/en/condo-for-sale/project-thong-thai-condominium-3",
+        "checkedAt": "2026-10-19"
+      },
+      "rent": {
+        "activeListingCount": 0,
+        "displayedResultCount": 0,
+        "sourceUrl": "https://propertyhub.in.th/en/condo-for-rent/project-thong-thai-condominium-3",
+        "checkedAt": "2026-10-19"
+      },
+      "checkedAt": "2026-10-19"
+    },
+    {
+      "hipflatId": 3093,
+      "projectName": "The Peace",
+      "propertyHubProjectId": "443",
+      "propertyHubProjectName": "The Peace",
+      "propertyHubProjectUrl": "https://propertyhub.in.th/en/projects/the-peace",
+      "hipflatProjectUrl": "https://www.hipflat.co.th/en/projects/the-peace-bxoyim",
+      "sale": {
+        "activeListingCount": 0,
+        "displayedResultCount": 0,
+        "sourceUrl": "https://propertyhub.in.th/en/condo-for-sale/project-the-peace",
+        "checkedAt": "2026-10-19"
+      },
+      "rent": {
+        "activeListingCount": 0,
+        "displayedResultCount": 0,
+        "sourceUrl": "https://propertyhub.in.th/en/condo-for-rent/project-the-peace",
+        "checkedAt": "2026-10-19"
+      },
+      "checkedAt": "2026-10-19"
+    }
+  ]
+}
