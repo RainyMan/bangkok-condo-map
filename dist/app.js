@@ -228,7 +228,7 @@
     const saleRooms = bedroomRows(c.sale), rentRooms = bedroomRows(c.rent);
     const saleSamples = c.sale?.samples || [];
     const rentSamples = c.rent?.samples || [];
-    const isDirectListingUrl = url => typeof url === 'string' && (/\/(?:ads|listings|property|property-for-sale|property-for-rent)\//i.test(url) || /rentcondobkk\.com\/index\.php\/.+\/\d+\/[a-z]{2,5}\d{2}-\d{4}(?:\/|$)/i.test(url));
+    const isDirectListingUrl = url => typeof url === 'string' && (/\/(?:ads|listings|property|property-for-sale|property-for-rent|livingdetail_en)\//i.test(url) || /rentcondobkk\.com\/index\.php\/.+\/\d+\/[a-z]{2,5}\d{2}-\d{4}(?:\/|$)/i.test(url));
     // Fresh asking-price samples remain useful when availability has not been
     // independently confirmed. Exclude unavailable, future-dated, and stale
     // listings, while retaining recently updated listings marked unconfirmed.

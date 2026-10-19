@@ -4120,5 +4120,118 @@ window.BANGKOK_MARKET_CROSSCHECKS =[
     ],
     "yieldStatus": "no_current_sale_sample",
     "yieldNote": "已有現行 1 房租金樣本，但沒有經核實的本案出售物件；不能建立購入價，因此不計投報率。"
+  },
+  {
+    "hipflatId": 3918,
+    "projectName": "Chateau In Town Ratchada 19",
+    "asOf": "2026-10-20",
+    "sourceName": "PropertyHub / LivingInsider / Google Maps / Hipflat",
+    "projectSourceUrl": "https://www.hipflat.co.th/en/projects/chateau-in-town-ratchada-19-pixbbz",
+    "sale": {
+      "activeListingCount": 12,
+      "displayedResultCount": 12,
+      "observedCount": 1,
+      "sourceUrl": "https://propertyhub.in.th/en/projects/chateau-in-town-ratchada-19",
+      "note": "PropertyHub 專案出售結果顯示多筆更新至 2026-10-19 的掛牌；最低可核實 1 房總價 ฿2,490,000、面積 32.98㎡。重複代理刊登不重複計數。",
+      "listings": [
+        {
+          "id": "6315718",
+          "price": 2490000,
+          "area": 32.98,
+          "priceSqm": 75500,
+          "beds": 1,
+          "roomType": "1BR",
+          "title": "Chateau In Town Ratchada 19，1 房，32.98 ㎡，฿2,490,000",
+          "url": "https://propertyhub.in.th/en/listings/1-bedroom-condo-for-sale-on-ratchadaphisek-din-daeng-2nd-floor-south-facing---6315718",
+          "sourceName": "PropertyHub",
+          "projectName": "Chateau In Town Ratchada 19",
+          "updated": "2026-10-19",
+          "checkedAt": "2026-10-20",
+          "matchedBy": "exact_project_name_and_direct_listing_page",
+          "listingStatus": "availability_unconfirmed_update_under_30d",
+          "verificationNote": "PropertyHub 專案頁及個別掛牌均列 1 房、32.98㎡、฿2,490,000；專案結果於 2026-10-19 刷新，同日多個相同價位掛牌，不重複計數。"
+        }
+      ]
+    },
+    "rent": {
+      "displayedResultCount": 1,
+      "observedCount": 1,
+      "sourceUrl": "https://www.livinginsider.com/livingdetail_en/2844572/Condo-for-rent%3A-Chateau-In-Town-Ratchada-19%3A-Chateau-In-Town-Ratchada-19-next-to-MRT-Ratchadaphisek.html",
+      "note": "LivingInsider 個別頁列 1 房、33㎡、฿12,500/月，標示約 43 分鐘前建立。PropertyHub 所列 2 房租盤與其專案房型範圍 1 房、32–40㎡不符，未納入；DDproperty ฿10,000/34㎡掛牌刊登於 2026-07-22，超過 30 日未更新，排除於目前租金與投報樣本。",
+      "listings": [
+        {
+          "id": "2844572",
+          "price": 12500,
+          "area": 33.0,
+          "priceSqm": 379,
+          "beds": 1,
+          "roomType": "1BR",
+          "title": "Chateau In Town Ratchada 19，1 房，33 ㎡，฿12,500/月",
+          "url": "https://www.livinginsider.com/livingdetail_en/2844572/Condo-for-rent%3A-Chateau-In-Town-Ratchada-19%3A-Chateau-In-Town-Ratchada-19-next-to-MRT-Ratchadaphisek.html",
+          "sourceName": "LivingInsider",
+          "projectName": "Chateau In Town Ratchada 19",
+          "updated": "2026-10-20",
+          "checkedAt": "2026-10-20",
+          "matchedBy": "exact_project_name_and_direct_listing_page",
+          "listingStatus": "availability_unconfirmed_update_under_30d",
+          "verificationNote": "LivingInsider 個別頁列本案 1 房、33㎡、฿12,500/月，並標示約 43 分鐘前建立；已於 2026-10-20 查核，仍需向刊登者確認可租。"
+        }
+      ]
+    },
+    "availabilitySources": [
+      {
+        "sourceName": "Hipflat 專案頁",
+        "url": "https://www.hipflat.co.th/en/projects/chateau-in-town-ratchada-19-pixbbz",
+        "statusLabel": "確認本案名稱、Ratchada 19 / Din Daeng 地址；其中一個專案頁目前未列房源。"
+      },
+      {
+        "sourceName": "PropertyHub 專案頁",
+        "url": "https://propertyhub.in.th/en/projects/chateau-in-town-ratchada-19",
+        "statusLabel": "本案 1 房戶型約 32–40㎡、管理費 ฿40/㎡/月、2015 完工；出售掛牌中可核實最低 1 房樣本 ฿2,490,000、32.98㎡。"
+      },
+      {
+        "sourceName": "PropertyHub 最低出售樣本",
+        "url": "https://propertyhub.in.th/en/listings/1-bedroom-condo-for-sale-on-ratchadaphisek-din-daeng-2nd-floor-south-facing---6315718",
+        "statusLabel": "直接掛牌列 1 房、32.98㎡、฿2,490,000；專案頁最近刷新日期為 2026-10-19。"
+      },
+      {
+        "sourceName": "LivingInsider 1 房出租樣本",
+        "url": "https://www.livinginsider.com/livingdetail_en/2844572/Condo-for-rent%3A-Chateau-In-Town-Ratchada-19%3A-Chateau-In-Town-Ratchada-19-next-to-MRT-Ratchadaphisek.html",
+        "statusLabel": "直接頁面列 1 房、33㎡、฿12,500/月，頁面標示約 43 分鐘前建立；目前在架狀態仍建議向刊登者確認。"
+      },
+      {
+        "sourceName": "排除：PropertyHub 不符房型出租頁",
+        "url": "https://propertyhub.in.th/en/listings/for-rent-chateau-in-town-ratchada-19-2-bedrooms-2-bathrooms-fully-furnished-and-equipped-with-appliances",
+        "statusLabel": "專案頁顯示的 2 房租盤與該專案已列 1 房、32–40㎡房型不符，沒有納入。"
+      },
+      {
+        "sourceName": "排除：DDproperty 舊租盤",
+        "url": "https://www.ddproperty.com/en/property/chateau-in-town-ratchada-19-bangkok-for-rent-500444386",
+        "statusLabel": "฿10,000/月、34㎡的 1 房樣本刊登於 2026-07-22；超過 30 日未更新，未作為目前最低租金或投報基準。"
+      },
+      {
+        "sourceName": "Google Maps 座標",
+        "url": "https://www.google.com/maps/place/Chateau+In+Town+Ratchada+19/@13.7993893,100.5716573,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29c353a453183:0xf5cdc55379f82a58!8m2!3d13.7993893!4d100.573846!16s%2Fg%2F11bx5q51n6",
+        "statusLabel": "PropertyHub 個別出售掛牌地圖連結解析為本案 Google Maps Place，座標 13.7993893, 100.573846。"
+      }
+    ],
+    "yieldStatus": "calculated_same_bedroom_lowest_sale_and_rent",
+    "yieldEstimate": {
+      "bedrooms": 1,
+      "purchasePriceTHB": 2490000,
+      "purchaseAreaSqm": 32.98,
+      "purchaseSourceUrl": "https://propertyhub.in.th/en/listings/1-bedroom-condo-for-sale-on-ratchadaphisek-din-daeng-2nd-floor-south-facing---6315718",
+      "rentSampleTHBPerMonth": 12500,
+      "rentSampleAreaSqm": 33.0,
+      "rentRateTHBPerSqmMonth": 378.79,
+      "estimatedMonthlyRentAtPurchaseAreaTHB": 12492,
+      "agentMonthsDeducted": 1,
+      "commonFeeTHBPerSqmMonth": 40,
+      "annualCommonFeeTHB": 15830.4,
+      "netAnnualYieldPercent": 4.88,
+      "rentSourceUrl": "https://www.livinginsider.com/livingdetail_en/2844572/Condo-for-rent%3A-Chateau-In-Town-Ratchada-19%3A-Chateau-In-Town-Ratchada-19-next-to-MRT-Ratchadaphisek.html",
+      "formula": "((฿12,492 × 11) − (฿40/㎡/月 × 32.98㎡ × 12)) ÷ ฿2,490,000 × 100 = 4.88%",
+      "caveat": "租盤頁標示新刊登，但實際可租仍需向刊登者確認；未計稅、維修與交易成本。"
+    }
   }
 ];
