@@ -4233,5 +4233,140 @@ window.BANGKOK_MARKET_CROSSCHECKS =[
       "formula": "((฿12,492 × 11) − (฿40/㎡/月 × 32.98㎡ × 12)) ÷ ฿2,490,000 × 100 = 4.88%",
       "caveat": "租盤頁標示新刊登，但實際可租仍需向刊登者確認；未計稅、維修與交易成本。"
     }
+  },
+  {
+    "hipflatId": 4517,
+    "projectName": "Duliya Place",
+    "asOf": "2026-10-20",
+    "sourceName": "LivingInsider / PropertyHub",
+    "projectSourceUrl": "https://www.livinginsider.com/en/project/duliya-place-condo-buysell",
+    "sale": {
+      "activeListingCount": 22,
+      "displayedResultCount": 21,
+      "observedCount": 3,
+      "sourceUrl": "https://www.livinginsider.com/en/project/duliya-place-condo-buysell",
+      "note": "LivingInsider 專案出售頁列 21 筆房源；另核對 PropertyHub 一筆 1 房、65㎡、฿2,190,000 專案掛牌。可直接核對的 1 房樣本共 3 筆，最低總價為 LivingInsider 的 ฿1,100,000 / 39㎡。PropertyHub 舊專案索引曾列 ฿800,000、約 26.8㎡，但頁面日期 2026-09-09 已超過 30 日，且房型欄位同時標示 Studio 與 1 房，排除於現行行情與投報。",
+      "listings": [
+        {
+          "listingId": "3225607",
+          "price": 1100000,
+          "area": 39,
+          "priceSqm": 28205,
+          "bedrooms": 1,
+          "listedAt": "2026-10-14",
+          "url": "https://www.livinginsider.com/detail/condo-for-sale-duliya-place-1bedroom-3225607",
+          "sourceName": "LivingInsider",
+          "statusLabel": "近期更新；現況仍請向刊登者確認"
+        },
+        {
+          "listingId": "3072808",
+          "price": 1190000,
+          "area": 28,
+          "priceSqm": 42500,
+          "bedrooms": 1,
+          "listedAt": "2026-10-17",
+          "url": "https://www.livinginsider.com/detail/condo-for-sale-duliya-place-1bedroom-3072808",
+          "sourceName": "LivingInsider",
+          "statusLabel": "近期更新；現況仍請向刊登者確認"
+        },
+        {
+          "listingId": "6005535",
+          "price": 2190000,
+          "area": 65,
+          "priceSqm": 33692,
+          "bedrooms": 1,
+          "listedAt": "2026-10-17",
+          "url": "https://propertyhub.in.th/en/listings/a034160-duliya-place---6005535",
+          "sourceName": "PropertyHub",
+          "statusLabel": "近期更新；現況仍請向刊登者確認"
+        }
+      ]
+    },
+    "rent": {
+      "activeListingCount": 1,
+      "displayedResultCount": 1,
+      "observedCount": 1,
+      "sourceUrl": "https://www.livinginsider.com/en/project/duliya-place-condo-rent",
+      "note": "LivingInsider 專案出租頁列 1 筆 1 房、39㎡、฿6,500/月；個別頁與專案頁的相對更新時間略有差異，保留為近期樣本並標示待向刊登者確認。PropertyHub 出租頁顯示的舊房源日期為 2025-06-04，未納入現行租金。",
+      "listings": [
+        {
+          "listingId": "3194410",
+          "price": 6500,
+          "area": 39,
+          "priceSqm": 167,
+          "bedrooms": 1,
+          "listedAt": "近期推送（頁面標示約 1 週／昨日；日期不一致）",
+          "url": "https://www.livinginsider.com/detail/condo-for-rent-duliya-place-1bedroom-3194410",
+          "sourceName": "LivingInsider",
+          "statusLabel": "近期更新；是否可租請向刊登者確認"
+        }
+      ]
+    },
+    "availabilitySources": [
+      {
+        "sourceName": "Hipflat 專案頁",
+        "url": "https://www.hipflat.co.th/en/projects/duliya-place-rdqpii",
+        "statusLabel": "Duliya Place 專案位址為 Rotdee / Soi Nakniwat 37，完成年 1995；頁面目前列出售單位。"
+      },
+      {
+        "sourceName": "PropertyHub 專案／管理費／位置",
+        "url": "https://propertyhub.in.th/en/projects/duliya-place",
+        "statusLabel": "專案頁核對地址 12/10 Soi Nakniwat 37、1995 完工、858 戶、8 層及管理費 ฿15/㎡/月；座標沿用本案已核對專案圖釘。"
+      },
+      {
+        "sourceName": "LivingInsider 最低 1 房出售單筆",
+        "url": "https://www.livinginsider.com/detail/condo-for-sale-duliya-place-1bedroom-3225607",
+        "statusLabel": "1 房、39㎡、฿1,100,000（฿28,205/㎡）；頁面標示約 6 日前更新。"
+      },
+      {
+        "sourceName": "LivingInsider 1 房出售單筆",
+        "url": "https://www.livinginsider.com/detail/condo-for-sale-duliya-place-1bedroom-3072808",
+        "statusLabel": "1 房、28㎡、฿1,190,000（฿42,500/㎡）；建立日 2026-05-13，頁面標示約 3 日前推送。"
+      },
+      {
+        "sourceName": "PropertyHub 1 房出售單筆",
+        "url": "https://propertyhub.in.th/en/listings/a034160-duliya-place---6005535",
+        "statusLabel": "1 房、65㎡、฿2,190,000（฿33,692/㎡）；專案頁標示 2026-10-17 最近刷新。"
+      },
+      {
+        "sourceName": "LivingInsider 出租專案頁",
+        "url": "https://www.livinginsider.com/en/project/duliya-place-condo-rent",
+        "statusLabel": "列 1 筆本案租盤；頁面租金 ฿6,500/月、39㎡、1 房。"
+      },
+      {
+        "sourceName": "LivingInsider 1 房出租單筆",
+        "url": "https://www.livinginsider.com/detail/condo-for-rent-duliya-place-1bedroom-3194410",
+        "statusLabel": "1 房、39㎡、฿6,500/月（฿167/㎡/月）；個別頁及專案頁的相對更新時間不一致，實際可租待確認。"
+      },
+      {
+        "sourceName": "PropertyHub 出租專案頁",
+        "url": "https://propertyhub.in.th/en/condo-for-rent/project-duliya-place-condo",
+        "statusLabel": "目前查核頁顯示舊的 2025-06-04 租盤，不作現行樣本；近期租金以 LivingInsider 直接掛牌為準。"
+      },
+      {
+        "sourceName": "排除：PropertyHub 舊低價出售單筆",
+        "url": "https://propertyhub.in.th/listings/%E0%B8%82%E0%B8%B2%E0%B8%A2%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B8%94%E0%B8%B8%E0%B8%A5%E0%B8%B4%E0%B8%A2%E0%B8%B2-%E0%B9%80%E0%B8%9E%E0%B8%A5%E0%B8%AA-26-7-%E0%B8%95%E0%B8%A3%E0%B8%A1-%E0%B8%8A%E0%B8%B1%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88-2-%E0%B8%8B%E0%B8%AD%E0%B8%A2%E0%B8%99%E0%B8%B2%E0%B8%84%E0%B8%99%E0%B8%B4%E0%B8%A7%E0%B8%B2%E0%B8%AA-37-%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B8%9E%E0%B8%A3%E0%B8%B2%E0%B8%A7---5956798",
+        "statusLabel": "฿800,000、26.79㎡；頁面日期為 2026-09-09，超過 30 日，且同頁房型欄位 Studio / 1 房不一致，排除於目前行情與投報。"
+      }
+    ],
+    "yieldStatus": "calculated_same_bedroom_lowest_sale_and_rent",
+    "yieldNote": "目前可比房型為 1 房（未找到兩房直接樣本）。購入基準採最低 1 房總價 ฿1,100,000 與同一物件面積 39㎡；月租以 1 房最低租金單價 ฿6,500/39㎡ × 39㎡估算為 ฿6,500。扣 1 個月仲介費及管理費 ฿15/㎡/月後，淨年投報率為 5.86%。",
+    "yieldEstimate": {
+      "bedrooms": 1,
+      "purchasePriceTHB": 1100000,
+      "purchaseAreaSqm": 39,
+      "purchaseSourceUrl": "https://www.livinginsider.com/detail/condo-for-sale-duliya-place-1bedroom-3225607",
+      "rentSampleTHBPerMonth": 6500,
+      "rentSampleAreaSqm": 39,
+      "rentRateTHBPerSqmMonth": 166.67,
+      "estimatedMonthlyRentAtPurchaseAreaTHB": 6500,
+      "agentMonthsDeducted": 1,
+      "commonFeeTHBPerSqmMonth": 15,
+      "annualCommonFeeTHB": 7020,
+      "netAnnualYieldPercent": 5.86,
+      "rentSourceUrl": "https://www.livinginsider.com/detail/condo-for-rent-duliya-place-1bedroom-3194410",
+      "formula": "((฿6,500 × 11) − (฿15/㎡/月 × 39㎡ × 12)) ÷ ฿1,100,000 × 100 = 5.86%",
+      "caveat": "租盤頁的相對更新時間有差異，現況待刊登者確認；未計稅、維修與交易成本。"
+    }
   }
 ];
