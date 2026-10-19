@@ -1,0 +1,35 @@
+{
+  "hipflatId": 3294,
+  "project": "SP Mansion, Thonglor 8",
+  "checkedAt": "2026-10-19",
+  "coordinate": {
+    "lat": 13.75818478,
+    "lng": 100.5915596,
+    "sourceUrl": "https://ishikawashoji.com/property/sp-mansion/",
+    "corroborationSourceUrl": "https://www.thailand-property.com/condo/12688/sp-mansion-thonglor-8"
+  },
+  "sale": {
+    "price": 6900000,
+    "areaSqm": 66,
+    "bedrooms": 1,
+    "url": "https://www.hipflat.co.th/ads/h93l07928082u0477u9ht9n93ul3a04t"
+  },
+  "rent": {
+    "pricePerMonth": 26300,
+    "areaSqm": 80,
+    "bedrooms": 1,
+    "url": "https://www.hipflat.co.th/ads/t79903048l34t82nn4e7117e3u02u912"
+  },
+  "yieldBaseline": {
+    "bedrooms": 1,
+    "purchasePrice": 6900000,
+    "purchaseAreaSqm": 66,
+    "rentPerSqmMonth": 328.75,
+    "estimatedRentOnSaleArea": 21698,
+    "grossAnnualYieldPercent": 3.77,
+    "annualYieldAfterOneAgentMonthPercent": 3.46,
+    "commonFeeDeducted": false,
+    "commonFeeNote": "No project-specific common fee was verified."
+  },
+  "scopeNote": "Hipflat project page shows 1 sale and 5 rental listings and links the lowest 1-bedroom sale/rent details. The saved individual rent comparison includes one 1-bedroom and one 2-bedroom. Same-name Thonglor listings in Watthana were excluded."
+}
