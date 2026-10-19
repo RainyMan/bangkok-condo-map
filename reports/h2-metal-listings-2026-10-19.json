@@ -1,0 +1,56 @@
+{
+  "hipflatId": 3243,
+  "project": "H2 Metal",
+  "checkedAt": "2026-10-19",
+  "coordinate": {
+    "status": "verified",
+    "source": "https://www.thaigerproperty.com/projects/thailand/bangkok/bang-khen/anusawari/h2-metal"
+  },
+  "sale": {
+    "status": "current_direct_listing",
+    "sample": {
+      "id": "500582088",
+      "price": 1950000,
+      "area": 41.1,
+      "priceSqm": 47445,
+      "beds": 2,
+      "roomType": "2BR",
+      "title": "H2 Metal · 2 房 · 41.1 ㎡ · ฿1,950,000",
+      "url": "https://www.ddproperty.com/en/property/h2-metal-condominium-bangkok-for-sale-500582088",
+      "sourceName": "DDproperty",
+      "projectName": "H2 Metal",
+      "updated": "2026-09-24",
+      "checkedAt": "2026-10-19",
+      "matchedBy": "exact_project_and_address_on_direct_listing",
+      "listingStatus": "active_as_listed"
+    }
+  },
+  "rent": {
+    "status": "current_direct_listing",
+    "sample": {
+      "id": "6362868",
+      "price": 13000,
+      "area": 43,
+      "priceSqm": 302.33,
+      "beds": 1,
+      "roomType": "1BR",
+      "title": "H2 Metal · 1 房 · 43 ㎡ · ฿13,000/月",
+      "url": "https://propertyhub.in.th/en/listings/1bed-1bath-mrt-lat-phrao-43sqm-thb-13-000-mo-fl-6-h2-metal-bangkok---6362868",
+      "sourceName": "PropertyHub",
+      "projectName": "H2 Metal",
+      "updated": "2026-10-03",
+      "availableFrom": "2026-09-03",
+      "checkedAt": "2026-10-19",
+      "matchedBy": "exact_project_and_address_on_direct_listing",
+      "listingStatus": "active_as_listed"
+    }
+  },
+  "yield": {
+    "status": "not_calculated",
+    "reason": "The current verified sale sample has 2 bedrooms while the current rental sample has 1 bedroom; no cross-bedroom ROI substitution."
+  },
+  "sources": {
+    "ddproperty_project": "https://www.ddproperty.com/en/project/15065-h2-metal-condominium",
+    "propertyhub_project": "https://propertyhub.in.th/en/projects/h2-metal---21486"
+  }
+}
