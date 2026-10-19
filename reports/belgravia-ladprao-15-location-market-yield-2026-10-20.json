@@ -1,0 +1,133 @@
+{
+  "hipflatId": 3134,
+  "projectName": "The Belgravia Ratchada-Ladprao 15",
+  "currentProjectName": "The Belgravia @ Ratchada-Ladprao 15",
+  "checkedAt": "2026-10-20",
+  "coordinates": {
+    "verified": true,
+    "lat": 13.8105112,
+    "lng": 100.5738322,
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=13.8105112%2C100.5738322",
+    "verificationSourceUrl": "https://www.ddproperty.com/en/project/6719-the-belgravia-ratchada-ladprao-15"
+  },
+  "project": {
+    "completedYear": 2020,
+    "floors": 8,
+    "units": 185,
+    "commonFeeTHBPerSqmPerMonth": 45,
+    "sourceUrl": "https://propertyhub.in.th/en/projects/the-belgravia-ladprao-15"
+  },
+  "saleSamples": [
+    {
+      "id": "500348168",
+      "price": 2190000,
+      "area": 36,
+      "priceSqm": 60833.33,
+      "beds": 1,
+      "roomType": "1BR",
+      "title": "The Belgravia @ Ratchada-Ladprao 15，1 房，36 ㎡，฿2,190,000",
+      "url": "https://www.ddproperty.com/property/the-belgravia-ratchada-ladprao-15-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B9%80%E0%B8%9A%E0%B8%A5%E0%B8%81%E0%B8%A3%E0%B8%B2%E0%B9%80%E0%B8%A7%E0%B8%B5%E0%B8%A2-%E0%B8%A3%E0%B8%B1%E0%B8%8A%E0%B8%94%E0%B8%B2-%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%A7-15-%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E-%E0%B8%82%E0%B8%B2%E0%B8%A2-500348168",
+      "sourceName": "DDproperty",
+      "projectName": "The Belgravia @ Ratchada-Ladprao 15",
+      "updated": "2026-10-02",
+      "checkedAt": "2026-10-20",
+      "matchedBy": "exact_project_name_and_individual_listing_id_500348168",
+      "listingStatus": "availability_unconfirmed_update_under_30d",
+      "verificationNote": "DDproperty 專案出售頁於 2026-10-02 更新此一房掛牌；個別物件 ID 500348168，฿2,190,000、頁面顯示 36㎡。PropertyHub 交叉刊登相同 CX-156823 房源為 35.78㎡。"
+    },
+    {
+      "id": "6287017",
+      "price": 2190000,
+      "area": 35.78,
+      "priceSqm": 61207.38,
+      "beds": 1,
+      "roomType": "1BR",
+      "title": "For Sale Condo CX-156823，1 房，35.78 ㎡，฿2,190,000",
+      "url": "https://asset-direct-v2.propertyhub.in.th/en/listings/for-sale-condo-the-belgravia-ratchada-ladprao-15-chomphon-chatuchak-bangkok-cx-156823-live-chat-with-us-add-line-connexproperty---6287017",
+      "sourceName": "PropertyHub",
+      "projectName": "The Belgravia @ Ratchada-Ladprao 15",
+      "updated": "2026-09-14",
+      "checkedAt": "2026-10-20",
+      "matchedBy": "same_cross_posted_CX_listing_id_as_DDproperty_500348168",
+      "listingStatus": "availability_unconfirmed_update_over_30d",
+      "verificationNote": "PropertyHub 相同 CX-156823 跨刊登房源提供 35.78㎡精確面積；此頁較舊，與 DDproperty 2026-10-02 專案掛牌交叉核對，不能視為另一個獨立物件。"
+    },
+    {
+      "id": "6005777",
+      "price": 3000000,
+      "area": 29.29,
+      "priceSqm": 102424.04,
+      "beds": 1,
+      "roomType": "1BR",
+      "title": "The Belgravia @ Ratchada-Ladprao 15，1 房，29.29 ㎡，฿3,000,000",
+      "url": "https://propertyhub.in.th/en/listings/a033854-the-belgravia-ratchada-ladprao-15---6005777",
+      "sourceName": "PropertyHub",
+      "projectName": "The Belgravia @ Ratchada-Ladprao 15",
+      "updated": "2026-10-17",
+      "checkedAt": "2026-10-20",
+      "matchedBy": "exact_project_name_and_individual_listing_detail",
+      "listingStatus": "availability_unconfirmed_update_under_30d"
+    }
+  ],
+  "rentSamples": [
+    {
+      "id": "500590567",
+      "price": 13000,
+      "area": 28.27,
+      "priceSqm": 459.85,
+      "beds": 1,
+      "roomType": "1BR",
+      "title": "The Belgravia @ Ratchada-Ladprao 15，1 房，28.27 ㎡，฿13,000/月",
+      "url": "https://www.ddproperty.com/en/property/the-belgravia-ratchada-ladprao-15-bangkok-for-rent-500590567",
+      "sourceName": "DDproperty",
+      "projectName": "The Belgravia @ Ratchada-Ladprao 15",
+      "updated": "2026-09-25",
+      "checkedAt": "2026-10-20",
+      "matchedBy": "exact_project_name_and_individual_listing_id_500590567",
+      "listingStatus": "availability_unconfirmed_update_under_30d",
+      "verificationNote": "DDproperty 個別出租頁列 1 房、28.27㎡、฿13,000/月，並列 2026-09-25 刊登日期。"
+    },
+    {
+      "id": "5509698",
+      "price": 20000,
+      "area": 36.1,
+      "priceSqm": 554.02,
+      "beds": 2,
+      "roomType": "2BR",
+      "title": "The Belgravia @ Ratchada-Ladprao 15，2 房，36.1 ㎡，฿20,000/月",
+      "url": "https://propertyhub.in.th/en/listings/2-br-condo-at-the-belgravia-ratchada-ladprao-15-near-mrt-ratchadaphisek-id-2362413---5509698",
+      "sourceName": "PropertyHub",
+      "projectName": "The Belgravia @ Ratchada-Ladprao 15",
+      "updated": "2026-09-14",
+      "checkedAt": "2026-10-20",
+      "matchedBy": "exact_project_name_and_individual_listing_detail",
+      "listingStatus": "availability_unconfirmed_update_over_30d",
+      "verificationNote": "保留作歷史參考；2026-10-20 時已超過 30 日未刷新，不納入現行投報率。"
+    }
+  ],
+  "yield": {
+    "bedrooms": 1,
+    "salePrice": 2190000,
+    "saleAreaSqm": 36,
+    "rentRateTHBPerSqmPerMonth": 459.85,
+    "estimatedMonthlyRent": 16555,
+    "annualManagementFee": 19440,
+    "deductAgentMonths": 1,
+    "netYieldPercent": 7.43
+  },
+  "sources": [
+    "https://propertyhub.in.th/en/projects/the-belgravia-ladprao-15",
+    "https://propertyhub.in.th/en/condo-for-sale/project-the-belgravia-ladprao-15",
+    "https://propertyhub.in.th/en/condo-for-rent/project-the-belgravia-ladprao-15",
+    "https://asset-direct-v2.propertyhub.in.th/en/listings/for-sale-condo-the-belgravia-ratchada-ladprao-15-chomphon-chatuchak-bangkok-cx-156823-live-chat-with-us-add-line-connexproperty---6287017",
+    "https://www.ddproperty.com/en/project/6719-the-belgravia-ratchada-ladprao-15",
+    "https://www.ddproperty.com/property/the-belgravia-ratchada-ladprao-15-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B9%80%E0%B8%9A%E0%B8%A5%E0%B8%81%E0%B8%A3%E0%B8%B2%E0%B9%80%E0%B8%A7%E0%B8%B5%E0%B8%A2-%E0%B8%A3%E0%B8%B1%E0%B8%8A%E0%B8%94%E0%B8%B2-%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%A7-15-%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E-%E0%B8%82%E0%B8%B2%E0%B8%A2-500348168",
+    "https://www.ddproperty.com/en/property/the-belgravia-ratchada-ladprao-15-bangkok-for-rent-500590567",
+    "https://www.google.com/maps/search/?api=1&query=13.8105112%2C100.5738322"
+  ],
+  "notes": [
+    "PropertyHub CX-156823 and DDproperty 500348168 represent the same sale unit; not counted as two unique homes.",
+    "Old 2-bedroom rent sample is retained but marked stale (>30 days) and excluded from the current ROI baseline.",
+    "No current matched 2-bedroom sale sample was found; current one-bedroom ROI is used instead of mixing room types."
+  ]
+}
