@@ -4368,5 +4368,75 @@ window.BANGKOK_MARKET_CROSSCHECKS =[
       "formula": "((฿6,500 × 11) − (฿15/㎡/月 × 39㎡ × 12)) ÷ ฿1,100,000 × 100 = 5.86%",
       "caveat": "租盤頁的相對更新時間有差異，現況待刊登者確認；未計稅、維修與交易成本。"
     }
+  },
+  {
+    "hipflatId": 3188,
+    "projectName": "Baan K Residence",
+    "asOf": "2026-10-20",
+    "sourceName": "Hipflat / 108Siam",
+    "projectSourceUrl": "https://www.hipflat.co.th/projects/baan-k-residence-exzblv",
+    "sale": {
+      "activeListingCount": 0,
+      "displayedResultCount": 0,
+      "observedCount": 0,
+      "sourceUrl": "https://www.hipflat.co.th/projects/baan-k-residence-exzblv",
+      "note": "本次核對的 Hipflat 專案頁列 2 筆出租、未列出售物件；另查 108Siam 專案頁僅列出租單位。尚無可核實出售物件，故不計投報率。",
+      "listings": []
+    },
+    "rent": {
+      "activeListingCount": 2,
+      "displayedResultCount": 2,
+      "observedCount": 2,
+      "sourceUrl": "https://www.hipflat.co.th/projects/baan-k-residence-exzblv",
+      "note": "Hipflat 精確專案頁列出 2 筆 1 房出租：฿48,000/月、55㎡（฿873/㎡/月）及 ฿48,000/月、50㎡（฿960/㎡/月），並提供各自的個別物件連結。108Siam 專案頁亦顯示目前有 2 筆 1 房出租，價格均為 ฿48,000/月。單筆更新日期未公開，實際空置狀態待刊登者確認。",
+      "listings": [
+        {
+          "listingId": "47t40c8n88cec4978ueutchh3u02u982",
+          "price": 48000,
+          "area": 55,
+          "priceSqm": 873,
+          "bedrooms": 1,
+          "listedAt": "未提供更新日",
+          "url": "https://www.hipflat.co.th/ads/47t40c8n88cec4978ueutchh3u02u982",
+          "sourceName": "Hipflat（刊登者：108Siam）",
+          "statusLabel": "專案頁列出租；單筆更新日及現況待確認"
+        },
+        {
+          "listingId": "4lunl3478ll3l2a2en72l37l3u0heael",
+          "price": 48000,
+          "area": 50,
+          "priceSqm": 960,
+          "bedrooms": 1,
+          "listedAt": "未提供更新日",
+          "url": "https://www.hipflat.co.th/ads/4lunl3478ll3l2a2en72l37l3u0heael",
+          "sourceName": "Hipflat（刊登者：FazWaz）",
+          "statusLabel": "專案頁列出租；單筆更新日及現況待確認"
+        }
+      ]
+    },
+    "availabilitySources": [
+      {
+        "sourceName": "Hipflat 專案頁／個別掛牌",
+        "url": "https://www.hipflat.co.th/projects/baan-k-residence-exzblv",
+        "statusLabel": "精確專案頁列兩筆 1 房出租，並可開啟個別房源。"
+      },
+      {
+        "sourceName": "108Siam 專案頁",
+        "url": "https://www.108siam.com/en/projects/thailand/bangkok/bang-rak/si-lom/baan-k-residence?eq=rent",
+        "statusLabel": "專案頁列 2 筆出租：1 房 50㎡及 55㎡，均為 ฿48,000/月；未找到出售單位。"
+      },
+      {
+        "sourceName": "Hipflat 1 房出租單筆（55㎡）",
+        "url": "https://www.hipflat.co.th/ads/47t40c8n88cec4978ueutchh3u02u982",
+        "statusLabel": "฿48,000/月、55㎡、1 房（฿873/㎡/月）；刊登更新日未提供，現況待確認。"
+      },
+      {
+        "sourceName": "Hipflat 1 房出租單筆（50㎡）",
+        "url": "https://www.hipflat.co.th/ads/4lunl3478ll3l2a2en72l37l3u0heael",
+        "statusLabel": "฿48,000/月、50㎡、1 房（฿960/㎡/月）；刊登更新日未提供，現況待確認。"
+      }
+    ],
+    "yieldStatus": "not_calculated_no_verified_sale_listing",
+    "yieldNote": "已核實兩筆個別出租物件，但目前沒有可核實的出售掛牌，因此不估算投報率。"
   }
 ];

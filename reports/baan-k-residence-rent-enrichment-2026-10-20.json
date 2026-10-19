@@ -1,0 +1,54 @@
+{
+  "hipflatId": 3188,
+  "projectName": "Baan K Residence",
+  "checkedAt": "2026-10-20",
+  "coordinates": {
+    "verified": true,
+    "sourceUrl": "https://www.thaigerproperty.com/projects/thailand/bangkok/bang-rak/si-lom/baan-k-residence"
+  },
+  "rentSamples": [
+    {
+      "id": "47t40c8n88cec4978ueutchh3u02u982",
+      "price": 48000,
+      "area": 55,
+      "priceSqm": 873,
+      "beds": 1,
+      "roomType": "1BR",
+      "title": "Baan K Residence，1 房，55 ㎡，฿48,000/月",
+      "url": "https://www.hipflat.co.th/ads/47t40c8n88cec4978ueutchh3u02u982",
+      "sourceName": "Hipflat（刊登者：108Siam）",
+      "projectName": "Baan K Residence",
+      "checkedAt": "2026-10-20",
+      "matchedBy": "exact_hipflat_project_and_direct_listing_link",
+      "listingStatus": "availability_unconfirmed_date_unknown",
+      "verificationNote": "Hipflat 精確專案頁將此個別物件列為 Baan K Residence，1 房、55㎡、฿48,000/月，並連到此物件頁；108Siam 專案頁目前也列相同面積與租金的 1 房房源。個別物件未提供更新日，是否仍可租請向刊登者確認。"
+    },
+    {
+      "id": "4lunl3478ll3l2a2en72l37l3u0heael",
+      "price": 48000,
+      "area": 50,
+      "priceSqm": 960,
+      "beds": 1,
+      "roomType": "1BR",
+      "title": "Baan K Residence，1 房，50 ㎡，฿48,000/月",
+      "url": "https://www.hipflat.co.th/ads/4lunl3478ll3l2a2en72l37l3u0heael",
+      "sourceName": "Hipflat（刊登者：FazWaz）",
+      "projectName": "Baan K Residence",
+      "checkedAt": "2026-10-20",
+      "matchedBy": "exact_hipflat_project_and_direct_listing_link",
+      "listingStatus": "availability_unconfirmed_date_unknown",
+      "verificationNote": "Hipflat 精確專案頁將此個別物件列為 Baan K Residence，1 房、50㎡、฿48,000/月，並連到此物件頁；專案頁目前列兩筆出租。個別物件未提供更新日，是否仍可租請向刊登者確認。"
+    }
+  ],
+  "saleStatus": "No sale listings shown on the checked Hipflat project page; no sale sample used.",
+  "yieldStatus": "Not calculated: no verified sale listing.",
+  "sources": [
+    "https://www.hipflat.co.th/projects/baan-k-residence-exzblv",
+    "https://www.108siam.com/en/projects/thailand/bangkok/bang-rak/si-lom/baan-k-residence?eq=rent"
+  ],
+  "notes": [
+    "The two individual rent links are linked directly from Hipflat's exact project page; both bedroom count, area, and monthly rent are shown in its unit rows.",
+    "108Siam's project page independently lists two 1-bedroom units at ฿48,000/month and gives the same 50 sqm and 55 sqm areas.",
+    "Neither source provides a per-listing update date; current vacancy remains unconfirmed."
+  ]
+}
