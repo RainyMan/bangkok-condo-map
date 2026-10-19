@@ -1,0 +1,98 @@
+{
+  "hipflatId": 4430,
+  "project": "JW CONDO @DONMUANG",
+  "checkedAt": "2026-10-19",
+  "coordinates": {
+    "lat": 13.92407,
+    "lng": 100.598357,
+    "verifiedSourceUrl": "https://propertyscout.co.th/en/bangkok/condo/jw-condo-donmuang/"
+  },
+  "sale": {
+    "id": "6142682",
+    "price": 1700000,
+    "area": 26.8,
+    "priceSqm": 63433,
+    "beds": 1,
+    "bedrooms": 1,
+    "roomType": "1BR",
+    "title": "JW Condo，1 房，26.8 ㎡，฿1,700,000",
+    "url": "https://assets.propertyhub.in.th/listings/a050074-jw-condo---6142682",
+    "sourceName": "PropertyHub",
+    "projectName": "JW CONDO @DONMUANG",
+    "updated": "2026-10-07",
+    "checkedAt": "2026-10-19",
+    "matchedBy": "PropertyHub_exact_project_feed_and_direct_listing_A050074_1BR_26.8sqm_1700000",
+    "listingStatus": "active_as_listed"
+  },
+  "saleLowestPricePerSqmSample": {
+    "id": "6352938",
+    "price": 1700000,
+    "area": 29.0,
+    "priceSqm": 58621,
+    "beds": 1,
+    "bedrooms": 1,
+    "roomType": "1BR",
+    "title": "JW Condo，1 房，29 ㎡，฿1,700,000",
+    "url": "https://propertyhub.in.th/en/listings/s020057-jw-condo---6352938",
+    "sourceName": "PropertyHub",
+    "projectName": "JW CONDO @DONMUANG",
+    "updated": "2026-10-07",
+    "checkedAt": "2026-10-19",
+    "matchedBy": "PropertyHub_exact_project_feed_and_direct_listing_S020057_1BR_29sqm_1700000",
+    "listingStatus": "active_as_listed"
+  },
+  "rent": {
+    "id": "1930800",
+    "price": 7000,
+    "area": 27.0,
+    "priceSqm": 259,
+    "beds": 1,
+    "bedrooms": 1,
+    "roomType": "1BR",
+    "title": "JW Condo，1 房，27 ㎡，฿7,000/月",
+    "url": "https://asset-direct-v2.propertyhub.in.th/en/listings/for-rent-jw-condo-1-bed-27-sq-m-2nd-floor--ac5f0927---1930800",
+    "sourceName": "PropertyHub",
+    "projectName": "JW CONDO @DONMUANG",
+    "updated": "2026-10-16",
+    "checkedAt": "2026-10-19",
+    "matchedBy": "PropertyHub_exact_project_feed_and_direct_listing_1930800_1BR_27sqm_7000_month",
+    "listingStatus": "active_as_listed"
+  },
+  "saleProjectPage": {
+    "url": "https://propertyhub.in.th/en/condo-for-sale/project-jw-condo",
+    "visibleResults": 17
+  },
+  "rentProjectPage": {
+    "url": "https://propertyhub.in.th/en/projects/jw-condo",
+    "visibleResults": 20
+  },
+  "projectFacts": {
+    "completedYear": 2017,
+    "buildings": 6,
+    "floors": 8,
+    "units": 673,
+    "sourceUrl": "https://propertyhub.in.th/en/projects/jw-condo",
+    "commonAreaFee": "not published"
+  },
+  "yieldRecalculation": {
+    "bedrooms": 1,
+    "purchasePriceThb": 1700000,
+    "purchaseAreaSqmFromSameLowestSaleListing": 26.8,
+    "rentListingPriceThbPerMonth": 7000,
+    "rentListingAreaSqm": 27.0,
+    "sameBedroomRentRateThbPerSqmMonth": 259.26,
+    "estimatedMonthlyRentAtSaleAreaThb": 6948,
+    "grossAnnualYieldPercent": 4.9,
+    "annualYieldAfterOneAgentMonthPercent": 4.5,
+    "commonAreaFeeDeducted": false,
+    "commonAreaFeeReason": "No published and verified common-area fee was found.",
+    "sourceSaleUrl": "https://assets.propertyhub.in.th/listings/a050074-jw-condo---6142682",
+    "sourceRentUrl": "https://asset-direct-v2.propertyhub.in.th/en/listings/for-rent-jw-condo-1-bed-27-sq-m-2nd-floor--ac5f0927---1930800",
+    "defaultNetYieldPercent": 4.5
+  },
+  "limitations": [
+    "The sale listing was refreshed 2026-10-07 and the rent listing 2026-10-16; availability has not been reconfirmed directly with advertisers.",
+    "The default estimate uses a one-bedroom pair because the checked PropertyHub project information lists studio and one-bedroom unit types, not two bedrooms.",
+    "The estimate assumes 11 paid rental months by default and excludes taxes, repairs, transaction costs, and unverified management fees."
+  ]
+}
