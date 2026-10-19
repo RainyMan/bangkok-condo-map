@@ -131,8 +131,8 @@ def main():
    cards=data['cards']; low_price=min(cards,key=lambda x:x['price']); low_rate=min(cards,key=lambda x:x['price']/x['area'])
    bybed={}
    for beds in sorted({int(x['beds']) for x in cards if isinstance(x.get('beds'),(int,float)) and x['beds']>0}):
-    group=[x for x in cards if x.get('beds')==beds]; lo=min(group,key=lambda x:x['price'])
-    bybed[str(beds)]={'count':len(group),'minimum':lo['price'],'area':lo['area'],'priceSqm':lo['priceSqm'],'minimumSqm':round(min(x['price']/x['area'] for x in group)),'sourceUrl':lo['url']}
+    group=[x for x in cards if x.get('beds')==beds]; lo=min(group,key=lambda x:x['price']); lo_sqm=min(group,key=lambda x:x['price']/x['area'])
+    bybed[str(beds)]={'count':len(group),'minimum':lo['price'],'area':lo['area'],'minimumArea':lo['area'],'priceSqm':lo['priceSqm'],'minimumSqm':round(lo_sqm['price']/lo_sqm['area']),'sourceUrl':lo['url'],'minimumSourceUrl':lo['url'],'minimumSqmSourceUrl':lo_sqm['url']}
    mm[kind]={'count':len(cards),'platformCount':data['totalCount'],'observedCount':len(cards),'countKind':'manual_verified_listing','average':round(sum(x['price'] for x in cards)/len(cards)),'minimum':low_price['price'],'minimumArea':low_price['area'],'averageSqm':round(sum(x['priceSqm'] for x in cards)/len(cards)),'minimumSqm':round(low_rate['price']/low_rate['area']),'minimumSampleUpdated':low_price.get('updated'),'minimumSqmSampleUpdated':low_rate.get('updated'),'asOf':date.today().isoformat(),'snapshotMethod':'PropertyHub exact project page, all available listing pages with validated project ID; known exclusions removed','sourceName':'PropertyHub 專案單筆掛牌','source':data['sourceUrl'],'minimumSourceUrl':low_price['url'],'minimumSqmSourceUrl':low_rate['url'],'byBedroom':bybed,'samples':cards}
    mm['replace'+kind.title()]=True; new_count[kind]+=1
   if markets: manual_by[pid]=mm

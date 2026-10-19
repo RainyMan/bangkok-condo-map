@@ -1,0 +1,51 @@
+{
+  "hipflatId": 3402,
+  "projectName": "Tait Sathorn 12",
+  "propertyHubProjectId": "3995",
+  "projectUrl": "https://propertyhub.in.th/en/projects/tait-12",
+  "saleUrl": "https://propertyhub.in.th/en/condo-for-sale/project-tait-12",
+  "rentUrl": "https://propertyhub.in.th/en/condo-for-rent/project-tait-12",
+  "coordinate": {
+    "lat": 13.722526314344472,
+    "lng": 100.52590373450727,
+    "source": "https://propertyhub.in.th/en/projects/tait-12",
+    "crossCheck": "https://www.hipflat.co.th/en/projects/tait-sathorn-12"
+  },
+  "projectFacts": {
+    "completionYear": 2022,
+    "floors": 40,
+    "units": 268,
+    "feeBahtPerSqmMonthly": 110.0
+  },
+  "currentLinkedListings": {
+    "sale": {
+      "uniqueSamples": 63,
+      "platformCount": 63,
+      "lowestTwoBedroom": {
+        "price": 19690000.0,
+        "areaSqm": 63.53,
+        "pricePerSqm": 309932,
+        "url": "https://propertyhub.in.th/en/listings/tait-12-2-bedrooms-for-sale--aed50983---4522302"
+      }
+    },
+    "rent": {
+      "uniqueSamples": 202,
+      "platformCount": 203,
+      "lowestTwoBedroomRentPerSqm": {
+        "rate": 914.0,
+        "url": "https://propertyhub.in.th/en/listings/tait-12-2-bedrooms-for-rent---4319028"
+      }
+    }
+  },
+  "twoBedroomNetYieldEstimate": {
+    "estimatedMonthlyRent": 58066,
+    "purchasePrice": 19690000.0,
+    "areaSqm": 63.53,
+    "managementFeeAnnual": 83860,
+    "withOneAgentMonthPercent": 2.82,
+    "withoutAgentMonthPercent": 3.11,
+    "saleSourceUrl": "https://propertyhub.in.th/en/listings/tait-12-2-bedrooms-for-sale--aed50983---4522302",
+    "rentSourceUrl": "https://propertyhub.in.th/en/listings/tait-12-2-bedrooms-for-rent---4319028"
+  },
+  "checkedAt": "2026-10-19"
+}

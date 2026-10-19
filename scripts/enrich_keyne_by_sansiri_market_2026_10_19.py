@@ -67,7 +67,7 @@ def main() -> None:
                 "count": len(room_rows), "minimum": room_total["price"], "area": room_total["area"],
                 "minimumArea": room_total["area"], "priceSqm": round(room_total["price"] / room_total["area"]),
                 "minimumSqm": round(room_sqm["price"] / room_sqm["area"]),
-                "sourceUrl": room_total["url"], "minimumSourceUrl": room_total["url"],
+            "sourceUrl": room_total["url"], "minimumSourceUrl": room_total["url"],
                 "minimumSqmSourceUrl": room_sqm["url"],
             }
         samples = [{**row, "sourceName": "PropertyHub"} for row in cards]
