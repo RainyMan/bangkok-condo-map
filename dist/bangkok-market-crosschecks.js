@@ -3935,5 +3935,108 @@ window.BANGKOK_MARKET_CROSSCHECKS =[
     ],
     "yieldStatus": "no_current_same_bedroom_rent",
     "yieldNote": "有可核對的兩房出售價與面積，但目前找不到同案現行出租物件；舊一房租盤逾 30 日，不能用來估兩房投報。"
+  },
+  {
+    "hipflatId": 5010,
+    "projectName": "Dynasty Complex",
+    "asOf": "2026-10-19",
+    "sourceName": "FazWaz / DDproperty / PropertyHub / Hipflat",
+    "projectSourceUrl": "https://www.hipflat.co.th/en/projects/dynasty-complex-heoidd",
+    "sale": {
+      "activeListingCount": 2,
+      "displayedResultCount": 2,
+      "sourceUrl": "https://www.fazwaz.co.th/en/property-for-sale/thailand/bangkok/wang-thong-lang/saphan-song/at-dynasty-complex",
+      "note": "已核對兩筆不同物件：FazWaz 2 房 71.72㎡、฿3,200,000（近期更新），以及 DDproperty 3 房 60.15㎡、฿2,800,000；各房型分開取最低價。",
+      "samples": [
+        {
+          "id": "U6793602",
+          "price": 3200000,
+          "area": 71.72,
+          "priceSqm": 44618,
+          "beds": 2,
+          "roomType": "2BR",
+          "title": "Dynasty Complex，2 房，71.72 ㎡，฿3,200,000",
+          "url": "https://www.fazwaz.co.th/en/property-sales/2-bedroom-condo-for-sale-at-dynasty-complex-in-saphan-song-bangkok-u6793602",
+          "sourceName": "FazWaz",
+          "projectName": "Dynasty Complex",
+          "updated": "2026-10-19",
+          "checkedAt": "2026-10-19",
+          "matchedBy": "exact_project_name_and_direct_listing_page",
+          "listingStatus": "active_as_listed",
+          "verificationNote": "FazWaz 個別頁列 2 房、71.72㎡、฿3,200,000；刊登日 2026-10-09，查核時顯示 3 小時前更新。"
+        },
+        {
+          "id": "500609671",
+          "price": 2800000,
+          "area": 60.15,
+          "priceSqm": 46550,
+          "beds": 3,
+          "roomType": "3BR",
+          "title": "Dynasty Condominium，3 房，60.15 ㎡，฿2,800,000",
+          "url": "https://www.ddproperty.com/en/property/dynasty-condominium-bangkok-for-sale-500609671",
+          "sourceName": "DDproperty",
+          "projectName": "Dynasty Complex",
+          "checkedAt": "2026-10-19",
+          "matchedBy": "exact_project_alias_address_and_direct_listing_page",
+          "listingStatus": "active_as_listed",
+          "verificationNote": "DDproperty 搜尋結果列 Dynasty Condominium、12 Soi Lat Phrao 71、3 房、60.15㎡、฿2,800,000；地址與專案相符，個別頁刊登日期未能核實。"
+        }
+      ]
+    },
+    "rent": {
+      "activeListingCount": 0,
+      "displayedResultCount": 2,
+      "sourceUrl": "https://propertyhub.in.th/en/condo-for-rent/project-dynasty-complex",
+      "note": "PropertyHub 索引的兩筆 1 房租盤最後可見日期為 2026-09-05、09-12，查核日已超過 30 日，無法確認仍可租；另有 FazWaz 7 房租盤逾一年未更新。沒有可核實的現行兩房租金，不計兩房投報。"
+    },
+    "availabilitySources": [
+      {
+        "sourceName": "Hipflat 專案頁",
+        "url": "https://www.hipflat.co.th/en/projects/dynasty-complex-heoidd",
+        "statusLabel": "專案頁目前列出 1 個出售單位，摘要價格 ฿3,200,000。"
+      },
+      {
+        "sourceName": "FazWaz 2 房個別出售掛牌",
+        "url": "https://www.fazwaz.co.th/en/property-sales/2-bedroom-condo-for-sale-at-dynasty-complex-in-saphan-song-bangkok-u6793602",
+        "statusLabel": "2 房、71.72㎡、฿3,200,000；刊登日 2026-10-09，查核時顯示 3 小時前更新。"
+      },
+      {
+        "sourceName": "FazWaz 專案出售頁",
+        "url": "https://www.fazwaz.co.th/en/property-for-sale/thailand/bangkok/wang-thong-lang/saphan-song/at-dynasty-complex",
+        "statusLabel": "專案頁列出 1 個現行 2 房出售單位。"
+      },
+      {
+        "sourceName": "DDproperty 3 房個別出售掛牌",
+        "url": "https://www.ddproperty.com/en/property/dynasty-condominium-bangkok-for-sale-500609671",
+        "statusLabel": "搜尋結果列 3 房、60.15㎡、฿2,800,000，地址與本案相符；刊登日期未能核實。"
+      },
+      {
+        "sourceName": "PropertyHub 專案出租頁",
+        "url": "https://propertyhub.in.th/en/condo-for-rent/project-dynasty-complex",
+        "statusLabel": "索引列 2 筆 1 房、33㎡、฿12,500/月；日期 2026-09-05 與 2026-09-12，超過 30 日，現況未核實，不納入現行租金或投報。"
+      },
+      {
+        "sourceName": "PropertyHub 租盤 1",
+        "url": "https://propertyhub.in.th/en/listings/for-rent-condo-dynasty-complex-building-1-floor-3-1-bed-room-room-size-33-sqm--b4770969---5287445",
+        "statusLabel": "專案頁索引租盤；最後可見日期 2026-09-12，超過 30 日，現況未確認。"
+      },
+      {
+        "sourceName": "PropertyHub 租盤 2",
+        "url": "https://propertyhub.in.th/en/listings/condo-for-rent-at-dynasty-complex-c6807069---5279526",
+        "statusLabel": "專案頁索引租盤；最後可見日期 2026-09-05，超過 30 日，現況未確認。"
+      },
+      {
+        "sourceName": "FazWaz 舊租盤",
+        "url": "https://www.fazwaz.co.th/en/property-rent/7-bedroom-condo-for-rent-at-dynasty-complex-in-saphan-song-bangkok-u1991456",
+        "statusLabel": "7 房、200㎡、฿60,000/月；刊登於 2024-12-27，逾一年未更新，排除於現行行情與投報。"
+      },
+      {
+        "sourceName": "PropertyHub 專案座標與身份",
+        "url": "https://propertyhub.in.th/en/projects/dynasty-complex",
+        "statusLabel": "專案頁座標已與 Hipflat 專案名稱和地址交叉比對。"
+      }
+    ],
+    "yieldStatus": "no_current_same_bedroom_rent",
+    "yieldNote": "最低兩房購入價為 ฿3,200,000，面積 71.72㎡；沒有可核實的現行兩房租金樣本，故不計投報率。"
   }
 ];
