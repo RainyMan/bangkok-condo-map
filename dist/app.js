@@ -392,7 +392,7 @@
         return refreshed;
       }
       let previous = {};
-      for (let version = 204; version >= 5; version--) {
+      for (let version = 205; version >= 5; version--) {
         const stored = localStorage.getItem(`bangkokCondoYieldInputsV${version}`);
         if (stored) { previous = JSON.parse(stored); break; }
       }
