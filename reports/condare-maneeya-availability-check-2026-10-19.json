@@ -1,0 +1,47 @@
+{
+  "hipflatId": 3022,
+  "project": "Condare Maneeya",
+  "checkedAt": "2026-10-19",
+  "availability": {
+    "hipflatProjectPage": {
+      "url": "https://www.hipflat.co.th/projects/condare-maneeya-vmdoxl",
+      "result": "The project page says no properties are currently available.",
+      "sourceIndexAge": "about 3 weeks before 2026-10-19"
+    },
+    "propertyHubRentProjectPage": {
+      "url": "https://propertyhub.in.th/en/condo-for-rent/project-condare-maneeya",
+      "result": "No matched properties for Rent.",
+      "sourceIndexAge": "about 3 months before 2026-10-19",
+      "limitation": "Search index is older; treat as supporting absence evidence, not proof of live availability."
+    },
+    "propertyHubProjectOverview": {
+      "url": "https://propertyhub.in.th/en/projects/condare-maneeya",
+      "displayedForSale": 1,
+      "displayedForRent": 0,
+      "sourceIndexAge": "about 3 months before 2026-10-19"
+    }
+  },
+  "saleHistoricalSample": {
+    "priceTHB": 3811000,
+    "areaSqm": 88.05,
+    "bedrooms": 2,
+    "source": "https://www.rightmove.condothai.co.th/room/60158/Condare%20Maneeya/0/?distance=3",
+    "checkedAt": "2026-10-18",
+    "status": "availability_unconfirmed_update_over_30d",
+    "decision": "Keep only as unconfirmed historical context; do not use as current market price or ROI purchase baseline."
+  },
+  "rent": {
+    "currentSampleVerified": false,
+    "decision": "Do not impute rent from nearby projects or a different property type."
+  },
+  "yield": {
+    "calculated": false,
+    "reason": "No current, source-linked rental unit was verified."
+  },
+  "sources": [
+    "https://www.hipflat.co.th/projects/condare-maneeya-vmdoxl",
+    "https://propertyhub.in.th/en/condo-for-rent/project-condare-maneeya",
+    "https://propertyhub.in.th/en/projects/condare-maneeya",
+    "https://www.rightmove.condothai.co.th/room/60158/Condare%20Maneeya/0/?distance=3"
+  ]
+}
