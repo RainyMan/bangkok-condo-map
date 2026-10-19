@@ -408,7 +408,7 @@
               autoBaseline: true,
             };
           }
-          continue;
+          return;
         }
         // Migrate generated values to the current default room policy (lowest
         // two-bedroom sale when available); customized values remain intact.
