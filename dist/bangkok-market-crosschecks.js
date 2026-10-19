@@ -3856,5 +3856,84 @@ window.BANGKOK_MARKET_CROSSCHECKS =[
     ],
     "yieldStatus": "not_calculated_special_asset_only_no_rent",
     "yieldNote": "目前無一般市場的可核實售租配對。SAM 管理資產掛牌未確認現況且無同案租金樣本，故只保留來源連結，不計投報。"
+  },
+  {
+    "hipflatId": 5008,
+    "projectName": "D5 Condo",
+    "asOf": "2026-10-19",
+    "sourceName": "DDproperty / PropertyHub",
+    "projectSourceUrl": "https://www.ddproperty.com/en/condo-for-sale/at-d5-condo-11727/priced-under-3m-thb",
+    "sale": {
+      "activeListingCount": 4,
+      "displayedResultCount": 1,
+      "sourceUrl": "https://www.ddproperty.com/en/condo-for-sale/at-d5-condo-11727/priced-under-3m-thb",
+      "note": "DDproperty 專案出售頁顯示 4 筆在架掛牌。個別核對其中一筆 2 房、56.76㎡、฿1,850,000，刊登日 2026-10-14；只將可直接核對的樣本納入行情。PropertyHub 專案頁的同價同面積兩房掛牌視為可能重複，不另計。",
+      "listings": [
+        {
+          "listingId": "500639969",
+          "price": 1850000,
+          "area": 56.76,
+          "priceSqm": 32593,
+          "bedrooms": 2,
+          "listedAt": "2026-10-14",
+          "url": "https://www.ddproperty.com/en/property/d5-condo-bangkok-for-sale-500639969",
+          "sourceName": "DDproperty"
+        }
+      ]
+    },
+    "rent": {
+      "activeListingCount": 0,
+      "sourceUrl": "https://propertyhub.in.th/%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3-d5-condominium",
+      "note": "PropertyHub D5 Condominium 專案出租頁顯示 0 筆。DDproperty 搜尋索引另曾列 1 房、31㎡、฿9,000/月的 2026-07-02 掛牌，已超過 30 日且不符兩房房型；未取得現行直接租盤，不納入租金或投報。"
+    },
+    "availabilitySources": [
+      {
+        "sourceName": "DDproperty 出售專案頁",
+        "url": "https://www.ddproperty.com/en/condo-for-sale/at-d5-condo-11727/priced-under-3m-thb",
+        "statusLabel": "截至 2026-10-19 顯示 4 筆在架出售；個別核對其中 2 房、56.76㎡、฿1,850,000 一筆，刊登日 2026-10-14。"
+      },
+      {
+        "sourceName": "DDproperty 兩房出售單筆",
+        "url": "https://www.ddproperty.com/en/property/d5-condo-bangkok-for-sale-500639969",
+        "statusLabel": "2 房 · 56.76㎡ · ฿1,850,000 · ฿32,593/㎡；刊登日 2026-10-14。"
+      },
+      {
+        "sourceName": "PropertyHub 出售專案頁",
+        "url": "https://propertyhub.in.th/%E0%B8%82%E0%B8%B2%E0%B8%A2%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3-d5-condominium",
+        "statusLabel": "專案頁列 3 筆出售；另有一筆同價、同房型、同面積的 2 房頁面，視為可能同一單位，不重複計數。"
+      },
+      {
+        "sourceName": "PropertyHub 出售單筆交叉核對",
+        "url": "https://propertyhub.in.th/listings/%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-2-%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B8%AD%E0%B8%99-%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B9%83%E0%B8%AB%E0%B8%8D%E0%B9%88-%E0%B9%80%E0%B8%9E%E0%B8%B5%E0%B8%A2%E0%B8%87-1-85-%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%9A%E0%B8%B2%E0%B8%97-d5-%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94%E0%B8%A1%E0%B8%B4%E0%B9%80%E0%B8%99%E0%B8%B5%E0%B8%A2%E0%B8%A1---6262276",
+        "statusLabel": "同為 2 房、56.76㎡、฿1,850,000；更新日未提供，僅作重複刊登交叉核對，不另計樣本。"
+      },
+      {
+        "sourceName": "PropertyHub 出租專案頁",
+        "url": "https://propertyhub.in.th/%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3-d5-condominium",
+        "statusLabel": "專案頁顯示目前 0 筆出租掛牌。"
+      },
+      {
+        "sourceName": "DDproperty 區域出租搜尋",
+        "url": "https://www.ddproperty.com/en/property-for-rent/2?_freetextDisplay=Bueng+Kum%2C+Bangkok&districtCode=TH1027&isCommercial=false&listingType=rent&locale=en&minSize=30&order=desc&page=2&propertyTypeCode=CONDO&propertyTypeGroup=N&regionCode=TH10&slug=2&sort=size",
+        "statusLabel": "搜尋頁曾列出 D5 Condo 1 房、31㎡、฿9,000/月，刊登日 2026-07-02；超過 30 日，且不是同房型，排除於現行租金與投報。"
+      },
+      {
+        "sourceName": "KaiBaanThai 專案頁",
+        "url": "https://www.kaibaanthai.com/en/projects/thailand/bangkok/bueng-kum/nuan-chan/d5-condo",
+        "statusLabel": "頁面顯示租盤數量摘要，但可用房源區塊沒有匹配物件；無法建立可核對的直接租盤樣本。"
+      },
+      {
+        "sourceName": "FazWaz 專案出租搜尋",
+        "url": "https://www.fazwaz.co.th/en/property-for-rent/thailand/bangkok/bueng-kum/nuan-chan/at-d5-condo",
+        "statusLabel": "頁面摘要列出租盤數量與租金範圍，但未取得可核實的直接物件頁，未納入租金。"
+      },
+      {
+        "sourceName": "Thaiger Property 專案頁座標",
+        "url": "https://www.thaigerproperty.com/projects/thailand/bangkok/bueng-kum/nuan-chan/d5-condo",
+        "statusLabel": "唯一專案 slug 與 D5 Condo 名稱相符；已用於本 Condo 的核實座標 (13.8345948, 100.6401289)。"
+      }
+    ],
+    "yieldStatus": "no_current_same_bedroom_rent",
+    "yieldNote": "有可核對的兩房出售價與面積，但目前找不到同案現行出租物件；舊一房租盤逾 30 日，不能用來估兩房投報。"
   }
 ];
