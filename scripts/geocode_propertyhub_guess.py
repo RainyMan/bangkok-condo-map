@@ -13,6 +13,7 @@ from datetime import date
 from typing import Any
 
 import requests
+from audit_propertyhub_city_listings import district as propertyhub_district
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
@@ -154,12 +155,35 @@ def write_output(rows: list[dict[str, Any]]) -> None:
             previous = []
         by_id = {int(row["hipflatProjectId"]): row for row in previous
                  if row.get("locationVerified") and row.get("lat") is not None and row.get("lng") is not None}
-        by_id.update({int(row["hipflatProjectId"]): row for row in rows
-                      if row.get("locationVerified") and row.get("lat") is not None and row.get("lng") is not None})
+        # Preserve every previously reviewed coordinate. This runner uses a
+        # unique project-name match to discover candidates, but that alone can
+        # still match a same-name project in a different district. New results
+        # fill gaps only; replacing an existing reviewed identity requires a
+        # separate, explicit reconciliation.
+        for row in rows:
+            project_id = int(row["hipflatProjectId"])
+            if (project_id not in by_id and row.get("locationVerified")
+                    and row.get("lat") is not None and row.get("lng") is not None):
+                by_id[project_id] = row
         rows = sorted(by_id.values(), key=lambda row: int(row["hipflatProjectId"]))
     target = OUTPUT.with_suffix(".js.tmp")
     target.write_text("window.BANGKOK_PROPERTYHUB_GUESSED_DETAILS = " + json.dumps(rows, ensure_ascii=False, separators=(",", ":")) + ";\n", encoding="utf-8")
     target.replace(OUTPUT)
+
+
+def verified_rows(rows: list[dict[str, Any]], projects: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    projects_by_id = {int(row["id"]): row for row in projects}
+    accepted = []
+    for row in rows:
+        if not row.get("locationVerified") or row.get("lat") is None or row.get("lng") is None:
+            continue
+        target = projects_by_id.get(int(row["hipflatProjectId"]))
+        expected = propertyhub_district((target or {}).get("address", ""))
+        actual = propertyhub_district(row.get("projectAddress", ""))
+        if expected and actual and expected != actual:
+            continue
+        accepted.append(row)
+    return accepted
 
 
 def main() -> int:
@@ -194,10 +218,10 @@ def main() -> int:
                 out.write(json.dumps(item, ensure_ascii=False, separators=(",", ":")) + "\n"); out.flush()
             cached[int(item["hipflatProjectId"])] = item
             if done % 25 == 0:
-                valid = [x for x in cached.values() if x.get("locationVerified")]
+                valid = verified_rows(list(cached.values()), projects)
                 write_output(valid)
                 report(f"Guessed project pages {done}/{len(eligible)}; verified coordinates {len(valid)}")
-    valid = [x for x in cached.values() if x.get("locationVerified")]
+    valid = verified_rows(list(cached.values()), projects)
     write_output(valid)
     report(f"Finished; {len(valid)} unique address/name verified coordinates")
     log.close()

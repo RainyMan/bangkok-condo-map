@@ -1,0 +1,47 @@
+{
+  "checkedAt": "2026-10-19",
+  "hipflatProjectCount": 3555,
+  "propertyHubCandidatePagesChecked": 1250,
+  "uniqueNamePageCandidatesInCache": 350,
+  "newCoordinateSourceRecordsAccepted": 1,
+  "acceptedRecords": [
+    {
+      "hipflatId": 6184,
+      "name": "ASHER Ratchada",
+      "propertyHubProjectId": "3544",
+      "projectUrl": "https://propertyhub.in.th/en/projects/asher-ratchada",
+      "lat": 13.78681223840795,
+      "lng": 100.5854266246961,
+      "projectAddress": "Huai Khwang Bangkok",
+      "identity": "Exact project name and matching district; unique PropertyHub project page."
+    }
+  ],
+  "reviewedRecordsPreserved": [
+    3026,
+    3054,
+    3251,
+    5099,
+    6317
+  ],
+  "coordinateSafeguard": "PropertyHub guess records only fill gaps; they do not replace earlier reviewed records. New candidate coordinates are rejected when both catalogue and project-page districts are known and conflict.",
+  "osmGlobalCheck": {
+    "unlocatedCandidatesSearched": 1136,
+    "additionalHighConfidenceCoordinates": 0,
+    "osmCoordinateRecords": 450,
+    "strictNameAudit": {
+      "before": 450,
+      "after": 450,
+      "unresolvedConflicts": 0
+    }
+  },
+  "coverage": {
+    "projects": 3555,
+    "verifiedCoordinates": 3050,
+    "saleMarketData": 1996,
+    "rentMarketData": 1998,
+    "individualSaleListingLinks": 1955,
+    "individualRentListingLinks": 1966,
+    "bothMarkets": 1808
+  },
+  "coverageAudit": "reports/bangkok-coverage-2026-10-19.csv"
+}
