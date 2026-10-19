@@ -1,0 +1,56 @@
+{
+  "hipflatId": 3227,
+  "projectName": "Thanapol Condominium",
+  "checkedAt": "2026-10-19",
+  "sale": {
+    "count": 1,
+    "observedCount": 1,
+    "platformCount": 1,
+    "countKind": "manual_verified_listing",
+    "average": 220000,
+    "minimum": 220000,
+    "minimumArea": 27,
+    "averageSqm": 8148,
+    "minimumSqm": 8148.15,
+    "minimumSampleUpdated": "2026-10-19",
+    "minimumSqmSampleUpdated": "2026-10-19",
+    "asOf": "2026-10-19",
+    "snapshotMethod": "Hipflat project-level sale availability and direct unit page cross-checked against the matching FazWaz unit page.",
+    "sourceName": "Hipflat 個別出售掛牌",
+    "source": "https://www.hipflat.co.th/en/projects/thanapon-condominium-wccoki",
+    "minimumSourceUrl": "https://www.hipflat.co.th/es/ads/e7l9092n88214287h1t37t9l3u0clte9",
+    "minimumSqmSourceUrl": "https://www.hipflat.co.th/es/ads/e7l9092n88214287h1t37t9l3u0clte9",
+    "samples": [
+      {
+        "id": "U6383026",
+        "price": 220000,
+        "area": 27,
+        "priceSqm": 8148.15,
+        "beds": 0,
+        "roomType": "STUDIO",
+        "title": "Thanapol Condominium · 套房 · 27 ㎡ · ฿220,000",
+        "url": "https://www.hipflat.co.th/es/ads/e7l9092n88214287h1t37t9l3u0clte9",
+        "sourceName": "Hipflat（FazWaz 交叉核對）",
+        "projectName": "Thanapol Condominium",
+        "checkedAt": "2026-10-19",
+        "updated": "2026-10-19",
+        "listingStatus": "active_as_listed",
+        "matchedBy": "Hipflat direct listing identifies unit U6383026, Thanapol Condominium, studio, 27 sqm and ฿220,000; the project listing card and FazWaz direct unit page corroborate the THB price, unit size and project. Hipflat states listing updated 21 minutes before its indexed check on 2026-10-19.",
+        "priceReferenceUrl": "https://www.fazwaz.com/property-sales/studio-condo-for-sale-at-thanapol-condominium-in-nong-khaem-bangkok-u6383026"
+      }
+    ]
+  },
+  "rent": {
+    "status": "not verified; no sample added"
+  },
+  "coordinates": {
+    "lat": 13.6819716,
+    "lng": 100.3707816,
+    "source": "https://www.kaibaanthai.com/en/projects/thailand/bangkok/nong-khaem/nong-khaem/thanapol-condominium",
+    "verificationSource": "https://www.hipflat.co.th/en/projects/thanapon-condominium-wccoki"
+  },
+  "yield": {
+    "status": "not calculated",
+    "reason": "Only a studio sale is verified; no current rental sample is verified, and studio data is not substituted for a bedroom-class yield."
+  }
+}
