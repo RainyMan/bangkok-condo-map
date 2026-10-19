@@ -376,7 +376,9 @@
       condos.forEach(c => {
         const old = previous[c.id] || {};
         const previousBeds = String(old.beds || '2');
-        const defaults = yieldDefaultsFor(c, previousBeds);
+        // Migrate generated values to the current default room policy (lowest
+        // two-bedroom sale when available); customized values remain intact.
+        const defaults = yieldDefaultsFor(c, null);
         const oldSaleRoom = c.sale?.byBedroom?.[previousBeds] || {};
         const oldRentRoom = c.rent?.byBedroom?.[previousBeds] || {};
         const saleCandidates = [
