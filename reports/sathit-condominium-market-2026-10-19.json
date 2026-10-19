@@ -1,0 +1,43 @@
+{
+  "hipflatId": 3407,
+  "projectName": "Sathit Condominium",
+  "checkedAt": "2026-10-19",
+  "coordinates": {
+    "lat": 13.7347153,
+    "lng": 100.5121448,
+    "googleMapsPlace": "https://www.google.com/maps/place/%E0%B9%84%E0%B8%97%E0%B8%A2%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B4%E0%B8%95+%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94%E0%B8%A1%E0%B8%B4%E0%B9%80%E0%B8%99%E0%B8%B5%E0%B8%A2%E0%B8%A1/@13.7349043,100.5122288,155m/data=!3m1!1e3!4m5!3m4!1s0x30e298df5aab0e69:0xae9193955c9d0610!8m2!3d13.7347153!4d100.5121448?shorturl=1",
+    "crosscheck": "https://www.condonayoo.com/thai-sathit-condominium/"
+  },
+  "sale": {
+    "status": "no_current_project_listing",
+    "propertyHubProject": "https://propertyhub.in.th/en/condo-for-sale/project-thai-sathit-condominium",
+    "hipflatProject": "https://www.hipflat.co.th/en/projects/sathit-condominium-izqutx",
+    "note": "No active exact-project sale listing; no current yield calculation."
+  },
+  "rentSamples": [
+    {
+      "type": "Studio",
+      "priceTHBPerMonth": 12000,
+      "areaSqm": 35,
+      "priceTHBPerSqmPerMonth": 342.86,
+      "url": "https://www.hipflat.co.th/ads/9e3a494l8nlh0ae7a7nt91173u02u9e1",
+      "updated": "not shown on Hipflat project page"
+    },
+    {
+      "type": "1BR",
+      "priceTHBPerMonth": 14000,
+      "areaSqm": 55,
+      "priceTHBPerSqmPerMonth": 254.55,
+      "url": "https://www.hipflat.co.th/ads/2l31047c8nth42ccnl2c91n93u0he377",
+      "updated": "not shown on Hipflat project page"
+    }
+  ],
+  "completionYear": {
+    "year": 1990,
+    "source": "https://www.hipflat.co.th/en/projects/sathit-condominium-izqutx"
+  },
+  "yield": {
+    "calculated": false,
+    "reason": "No current exact-project sale listing; current rental listings alone cannot establish purchase price."
+  }
+}

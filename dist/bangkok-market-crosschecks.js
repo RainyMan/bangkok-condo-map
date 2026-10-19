@@ -1885,6 +1885,91 @@ window.BANGKOK_MARKET_CROSSCHECKS =[
     }
   },
   {
+    "hipflatId": 3407,
+    "projectName": "Sathit Condominium",
+    "asOf": "2026-10-19",
+    "sourceName": "Hipflat / PropertyHub / Google Maps / Condonayoo",
+    "projectSourceUrl": "https://www.hipflat.co.th/en/projects/sathit-condominium-izqutx",
+    "sale": {
+      "activeListingCount": 0,
+      "sourceUrl": "https://propertyhub.in.th/en/condo-for-sale/project-thai-sathit-condominium",
+      "note": "PropertyHub Thai Sathit 出售專案頁明確顯示沒有符合出售掛牌；Hipflat 同案頁列出出租單位，沒有出售單位。歷史成交或附近專案價格不作現行購入價。"
+    },
+    "rent": {
+      "activeListingCount": 2,
+      "listings": [
+        {
+          "id": "9e3a494l8nlh0ae7a7nt91173u02u9e1",
+          "kind": "rent",
+          "price": 12000,
+          "area": 35,
+          "priceSqm": 342.86,
+          "beds": 0,
+          "roomType": "Studio",
+          "title": "Sathit Condominium，Studio，35㎡，฿12,000/月",
+          "url": "https://www.hipflat.co.th/ads/9e3a494l8nlh0ae7a7nt91173u02u9e1",
+          "sourceName": "Hipflat",
+          "projectName": "Sathit Condominium",
+          "checkedAt": "2026-10-19",
+          "matchedBy": "exact_project_page_and_direct_listing_link",
+          "listingStatus": "availability_unconfirmed_date_unknown"
+        },
+        {
+          "id": "2l31047c8nth42ccnl2c91n93u0he377",
+          "kind": "rent",
+          "price": 14000,
+          "area": 55,
+          "priceSqm": 254.55,
+          "beds": 1,
+          "roomType": "1BR",
+          "title": "Sathit Condominium，1 房，55㎡，฿14,000/月",
+          "url": "https://www.hipflat.co.th/ads/2l31047c8nth42ccnl2c91n93u0he377",
+          "sourceName": "Hipflat",
+          "projectName": "Sathit Condominium",
+          "checkedAt": "2026-10-19",
+          "matchedBy": "exact_project_page_and_direct_listing_link",
+          "listingStatus": "availability_unconfirmed_date_unknown"
+        }
+      ],
+      "sourceUrl": "https://www.hipflat.co.th/en/projects/sathit-condominium-izqutx",
+      "note": "Hipflat 專案頁列兩筆出租單位：Studio 35㎡ ฿12,000/月及 1 房 55㎡ ฿14,000/月；個別連結保留於每筆樣本。Hipflat 頁面未提供更新日，實際空置仍待刊登者確認。"
+    },
+    "availabilitySources": [
+      {
+        "sourceName": "Google Maps 專案地點",
+        "url": "https://www.google.com/maps/place/%E0%B9%84%E0%B8%97%E0%B8%A2%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B4%E0%B8%95+%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94%E0%B8%A1%E0%B8%B4%E0%B9%80%E0%B8%99%E0%B8%B5%E0%B8%A2%E0%B8%A1/@13.7349043,100.5122288,155m/data=!3m1!1e3!4m5!3m4!1s0x30e298df5aab0e69:0xae9193955c9d0610!8m2!3d13.7347153!4d100.5121448?shorturl=1",
+        "statusLabel": "同名 Thai Sathit Condominium 地標點位 13.7347153, 100.5121448。"
+      },
+      {
+        "sourceName": "Condonayoo 專案地址與地圖連結",
+        "url": "https://www.condonayoo.com/thai-sathit-condominium/",
+        "statusLabel": "列 Vanich 2、Samphanthawong 及專案 Google Maps 連結；頁面坐標 13.734829, 100.512332。"
+      },
+      {
+        "sourceName": "Hipflat 專案頁與出租清單",
+        "url": "https://www.hipflat.co.th/en/projects/sathit-condominium-izqutx",
+        "statusLabel": "列同案地址、1990 完工、18 樓及兩筆出租掛牌，並連至兩筆個別物件頁。"
+      },
+      {
+        "sourceName": "Hipflat Studio 出租物件",
+        "url": "https://www.hipflat.co.th/ads/9e3a494l8nlh0ae7a7nt91173u02u9e1",
+        "statusLabel": "Studio，35㎡，฿12,000/月；來源頁未提供更新日，空置狀態待確認。"
+      },
+      {
+        "sourceName": "Hipflat 一房出租物件",
+        "url": "https://www.hipflat.co.th/ads/2l31047c8nth42ccnl2c91n93u0he377",
+        "statusLabel": "1 房，55㎡，฿14,000/月；來源頁未提供更新日，空置狀態待確認。"
+      },
+      {
+        "sourceName": "PropertyHub 出售專案頁",
+        "url": "https://propertyhub.in.th/en/condo-for-sale/project-thai-sathit-condominium",
+        "statusLabel": "頁面明確顯示 0 筆符合出售掛牌。"
+      }
+    ],
+    "yieldStatus": "not_calculated_no_current_sale_listing",
+    "yieldNote": "目前查到兩筆同案出租掛牌，但 PropertyHub 出售專案頁為 0 筆，Hipflat 同案頁亦沒有出售掛牌；沒有現行購入價基準，不以舊成交價或附近 Condo 代算投報。"
+  },
+  {
     "hipflatId": 3412,
     "projectName": "Commune 80",
     "asOf": "2026-10-19",
