@@ -1,0 +1,121 @@
+{
+  "projectId": 3538,
+  "projectName": "Siamese Exclusive Sukhumvit 42",
+  "asOf": "2026-10-19",
+  "propertyHubProjectId": "3592",
+  "projectUrl": "https://propertyhub.in.th/en/projects/siamese-exclusive-sukhumvit-42",
+  "sale": {
+    "projectId": 3538,
+    "projectName": "Siamese Exclusive Sukhumvit 42",
+    "kind": "sale",
+    "propertyHubProjectId": "3592",
+    "projectNameOnSource": "Siamese Exclusive Sukhumvit 42",
+    "platformCount": 25,
+    "validIndividualListings": 24,
+    "currentListingsWithin30Days": 24,
+    "olderOrUndatedListings": 0,
+    "byBedroom": {
+      "1": {
+        "count": 7,
+        "minimum": 6300000.0,
+        "area": 35.0,
+        "minimumArea": 35.0,
+        "priceSqm": 180000,
+        "minimumSqm": 163375.65,
+        "minimumSourceUrl": "https://propertyhub.in.th/en/listings/1-br-condo-at-siamese-exclusive-42-near-bts-ekkamai-id-2852065--a9140986---6102628",
+        "sourceUrl": "https://propertyhub.in.th/en/listings/1-br-condo-at-siamese-exclusive-42-near-bts-ekkamai-id-2852065--a9140986---6102628",
+        "minimumSqmSourceUrl": "https://propertyhub.in.th/en/listings/🤍siamese-exclusive-sukhumvit-42-warm-toned-unfurnished-unit-42-54-sq-m-near-bts-ekkamai---6231443"
+      },
+      "2": {
+        "count": 13,
+        "minimum": 10400000.0,
+        "area": 51.55,
+        "minimumArea": 51.55,
+        "priceSqm": 201746,
+        "minimumSqm": 201380.9,
+        "minimumSourceUrl": "https://propertyhub.in.th/en/listings/rare-unit-japanese-luxury-style-siamese-exclusive-sukhumvit-42-near-bts-ekkamai---5519149",
+        "sourceUrl": "https://propertyhub.in.th/en/listings/rare-unit-japanese-luxury-style-siamese-exclusive-sukhumvit-42-near-bts-ekkamai---5519149",
+        "minimumSqmSourceUrl": "https://propertyhub.in.th/en/listings/2-br-condo-at-siamese-exclusive-42-near-bts-ekkamai-id-2691913---5893256"
+      },
+      "3": {
+        "count": 3,
+        "minimum": 15000000.0,
+        "area": 71.5,
+        "minimumArea": 71.5,
+        "priceSqm": 209790,
+        "minimumSqm": 209790.21,
+        "minimumSourceUrl": "https://propertyhub.in.th/en/listings/3-br-condo-at-siamese-exclusive-42-near-bts-ekkamai-id-1407716--99570902---4243736",
+        "sourceUrl": "https://propertyhub.in.th/en/listings/3-br-condo-at-siamese-exclusive-42-near-bts-ekkamai-id-1407716--99570902---4243736",
+        "minimumSqmSourceUrl": "https://propertyhub.in.th/en/listings/3-br-condo-at-siamese-exclusive-42-near-bts-ekkamai-id-1407716--99570902---4243736"
+      },
+      "4": {
+        "count": 1,
+        "minimum": 37940000.0,
+        "area": 152.2,
+        "minimumArea": 152.2,
+        "priceSqm": 249277,
+        "minimumSqm": 249277.27,
+        "minimumSourceUrl": "https://propertyhub.in.th/en/listings/4-bed-4-bath-152-sq-m-siamese-sukhumvit-42--a6df08bb---5096837",
+        "sourceUrl": "https://propertyhub.in.th/en/listings/4-bed-4-bath-152-sq-m-siamese-sukhumvit-42--a6df08bb---5096837",
+        "minimumSqmSourceUrl": "https://propertyhub.in.th/en/listings/4-bed-4-bath-152-sq-m-siamese-sukhumvit-42--a6df08bb---5096837"
+      }
+    },
+    "excludedListings": [
+      {
+        "id": "6206486",
+        "reason": "Listing title conflicts with the exact project (Sukhumvit 31 listing was attached to the Sukhumvit 42 project feed)."
+      }
+    ],
+    "sourceUrl": "https://propertyhub.in.th/en/condo-for-sale/project-siamese-exclusive-sukhumvit-42",
+    "checkedAt": "2026-10-19"
+  },
+  "rent": {
+    "projectId": 3538,
+    "projectName": "Siamese Exclusive Sukhumvit 42",
+    "kind": "rent",
+    "propertyHubProjectId": "3592",
+    "projectNameOnSource": "Siamese Exclusive Sukhumvit 42",
+    "platformCount": 93,
+    "validIndividualListings": 92,
+    "currentListingsWithin30Days": 89,
+    "olderOrUndatedListings": 3,
+    "byBedroom": {
+      "1": {
+        "count": 26,
+        "minimum": 25000.0,
+        "area": 34.0,
+        "minimumArea": 34.0,
+        "priceSqm": 735,
+        "minimumSqm": 619.05,
+        "minimumSourceUrl": "https://propertyhub.in.th/en/listings/1bed-1bath-mrt-sukhumvit-34sqm-thb-25-000-mo-fl-17-siamese-exclusive-sukhumvit-42-bangkok---6367248",
+        "sourceUrl": "https://propertyhub.in.th/en/listings/1bed-1bath-mrt-sukhumvit-34sqm-thb-25-000-mo-fl-17-siamese-exclusive-sukhumvit-42-bangkok---6367248",
+        "minimumSqmSourceUrl": "https://propertyhub.in.th/en/listings/elegant-condo⭐-for-rent-siamese-exclusive-sukhumvit-42-line-rent2022-bts-ekkamaiready-to-move-in-a01637---6448493"
+      },
+      "2": {
+        "count": 58,
+        "minimum": 33000.0,
+        "area": 50.0,
+        "minimumArea": 50.0,
+        "priceSqm": 660,
+        "minimumSqm": 656.25,
+        "minimumSourceUrl": "https://propertyhub.in.th/en/listings/️-for-rent-siamese-exclusive-sukhumvit-42-luxury-low-rise-living-rental-price-33-000-thb-month---6146657",
+        "sourceUrl": "https://propertyhub.in.th/en/listings/️-for-rent-siamese-exclusive-sukhumvit-42-luxury-low-rise-living-rental-price-33-000-thb-month---6146657",
+        "minimumSqmSourceUrl": "https://propertyhub.in.th/en/listings/well-located-2-br-condo-at-siamese-exclusive-42-300m-to-bts-ekkamai-id-2989853---6276823"
+      },
+      "3": {
+        "count": 5,
+        "minimum": 60000.0,
+        "area": 71.5,
+        "minimumArea": 71.5,
+        "priceSqm": 839,
+        "minimumSqm": 686.27,
+        "minimumSourceUrl": "https://propertyhub.in.th/en/listings/siamese-exclusive-sukhumvit-42-3-bedrooms-for-rent---4319038",
+        "sourceUrl": "https://propertyhub.in.th/en/listings/siamese-exclusive-sukhumvit-42-3-bedrooms-for-rent---4319038",
+        "minimumSqmSourceUrl": "https://propertyhub.in.th/en/listings/condo-for-rent-siamese-exclusive-sukhumvit-42-ap-02-line-condo91---6290496"
+      }
+    },
+    "excludedListings": [],
+    "sourceUrl": "https://propertyhub.in.th/en/condo-for-rent/project-siamese-exclusive-sukhumvit-42",
+    "checkedAt": "2026-10-19"
+  }
+}
