@@ -1,0 +1,45 @@
+{
+  "hipflatId": 3105,
+  "project": "Picha Pavilion",
+  "checkedAt": "2026-10-20",
+  "coordinate": {
+    "status": "verified",
+    "source": "https://propertyhub.in.th/en/projects/picha-pavilion",
+    "lat": 13.69287115746202,
+    "lng": 100.6435012489693
+  },
+  "sale": {
+    "status": "project_page_displays_direct_sale_listing_but_unit_last_updated_date_missing",
+    "price": 680000,
+    "areaSqm": 27,
+    "roomType": "Studio",
+    "url": "https://propertyhub.in.th/en/listings/picha-pavilian-condo-selling-condo---6350508",
+    "updatedAt": null,
+    "projectPageObservedAt": "2026-10-20",
+    "projectPageDisplayedSaleCount": 2
+  },
+  "rent": {
+    "status": "no_current_sample; propertyhub_exact_project_count_zero",
+    "availabilityPage": "https://propertyhub.in.th/%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3-picha-pavilion",
+    "availabilityEvidence": "PropertyHub exact-project page shows 0 rentals and 2 sale listings when checked 2026-10-20.",
+    "historicalRentedLead": {
+      "url": "https://zmyhome.com/property/V181621",
+      "price": 3500,
+      "areaSqm": 32,
+      "roomType": "studio",
+      "listingStatus": "reported_rented_2026-09; current status unconfirmed on individual page",
+      "reasonExcluded": "The listing is reported rented in September 2026 and the individual page does not verify current availability."
+    }
+  },
+  "roi": {
+    "status": "not_calculable",
+    "reason": "No confirmed current rental listing supports an annual rent estimate."
+  },
+  "sources": {
+    "propertyHubProject": "https://propertyhub.in.th/en/projects/picha-pavilion",
+    "propertyHubRent": "https://propertyhub.in.th/%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3-picha-pavilion",
+    "historicalRentedLead": "https://zmyhome.com/property/V181621",
+    "saleListing": "https://propertyhub.in.th/en/listings/picha-pavilian-condo-selling-condo---6350508"
+  },
+  "identityCheck": "The ZMyHome address identifies Srinakarin 40 / Supapong 3 and names Picha Pavilion; its ฿3,500 / 32㎡ studio record is retained as historical after a September 2026 rented report, not a current sample."
+}
