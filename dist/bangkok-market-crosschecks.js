@@ -674,34 +674,56 @@ window.BANGKOK_MARKET_CROSSCHECKS =[
   {
     "hipflatId": 3054,
     "projectName": "Wisetsuk Nakorn Condo",
-    "asOf": "2026-10-19",
-    "sourceName": "Hipflat / PropertyHub",
-    "projectSourceUrl": "https://www.hipflat.co.th/en/projects/wisetsuk-nakorn-condo-npkjeq",
+    "asOf": "2026-10-20",
+    "sourceName": "PropertyHub",
+    "projectSourceUrl": "https://propertyhub.in.th/en/condo-for-sale/project-wisetsuk-nakorn-condo",
     "sale": {
-      "activeListingCount": 0,
-      "sourceUrl": "https://propertyhub.in.th/en/condo-for-sale/project-wisetsuk-nakorn-condo"
+      "activeListingCount": 1,
+      "displayedResultCount": 1,
+      "observedCount": 1,
+      "sourceUrl": "https://propertyhub.in.th/en/condo-for-sale/project-wisetsuk-nakorn-condo",
+      "note": "PropertyHub 專案頁列出一筆出售掛牌，最近刷新日為 2026-10-09；個別頁標示 ฿790,000、51㎡、฿15,490/㎡。Studio 與 1 Bedroom 房型欄位互相矛盾，因此列為未確認房型，暫不納入房型篩選或一房投報計算。",
+      "listings": [
+        {
+          "listingId": "6184765",
+          "price": 790000,
+          "area": 51,
+          "priceSqm": 15490,
+          "bedrooms": null,
+          "listedAt": "2026-10-09",
+          "url": "https://propertyhub.in.th/en/listings/condo-for-sale-at-wisetsuk-nakorn-condo-bang-khae-large-corner-unit-51-sq-m-fully-furnished-and-ready-to-move-in---6184765",
+          "sourceName": "PropertyHub",
+          "statusLabel": "專案頁近期刷新；房型欄位 Studio／1 房不一致，刊登現況待確認"
+        }
+      ]
     },
     "rent": {
       "activeListingCount": 0,
-      "sourceUrl": "https://propertyhub.in.th/en/condo-for-rent/project-wisetsuk-nakorn-condo"
+      "displayedResultCount": 0,
+      "observedCount": 0,
+      "sourceUrl": "https://propertyhub.in.th/en/condo-for-rent/project-wisetsuk-nakorn-condo",
+      "note": "PropertyHub 出租專案頁目前顯示無符合掛牌；曾列 2026-06-26 刷新的 1 房、47㎡、฿25,000/月物件，但已超過 30 日且現行專案頁無結果，不納入租金或投報。",
+      "listings": []
     },
     "availabilitySources": [
       {
-        "sourceName": "Hipflat exact project page",
-        "url": "https://www.hipflat.co.th/en/projects/wisetsuk-nakorn-condo-npkjeq",
-        "statusLabel": "專案頁目前顯示無可用出售或出租物件。"
+        "sourceName": "PropertyHub 出售專案頁",
+        "url": "https://propertyhub.in.th/en/condo-for-sale/project-wisetsuk-nakorn-condo",
+        "statusLabel": "目前列 1 筆掛牌，฿790,000、51㎡；專案頁最近刷新 2026-10-09。"
       },
       {
-        "sourceName": "PropertyHub same-name project page",
-        "url": "https://propertyhub.in.th/en/projects/wisetsuk-nakorn-condo",
-        "statusLabel": "同名頁面位於 Bang Khae，與 Hipflat 的 Thung Khru 專案不同，不納入。"
-      },
-      {
-        "sourceName": "PropertyHub excluded same-name listing",
+        "sourceName": "PropertyHub 出售單筆物件",
         "url": "https://propertyhub.in.th/en/listings/condo-for-sale-at-wisetsuk-nakorn-condo-bang-khae-large-corner-unit-51-sq-m-fully-furnished-and-ready-to-move-in---6184765",
-        "statusLabel": "฿790,000／51㎡ 刊登明確指向 Bang Khae；非 Thung Khru 樣本。"
+        "statusLabel": "฿790,000、51㎡、฿15,490/㎡；管理費 ฿17/㎡/月。房型欄位 Studio／1 房不一致。"
+      },
+      {
+        "sourceName": "PropertyHub 出租專案頁",
+        "url": "https://propertyhub.in.th/en/condo-for-rent/project-wisetsuk-nakorn-condo",
+        "statusLabel": "目前沒有符合出租掛牌；舊掛牌 2026-06-26 刷新，已超過 30 日，不納入行情。"
       }
-    ]
+    ],
+    "yieldStatus": "not_calculated_no_current_rent_listing",
+    "yieldNote": "已核實近期出售掛牌；PropertyHub 現行出租頁無房源，舊租盤超過 30 日，故不計投報率。出售樣本房型欄位有 Studio／1 房衝突，暫不代入一房投報。"
   },
   {
     "hipflatId": 3063,

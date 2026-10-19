@@ -1,0 +1,40 @@
+{
+  "hipflatId": 3054,
+  "projectName": "Wisetsuk Nakorn Condo",
+  "checkedAt": "2026-10-20",
+  "coordinates": {
+    "verified": true,
+    "sourceUrl": "https://www.hipflat.co.th/en/projects/wisetsuk-nakorn-condo-npkjeq"
+  },
+  "saleSample": {
+    "id": "6184765",
+    "price": 790000,
+    "area": 51,
+    "priceSqm": 15490,
+    "beds": null,
+    "roomType": "Studio / 1 房欄位不一致",
+    "title": "Wisetsuk Nakorn Condo，51 ㎡，฿790,000",
+    "url": "https://propertyhub.in.th/en/listings/condo-for-sale-at-wisetsuk-nakorn-condo-bang-khae-large-corner-unit-51-sq-m-fully-furnished-and-ready-to-move-in---6184765",
+    "sourceName": "PropertyHub",
+    "projectName": "Wisetsuk Nakorn Condo",
+    "updated": "2026-10-09",
+    "checkedAt": "2026-10-20",
+    "matchedBy": "exact_propertyhub_project_and_direct_listing_page",
+    "listingStatus": "availability_unconfirmed_update_under_30d",
+    "verificationNote": "PropertyHub 專案頁於 2026-10-09 顯示此掛牌最近刷新；個別物件頁列 ฿790,000、51㎡、管理費 ฿17/㎡/月。原始房型欄位同時寫 Studio 與 1 Bedroom，為避免混房型，保留房型未確認，不納入一房專屬試算；是否仍在架待賣方確認。"
+  },
+  "commonFeeTHBPerSqmMonth": 17,
+  "rentStatus": "No current listings on PropertyHub project page; one historical listing last refreshed 2026-06-26 is excluded.",
+  "yieldStatus": "Not calculated: no current verified rental listing; sale bedroom field conflicts.",
+  "sources": [
+    "https://propertyhub.in.th/en/condo-for-sale/project-wisetsuk-nakorn-condo",
+    "https://propertyhub.in.th/en/listings/condo-for-sale-at-wisetsuk-nakorn-condo-bang-khae-large-corner-unit-51-sq-m-fully-furnished-and-ready-to-move-in---6184765",
+    "https://propertyhub.in.th/en/condo-for-rent/project-wisetsuk-nakorn-condo"
+  ],
+  "notes": [
+    "PropertyHub project's sale list reports one listing and a latest refresh date of 2026-10-09.",
+    "The direct listing page says ฿790,000 / 51 sqm and management fee ฿17/sqm/month.",
+    "The source labels the unit both Studio and 1 bedroom. It is retained as an unclassified sale sample and excluded from bedroom-specific yield inputs.",
+    "The rent project page returns no matching listings; the previous 1-bedroom rental at ฿25,000 / 47 sqm was last refreshed 2026-06-26 and is over 30 days old."
+  ]
+}
