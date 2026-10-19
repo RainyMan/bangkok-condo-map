@@ -76,6 +76,9 @@ def has_individual_listing(market: dict) -> bool:
             return True
         if host.endswith("sam.or.th") and re.search(r"^/site/index\.php/npa/map_preview/\d+/?$", path):
             return True
+        # GHB Home Center direct bank-asset detail pages use /property-<id>.
+        if host.endswith("ghbhomecenter.com") and re.search(r"^/property-\d+/?$", path):
+            return True
         if host.endswith("condothai.co.th") and re.search(r"^/room/\d+/", path):
             return True
         if host.endswith("thaiapartment.com") and "/condo-detail/" in path:
@@ -182,6 +185,7 @@ def main() -> None:
         cross_rent_samples = crosscheck.get("rent", {}).get("listings", [])
         direct_current_sale = any(
             isinstance(sample, dict) and sample.get("price") and sample.get("area")
+            and sample.get("specialAsset") is not True
             and sample_is_current(sample)
             and in_range(float(sample["price"]) / float(sample["area"]), 10_000, 2_000_000)
             for sample in manual_sale_samples
