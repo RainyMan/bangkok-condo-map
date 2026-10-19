@@ -4520,5 +4520,81 @@ window.BANGKOK_MARKET_CROSSCHECKS =[
     ],
     "yieldStatus": "not_calculated_no_current_sale_listing",
     "yieldNote": "目前無可核實出售掛牌；雖已找到 3 房直連出租樣本，仍缺購入價基準，不計投報率。出租來源將房源分類為 Apartment，L8 Residence 專案來源則列為 apartment and condo。"
+  },
+  {
+    "hipflatId": 3441,
+    "projectName": "Parc Residence @Pahol 67",
+    "asOf": "2026-10-20",
+    "sourceName": "DDproperty + PropertyHub + Homenayoo",
+    "projectSourceUrl": "https://www.hipflat.co.th/en/projects/parc-residence-at-pahol-kforqw",
+    "sale": {
+      "activeListingCount": 3,
+      "displayedResultCount": 3,
+      "observedCount": 1,
+      "sourceUrl": "https://www.ddproperty.com/en/project/8851-parc-residence-pahol67",
+      "note": "DDproperty 專案頁核對列出售 3 筆，起價฿1,390,000；其中一筆單筆頁可核對 1 房、29.25㎡、฿1,390,000。",
+      "listings": [
+        {
+          "listingId": "11851317",
+          "price": 1390000,
+          "area": 29.25,
+          "priceSqm": 47521.36752136752,
+          "bedrooms": 1,
+          "url": "https://www.ddproperty.com/property/parc-residence-pahol67-%E0%B8%9E%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%84-%E0%B9%80%E0%B8%A3%E0%B8%AA%E0%B8%8B%E0%B8%B4%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%99%E0%B8%8B%E0%B9%8C-%E0%B9%81%E0%B8%97%E0%B8%97-%E0%B8%9E%E0%B8%AB%E0%B8%A5-67-%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E-%E0%B8%82%E0%B8%B2%E0%B8%A2-11851317",
+          "sourceName": "DDproperty",
+          "statusLabel": "DD 專案頁列 3 筆出售；現行狀態待點入確認"
+        }
+      ]
+    },
+    "rent": {
+      "activeListingCount": 1,
+      "displayedResultCount": 1,
+      "observedCount": 1,
+      "sourceUrl": "https://propertyhub.in.th/en/condo-for-rent/project-parc-residence-phahol",
+      "note": "PropertyHub 專案頁列 1 筆 1 房出租，29.26㎡、฿8,000/月，最後刷新 2026-08-04；已超過 30 日。DDproperty 專案頁同時顯示出租 0 筆，故可用狀態未核實，不納入投報試算。",
+      "listings": [
+        {
+          "listingId": "6274352",
+          "price": 8000,
+          "area": 29.26,
+          "priceSqm": 273.4107997265892,
+          "bedrooms": 1,
+          "listedAt": null,
+          "lastRefreshed": "2026-08-04",
+          "url": "https://propertyhub.in.th/en/listings/for-rent-parc-residence-phaholyothin-67---6274352",
+          "sourceName": "PropertyHub",
+          "statusLabel": "超過 30 日未刷新；DD 專案頁顯示 0 筆出租，現況待確認"
+        }
+      ]
+    },
+    "availabilitySources": [
+      {
+        "sourceName": "Homenayoo 專案與座標頁",
+        "url": "https://www.homenayoo.com/parc-residence-pahol/",
+        "statusLabel": "專案位於 Soi Phahonyothin 67；頁面公布 Google Maps 座標 13.888333, 100.600059，並標示 2016 完工。"
+      },
+      {
+        "sourceName": "Google Maps 點位",
+        "url": "https://www.google.com/maps/search/?api=1&query=13.888333%2C100.600059",
+        "statusLabel": "13.888333, 100.600059。"
+      },
+      {
+        "sourceName": "DDproperty 個別出售掛牌",
+        "url": "https://www.ddproperty.com/property/parc-residence-pahol67-%E0%B8%9E%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%84-%E0%B9%80%E0%B8%A3%E0%B8%AA%E0%B8%8B%E0%B8%B4%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%99%E0%B8%8B%E0%B9%8C-%E0%B9%81%E0%B8%97%E0%B8%97-%E0%B8%9E%E0%B8%AB%E0%B8%A5-67-%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E-%E0%B8%82%E0%B8%B2%E0%B8%A2-11851317",
+        "statusLabel": "1 房、29.25㎡、฿1,390,000；DD 專案頁列出售 3 筆。"
+      },
+      {
+        "sourceName": "PropertyHub 個別出租掛牌",
+        "url": "https://propertyhub.in.th/en/listings/for-rent-parc-residence-phaholyothin-67---6274352",
+        "statusLabel": "1 房、29.26㎡、฿8,000/月；頁面顯示可租開始日 2026-08-09，專案頁最後刷新 2026-08-04；現況待確認。"
+      },
+      {
+        "sourceName": "DDproperty 出租專案頁",
+        "url": "https://www.ddproperty.com/en/condo-for-rent/at-parc-residence-pahol67-8851",
+        "statusLabel": "核對時顯示 0 筆出租，與 PropertyHub 舊掛牌可用狀態不一致。"
+      }
+    ],
+    "yieldStatus": "not_calculated_rent_availability_unconfirmed",
+    "yieldNote": "有可核對的出售掛牌，但租盤最後刷新於 2026-08-04 且另一平台顯示 0 筆出租；為避免用過期租金冒充現行報酬率，暫不計投報。"
   }
 ];

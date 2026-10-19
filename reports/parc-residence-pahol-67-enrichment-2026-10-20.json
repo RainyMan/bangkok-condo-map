@@ -1,0 +1,56 @@
+{
+  "hipflatId": 3441,
+  "projectName": "Parc Residence @Pahol 67",
+  "checkedAt": "2026-10-20",
+  "coordinates": {
+    "lat": 13.888333,
+    "lng": 100.600059,
+    "source": "https://www.google.com/maps/search/?api=1&query=13.888333%2C100.600059",
+    "verificationSource": "https://www.homenayoo.com/parc-residence-pahol/"
+  },
+  "sale": {
+    "id": "11851317",
+    "price": 1390000,
+    "area": 29.25,
+    "priceSqm": 47521,
+    "beds": 1,
+    "roomType": "1BR",
+    "title": "Parc Residence @Pahol 67，1 房，29.25 ㎡，฿1,390,000",
+    "url": "https://www.ddproperty.com/property/parc-residence-pahol67-%E0%B8%9E%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%84-%E0%B9%80%E0%B8%A3%E0%B8%AA%E0%B8%8B%E0%B8%B4%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%99%E0%B8%8B%E0%B9%8C-%E0%B9%81%E0%B8%97%E0%B8%97-%E0%B8%9E%E0%B8%AB%E0%B8%A5-67-%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E-%E0%B8%82%E0%B8%B2%E0%B8%A2-11851317",
+    "sourceName": "DDproperty",
+    "projectName": "Parc Residence @Pahol 67",
+    "checkedAt": "2026-10-20",
+    "matchedBy": "exact_project_name_and_address",
+    "listingStatus": "active_as_listed",
+    "verificationNote": "DDproperty 單筆列 1 房、29.25㎡、฿1,390,000；DD 專案頁核對時列 3 筆出售且起價฿1,390,000。"
+  },
+  "rent": {
+    "id": "6274352",
+    "price": 8000,
+    "area": 29.26,
+    "priceSqm": 273,
+    "beds": 1,
+    "roomType": "1BR",
+    "title": "Parc Residence @ Phahol，1 房，29.26 ㎡，฿8,000/月",
+    "url": "https://propertyhub.in.th/en/listings/for-rent-parc-residence-phaholyothin-67---6274352",
+    "sourceName": "PropertyHub",
+    "projectName": "Parc Residence @Pahol 67",
+    "updated": "2026-08-04",
+    "checkedAt": "2026-10-20",
+    "matchedBy": "exact_project_name_and_project_listing_page",
+    "listingStatus": "availability_unconfirmed_update_over_30d",
+    "verificationNote": "PropertyHub 專案出租頁列一筆 1 房、29.26㎡、฿8,000/月，最新刷新日 2026-08-04；DDproperty 專案頁核對時出租 0 筆。刊登存續與可租狀態未確認，逾 30 日不納入投報基準。"
+  },
+  "yieldStatus": "not_calculated_rent_availability_unconfirmed",
+  "sources": [
+    "https://www.homenayoo.com/parc-residence-pahol/",
+    "https://www.ddproperty.com/en/project/8851-parc-residence-pahol67",
+    "https://www.ddproperty.com/property/parc-residence-pahol67-%E0%B8%9E%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%84-%E0%B9%80%E0%B8%A3%E0%B8%AA%E0%B8%8B%E0%B8%B4%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%99%E0%B8%8B%E0%B9%8C-%E0%B9%81%E0%B8%97%E0%B8%97-%E0%B8%9E%E0%B8%AB%E0%B8%A5-67-%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E-%E0%B8%82%E0%B8%B2%E0%B8%A2-11851317",
+    "https://propertyhub.in.th/en/condo-for-rent/project-parc-residence-phahol",
+    "https://propertyhub.in.th/en/listings/for-rent-parc-residence-phaholyothin-67---6274352"
+  ],
+  "notes": [
+    "PropertyHub rent page last refreshed 2026-08-04; DDproperty rent page showed zero listings, so present availability is not verified.",
+    "No ROI is calculated until a current rent sample is confirmed."
+  ]
+}
