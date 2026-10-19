@@ -1,0 +1,23 @@
+{
+  "hipflatId": 3141,
+  "project": "Metro Sky Wutthakat",
+  "checkedAt": "2026-10-19",
+  "projectPage": "https://www.hipflat.co.th/projects/metro-sky-wutthakat-wbnmhn",
+  "sale": {
+    "priceTHB": 2000000,
+    "areaSqm": 22,
+    "priceTHBPerSqm": 90909,
+    "url": "https://www.hipflat.co.th/ads/424at9u288l4879tce02h34a3u0hla9l",
+    "roomType": "Studio",
+    "evidence": "Hipflat project page unit table and lowest price range; exact individual ad URL linked from the 22 sqm, ฿2,000,000 row."
+  },
+  "rent": {
+    "priceTHBPerMonth": 12000,
+    "areaSqm": 23,
+    "priceTHBPerSqm": 522,
+    "url": "https://www.hipflat.co.th/ads/9n9uln4u8n301ta8971uc00u3ulun7ut",
+    "roomType": "Studio",
+    "evidence": "Hipflat project page unit table row: ฿12,000/month, 23 sqm; exact individual ad URL linked from that row."
+  },
+  "caveat": "The individual ad pages were not independently retrievable in the current web cache. The project page itself showed both rows as available and linked to these direct ad URLs. Availability is therefore labeled unconfirmed; individual listing update dates are not asserted. These records are not represented as two-bedroom yield evidence."
+}
