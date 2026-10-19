@@ -1,0 +1,96 @@
+{
+  "hipflatId": 4669,
+  "project": "InterLux Premier Sukhumvit 13",
+  "checkedAt": "2026-10-19",
+  "identity": {
+    "hipflatProjectUrl": "https://www.hipflat.co.th/en/projects/interlux-premier-sukhumvit-13-rotzoz",
+    "address": "61 Sukhumvit Rd, Khlong Toei Nuea, Vadhana, Bangkok 10110",
+    "coordinates": {
+      "lat": 13.747672,
+      "lng": 100.558301,
+      "source": "https://propertyscout.co.th/en/bangkok/condo/inter-lux-premier-sukhumvit-13/",
+      "verification": "Existing verified project coordinate retained."
+    },
+    "completionYearSources": {
+      "PropertyScout_and_direct_DDproperty": 2014,
+      "PropertyHub_project_page": 2016,
+      "status": "conflict; app's existing PropertyScout year is retained pending authoritative developer confirmation"
+    },
+    "utilityFeeBahtPerSqm": {
+      "rate": 50,
+      "source": "https://propertyhub.in.th/en/projects/inter-lux-premier-sukhumvit-13",
+      "status": "public figure; confirm actual juristic-person charge"
+    }
+  },
+  "sale": {
+    "lowestTwoBedroom": {
+      "price": 6500000,
+      "areaSqm": 57,
+      "pricePerSqm": 114035,
+      "bedrooms": 2,
+      "updated": "2026-10-14",
+      "url": "https://propertyhub.in.th/en/listings/lth12249-interlux-premier-for-sale-size-57-sqm-2-beds-2-baths-near-bts-nana-station-only-6-5-mb---5051423"
+    },
+    "additionalSamples": [
+      {
+        "id": "6102633",
+        "price": 6700000,
+        "area": 49.34,
+        "priceSqm": 135792,
+        "beds": 2,
+        "roomType": "2BR",
+        "title": "InterLux Premier Sukhumvit 13，2 房，49.34 ㎡，฿6,700,000",
+        "url": "https://propertyhub.in.th/en/listings/2-br-condo-at-inter-lux-premier-sukhumvit-13-near-arl-makkasan-id-2873687--a5c608e4---6102633",
+        "sourceName": "PropertyHub",
+        "updated": "2026-10-14",
+        "checkedAt": "2026-10-19",
+        "matchedBy": "exact_project_name_room_type_price_and_area",
+        "listingStatus": "active_as_listed"
+      },
+      {
+        "id": "4915029",
+        "price": 7200000,
+        "area": 50,
+        "priceSqm": 144000,
+        "beds": 2,
+        "roomType": "2BR",
+        "title": "InterLux Premier Sukhumvit 13，2 房，50 ㎡，฿7,200,000",
+        "url": "https://propertyhub.in.th/en/listings/2-br-condo-at-inter-lux-premier-sukhumvit-13-near-arl-makkasan-id-2015955--a3290987---4915029",
+        "sourceName": "PropertyHub",
+        "updated": "2026-10-14",
+        "checkedAt": "2026-10-19",
+        "matchedBy": "exact_project_name_room_type_price_and_area",
+        "listingStatus": "active_as_listed"
+      }
+    ]
+  },
+  "rent": {
+    "directSample": {
+      "monthlyRent": 35000,
+      "areaSqm": 58,
+      "rentPerSqm": 603,
+      "bedrooms": 2,
+      "listedAt": "2026-09-19",
+      "url": "https://www.ddproperty.com/en/property/interlux-premier-sukhumvit-13-bangkok-for-rent-500570288"
+    },
+    "twoBedroomSummaryRateBahtPerSqm": 600,
+    "summarySource": "https://propertyscout.co.th/en/bangkok/condo/inter-lux-premier-sukhumvit-13/"
+  },
+  "yield": {
+    "calculated": true,
+    "formula": "((฿35,000 ÷ 58㎡) × 57㎡ × 11 − ฿50/㎡/月 × 57㎡ × 12) ÷ ฿6,500,000 × 100",
+    "withOneAgentMonthPercent": 5.29,
+    "withoutAgentMonthPercent": 5.82
+  },
+  "sources": [
+    "https://www.hipflat.co.th/en/projects/interlux-premier-sukhumvit-13-rotzoz",
+    "https://propertyhub.in.th/en/projects/inter-lux-premier-sukhumvit-13",
+    "https://propertyhub.in.th/en/condo-for-sale/project-inter-lux-premier-sukhumvit-13",
+    "https://propertyhub.in.th/en/condo-for-rent/project-inter-lux-premier-sukhumvit-13",
+    "https://propertyscout.co.th/en/bangkok/condo/inter-lux-premier-sukhumvit-13/",
+    "https://propertyhub.in.th/en/listings/lth12249-interlux-premier-for-sale-size-57-sqm-2-beds-2-baths-near-bts-nana-station-only-6-5-mb---5051423",
+    "https://propertyhub.in.th/en/listings/2-br-condo-at-inter-lux-premier-sukhumvit-13-near-arl-makkasan-id-2873687--a5c608e4---6102633",
+    "https://propertyhub.in.th/en/listings/2-br-condo-at-inter-lux-premier-sukhumvit-13-near-arl-makkasan-id-2015955--a3290987---4915029",
+    "https://www.ddproperty.com/en/property/interlux-premier-sukhumvit-13-bangkok-for-rent-500570288"
+  ]
+}
