@@ -167,12 +167,22 @@ def main() -> None:
                          for row in (market, project, scout_location, verified_location, legacy)) or (
             osm.get(project_id, {}).get("lat") is not None and osm[project_id].get("lng") is not None
         )
-        has_sale = in_range(sale.get("minimumSqm"), 10_000, 2_000_000)
-        has_rent = in_range(rent.get("minimumSqm"), 50, 20_000)
         manual_sale_samples = manual_market.get("sale", {}).get("samples", [])
         manual_rent_samples = manual_market.get("rent", {}).get("samples", [])
         cross_sale_samples = crosscheck.get("sale", {}).get("listings", [])
         cross_rent_samples = crosscheck.get("rent", {}).get("listings", [])
+        has_sale = in_range(sale.get("minimumSqm"), 10_000, 2_000_000) or any(
+            isinstance(sample, dict) and sample.get("price") and sample.get("area")
+            and sample_is_current(sample)
+            and in_range(float(sample["price"]) / float(sample["area"]), 10_000, 2_000_000)
+            for sample in manual_sale_samples
+        )
+        has_rent = in_range(rent.get("minimumSqm"), 50, 20_000) or any(
+            isinstance(sample, dict) and sample.get("price") and sample.get("area")
+            and sample_is_current(sample)
+            and in_range(float(sample["price"]) / float(sample["area"]), 50, 20_000)
+            for sample in manual_rent_samples
+        )
         has_manual_sale_listing = any(
             sample.get("price") and sample.get("area") and isinstance(sample.get("url"), str)
             and sample_is_current(sample)
