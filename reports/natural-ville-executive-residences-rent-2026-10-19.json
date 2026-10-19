@@ -1,0 +1,50 @@
+{
+  "hipflatId": 3103,
+  "projectName": "Natural Ville Executive Residences",
+  "checkedAt": "2026-10-19",
+  "rent": {
+    "count": 1,
+    "observedCount": 1,
+    "platformCount": 1,
+    "countKind": "manual_verified_listing",
+    "average": 60000,
+    "minimum": 60000,
+    "minimumArea": 59,
+    "averageSqm": 1017,
+    "minimumSqm": 1016.95,
+    "minimumSampleUpdated": "2026-09-09",
+    "minimumSqmSampleUpdated": "2026-09-09",
+    "asOf": "2026-10-19",
+    "snapshotMethod": "Hipflat project page shows one available rental unit and links the direct listing; listing details were cross-checked against the project name and PropertyScout ID, while Dot Property confirms THB rent.",
+    "sourceName": "Hipflat 專案可用租盤",
+    "source": "https://www.hipflat.co.th/en/projects/natural-ville-executive-residences-jegmqe",
+    "minimumSourceUrl": "https://www.hipflat.co.th/en/ads/97c40c728nue2c9019439tln3u0c1u2u",
+    "minimumSqmSourceUrl": "https://www.hipflat.co.th/en/ads/97c40c728nue2c9019439tln3u0c1u2u",
+    "samples": [
+      {
+        "id": "438120TP2",
+        "price": 60000,
+        "area": 59,
+        "priceSqm": 1017,
+        "beds": 1,
+        "roomType": "1BR",
+        "title": "Natural Ville Executive Residences · 1 房 · 59 ㎡ · ฿60,000/月",
+        "url": "https://www.hipflat.co.th/en/ads/97c40c728nue2c9019439tln3u0c1u2u",
+        "sourceName": "Hipflat / PropertyScout",
+        "projectName": "Natural Ville Executive Residences",
+        "checkedAt": "2026-10-19",
+        "updated": "2026-09-09",
+        "listingStatus": "active_as_listed",
+        "matchedBy": "Hipflat project page currently lists this single available unit; linked unit page matches the Thai project name and 1BR/59sqm; Dot Property confirms THB asking rent and PropertyScout ID 438120.",
+        "priceReferenceUrl": "https://www.dotproperty.co.th/en/ads/1-bedroom-apartment-for-rent-in-natural-ville-executive-residences-lumphini-bangkok_e90e681b9270-f630-8892-f7ba-c345b089"
+      }
+    ]
+  },
+  "sale": {
+    "status": "no verified current sample"
+  },
+  "yield": {
+    "status": "not calculated",
+    "reason": "No verified sale listing for this project."
+  }
+}
