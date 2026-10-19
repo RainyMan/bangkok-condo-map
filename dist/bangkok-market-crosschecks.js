@@ -2107,6 +2107,112 @@ window.BANGKOK_MARKET_CROSSCHECKS =[
     ]
   },
   {
+    "hipflatId": 3515,
+    "projectName": "Residence 187 By Ariva",
+    "asOf": "2026-10-19",
+    "sourceName": "DDproperty / PropertyHub / OpenStreetMap",
+    "projectSourceUrl": "https://www.ddproperty.com/en/project/6131-residence-187",
+    "sale": {
+      "activeListingCount": 1,
+      "listings": [
+        {
+          "id": "500030491",
+          "kind": "sale",
+          "price": 23990000,
+          "area": 64,
+          "priceSqm": 374843.75,
+          "beds": 1,
+          "roomType": "1BR",
+          "title": "Residence 187，1 房，64㎡，฿23,990,000",
+          "url": "https://www.ddproperty.com/en/property/residence-187-bangkok-for-sale-500030491",
+          "sourceName": "DDproperty",
+          "projectName": "Residence 187 By Ariva",
+          "updated": "2026-10-01",
+          "checkedAt": "2026-10-19",
+          "matchedBy": "exact_project_name_address_and_direct_listing_page",
+          "listingStatus": "availability_unconfirmed_update_under_30d"
+        }
+      ],
+      "sourceUrl": "https://www.ddproperty.com/en/project/6131-residence-187",
+      "note": "DDproperty 專案頁列 1 筆出售；個別掛牌為 1 房、64㎡、฿23,990,000，標示 2026-10-01 刊登。"
+    },
+    "rent": {
+      "activeListingCount": 2,
+      "listings": [
+        {
+          "id": "500544595",
+          "kind": "rent",
+          "price": 120000,
+          "area": 52,
+          "priceSqm": 2307.69,
+          "beds": 1,
+          "roomType": "1BR",
+          "title": "Residence 187，1 房，52㎡，฿120,000/月",
+          "url": "https://www.ddproperty.com/en/property/residence-187-bangkok-for-rent-500544595",
+          "sourceName": "DDproperty",
+          "projectName": "Residence 187 By Ariva",
+          "updated": "2026-09-27",
+          "checkedAt": "2026-10-19",
+          "matchedBy": "exact_project_name_address_and_direct_listing_page",
+          "listingStatus": "availability_unconfirmed_update_under_30d"
+        },
+        {
+          "id": "500583076",
+          "kind": "rent",
+          "price": 120000,
+          "area": 51,
+          "priceSqm": 2352.94,
+          "beds": 1,
+          "roomType": "1BR",
+          "title": "Residence 187，1 房，51㎡，฿120,000/月",
+          "url": "https://www.ddproperty.com/en/property/residence-187-bangkok-for-rent-500583076",
+          "sourceName": "DDproperty",
+          "projectName": "Residence 187 By Ariva",
+          "updated": "2026-09-24",
+          "checkedAt": "2026-10-19",
+          "matchedBy": "exact_project_name_address_and_direct_listing_page",
+          "listingStatus": "availability_unconfirmed_update_under_30d"
+        }
+      ],
+      "sourceUrl": "https://www.ddproperty.com/en/condo-for-rent/at-residence-187-6131",
+      "note": "DDproperty 租屋結果列兩筆近期更新掛牌，皆為 1 房、月租 ฿120,000；兩筆可能是同單位重複刊登，分別保留來源，不將筆數當成獨立成交量。"
+    },
+    "availabilitySources": [
+      {
+        "sourceName": "DDproperty 出售物件",
+        "url": "https://www.ddproperty.com/en/property/residence-187-bangkok-for-sale-500030491",
+        "statusLabel": "1 房、64㎡、฿23,990,000；頁面列 2026-10-01。"
+      },
+      {
+        "sourceName": "DDproperty 出租物件 500544595",
+        "url": "https://www.ddproperty.com/en/property/residence-187-bangkok-for-rent-500544595",
+        "statusLabel": "1 房、約 52㎡、฿120,000/月；搜尋結果列 2026-09-27 更新。"
+      },
+      {
+        "sourceName": "DDproperty 出租物件 500583076",
+        "url": "https://www.ddproperty.com/en/property/residence-187-bangkok-for-rent-500583076",
+        "statusLabel": "1 房、51㎡、฿120,000/月；頁面列 2026-09-24。"
+      },
+      {
+        "sourceName": "PropertyHub 專案別名",
+        "url": "https://propertyhub.in.th/en/projects/dazzle-sukhumvit-7",
+        "statusLabel": "Residence 187 列為 DAZZLE Sukhumvit 7 別名。"
+      },
+      {
+        "sourceName": "PropertyHub 管理費資料",
+        "url": "https://propertyhub.in.th/ขายคอนโด/โครงการ-dazzle-sukhumvit-7",
+        "statusLabel": "專案頁列管理費 ฿50/㎡/月；實際收費請向管委會確認。"
+      },
+      {
+        "sourceName": "OpenStreetMap 建物點位",
+        "url": "https://www.openstreetmap.org/way/1457578466",
+        "statusLabel": "建物名稱 Dazzle、門牌 18 Sukhumvit 7；與 Hipflat、PropertyHub 專案別名及 DDproperty 掛牌地址相符。"
+      }
+    ],
+    "yieldStatus": "calculated_from_lowest_1br_sale_and_rent_per_sqm",
+    "yieldNote": "以最低可核實 1 房售價及同房型最低租金/㎡計算；售盤為 64㎡，租盤最低單價樣本約 52㎡。依 PropertyHub 列示的 ฿50/㎡/月管理費試算，實際收費請向管委會確認。"
+  },
+  {
     "hipflatId": 3797,
     "projectName": "Supalai Park Ekamai - Thonglor",
     "asOf": "2026-10-19",

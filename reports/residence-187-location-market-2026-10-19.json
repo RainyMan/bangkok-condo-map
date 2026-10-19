@@ -1,0 +1,49 @@
+{
+  "hipflatId": 3515,
+  "projectName": "Residence 187 By Ariva",
+  "checkedAt": "2026-10-19",
+  "identity": {
+    "hipflat": "https://www.hipflat.co.th/en/projects/residence-187-by-ariva-prlqmu",
+    "ddProperty": "https://www.ddproperty.com/en/project/6131-residence-187",
+    "propertyHubAlias": "https://propertyhub.in.th/en/projects/dazzle-sukhumvit-7"
+  },
+  "coordinate": {
+    "lat": 13.743399,
+    "lng": 100.5555585,
+    "osmBuilding": "https://www.openstreetmap.org/way/1457578466",
+    "evidence": "OSM way 1457578466 is named Dazzle at 18 Sukhumvit 7; PropertyHub lists Residence 187 as a project alias for Dazzle Sukhumvit 7; DDproperty and Hipflat use the same Soi Sukhumvit 7 address."
+  },
+  "sale": {
+    "bedrooms": 1,
+    "priceTHB": 23990000,
+    "areaSqm": 64,
+    "priceTHBPerSqm": 374843.75,
+    "updated": "2026-10-01",
+    "url": "https://www.ddproperty.com/en/property/residence-187-bangkok-for-sale-500030491"
+  },
+  "rentSamples": [
+    {
+      "bedrooms": 1,
+      "priceTHBPerMonth": 120000,
+      "areaSqm": 52,
+      "priceTHBPerSqmPerMonth": 2307.69,
+      "updated": "2026-09-27",
+      "url": "https://www.ddproperty.com/en/property/residence-187-bangkok-for-rent-500544595"
+    },
+    {
+      "bedrooms": 1,
+      "priceTHBPerMonth": 120000,
+      "areaSqm": 51,
+      "priceTHBPerSqmPerMonth": 2352.94,
+      "updated": "2026-09-24",
+      "url": "https://www.ddproperty.com/en/property/residence-187-bangkok-for-rent-500583076"
+    }
+  ],
+  "maintenanceFeeTHBPerSqmPerMonth": {
+    "value": 50,
+    "source": "https://propertyhub.in.th/ขายคอนโด/โครงการ-dazzle-sukhumvit-7",
+    "status": "public_project_detail_requires_juristic_confirmation"
+  },
+  "yieldMethod": "lowest current 1BR sale total with its own area; same-room lowest rent per sqm multiplied by sale area; deduct 50 THB/sqm/month fee and one month of rent for agent management by default.",
+  "duplicateRisk": "Two 120,000 THB rent posts may refer to the same unit; shown as two source records but not treated as independent transactions."
+}
