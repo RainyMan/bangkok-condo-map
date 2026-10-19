@@ -1,0 +1,68 @@
+{
+  "hipflatId": 3386,
+  "project": "The Nigh Condominium 3",
+  "checkedAt": "2026-10-19",
+  "coordinates": {
+    "status": "verified",
+    "lat": 13.8494207,
+    "lng": 100.5590098,
+    "source": "https://goo.gl/maps/1webFX2ZxH6pZsTe6",
+    "corroboratingAddressSource": "https://www.home.co.th/condo/the-nigh-condominium-3-4776"
+  },
+  "projectDetails": {
+    "address": "Ngamwongwan Road, Lat Yao, Chatuchak, Bangkok 10900",
+    "units": 70,
+    "floors": 8,
+    "floorAreaSqm": [
+      28.22,
+      35.05
+    ],
+    "completionYear": 2014,
+    "completionYearConflict": "PropertyHub lists 2012 and 77 units; Home.co.th, RentcondoBKK, Scancondo, and Zmyhome support 70 units/8 floors, with RentcondoBKK, Scancondo, and Zmyhome listing 2014.",
+    "historicalCommonFee": {
+      "rate": 35,
+      "unit": "THB/sqm/month",
+      "source": "https://zmyhome.com/project/V13155",
+      "status": "historical_unverified_not_applied"
+    }
+  },
+  "sale": {
+    "status": "two_direct_listings_observed_availability_unconfirmed",
+    "samples": [
+      {
+        "url": "https://rentcondobkk.com/index.php/%E0%B8%82%E0%B8%B2%E0%B8%A2/%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/115078/TNC08-0002",
+        "price": 1650000,
+        "area": 29,
+        "bedrooms": 1,
+        "priceSqm": 56896.55,
+        "sourceName": "RentcondoBKK",
+        "listingStatus": "availability_unconfirmed_date_unknown"
+      },
+      {
+        "url": "https://rentcondobkk.com/index.php/%E0%B8%82%E0%B8%B2%E0%B8%A2/%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/95300/TNC08-0001",
+        "price": 1950000,
+        "area": 31,
+        "bedrooms": 1,
+        "priceSqm": 62903.23,
+        "sourceName": "RentcondoBKK",
+        "listingStatus": "availability_unconfirmed_date_unknown"
+      }
+    ]
+  },
+  "rent": {
+    "status": "no_verified_current_exact_project_rent",
+    "currentSampleCount": 0,
+    "source": "https://propertyhub.in.th/projects/the-nigh-condo-3-ngamwongwan---13152",
+    "excludedListing": {
+      "url": "https://www.rentcondobkk.com/%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2/%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/95300/TNC08-0001",
+      "price": 6000,
+      "area": 31,
+      "bedrooms": 1,
+      "status": "confirmed_unavailable_rented"
+    }
+  },
+  "yield": {
+    "status": "not_calculated",
+    "reason": "No verified current exact-project rent sample; the only direct rental listing is marked rented."
+  }
+}

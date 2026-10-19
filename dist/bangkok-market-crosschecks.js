@@ -1709,6 +1709,86 @@ window.BANGKOK_MARKET_CROSSCHECKS = [
     "yieldNote": "本案目前沒有可核實的出售單筆掛牌；出租線索過期且房型資料矛盾，因此不計算投報率。"
   },
   {
+    "hipflatId": 3386,
+    "projectName": "The Nigh Condominium 3",
+    "asOf": "2026-10-19",
+    "sourceName": "RentcondoBKK / PropertyHub",
+    "projectSourceUrl": "https://rentcondobkk.com/index.php/%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-%E0%B8%82%E0%B8%B2%E0%B8%A2/%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B9%84%E0%B8%99%E0%B8%99%E0%B9%8C-%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94%E0%B8%A1%E0%B8%B4%E0%B9%80%E0%B8%99%E0%B8%B5%E0%B8%A2%E0%B8%A1-3",
+    "availabilitySources": [
+      {
+        "sourceName": "Google Maps 專案地點",
+        "url": "https://goo.gl/maps/1webFX2ZxH6pZsTe6",
+        "statusLabel": "The Nigh Condo 3 地圖點位與名稱相符"
+      },
+      {
+        "sourceName": "Home.co.th 專案頁",
+        "url": "https://www.home.co.th/condo/the-nigh-condominium-3-4776",
+        "statusLabel": "確認 Ngamwongwan Road 地址、70 戶及 28.22–35.05 ㎡；未列完工年"
+      },
+      {
+        "sourceName": "PropertyHub 專案頁",
+        "url": "https://propertyhub.in.th/projects/the-nigh-condo-3-ngamwongwan---13152",
+        "statusLabel": "目前顯示 0 售、0 租；資料列 2012 年、77 戶"
+      },
+      {
+        "sourceName": "RentcondoBKK 專案頁",
+        "url": "https://rentcondobkk.com/index.php/%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-%E0%B8%82%E0%B8%B2%E0%B8%A2/%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B9%84%E0%B8%99%E0%B8%99%E0%B9%8C-%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94%E0%B8%A1%E0%B8%B4%E0%B9%80%E0%B8%99%E0%B8%B5%E0%B8%A2%E0%B8%A1-3",
+        "statusLabel": "目前列 2 筆出售、1 筆出租；出售掛牌未提供更新日"
+      },
+      {
+        "sourceName": "RentcondoBKK 出租物件（已租出）",
+        "url": "https://www.rentcondobkk.com/%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2/%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/95300/TNC08-0001",
+        "statusLabel": "฿6,000／月、31 ㎡；頁面明示已租出，不作現行租金或投報樣本"
+      },
+      {
+        "sourceName": "Zmyhome 已售物件",
+        "url": "https://zmyhome.com/property/V154571",
+        "statusLabel": "฿2.25M／28 ㎡，2023-11 已售；只作歷史參考"
+      },
+      {
+        "sourceName": "Zmyhome 專案資料",
+        "url": "https://zmyhome.com/project/V13155",
+        "statusLabel": "列 2014 年、70 戶、8 層及歷史管理費 ฿35／㎡／月；費用未核實，不納入試算"
+      },
+      {
+        "sourceName": "Scancondo 專案資料",
+        "url": "https://www.scancondo.com/%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B9%84%E0%B8%99%E0%B8%99%E0%B9%8C-%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94%E0%B8%A1%E0%B8%B4%E0%B9%80%E0%B8%99%E0%B8%B5%E0%B8%A2%E0%B8%A1-3",
+        "statusLabel": "列 2014 年、70 戶、8 層"
+      }
+    ],
+    "sale": {
+      "activeListingCount": 2,
+      "sourceUrl": "https://rentcondobkk.com/index.php/%E0%B8%8B%E0%B8%B7%E0%B9%89%E0%B8%AD-%E0%B8%82%E0%B8%B2%E0%B8%A2/%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B9%84%E0%B8%99%E0%B8%99%E0%B9%8C-%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94%E0%B8%A1%E0%B8%B4%E0%B9%80%E0%B8%99%E0%B8%B5%E0%B8%A2%E0%B8%A1-3",
+      "listings": [
+        {
+          "url": "https://rentcondobkk.com/index.php/%E0%B8%82%E0%B8%B2%E0%B8%A2/%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/115078/TNC08-0002",
+          "price": 1650000,
+          "area": 29,
+          "bedrooms": 1,
+          "priceSqm": 56896.55,
+          "sourceName": "RentcondoBKK",
+          "listingStatus": "availability_unconfirmed_date_unknown"
+        },
+        {
+          "url": "https://rentcondobkk.com/index.php/%E0%B8%82%E0%B8%B2%E0%B8%A2/%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/95300/TNC08-0001",
+          "price": 1950000,
+          "area": 31,
+          "bedrooms": 1,
+          "priceSqm": 62903.23,
+          "sourceName": "RentcondoBKK",
+          "listingStatus": "availability_unconfirmed_date_unknown"
+        }
+      ]
+    },
+    "rent": {
+      "activeListingCount": 0,
+      "sourceUrl": "https://propertyhub.in.th/projects/the-nigh-condo-3-ngamwongwan---13152",
+      "listings": []
+    },
+    "yieldStatus": "not_calculated_no_current_exact_project_rent",
+    "yieldNote": "目前有兩筆單房出售掛牌，但出租頁唯一的直接樣本已標示租出，PropertyHub 專案頁為 0 租盤；不以已租出或不同專案的租金計算投報。"
+  },
+  {
     "hipflatId": 3389,
     "projectName": "Elio Sukhumvit 64 (Hipflat alias: Elio Condo)",
     "asOf": "2026-10-19",

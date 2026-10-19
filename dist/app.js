@@ -228,7 +228,7 @@
     const saleRooms = bedroomRows(c.sale), rentRooms = bedroomRows(c.rent);
     const saleSamples = c.sale?.samples || [];
     const rentSamples = c.rent?.samples || [];
-    const isDirectListingUrl = url => typeof url === 'string' && /\/(?:ads|listings|property|property-for-sale|property-for-rent)\//i.test(url);
+    const isDirectListingUrl = url => typeof url === 'string' && (/\/(?:ads|listings|property|property-for-sale|property-for-rent)\//i.test(url) || /rentcondobkk\.com\/index\.php\/.+\/\d+\/[a-z]{2,5}\d{2}-\d{4}(?:\/|$)/i.test(url));
     // Fresh asking-price samples remain useful when availability has not been
     // independently confirmed. Exclude unavailable, future-dated, and stale
     // listings, while retaining recently updated listings marked unconfirmed.
@@ -367,13 +367,13 @@
   // Recompute generated baselines against the lowest linked same-bedroom sale
   // and keep its area paired with that same listing. User-edited values that
   // do not match an old generated baseline remain intact.
-  const yieldStorageKey = 'bangkokCondoYieldInputsV178';
+  const yieldStorageKey = 'bangkokCondoYieldInputsV179';
   const loadYieldInputs = () => {
     try {
       const current = localStorage.getItem(yieldStorageKey);
       if (current) return JSON.parse(current);
       let previous = {};
-      for (let version = 177; version >= 5; version--) {
+      for (let version = 178; version >= 5; version--) {
         const stored = localStorage.getItem(`bangkokCondoYieldInputsV${version}`);
         if (stored) { previous = JSON.parse(stored); break; }
       }
