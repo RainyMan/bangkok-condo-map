@@ -71,13 +71,12 @@ window.BANGKOK_MARKET_CROSSCHECKS =[
           "area": 64.2,
           "priceSqm": 514.02,
           "bedrooms": 2,
-          "url": "https://propertyhub.in.th/listings/%EF%B8%8F-%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2-%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%9464-2-%E0%B8%95%E0%B8%A3-%E0%B8%A1-%E0%B8%A7%E0%B8%B4%E0%B8%A7%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%88%E0%B8%95%E0%B8%B8%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%A3-%E0%B8%8A%E0%B8%B1%E0%B9%89%E0%B8%99%E0%B8%AA%E0%B8%B9%E0%B8%87-%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B9%81%E0%B8%95%E0%B9%88%E0%B8%87%E0%B8%84%E0%B8%A3%E0%B8%9A-%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%AD%E0%B8%A2%E0%B8%B9%E0%B9%88---6242213",
-          "listedAt": "2026-10-14",
-          "statusLabel": "PropertyHub 專案出租頁於 2026-10-14 更新並列出；單筆頁為 2 房、64.2㎡、฿33,000/月。單筆頁記載可入住日 2026-06-30，現況仍請向刊登者確認。"
+          "url": "https://propertyhub.in.th/en/listings/%EF%B8%8F-64-2-sq-m-condo-for-rent-high-floor-stunning-chatuchak-park-view-fully-furnished-move-in-ready---6242213",
+          "statusLabel": "PropertyHub 專案頁於 2026-10-14 刷新後仍列出；單筆頁為 2 房、64.2㎡、฿33,000/月，單筆更新日未提供。頁面記載 2026-06-30 可入住（開始日期，非截止日），現況請向刊登者確認。"
         }
       ],
       "sourceUrl": "https://propertyhub.in.th/en/condo-for-rent/project-chatuchak-condominium",
-      "note": "專案出租頁於 2026-10-14 更新並仍列 1 筆；單筆頁記載 2026-06-30 可入住（開始日，不是出租截止日）。按近期更新納入樣本，實際在架狀態待向刊登者確認。"
+      "note": "專案出租頁於 2026-10-14 刷新後仍列 1 筆；單筆頁列 2026-06-30 可入住（開始日，不是出租截止日），但單筆更新日未提供，實際在架狀態待向刊登者確認。"
     },
     "availabilitySources": [
       {
@@ -93,16 +92,16 @@ window.BANGKOK_MARKET_CROSSCHECKS =[
       {
         "sourceName": "PropertyHub 出租專案頁",
         "url": "https://propertyhub.in.th/en/condo-for-rent/project-chatuchak-condominium",
-        "statusLabel": "核對頁面列 1 筆出租，更新日期 2026-10-14。"
+        "statusLabel": "專案頁 2026-10-14 刷新後仍列 1 筆；單筆更新日未提供。"
       },
       {
         "sourceName": "PropertyHub 出租單筆",
-        "url": "https://propertyhub.in.th/listings/%EF%B8%8F-%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2-%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%9464-2-%E0%B8%95%E0%B8%A3-%E0%B8%A1-%E0%B8%A7%E0%B8%B4%E0%B8%A7%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%88%E0%B8%95%E0%B8%B8%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%A3-%E0%B8%8A%E0%B8%B1%E0%B9%89%E0%B8%99%E0%B8%AA%E0%B8%B9%E0%B8%87-%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B9%81%E0%B8%95%E0%B9%88%E0%B8%87%E0%B8%84%E0%B8%A3%E0%B8%9A-%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%AD%E0%B8%A2%E0%B8%B9%E0%B9%88---6242213",
-        "statusLabel": "฿33,000／月 · 64.2㎡ · 2 房；頁面記載 2026-06-30 可入住，請向刊登者確認在架狀態。"
+        "url": "https://propertyhub.in.th/en/listings/%EF%B8%8F-64-2-sq-m-condo-for-rent-high-floor-stunning-chatuchak-park-view-fully-furnished-move-in-ready---6242213",
+        "statusLabel": "฿33,000／月 · 64.2㎡ · 2 房；單筆更新日未提供，頁面記載 2026-06-30 可入住（開始日），請確認在架狀態。"
       }
     ],
     "yieldStatus": "no_current_sale_listing",
-    "yieldNote": "目前有可核對的兩房租盤，但出售專案頁為 0 筆，無可靠購入價基準，暫不計投報率。"
+    "yieldNote": "目前有一筆可核對兩房租盤，但沒有本案出售掛牌，無可靠購入價基準，不計投報率。"
   },
   {
     "hipflatId": 3006,

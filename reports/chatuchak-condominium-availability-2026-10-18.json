@@ -1,7 +1,7 @@
 {
   "hipflatId": 3005,
   "project": "Chatuchak Condominium",
-  "asOf": "2026-10-18",
+  "asOf": "2026-10-19",
   "location": {
     "latitude": 13.792577735276529,
     "longitude": 100.54728879471045,
@@ -39,25 +39,26 @@
       ]
     },
     "rent": {
-      "status": "historical_listing_expired",
-      "sampleCount": 0,
+      "status": "listed_availability_unconfirmed",
+      "sampleCount": 1,
       "sources": [
         "https://propertyhub.in.th/en/condo-for-rent/project-chatuchak-condominium",
         "https://www.hipflat.co.th/en/projects/chatuchak-condominium-cpdwry"
       ],
-      "historicalListing": {
+      "currentListing": {
         "url": "https://propertyhub.in.th/en/listings/%EF%B8%8F-64-2-sq-m-condo-for-rent-high-floor-stunning-chatuchak-park-view-fully-furnished-move-in-ready---6242213",
         "listingId": "6242213",
-        "price": 33000,
-        "areaSqm": 64,
+        "priceTHBPerMonth": 33000,
+        "areaSqm": 64.2,
         "bedrooms": 2,
-        "availableUntil": "2026-06-30",
-        "excludedFromCurrentMarket": true
+        "availableForRentDate": "2026-06-30",
+        "projectPageRefreshedAt": "2026-10-14",
+        "individualListingUpdateDate": null
       }
     },
     "roi": {
       "status": "not_calculable",
-      "reason": "No current exact-project sale listing and no current exact-project rental listing."
+      "reason": "No verified current sale listing or exact-project purchase-price baseline."
     }
   },
   "excludedComparables": "Nearby Phaya Thai and Chatuchak listings with different project names, including IDEO and other Pradiphat projects, were not assigned to this condo."

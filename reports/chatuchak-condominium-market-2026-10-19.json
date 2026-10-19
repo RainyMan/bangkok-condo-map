@@ -9,14 +9,16 @@
     "hipflatProject": "https://www.hipflat.co.th/en/projects/chatuchak-condominium-cpdwry"
   },
   "rent": {
-    "status": "historical_listing_expired",
+    "status": "listed_availability_unconfirmed",
     "projectPageDisplayedResults": 1,
+    "projectPageRefreshedAt": "2026-10-14",
     "priceTHBPerMonth": 33000,
-    "areaSqm": 64,
+    "areaSqm": 64.2,
     "bedrooms": 2,
-    "priceTHBPerSqmPerMonth": 515.625,
-    "availableUntil": "2026-06-30",
-    "treatment": "Retained as a directly linked historical sample. Excluded from current rent metrics and yield calculations."
+    "priceTHBPerSqmPerMonth": 514.02,
+    "individualListingUpdateDate": null,
+    "availableForRentDate": "2026-06-30",
+    "treatment": "The exact-project page still lists this directly linked two-bedroom unit. The date is an available-for-rent start date, not an expiry date. Confirm current availability with the poster."
   },
   "sale": {
     "status": "no_current_project_listing",
@@ -25,6 +27,6 @@
   },
   "yield": {
     "status": "not_calculable",
-    "reason": "No verified current sale and rent listing pair."
+    "reason": "No verified sale price for the exact project."
   }
 }

@@ -1,8 +1,16 @@
 import csv
 import json
 import re
+import runpy
 from datetime import date
 from pathlib import Path
+
+
+if __name__ == "__main__":
+    # Superseded: the prior script mistranslated a rental start date as expiry.
+    # Keep legacy invocations aligned with the corrected, source-linked record.
+    runpy.run_path(str(Path(__file__).with_name("enrich_chatuchak_condominium_rent_2026_10_19.py")), run_name="__main__")
+    raise SystemExit(0)
 
 
 ROOT = Path(__file__).resolve().parents[1]

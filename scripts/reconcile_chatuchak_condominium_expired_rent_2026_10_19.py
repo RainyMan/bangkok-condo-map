@@ -1,9 +1,15 @@
-"""Reconcile an expired rent listing and clear its active rent baseline."""
+"""Compatibility entry point; defer to the corrected current availability record."""
 from __future__ import annotations
 
 import json
 import re
+import runpy
 from pathlib import Path
+
+if __name__ == "__main__":
+    # “Available for rent 30/06/2026” is a start date, not an expiry date.
+    runpy.run_path(str(Path(__file__).with_name("enrich_chatuchak_condominium_rent_2026_10_19.py")), run_name="__main__")
+    raise SystemExit(0)
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
