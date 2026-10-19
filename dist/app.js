@@ -85,10 +85,33 @@
     }
     const mergeVerifiedSamples = (market, manual) => {
       const additions = (manual?.samples || []).filter(sample => sample?.specialAsset !== true && !/(confirmed_unavailable|future_availability|availability_unconfirmed_stale|update_over_30d|over_30d|stale)/i.test(String(sample?.listingStatus || '')));
-      if (!additions.length) return market || manual || null;
-      if (!market) return manual;
+      market = market || manual || null;
+      if (!market) return null;
       const byUrl = new Map((market.samples || []).map(sample => [sample.url, sample]));
       additions.forEach(sample => { if (sample.url) byUrl.set(sample.url, sample); });
+      // For each bedroom count with linked listing samples, make its displayed
+      // minimum the cheapest current listing and keep that listing's area and URL.
+      // This keeps the 2-bedroom filter and yield baseline on the same unit.
+      const sampleBeds = sample => {
+        const raw = sample?.beds ?? sample?.bedrooms;
+        const numeric = Number(raw);
+        if (Number.isFinite(numeric) && numeric > 0) return numeric;
+        const label = `${sample?.roomType || ''} ${sample?.title || ''}`.toLowerCase();
+        const word = label.match(/\b(one|two|three|four|five)\s+bed(?:\s*room)?s?\b/);
+        if (word) return ({ one: 1, two: 2, three: 3, four: 4, five: 5 })[word[1]];
+        const match = label.match(/(?:^|\D)(\d+)\s*(?:br\b|bed(?:\s*room)?s?\b|房)/i);
+        return match ? Number(match[1]) : null;
+      };
+      const linkedRoomMinimums = new Map();
+      [...byUrl.values()].filter(sample => !/(unconfirmed|unavailable|future_availability|update_over_30d|over_30d|stale)/i.test(String(sample?.listingStatus || '')))
+        .forEach(sample => {
+          const beds = sampleBeds(sample), price = Number(sample?.price), area = Number(sample?.area);
+          if (!beds || !(price > 0) || !(area > 0) || !sample.url) return;
+          const key = String(beds), current = linkedRoomMinimums.get(key);
+          if (!current || price < current.minimum) linkedRoomMinimums.set(key, { minimum: price, area, minimumArea: area, priceSqm: price / area, minimumSqm: price / area, sourceUrl: sample.url, minimumSourceUrl: sample.url });
+        });
+      const byBedroom = { ...(market.byBedroom || {}) };
+      linkedRoomMinimums.forEach((listing, beds) => { byBedroom[beds] = { ...(byBedroom[beds] || {}), ...listing }; });
       const direct = additions.filter(sample => sample.url && Number(sample.price) > 0 && Number(sample.area) > 0);
       const lowestTotal = direct.reduce((best, sample) => !best || Number(sample.price) < Number(best.price) ? sample : best, null);
       const lowestRate = direct.reduce((best, sample) => !best || Number(sample.price) / Number(sample.area) < Number(best.price) / Number(best.area) ? sample : best, null);
@@ -96,7 +119,7 @@
       const baseRate = Number(market.minimumSqm || 0);
       const nextTotal = lowestTotal && (!baseTotal || Number(lowestTotal.price) < baseTotal) ? lowestTotal : null;
       const nextRate = lowestRate && (!baseRate || Number(lowestRate.price) / Number(lowestRate.area) < baseRate) ? lowestRate : null;
-      return { ...market, samples: [...byUrl.values()],
+      return { ...market, samples: [...byUrl.values()], byBedroom,
         ...(nextTotal ? { minimum: Number(nextTotal.price), minimumArea: Number(nextTotal.area), minimumSourceUrl: nextTotal.url, minimumSampleUpdated: nextTotal.updated || null } : {}),
         ...(nextRate ? { minimumSqm: Number((Number(nextRate.price) / Number(nextRate.area)).toFixed(2)), minimumSqmSourceUrl: nextRate.url, minimumSqmSampleUpdated: nextRate.updated || null } : {}) };
     };
@@ -326,12 +349,16 @@
   // Recompute generated baselines against the lowest linked same-bedroom sale
   // and keep its area paired with that same listing. User-edited values that
   // do not match an old generated baseline remain intact.
-  const yieldStorageKey = 'bangkokCondoYieldInputsV121';
+  const yieldStorageKey = 'bangkokCondoYieldInputsV122';
   const loadYieldInputs = () => {
     try {
       const current = localStorage.getItem(yieldStorageKey);
       if (current) return JSON.parse(current);
-      const previous = JSON.parse(localStorage.getItem('bangkokCondoYieldInputsV120') || localStorage.getItem('bangkokCondoYieldInputsV119') || localStorage.getItem('bangkokCondoYieldInputsV118') || localStorage.getItem('bangkokCondoYieldInputsV117') || localStorage.getItem('bangkokCondoYieldInputsV116') || localStorage.getItem('bangkokCondoYieldInputsV115') || localStorage.getItem('bangkokCondoYieldInputsV114') || localStorage.getItem('bangkokCondoYieldInputsV113') || localStorage.getItem('bangkokCondoYieldInputsV112') || localStorage.getItem('bangkokCondoYieldInputsV111') || localStorage.getItem('bangkokCondoYieldInputsV110') || localStorage.getItem('bangkokCondoYieldInputsV109') || localStorage.getItem('bangkokCondoYieldInputsV108') || localStorage.getItem('bangkokCondoYieldInputsV107') || localStorage.getItem('bangkokCondoYieldInputsV106') || localStorage.getItem('bangkokCondoYieldInputsV105') || localStorage.getItem('bangkokCondoYieldInputsV104') || localStorage.getItem('bangkokCondoYieldInputsV103') || localStorage.getItem('bangkokCondoYieldInputsV102') || localStorage.getItem('bangkokCondoYieldInputsV101') || localStorage.getItem('bangkokCondoYieldInputsV100') || localStorage.getItem('bangkokCondoYieldInputsV99') || localStorage.getItem('bangkokCondoYieldInputsV98') || localStorage.getItem('bangkokCondoYieldInputsV97') || localStorage.getItem('bangkokCondoYieldInputsV96') || localStorage.getItem('bangkokCondoYieldInputsV95') || localStorage.getItem('bangkokCondoYieldInputsV94') || localStorage.getItem('bangkokCondoYieldInputsV93') || localStorage.getItem('bangkokCondoYieldInputsV92') || localStorage.getItem('bangkokCondoYieldInputsV91') || localStorage.getItem('bangkokCondoYieldInputsV90') || localStorage.getItem('bangkokCondoYieldInputsV89') || localStorage.getItem('bangkokCondoYieldInputsV88') || localStorage.getItem('bangkokCondoYieldInputsV87') || localStorage.getItem('bangkokCondoYieldInputsV86') || localStorage.getItem('bangkokCondoYieldInputsV85') || localStorage.getItem('bangkokCondoYieldInputsV84') || localStorage.getItem('bangkokCondoYieldInputsV83') || localStorage.getItem('bangkokCondoYieldInputsV82') || localStorage.getItem('bangkokCondoYieldInputsV81') || localStorage.getItem('bangkokCondoYieldInputsV80') || localStorage.getItem('bangkokCondoYieldInputsV79') || localStorage.getItem('bangkokCondoYieldInputsV78') || localStorage.getItem('bangkokCondoYieldInputsV77') || localStorage.getItem('bangkokCondoYieldInputsV76') || localStorage.getItem('bangkokCondoYieldInputsV75') || localStorage.getItem('bangkokCondoYieldInputsV74') || localStorage.getItem('bangkokCondoYieldInputsV73') || localStorage.getItem('bangkokCondoYieldInputsV71') || localStorage.getItem('bangkokCondoYieldInputsV70') || localStorage.getItem('bangkokCondoYieldInputsV69') || localStorage.getItem('bangkokCondoYieldInputsV68') || localStorage.getItem('bangkokCondoYieldInputsV67') || localStorage.getItem('bangkokCondoYieldInputsV66') || localStorage.getItem('bangkokCondoYieldInputsV65') || localStorage.getItem('bangkokCondoYieldInputsV64') || localStorage.getItem('bangkokCondoYieldInputsV63') || localStorage.getItem('bangkokCondoYieldInputsV62') || localStorage.getItem('bangkokCondoYieldInputsV61') || localStorage.getItem('bangkokCondoYieldInputsV60') || localStorage.getItem('bangkokCondoYieldInputsV59') || localStorage.getItem('bangkokCondoYieldInputsV58') || localStorage.getItem('bangkokCondoYieldInputsV57') || localStorage.getItem('bangkokCondoYieldInputsV56') || localStorage.getItem('bangkokCondoYieldInputsV55') || localStorage.getItem('bangkokCondoYieldInputsV54') || localStorage.getItem('bangkokCondoYieldInputsV53') || localStorage.getItem('bangkokCondoYieldInputsV52') || localStorage.getItem('bangkokCondoYieldInputsV51') || localStorage.getItem('bangkokCondoYieldInputsV50') || localStorage.getItem('bangkokCondoYieldInputsV49') || localStorage.getItem('bangkokCondoYieldInputsV48') || localStorage.getItem('bangkokCondoYieldInputsV47') || localStorage.getItem('bangkokCondoYieldInputsV46') || localStorage.getItem('bangkokCondoYieldInputsV45') || localStorage.getItem('bangkokCondoYieldInputsV44') || localStorage.getItem('bangkokCondoYieldInputsV43') || localStorage.getItem('bangkokCondoYieldInputsV42') || localStorage.getItem('bangkokCondoYieldInputsV41') || localStorage.getItem('bangkokCondoYieldInputsV40') || localStorage.getItem('bangkokCondoYieldInputsV39') || localStorage.getItem('bangkokCondoYieldInputsV38') || localStorage.getItem('bangkokCondoYieldInputsV37') || localStorage.getItem('bangkokCondoYieldInputsV36') || localStorage.getItem('bangkokCondoYieldInputsV35') || localStorage.getItem('bangkokCondoYieldInputsV34') || localStorage.getItem('bangkokCondoYieldInputsV33') || localStorage.getItem('bangkokCondoYieldInputsV32') || localStorage.getItem('bangkokCondoYieldInputsV31') || localStorage.getItem('bangkokCondoYieldInputsV30') || localStorage.getItem('bangkokCondoYieldInputsV29') || localStorage.getItem('bangkokCondoYieldInputsV28') || localStorage.getItem('bangkokCondoYieldInputsV27') || localStorage.getItem('bangkokCondoYieldInputsV26') || localStorage.getItem('bangkokCondoYieldInputsV25') || localStorage.getItem('bangkokCondoYieldInputsV24') || localStorage.getItem('bangkokCondoYieldInputsV23') || localStorage.getItem('bangkokCondoYieldInputsV22') || localStorage.getItem('bangkokCondoYieldInputsV21') || localStorage.getItem('bangkokCondoYieldInputsV20') || localStorage.getItem('bangkokCondoYieldInputsV19') || localStorage.getItem('bangkokCondoYieldInputsV18') || localStorage.getItem('bangkokCondoYieldInputsV17') || localStorage.getItem('bangkokCondoYieldInputsV16') || localStorage.getItem('bangkokCondoYieldInputsV15') || localStorage.getItem('bangkokCondoYieldInputsV14') || localStorage.getItem('bangkokCondoYieldInputsV13') || localStorage.getItem('bangkokCondoYieldInputsV12') || localStorage.getItem('bangkokCondoYieldInputsV11') || localStorage.getItem('bangkokCondoYieldInputsV10') || localStorage.getItem('bangkokCondoYieldInputsV9') || localStorage.getItem('bangkokCondoYieldInputsV8') || localStorage.getItem('bangkokCondoYieldInputsV7') || localStorage.getItem('bangkokCondoYieldInputsV6') || localStorage.getItem('bangkokCondoYieldInputsV5') || '{}');
+      let previous = {};
+      for (let version = 121; version >= 5; version--) {
+        const stored = localStorage.getItem(`bangkokCondoYieldInputsV${version}`);
+        if (stored) { previous = JSON.parse(stored); break; }
+      }
       const recalculated = {};
       condos.forEach(c => {
         const old = previous[c.id] || {};
