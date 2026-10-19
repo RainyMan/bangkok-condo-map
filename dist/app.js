@@ -367,15 +367,15 @@
   // Recompute generated baselines against the lowest linked same-bedroom sale
   // and keep its area paired with that same listing. User-edited values that
   // do not match an old generated baseline remain intact.
-  // Recompute saved generated baselines after correcting the default to the
-  // cheapest two-bedroom total-price listing and its matching unit area.
-  const yieldStorageKey = 'bangkokCondoYieldInputsV201';
+  // Recompute saved generated baselines after refreshing the two-bedroom
+  // lowest-price unit and its paired floor area, while preserving edits.
+  const yieldStorageKey = 'bangkokCondoYieldInputsV202';
   const loadYieldInputs = () => {
     try {
       const current = localStorage.getItem(yieldStorageKey);
       if (current) return JSON.parse(current);
       let previous = {};
-      for (let version = 200; version >= 5; version--) {
+      for (let version = 201; version >= 5; version--) {
         const stored = localStorage.getItem(`bangkokCondoYieldInputsV${version}`);
         if (stored) { previous = JSON.parse(stored); break; }
       }
@@ -434,7 +434,9 @@
           Number(c.sale?.byBedroom?.['2']?.minimum),
           ...(c.sale?.samples || []).filter(sample => bedroomCountForSample(sample) === 2).map(sample => Number(sample.price)),
         ].filter(price => price > 0);
-        const savedMatchesTwoBedroomListing = previousBeds === '2' && knownTwoBedroomPrices.includes(Number(old.price));
+        const savedMatchesTwoBedroomListing = previousBeds === '2'
+          && knownTwoBedroomPrices.includes(Number(old.price))
+          && (oldRentMatches || oldSaleMatches || oldSaleMatchesGeneratedParts);
         const useRefreshedBaseline = !old.price || wasAutoBaseline || savedMatchesTwoBedroomListing;
         recalculated[c.id] = {
           price: useRefreshedBaseline ? defaults.price : Number(old.price),
