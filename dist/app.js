@@ -369,13 +369,13 @@
   // do not match an old generated baseline remain intact.
   // Recompute saved generated baselines after correcting the default to the
   // cheapest two-bedroom total-price listing and its matching unit area.
-  const yieldStorageKey = 'bangkokCondoYieldInputsV190';
+  const yieldStorageKey = 'bangkokCondoYieldInputsV191';
   const loadYieldInputs = () => {
     try {
       const current = localStorage.getItem(yieldStorageKey);
       if (current) return JSON.parse(current);
       let previous = {};
-      for (let version = 189; version >= 5; version--) {
+      for (let version = 190; version >= 5; version--) {
         const stored = localStorage.getItem(`bangkokCondoYieldInputsV${version}`);
         if (stored) { previous = JSON.parse(stored); break; }
       }
