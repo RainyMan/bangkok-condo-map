@@ -1,0 +1,33 @@
+{
+  "hipflatId": 3180,
+  "project": "Siri Sathorn",
+  "checkedAt": "2026-10-19",
+  "projectSource": "https://www.hipflat.co.th/projects/siri-sathorn-cncjua",
+  "projectIdentity": "Hipflat project page lists Siri Sathorn at 27 Soi Sala Daeng 1, Silom, Bang Rak; this matches the catalogue project name/address and the exact-name OSM point.",
+  "rentListings": [
+    {
+      "priceThbPerMonth": 80000,
+      "bedrooms": 2,
+      "areaSqm": 100,
+      "rentThbPerSqmMonth": 800.0,
+      "url": "https://www.hipflat.co.th/ads/9a2el0cl8te71hl9948ecl0c3u0heaa4"
+    },
+    {
+      "priceThbPerMonth": 60000,
+      "bedrooms": 1,
+      "areaSqm": 60,
+      "rentThbPerSqmMonth": 1000.0,
+      "url": "https://www.hipflat.co.th/ads/8a9lt9n889nh200hlunt29343u0heu72"
+    },
+    {
+      "priceThbPerMonth": 50000,
+      "bedrooms": 1,
+      "areaSqm": 55,
+      "rentThbPerSqmMonth": 909.09,
+      "url": "https://www.hipflat.co.th/ads/1e9c09l2872n9cl44ac49ln33u02u918"
+    }
+  ],
+  "sale": "No individual sale listing found on the Hipflat project page or in exact-name DDproperty/PropertyHub/Hipflat searches. Baan Siri Sathorn results are a different project and excluded.",
+  "yield": "Not calculated because no sale sample for Siri Sathorn was verified.",
+  "availability": "Hipflat's project page displayed three rent units when checked; current vacancy is not independently confirmed with the advertisers."
+}

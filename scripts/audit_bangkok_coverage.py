@@ -232,15 +232,15 @@ def main() -> None:
         # Match the coordinate source actually selected by app.js instead of
         # accidentally reporting a market/search URL as the location source.
         coordinate_source = ""
-        for row, source_url in (
-            (market, market.get("locationSourceUrl")),
-            (project, project.get("locationSourceUrl")),
-            (osm.get(project_id, {}), osm.get(project_id, {}).get("sourceUrl")),
-            (verified_location, verified_location.get("sourceUrl")),
-            (scout_location, scout_location.get("locationSourceUrl")),
-            (legacy, legacy.get("locationSourceUrl")),
+        for row, source_url, requires_location_verified in (
+            (market, market.get("locationSourceUrl"), True),
+            (project, project.get("locationSourceUrl"), True),
+            (osm.get(project_id, {}), osm.get(project_id, {}).get("sourceUrl"), False),
+            (verified_location, verified_location.get("sourceUrl"), True),
+            (scout_location, scout_location.get("locationSourceUrl"), True),
+            (legacy, legacy.get("locationSourceUrl"), True),
         ):
-            if row.get("locationVerified") and row.get("lat") is not None and row.get("lng") is not None:
+            if (not requires_location_verified or row.get("locationVerified")) and row.get("lat") is not None and row.get("lng") is not None:
                 coordinate_source = str(source_url or "")
                 break
         counts.update({
