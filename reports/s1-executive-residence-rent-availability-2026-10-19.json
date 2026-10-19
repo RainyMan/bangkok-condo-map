@@ -1,0 +1,91 @@
+{
+  "hipflatId": 5012,
+  "project": "S1 Executive Residence",
+  "checkedAt": "2026-10-19",
+  "coordinates": {
+    "source": "https://www.thaigerproperty.com/projects/thailand/bangkok/watthana/khlong-tan-nuea/s1-executive-residence",
+    "verificationSource": "https://www.hipflat.co.th/en/projects/s1-executive-residence-uschqt",
+    "lat": 13.7383873,
+    "lng": 100.5804242
+  },
+  "sale": {
+    "verifiedCurrentDirectListingCount": 0,
+    "sources": [
+      "https://www.dotproperty.co.th/en/condo/23639/s1-executive-residence",
+      "https://www.thailand-property.com/condo/23639/s1-executive-residence"
+    ],
+    "excluded": {
+      "url": "https://propertyhub.in.th/en/listings/a046530-s1-executive-residence---6214097",
+      "reason": "Listing explicitly locates the unit in S1 Rama 9 / Suan Luang, not S1 Executive Residence in Watthana."
+    }
+  },
+  "rent": {
+    "projectDisplayedCount": 9,
+    "verifiedDirectSampleCount": 1,
+    "samples": [
+      {
+        "id": "U6543736",
+        "price": 45000,
+        "area": 60,
+        "priceSqm": 750,
+        "beds": 1,
+        "roomType": "1BR",
+        "title": "S1 Executive Residence，1 房，60 ㎡，฿45,000/月",
+        "url": "https://www.fazwaz.co.th/en/property-rent/1-bedroom-apartment-for-rent-at-s1-executive-residence-in-khlong-tan-nuea-bangkok-u6543736",
+        "sourceName": "FazWaz",
+        "projectName": "S1 Executive Residence",
+        "updated": "2026-10-19",
+        "checkedAt": "2026-10-19",
+        "matchedBy": "exact_project_name_and_direct_listing_page",
+        "listingStatus": "active_as_listed",
+        "verificationNote": "FazWaz 個別頁列 1 房、60㎡、฿45,000/月；刊登日 2026-07-01，頁面查核時顯示 46 分鐘前更新。"
+      }
+    ]
+  },
+  "yield": {
+    "calculated": false,
+    "reason": "No verified current project sale sample."
+  },
+  "sources": [
+    {
+      "sourceName": "Hipflat 專案頁",
+      "url": "https://www.hipflat.co.th/en/projects/s1-executive-residence-uschqt",
+      "statusLabel": "專案頁列出 9 筆出租，完成年份 2011、8 層、29 戶。"
+    },
+    {
+      "sourceName": "FazWaz 個別 1 房租盤",
+      "url": "https://www.fazwaz.co.th/en/property-rent/1-bedroom-apartment-for-rent-at-s1-executive-residence-in-khlong-tan-nuea-bangkok-u6543736",
+      "statusLabel": "1 房、60㎡、฿45,000/月；刊登日 2026-07-01，查核時頁面顯示 46 分鐘前更新。"
+    },
+    {
+      "sourceName": "FazWaz 專案出租頁",
+      "url": "https://www.fazwaz.co.th/en/property-for-rent/thailand/bangkok/watthana/khlong-tan-nuea/at-s1-executive-residence",
+      "statusLabel": "專案出租頁列出 9 筆；個別樣本只納入可直接核實的一筆。"
+    },
+    {
+      "sourceName": "DotProperty 專案出售／出租頁",
+      "url": "https://www.dotproperty.co.th/en/condo/23639/s1-executive-residence",
+      "statusLabel": "頁面顯示 0 筆出售、9 筆出租；未找到本案現行出售物件。"
+    },
+    {
+      "sourceName": "Thailand-Property 專案頁",
+      "url": "https://www.thailand-property.com/condo/23639/s1-executive-residence",
+      "statusLabel": "專案頁列出 9 筆出租，租金範圍 ฿43,500–฿45,500/月；沒有出售掛牌。"
+    },
+    {
+      "sourceName": "排除：PropertyHub 相似名稱出售物件",
+      "url": "https://propertyhub.in.th/en/listings/a046530-s1-executive-residence---6214097",
+      "statusLabel": "฿5,300,000、2 房、65㎡的掛牌位置標示 S1 Rama 9 / Suan Luang，與本案 Thong Lo 23 / Watthana 不符，不納入本案出售樣本。"
+    },
+    {
+      "sourceName": "PropertyHub 相似專案頁",
+      "url": "https://propertyhub.in.th/en/projects/s1-rama-9",
+      "statusLabel": "S1 Rama 9 專案在 Suan Luang，與 S1 Executive Residence 不同專案，排除。"
+    },
+    {
+      "sourceName": "Thaiger 專案座標",
+      "url": "https://www.thaigerproperty.com/projects/thailand/bangkok/watthana/khlong-tan-nuea/s1-executive-residence",
+      "statusLabel": "專案地址與 Hipflat 的 Thong Lo 23、Khlong Tan Nuea、Watthana 相符，用於核實本案位置。"
+    }
+  ]
+}
