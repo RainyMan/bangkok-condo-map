@@ -1,0 +1,72 @@
+{
+  "hipflatId": 3662,
+  "project": "Happy Condo Ladprao 101 Building H",
+  "checkedAt": "2026-10-20",
+  "coordinate": {
+    "lat": 13.788325,
+    "lng": 100.629008,
+    "source": "https://maps.google.com/?q=13.788325%2C100.629008",
+    "sourcePage": "https://www.bam.co.th/en/npa/property/62596",
+    "verification": "Exact parent condo complex; map point is campus-level, not Building H entrance."
+  },
+  "sale": {
+    "id": "6366489",
+    "price": 3100000,
+    "area": 62.0,
+    "priceSqm": 50000,
+    "beds": 2,
+    "roomType": "2BR",
+    "title": "Happy Condo Ladprao 101 Building H，2 房，62 ㎡，฿3,100,000",
+    "url": "https://propertyhub.in.th/en/listings/for-sell-condo-happy-condo-ladprao-101-building-h-floor-4-2-bed-room-room-size-62-sqm--bc9009e7---6366489",
+    "sourceName": "PropertyHub",
+    "updated": "2026-10-19T17:30:00+07:00",
+    "checkedAt": "2026-10-20",
+    "matchedBy": "exact_building_h_project_card_and_direct_listing",
+    "listingStatus": "active_as_listed"
+  },
+  "rent": {
+    "id": "6170152",
+    "price": 22000,
+    "area": 62.3,
+    "priceSqm": 353,
+    "beds": 2,
+    "roomType": "2BR",
+    "title": "Happy Condo Ladprao 101 Building H，2 房，62.3 ㎡，฿22,000/月",
+    "url": "https://propertyhub.in.th/en/listings/for-rent-happy-condo-ladprao-101-2-bedrooms-2-bathrooms-62-3-sq-m-4th-floor-building-h-22-000-thb---6170152",
+    "sourceName": "PropertyHub",
+    "updated": "2026-10-19T10:25:00+07:00",
+    "checkedAt": "2026-10-20",
+    "matchedBy": "exact_building_h_project_card_and_direct_listing",
+    "listingStatus": "active_as_listed"
+  },
+  "commonFee": {
+    "bahtPerSqmPerMonth": 35.0,
+    "source": "https://www.bam.co.th/en/npa/property/62596",
+    "status": "Public project figure; verify current juristic-person billing."
+  },
+  "yield": {
+    "bedrooms": 2,
+    "salePrice": 3100000,
+    "saleAreaSqm": 62.0,
+    "saleSampleUrl": "https://propertyhub.in.th/en/listings/for-sell-condo-happy-condo-ladprao-101-building-h-floor-4-2-bed-room-room-size-62-sqm--bc9009e7---6366489",
+    "rentPrice": 22000,
+    "rentAreaSqm": 62.3,
+    "rentRatePerSqmPerMonth": 353.13,
+    "estimatedMonthlyRentAtSaleArea": 21894,
+    "commonFeeBahtPerSqmPerMonth": 35.0,
+    "annualCommonFee": 26040,
+    "netAnnualYieldWithOneAgentMonthPercent": 6.93,
+    "netAnnualYieldWithoutAgentMonthPercent": 7.64,
+    "formula": "((lowest 2BR rent / its area) × lowest 2BR sale area × (12 − 1 agent month) − fee per sqm × sale area × 12) / lowest 2BR sale total × 100",
+    "rentSampleUrl": "https://propertyhub.in.th/en/listings/for-rent-happy-condo-ladprao-101-2-bedrooms-2-bathrooms-62-3-sq-m-4th-floor-building-h-22-000-thb---6170152"
+  },
+  "sources": [
+    "https://www.hipflat.co.th/en/projects/happy-condo-ladprao-101-building-h-rbmbrd",
+    "https://www.bam.co.th/en/npa/property/62596",
+    "https://maps.google.com/?q=13.788325%2C100.629008",
+    "https://propertyhub.in.th/en/condo-for-sale/project-happy-condo-ladprao-101",
+    "https://propertyhub.in.th/en/condo-for-rent/project-happy-condo-ladprao-101",
+    "https://propertyhub.in.th/en/listings/for-sell-condo-happy-condo-ladprao-101-building-h-floor-4-2-bed-room-room-size-62-sqm--bc9009e7---6366489",
+    "https://propertyhub.in.th/en/listings/for-rent-happy-condo-ladprao-101-2-bedrooms-2-bathrooms-62-3-sq-m-4th-floor-building-h-22-000-thb---6170152"
+  ]
+}
