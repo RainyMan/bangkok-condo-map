@@ -278,9 +278,13 @@
     // Bedroom summary minima are usable only when the data explicitly binds
     // that price, area and URL to one individual listing. Generic `area` fields
     // can describe a room-type average and must not be paired with a minimum.
-    const summaryArea = Number(room?.minimumArea || 0);
     const summaryUrl = room?.minimumSourceUrl || room?.sourceUrl || null;
     const isDirectListingUrl = url => typeof url === 'string' && /\/(?:ads|listings|property|property-for-sale|property-for-rent)\//i.test(url);
+    // Some imported room rows keep the directly linked unit area in `area`
+    // rather than `minimumArea`. Accept that field only when the URL identifies
+    // an individual listing; project-wide average areas must not be paired
+    // with a minimum asking price.
+    const summaryArea = Number(room?.minimumArea || (isDirectListingUrl(summaryUrl) ? room?.area : 0));
     // Only use a bedroom summary as a candidate when its source points to an
     // individual listing. A project or market-summary page can have a minimum
     // value, but it cannot prove which two-bedroom unit supplied that price.
@@ -362,13 +366,13 @@
   // Recompute generated baselines against the lowest linked same-bedroom sale
   // and keep its area paired with that same listing. User-edited values that
   // do not match an old generated baseline remain intact.
-  const yieldStorageKey = 'bangkokCondoYieldInputsV150';
+  const yieldStorageKey = 'bangkokCondoYieldInputsV151';
   const loadYieldInputs = () => {
     try {
       const current = localStorage.getItem(yieldStorageKey);
       if (current) return JSON.parse(current);
       let previous = {};
-      for (let version = 149; version >= 5; version--) {
+      for (let version = 150; version >= 5; version-- {
         const stored = localStorage.getItem(`bangkokCondoYieldInputsV${version}`);
         if (stored) { previous = JSON.parse(stored); break; }
       }

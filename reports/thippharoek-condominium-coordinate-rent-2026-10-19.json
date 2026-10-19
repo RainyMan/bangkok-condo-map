@@ -1,0 +1,33 @@
+{
+  "hipflatId": 3956,
+  "project": "Thippharoek Condominium",
+  "checkedAt": "2026-10-19",
+  "coordinates": {
+    "lat": 13.7867527,
+    "lng": 100.471813,
+    "sourceUrl": "https://thinkofliving.com/project/%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/12323/",
+    "crosscheckUrl": "https://www.hipflat.co.th/en/projects/thippharoek-condominium-wpnhdl"
+  },
+  "rentSample": {
+    "priceThbPerMonth": 10000,
+    "areaSqm": 46,
+    "priceThbPerSqmMonth": 217.39,
+    "sourceUrl": "https://asset-direct-v2.propertyhub.in.th/en/listings/quick-rent-thipphayaroek-condominium-pinklao-soi-borommaratchachonnani-12-near-eye-ear-nose-throat-hospital-near-central-pinklao---6288412",
+    "projectIndexUrl": "https://assets3.propertyhub.in.th/en/condo-for-rent/project-thippharoek-condominium--2",
+    "updated": "2026-08-09",
+    "status": "availability_unconfirmed_update_over_30d"
+  },
+  "lowestTwoBedroomSale": {
+    "priceThb": 3690000,
+    "areaSqm": 104,
+    "priceThbPerSqm": 35481,
+    "sourceUrl": "https://www.ddproperty.com/en/property/thippharoek-condominium-bangkok-for-sale-500476271",
+    "crosscheckUrl": "https://www.ddproperty.com/en/property/thippharoek-condominium-bangkok-for-sale-500476271",
+    "note": "PropertyHub 與 DDproperty 搜尋結果均對應 Thippharoek Condominium 兩房 104㎡、฿3,690,000。"
+  },
+  "twoBedroomYield": {
+    "calculated": false,
+    "reason": "No current, same-bedroom rent listing is verified; the direct one-bedroom sample is stale."
+  },
+  "limitation": "The source's available-from date is 31 August 2026, not proof that the unit remains available today."
+}
