@@ -349,13 +349,13 @@
   // Recompute generated baselines against the lowest linked same-bedroom sale
   // and keep its area paired with that same listing. User-edited values that
   // do not match an old generated baseline remain intact.
-  const yieldStorageKey = 'bangkokCondoYieldInputsV128';
+  const yieldStorageKey = 'bangkokCondoYieldInputsV129';
   const loadYieldInputs = () => {
     try {
       const current = localStorage.getItem(yieldStorageKey);
       if (current) return JSON.parse(current);
       let previous = {};
-      for (let version = 126; version >= 5; version--) {
+      for (let version = 128; version >= 5; version--) {
         const stored = localStorage.getItem(`bangkokCondoYieldInputsV${version}`);
         if (stored) { previous = JSON.parse(stored); break; }
       }
@@ -930,3 +930,4 @@
   window.addEventListener('resize', () => map.invalidateSize());
   document.getElementById('startupLoader')?.remove();
 })();
+
