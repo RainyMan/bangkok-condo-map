@@ -1,0 +1,47 @@
+{
+  "hipflatId": 6546,
+  "projectName": "Menam Residences Condominium",
+  "asOf": "2026-10-19",
+  "location": {
+    "verified": true,
+    "sourceUrl": "https://www.thaigerproperty.com/projects/thailand/bangkok/bang-kho-laem/wat-phraya-krai/menam-residences-condominium",
+    "coordinates": [
+      13.7064371,
+      100.5059248
+    ]
+  },
+  "completedYear": 2016,
+  "managementFeeThbPerSqmPerMonth": 60,
+  "saleSample": {
+    "priceThb": 11000000,
+    "areaSqm": 69,
+    "bedrooms": 2,
+    "priceThbPerSqm": 159420,
+    "sourceUrl": "https://assets2.propertyhub.in.th/en/listings/for-sale-condo-menam-residences-bts-saphan-taksin-wat-phraya-krai-bang-kho-laem-bangkok-cx-28563-live-chat-with-us-add-line-connexproperty--b21209c5---3940968"
+  },
+  "rentSamples": [
+    {
+      "priceThbPerMonth": 38000,
+      "areaSqm": 65,
+      "bedrooms": 2,
+      "sourceUrl": "https://propertyhub.in.th/en/listings/for-rent-condo-menam-residences-bts-saphan-taksin-wat-phraya-krai-bang-kho-laem-bangkok-cx-105123-live-chat-with-us-add-line-connexproperty--b395096e---4752692"
+    },
+    {
+      "priceThbPerMonth": 42000,
+      "areaSqm": 77,
+      "bedrooms": 2,
+      "sourceUrl": "https://propertyhub.in.th/en/listings/the-most-competitively-priced-high-floor-corner-suite-with-majestic-chao-phraya-river-views---6208130"
+    }
+  ],
+  "yieldCalculation": {
+    "purchasePriceThb": 11000000,
+    "pairedSaleAreaSqm": 69,
+    "lowestObservedTwoBedroomRentThbPerSqmPerMonth": 545.45,
+    "impliedMonthlyRentThb": 37636,
+    "annualYieldBeforeDeductionsPercent": 4.11,
+    "annualYieldAfterOneAgentMonthPercent": 3.76,
+    "annualNetYieldAfterFeeAndOneAgentMonthPercent": 3.31,
+    "formula": "(monthly rent × 11 − 60 × 69 × 12) ÷ 11,000,000 × 100"
+  },
+  "note": "Listings are public portal offers observed on 2026-10-19; availability and final agreed prices require direct confirmation with the advertiser."
+}
