@@ -3440,6 +3440,98 @@ window.BANGKOK_MARKET_CROSSCHECKS =[
     ]
   },
   {
+    "hipflatId": 6370,
+    "projectName": "Q Prasarnmit",
+    "asOf": "2026-10-19",
+    "sourceName": "Hipflat / PropertyHub / Google Maps / Condonayoo / ThinkOfLiving",
+    "projectSourceUrl": "https://www.hipflat.co.th/projects/q-prasarnmit-gewivt",
+    "sale": {
+      "activeListingCount": 8,
+      "sourceUrl": "https://www.hipflat.co.th/projects/q-prasarnmit-gewivt",
+      "bedroomMinimums": {
+        "2": {
+          "price": 8200000,
+          "area": 60,
+          "sourceUrl": "https://www.hipflat.co.th/ads/19344n4l8ue28nc983h41cn03u08l2eu"
+        }
+      },
+      "note": "Hipflat 專案頁列出 8 筆出售，兩房最低掛牌為 ฿8,200,000／60㎡；直接房源連結附於樣本。掛牌頁未提供更新時間，仍應向刊登者確認可售狀態。PropertyHub 的兩房最低掛牌為 ฿8,652,000／60㎡，高於 Hipflat 樣本。"
+    },
+    "rent": {
+      "activeListingCount": 46,
+      "sourceUrl": "https://www.hipflat.co.th/projects/q-prasarnmit-gewivt",
+      "listings": [
+        {
+          "id": "5518547",
+          "kind": "rent",
+          "price": 45000,
+          "area": 60,
+          "priceSqm": 750.0,
+          "beds": 2,
+          "roomType": "2BR",
+          "title": "Q Prasarnmit，2 房，60㎡，฿45,000/月",
+          "url": "https://propertyhub.in.th/en/listings/q-prasarnmit-full-featured-common-area--af0f0990---5518547",
+          "sourceName": "PropertyHub",
+          "projectName": "Q Prasarnmit",
+          "checkedAt": "2026-10-19",
+          "matchedBy": "exact_project_page_listing_card_latest_refreshed_2026_09_22",
+          "listingStatus": "active_as_listed",
+          "updated": "2026-09-22"
+        },
+        {
+          "id": "1807754",
+          "kind": "rent",
+          "price": 52000,
+          "area": 70,
+          "priceSqm": 742.86,
+          "beds": 2,
+          "roomType": "2BR",
+          "title": "Q Prasarnmit，2 房，70㎡，฿52,000/月",
+          "url": "https://propertyhub.in.th/en/listings/2-br-condo-at-q-prasarnmit-near-mrt-phetchaburi-id-1807754--aefe094f---4680107",
+          "sourceName": "PropertyHub",
+          "projectName": "Q Prasarnmit",
+          "checkedAt": "2026-10-19",
+          "matchedBy": "exact_project_page_listing_card_latest_refreshed_2026_09_22",
+          "listingStatus": "active_as_listed",
+          "updated": "2026-09-22"
+        }
+      ],
+      "note": "Hipflat 專案頁顯示 ฿45,000／60㎡（฿750／㎡）與 ฿34,000／72㎡（฿472／㎡）等兩房掛牌；低單價一筆的出租來源另標示 2026-11-15 起可入住，故投報採用 PropertyHub 於 2026-09-22 更新的兩房 ฿52,000／70㎡（฿742.86／㎡）作為目前可租低單價樣本。PropertyHub 同日更新兩房 ฿45,000／60㎡掛牌，供最低總租金參考。",
+      "lowestRoomRateUsedForYield": 742.86,
+      "lowestRoomRateSourceUrl": "https://propertyhub.in.th/en/listings/2-br-condo-at-q-prasarnmit-near-mrt-phetchaburi-id-1807754--aefe094f---4680107"
+    },
+    "fee": {
+      "rate": 100,
+      "unit": "THB/sqm/month",
+      "sourceUrl": "https://propertyhub.in.th/en/projects/q-prasarnmit"
+    },
+    "completionYear": {
+      "selected": 2019,
+      "sourceUrl": "https://propertyhub.in.th/en/projects/q-prasarnmit",
+      "corroboratingSourceUrl": "https://www.condonayoo.com/q-prasarnmit/",
+      "conflictingSourceUrl": "https://www.hipflat.co.th/projects/q-prasarnmit-gewivt",
+      "note": "PropertyHub 專案頁與 Condonayoo 標示 2019；Hipflat 標示 2020，保留此來源差異。"
+    },
+    "coordinates": {
+      "lat": 13.743605,
+      "lng": 100.567028,
+      "sourceUrl": "https://www.google.com/maps?q=13.743605,100.567028",
+      "verificationSourceUrl": "https://www.condonayoo.com/q-prasarnmit/",
+      "corroborationSourceUrl": "https://thinkofliving.com/project/%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/7198/"
+    },
+    "yieldStatus": "calculated_from_lowest_two_bedroom_sale_and_current_two_bedroom_rent_rate",
+    "yieldInputs": {
+      "purchasePrice": 8200000,
+      "purchaseArea": 60,
+      "rentPerSqmPerMonth": 742.86,
+      "monthlyRentEstimate": 44571.43,
+      "managementFeePerSqmPerMonth": 100,
+      "deductOneAgentMonth": true,
+      "deductManagementFee": true,
+      "netAnnualYieldPercent": 5.1
+    }
+  },
+  {
     "hipflatId": 6415,
     "projectName": "Elephant Tower",
     "asOf": "2026-10-18",

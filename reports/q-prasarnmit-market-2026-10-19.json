@@ -1,0 +1,99 @@
+{
+  "hipflatId": 6370,
+  "projectName": "Q Prasarnmit",
+  "checkedAt": "2026-10-19",
+  "coordinates": {
+    "lat": 13.743605,
+    "lng": 100.567028,
+    "googleMaps": "https://www.google.com/maps?q=13.743605,100.567028",
+    "condonayoo": "https://www.condonayoo.com/q-prasarnmit/",
+    "thinkOfLiving": "https://thinkofliving.com/project/%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/7198/"
+  },
+  "sale": {
+    "lowestTwoBedroom": {
+      "id": "19344n4l8ue28nc983h41cn03u08l2eu",
+      "kind": "sale",
+      "price": 8200000,
+      "area": 60,
+      "priceSqm": 136666.67,
+      "beds": 2,
+      "roomType": "2BR",
+      "title": "Q Prasarnmit，2 房，60㎡，฿8,200,000",
+      "url": "https://www.hipflat.co.th/ads/19344n4l8ue28nc983h41cn03u08l2eu",
+      "sourceName": "Hipflat",
+      "projectName": "Q Prasarnmit",
+      "checkedAt": "2026-10-19",
+      "matchedBy": "exact_project_page_current_listing_card_and_direct_listing_link",
+      "listingStatus": "availability_unconfirmed_date_unknown"
+    },
+    "propertyHubComparison": {
+      "price": 8652000,
+      "area": 60,
+      "url": "https://propertyhub.in.th/en/listings/lth11276-q-prasarnmit-for-sale-size-60-sqm-2-bed-2-bath-bts-phrom-phong-station-only-8-652-mb---4833341"
+    }
+  },
+  "rent": {
+    "lowestCurrentRateTwoBedroom": {
+      "id": "1807754",
+      "kind": "rent",
+      "price": 52000,
+      "area": 70,
+      "priceSqm": 742.86,
+      "beds": 2,
+      "roomType": "2BR",
+      "title": "Q Prasarnmit，2 房，70㎡，฿52,000/月",
+      "url": "https://propertyhub.in.th/en/listings/2-br-condo-at-q-prasarnmit-near-mrt-phetchaburi-id-1807754--aefe094f---4680107",
+      "sourceName": "PropertyHub",
+      "projectName": "Q Prasarnmit",
+      "checkedAt": "2026-10-19",
+      "matchedBy": "exact_project_page_listing_card_latest_refreshed_2026_09_22",
+      "listingStatus": "active_as_listed",
+      "updated": "2026-09-22"
+    },
+    "lowestTotalTwoBedroom": {
+      "id": "5518547",
+      "kind": "rent",
+      "price": 45000,
+      "area": 60,
+      "priceSqm": 750.0,
+      "beds": 2,
+      "roomType": "2BR",
+      "title": "Q Prasarnmit，2 房，60㎡，฿45,000/月",
+      "url": "https://propertyhub.in.th/en/listings/q-prasarnmit-full-featured-common-area--af0f0990---5518547",
+      "sourceName": "PropertyHub",
+      "projectName": "Q Prasarnmit",
+      "checkedAt": "2026-10-19",
+      "matchedBy": "exact_project_page_listing_card_latest_refreshed_2026_09_22",
+      "listingStatus": "active_as_listed",
+      "updated": "2026-09-22"
+    },
+    "futureAvailableLowerRate": {
+      "price": 34000,
+      "area": 72,
+      "rate": 472,
+      "availableFrom": "2026-11-15",
+      "url": "https://www.hipflat.co.th/ads/8at04ca08cllh11332l4n8tu3u0hea32"
+    }
+  },
+  "fee": {
+    "rate": 100,
+    "source": "https://propertyhub.in.th/en/projects/q-prasarnmit"
+  },
+  "yield": {
+    "purchasePrice": 8200000,
+    "purchaseArea": 60,
+    "rentPerSqmPerMonth": 742.86,
+    "monthlyRentEstimate": 44571.43,
+    "managementFeePerSqmPerMonth": 100,
+    "deductOneAgentMonth": true,
+    "deductManagementFee": true,
+    "netAnnualYieldPercent": 5.1
+  },
+  "completionYear": {
+    "selected": 2019,
+    "sourceUrl": "https://propertyhub.in.th/en/projects/q-prasarnmit",
+    "corroboratingSourceUrl": "https://www.condonayoo.com/q-prasarnmit/",
+    "conflictingSourceUrl": "https://www.hipflat.co.th/projects/q-prasarnmit-gewivt",
+    "note": "PropertyHub 專案頁與 Condonayoo 標示 2019；Hipflat 標示 2020，保留此來源差異。"
+  }
+}

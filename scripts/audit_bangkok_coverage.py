@@ -256,10 +256,10 @@ def main() -> None:
         # accidentally reporting a market/search URL as the location source.
         coordinate_source = ""
         for row, source_url, requires_location_verified in (
+            (verified_location, verified_location.get("sourceUrl"), True),
             (market, market.get("locationSourceUrl"), True),
             (project, project.get("locationSourceUrl"), True),
             (osm.get(project_id, {}), osm.get(project_id, {}).get("sourceUrl"), False),
-            (verified_location, verified_location.get("sourceUrl"), True),
             (scout_location, scout_location.get("locationSourceUrl"), True),
             (legacy, legacy.get("locationSourceUrl"), True),
         ):
