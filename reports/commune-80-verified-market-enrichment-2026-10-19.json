@@ -1,0 +1,42 @@
+{
+  "checkedAt": "2026-10-19",
+  "hipflatId": 3412,
+  "project": "Commune 80",
+  "coordinate": {
+    "lat": 13.782609541,
+    "lng": 100.602739134,
+    "googleMaps": "https://www.google.com/maps/search/?api=1&query=13.782609541%2C100.602739134",
+    "arcgis": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=Commune+80+Lat+Phrao%2C+21+Soi+Lat+Phrao+80%2C+Yaek+22%2C+Wang+Thonglang%2C+Bangkok+10310%2C+Thailand&f=json&outFields=%2A&maxLocations=1",
+    "hipflat": "https://www.hipflat.co.th/en/projects/commune-80-ohmrsq"
+  },
+  "saleSamples": [
+    {
+      "id": "6005709",
+      "beds": 1,
+      "priceTHB": 2800000,
+      "areaSqm": 70,
+      "pricePerSqm": 40000,
+      "url": "https://propertyhub.in.th/listings/a033884-commune-80---6005709"
+    },
+    {
+      "id": "6087703",
+      "beds": 2,
+      "priceTHB": 2989000,
+      "areaSqm": 70,
+      "pricePerSqm": 42700,
+      "url": "https://propertyhub.in.th/listings/pet-friendly-%E0%B8%82%E0%B8%B2%E0%B8%A2%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-commune-80-%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%A7-80-%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B9%83%E0%B8%AB%E0%B8%8D%E0%B9%88%E0%B8%AA%E0%B8%B8%E0%B8%94-%E0%B8%97%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3-%E0%B8%A1%E0%B8%B5%E0%B9%81%E0%B8%84%E0%B9%88-20-%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87-%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%87%E0%B8%AA%E0%B8%B1%E0%B8%95%E0%B8%A7%E0%B9%8C%E0%B8%ได้-%E0%B9%80%E0%B8%9B%E0%B8%B4%E0%B8%94%E0%B9%80%E0%B8%9C%E0%B8%A2---6087703"
+    },
+    {
+      "id": "5667619",
+      "beds": 2,
+      "priceTHB": 3090000,
+      "areaSqm": 70,
+      "pricePerSqm": 44142.86,
+      "url": "https://propertyhub.in.th/listings/cs528-%E0%B8%82%E0%B8%B2%E0%B8%A2%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B8%84%E0%B8%AD%E0%B8%A1%E0%B8%A1%E0%B8%B9%E0%B8%99%E0%B9%80%E0%B8%AD%E0%B8%95%E0%B8%95%E0%B8%B5%E0%B9%89-%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%A7-mrt-%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%A7-064-665-4666---5667619"
+    }
+  ],
+  "rentListingCount": 0,
+  "roiCalculated": false,
+  "roiReason": "No direct rental listing was available on the inspected project pages.",
+  "sampleCountCaveat": "PropertyHub pages returned 7 versus 8 project sales; three directly accessible units were recorded. The lowest two-bedroom sample is seller-labelled 2BR but its description says its second room is convertible from the living room."
+}
