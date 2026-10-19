@@ -258,6 +258,18 @@ crosschecks.append(
 crosschecks.sort(key=lambda row: int(row["hipflatId"]))
 write_array("bangkok-market-crosschecks.js", "BANGKOK_MARKET_CROSSCHECKS", crosschecks)
 
+index_path = DIST / "index.html"
+index_html = index_path.read_text(encoding="utf-8")
+index_html = index_html.replace(
+    "bangkok-manual-market-samples.js?v=20261019-ussakan-bam-asset",
+    "bangkok-manual-market-samples.js?v=20261019-menam-residences-samples",
+)
+index_html = index_html.replace(
+    "bangkok-market-crosschecks.js?v=20261019-picha-rent-availability",
+    "bangkok-market-crosschecks.js?v=20261019-menam-residences-samples",
+)
+index_path.write_text(index_html, encoding="utf-8")
+
 report = {
     "hipflatId": PROJECT_ID,
     "projectName": "Menam Residences Condominium",
