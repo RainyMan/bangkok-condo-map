@@ -1,0 +1,36 @@
+{
+  "hipflatId": 3175,
+  "project": "The Great Condo Petchkasem 48",
+  "checkedAt": "2026-10-19",
+  "coordinates": {
+    "status": "previously_verified",
+    "source": "https://www.thaigerproperty.com/projects/thailand/bangkok/phasi-charoen/bang-duan/the-great-condo-petchkasem-48",
+    "crossCheck": "https://www.hipflat.co.th/en/projects/the-great-condo-petchkasem-48-jvfwpo"
+  },
+  "sale": {
+    "status": "verified_individual_listing",
+    "priceTHB": 1899000,
+    "areaSqm": 57,
+    "pricePerSqmTHB": 33316,
+    "bedrooms": 2,
+    "listingId": "A033746 / 6005471",
+    "updatedAt": "2026-10-17",
+    "source": "https://assets.propertyhub.in.th/listings/a033746-the-great-condo-petchkasem-48---6005471",
+    "projectSource": "https://propertyhub.in.th/en/condo-for-sale/project-the-great-condo"
+  },
+  "rent": {
+    "status": "no_current_listing_found",
+    "count": 0,
+    "source": "https://propertyhub.in.th/en/condo-for-rent/project-the-great-condo",
+    "evidence": "The PropertyHub project rent page showed 0 listings on 2026-10-19."
+  },
+  "fee": {
+    "rateTHBPerSqmPerMonth": 15,
+    "source": "https://propertyhub.in.th/en/projects/the-great-condo"
+  },
+  "yield": {
+    "status": "not_calculable",
+    "reason": "沒有可核實現行租盤，不計算投報率。"
+  },
+  "limitations": "只將可點開的單筆售盤納入售價樣本；出租頁目前為 0 筆，不使用附近專案代填。"
+}
