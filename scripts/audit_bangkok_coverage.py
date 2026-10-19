@@ -38,8 +38,12 @@ def in_range(value: object, low: int, high: int) -> bool:
 
 
 def sample_is_current(sample: dict) -> bool:
-    status = str(sample.get("listingStatus") or "")
-    return not re.search(r"(confirmed_unavailable|future_availability)", status, re.I)
+    status = " ".join(str(sample.get(key) or "") for key in ("listingStatus", "statusLabel", "statusNote"))
+    return not re.search(
+        r"(confirmed_unavailable|future_availability|update_over|over_(?:30d|1y|year)|stale|expired|過期|歷史樣本|超過\s*30\s*日|無近期更新|不作為現行|不可租)",
+        status,
+        re.I,
+    )
 
 
 def has_individual_listing(market: dict) -> bool:
@@ -173,17 +177,27 @@ def main() -> None:
         manual_rent_samples = manual_market.get("rent", {}).get("samples", [])
         cross_sale_samples = crosscheck.get("sale", {}).get("listings", [])
         cross_rent_samples = crosscheck.get("rent", {}).get("listings", [])
-        has_sale = in_range(sale.get("minimumSqm"), 10_000, 2_000_000) or any(
+        direct_current_sale = any(
             isinstance(sample, dict) and sample.get("price") and sample.get("area")
             and sample_is_current(sample)
             and in_range(float(sample["price"]) / float(sample["area"]), 10_000, 2_000_000)
             for sample in manual_sale_samples
         )
-        has_rent = in_range(rent.get("minimumSqm"), 50, 20_000) or any(
+        direct_current_rent = any(
             isinstance(sample, dict) and sample.get("price") and sample.get("area")
             and sample_is_current(sample)
             and in_range(float(sample["price"]) / float(sample["area"]), 50, 20_000)
             for sample in manual_rent_samples
+        )
+        # A current zero-listing crosscheck supersedes stale catalogue values;
+        # an independently verified current direct sample can still restore it.
+        sale_confirmed_empty = crosscheck.get("sale", {}).get("activeListingCount") == 0
+        rent_confirmed_empty = crosscheck.get("rent", {}).get("activeListingCount") == 0
+        has_sale = direct_current_sale or (
+            not sale_confirmed_empty and in_range(sale.get("minimumSqm"), 10_000, 2_000_000)
+        )
+        has_rent = direct_current_rent or (
+            not rent_confirmed_empty and in_range(rent.get("minimumSqm"), 50, 20_000)
         )
         has_manual_sale_listing = any(
             sample.get("price") and sample.get("area") and isinstance(sample.get("url"), str)
@@ -197,13 +211,15 @@ def main() -> None:
             and has_individual_listing({"minimumSourceUrl": sample["url"]})
             for sample in manual_rent_samples if isinstance(sample, dict)
         )
-        has_cross_sale_listing = any(
+        has_cross_sale_listing = not sale_confirmed_empty and any(
             sample.get("price") and sample.get("area") and isinstance(sample.get("url"), str)
+            and sample_is_current(sample)
             and has_individual_listing({"minimumSourceUrl": sample["url"]})
             for sample in cross_sale_samples if isinstance(sample, dict)
         )
-        has_cross_rent_listing = any(
+        has_cross_rent_listing = not rent_confirmed_empty and any(
             sample.get("price") and sample.get("area") and isinstance(sample.get("url"), str)
+            and sample_is_current(sample)
             and has_individual_listing({"minimumSourceUrl": sample["url"]})
             for sample in cross_rent_samples if isinstance(sample, dict)
         )
