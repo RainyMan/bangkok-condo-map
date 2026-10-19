@@ -1,0 +1,44 @@
+{
+  "hipflatId": 3028,
+  "project": "Raintree Village Apartment",
+  "checkedAt": "2026-10-19",
+  "saleAvailability": {
+    "ddproperty": {
+      "url": "https://www.ddproperty.com/en/project/6616-raintree-village-apartment",
+      "displayedActiveListings": 0,
+      "checkedFromCurrentProjectPage": true
+    },
+    "hipflat": {
+      "url": "https://www.hipflat.co.th/en/projects/raintree-village-apartment-uiptlk",
+      "currentEnglishProjectPageShowsSaleListing": false
+    },
+    "oldHipflatSearchSnapshot": {
+      "priceTHB": 13500000,
+      "areaSqm": 100,
+      "bedrooms": 2,
+      "sourceUrl": "https://www.hipflat.co.th/en/projects/raintree-village-apartment-uiptlk",
+      "limitation": "Search cache approximately three months old and no direct unit listing URL was discoverable; excluded as current sample."
+    },
+    "decision": "No current sale sample added; do not calculate ROI until a direct, verifiable sale listing appears."
+  },
+  "rent": {
+    "source": "https://www.ddproperty.com/en/property/raintree-village-apartment-bangkok-for-rent-11599801",
+    "projectListingPage": "https://www.ddproperty.com/en/property-for-rent/at-raintree-village-apartment-6616",
+    "priceTHBPerMonth": 95000,
+    "areaSqm": 268,
+    "bedrooms": 3,
+    "priceTHBPerSqmPerMonth": 354.48,
+    "updatedAt": "2026-10-12",
+    "status": "Direct DDproperty listing; exact project name and address match."
+  },
+  "yield": {
+    "calculated": false,
+    "reason": "No current, source-linked sale unit is available for the purchase-price baseline."
+  },
+  "sources": [
+    "https://www.hipflat.co.th/en/projects/raintree-village-apartment-uiptlk",
+    "https://www.ddproperty.com/en/project/6616-raintree-village-apartment",
+    "https://www.ddproperty.com/en/property-for-rent/at-raintree-village-apartment-6616",
+    "https://www.ddproperty.com/en/property/raintree-village-apartment-bangkok-for-rent-11599801"
+  ]
+}
