@@ -1,0 +1,75 @@
+{
+  "hipflatId": 3004,
+  "project": "LK Tower",
+  "checkedAt": "2026-10-19",
+  "identity": {
+    "hipflatProjectUrl": "https://www.hipflat.co.th/en/projects/lk-tower-yvbgnf",
+    "address": "Nuan Chan Road, Nuan Chan, Bueng Kum, Bangkok 10230",
+    "coordinates": {
+      "lat": 13.82200134,
+      "lng": 100.6426991,
+      "source": "https://www.home.co.th/condo/lk-tower-10919",
+      "verification": "https://www.hipflat.co.th/en/projects/lk-tower-yvbgnf"
+    },
+    "completedYear": 2021,
+    "floors": 8,
+    "units": 340
+  },
+  "availability": {
+    "sale": {
+      "activeListingCount": 0,
+      "checkedSources": [
+        "https://www.hipflat.co.th/en/projects/lk-tower-yvbgnf",
+        "https://propertyhub.in.th/en/condo-for-sale/project-lk-tower---20199",
+        "https://eng.scancondo.com/buy-sell/condo/Condo-LK-Tower",
+        "https://www.fazwaz.co.th/โครงการ/กรุงเทพมหานคร/บึงกุ่ม/นวลจันทร์/แอล-เค-ทาวเวอร์"
+      ]
+    },
+    "rent": {
+      "activeListingCount": 0,
+      "checkedSources": [
+        "https://www.hipflat.co.th/en/projects/lk-tower-yvbgnf",
+        "https://propertyhub.in.th/en/condo-for-rent/project-lk-tower---20199",
+        "https://eng.scancondo.com/rent-condo/Condo-LK-Tower",
+        "https://www.fazwaz.co.th/โครงการ/กรุงเทพมหานคร/บึงกุ่ม/นวลจันทร์/แอล-เค-ทาวเวอร์"
+      ]
+    },
+    "excluded": "Nearby project listings displayed on Scancondo are not LK Tower units and are excluded."
+  },
+  "yield": {
+    "calculated": false,
+    "reason": "No verified current sale or rent unit exists to establish matched price and rent inputs."
+  },
+  "sources": [
+    {
+      "sourceName": "Hipflat 專案頁",
+      "url": "https://www.hipflat.co.th/en/projects/lk-tower-yvbgnf",
+      "statusLabel": "頁面顯示目前無可用房源；專案資訊列 2021 年完工、8 層、340 戶。"
+    },
+    {
+      "sourceName": "PropertyHub 出售專案頁",
+      "url": "https://propertyhub.in.th/en/condo-for-sale/project-lk-tower---20199",
+      "statusLabel": "目前沒有匹配出售掛牌。"
+    },
+    {
+      "sourceName": "PropertyHub 出租專案頁",
+      "url": "https://propertyhub.in.th/en/condo-for-rent/project-lk-tower---20199",
+      "statusLabel": "目前沒有匹配出租掛牌。"
+    },
+    {
+      "sourceName": "Scancondo 出售頁",
+      "url": "https://eng.scancondo.com/buy-sell/condo/Condo-LK-Tower",
+      "statusLabel": "專案頁標示本案目前沒有空置出售物件；附近樓盤不納入本案。"
+    },
+    {
+      "sourceName": "Scancondo 出租頁",
+      "url": "https://eng.scancondo.com/rent-condo/Condo-LK-Tower",
+      "statusLabel": "專案頁標示本案目前沒有空置出租物件；附近樓盤不納入本案。"
+    },
+    {
+      "sourceName": "FazWaz 專案頁",
+      "url": "https://www.fazwaz.co.th/โครงการ/กรุงเทพมหานคร/บึงกุ่ม/นวลจันทร์/แอล-เค-ทาวเวอร์",
+      "statusLabel": "目前未列出售或出租掛牌。"
+    }
+  ]
+}
