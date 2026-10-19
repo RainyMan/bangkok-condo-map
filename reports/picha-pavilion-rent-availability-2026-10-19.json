@@ -1,0 +1,42 @@
+{
+  "hipflatId": 3105,
+  "project": "Picha Pavilion",
+  "checkedAt": "2026-10-19",
+  "coordinate": {
+    "status": "verified",
+    "source": "https://propertyhub.in.th/en/projects/picha-pavilion",
+    "lat": 13.69287115746202,
+    "lng": 100.6435012489693
+  },
+  "sale": {
+    "status": "direct_listing_sample_present",
+    "price": 680000,
+    "areaSqm": 27,
+    "roomType": "Studio",
+    "url": "https://propertyhub.in.th/en/listings/picha-pavilian-condo-selling-condo---6350508",
+    "updatedAt": "2026-09-03"
+  },
+  "rent": {
+    "status": "no_confirmed_current_sample",
+    "availabilityPage": "https://propertyhub.in.th/%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3-picha-pavilion",
+    "availabilityEvidence": "PropertyHub rental project page showed no rental listings at review.",
+    "unconfirmedLead": {
+      "url": "https://zmyhome.com/property/V181621",
+      "price": 3500,
+      "areaSqm": 32,
+      "roomType": "studio",
+      "reasonExcluded": "No listing update date; page says the owner's identity has not been verified."
+    }
+  },
+  "roi": {
+    "status": "not_calculable",
+    "reason": "No confirmed current rental listing supports an annual rent estimate."
+  },
+  "sources": {
+    "propertyHubProject": "https://propertyhub.in.th/en/projects/picha-pavilion",
+    "propertyHubRent": "https://propertyhub.in.th/%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3-picha-pavilion",
+    "unconfirmedRentLead": "https://zmyhome.com/property/V181621",
+    "saleListing": "https://propertyhub.in.th/en/listings/picha-pavilian-condo-selling-condo---6350508"
+  },
+  "identityCheck": "The ZMyHome address identifies Srinakarin 40 / Supapong 3 and names Picha Pavilion; it is retained only as an unverified lead, not a current sample."
+}
