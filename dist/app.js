@@ -369,13 +369,13 @@
   // do not match an old generated baseline remain intact.
   // Recompute saved generated baselines after refreshing the two-bedroom
   // lowest-price unit and its paired floor area, while preserving edits.
-  const yieldStorageKey = 'bangkokCondoYieldInputsV203';
+  const yieldStorageKey = 'bangkokCondoYieldInputsV204';
   const loadYieldInputs = () => {
     try {
       const current = localStorage.getItem(yieldStorageKey);
       if (current) return JSON.parse(current);
       let previous = {};
-      for (let version = 202; version >= 5; version--) {
+      for (let version = 203; version >= 5; version--) {
         const stored = localStorage.getItem(`bangkokCondoYieldInputsV${version}`);
         if (stored) { previous = JSON.parse(stored); break; }
       }
@@ -420,7 +420,8 @@
         // current market rows. Manual values outside this pattern stay intact.
         const matchesCurrentLowestRoomPrice = previousBeds === String(defaults.beds || '2')
           && Number(old.price) === Number(defaults.price);
-        const wasAutoBaseline = ((oldSaleMatches || oldSaleMatchesGeneratedParts) && oldRentMatches)
+        const wasAutoBaseline = old.autoBaseline === true
+          || ((oldSaleMatches || oldSaleMatchesGeneratedParts) && oldRentMatches)
           || (matchesCurrentLowestRoomPrice && oldRentMatches);
         if (!(Number(defaults.price) > 0) || !(Number(defaults.area) > 0) || !(Number(defaults.rent) > 0)) {
           if (old.price > 0 && old.rent > 0 && old.area > 0 && !wasAutoBaseline) recalculated[c.id] = old;
@@ -445,6 +446,7 @@
           beds: useRefreshedBaseline ? String(defaults.beds || '2') : previousBeds,
           deductFee: old.deductFee ?? true,
           deductAgent: old.deductAgent ?? true,
+          autoBaseline: useRefreshedBaseline ? true : old.autoBaseline === true,
         };
       });
       localStorage.setItem(yieldStorageKey, JSON.stringify(recalculated));
@@ -797,6 +799,7 @@
         beds: detail.querySelector('#yieldBeds').value || null,
         deductFee: detail.querySelector('#deductFee').checked,
         deductAgent: detail.querySelector('#deductAgent').checked,
+        autoBaseline: true,
       };
       saveYieldInputs(values);
       const savedNote = detail.querySelector('#yieldSavedNote');
@@ -825,6 +828,7 @@
         beds: detail.querySelector('#yieldBeds').value || null,
         deductFee: detail.querySelector('#deductFee').checked,
         deductAgent: detail.querySelector('#deductAgent').checked,
+        autoBaseline: false,
       };
       saveYieldInputs(values);
       detail.querySelector('#yieldSavedNote').textContent = '已儲存於此裝置';
