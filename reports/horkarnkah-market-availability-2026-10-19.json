@@ -1,0 +1,26 @@
+{
+  "hipflatId": 3026,
+  "project": "Horkarnkah Condo Town",
+  "checkedAt": "2026-10-19",
+  "saleAvailability": {
+    "status": "no_current_project_listings_found",
+    "count": 0,
+    "source": "https://propertyhub.in.th/en/condo-for-sale/project-horkarnkah-condo-town",
+    "evidence": "PropertyHub project sale page displays no matched properties."
+  },
+  "rentAvailability": {
+    "status": "no_current_project_listings_found",
+    "count": 0,
+    "source": "https://propertyhub.in.th/en/condo-for-rent/project-horkarnkah-condo-town",
+    "evidence": "PropertyHub project rent page displays no matched properties."
+  },
+  "crossCheck": {
+    "source": "https://www.hipflat.co.th/projects/horkarnkah-condo-town-nmdevf",
+    "evidence": "Hipflat page reports no currently available properties; its indexed page is older and is treated as secondary confirmation."
+  },
+  "roi": {
+    "status": "not_calculable",
+    "reason": "No current verified sale and rent listing samples were found for this Condo."
+  },
+  "note": "Nearby projects and district-level prices were not substituted for Horkarnkah Condo Town listings."
+}
