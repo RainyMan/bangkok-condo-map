@@ -1,0 +1,49 @@
+{
+  "hipflatId": 3010,
+  "project": "Tomi Place",
+  "checkedAt": "2026-10-19",
+  "coordinates": {
+    "status": "already_verified",
+    "source": "https://www.oneday.co.th/th_TH/สิ่งปลูกสร้าง/โทมิเพลส/"
+  },
+  "hipflatProject": "https://www.hipflat.co.th/en/projects/tomi-place-vyeasl",
+  "sale": {
+    "status": "no_verified_current_condo_listing",
+    "source": "https://www.hipflat.co.th/en/projects/tomi-place-vyeasl",
+    "activeListingCount": 0
+  },
+  "rent": {
+    "status": "no_verified_current_condo_listing",
+    "source": "https://www.hipflat.co.th/en/projects/tomi-place-vyeasl",
+    "activeListingCount": 0,
+    "excludedSameNameApartment": {
+      "source": "https://www.renthub.in.th/en/tomi-place",
+      "askingRentThbPerMonth": "5900–7000",
+      "reason": "RentHub page classifies Tomi Place as an apartment and explicitly marks its 25 sqm Studio as Unavailable; OneDay and ZmyHome also classify the building as an apartment. It is not an available condo unit and is excluded from current condo rent and yield samples.",
+      "availability": "Unavailable",
+      "checkedAt": "2026-10-19",
+      "monthlyAskingRangeThb": "5900–7000"
+    }
+  },
+  "crossChecks": [
+    {
+      "source": "OneDay",
+      "url": "https://www.oneday.co.th/th_TH/สิ่งปลูกสร้าง/โทมิเพลส/",
+      "finding": "Hipflat page says there are currently no properties available in Tomi Place."
+    },
+    {
+      "source": "ZmyHome",
+      "url": "https://zmyhome.com/apartment/4381",
+      "finding": "Project is listed under the apartment category."
+    },
+    {
+      "source": "Hipflat",
+      "url": "https://www.hipflat.co.th/en/projects/tomi-place-vyeasl",
+      "finding": "Project currently has no available properties."
+    }
+  ],
+  "yield": {
+    "status": "not_calculated",
+    "reason": "No verified condo sale or rent listing; excluded apartment rent cannot be paired as a condo yield input."
+  }
+}

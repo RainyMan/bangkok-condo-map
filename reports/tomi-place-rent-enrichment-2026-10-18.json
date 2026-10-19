@@ -9,15 +9,16 @@
     "roomType": "Studio",
     "areaSqm": 25,
     "rentThbPerSqmMonth": 236.0,
-    "RentHubStatus": "Available",
+    "RentHubStatus": "Unavailable",
     "RentHubBadges": [
       "Verified listing",
       "Verified structure inspection listing"
-    ]
+    ],
+    "sourceClassification": "Apartment for Rent (not a condominium listing)"
   },
-  "matchingEvidence": "RentHub listing is titled Tomi place in Din Daeng; Hipflat catalogue has the unique Tomi Place project in Din Daeng and describes address 20 Sutthisan Winitchai Rd. Classified as apartment Studio listing because RentHub categorizes this listing as a room/apartment.",
+  "matchingEvidence": "Name and location match the Hipflat Tomi Place project, but RentHub, OneDay and ZmyHome classify the building as an apartment; the RentHub Studio is explicitly unavailable. It is excluded from current condo rent samples and yield.",
   "saleMarket": {
     "status": "no verified sale listing found; no yield calculated"
   },
-  "availabilityCaveat": "RentHub reports Available when checked on 2026-10-18; vacancy has not been independently confirmed with the property."
+  "availabilityCaveat": "RentHub room table marks the 25 sqm Studio as Unavailable. RentHub and OneDay classify Tomi Place as an apartment; ZmyHome also categorizes the building as an apartment. Do not include this rent in Condo sample counts or ROI."
 }

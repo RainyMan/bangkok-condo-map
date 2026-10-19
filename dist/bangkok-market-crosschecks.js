@@ -300,6 +300,47 @@ window.BANGKOK_MARKET_CROSSCHECKS =[
     ]
   },
   {
+    "hipflatId": 3010,
+    "projectName": "Tomi Place",
+    "asOf": "2026-10-19",
+    "sourceName": "Hipflat",
+    "projectSourceUrl": "https://www.hipflat.co.th/en/projects/tomi-place-vyeasl",
+    "sale": {
+      "activeListingCount": 0,
+      "sourceUrl": "https://www.hipflat.co.th/en/projects/tomi-place-vyeasl",
+      "note": "Hipflat 專案頁目前沒有可用房源；未找到可以確認為此 Condo 的出售單筆掛牌。"
+    },
+    "rent": {
+      "activeListingCount": 0,
+      "sourceUrl": "https://www.hipflat.co.th/en/projects/tomi-place-vyeasl",
+      "note": "RentHub 同名房源為公寓 Studio，且頁面標示 Unavailable；OneDay、ZmyHome 也分類為公寓，不屬於可用 Condo 租盤，已排除於樣本和投報。"
+    },
+    "availabilitySources": [
+      {
+        "sourceName": "Hipflat 專案頁",
+        "url": "https://www.hipflat.co.th/en/projects/tomi-place-vyeasl",
+        "statusLabel": "目前顯示沒有可用房源。"
+      },
+      {
+        "sourceName": "RentHub 房源分類",
+        "url": "https://www.renthub.in.th/en/tomi-place",
+        "statusLabel": "RentHub 列公寓 Studio 月租 ฿5,900–7,000，直接頁面標示 Unavailable；排除於 Condo 租盤。"
+      },
+      {
+        "sourceName": "OneDay 建物分類",
+        "url": "https://www.oneday.co.th/th_TH/สิ่งปลูกสร้าง/โทมิเพลส/",
+        "statusLabel": "建物頁分類為公寓。"
+      },
+      {
+        "sourceName": "ZmyHome 建物分類",
+        "url": "https://zmyhome.com/apartment/4381",
+        "statusLabel": "專案頁分類為 apartment。"
+      }
+    ],
+    "yieldStatus": "not_calculated_no_verified_condo_sale_or_rent",
+    "yieldNote": "目前沒有可核實的 Condo 出售與出租單筆樣本；RentHub 的同名租金屬公寓房間，不可用來計算 Condo 投報率。"
+  },
+  {
     "hipflatId": 3018,
     "projectName": "Paragon 31",
     "asOf": "2026-10-18",
