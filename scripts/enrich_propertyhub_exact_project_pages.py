@@ -134,21 +134,24 @@ def main():
    base.update({'lat':lat,'lng':lng,'locationVerified':True,'locationSourceName':'PropertyHub 精確專案頁地圖','locationSourceUrl':project_url,'locationVerificationSourceUrl':cat.get('hipflatProjectUrl')})
    verified_by[pid]={'hipflatId':pid,'name':cat['name'],'lat':lat,'lng':lng,'locationVerified':True,'sourceName':'PropertyHub 精確專案頁地圖座標','sourceUrl':project_url,'verificationSourceUrl':cat.get('hipflatProjectUrl'),'verificationMethod':'PropertyHub project ID validated against the catalogue mapping; embedded project point'}
    coordinate_count+=1
-  if str(info.get('completedYear','')).isdigit(): base['completedYear']=int(info['completedYear']); base['completedYearSourceUrl']=project_url
-  if str(info.get('totalUnits','')).isdigit(): base['units']=int(info['totalUnits'])
-  if str(info.get('buildingsFloors','')).isdigit(): base['floors']=int(info['buildingsFloors'])
+  # Exact project pages are useful when catalogue metadata is missing, but
+  # their overview fields can conflict with developer schedules or other
+  # reviewed sources. Never overwrite an existing completion/floor/unit value.
+  if not base.get('completedYear') and str(info.get('completedYear','')).isdigit(): base['completedYear']=int(info['completedYear']); base['completedYearSourceUrl']=project_url
+  if not base.get('units') and str(info.get('totalUnits','')).isdigit(): base['units']=int(info['totalUnits'])
+  if not base.get('floors') and str(info.get('buildingsFloors','')).isdigit(): base['floors']=int(info['buildingsFloors'])
   try:
    fee=float(info.get('utilityFee'))
-   if 1<=fee<=1000: base['fee']={'rate':fee,'status':'published_indicative','note':'PropertyHub 專案頁公布的管理費數值，請向管委會確認。','source':project_url}
+   if 1<=fee<=1000 and not base.get('fee'): base['fee']={'rate':fee,'status':'published_indicative','note':'PropertyHub 專案頁公布的管理費數值，請向管委會確認。','source':project_url}
   except (ValueError,TypeError): pass
   phid=str(base.get('propertyHubProjectId') or p.get('id') or '')
   if phid:
    detail=detail_by.get(phid,{'propertyHubProjectId':phid,'name':cat['name']}); detail.update({'sourceUrl':project_url,'projectName':p.get('nameEnglish') or p.get('name'),'projectAddress':p.get('address'),'asOf':date.today().isoformat()})
    if lat and lng: detail.update({'lat':lat,'lng':lng,'locationVerified':True,'locationSourceUrl':project_url,'locationSourceName':'PropertyHub 精確專案頁'})
-   if base.get('completedYear'): detail.update({'completedYear':base['completedYear'],'completedYearSourceUrl':project_url})
-   if base.get('units'): detail['units']=base['units']
-   if base.get('floors'): detail['floors']=base['floors']
-   if base.get('fee'): detail['fee']=base['fee']
+   if base.get('completedYear') and not detail.get('completedYear'): detail.update({'completedYear':base['completedYear'],'completedYearSourceUrl':base.get('completedYearSourceUrl') or project_url})
+   if base.get('units') and not detail.get('units'): detail['units']=base['units']
+   if base.get('floors') and not detail.get('floors'): detail['floors']=base['floors']
+   if base.get('fee') and not detail.get('fee'): detail['fee']=base['fee']
    detail_by[phid]=detail
  manual_out=[manual_by[k] for k in sorted(manual_by)]
  write('bangkok-manual-market-samples.js','BANGKOK_MANUAL_MARKET_SAMPLES',manual_out)
