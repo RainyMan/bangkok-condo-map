@@ -363,7 +363,7 @@
   // do not match an old generated baseline remain intact.
   // Recompute saved generated baselines after refreshing the two-bedroom
   // lowest-price unit and its paired floor area, while preserving edits.
-  const yieldStorageKey = 'bangkokCondoYieldInputsV213';
+  const yieldStorageKey = 'bangkokCondoYieldInputsV214';
   const loadYieldInputs = () => {
     try {
       const current = localStorage.getItem(yieldStorageKey);
@@ -374,11 +374,13 @@
           const old = saved[c.id];
           if (!old) return;
           if (old.autoBaseline === true) {
-            const defaults = yieldDefaultsFor(c, null);
+            const defaults = yieldDefaultsFor(c, old.beds || null);
             if (defaults.price > 0 && defaults.area > 0 && defaults.rent > 0) {
               refreshed[c.id] = { ...old, price: defaults.price, area: defaults.area, rent: defaults.rent, beds: String(defaults.beds || '2'), autoBaseline: true };
-              return;
             }
+            // Drop generated values when current same-bedroom sale and rent
+            // evidence no longer supports a calculation; never show stale ROI.
+            return;
           }
           refreshed[c.id] = old;
         });
@@ -386,7 +388,7 @@
         return refreshed;
       }
       let previous = {};
-      for (let version = 212; version >= 5; version--) {
+      for (let version = 213; version >= 5; version--) {
         const stored = localStorage.getItem(`bangkokCondoYieldInputsV${version}`);
         if (stored) { previous = JSON.parse(stored); break; }
       }
@@ -394,6 +396,20 @@
       condos.forEach(c => {
         const old = previous[c.id] || {};
         const previousBeds = String(old.beds || '2');
+        if (old.autoBaseline === true) {
+          const defaults = yieldDefaultsFor(c, old.beds || null);
+          if (defaults.price > 0 && defaults.area > 0 && defaults.rent > 0) {
+            recalculated[c.id] = {
+              ...old,
+              price: defaults.price,
+              rent: defaults.rent,
+              area: defaults.area,
+              beds: String(defaults.beds || '2'),
+              autoBaseline: true,
+            };
+          }
+          continue;
+        }
         // Migrate generated values to the current default room policy (lowest
         // two-bedroom sale when available); customized values remain intact.
         const defaults = yieldDefaultsFor(c, null);
