@@ -1,0 +1,25 @@
+{
+  "hipflatId": 3273,
+  "projectName": "Anna Villa",
+  "checkedAt": "2026-10-19",
+  "coordinates": {
+    "lat": 13.7172609,
+    "lng": 100.5811508,
+    "source": "https://www.kaibaanthai.com/en/projects/thailand/bangkok/khlong-toei/phra-khanong/anna-villa-sukhumvit",
+    "crossCheck": "https://www.hipflat.co.th/en/projects/anna-villa-fgxmgy"
+  },
+  "completedYear": {
+    "year": 1998,
+    "source": "https://www.hipflat.co.th/en/projects/anna-villa-fgxmgy"
+  },
+  "sale": {
+    "status": "no current sale listing verified"
+  },
+  "rent": {
+    "status": "project pages show a rental unit, but the individual listing is old and current availability cannot be confirmed from its direct page; excluded from sample and ROI"
+  },
+  "yield": {
+    "status": "not calculated",
+    "reason": "No current sale sample and no current rental listing detail verified."
+  }
+}
