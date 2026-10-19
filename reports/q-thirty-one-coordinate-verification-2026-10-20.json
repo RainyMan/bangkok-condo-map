@@ -1,0 +1,12 @@
+{
+  "hipflatId": 3351,
+  "project": "Q Thirty One",
+  "checkedAt": "2026-10-20",
+  "coordinates": {
+    "lat": 13.734928244081472,
+    "lng": 100.56678363065794
+  },
+  "source": "https://propertyhub.in.th/en/projects/q-thirty-one---17310",
+  "method": "exact_project_name_match_propertyhub_project_detail_location; coordinate_from_project_location_object",
+  "marketData": "No direct current sale or rent listing was verified in this pass; do not calculate yield from this coordinate-only update."
+}
