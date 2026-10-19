@@ -1,0 +1,60 @@
+{
+  "hipflatId": 4239,
+  "project": "Nivati Thonglor 23",
+  "checkedAt": "2026-10-19",
+  "identity": {
+    "hipflatProject": "https://www.hipflat.co.th/en/projects/nivati-thonglor-23-mnpgio",
+    "propertyHubProject": "https://propertyhub.in.th/en/projects/nivati-residence",
+    "matchedAliases": [
+      "Nivati Residence",
+      "Nivati Thonglor 23"
+    ]
+  },
+  "coordinates": {
+    "status": "previously_verified",
+    "latitude": 13.73887535767737,
+    "longitude": 100.58037554956708,
+    "source": "https://propertyscout.co.th/en/bangkok/condo/nivati-thonglor-23/",
+    "method": "exact_project_name_and_district"
+  },
+  "sale": {
+    "status": "direct_individual_listing",
+    "listingId": "5041991",
+    "bedrooms": 2,
+    "priceTHB": 19000000,
+    "areaSqm": 104.17,
+    "priceTHBPerSqm": 182394,
+    "projectPageUpdatedAt": "2026-10-18",
+    "source": "https://propertyhub.in.th/en/listings/nivati-residence-2-bedrooms-for-sale--a5eb08dc---5041991",
+    "projectSource": "https://propertyhub.in.th/en/condo-for-sale/project-nivati-residence"
+  },
+  "rent": {
+    "status": "direct_individual_listing_availability_unconfirmed",
+    "listingId": "5055276",
+    "bedrooms": 2,
+    "monthlyRentTHB": 120000,
+    "areaSqm": 139,
+    "rentTHBPerSqmPerMonth": 863.31,
+    "projectPageUpdatedAt": "2026-10-16",
+    "source": "https://propertyhub.in.th/en/listings/2-bed-3-bath-139-sq-m-nivati-residence--a59f0917---5055276",
+    "projectSource": "https://propertyhub.in.th/en/condo-for-rent/project-nivati-residence"
+  },
+  "fee": {
+    "status": "not_published",
+    "source": "https://propertyhub.in.th/en/projects/nivati-residence",
+    "note": "PropertyHub 專案頁的 Common Fee 欄未提供費率；投報試算未扣管理費。"
+  },
+  "yield": {
+    "status": "estimated",
+    "netAnnualYieldAfterOneAgentMonthPercent": 5.21,
+    "purchasePriceTHB": 19000000,
+    "purchaseAreaSqm": 104.17,
+    "rentRateTHBPerSqmPerMonth": 863.31,
+    "imputedMonthlyRentTHB": 89931,
+    "formula": "(月租 × 11) ÷ 購入總價",
+    "grossBeforeAgentPercent": 5.68,
+    "sourceSale": "https://propertyhub.in.th/en/listings/nivati-residence-2-bedrooms-for-sale--a5eb08dc---5041991",
+    "sourceRent": "https://propertyhub.in.th/en/listings/2-bed-3-bath-139-sq-m-nivati-residence--a59f0917---5055276"
+  },
+  "limitations": "PropertyHub displays listing refresh dates, but current availability is not independently confirmed. No public management-fee rate was found, so none was deducted."
+}
