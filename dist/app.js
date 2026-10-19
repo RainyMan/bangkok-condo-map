@@ -227,6 +227,7 @@
     const saleRooms = bedroomRows(c.sale), rentRooms = bedroomRows(c.rent);
     const saleSamples = c.sale?.samples || [];
     const rentSamples = c.rent?.samples || [];
+    const isDirectListingUrl = url => typeof url === 'string' && /\/(?:ads|listings|property|property-for-sale|property-for-rent)\//i.test(url);
     // Fresh asking-price samples remain useful when availability has not been
     // independently confirmed. Exclude unavailable, future-dated, and stale
     // listings, while retaining recently updated listings marked unconfirmed.
@@ -235,7 +236,7 @@
       const linkedSample = samples.find(sample => sample.url === url);
       return !linkedSample || yieldSampleIsCurrent(linkedSample);
     };
-    saleSamples.filter(yieldSampleIsCurrent).forEach(sample => {
+    saleSamples.filter(sample => yieldSampleIsCurrent(sample) && isDirectListingUrl(sample?.url)).forEach(sample => {
       const count = bedroomCountForSample(sample);
       if (!count || !(Number(sample.price) > 0) || !(Number(sample.area) > 0)) return;
       const key = String(count), current = saleRooms[key] || {};
@@ -246,7 +247,7 @@
         saleRooms[key] = { ...current, beds: count, minimum: Number(sample.price), minimumArea: Number(sample.area), area: Number(sample.area), minimumSourceUrl: sample.url, sourceUrl: sample.url };
       }
     });
-    rentSamples.filter(yieldSampleIsCurrent).forEach(sample => {
+    rentSamples.filter(sample => yieldSampleIsCurrent(sample) && isDirectListingUrl(sample?.url)).forEach(sample => {
       const count = bedroomCountForSample(sample), price = Number(sample.price), area = Number(sample.area);
       if (!count || !(price > 0) || !(area > 0) || !sample.url) return;
       const key = String(count), current = rentRooms[key] || {}, sampleRate = price / area;
@@ -270,7 +271,7 @@
     const chosenBeds = beds ? (saleRooms[String(beds)] ? String(beds) : null) : defaultRoom;
     if ((beds && !chosenBeds) || (!beds && !chosenBeds)) return { price: 0, area: 0, rent: 0, beds: String(beds || '2'), isRoomStart: false, isRoomAverage: false, saleSourceUrl: null, rentSourceUrl: null, roomOptions };
     const room = chosenBeds ? saleRooms[chosenBeds] : null;
-    const roomListings = chosenBeds ? saleSamples.filter(sample => yieldSampleIsCurrent(sample) && bedroomCountForSample(sample) === Number(chosenBeds) && Number(sample.price) > 0 && Number(sample.area) > 0 && sample.url) : [];
+    const roomListings = chosenBeds ? saleSamples.filter(sample => yieldSampleIsCurrent(sample) && isDirectListingUrl(sample?.url) && bedroomCountForSample(sample) === Number(chosenBeds) && Number(sample.price) > 0 && Number(sample.area) > 0) : [];
     // Use the lowest verified total price for the selected bedroom count, including two-bedroom listings.
     // Keep price, floor area, and source URL from the same listing together;
     // bedroom summaries are valid only when they provide all three.
@@ -279,7 +280,6 @@
     // that price, area and URL to one individual listing. Generic `area` fields
     // can describe a room-type average and must not be paired with a minimum.
     const summaryUrl = room?.minimumSourceUrl || room?.sourceUrl || null;
-    const isDirectListingUrl = url => typeof url === 'string' && /\/(?:ads|listings|property|property-for-sale|property-for-rent)\//i.test(url);
     // Some imported room rows keep the directly linked unit area in `area`
     // rather than `minimumArea`. Accept that field only when the URL identifies
     // an individual listing; project-wide average areas must not be paired
@@ -366,13 +366,13 @@
   // Recompute generated baselines against the lowest linked same-bedroom sale
   // and keep its area paired with that same listing. User-edited values that
   // do not match an old generated baseline remain intact.
-  const yieldStorageKey = 'bangkokCondoYieldInputsV151';
+  const yieldStorageKey = 'bangkokCondoYieldInputsV152';
   const loadYieldInputs = () => {
     try {
       const current = localStorage.getItem(yieldStorageKey);
       if (current) return JSON.parse(current);
       let previous = {};
-      for (let version = 150; version >= 5; version-- {
+      for (let version = 151; version >= 5; version--) {
         const stored = localStorage.getItem(`bangkokCondoYieldInputsV${version}`);
         if (stored) { previous = JSON.parse(stored); break; }
       }
