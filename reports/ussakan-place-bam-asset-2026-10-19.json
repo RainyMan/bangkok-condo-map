@@ -1,0 +1,40 @@
+{
+  "hipflatId": 3038,
+  "project": "Ussakan Place Twin Condo",
+  "checkedAt": "2026-10-19",
+  "sale": {
+    "id": "HBKKCU4862001",
+    "price": 1467000,
+    "area": 48.17,
+    "priceSqm": 30455,
+    "beds": 1,
+    "roomType": "1 Bedroom",
+    "title": "BAM bank-owned condo asset · 1 bedroom · 48.17 sqm · ฿1,467,000",
+    "url": "https://www.bam.co.th/en/npa/property/66293",
+    "sourceName": "Bangkok Commercial Asset Management (BAM)",
+    "projectName": "Ussakan Place Twin Condo",
+    "updated": "2026-10-19",
+    "checkedAt": "2026-10-19",
+    "matchedBy": "exact_project_name_and_address_ramkhamhaeng_105_1_on_official_BAM_asset_page",
+    "listingStatus": "active_as_listed",
+    "specialAsset": true
+  },
+  "rent": {
+    "status": "direct_project_sample_present",
+    "price": 8000,
+    "areaSqm": 38,
+    "bedrooms": 1,
+    "url": "https://www.hipflat.co.th/ads/2a0a0aa081tl8cnn841984eu3ul38t9u",
+    "source": "https://www.hipflat.com/projects/ussakan-place-twin-condo-uprazd"
+  },
+  "roi": {
+    "status": "not_calculable",
+    "reason": "The BAM property is a special bank-owned asset and is kept out of ordinary market-yield calculations; the existing project rental listing is another unit."
+  },
+  "identityCheck": "BAM page names Ussakan Place Twin Condo and gives an exact Ramkhamhaeng 105/1 address, matching the Hipflat project; nearby Asakan Place listings were excluded.",
+  "sources": {
+    "bamAsset": "https://www.bam.co.th/en/npa/property/66293",
+    "hipflatProject": "https://www.hipflat.com/projects/ussakan-place-twin-condo-uprazd",
+    "hipflatRent": "https://www.hipflat.co.th/ads/2a0a0aa081tl8cnn841984eu3ul38t9u"
+  }
+}
