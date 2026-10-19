@@ -1,0 +1,59 @@
+{
+  "asOf": "2026-10-19",
+  "project": {
+    "hipflatId": 3088,
+    "name": "Donmuang Condo Town",
+    "hipflatProject": "https://www.hipflat.co.th/projects/donmuang-condo-town-lgkhks",
+    "completedYear": 1993,
+    "completedYearSource": "https://propertyhub.in.th/%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3-%E0%B8%94%E0%B8%AD%E0%B8%99%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87-%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94%E0%B8%97%E0%B8%B2%E0%B8%A7%E0%B9%8C---19717"
+  },
+  "coordinate": {
+    "status": "already_verified",
+    "source": "https://www.google.com/maps/search/?api=1&query=13.92020951%2C100.59302676",
+    "latitude": 13.92020951,
+    "longitude": 100.59302676
+  },
+  "sale": {
+    "kind": "special_bank_asset",
+    "priceTHB": 169000,
+    "areaSqm": 31.04,
+    "pricePerSqmTHB": 5445,
+    "bedrooms": null,
+    "unit": "Building D, unit 84/391",
+    "source": "https://zmyhome.com/property/V199382",
+    "manager": "SAM (Sukhumvit Asset Management)",
+    "checkedAt": "2026-10-19",
+    "availability": "The asset page says Updated but provides no date; contact SAM to confirm current status.",
+    "decision": "Listed on the condo card under Special listings only, excluded from ordinary sale statistics and ROI."
+  },
+  "rent": {
+    "status": "no_current_verified_listing",
+    "checkedAt": "2026-10-19",
+    "sources": [
+      "https://propertyhub.in.th/%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3-%E0%B8%94%E0%B8%AD%E0%B8%99%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87-%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94%E0%B8%97%E0%B8%B2%E0%B8%A7%E0%B8%99%E0%B9%8C---19717",
+      "https://www.hipflat.co.th/projects/donmuang-condo-town-lgkhks",
+      "https://www.fazwaz.co.th/en/projects/thailand/bangkok/don-mueang/don-mueang/donmuang-condo-town"
+    ]
+  },
+  "yield": {
+    "status": "not_calculated",
+    "reason": "The only sale lead is a date-unconfirmed special bank asset, and no exact-project rent sample is available."
+  },
+  "crosschecks": [
+    {
+      "source": "Hipflat",
+      "url": "https://www.hipflat.co.th/projects/donmuang-condo-town-lgkhks",
+      "finding": "Current project page says no available properties."
+    },
+    {
+      "source": "PropertyHub",
+      "url": "https://propertyhub.in.th/%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3-%E0%B8%94%E0%B8%AD%E0%B8%99%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87-%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94%E0%B8%97%E0%B8%B2%E0%B8%A7%E0%B8%99%E0%B9%8C---19717",
+      "finding": "No matched rent listings for the exact project."
+    },
+    {
+      "source": "Dot Property",
+      "url": "https://www.dotproperty.co.th/en/condo/1414/donmuang-condo-town",
+      "finding": "Project page shows zero sale and rent listings; project description identifies Soi Ploy Pailin-Sermpridi, five-floor buildings, 244 units."
+    }
+  ]
+}

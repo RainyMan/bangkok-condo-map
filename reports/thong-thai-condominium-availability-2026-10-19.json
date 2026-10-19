@@ -1,0 +1,55 @@
+{
+  "asOf": "2026-10-19",
+  "project": {
+    "hipflatId": 3063,
+    "name": "Thong Thai Condominium",
+    "projectNameOnPropertyHub": "Thong Thai Condominium 3",
+    "hipflatProject": "https://www.hipflat.co.th/en/projects/thong-thai-condominium-zcpcep"
+  },
+  "sale": {
+    "status": "no_current_verified_listing",
+    "sources": [
+      {
+        "source": "PropertyHub exact-project sale page",
+        "url": "https://propertyhub.in.th/en/condo-for-sale/project-thong-thai-condominium-3",
+        "finding": "No matched properties for sale."
+      },
+      {
+        "source": "Hipflat project page",
+        "url": "https://www.hipflat.co.th/en/projects/thong-thai-condominium-zcpcep",
+        "finding": "Currently no properties available."
+      },
+      {
+        "source": "ZmyHome individual historical lead",
+        "url": "https://zmyhome.com/property/V179791",
+        "finding": "1BR, 30 sqm, THB 360,000 (THB 12,000/sqm); page crawl about five months old, owner not verified, and page warns details may be outdated. Excluded from current listing, sale floor and yield."
+      }
+    ]
+  },
+  "rent": {
+    "status": "no_current_verified_listing",
+    "sources": [
+      {
+        "source": "PropertyHub exact-project rent page",
+        "url": "https://propertyhub.in.th/en/condo-for-rent/project-thong-thai-condominium-3",
+        "finding": "No matched properties for rent."
+      },
+      {
+        "source": "Hipflat project page",
+        "url": "https://www.hipflat.co.th/en/projects/thong-thai-condominium-zcpcep",
+        "finding": "Currently no properties available."
+      }
+    ]
+  },
+  "projectFacts": {
+    "completedYear": 1994,
+    "floors": 4,
+    "buildings": 3,
+    "units": 640,
+    "source": "https://propertyhub.in.th/en/projects/thong-thai-condominium-3"
+  },
+  "yield": {
+    "status": "not_calculated",
+    "reason": "No current exact-project sale and rent samples are verified."
+  }
+}

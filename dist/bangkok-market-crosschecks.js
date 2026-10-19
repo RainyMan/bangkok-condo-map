@@ -736,6 +736,11 @@ window.BANGKOK_MARKET_CROSSCHECKS =[
         "sourceName": "PropertyHub 出租專案頁",
         "url": "https://propertyhub.in.th/en/condo-for-rent/project-thong-thai-condominium-3",
         "statusLabel": "查核時 0 筆符合此專案的出租掛牌。"
+      },
+      {
+        "sourceName": "ZmyHome 個別售盤（歷史／未驗證）",
+        "url": "https://zmyhome.com/property/V179791",
+        "statusLabel": "個別房源頁列 1 房 30㎡ ฿360,000，但頁面約 5 個月前擷取且明示屋主尚未驗證、資訊可能過時；不列為現行出售樣本或投報基準。"
       }
     ],
     "yieldStatus": "not_calculated",
@@ -3797,5 +3802,59 @@ window.BANGKOK_MARKET_CROSSCHECKS =[
         "statusLabel": "Thaiger Property 的 Menam Residences 專案頁提供建物點位，已與 Hipflat 專案名稱及所在行政區核對。"
       }
     ]
+  },
+  {
+    "hipflatId": 3088,
+    "projectName": "Donmuang Condo Town",
+    "asOf": "2026-10-19",
+    "sourceName": "Hipflat / PropertyHub / Dot Property",
+    "projectSourceUrl": "https://www.hipflat.co.th/projects/donmuang-condo-town-lgkhks",
+    "sale": {
+      "activeListingCount": 0,
+      "displayedResultCount": 0,
+      "sourceUrl": "https://propertyhub.in.th/%E0%B8%82%E0%B8%B2%E0%B8%A2%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3-%E0%B8%94%E0%B8%AD%E0%B8%99%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87-%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94%E0%B8%97%E0%B8%B2%E0%B8%A7%E0%B8%99%E0%B9%8C---19717",
+      "checkedAt": "2026-10-19",
+      "note": "一般市場出售頁無可核實掛牌；另有一筆 SAM 管理資產，獨立列為特殊資產。"
+    },
+    "rent": {
+      "activeListingCount": 0,
+      "displayedResultCount": 0,
+      "sourceUrl": "https://propertyhub.in.th/%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3-%E0%B8%94%E0%B8%AD%E0%B8%99%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87-%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94%E0%B8%97%E0%B8%B2%E0%B8%A7%E0%B8%99%E0%B9%8C---19717",
+      "checkedAt": "2026-10-19"
+    },
+    "availabilitySources": [
+      {
+        "sourceName": "Hipflat 專案頁",
+        "url": "https://www.hipflat.co.th/projects/donmuang-condo-town-lgkhks",
+        "statusLabel": "專案頁目前顯示無可用物件。"
+      },
+      {
+        "sourceName": "PropertyHub 出售專案頁",
+        "url": "https://propertyhub.in.th/%E0%B8%82%E0%B8%B2%E0%B8%A2%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3-%E0%B8%94%E0%B8%AD%E0%B8%99%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87-%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94%E0%B8%97%E0%B8%B2%E0%B8%A7%E0%B8%99%E0%B9%8C---19717",
+        "statusLabel": "未列一般市場出售掛牌；SAM 管理資產另列，不混作一般售盤。"
+      },
+      {
+        "sourceName": "PropertyHub 出租專案頁",
+        "url": "https://propertyhub.in.th/%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3-%E0%B8%94%E0%B8%AD%E0%B8%99%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87-%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94%E0%B8%97%E0%B8%B2%E0%B8%A7%E0%B8%99%E0%B9%8C---19717",
+        "statusLabel": "專案頁及 Don Mueang 租屋索引均標示本案目前沒有出租掛牌。"
+      },
+      {
+        "sourceName": "FazWaz 專案頁",
+        "url": "https://www.fazwaz.co.th/en/projects/thailand/bangkok/don-mueang/don-mueang/donmuang-condo-town",
+        "statusLabel": "專案頁顯示 No Units Available；周邊區域總數不視為本案售租數量。"
+      },
+      {
+        "sourceName": "Dot Property 專案頁",
+        "url": "https://www.dotproperty.co.th/en/condo/1414/donmuang-condo-town",
+        "statusLabel": "頁面標題顯示 0 個出售及出租單位，專案敘述為 Soi Ploy Pailin–Sermpridi，5 層 4 棟、244 戶。"
+      },
+      {
+        "sourceName": "SAM 管理資產單筆（ZmyHome）",
+        "url": "https://zmyhome.com/property/V199382",
+        "statusLabel": "D 棟 84/391、31.04㎡、฿169,000；頁面未列明更新日，現況待 SAM 確認，排除一般行情與投報。"
+      }
+    ],
+    "yieldStatus": "not_calculated_special_asset_only_no_rent",
+    "yieldNote": "目前無一般市場的可核實售租配對。SAM 管理資產掛牌未確認現況且無同案租金樣本，故只保留來源連結，不計投報。"
   }
 ];
