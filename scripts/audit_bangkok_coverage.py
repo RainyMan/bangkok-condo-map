@@ -51,7 +51,7 @@ def has_individual_listing(market: dict) -> bool:
         parsed = urlsplit(url)
         path = parsed.path.lower()
         host = (parsed.hostname or "").lower()
-        if re.search(r"/(?:listings?|ads?|property/|properties?|view/\d+|livingdetail_en/\d+|detail/condo-|property-rent/|property-for-sale/)", path):
+        if re.search(r"/(?:listings?|ads?|property/|properties?|property-sales/|view/\d+|livingdetail_en/\d+|detail/condo-|property-rent/|property-for-sale/)", path):
             return True
         # RentHub verified building detail pages can be the direct source for
         # an available room even when the route has no numeric listing slug.
