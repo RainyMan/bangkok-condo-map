@@ -1,0 +1,122 @@
+{
+  "hipflatId": 4599,
+  "project": "Sapphire Luxurious Condominium Rama 3",
+  "checkedAt": "2026-10-19",
+  "coordinates": {
+    "lat": 13.673492948902071,
+    "lng": 100.53845846493441,
+    "source": "https://propertyscout.co.th/en/bangkok/condo/sapphire-luxurious-condominium-rama-iii/",
+    "independentCrosscheck": {
+      "lat": 13.673449,
+      "lng": 100.538252,
+      "source": "https://www.checkraka.com/condo/article/121925/"
+    }
+  },
+  "sale": {
+    "lowestTwoBedroomTotalTHB": 4605000,
+    "areaSqm": 43.42,
+    "priceTHBPerSqm": 106057,
+    "listingSource": "https://www.ddproperty.com/en/property/sapphire-luxurious-condominium-rama-iii-bangkok-for-sale-500547336",
+    "projectListingSource": "https://propertyhub.in.th/en/condo-for-sale/project-sapphire-rama-iii",
+    "listingRefreshDate": "2026-10-18",
+    "additionalSamples": [
+      {
+        "id": "5359153",
+        "price": 2700000,
+        "area": 34.73,
+        "priceSqm": 77743,
+        "beds": 1,
+        "roomType": "1BR",
+        "title": "1 房，34.73 ㎡，5–10 樓，฿2,700,000",
+        "url": "https://asset-direct-v2.propertyhub.in.th/en/listings/s4372for-sale-new-condo-sapphire-condominium---5359153",
+        "sourceName": "PropertyHub",
+        "projectName": "Sapphire Luxurious Condominium Rama 3",
+        "updated": "2026-10-17",
+        "checkedAt": "2026-10-19",
+        "matchedBy": "exact_project_name_and_listing_id",
+        "listingStatus": "active_as_listed"
+      },
+      {
+        "id": "6434375",
+        "price": 5820000,
+        "area": 43.42,
+        "priceSqm": 134040,
+        "beds": 2,
+        "roomType": "2BR",
+        "title": "2 房，43.42 ㎡，7 樓，฿5,820,000",
+        "url": "https://propertyhub.in.th/en/listings/2-bedroom-condo-for-sale-at-sapphire-luxurious-condominium-rama-3-5692418---6434375",
+        "sourceName": "PropertyHub",
+        "projectName": "Sapphire Luxurious Condominium Rama 3",
+        "updated": "2026-10-18",
+        "checkedAt": "2026-10-19",
+        "matchedBy": "exact_project_name_and_listing_id",
+        "listingStatus": "active_as_listed"
+      }
+    ]
+  },
+  "rent": {
+    "twoBedroomSampleMonthlyTHB": 30000,
+    "twoBedroomSampleAreaSqm": 55,
+    "lowestObservedTwoBedroomRentTHBPerSqmMonthly": 545.45,
+    "listingSource": "https://propertyhub.in.th/en/listings/for-rent-sapphire-rama-iii-2-bedrooms-2-bathrooms-fully-furnished-and-equipped-with-appliances-near-bts-chong-nonsi---6349927",
+    "projectListingSource": "https://propertyhub.in.th/en/condo-for-rent/project-sapphire-rama-iii",
+    "listingRefreshDate": "2026-10-18",
+    "additionalSamples": [
+      {
+        "id": "6347501",
+        "price": 30000,
+        "area": 54,
+        "priceSqm": 556,
+        "beds": 2,
+        "roomType": "2BR",
+        "title": "2 房，54 ㎡，24 樓，฿30,000/月",
+        "url": "https://propertyhub.in.th/en/listings/for-rent-sapphire-rama-iii-2-bedrooms-2-bathrooms-fully-furnished-and-equipped-with-all-appliances---6347501",
+        "sourceName": "PropertyHub",
+        "projectName": "Sapphire Luxurious Condominium Rama 3",
+        "updated": "2026-10-18",
+        "checkedAt": "2026-10-19",
+        "matchedBy": "exact_project_name_and_listing_id",
+        "listingStatus": "active_as_listed"
+      },
+      {
+        "id": "5732408",
+        "price": 17000,
+        "area": 34,
+        "priceSqm": 500,
+        "beds": 1,
+        "roomType": "1BR",
+        "title": "1 房，34 ㎡，2 樓，฿17,000/月",
+        "url": "https://propertyhub.in.th/en/listings/z4242-200169-condo-for-rent-sapphire-condominium-rama-3",
+        "sourceName": "PropertyHub",
+        "projectName": "Sapphire Luxurious Condominium Rama 3",
+        "updated": "2026-10-17",
+        "checkedAt": "2026-10-19",
+        "matchedBy": "exact_project_name_and_listing_id",
+        "listingStatus": "active_as_listed"
+      }
+    ]
+  },
+  "commonFee": {
+    "THBPerSqmMonthly": 60,
+    "source": "https://propertyhub.in.th/en/projects/sapphire-rama-iii"
+  },
+  "yield": {
+    "formula": "(estimated monthly rent × 11 − annual common fee) ÷ lowest two-bedroom sale total × 100",
+    "monthlyRentEstimateTHB": 23684,
+    "annualCommonFeeTHB": 31262,
+    "netYieldPercent": 4.98,
+    "grossYieldBeforeCostsPercent": 6.17,
+    "agentMonthOnlyYieldPercent": 5.66,
+    "note": "兩房售價採最低總價掛牌，面積取同一物件；月租依 30,000/55㎡ 的兩房租金單價乘 43.42㎡，並扣 1 個月仲介與已公布管理費。"
+  },
+  "projectFactsConflict": {
+    "propertyHubProjectYearBuilt": 2023,
+    "propertyScoutMarketYear": 2024,
+    "decision": "保留現有畫面完工年份資料，待取得開發商或政府來源釐清，不用衝突資訊覆蓋。"
+  },
+  "sourcePages": [
+    "https://propertyhub.in.th/en/projects/sapphire-rama-iii",
+    "https://propertyhub.in.th/en/condo-for-sale/project-sapphire-rama-iii",
+    "https://propertyhub.in.th/en/condo-for-rent/project-sapphire-rama-iii"
+  ]
+}

@@ -117,8 +117,10 @@
       const lowestRate = direct.reduce((best, sample) => !best || Number(sample.price) / Number(sample.area) < Number(best.price) / Number(best.area) ? sample : best, null);
       const baseTotal = Number(market.minimum || 0);
       const baseRate = Number(market.minimumSqm || 0);
-      const nextTotal = lowestTotal && (!baseTotal || Number(lowestTotal.price) < baseTotal) ? lowestTotal : null;
-      const nextRate = lowestRate && (!baseRate || Number(lowestRate.price) / Number(lowestRate.area) < baseRate) ? lowestRate : null;
+      // When a direct listing ties a summary's low, prefer the listing URL so
+      // visitors can open the exact unit behind the displayed minimum.
+      const nextTotal = lowestTotal && (!baseTotal || Number(lowestTotal.price) <= baseTotal) ? lowestTotal : null;
+      const nextRate = lowestRate && (!baseRate || Number(lowestRate.price) / Number(lowestRate.area) <= baseRate) ? lowestRate : null;
       return { ...market, samples: [...byUrl.values()], byBedroom,
         ...(nextTotal ? { minimum: Number(nextTotal.price), minimumArea: Number(nextTotal.area), minimumSourceUrl: nextTotal.url, minimumSampleUpdated: nextTotal.updated || null } : {}),
         ...(nextRate ? { minimumSqm: Number((Number(nextRate.price) / Number(nextRate.area)).toFixed(2)), minimumSqmSourceUrl: nextRate.url, minimumSqmSampleUpdated: nextRate.updated || null } : {}) };
