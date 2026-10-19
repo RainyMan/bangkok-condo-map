@@ -1,0 +1,28 @@
+{
+  "hipflatId": 3468,
+  "project": "LIFE Udomsuk Station",
+  "checkedAt": "2026-10-19",
+  "completionYear": {
+    "previousValue": 2026,
+    "verifiedValue": 2028,
+    "source": "https://www.apthai.com/images/production/1m6p22elnNO7FP5sizUIzczMgf7zDb-metaNXRjRnhwRDE0Q1JLSFZrT2dkclAtMTc2NTc4NDY3MzIyMDE3NjU3ODQ2NzMyMjAucGRm-.pdf",
+    "corroboration": "https://www.ddproperty.com/en/project/14519-life-udomsuk-station",
+    "conflictingSource": "https://propertyhub.in.th/en/projects/life-udomsuk-station",
+    "decision": "Use the developer's expected completion schedule (June 2028), corroborated by DDproperty; do not treat PropertyHub's 2026 Year Built field as a completed-year value."
+  },
+  "sale": {
+    "activeListings": 11,
+    "source": "https://propertyhub.in.th/en/condo-for-sale/project-life-udomsuk-station",
+    "individualSamplesAlreadyAvailable": true
+  },
+  "rent": {
+    "status": "no_direct_current_unit_listing_verified",
+    "propertyHubResult": "https://assets3.propertyhub.in.th/EN/projects/life-udomsuk-station/for-rent",
+    "ddpropertyProject": "https://www.ddproperty.com/en/project/14519-life-udomsuk-station",
+    "evidence": "PropertyHub exact project rent result says no matched properties; DDproperty reports For Rent (0). A PropertyHub overview count differs, but no direct item could be verified."
+  },
+  "yield": {
+    "status": "not_calculable",
+    "reason": "No directly verifiable current rent sample."
+  }
+}
