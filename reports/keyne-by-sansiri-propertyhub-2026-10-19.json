@@ -1,0 +1,122 @@
+{
+  "hipflatId": 3086,
+  "projectName": "KEYNE BY SANSIRI",
+  "propertyHubProjectId": "289",
+  "propertyHubName": "Keyne",
+  "alternateName": "Keyne by Sansiri",
+  "projectSourceUrl": "https://propertyhub.in.th/en/projects/keyne",
+  "coordinate": {
+    "lat": 13.725258907190579,
+    "lng": 100.57691486381736,
+    "sourceUrl": "https://propertyhub.in.th/en/projects/keyne",
+    "crossCheckUrl": "https://www.hipflat.co.th/en/projects/keyne-by-sansiri-papeli"
+  },
+  "completionYear": "2013",
+  "floors": "28",
+  "units": "216",
+  "feeBahtPerSqmMonthly": "57.00",
+  "markets": {
+    "sale": {
+      "activeListingCards": 104,
+      "projectPageCount": 104,
+      "lowestTotal": {
+        "price": 5559000.0,
+        "areaSqm": 34.75,
+        "bedrooms": 1,
+        "url": "https://propertyhub.in.th/en/listings/md-26067103-rare-item-beautiful-condo-below-market-price-keenn-by-sansiri-book-now-before-it-s-gone---6350254"
+      },
+      "lowestPricePerSqm": {
+        "pricePerSqm": 154545,
+        "url": "https://propertyhub.in.th/en/listings/large-room-1-bed-47-sq-m-good-location-next-to-bts-thong-lo-100-m-at-keyne-by-sansiri-condo-for-sale---3822344"
+      },
+      "byBedroom": {
+        "1": {
+          "count": 78,
+          "minimum": 5559000.0,
+          "area": 34.75,
+          "minimumArea": 34.75,
+          "priceSqm": 159971,
+          "minimumSqm": 154545,
+          "sourceUrl": "https://propertyhub.in.th/en/listings/md-26067103-rare-item-beautiful-condo-below-market-price-keenn-by-sansiri-book-now-before-it-s-gone---6350254",
+          "minimumSourceUrl": "https://propertyhub.in.th/en/listings/md-26067103-rare-item-beautiful-condo-below-market-price-keenn-by-sansiri-book-now-before-it-s-gone---6350254",
+          "minimumSqmSourceUrl": "https://propertyhub.in.th/en/listings/large-room-1-bed-47-sq-m-good-location-next-to-bts-thong-lo-100-m-at-keyne-by-sansiri-condo-for-sale---3822344"
+        },
+        "2": {
+          "count": 26,
+          "minimum": 13990000.0,
+          "area": 75.0,
+          "minimumArea": 75.0,
+          "priceSqm": 186533,
+          "minimumSqm": 168729,
+          "sourceUrl": "https://propertyhub.in.th/en/listings/for-sale-condo-keyne-by-sansiri-bts-thong-lo-khlong-toei-khlong-toei-bangkok-cx-77585-live-chat-with-us-add-line-connexproperty---3967751",
+          "minimumSourceUrl": "https://propertyhub.in.th/en/listings/for-sale-condo-keyne-by-sansiri-bts-thong-lo-khlong-toei-khlong-toei-bangkok-cx-77585-live-chat-with-us-add-line-connexproperty---3967751",
+          "minimumSqmSourceUrl": "https://propertyhub.in.th/en/listings/best-price-keyne-by-sansiri-duplex-2-bedroom-hbh-hl-93---5911058"
+        }
+      }
+    },
+    "rent": {
+      "activeListingCards": 334,
+      "projectPageCount": 336,
+      "lowestTotal": {
+        "price": 14000.0,
+        "areaSqm": 54.0,
+        "bedrooms": 1,
+        "url": "https://propertyhub.in.th/en/listings/1bed-1bath-bts-thong-lo-54sqm-thb-14-000-mo-fl-16-keyne-by-sansiri-bangkok---6368692"
+      },
+      "lowestPricePerSqm": {
+        "pricePerSqm": 259,
+        "url": "https://propertyhub.in.th/en/listings/1bed-1bath-bts-thong-lo-54sqm-thb-14-000-mo-fl-16-keyne-by-sansiri-bangkok---6368692"
+      },
+      "byBedroom": {
+        "1": {
+          "count": 245,
+          "minimum": 14000.0,
+          "area": 54.0,
+          "minimumArea": 54.0,
+          "priceSqm": 259,
+          "minimumSqm": 259,
+          "sourceUrl": "https://propertyhub.in.th/en/listings/1bed-1bath-bts-thong-lo-54sqm-thb-14-000-mo-fl-16-keyne-by-sansiri-bangkok---6368692",
+          "minimumSourceUrl": "https://propertyhub.in.th/en/listings/1bed-1bath-bts-thong-lo-54sqm-thb-14-000-mo-fl-16-keyne-by-sansiri-bangkok---6368692",
+          "minimumSqmSourceUrl": "https://propertyhub.in.th/en/listings/1bed-1bath-bts-thong-lo-54sqm-thb-14-000-mo-fl-16-keyne-by-sansiri-bangkok---6368692"
+        },
+        "2": {
+          "count": 84,
+          "minimum": 45000.0,
+          "area": 75.0,
+          "minimumArea": 75.0,
+          "priceSqm": 600,
+          "minimumSqm": 550,
+          "sourceUrl": "https://propertyhub.in.th/en/listings/2-br-condo-at-keyne-by-sansiri-near-bts-thong-lor-id-1597769--b3dd0972---6082825",
+          "minimumSourceUrl": "https://propertyhub.in.th/en/listings/2-br-condo-at-keyne-by-sansiri-near-bts-thong-lor-id-1597769--b3dd0972---6082825",
+          "minimumSqmSourceUrl": "https://propertyhub.in.th/en/listings/for-rent-keyne-by-sansiri-48-000-baht-ttr260912---6411153"
+        },
+        "3": {
+          "count": 5,
+          "minimum": 95000.0,
+          "area": 145.0,
+          "minimumArea": 145.0,
+          "priceSqm": 655,
+          "minimumSqm": 655,
+          "sourceUrl": "https://propertyhub.in.th/en/listings/rental-condo-keyne-by-sansiri-3br-145-sqm-95k-fully-furnished-ultra-rare-last-unit-near-bts-thong-lo---6084597",
+          "minimumSourceUrl": "https://propertyhub.in.th/en/listings/rental-condo-keyne-by-sansiri-3br-145-sqm-95k-fully-furnished-ultra-rare-last-unit-near-bts-thong-lo---6084597",
+          "minimumSqmSourceUrl": "https://propertyhub.in.th/en/listings/rental-condo-keyne-by-sansiri-3br-145-sqm-95k-fully-furnished-ultra-rare-last-unit-near-bts-thong-lo---6084597"
+        }
+      }
+    }
+  },
+  "yieldEstimate": {
+    "status": "calculated_estimate",
+    "bedrooms": 2,
+    "purchasePrice": 13990000.0,
+    "saleAreaSqm": 75.0,
+    "saleSourceUrl": "https://propertyhub.in.th/en/listings/for-sale-condo-keyne-by-sansiri-bts-thong-lo-khlong-toei-khlong-toei-bangkok-cx-77585-live-chat-with-us-add-line-connexproperty---3967751",
+    "rentRatePerSqmMonthly": 550,
+    "rentSourceUrl": "https://propertyhub.in.th/en/listings/for-rent-keyne-by-sansiri-48-000-baht-ttr260912---6411153",
+    "estimatedMonthlyRent": 41250,
+    "managementFeeBahtPerSqmMonthly": 57.0,
+    "netAnnualPercentWithOneAgentMonth": 2.88,
+    "netAnnualPercentWithoutAgentMonth": 3.17,
+    "formula": "((two-bedroom minimum-rent ฿/sqm × lowest two-bedroom sale area × (12 − agent months)) − annual common fee) ÷ lowest two-bedroom sale total × 100"
+  },
+  "checkedAt": "2026-10-19"
+}

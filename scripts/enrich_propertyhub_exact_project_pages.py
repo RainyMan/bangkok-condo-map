@@ -62,6 +62,15 @@ def parse_market(pid,kind,slug,expected_ph_id):
  # Exact property id is the primary identity check; all cards must refer to the same PH project.
  project_ids={str((a.get('project') or {}).get('id') or '') for a in ((data.get('listings') or {}).get('listings') or [])}
  if project_ids and project_ids != {str(project.get('id'))}: return {'kind':kind,'error':'listing_project_id_mismatch'}
+ # A listing can appear on two adjacent result pages while PropertyHub's
+ # pagination is refreshing. Keep each individual unit once, preferring its
+ # most recently updated card.
+ unique_cards={}
+ for card in allcards:
+  current=unique_cards.get(card['id'])
+  if current is None or str(card.get('updated') or '') >= str(current.get('updated') or ''):
+   unique_cards[card['id']]=card
+ allcards=list(unique_cards.values())
  return {'kind':kind,'project':project,'cards':allcards,'totalCount':total_count,'sourceUrl':f'https://propertyhub.in.th/en/condo-for-{kind}/project-{slug}'}
 def norm(s): return set(re.findall(r'[a-z0-9]+',str(s or '').lower()))-{'the','condo','condominium','project','residence','residences','apartment','place','tower','bangkok'}
 def norm_full_name(s): return ' '.join(re.findall(r'[a-z0-9]+',str(s or '').lower()))
