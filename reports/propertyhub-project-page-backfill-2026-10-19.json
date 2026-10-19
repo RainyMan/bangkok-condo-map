@@ -1,17 +1,47 @@
 {
-  "projectPagesChecked": 251,
-  "projectsWithMatchedProjectPage": 245,
-  "projectsWithNewListings": 1,
-  "newSaleMarkets": 1,
-  "newRentMarkets": 1,
-  "projectCoordinatesFromPropertyHubPages": 245,
+  "projectPagesChecked": 342,
+  "projectsWithMatchedProjectPage": 333,
+  "projectsWithNewListings": 6,
+  "newSaleMarkets": 3,
+  "newRentMarkets": 3,
+  "projectCoordinatesFromPropertyHubPages": 333,
   "identityMismatchesRejected": [],
   "checkedAt": "2026-10-19",
   "examples": [
     {
-      "hipflatId": 3402,
-      "slug": "tait-12",
+      "hipflatId": 4172,
+      "slug": "the-concord",
+      "sale": false,
+      "rent": true
+    },
+    {
+      "hipflatId": 4538,
+      "slug": "prime-mansion-2-promphong",
       "sale": true,
+      "rent": false
+    },
+    {
+      "hipflatId": 4688,
+      "slug": "you-3-condo-yak-kaset",
+      "sale": true,
+      "rent": false
+    },
+    {
+      "hipflatId": 5080,
+      "slug": "ruenrudee-condominium",
+      "sale": false,
+      "rent": true
+    },
+    {
+      "hipflatId": 5282,
+      "slug": "dynasty-condominium",
+      "sale": true,
+      "rent": false
+    },
+    {
+      "hipflatId": 5430,
+      "slug": "regent-home-4",
+      "sale": false,
       "rent": true
     }
   ]
