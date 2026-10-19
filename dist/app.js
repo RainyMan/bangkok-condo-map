@@ -369,11 +369,28 @@
   // do not match an old generated baseline remain intact.
   // Recompute saved generated baselines after refreshing the two-bedroom
   // lowest-price unit and its paired floor area, while preserving edits.
-  const yieldStorageKey = 'bangkokCondoYieldInputsV205';
+  const yieldStorageKey = 'bangkokCondoYieldInputsV206';
   const loadYieldInputs = () => {
     try {
       const current = localStorage.getItem(yieldStorageKey);
-      if (current) return JSON.parse(current);
+      if (current) {
+        const saved = JSON.parse(current);
+        const refreshed = {};
+        condos.forEach(c => {
+          const old = saved[c.id];
+          if (!old) return;
+          if (old.autoBaseline === true) {
+            const defaults = yieldDefaultsFor(c, null);
+            if (defaults.price > 0 && defaults.area > 0 && defaults.rent > 0) {
+              refreshed[c.id] = { ...old, price: defaults.price, area: defaults.area, rent: defaults.rent, beds: String(defaults.beds || '2'), autoBaseline: true };
+              return;
+            }
+          }
+          refreshed[c.id] = old;
+        });
+        localStorage.setItem(yieldStorageKey, JSON.stringify(refreshed));
+        return refreshed;
+      }
       let previous = {};
       for (let version = 204; version >= 5; version--) {
         const stored = localStorage.getItem(`bangkokCondoYieldInputsV${version}`);
@@ -818,6 +835,19 @@
       if (yieldSourceLinks[0] && defaults.saleSourceUrl) yieldSourceLinks[0].href = defaults.saleSourceUrl;
       if (yieldSourceLinks[1] && defaults.rentSourceUrl) yieldSourceLinks[1].href = defaults.rentSourceUrl;
       recalculateYield();
+      const values = loadYieldInputs();
+      values[c.id] = {
+        price: Number(detail.querySelector('#yieldPrice').value),
+        rent: Number(detail.querySelector('#yieldRent').value),
+        area: Number(detail.querySelector('#yieldArea').value),
+        beds: detail.querySelector('#yieldBeds').value || null,
+        deductFee: detail.querySelector('#deductFee').checked,
+        deductAgent: detail.querySelector('#deductAgent').checked,
+        autoBaseline: true,
+      };
+      saveYieldInputs(values);
+      const savedNote = detail.querySelector('#yieldSavedNote');
+      if (savedNote) savedNote.textContent = `${defaults.beds || '所選'} 房最低總價基準已更新並儲存`;
     });
     detail.querySelector('#saveYieldInputs')?.addEventListener('click', () => {
       const values = loadYieldInputs();
