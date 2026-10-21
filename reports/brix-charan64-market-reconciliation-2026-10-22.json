@@ -1,0 +1,273 @@
+{
+  "project": "Brix Condominium Charan 64",
+  "hipflatId": 3199,
+  "checkedAt": "2026-10-22",
+  "sources": {
+    "saleProject": "https://propertyhub.in.th/en/condo-for-sale/project-brix-condominium",
+    "rentProject": "https://propertyhub.in.th/en/condo-for-rent/project-brix-condominium",
+    "projectDetails": "https://propertyhub.in.th/en/projects/brix-condominium"
+  },
+  "displayedResults": {
+    "sale": 15,
+    "rent": 71
+  },
+  "saleSamples": [
+    {
+      "id": "4751629",
+      "price": 1850000,
+      "area": 22,
+      "title": "Brix Condominium · ฿1,850,000 · 22 ㎡ · 房型標示不一致",
+      "url": "https://propertyhub.in.th/en/listings/for-sale-brix-condominium--abd7096f---4751629",
+      "updated": "2026-10-21",
+      "beds": null,
+      "roomType": "房型待核（專案卡標示 Studio，單筆頁摘要標示 1 Bed）",
+      "listingStatus": "active_as_listed",
+      "bedroomStatus": "conflicting_source_labels",
+      "priceSqm": 84091,
+      "sourceName": "PropertyHub",
+      "projectName": "Brix Condominium",
+      "checkedAt": "2026-10-22",
+      "matchedBy": "Exact project card and direct item both identify Brix Condominium and match price/area; the two pages disagree on Studio versus 1 Bed, so this sample is excluded from room-specific ROI."
+    },
+    {
+      "id": "6322301",
+      "price": 2200000,
+      "area": 27,
+      "title": "Brix Condominium · 1 房 · 27 ㎡ · ฿2,200,000",
+      "url": "https://propertyhub.in.th/en/listings/for-sale-brix-condominium-condo-only-2-200-000-thb---6322301",
+      "updated": "2026-10-18",
+      "beds": 1,
+      "roomType": "1 Bedroom",
+      "listingStatus": "active_as_listed",
+      "priceSqm": 81481,
+      "sourceName": "PropertyHub",
+      "projectName": "Brix Condominium",
+      "checkedAt": "2026-10-22",
+      "matchedBy": "Live exact-project listing card and direct listing detail both identify Brix Condominium; price, area, and room type cross-checked."
+    },
+    {
+      "id": "4384326",
+      "price": 3450000,
+      "area": 34.6,
+      "title": "Brix Condominium · 1 房 · 34.6 ㎡ · ฿3,450,000",
+      "url": "https://propertyhub.in.th/en/listings/condo-for-sale-brix-condo-charansanitwong-64-1-bedroom-35-sqm-newly-renovated-fully-furnished-next-to-mrt-sirindhorn-mf23s-020---4384326",
+      "updated": "2026-10-21",
+      "beds": 1,
+      "roomType": "1 Bedroom",
+      "listingStatus": "active_as_listed",
+      "priceSqm": 99711,
+      "sourceName": "PropertyHub",
+      "projectName": "Brix Condominium",
+      "checkedAt": "2026-10-22",
+      "matchedBy": "Live exact-project listing card and direct listing detail both identify Brix Condominium; price, area, and room type cross-checked."
+    },
+    {
+      "id": "6244624",
+      "price": 4200000,
+      "area": 42,
+      "title": "Brix Condominium · 2 房 · 42 ㎡ · ฿4,200,000",
+      "url": "https://propertyhub.in.th/en/listings/for-sale-brix-condominium-charan-64-connected-to-mrt-sirindhorn-station---6244624",
+      "updated": "2026-10-20",
+      "beds": 2,
+      "roomType": "2 Bedroom",
+      "listingStatus": "active_as_listed",
+      "priceSqm": 100000,
+      "sourceName": "PropertyHub",
+      "projectName": "Brix Condominium",
+      "checkedAt": "2026-10-22",
+      "matchedBy": "Live exact-project listing card and direct listing detail both identify Brix Condominium; price, area, and room type cross-checked."
+    },
+    {
+      "id": "6424367",
+      "price": 4800000,
+      "area": 52.48,
+      "title": "Brix Condominium · 2 房 · 52.48 ㎡ · ฿4,800,000",
+      "url": "https://propertyhub.in.th/en/listings/40m-to-mrt-sirindhorn-2-br-at-brix-condominium-id-3119314---6424367",
+      "updated": "2026-10-21",
+      "beds": 2,
+      "roomType": "2 Bedroom",
+      "listingStatus": "active_as_listed",
+      "priceSqm": 91463,
+      "sourceName": "PropertyHub",
+      "projectName": "Brix Condominium",
+      "checkedAt": "2026-10-22",
+      "matchedBy": "Live exact-project listing card and direct listing detail both identify Brix Condominium; price, area, and room type cross-checked."
+    }
+  ],
+  "rentSamples": [
+    {
+      "id": "1605556",
+      "price": 10500,
+      "area": 25,
+      "title": "Brix Condominium · 1 房 · 25 ㎡ · ฿10,500/月",
+      "url": "https://propertyhub.in.th/en/listings/for-rent-brix-condominium-1-bed-25-sq-m-24th-floor--9d87088f---1605556",
+      "updated": "2026-10-21",
+      "beds": 1,
+      "roomType": "1 Bedroom",
+      "listingStatus": "active_as_listed",
+      "priceSqm": 420,
+      "sourceName": "PropertyHub",
+      "projectName": "Brix Condominium",
+      "checkedAt": "2026-10-22",
+      "matchedBy": "Live exact-project listing card and direct listing detail both identify Brix Condominium; price, area, and room type cross-checked."
+    },
+    {
+      "id": "4948603",
+      "price": 11000,
+      "area": 30,
+      "title": "Brix Condominium · 1 房 · 30 ㎡ · ฿11,000/月",
+      "url": "https://propertyhub.in.th/en/listings/r2599-for-rent-brix-condominium-charan-64---4948603",
+      "updated": "2026-10-21",
+      "beds": 1,
+      "roomType": "1 Bedroom",
+      "listingStatus": "active_as_listed",
+      "priceSqm": 367,
+      "sourceName": "PropertyHub",
+      "projectName": "Brix Condominium",
+      "checkedAt": "2026-10-22",
+      "matchedBy": "Live exact-project listing card and direct listing detail both identify Brix Condominium; price, area, and room type cross-checked."
+    },
+    {
+      "id": "5172054",
+      "price": 14000,
+      "area": 40,
+      "title": "Brix Condominium · 1 房 · 40 ㎡ · ฿14,000/月",
+      "url": "https://propertyhub.in.th/en/listings/mn2730-brix-condominium-full-furnitured---5172054",
+      "updated": "2026-10-08",
+      "beds": 1,
+      "roomType": "1 Bedroom",
+      "listingStatus": "active_as_listed",
+      "priceSqm": 350,
+      "sourceName": "PropertyHub",
+      "projectName": "Brix Condominium",
+      "checkedAt": "2026-10-22",
+      "matchedBy": "Live exact-project listing card and direct listing detail both identify Brix Condominium; price, area, and room type cross-checked."
+    },
+    {
+      "id": "6410879",
+      "price": 18000,
+      "area": 43,
+      "title": "Brix Condominium · 2 房 · 43 ㎡ · ฿18,000/月",
+      "url": "https://propertyhub.in.th/en/listings/mn3885-brix-condominium-full-furnitured-and-electrical---6410879",
+      "updated": "2026-10-08",
+      "beds": 2,
+      "roomType": "2 Bedroom",
+      "listingStatus": "active_as_listed",
+      "priceSqm": 419,
+      "sourceName": "PropertyHub",
+      "projectName": "Brix Condominium",
+      "checkedAt": "2026-10-22",
+      "matchedBy": "Live exact-project listing card and direct listing detail both identify Brix Condominium; price, area, and room type cross-checked."
+    },
+    {
+      "id": "5943031",
+      "price": 22000,
+      "area": 52.2,
+      "title": "Brix Condominium · 2 房 · 52.2 ㎡ · ฿22,000/月",
+      "url": "https://propertyhub.in.th/en/listings/2-bedroom-condo-for-rent-brix-condominium---5943031",
+      "updated": "2026-10-21",
+      "beds": 2,
+      "roomType": "2 Bedroom",
+      "listingStatus": "active_as_listed",
+      "priceSqm": 421,
+      "sourceName": "PropertyHub",
+      "projectName": "Brix Condominium",
+      "checkedAt": "2026-10-22",
+      "matchedBy": "Live exact-project listing card and direct listing detail both identify Brix Condominium; price, area, and room type cross-checked."
+    }
+  ],
+  "saleSummary": {
+    "minimumTotalThb": 1850000,
+    "minimumPricePerSqmThb": 81481.48,
+    "oneBedroomMinimum": {
+      "count": 2,
+      "minimum": 2200000,
+      "area": 27,
+      "minimumArea": 27,
+      "priceSqm": 81481,
+      "minimumSqm": 81481.48,
+      "minimumSourceUrl": "https://propertyhub.in.th/en/listings/for-sale-brix-condominium-condo-only-2-200-000-thb---6322301",
+      "minimumSqmSourceUrl": "https://propertyhub.in.th/en/listings/for-sale-brix-condominium-condo-only-2-200-000-thb---6322301",
+      "sourceUrl": "https://propertyhub.in.th/en/listings/for-sale-brix-condominium-condo-only-2-200-000-thb---6322301"
+    },
+    "twoBedroomMinimum": {
+      "count": 2,
+      "minimum": 4200000,
+      "area": 42,
+      "minimumArea": 42,
+      "priceSqm": 100000,
+      "minimumSqm": 91463.41,
+      "minimumSourceUrl": "https://propertyhub.in.th/en/listings/for-sale-brix-condominium-charan-64-connected-to-mrt-sirindhorn-station---6244624",
+      "minimumSqmSourceUrl": "https://propertyhub.in.th/en/listings/40m-to-mrt-sirindhorn-2-br-at-brix-condominium-id-3119314---6424367",
+      "sourceUrl": "https://propertyhub.in.th/en/listings/for-sale-brix-condominium-charan-64-connected-to-mrt-sirindhorn-station---6244624"
+    }
+  },
+  "rentSummary": {
+    "minimumMonthlyThb": 10500,
+    "minimumMonthlyPerSqmThb": 350.0,
+    "oneBedroomMinimum": {
+      "count": 3,
+      "minimum": 10500,
+      "area": 25,
+      "minimumArea": 25,
+      "priceSqm": 420,
+      "minimumSqm": 350.0,
+      "minimumSourceUrl": "https://propertyhub.in.th/en/listings/for-rent-brix-condominium-1-bed-25-sq-m-24th-floor--9d87088f---1605556",
+      "minimumSqmSourceUrl": "https://propertyhub.in.th/en/listings/mn2730-brix-condominium-full-furnitured---5172054",
+      "sourceUrl": "https://propertyhub.in.th/en/listings/for-rent-brix-condominium-1-bed-25-sq-m-24th-floor--9d87088f---1605556"
+    },
+    "twoBedroomMinimum": {
+      "count": 2,
+      "minimum": 18000,
+      "area": 43,
+      "minimumArea": 43,
+      "priceSqm": 419,
+      "minimumSqm": 418.6,
+      "minimumSourceUrl": "https://propertyhub.in.th/en/listings/mn3885-brix-condominium-full-furnitured-and-electrical---6410879",
+      "minimumSqmSourceUrl": "https://propertyhub.in.th/en/listings/mn3885-brix-condominium-full-furnitured-and-electrical---6410879",
+      "sourceUrl": "https://propertyhub.in.th/en/listings/mn3885-brix-condominium-full-furnitured-and-electrical---6410879"
+    }
+  },
+  "fee": {
+    "rate": 50,
+    "status": "published_indicative",
+    "note": "PropertyHub 專案頁列管理費 ฿50/㎡/月；請向管委會確認現行費率。",
+    "source": "https://propertyhub.in.th/en/projects/brix-condominium"
+  },
+  "yieldEstimates": {
+    "1": {
+      "bedrooms": 1,
+      "purchasePriceThb": 2200000,
+      "purchaseAreaSqm": 27,
+      "purchaseListingUrl": "https://propertyhub.in.th/en/listings/for-sale-brix-condominium-condo-only-2-200-000-thb---6322301",
+      "minimumSameBedroomRentThbPerSqmMonth": 350.0,
+      "rentRateListingUrl": "https://propertyhub.in.th/en/listings/mn2730-brix-condominium-full-furnitured---5172054",
+      "estimatedMonthlyRentAtPurchaseAreaThb": 9450,
+      "grossAnnualYieldPercent": 5.15,
+      "afterOneAgentMonthPercent": 4.72,
+      "afterCommonFeePercent": 4.42,
+      "afterCommonFeeAndOneAgentMonthPercent": 3.99,
+      "formula": "monthly rent = lowest same-bedroom rent THB/sqm/month × lowest same-bedroom sale listing area; annual yield = annual rent / exact sale price"
+    },
+    "2": {
+      "bedrooms": 2,
+      "purchasePriceThb": 4200000,
+      "purchaseAreaSqm": 42,
+      "purchaseListingUrl": "https://propertyhub.in.th/en/listings/for-sale-brix-condominium-charan-64-connected-to-mrt-sirindhorn-station---6244624",
+      "minimumSameBedroomRentThbPerSqmMonth": 418.6,
+      "rentRateListingUrl": "https://propertyhub.in.th/en/listings/mn3885-brix-condominium-full-furnitured-and-electrical---6410879",
+      "estimatedMonthlyRentAtPurchaseAreaThb": 17581,
+      "grossAnnualYieldPercent": 5.02,
+      "afterOneAgentMonthPercent": 4.6,
+      "afterCommonFeePercent": 4.42,
+      "afterCommonFeeAndOneAgentMonthPercent": 4.0,
+      "formula": "monthly rent = lowest same-bedroom rent THB/sqm/month × lowest same-bedroom sale listing area; annual yield = annual rent / exact sale price"
+    }
+  },
+  "notes": [
+    "All included direct listing URLs returned HTTP 200 on 2026-10-22; displayed price, area, bedroom count, and project name were checked against the listing detail page.",
+    "The 2-bedroom sale ID 6424367 detail page states 52.48 sqm; that exact area is used rather than the rounded 52.5 sqm shown in the project card.",
+    "The lowest-total sale listing ID 4751629 is 22 sqm and ฿1,850,000; the exact project card says Studio while the direct summary says 1 Bed. It is excluded from bedroom-specific ROI until resolved.",
+    "Only five distinct direct links per market were selected from 15 sale and 71 rental results; this is a verified sample, not a deduplicated census of all project listings."
+  ]
+}
