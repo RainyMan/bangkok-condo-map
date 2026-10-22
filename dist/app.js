@@ -1041,8 +1041,8 @@
     renderSelectedDetail(c);
     if (walkingLine) { map.removeLayer(walkingLine); walkingLine = null; }
     if (window.matchMedia('(max-width: 650px)').matches) document.querySelector('.explorer').classList.add('hidden-mobile');
-    if (Number.isFinite(c.lat) && Number.isFinite(c.lng)) map.panTo([c.lat, c.lng], { animate: true, duration: .4 });
-    else { const station = stationsById.get(c.nearestMrt?.stationId); if (station) map.panTo([station.lat, station.lng], { animate: true, duration: .4 }); }
+    if (Number.isFinite(c.lat) && Number.isFinite(c.lng)) map.flyTo([c.lat, c.lng], Math.max(map.getZoom(), 16), { animate: true, duration: .65 });
+    else { const station = stationsById.get(c.nearestMrt?.stationId); if (station) map.flyTo([station.lat, station.lng], Math.max(map.getZoom(), 14), { animate: true, duration: .65 }); }
   }
   function refreshMode() {
     document.querySelectorAll('.segmented button').forEach(b => b.classList.toggle('selected', b.dataset.mode === mode));
