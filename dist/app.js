@@ -51,6 +51,12 @@
       fee: Number(row[18]) > 0 ? { rate: Number(row[18]) } : null, _overview: true,
     };
   }) : (window.BANGKOK_CONDO_CATALOGUE || window.BANGKOK_HIPFLAT_PROJECTS || []);
+  const roomRateReferences = { sale: {}, rent: {} };
+  const medianRate = values => { const sorted = values.filter(value => Number.isFinite(value) && value > 0).sort((a, b) => a - b); return sorted.length ? sorted[Math.floor((sorted.length - 1) / 2)] : 0; };
+  for (const beds of [1, 2]) {
+    roomRateReferences.sale[beds] = medianRate((overviewRows || []).map(row => Number(row[19]?.[beds - 1]) / Number(row[20]?.[beds - 1])));
+    roomRateReferences.rent[beds] = medianRate((overviewRows || []).map(row => Number(row[21]?.[beds - 1])));
+  }
   const matchedLegacy = new Set();
   const condos = hipflatProjects.map(project => {
     const candidates = legacyByName.get(normalizeName(project.name)) || [];
@@ -105,15 +111,10 @@
     } else {
       nearestMrt = project.nearestMrt || legacy?.nearestMrt || null;
     }
-    const mergeVerifiedSamples = (market, manual) => {
+    const mergeVerifiedSamples = (market, manual, kind) => {
       const additions = (manual?.samples || []).filter(sample => sample?.specialAsset !== true && !/(confirmed_unavailable|future_availability|update_over|over_(?:30d|1y|year)|stale)/i.test(String(sample?.listingStatus || '')));
       market = market || manual || null;
       if (!market) return null;
-      const byUrl = new Map((market.samples || []).map(sample => [sample.url, sample]));
-      additions.forEach(sample => { if (sample.url) byUrl.set(sample.url, sample); });
-      // For each bedroom count with linked listing samples, make its displayed
-      // minimum the cheapest current listing and keep that listing's area and URL.
-      // This keeps the 2-bedroom filter and yield baseline on the same unit.
       const sampleBeds = sample => {
         const raw = sample?.beds ?? sample?.bedrooms;
         const numeric = Number(raw);
@@ -124,8 +125,27 @@
         const match = label.match(/(?:^|\D)(\d+)\s*(?:br\b|bed(?:\s*room)?s?\b|房)/i);
         return match ? Number(match[1]) : null;
       };
+      const byUrl = new Map((market.samples || []).map(sample => [sample.url, sample]));
+      additions.forEach(sample => { if (sample.url) byUrl.set(sample.url, sample); });
+      const rawSamples = [...byUrl.values()].filter(sample => sample?.specialAsset !== true && !/(confirmed_unavailable|future_availability|update_over|over_(?:30d|1y|year)|stale)/i.test(String(sample?.listingStatus || '')) && Number(sample?.price) > 0 && Number(sample?.area) > 0);
+      const median = values => { const sorted = values.filter(value => Number.isFinite(value) && value > 0).sort((a, b) => a - b); return sorted.length ? sorted[Math.floor((sorted.length - 1) / 2)] : 0; };
+      const hiddenLowPrices = new Set();
+      rawSamples.forEach(sample => {
+        const beds = sampleBeds(sample), rate = Number(sample.price) / Number(sample.area);
+        const peers = rawSamples.filter(other => other !== sample && (!beds || sampleBeds(other) === beds)).map(other => Number(other.price) / Number(other.area));
+        const room = beds ? market.byBedroom?.[String(beds)] : null;
+        const publishedRoom = (market.bedroomRates || []).find(row => Number(row.beds) === Number(beds));
+        let referenceRate = median(peers) || Number(room?.averageSqm || publishedRoom?.averageSqm || market.averageSqm || roomRateReferences[kind]?.[beds] || 0);
+        const globalReference = Number(roomRateReferences[kind]?.[beds] || 0);
+        if (globalReference > 0 && (referenceRate < globalReference * 0.35 || referenceRate > globalReference * 3)) referenceRate = globalReference;
+        if (referenceRate > 0 && (rate < referenceRate * 0.35 || kind === 'rent' && rate > referenceRate * 2.5)) hiddenLowPrices.add(sample.url);
+      });
+      const acceptedSamples = rawSamples.filter(sample => !hiddenLowPrices.has(sample.url));
+      // For each bedroom count with linked listing samples, make its displayed
+      // minimum the cheapest current listing and keep that listing's area and URL.
+      // This keeps the 2-bedroom filter and yield baseline on the same unit.
       const linkedRoomMinimums = new Map();
-      [...byUrl.values()].filter(sample => !/(confirmed_unavailable|future_availability|update_over|over_(?:30d|1y|year)|stale)/i.test(String(sample?.listingStatus || '')))
+      acceptedSamples
         .forEach(sample => {
           const beds = sampleBeds(sample), price = Number(sample?.price), area = Number(sample?.area);
           if (!beds || !(price > 0) || !(area > 0) || !sample.url) return;
@@ -134,21 +154,44 @@
         });
       const byBedroom = { ...(market.byBedroom || {}) };
       linkedRoomMinimums.forEach((listing, beds) => { byBedroom[beds] = { ...(byBedroom[beds] || {}), ...listing }; });
-      const direct = additions.filter(sample => sample.url && Number(sample.price) > 0 && Number(sample.area) > 0);
+      Object.entries(byBedroom).forEach(([beds, row]) => {
+        let averageRate = Number(row.averageSqm || (market.bedroomRates || []).find(item => String(item.beds) === beds)?.averageSqm || market.averageSqm || roomRateReferences[kind]?.[beds] || 0);
+        const globalReference = Number(roomRateReferences[kind]?.[beds] || 0);
+        if (globalReference > 0 && (averageRate < globalReference * 0.35 || averageRate > globalReference * 3)) averageRate = globalReference;
+        const minimumRate = Number(row.minimumSqm || 0);
+        const sourceHidden = hiddenLowPrices.has(row.minimumSourceUrl) || hiddenLowPrices.has(row.minimumSqmSourceUrl) || hiddenLowPrices.has(row.sourceUrl);
+        if (sourceHidden || averageRate > 0 && minimumRate > 0 && (minimumRate < averageRate * 0.35 || kind === 'rent' && minimumRate > averageRate * 2.5) && !linkedRoomMinimums.has(beds)) {
+          delete row.minimum; delete row.minimumArea; delete row.area; delete row.minimumSqm; delete row.priceSqm; delete row.minimumSourceUrl; delete row.minimumSqmSourceUrl; delete row.sourceUrl;
+        }
+      });
+      const direct = acceptedSamples.filter(sample => sample.url);
       const lowestTotal = direct.reduce((best, sample) => !best || Number(sample.price) < Number(best.price) ? sample : best, null);
       const lowestRate = direct.reduce((best, sample) => !best || Number(sample.price) / Number(sample.area) < Number(best.price) / Number(best.area) ? sample : best, null);
       const baseTotal = Number(market.minimum || 0);
       const baseRate = Number(market.minimumSqm || 0);
+      let marketRateReference = Number(market.averageSqm || roomRateReferences[kind]?.[1] || 0);
+      const globalReference = Number(roomRateReferences[kind]?.[1] || 0);
+      if (globalReference > 0 && (marketRateReference < globalReference * 0.35 || marketRateReference > globalReference * 3)) marketRateReference = globalReference;
+      const implausibleBaseRate = marketRateReference > 0 && baseRate > 0 && (baseRate < marketRateReference * 0.35 || kind === 'rent' && baseRate > marketRateReference * 2.5);
       // When a direct listing ties a summary's low, prefer the listing URL so
       // visitors can open the exact unit behind the displayed minimum.
       const nextTotal = lowestTotal && (!baseTotal || Number(lowestTotal.price) <= baseTotal) ? lowestTotal : null;
       const nextRate = lowestRate && (!baseRate || Number(lowestRate.price) / Number(lowestRate.area) <= baseRate) ? lowestRate : null;
-      return { ...market, samples: [...byUrl.values()], byBedroom,
+      const validRoomRows = Object.values(byBedroom).filter(row => Number(row.minimum) > 0 && Number(row.minimumArea || row.area) > 0);
+      const lowestAccepted = acceptedSamples.reduce((best, sample) => !best || Number(sample.price) < Number(best.price) ? sample : best, null)
+        || validRoomRows.reduce((best, row) => !best || Number(row.minimum) < Number(best.price) ? { price: Number(row.minimum), area: Number(row.minimumArea || row.area), url: row.minimumSourceUrl || row.sourceUrl } : best, null);
+      const lowestAcceptedRate = acceptedSamples.reduce((best, sample) => !best || Number(sample.price) / Number(sample.area) < Number(best.price) / Number(best.area) ? sample : best, null)
+        || Object.values(byBedroom).filter(row => Number(row.minimumSqm) > 0).reduce((best, row) => !best || Number(row.minimumSqm) < Number(best.price) ? { price: Number(row.minimumSqm), area: 1, url: row.minimumSqmSourceUrl || row.sourceUrl } : best, null);
+      const hiddenBaseMinimum = hiddenLowPrices.has(market.minimumSourceUrl) || hiddenLowPrices.has(market.minimumSqmSourceUrl) || implausibleBaseRate;
+      return { ...market, samples: [...byUrl.values()].filter(sample => !hiddenLowPrices.has(sample.url)), byBedroom,
+        ...(hiddenLowPrices.size || implausibleBaseRate ? { excludedExtremePriceCount: Number(market.excludedExtremePriceCount || 0) + Math.max(hiddenLowPrices.size, Number(implausibleBaseRate)) } : {}),
+        ...(hiddenBaseMinimum ? lowestAccepted ? { minimum: Number(lowestAccepted.price), minimumArea: Number(lowestAccepted.area), minimumSourceUrl: lowestAccepted.url } : { minimum: null, minimumArea: null, minimumSourceUrl: null } : {}),
+        ...(hiddenLowPrices.has(market.minimumSqmSourceUrl) || implausibleBaseRate ? lowestAcceptedRate ? { minimumSqm: Number((Number(lowestAcceptedRate.price) / Number(lowestAcceptedRate.area)).toFixed(2)), minimumSqmSourceUrl: lowestAcceptedRate.url } : { minimumSqm: null, minimumSqmSourceUrl: null } : {}),
         ...(nextTotal ? { minimum: Number(nextTotal.price), minimumArea: Number(nextTotal.area), minimumSourceUrl: nextTotal.url, minimumSampleUpdated: nextTotal.updated || null } : {}),
         ...(nextRate ? { minimumSqm: Number((Number(nextRate.price) / Number(nextRate.area)).toFixed(2)), minimumSqmSourceUrl: nextRate.url, minimumSqmSampleUpdated: nextRate.updated || null } : {}) };
     };
-    const mergedSale = mergeVerifiedSamples(propertyHub.sale || project.sale || legacy?.sale || null, manualMarket.sale);
-    const mergedRent = mergeVerifiedSamples(propertyHub.rent || project.rent || legacy?.rent || null, manualMarket.rent);
+    const mergedSale = mergeVerifiedSamples(propertyHub.sale || project.sale || legacy?.sale || null, manualMarket.sale, 'sale');
+    const mergedRent = mergeVerifiedSamples(propertyHub.rent || project.rent || legacy?.rent || null, manualMarket.rent, 'rent');
     const localListings = (localListingsByProjectId.get(Number(project.id))?.listings || []).filter(row => {
       const observedAt = Date.parse(row.observedAt || '');
       return Number.isFinite(observedAt) && observedAt >= localListingCutoff && observedAt <= Date.now() + 24 * 60 * 60 * 1000;
@@ -200,8 +243,8 @@
       manualSaleSamples: (manualMarket.sale?.samples || []).filter(sample => sample.specialAsset === true),
       manualSaleSamplesNote: manualMarket.sale?.specialSaleNotice || null,
       verifiedMarketSamples: {
-        sale: (manualMarket.sale?.samples || []).filter(sample => sample.specialAsset !== true && sample.url && Number(sample.price) > 0 && Number(sample.area) > 0),
-        rent: (manualMarket.rent?.samples || []).filter(sample => sample.specialAsset !== true && sample.url && Number(sample.price) > 0 && Number(sample.area) > 0),
+        sale: (mergedSale?.samples || []).filter(sample => sample.specialAsset !== true && sample.url && Number(sample.price) > 0 && Number(sample.area) > 0),
+        rent: (mergedRent?.samples || []).filter(sample => sample.specialAsset !== true && sample.url && Number(sample.price) > 0 && Number(sample.area) > 0),
       },
       locationSourceUrl: coordsFromPropertyHub ? propertyHub.locationSourceUrl : coordsFromProject ? project.locationSourceUrl : coordsFromOsm ? osm.sourceUrl : coordsFromVerifiedSource ? verifiedCoordinate.sourceUrl : coordsFromPropertyScout ? propertyScoutDetail.locationSourceUrl : project.locationSourceUrl || legacy?.locationSourceUrl,
       locationVerificationSourceUrl: coordsFromVerifiedSource ? (verifiedCoordinate.corroborationSourceUrl || verifiedCoordinate.verificationSourceUrl) : coordsFromPropertyScout ? (propertyScoutDetail.locationVerificationSourceUrl || propertyScoutMarket.locationVerificationSourceUrl) : coordsFromPropertyHub ? propertyHub.locationVerificationSourceUrl || null : coordsFromOsm ? propertyScoutDetail.locationVerificationSourceUrl || propertyScoutMarket.locationVerificationSourceUrl || null : null,
@@ -246,6 +289,50 @@
     const match = label.match(/(?:^|\D)(\d+)\s*(?:br\b|bed(?:\s*room)?s?\b|房)/i);
     return match ? Number(match[1]) : null;
   };
+  const hideExtremeLowListings = (market, kind) => {
+    if (!market) return market;
+    const valid = (market.samples || []).filter(sample => sample?.url && Number(sample.price) > 0 && Number(sample.area) > 0);
+    const median = values => { const sorted = values.filter(value => Number.isFinite(value) && value > 0).sort((a, b) => a - b); return sorted.length ? sorted[Math.floor((sorted.length - 1) / 2)] : 0; };
+    const hidden = new Set();
+    valid.forEach(sample => {
+      const beds = bedroomCountForSample(sample), rate = Number(sample.price) / Number(sample.area);
+      const peerRates = valid.filter(other => other !== sample && (!beds || bedroomCountForSample(other) === beds)).map(other => Number(other.price) / Number(other.area));
+      const room = beds ? market.byBedroom?.[String(beds)] : null;
+      const summary = (market.bedroomRates || []).find(row => Number(row.beds) === Number(beds));
+      let reference = median(peerRates) || Number(room?.averageSqm || summary?.averageSqm || market.averageSqm || roomRateReferences[kind]?.[beds] || 0);
+      const globalReference = Number(roomRateReferences[kind]?.[beds] || 0);
+      if (globalReference > 0 && (reference < globalReference * 0.35 || reference > globalReference * 3)) reference = globalReference;
+      if (reference > 0 && (rate < reference * 0.35 || kind === 'rent' && rate > reference * 2.5)) hidden.add(sample.url);
+    });
+    let globalReference = Number(market.averageSqm || roomRateReferences[kind]?.[1] || 0);
+    const cityReference = Number(roomRateReferences[kind]?.[1] || 0);
+    if (cityReference > 0 && (globalReference < cityReference * 0.35 || globalReference > cityReference * 3)) globalReference = cityReference;
+    const baseRate = Number(market.minimumSqm || 0);
+    const implausibleBaseRate = globalReference > 0 && baseRate > 0 && (baseRate < globalReference * 0.35 || kind === 'rent' && baseRate > globalReference * 2.5);
+    if (!hidden.size && !implausibleBaseRate) return market;
+    const accepted = valid.filter(sample => !hidden.has(sample.url));
+    const byBedroom = Object.fromEntries(Object.entries(market.byBedroom || {}).map(([beds, row]) => [beds, { ...row }]));
+    for (const [beds, row] of Object.entries(byBedroom)) {
+      const rows = accepted.filter(sample => bedroomCountForSample(sample) === Number(beds));
+      const cheapest = rows.sort((a, b) => Number(a.price) - Number(b.price))[0];
+      const averageRate = Number(row.averageSqm || (market.bedroomRates || []).find(item => String(item.beds) === beds)?.averageSqm || market.averageSqm || roomRateReferences[kind]?.[beds] || 0);
+      const roomRate = Number(row.minimumSqm || 0);
+      const roomSourceHidden = hidden.has(row.minimumSourceUrl) || hidden.has(row.minimumSqmSourceUrl) || hidden.has(row.sourceUrl);
+      if (cheapest) byBedroom[beds] = { ...row, minimum: Number(cheapest.price), area: Number(cheapest.area), minimumArea: Number(cheapest.area), minimumSqm: Number(cheapest.price) / Number(cheapest.area), priceSqm: Number(cheapest.price) / Number(cheapest.area), minimumSourceUrl: cheapest.url, sourceUrl: cheapest.url };
+      else if (roomSourceHidden || averageRate > 0 && roomRate > 0 && (roomRate < averageRate * 0.35 || kind === 'rent' && roomRate > averageRate * 2.5)) {
+        ['minimum', 'minimumArea', 'area', 'minimumSqm', 'priceSqm', 'minimumSourceUrl', 'minimumSqmSourceUrl', 'sourceUrl'].forEach(key => delete byBedroom[beds][key]);
+      }
+    }
+    const roomRows = Object.values(byBedroom).filter(row => Number(row.minimum) > 0 && Number(row.minimumArea || row.area) > 0);
+    const cheapest = accepted.reduce((best, sample) => !best || Number(sample.price) < Number(best.price) ? sample : best, null)
+      || roomRows.reduce((best, row) => !best || Number(row.minimum) < Number(best.price) ? { price: Number(row.minimum), area: Number(row.minimumArea || row.area), url: row.minimumSourceUrl || row.sourceUrl } : best, null);
+    const lowestRate = accepted.reduce((best, sample) => !best || Number(sample.price) / Number(sample.area) < Number(best.price) / Number(best.area) ? sample : best, null)
+      || Object.values(byBedroom).filter(row => Number(row.minimumSqm) > 0).reduce((best, row) => !best || Number(row.minimumSqm) < Number(best.price) ? { price: Number(row.minimumSqm), area: 1, url: row.minimumSqmSourceUrl || row.sourceUrl } : best, null);
+    const minimumHidden = hidden.has(market.minimumSourceUrl) || implausibleBaseRate, rateHidden = hidden.has(market.minimumSqmSourceUrl) || implausibleBaseRate;
+    return { ...market, byBedroom, samples: (market.samples || []).filter(sample => !hidden.has(sample.url)), excludedExtremePriceCount: Number(market.excludedExtremePriceCount || 0) + Math.max(hidden.size, Number(implausibleBaseRate)),
+      ...(minimumHidden ? cheapest ? { minimum: Number(cheapest.price), minimumArea: Number(cheapest.area), minimumSourceUrl: cheapest.url } : { minimum: null, minimumArea: null, minimumSourceUrl: null } : {}),
+      ...(rateHidden ? lowestRate ? { minimumSqm: Number((Number(lowestRate.price) / Number(lowestRate.area)).toFixed(2)), minimumSqmSourceUrl: lowestRate.url } : { minimumSqm: null, minimumSqmSourceUrl: null } : {}) };
+  };
   const yieldDefaultsFor = (c, beds = null) => {
     const saleRooms = bedroomRows(c.sale), rentRooms = bedroomRows(c.rent);
     const saleSamples = c.sale?.samples || [];
@@ -283,16 +370,25 @@
     const roomOptions = Object.entries(saleRooms).filter(([, row]) => Number(row.minimum || row.average) > 0);
     // Default to the lowest-priced available bedroom category that also has
     // a matching rent rate. The map yield is calculated across every such type.
-    const defaultRoom = Object.entries(saleRooms)
-      .filter(([key, row]) => {
-        const url = row?.minimumSourceUrl || row?.sourceUrl;
-        const linkedSample = saleSamples.some(sample => bedroomCountForSample(sample) === Number(key) && Number(sample.price) > 0 && Number(sample.area) > 0 && sample.url && yieldSampleIsCurrent(sample) && isDirectListingUrl(sample.url));
-        const linkedMinimum = Number(row.minimum) > 0 && Number(row.minimumArea || (isDirectListingUrl(url) ? row.area : 0)) > 0 && isDirectListingUrl(url);
-        const roomAverage = Number(row.average) > 0 && Number(row.averageSqm) > 0;
-        const rentRate = Number(rentRooms[key]?.minimumSqm || rentRooms[key]?.averageSqm || (rentRooms[key]?.minimum && rentRooms[key]?.area ? rentRooms[key].minimum / rentRooms[key].area : 0));
-        return (linkedSample || linkedMinimum || roomAverage) && rentRate > 0;
-      })
-      .sort(([, a], [, b]) => Number(a.minimum || a.average) - Number(b.minimum || b.average))[0]?.[0] || null;
+    const roomScore = key => {
+      const room = saleRooms[key], rentRoom = rentRooms[key];
+      if (!room || !rentRoom) return null;
+      const saleRows = saleSamples.filter(sample => bedroomCountForSample(sample) === Number(key) && yieldSampleIsCurrent(sample) && isDirectListingUrl(sample?.url) && Number(sample.price) > 0 && Number(sample.area) > 0);
+      const saleRow = saleRows.sort((a, b) => Number(a.price) - Number(b.price))[0];
+      const saleUrl = saleRow?.url || room.minimumSourceUrl || room.sourceUrl;
+      const salePrice = Number(saleRow?.price || (isDirectListingUrl(saleUrl) ? room.minimum : 0) || room.average || 0);
+      const saleArea = Number(saleRow?.area || (isDirectListingUrl(saleUrl) ? room.minimumArea || room.area : 0) || (room.average > 0 && room.averageSqm > 0 ? room.average / room.averageSqm : 0));
+      const rentRows = rentSamples.filter(sample => bedroomCountForSample(sample) === Number(key) && yieldSampleIsCurrent(sample) && isDirectListingUrl(sample?.url) && Number(sample.price) > 0 && Number(sample.area) > 0);
+      const rentRow = rentRows.sort((a, b) => Number(a.price) - Number(b.price))[0];
+      const rentUrl = rentRow?.url || rentRoom.minimumSourceUrl || rentRoom.sourceUrl;
+      const monthlyRent = Number(rentRow?.price || (yieldSourceIsCurrent(rentSamples, rentUrl) ? rentRoom.minimum : 0) || rentRoom.average || 0);
+      return salePrice > 0 && saleArea > 0 && monthlyRent > 0
+        ? (monthlyRent * 11 - Number(c.fee?.rate || 0) * saleArea * 12) / salePrice * 100
+        : null;
+    };
+    const defaultRoom = ['1', '2'].map(key => [key, roomScore(key)])
+      .filter(([, score]) => Number.isFinite(score))
+      .sort((a, b) => b[1] - a[1])[0]?.[0] || null;
     // An explicit room choice must never silently fall back to another room type.
     const chosenBeds = beds ? (saleRooms[String(beds)] ? String(beds) : null) : defaultRoom;
     if ((beds && !chosenBeds) || (!beds && !chosenBeds)) return { price: 0, area: 0, rent: 0, beds: String(beds || '2'), isRoomStart: false, isRoomAverage: false, saleSourceUrl: null, rentSourceUrl: null, roomOptions };
@@ -339,23 +435,22 @@
     const salePrice = Number(selectedRoomMinimum || roomAveragePrice || (!chosenBeds ? c.sale?.minimum : 0) || 0);
     const saleArea = Number((roomSample?.area) || (!selectedRoomMinimum ? roomAverageArea : null) || (!chosenBeds ? c.sale?.minimumArea || lowestSaleSample?.area : null) || 0);
     const roomRent = chosenBeds ? rentRooms[chosenBeds] : null;
-    const roomRentUrl = roomRent?.minimumSqmSourceUrl || roomRent?.sourceUrl;
-    const roomRentRate = roomRent && yieldSourceIsCurrent(rentSamples, roomRentUrl) ? Number(roomRent.minimumSqm || (roomRent.minimum && roomRent.area ? roomRent.minimum / roomRent.area : 0) || roomRent.averageSqm || 0) : 0;
-    // Use the room-type low rent rate per sqm with the area of the lowest-
-    // priced sale listing. Fall back to the room average only when no low rate exists.
-    // A bedroom-specific yield must use a rent rate for the same bedroom count.
-    // Do not silently substitute another room type or a project-wide minimum.
-    const rentRate = roomRentRate;
+    const roomRentListings = chosenBeds ? rentSamples.filter(sample => sample?.specialAsset !== true && yieldSampleIsCurrent(sample) && isDirectListingUrl(sample?.url) && bedroomCountForSample(sample) === Number(chosenBeds) && Number(sample.price) > 0 && Number(sample.area) > 0) : [];
+    const rentSample = roomRentListings.sort((a, b) => Number(a.price) - Number(b.price))[0] || null;
+    const roomRentUrl = roomRent?.minimumSourceUrl || roomRent?.sourceUrl;
+    const rentMinimum = roomRent && yieldSourceIsCurrent(rentSamples, roomRentUrl) ? Number(roomRent.minimum || 0) : 0;
+    const rentAverage = Number(roomRent?.average || 0);
+    const monthlyRent = Number(rentSample?.price || rentMinimum || rentAverage || 0);
     return {
       // Keep the exact lowest same-bedroom sale total. Missing matching rent
       // evidence must not trigger an unrelated project-wide price/sqm fallback.
       price: salePrice,
       area: saleArea,
-      rent: Math.round(rentRate * saleArea),
+      rent: monthlyRent,
       beds: chosenBeds || room?.beds || c.beds || null,
       isRoomStart: Boolean(selectedRoomMinimum), isRoomAverage: Boolean(!selectedRoomMinimum && roomAveragePrice),
       saleSourceUrl: roomSample?.url || (!room ? c.sale?.minimumSourceUrl : null),
-      rentSourceUrl: roomRent?.minimumSqmSourceUrl || roomRent?.sourceUrl || c.rent?.minimumSqmSourceUrl || c.rent?.minimumSourceUrl,
+      rentSourceUrl: rentSample?.url || roomRentUrl || c.rent?.minimumSourceUrl,
       rentFallback: false, rentFallbackBeds: null,
       roomOptions,
     };
@@ -513,22 +608,17 @@
     return Number.isFinite(result) ? result : 0;
   };
   const allRoomYieldSummary = (c, { deductFee = true, deductAgent = true } = {}) => {
-    const roomOptions = yieldDefaultsFor(c, null).roomOptions;
-    const rows = roomOptions.map(([beds]) => {
+    const rows = ['1', '2'].map(beds => {
       const baseline = yieldDefaultsFor(c, String(beds));
       if (!(baseline.price > 0) || !(baseline.area > 0) || !(baseline.rent > 0)) return null;
       return { beds: String(beds), ...baseline, yield: calculateNetYield(c, { price: baseline.price, rent: baseline.rent, area: baseline.area, deductFee, deductAgent }) };
     }).filter(Boolean);
-    return { rows, average: rows.length ? rows.reduce((sum, row) => sum + row.yield, 0) / rows.length : null };
+    const best = [...rows].sort((a, b) => b.yield - a.yield)[0] || null;
+    return { rows, best, average: best?.yield ?? null };
   };
   const allRoomYieldEstimate = (c, options) => {
     const roomSummary = allRoomYieldSummary(c, options);
-    if (roomSummary.average != null) return roomSummary.average;
-    const salePrice = Number(c.sale?.minimum), area = Number(c.sale?.minimumArea || c.sale?.averageArea || 0);
-    const rentRate = Number(c.rent?.minimumSqm || c.rent?.averageSqm || 0);
-    return salePrice > 0 && area > 0 && rentRate > 0
-      ? calculateNetYield(c, { price: salePrice, area, rent: rentRate * area, ...options })
-      : null;
+    return roomSummary.best?.yield ?? null;
   };
   const markers = new Map();
   let currentShown = [];
@@ -548,11 +638,9 @@
     const saved = loadYieldInputs()[c.id];
     if (!saved || saved.autoBaseline === true) {
       const precomputed = c._overview && Array.isArray(c.coreYieldByRoom)
-        ? c.coreYieldByRoom.map(row => calculateNetYield(c, { ...row, deductFee: saved?.deductFee ?? true, deductAgent: saved?.deductAgent ?? true })).filter(Number.isFinite)
+        ? c.coreYieldByRoom.filter(row => ['1', '2'].includes(String(row.beds))).map(row => calculateNetYield(c, { ...row, deductFee: saved?.deductFee ?? true, deductAgent: saved?.deductAgent ?? true })).filter(Number.isFinite)
         : [];
-      const value = precomputed.length
-        ? precomputed.reduce((sum, roomYield) => sum + roomYield, 0) / precomputed.length
-        : allRoomYieldEstimate(c, { deductFee: saved?.deductFee ?? true, deductAgent: saved?.deductAgent ?? true });
+      const value = precomputed.length ? Math.max(...precomputed) : allRoomYieldEstimate(c, { deductFee: saved?.deductFee ?? true, deductAgent: saved?.deductAgent ?? true });
       yieldValueCache.set(c.id, value);
       return value;
     }
@@ -694,9 +782,10 @@
     if (lowriseMode !== 'all' && !Number.isFinite(floorCount)) return false;
     if (lowriseMode === 'yes' && floorCount > 8) return false;
     if (lowriseMode === 'no' && floorCount <= 8) return false;
-    if (selectedBedrooms && !(Number(c.sale?.byBedroom?.[selectedBedrooms]?.minimum) > 0)) return false;
+    const availableSelectedPrices = [...selectedBedrooms].map(beds => Number(c.sale?.byBedroom?.[beds]?.minimum)).filter(price => price > 0);
+    if (selectedBedrooms.size && !availableSelectedPrices.length) return false;
     const budget = budgetMax;
-    const total = selectedBedrooms ? Number(c.sale?.byBedroom?.[selectedBedrooms]?.minimum) : Number(c.sale?.minimum);
+    const total = selectedBedrooms.size ? Math.min(...availableSelectedPrices) : Number(c.sale?.minimum);
     if (budget != null && (!Number.isFinite(total) || total > budget)) return false;
     const distance = Number(c.nearestMrt?.distanceKm ?? c.nearestMrt?.straightDistanceKm);
     const distanceMax = read('distanceMax');
@@ -734,10 +823,27 @@
     };
     document.getElementById('coverageSummary').textContent = `核實座標 ${coverage.locations.toLocaleString()} · 售樣本 ${coverage.saleSamples.toLocaleString()} + 摘要 ${coverage.saleSummaries.toLocaleString()} · 租樣本 ${coverage.rentSamples.toLocaleString()} + 摘要 ${coverage.rentSummaries.toLocaleString()} · 可估投報 ${coverage.yield.toLocaleString()}`;
     document.getElementById('listCount').textContent = String(shown.length).padStart(2, '0');
+    updateActiveFilterBar();
     const cards = shown.slice(0, visibleProjectCount).map((c, i) => { const nearestStation = stationsById.get(c.nearestMrt?.stationId); const located = Number.isFinite(c.lat) && Number.isFinite(c.lng); const roomMatch = query.match(/(\d+)\s*房/); const roomListing = roomMatch && c.sale?.byBedroom?.[roomMatch[1]]; const meta = nearestStation ? `${transitLabel(nearestStation)} ${nearestStation.name} · ${c.completedYear ? `完工 ${c.completedYear}` : c.locationVerified ? '座標已核實 · Hipflat 收錄' : 'Hipflat 收錄 · 位置待核'}` : c.locationVerified ? '座標已核實 · Hipflat 收錄' : 'Hipflat 收錄 · 位置待核'; return `<article class="project-card ${c.id === selectedId ? 'active' : ''}" data-id="${c.id}" tabindex="0" role="button" aria-label="查看 ${esc(c.name)}"><span class="rank">${String(i + 1).padStart(2, '0')}</span><div class="project-copy"><strong class="project-name">${esc(c.name)}</strong><span class="project-meta">${esc(meta)}</span><div class="project-values"><span>${roomListing ? `${roomMatch[1]}房總價` : '售/㎡'} <b>${roomListing ? compactMoney(roomListing.minimum) : fmt(c.sale?.minimumSqm)}</b></span><span>租/㎡/月 <b>${fmt(c.rent?.minimumSqm)}</b></span><span>${located ? (c.nearestMrt?.distanceKm != null ? '🚶' : '直線') : '座標'} <b>${located ? ((c.nearestMrt?.distanceKm ?? c.nearestMrt?.straightDistanceKm) ?? '—') + ' km' : '待補'}</b></span></div></div><span class="price-chip">${labelFor(c)}</span></article>`; }).join('');
     const more = shown.length > visibleProjectCount ? `<button class="load-more-projects" type="button">載入更多 Condo（${(shown.length - visibleProjectCount).toLocaleString()}）</button>` : '';
     list.innerHTML = cards + more || '<p class="empty-state">沒有符合的 Condo</p>';
     syncVisibleMarkers();
+  }
+  function updateActiveFilterBar() {
+    const bar = document.getElementById('activeFilterBar');
+    const tags = document.getElementById('activeFilterTags');
+    if (!bar || !tags) return;
+    const values = [];
+    if (query) values.push(`搜尋：${query}`);
+    if (selectedBedrooms.size) values.push(`房型：${[...selectedBedrooms].sort().join('、')} 房`);
+    if (budgetMax != null) values.push(`總價 ≤ ${fmt(budgetMax / 10000)} 萬`);
+    const labels = { distanceMax: ['步行距離 ≤ ', ' 公里'], saleMin: ['售價/㎡ ≥ ฿', ''], saleMax: ['售價/㎡ ≤ ฿', ''], rentMin: ['月租/㎡ ≥ ฿', ''], rentMax: ['月租/㎡ ≤ ฿', ''], yieldMin: ['投報率 ≥ ', '%'], yieldMax: ['投報率 ≤ ', '%'], yearMin: ['完工年 ≥ ', ''], yearMax: ['完工年 ≤ ', ''] };
+    Object.entries(labels).forEach(([id, [prefix, suffix]]) => { const value = document.getElementById(id)?.value; if (value !== '' && value != null) values.push(`${prefix}${value}${suffix}`); });
+    const lowrise = document.getElementById('lowriseOnly')?.value;
+    if (lowrise === 'yes') values.push('8 樓以下'); else if (lowrise === 'no') values.push('超過 8 樓');
+    tags.innerHTML = values.map(value => `<span class="active-filter-chip">${esc(value)}</span>`).join('');
+    bar.hidden = values.length === 0;
+    document.querySelector('.filter-toolbar')?.classList.toggle('has-active-filters', values.length > 0);
   }
   list.addEventListener('click', event => {
     if (event.target.closest('.load-more-projects')) { const scrollTop = list.scrollTop; visibleProjectCount = Math.min(currentShown.length, visibleProjectCount + LIST_PAGE_SIZE); renderList(); list.scrollTop = scrollTop; return; }
@@ -761,6 +867,7 @@
   }
   function renderDetail(c) {
     detail.classList.remove('compact');
+    const tenureWarningHtml = c.tenureWarning?.sourceUrl ? `<a class="tenure-warning" href="${esc(c.tenureWarning.sourceUrl)}" target="_blank" rel="noopener" title="${esc(c.tenureWarning.note || '產權資訊需查證')}" aria-label="${esc(c.tenureWarning.label || '產權需查證')}：查看來源"><span aria-hidden="true">▲</span><span>${esc(c.tenureWarning.label || '產權需查證')}</span><small>↗</small></a>` : '';
     const manualSaleSection = c.manualSaleSamples?.length ? `<section class="detail-section"><p class="section-label">特殊出售掛牌 <span>不納入一般行情／投報</span></p><div class="source-links">${c.manualSaleSamples.map(row => `<a href="${esc(row.url)}" target="_blank" rel="noopener">${esc(row.sourceName || '來源')} · ${esc(row.title || c.name)} · ฿${fmt(row.price)} · ${fmt(row.area, 2)} ㎡ · ฿${fmt(row.priceSqm)} / ㎡ ↗</a>`).join('')}</div><p class="fee-note">${esc(c.manualSaleSamplesNote || '此為銀行資產特惠售價，與一般市場掛牌差異較大；保留原始物件來源，暫不納入平均售價、最低市場單價及投報率。')}</p></section>` : '';
     if (!hasSale(c) || !hasRent(c)) {
       const query = encodeURIComponent(`${c.name} condo Bangkok`);
@@ -793,7 +900,7 @@
       const crossSaleRows = marketCrosscheck?.sale?.listings || [];
       const crossRentRows = marketCrosscheck?.rent?.listings || [];
       const marketCrosscheckHtml = marketCrosscheck ? `<section class="detail-section"><p class="section-label">${esc(marketCrosscheck.sourceName || 'DDproperty')} 單筆掛牌核對 <span>${fmt(crossSaleRows.length)} 售 · ${fmt(crossRentRows.length)} 租 · ${esc(marketCrosscheck.asOf || '')}</span></p><p class="fee-note">此平台單筆掛牌獨立列出，未併入其他來源的行情均值；不同平台可能刊登同一房源。刊登頁面的在架狀態仍請向刊登者確認。</p>${crossSaleRows.length ? `<div class="source-links">${crossSaleRows.map(row => `<a href="${esc(row.url)}" target="_blank" rel="noopener">${esc(marketCrosscheck.sourceName || 'PropertyHub')} 出售 · ${row.bedrooms ? `${fmt(row.bedrooms)} 房 · ` : ''}${money(row.price)} · ${fmt(row.area, 1)} ㎡ · ${money(row.priceSqm)} / ㎡ · ${esc(row.listedAt || '')}${row.statusLabel ? ` · ${esc(row.statusLabel)}` : ''} ↗</a>`).join('')}</div>` : ''}${crossRentRows.length ? `<div class="source-links">${crossRentRows.map(row => `<a href="${esc(row.url)}" target="_blank" rel="noopener">${esc(marketCrosscheck.sourceName || 'DDproperty')} 出租 · ${row.bedrooms ? `${fmt(row.bedrooms)} 房 · ` : ''}${money(row.price)} / 月 · ${fmt(row.area, 1)} ㎡ · ${money(row.priceSqm)} / ㎡ / 月 · ${esc(row.listedAt || '')}${row.statusLabel ? ` · ${esc(row.statusLabel)}` : ''} ↗</a>`).join('')}</div>` : ''}${marketCrosscheck.projectSourceUrl ? `<div class="source-links"><a href="${esc(marketCrosscheck.projectSourceUrl)}" target="_blank" rel="noopener">${esc(marketCrosscheck.sourceName || 'DDproperty')} 出售專案掛牌頁${marketCrosscheck.sale?.activeListingCount === 0 ? ' · 目前出售 0 筆' : ''} ↗</a>${marketCrosscheck.rent?.sourceUrl ? `<a href="${esc(marketCrosscheck.rent.sourceUrl)}" target="_blank" rel="noopener">${esc(marketCrosscheck.sourceName || 'DDproperty')} 出租專案頁 · ${fmt(marketCrosscheck.rent?.activeListingCount || 0)} 筆 ↗</a>` : ''}</div>` : ''}${marketCrosscheck.availabilitySources?.length ? `<p class="fee-note">其他平台：${marketCrosscheck.availabilitySources.map(source => `${esc(source.sourceName)}：${esc(source.statusLabel)}`).join(' · ')}</p><div class="source-links">${marketCrosscheck.availabilitySources.map(source => `<a href="${esc(source.url)}" target="_blank" rel="noopener">${esc(source.sourceName)} 核對來源 ↗</a>`).join('')}</div>` : ''}</section>` : '';
-      detail.innerHTML = `<div class="detail-actions"><button class="close-detail" type="button" aria-label="關閉 Condo 資訊" title="關閉">×</button><button class="panel-size-toggle detail-size-toggle" id="toggleDetailSize" type="button" aria-expanded="true" aria-label="縮小右側卡片" title="縮小右側卡片">−</button></div><div class="detail-hero"><div class="detail-topline"><span class="station-pill">Hipflat · ${esc(projectAreaLabel)}</span><span class="age-pill">${c.completedYear ? `${esc(c.completedYear)} 完工` : c.locationVerified ? '完工年待補 · 座標已核實' : '完工年待補 · 位置待核'}</span></div><h2 class="detail-title">${esc(c.name)}</h2><p class="detail-caption">${c.locationVerified ? 'Condo 座標已由公開專案或地圖資料頁核對。' : 'Condo 位置尚待核實。'} 完工年會在取得可靠資料後補上。</p><a class="review-link" href="${reviewsUrl(c)}" target="_blank" rel="noopener"><span>◎</span> 在 Google Maps 查看評論 <span>↗</span></a></div><section class="walk-section"><div class="walk-main"><span class="walk-symbol">🚇</span><div><span class="metric-label">${nearest?.distanceKm ? `最近${transitLabel(station)}站（步行路網估算）` : `最近${transitLabel(station)}站（直線距離）`}· ${esc(nearestLabel)}</span><strong>${c.locationVerified ? nearest?.distanceKm ? `${nearest.distanceKm} 公里步行路網距離` : `${nearest?.straightDistanceKm ?? '—'} 公里直線距離` : 'Condo 座標待核'}</strong><small>${c.locationVerified ? nearest?.distanceKm ? `步行約 ${Math.max(1, Number(nearest.minutes) || 0)} 分鐘 · Valhalla 路網估算` : '步行路網距離待計算' : '確認 Condo 座標後，再判定最近 MRT 與步行距離'}</small></div></div>${directionsUrl ? `<a class="route-button" href="${directionsUrl}" target="_blank" rel="noopener">Google Maps 步行導航 ↗</a>` : station ? '<button id="showWalkingRoute" class="route-button">查看 MRT 站點</button>' : ''}</section>${fallbackSale}${fallbackRent}${verifiedMarketSamplesHtml}${marketCrosscheckHtml}${manualSaleSection}<section class="detail-section"><p class="section-label">其他公開房源來源</p><div class="source-links"><a href="${hipflatSearch}" target="_blank" rel="noopener">Hipflat 專案與售租行情 ↗</a><a href="${ddSale}" target="_blank" rel="noopener">DDproperty 出售 ↗</a><a href="${ddRent}" target="_blank" rel="noopener">DDproperty 出租 ↗</a><a href="${phSale}" target="_blank" rel="noopener">PropertyHub 出售 ↗</a><a href="${phRent}" target="_blank" rel="noopener">PropertyHub 出租 ↗</a></div></section><section class="detail-section"><p class="section-label">投報率試算 <span>售租資料不足</span></p><p class="fee-note">補齊同一 Condo 的出售與出租掛牌後，會以每平方米最低單價計算。</p></section><section class="detail-section"><p class="section-label">資料來源</p><div class="source-links"><a href="${esc(c.discoveryUrl)}" target="_blank" rel="noopener">Hipflat 曼谷 Condo 清單 ↗</a>${c.hipflatProjectUrl ? `<a href="${esc(c.hipflatProjectUrl)}" target="_blank" rel="noopener">Hipflat 專案頁 ↗</a>` : ''}${c.locationVerified ? `<a href="${esc(c.locationSourceUrl)}" target="_blank" rel="noopener">座標來源 ↗</a>` : ''}${c.locationVerificationSourceUrl ? `<a href="${esc(c.locationVerificationSourceUrl)}" target="_blank" rel="noopener">地址交叉核實 ↗</a>` : ''}</div></section>`;
+      detail.innerHTML = `<div class="detail-actions"><button class="close-detail" type="button" aria-label="關閉 Condo 資訊" title="關閉">×</button><button class="panel-size-toggle detail-size-toggle" id="toggleDetailSize" type="button" aria-expanded="true" aria-label="縮小右側卡片" title="縮小右側卡片">−</button></div><div class="detail-hero"><div class="detail-topline"><span class="station-pill">Hipflat · ${esc(projectAreaLabel)}</span><span class="age-pill">${c.completedYear ? `${esc(c.completedYear)} 完工` : c.locationVerified ? '完工年待補 · 座標已核實' : '完工年待補 · 位置待核'}</span></div><div class="detail-title-row"><h2 class="detail-title">${esc(c.name)}</h2>${tenureWarningHtml}</div><p class="detail-caption">${c.locationVerified ? 'Condo 座標已由公開專案或地圖資料頁核對。' : 'Condo 位置尚待核實。'} 完工年會在取得可靠資料後補上。${c.tenureWarning ? ` ${esc(c.tenureWarning.note)}` : ''}</p><a class="review-link" href="${reviewsUrl(c)}" target="_blank" rel="noopener"><span>◎</span> 在 Google Maps 查看評論 <span>↗</span></a></div><section class="walk-section"><div class="walk-main"><span class="walk-symbol">🚇</span><div><span class="metric-label">${nearest?.distanceKm ? `最近${transitLabel(station)}站（步行路網估算）` : `最近${transitLabel(station)}站（直線距離）`}· ${esc(nearestLabel)}</span><strong>${c.locationVerified ? nearest?.distanceKm ? `${nearest.distanceKm} 公里步行路網距離` : `${nearest?.straightDistanceKm ?? '—'} 公里直線距離` : 'Condo 座標待核'}</strong><small>${c.locationVerified ? nearest?.distanceKm ? `步行約 ${Math.max(1, Number(nearest.minutes) || 0)} 分鐘 · Valhalla 路網估算` : '步行路網距離待計算' : '確認 Condo 座標後，再判定最近 MRT 與步行距離'}</small></div></div>${directionsUrl ? `<a class="route-button" href="${directionsUrl}" target="_blank" rel="noopener">Google Maps 步行導航 ↗</a>` : station ? '<button id="showWalkingRoute" class="route-button">查看 MRT 站點</button>' : ''}</section>${fallbackSale}${fallbackRent}${verifiedMarketSamplesHtml}${marketCrosscheckHtml}${manualSaleSection}<section class="detail-section"><p class="section-label">其他公開房源來源</p><div class="source-links"><a href="${hipflatSearch}" target="_blank" rel="noopener">Hipflat 專案與售租行情 ↗</a><a href="${ddSale}" target="_blank" rel="noopener">DDproperty 出售 ↗</a><a href="${ddRent}" target="_blank" rel="noopener">DDproperty 出租 ↗</a><a href="${phSale}" target="_blank" rel="noopener">PropertyHub 出售 ↗</a><a href="${phRent}" target="_blank" rel="noopener">PropertyHub 出租 ↗</a></div></section><section class="detail-section"><p class="section-label">投報率試算 <span>售租資料不足</span></p><p class="fee-note">補齊同一 Condo 的出售與出租掛牌後，會以每平方米最低單價計算。</p></section><section class="detail-section"><p class="section-label">資料來源</p><div class="source-links"><a href="${esc(c.discoveryUrl)}" target="_blank" rel="noopener">Hipflat 曼谷 Condo 清單 ↗</a>${c.hipflatProjectUrl ? `<a href="${esc(c.hipflatProjectUrl)}" target="_blank" rel="noopener">Hipflat 專案頁 ↗</a>` : ''}${c.locationVerified ? `<a href="${esc(c.locationSourceUrl)}" target="_blank" rel="noopener">座標來源 ↗</a>` : ''}${c.locationVerificationSourceUrl ? `<a href="${esc(c.locationVerificationSourceUrl)}" target="_blank" rel="noopener">地址交叉核實 ↗</a>` : ''}</div></section>`;
       detail.querySelector('.close-detail').addEventListener('click', () => { detail.classList.add('empty'); document.querySelector('.explorer').classList.remove('hidden-mobile'); });
       wireDetailSizeToggle();
       detail.querySelector('#showWalkingRoute')?.addEventListener('click', () => { if (station) { map.setView([station.lat, station.lng], 16); stationMarkers.get(station.id)?.openPopup(); } });
@@ -833,14 +940,14 @@
     const rentLowSqmLabel = c.rent.marketSummary ? '房型均價低點' : '最低樣本';
     const yieldUsesSummary = c.sale.marketSummary || c.rent.marketSummary;
     detail.innerHTML = `<div class="detail-actions"><button class="close-detail" type="button" aria-label="關閉 Condo 資訊" title="關閉">×</button><button class="panel-size-toggle detail-size-toggle" id="toggleDetailSize" type="button" aria-expanded="true" aria-label="縮小右側卡片" title="縮小右側卡片">−</button></div>
-      <div class="detail-hero"><div class="detail-topline"><span class="station-pill">最近${transitLabel(nearestStation)}站 ${esc(nearestStation?.name || c.station)}</span><span class="age-pill">${c.completedYear ? `${esc(c.completedYear)} 完工` : '完工年待補'}</span></div><h2 class="detail-title">${esc(c.name)}</h2><p class="detail-caption">${c.beds ? `${c.beds} 房樣本 · ` : ''}${areaLabel(c) ? `${areaLabel(c)} · ` : ''}${c.units ? `${fmt(c.units)} 戶 · ` : ''}${c.floors ? esc(c.floors) : ''}</p><a class="review-link" href="${reviewsUrl(c)}" target="_blank" rel="noopener"><span>◎</span> 在 Google Maps 查看評論 <span>↗</span></a></div>
+      <div class="detail-hero"><div class="detail-topline"><span class="station-pill">最近${transitLabel(nearestStation)}站 ${esc(nearestStation?.name || c.station)}</span><span class="age-pill">${c.completedYear ? `${esc(c.completedYear)} 完工` : '完工年待補'}</span></div><div class="detail-title-row"><h2 class="detail-title">${esc(c.name)}</h2>${tenureWarningHtml}</div><p class="detail-caption">${c.beds ? `${c.beds} 房樣本 · ` : ''}${areaLabel(c) ? `${areaLabel(c)} · ` : ''}${c.units ? `${fmt(c.units)} 戶 · ` : ''}${c.floors ? esc(c.floors) : ''}${c.tenureWarning ? ` · ${esc(c.tenureWarning.note)}` : ''}</p><a class="review-link" href="${reviewsUrl(c)}" target="_blank" rel="noopener"><span>◎</span> 在 Google Maps 查看評論 <span>↗</span></a></div>
       <section class="walk-section"><div class="walk-main"><span class="walk-symbol">🚶</span><div><span class="metric-label">${nearest?.distanceKm != null ? `最近${transitLabel(nearestStation)}站（步行路網估算）` : `最近${transitLabel(nearestStation)}站（直線距離）`}· ${esc(nearestStation?.name || c.station)}</span><strong>${nearest?.distanceKm ?? nearest?.straightDistanceKm ?? '—'} 公里</strong><small>${nearest?.distanceKm != null ? `步行約 ${nearest.minutes} 分鐘 · 路網估算` : '步行路網距離待計算；目前顯示直線距離'}</small></div></div><button id="showWalkingRoute" class="route-button">${nearest?.shape ? '在地圖顯示路線' : 'Google Maps 步行導航 ↗'}</button><p class="fee-note">步行距離由 Valhalla 路網估算，取直線最近 30 個捷運站中最短路徑；實際入口距離可能不同。<a href="${esc(nearest?.sourceUrl || 'https://valhalla1.openstreetmap.de/')}" target="_blank" rel="noopener">路網資料 ↗</a></p></section>
-      <section class="detail-section"><p class="section-label">二手出售 <span>${sampleCount(c.sale)} · ${esc(c.sale.asOf || '')}</span></p><div class="metric-grid"><div class="metric"><span class="metric-label">${c.sale.marketSummary ? '房型平均售價' : c.sale.observedCount ? '樣本平均售價' : '平均售價'}</span><b class="metric-value">${money(c.sale.average)}</b><span class="metric-sub">${saleLowLabel} ${money(c.sale.minimum)} ${sampleSource(c.sale.minimumSourceUrl, c.sale)}</span></div><div class="metric"><span class="metric-label">${c.sale.marketSummary ? '房型平均售價 / ㎡' : '售價 / ㎡'}</span><b class="metric-value">${money(c.sale.averageSqm)}</b><span class="metric-sub">${saleLowSqmLabel} ${money(c.sale.minimumSqm)} / ㎡ ${sampleSource(c.sale.minimumSqmSourceUrl, c.sale)}</span></div></div>${roomListing?.sourceUrl ? `<p class="room-sample">${roomMatch[1]} 房最低掛牌 ${money(roomListing.minimum)} <a href="${esc(roomListing.sourceUrl)}" target="_blank" rel="noopener">物件 ↗</a></p>` : ''}<div class="unit-price"><span>來源：${saleLabel}</span><b><a href="${esc(saleSampleUrl)}" target="_blank" rel="noopener">查看來源 ↗</a></b></div></section>
-      <section class="detail-section rent-section"><p class="section-label">出租市場 <span>${sampleCount(c.rent)} · ${esc(c.rent.asOf || '')}</span></p><div class="metric-grid"><div class="metric"><span class="metric-label">${c.rent.marketSummary ? '房型平均月租' : c.rent.observedCount ? '樣本平均月租' : '平均月租'}</span><b class="metric-value">${money(c.rent.average)}</b><span class="metric-sub">${rentLowLabel} ${money(c.rent.minimum)} / 月 ${sampleSource(c.rent.minimumSourceUrl, c.rent)}</span></div><div class="metric"><span class="metric-label">${c.rent.marketSummary ? '房型平均租金 / ㎡' : '租金 / ㎡'}</span><b class="metric-value">${money(avgRate)}<small> / 月</small></b><span class="metric-sub">${rentLowSqmLabel} ${money(minRate)} / ㎡ / 月 ${sampleSource(c.rent.minimumSqmSourceUrl, c.rent)}</span></div></div><div class="unit-price"><span>來源：${rentLabel}</span><b><a href="${esc(rentSampleUrl)}" target="_blank" rel="noopener">查看來源 ↗</a></b></div></section>
+      <section class="detail-section"><p class="section-label">二手出售 <span>${sampleCount(c.sale)}${c.sale.excludedExtremePriceCount ? ` · 已隱藏 ${c.sale.excludedExtremePriceCount} 筆極端價差` : ""} · ${esc(c.sale.asOf || "")}</span></p><div class="metric-grid"><div class="metric"><span class="metric-label">${c.sale.marketSummary ? '房型平均售價' : c.sale.observedCount ? '樣本平均售價' : '平均售價'}</span><b class="metric-value">${money(c.sale.average)}</b><span class="metric-sub">${saleLowLabel} ${money(c.sale.minimum)} ${sampleSource(c.sale.minimumSourceUrl, c.sale)}</span></div><div class="metric"><span class="metric-label">${c.sale.marketSummary ? '房型平均售價 / ㎡' : '售價 / ㎡'}</span><b class="metric-value">${money(c.sale.averageSqm)}</b><span class="metric-sub">${saleLowSqmLabel} ${money(c.sale.minimumSqm)} / ㎡ ${sampleSource(c.sale.minimumSqmSourceUrl, c.sale)}</span></div></div>${roomListing?.sourceUrl ? `<p class="room-sample">${roomMatch[1]} 房最低掛牌 ${money(roomListing.minimum)} <a href="${esc(roomListing.sourceUrl)}" target="_blank" rel="noopener">物件 ↗</a></p>` : ''}<div class="unit-price"><span>來源：${saleLabel}</span><b><a href="${esc(saleSampleUrl)}" target="_blank" rel="noopener">查看來源 ↗</a></b></div></section>
+      <section class="detail-section rent-section"><p class="section-label">出租市場 <span>${sampleCount(c.rent)}${c.rent.excludedExtremePriceCount ? ` · 已隱藏 ${c.rent.excludedExtremePriceCount} 筆極端價差` : ""} · ${esc(c.rent.asOf || "")}</span></p><div class="metric-grid"><div class="metric"><span class="metric-label">${c.rent.marketSummary ? '房型平均月租' : c.rent.observedCount ? '樣本平均月租' : '平均月租'}</span><b class="metric-value">${money(c.rent.average)}</b><span class="metric-sub">${rentLowLabel} ${money(c.rent.minimum)} / 月 ${sampleSource(c.rent.minimumSourceUrl, c.rent)}</span></div><div class="metric"><span class="metric-label">${c.rent.marketSummary ? '房型平均租金 / ㎡' : '租金 / ㎡'}</span><b class="metric-value">${money(avgRate)}<small> / 月</small></b><span class="metric-sub">${rentLowSqmLabel} ${money(minRate)} / ㎡ / 月 ${sampleSource(c.rent.minimumSqmSourceUrl, c.rent)}</span></div></div><div class="unit-price"><span>來源：${rentLabel}</span><b><a href="${esc(rentSampleUrl)}" target="_blank" rel="noopener">查看來源 ↗</a></b></div></section>
       ${localListingSection}
       ${manualSaleSection}
       <section class="detail-section"><p class="section-label">管理費參考 <span>需向管委會確認</span></p>${feeText}${c.fee?.source ? `<div class="source-links"><a href="${esc(c.fee.source)}" target="_blank" rel="noopener">管理費來源 ↗</a></div>` : ''}</section>
-      ${hasYieldData(c) ? `<section class="detail-section yield-section"><div class="yield-heading"><p class="section-label">年租金報酬試算 <span>${isAllRoomYield ? yieldRoomSummary.rows.length ? `全房型平均 · ${yieldRoomSummary.rows.length} 種房型` : '整體行情估算' : yieldDefaults.beds && !(yieldDefaults.rent > 0) ? '待補同房型租盤' : yieldDefaults.isRoomStart ? `${yieldDefaults.beds || ''} 房最低總價` : yieldDefaults.isRoomAverage ? `${yieldDefaults.beds || ''} 房平均售價估算` : yieldUsesSummary ? '房型行情摘要估算' : '所選房型估算'}</span></p><div class="yield-value" id="yieldValue">${Number.isFinite(yieldFor(c)) ? `${yieldFor(c).toFixed(2)}%` : '待補'}<small>${Number.isFinite(yieldFor(c)) ? isAllRoomYield ? '全房型平均 / 年' : `${esc(yieldDefaults.beds || '所選')} 房 / 年` : yieldDefaults.beds && !(yieldDefaults.rent > 0) ? '需補同房型租金' : '可比房型售價樣本不足'}</small></div></div>${isAllRoomYield && yieldRoomSummary.rows.length ? `<div class="yield-room-breakdown"><span>各房型估算</span>${yieldRoomSummary.rows.map(row => `<b>${esc(row.beds)} 房 ${row.yield.toFixed(1)}%${row.isRoomAverage ? ' · 均價估算' : ''}</b>`).join('')}</div>` : ''}<div class="yield-inputs"><div class="yield-input"><label for="yieldPrice">參考購入總價 (฿)</label><input id="yieldPrice" type="number" min="1" step="50000" value="${calcPrice}"><button type="button" id="useLowestYieldSample" class="use-lowest-yield-button" ${yieldDefaults.beds && !(yieldDefaults.price > 0) ? 'disabled' : ''}>套用 ${esc(yieldDefaults.beds || '所選')} 房售價基準</button></div><div class="yield-input"><label for="yieldRent">參考月租 (฿)</label><input id="yieldRent" type="number" min="0" step="500" value="${calcRent}"></div><div class="yield-input"><label for="yieldArea">室內面積 (㎡)</label><input id="yieldArea" type="number" min="1" step="0.1" value="${calcArea.toFixed(1)}"></div><div class="yield-input"><label for="yieldBeds">參考房型</label><select id="yieldBeds">${yieldDefaults.beds && !yieldDefaults.roomOptions.some(([bed]) => String(bed) === String(yieldDefaults.beds)) ? `<option value="${esc(yieldDefaults.beds)}" selected disabled>${esc(yieldDefaults.beds)} 房最低掛牌待補</option>` : ''}${yieldDefaults.roomOptions.map(([bed]) => `<option value="${esc(bed)}" ${String(yieldDefaults.beds) === String(bed) ? 'selected' : ''}>${bed} 房${Number(bed) >= 5 ? '以上' : ''}</option>`).join('') || '<option value="">房型未提供</option>'}</select></div></div><p class="formula-note">地圖淨投報率預設為有售租資料之各房型投報率的平均。下方可選房型，試算該房型的最低出售總價及對應室內面積，租金以同房型最低租金單價乘上該面積。沒有個別最低出售物件時，會使用該房型行情平均值並標示為估算。淨年投報率＝（月租 × 扣除仲介月數後的年租月數 − 年管理費）÷ 購入總價；管理費僅在已查得時扣除。</p><div class="yield-options"><label><input id="deductFee" type="checkbox" ${calcDeductFee ? 'checked' : ''}> 扣除管理費</label><label><input id="deductAgent" type="checkbox" ${calcDeductAgent ? 'checked' : ''}> 扣除 1 個月仲介管理費</label><button type="button" id="saveYieldInputs" class="save-yield-button">儲存試算</button><span id="yieldSavedNote" class="yield-saved-note">${editableYield ? '已儲存於此裝置' : ''}</span></div><div class="source-links"><a href="${esc(yieldDefaults.saleSourceUrl || saleSampleUrl)}" target="_blank" rel="noopener">${yieldDefaults.beds ? `${esc(yieldDefaults.beds)} 房${yieldDefaults.isRoomStart ? '最低總價' : '房型售價估算'}來源` : '購入基準來源'} ↗</a><a href="${esc(yieldDefaults.rentSourceUrl || rentSampleUrl)}" target="_blank" rel="noopener">${yieldDefaults.rentFallback ? `${esc(yieldDefaults.rentFallbackBeds)} 房租金單價估算來源` : yieldDefaults.beds ? `${esc(yieldDefaults.beds)} 房租金單價來源` : '租金基準來源'} ↗</a><a href="${ddSale}" target="_blank" rel="noopener">DDproperty 出售 ↗</a><a href="${ddRent}" target="_blank" rel="noopener">DDproperty 出租 ↗</a><a href="${hipflatSearch}" target="_blank" rel="noopener">Hipflat 專案行情 ↗</a></div></section>` : '<section class="detail-section yield-section"><p class="section-label">投報率試算 <span>售租資料不足</span></p><p class="fee-note">至少需要同一 Condo可核對的出售與出租每平方米單價，才能計算投報率。</p></section>'}
+      ${hasYieldData(c) ? `<section class="detail-section yield-section"><div class="yield-heading"><p class="section-label">年租金報酬試算 <span>${isAllRoomYield ? yieldRoomSummary.rows.length ? `1、2 房投報 · 採較高值` : '整體行情估算' : yieldDefaults.beds && !(yieldDefaults.rent > 0) ? '待補同房型租盤' : yieldDefaults.isRoomStart ? `${yieldDefaults.beds || ''} 房最低總價` : yieldDefaults.isRoomAverage ? `${yieldDefaults.beds || ''} 房平均售價估算` : yieldUsesSummary ? '房型行情摘要估算' : '所選房型估算'}</span></p><div class="yield-value" id="yieldValue">${Number.isFinite(yieldFor(c)) ? `${yieldFor(c).toFixed(2)}%` : '待補'}<small>${Number.isFinite(yieldFor(c)) ? isAllRoomYield ? '1、2 房取較高 / 年' : `${esc(yieldDefaults.beds || '所選')} 房 / 年` : yieldDefaults.beds && !(yieldDefaults.rent > 0) ? '需補同房型租金' : '可比房型售價樣本不足'}</small></div></div>${isAllRoomYield && yieldRoomSummary.rows.length ? `<div class="yield-room-breakdown"><span>一、二房投報比較</span>${yieldRoomSummary.rows.map(row => `<b>${esc(row.beds)} 房 ${row.yield.toFixed(1)}%${row.isRoomAverage ? ' · 均價估算' : ''}</b>`).join('')}</div>` : ''}<div class="yield-inputs"><div class="yield-input"><label for="yieldPrice">參考購入總價 (฿)</label><input id="yieldPrice" type="number" min="1" step="50000" value="${calcPrice}"><button type="button" id="useLowestYieldSample" class="use-lowest-yield-button" ${yieldDefaults.beds && !(yieldDefaults.price > 0) ? 'disabled' : ''}>套用 ${esc(yieldDefaults.beds || '所選')} 房售價基準</button></div><div class="yield-input"><label for="yieldRent">參考月租 (฿)</label><input id="yieldRent" type="number" min="0" step="500" value="${calcRent}"></div><div class="yield-input"><label for="yieldArea">室內面積 (㎡)</label><input id="yieldArea" type="number" min="1" step="0.1" value="${calcArea.toFixed(1)}"></div><div class="yield-input"><label for="yieldBeds">參考房型</label><select id="yieldBeds">${yieldDefaults.beds && !yieldDefaults.roomOptions.some(([bed]) => String(bed) === String(yieldDefaults.beds)) ? `<option value="${esc(yieldDefaults.beds)}" selected disabled>${esc(yieldDefaults.beds)} 房最低掛牌待補</option>` : ''}${yieldDefaults.roomOptions.map(([bed]) => `<option value="${esc(bed)}" ${String(yieldDefaults.beds) === String(bed) ? 'selected' : ''}>${bed} 房${Number(bed) >= 5 ? '以上' : ''}</option>`).join('') || '<option value="">房型未提供</option>'}</select></div></div><p class="formula-note">地圖淨投報率分別以一房、二房最低售價與同房型最低月租計算，顯示兩者中較高的投報率。售價、面積及物件連結取自同一最低價掛牌。售價低於同房型參考每㎡行情 35%、或租金高於參考行情 2.5 倍的極端掛牌會隱藏，不納入計算。淨年投報率＝（月租 × 扣除仲介月數後的年租月數 − 年管理費）÷ 購入總價；管理費僅在已查得時扣除。</p><div class="yield-options"><label><input id="deductFee" type="checkbox" ${calcDeductFee ? 'checked' : ''}> 扣除管理費</label><label><input id="deductAgent" type="checkbox" ${calcDeductAgent ? 'checked' : ''}> 扣除 1 個月仲介管理費</label><button type="button" id="saveYieldInputs" class="save-yield-button">儲存試算</button><span id="yieldSavedNote" class="yield-saved-note">${editableYield ? '已儲存於此裝置' : ''}</span></div><div class="source-links"><a href="${esc(yieldDefaults.saleSourceUrl || saleSampleUrl)}" target="_blank" rel="noopener">${yieldDefaults.beds ? `${esc(yieldDefaults.beds)} 房${yieldDefaults.isRoomStart ? '最低總價' : '房型售價估算'}來源` : '購入基準來源'} ↗</a><a href="${esc(yieldDefaults.rentSourceUrl || rentSampleUrl)}" target="_blank" rel="noopener">${yieldDefaults.beds ? `${esc(yieldDefaults.beds)} 房最低月租來源` : '租金基準來源'} ↗</a><a href="${ddSale}" target="_blank" rel="noopener">DDproperty 出售 ↗</a><a href="${ddRent}" target="_blank" rel="noopener">DDproperty 出租 ↗</a><a href="${hipflatSearch}" target="_blank" rel="noopener">Hipflat 專案行情 ↗</a></div></section>` : '<section class="detail-section yield-section"><p class="section-label">投報率試算 <span>售租資料不足</span></p><p class="fee-note">至少需要同一 Condo可核對的出售與出租每平方米單價，才能計算投報率。</p></section>'}
       <section class="detail-section"><p class="section-label">Condo 資訊 <span>${c.completedYear ? `${esc(c.completedYear)} 完工` : '完工年待補'} · ${c.startedYear ? `${esc(c.startedYear)} 起造` : '起造年待補'}</span></p><p class="fee-note">PropertyHub 來源為單筆公開掛牌；PropertyScout 來源為Condo房型行情摘要，連結會開啟該Condo行情頁。Hipflat 提供Condo清單與專案資料。</p><div class="source-links">${c.completedYearSourceUrl || c.propertyHubProjectUrl ? `<a href="${esc(c.completedYearSourceUrl || c.propertyHubProjectUrl)}" target="_blank" rel="noopener">完工與Condo資料來源 ↗</a>` : ''}${c.locationSourceUrl ? `<a href="${esc(c.locationSourceUrl)}" target="_blank" rel="noopener">座標來源 ↗</a>` : ''}${c.locationVerificationSourceUrl ? `<a href="${esc(c.locationVerificationSourceUrl)}" target="_blank" rel="noopener">地址交叉核實 ↗</a>` : ''}<a href="${hipflatSearch}" target="_blank" rel="noopener">搜尋此案 Hipflat 專案與售租行情 ↗</a><a href="${ddSale}" target="_blank" rel="noopener">DDproperty 出售 ↗</a><a href="${ddRent}" target="_blank" rel="noopener">DDproperty 出租 ↗</a></div></section>`;
     detail.querySelector('.close-detail').addEventListener('click', () => { detail.classList.add('empty'); document.querySelector('.explorer').classList.remove('hidden-mobile'); });
     wireDetailSizeToggle();
@@ -978,13 +1085,13 @@
     catch (error) { detailShardCache.delete(c.detailShard); throw error; }
     const data = shard[String(c.id)];
     if (!data) throw new Error('找不到此 Condo 的詳細資料');
-    c.sale = mergeDetailMarket(data.sale, data.manualMarket?.sale) || c.sale;
-    c.rent = mergeDetailMarket(data.rent, data.manualMarket?.rent) || c.rent;
+    c.sale = hideExtremeLowListings(mergeDetailMarket(data.sale, data.manualMarket?.sale) || c.sale, 'sale');
+    c.rent = hideExtremeLowListings(mergeDetailMarket(data.rent, data.manualMarket?.rent) || c.rent, 'rent');
     c.manualSaleSamples = (data.manualMarket?.sale?.samples || []).filter(sample => sample.specialAsset === true);
     c.manualSaleSamplesNote = data.manualMarket?.sale?.specialSaleNotice || null;
     c.verifiedMarketSamples = {
-      sale: (data.manualMarket?.sale?.samples || []).filter(sample => sample.specialAsset !== true && sample.url && Number(sample.price) > 0 && Number(sample.area) > 0),
-      rent: (data.manualMarket?.rent?.samples || []).filter(sample => sample.specialAsset !== true && sample.url && Number(sample.price) > 0 && Number(sample.area) > 0),
+      sale: (c.sale?.samples || []).filter(sample => sample.specialAsset !== true && sample.url && Number(sample.price) > 0 && Number(sample.area) > 0),
+      rent: (c.rent?.samples || []).filter(sample => sample.specialAsset !== true && sample.url && Number(sample.price) > 0 && Number(sample.area) > 0),
     };
     c.fee = data.fee || c.fee;
     c.address = data.address || c.address;
@@ -1101,19 +1208,24 @@
     const amount = Number(match[1]);
     return raw.includes('萬') ? amount : amount / 10000;
   };
-  let selectedBedrooms = null;
-  const setBedroomSelection = beds => {
-    selectedBedrooms = beds;
+  let selectedBedrooms = new Set();
+  const setBedroomSelection = (beds, toggle = false) => {
+    if (toggle) {
+      const next = new Set(selectedBedrooms);
+      next.has(beds) ? next.delete(beds) : next.add(beds);
+      selectedBedrooms = next;
+    } else selectedBedrooms = new Set(beds ? [String(beds)] : []);
     document.querySelectorAll('[data-bedrooms]').forEach(option => {
-      const selected = option.dataset.bedrooms === beds;
+      const selected = selectedBedrooms.has(option.dataset.bedrooms);
       option.classList.toggle('selected', selected);
       option.setAttribute('aria-pressed', String(selected));
     });
+    const summary = document.querySelector('[data-bedroom-filter-summary]');
+    if (summary) summary.textContent = selectedBedrooms.size ? `${[...selectedBedrooms].sort().join('、')} 房` : '1–4 房';
   };
   document.querySelectorAll('[data-bedrooms]').forEach(button => button.addEventListener('click', () => {
-    setBedroomSelection(button.dataset.bedrooms);
+    setBedroomSelection(button.dataset.bedrooms, true);
     visibleProjectCount = LIST_PAGE_SIZE;
-    button.closest('details').open = false;
     renderList();
   }));
   document.getElementById('applyBedroomFilter').addEventListener('click', () => {
@@ -1133,7 +1245,7 @@
     query = e.target.value.trim();
     visibleProjectCount = LIST_PAGE_SIZE;
     const roomQuery = query.match(/(?:^|\s)([1-4])\s*房/);
-    setBedroomSelection(roomQuery?.[1] || null);
+    if (roomQuery) setBedroomSelection(roomQuery[1]);
     const budgetQuery = query.match(/[1-4]\s*房(?:售價|總價|房價)(?:<=|<)\s*([\d,.]+萬?)/);
     const naturalBudget = query.match(/[1-4]\s*房\s*([\d,.]+\s*萬)\s*(?:內|以下)/);
     if (budgetQuery) budgetInput.value = String(budgetWanValue(budgetQuery[1]) || '');
@@ -1141,9 +1253,9 @@
     renderList();
   });
   document.getElementById('clearSearch').addEventListener('click', () => {
-    searchInput.value = ''; query = ''; visibleProjectCount = LIST_PAGE_SIZE; selectedBedrooms = null; budgetInput.removeAttribute('aria-invalid');
+    searchInput.value = ''; query = ''; visibleProjectCount = LIST_PAGE_SIZE; selectedBedrooms = new Set(); budgetInput.removeAttribute('aria-invalid');
     setBedroomSelection(null);
-    budgetMax = null;
+    budgetMax = null; budgetInput.value = '';
     ['distanceMax','saleMin','saleMax','rentMin','rentMax','yieldMin','yieldMax','yearMin','yearMax'].forEach(id => { document.getElementById(id).value = ''; });
     document.getElementById('lowriseOnly').value = 'all';
     updateLowriseSummary();

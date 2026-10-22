@@ -8,6 +8,21 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
 SHARDS = DIST / "detail-shards"
+ROOM_RATE_BASELINES = {"sale": {}, "rent": {}}
+# Public-source tenure cues: only flag projects with explicit Leasehold wording.
+# A single listing cue is displayed as a warning to verify that unit's title.
+TENURE_WARNINGS = {
+    "5042": {
+        "label": "Leasehold 專案",
+        "note": "專案名稱明確標示 Leasehold（租賃權）；簽約前請核對土地租期及剩餘年限。",
+        "sourceUrl": "https://www.thaigerproperty.com/projects/thailand/bangkok/pathum-wan/lumphini/tonson-court-leasehold",
+    },
+    "5099": {
+        "label": "掛牌標示 Leasehold",
+        "note": "PropertyHub 出售掛牌標示 Leasehold；這是單筆物件線索，請核對該戶契約及土地權利。",
+        "sourceUrl": "https://propertyhub.in.th/en/listings/president-place-you-won-t-find-a-better-deal-ratchadamri-the-best-location-in-bangkok-leasehold---6214384",
+    },
+}
 
 
 def load_array(filename, symbol):
@@ -45,10 +60,25 @@ def current_sample(sample):
         str(sample.get("listingStatus") or ""), re.I)
 
 
-def slim_market(market, manual):
+def slim_market(market, manual, kind):
     market = dict(market or manual or {})
     by_bedroom = {str(k): dict(v) for k, v in (market.get("byBedroom") or {}).items()}
-    samples = [sample for sample in (manual or {}).get("samples", []) if current_sample(sample) and sample.get("url")]
+    samples = [sample for sample in (manual or {}).get("samples", []) if current_sample(sample) and sample.get("url") and float(sample.get("price") or 0) > 0 and float(sample.get("area") or 0) > 0]
+    raw_samples = list(samples)
+    hidden_urls = set()
+    for sample in raw_samples:
+        beds = sample_beds(sample)
+        rate = float(sample["price"]) / float(sample["area"])
+        peers = [float(other["price"]) / float(other["area"]) for other in raw_samples
+                 if other is not sample and (not beds or sample_beds(other) == beds)]
+        room = by_bedroom.get(str(beds), {}) if beds else {}
+        reference = sorted(peers)[(len(peers) - 1) // 2] if peers else float(room.get("averageSqm") or market.get("averageSqm") or ROOM_RATE_BASELINES[kind].get(str(beds), 0))
+        global_reference = float(ROOM_RATE_BASELINES[kind].get(str(beds), 0))
+        if global_reference > 0 and (reference < global_reference * 0.35 or reference > global_reference * 3):
+            reference = global_reference
+        if reference > 0 and (rate < reference * 0.35 or kind == "rent" and rate > reference * 2.5):
+            hidden_urls.add(sample["url"])
+    samples = [sample for sample in raw_samples if sample["url"] not in hidden_urls]
     for sample in samples:
         price, area, beds = float(sample.get("price") or 0), float(sample.get("area") or 0), sample_beds(sample)
         if not beds or price <= 0 or area <= 0:
@@ -70,10 +100,56 @@ def slim_market(market, manual):
         if not float(market.get("minimumSqm") or 0) or float(lowest_rate["price"]) / float(lowest_rate["area"]) <= float(market.get("minimumSqm") or math.inf):
             market.update(minimumSqm=round(float(lowest_rate["price"]) / float(lowest_rate["area"]), 2),
                           minimumSqmSourceUrl=lowest_rate["url"], minimumSqmSampleUpdated=lowest_rate.get("updated"))
+    for key, room in by_bedroom.items():
+        avg_rate = float(room.get("averageSqm") or market.get("averageSqm") or ROOM_RATE_BASELINES[kind].get(key) or 0)
+        global_rate = float(ROOM_RATE_BASELINES[kind].get(key) or 0)
+        if global_rate > 0 and (avg_rate < global_rate * 0.35 or avg_rate > global_rate * 3):
+            avg_rate = global_rate
+        min_rate = float(room.get("minimumSqm") or 0)
+        source_hidden = room.get("minimumSourceUrl") in hidden_urls or room.get("minimumSqmSourceUrl") in hidden_urls
+        if source_hidden or (avg_rate > 0 and min_rate > 0 and (min_rate < avg_rate * 0.35 or kind == "rent" and min_rate > avg_rate * 2.5) and room.get("minimumSourceUrl") not in {s["url"] for s in samples}):
+            room_samples = [s for s in samples if str(sample_beds(s)) == key]
+            if room_samples:
+                cheapest = min(room_samples, key=lambda row: float(row["price"]))
+                room.update(minimum=float(cheapest["price"]), minimumArea=float(cheapest["area"]), area=float(cheapest["area"]),
+                            minimumSqm=round(float(cheapest["price"]) / float(cheapest["area"]), 2),
+                            minimumSourceUrl=cheapest["url"], minimumSqmSourceUrl=cheapest["url"], sourceUrl=cheapest["url"])
+                continue
+            for field in ("minimum", "minimumArea", "area", "minimumSqm", "priceSqm", "minimumSourceUrl", "minimumSqmSourceUrl", "sourceUrl"):
+                room.pop(field, None)
+    reference = float(market.get("averageSqm") or ROOM_RATE_BASELINES[kind].get("1") or 0)
+    global_reference = float(ROOM_RATE_BASELINES[kind].get("1") or 0)
+    if global_reference > 0 and (reference < global_reference * 0.35 or reference > global_reference * 3):
+        reference = global_reference
+    base_rate = float(market.get("minimumSqm") or 0)
+    base_extreme = reference > 0 and base_rate > 0 and (base_rate < reference * 0.35 or kind == "rent" and base_rate > reference * 2.5)
+    if hidden_urls or base_extreme:
+        market["excludedExtremePriceCount"] = int(market.get("excludedExtremePriceCount") or 0) + max(len(hidden_urls), int(base_extreme))
+        if market.get("minimumSourceUrl") in hidden_urls or market.get("minimumSqmSourceUrl") in hidden_urls or base_extreme:
+            if samples:
+                cheapest = min(samples, key=lambda row: float(row.get("price") or math.inf))
+                lowest_rate = min(samples, key=lambda row: float(row["price"]) / float(row["area"]))
+                market.update(minimum=float(cheapest["price"]), minimumArea=float(cheapest["area"]), minimumSourceUrl=cheapest["url"])
+                market.update(minimumSqm=round(float(lowest_rate["price"]) / float(lowest_rate["area"]), 2), minimumSqmSourceUrl=lowest_rate["url"])
+            else:
+                valid_rooms = [row for row in by_bedroom.values() if float(row.get("minimum") or 0) > 0 and float(row.get("minimumArea") or row.get("area") or 0) > 0]
+                rate_rooms = [row for row in by_bedroom.values() if float(row.get("minimumSqm") or 0) > 0]
+                if valid_rooms:
+                    cheapest_room = min(valid_rooms, key=lambda row: float(row["minimum"]))
+                    market.update(minimum=float(cheapest_room["minimum"]), minimumArea=float(cheapest_room.get("minimumArea") or cheapest_room["area"]), minimumSourceUrl=cheapest_room.get("minimumSourceUrl") or cheapest_room.get("sourceUrl"))
+                else:
+                    market["minimum"] = market["minimumSqm"] = market["minimumArea"] = None
+                    market.pop("minimumSourceUrl", None)
+                if rate_rooms:
+                    lowest_room_rate = min(rate_rooms, key=lambda row: float(row["minimumSqm"]))
+                    market.update(minimumSqm=float(lowest_room_rate["minimumSqm"]), minimumSqmSourceUrl=lowest_room_rate.get("minimumSqmSourceUrl") or lowest_room_rate.get("sourceUrl"))
+                else:
+                    market["minimumSqm"] = None
+                    market.pop("minimumSqmSourceUrl", None)
     market["byBedroom"] = by_bedroom
     keep = ("count", "observedCount", "countKind", "average", "minimum", "minimumArea",
             "minimumSampleUpdated", "averageSqm", "minimumSqm", "minimumSqmSampleUpdated",
-            "asOf", "source", "sourceName", "marketSummary", "minimumSourceUrl",
+            "asOf", "source", "sourceName", "marketSummary", "minimumSourceUrl", "excludedExtremePriceCount",
             "minimumSqmSourceUrl", "byBedroom")
     return {key: market[key] for key in keep if key in market}
 
@@ -102,6 +178,15 @@ routes = indexed(load_array("bangkok-walk-routes.js", "BANGKOK_WALK_ROUTES"), "i
 crosschecks = indexed(load_array("bangkok-market-crosschecks.js", "BANGKOK_MARKET_CROSSCHECKS"), "hipflatId")
 local = indexed(load_array("bangkok-local-listings.js", "BANGKOK_LOCAL_LISTINGS"), "projectId")
 stations = load_array("stations.js", "MRT_STATIONS")
+previous_overview = load_array("bangkok-overview.js", "BANGKOK_CONDO_OVERVIEW")
+for beds in (1, 2):
+    sale_rates = [float(row[19][beds - 1]) / float(row[20][beds - 1]) for row in previous_overview
+                  if row[19] and row[20] and float(row[19][beds - 1] or 0) > 0 and float(row[20][beds - 1] or 0) > 0]
+    rent_rates = [float(row[21][beds - 1]) for row in previous_overview if row[21] and float(row[21][beds - 1] or 0) > 0]
+    for kind, values in (("sale", sale_rates), ("rent", rent_rates)):
+        values.sort()
+        if values:
+            ROOM_RATE_BASELINES[kind][str(beds)] = values[(len(values) - 1) // 2]
 legacy = load_array("data.js", "CONDO_DATA") + load_array("catalogue.js", "CATALOGUE_PROJECTS") + load_array("huai-khwang.js", "HUAI_KHWANG_PROJECTS")
 legacy_by_name = {}
 for row in legacy:
@@ -153,7 +238,7 @@ for index, project in enumerate(catalogue):
         rent = manual_row["rent"]
     elif not rent and manual_row.get("rent"):
         rent = manual_row["rent"]
-    sale, rent = slim_market(sale, manual_row.get("sale")), slim_market(rent, manual_row.get("rent"))
+    sale, rent = slim_market(sale, manual_row.get("sale"), "sale"), slim_market(rent, manual_row.get("rent"), "rent")
     route = routes.get(pid)
     source_url = prop.get("locationSourceUrl") if prop_coords else project.get("locationSourceUrl") if proj_coords else osm_row.get("sourceUrl") if osm_coords else verified_row.get("sourceUrl") if verified_coords else scout_row.get("locationSourceUrl") if scout_coords else project.get("locationSourceUrl") or legacy_row.get("locationSourceUrl")
     source_name = prop.get("locationSourceName") if prop_coords else "OpenStreetMap 建物／地址" if osm_coords else verified_row.get("sourceName") if verified_coords else scout_row.get("locationSourceName") if scout_coords else project.get("locationSourceName") or legacy_row.get("locationSourceName")
@@ -179,7 +264,7 @@ for index, project in enumerate(catalogue):
     bed_rents = [rent_rooms.get(str(b), {}).get("minimumSqm", rent_rooms.get(str(b), {}).get("averageSqm")) for b in range(1, 5)]
     fee_rate = (fee or {}).get("rate") or 0
     room_yields = []
-    for beds in range(1, 5):
+    for beds in range(1, 3):
         sale_room = sale_rooms.get(str(beds), {})
         rent_room = rent_rooms.get(str(beds), {})
         sale_room_url = sale_room.get("minimumSourceUrl") or sale_room.get("sourceUrl")
@@ -195,9 +280,8 @@ for index, project in enumerate(catalogue):
             room_price = float(sale_room.get("average") or 0)
             average_rate = float(sale_room.get("averageSqm") or 0)
             room_area = room_price / average_rate if room_price > 0 and average_rate > 0 else 0
-        room_rent_rate = float(rent_room.get("minimumSqm") or rent_room.get("averageSqm") or 0)
-        if room_price > 0 and room_area > 0 and room_rent_rate > 0:
-            room_monthly_rent = room_rent_rate * room_area
+        room_monthly_rent = float(rent_room.get("minimum") or rent_room.get("average") or 0)
+        if room_price > 0 and room_area > 0 and room_monthly_rent > 0:
             if math.isfinite(room_monthly_rent):
                 room_yields.append([beds, round(room_price, 2), round(room_area, 2), round(room_monthly_rent, 2)])
     default_sale, default_area, default_rent_rate = sale_rooms.get("2", {}), None, rent_rooms.get("2", {})
@@ -216,7 +300,7 @@ for index, project in enumerate(catalogue):
         core_yield = round((float(rent_rate) * float(default_area) * 11 - float(fee_rate) * float(default_area) * 12) / float(default_sale["minimum"]) * 100, 5)
     if room_yields:
         room_returns = [(rent * 11 - fee_rate * area * 12) / price * 100 for _, price, area, rent in room_yields]
-        core_yield = round(sum(room_returns) / len(room_returns), 5)
+        core_yield = round(max(room_returns), 5)
     overview.append([
         int(project["id"]), project.get("name"), lat if located else None, lng if located else None,
         bool(located), completion, prop.get("floors") or project.get("floors"), prop.get("units") or project.get("units"),
@@ -247,6 +331,8 @@ for index, project in enumerate(catalogue):
         "units": prop.get("units") or project.get("units"), "beds": prop.get("beds") or project.get("beds"),
         "area": area, "address": prop.get("address") or project.get("address"),
     }
+    if TENURE_WARNINGS.get(pid):
+        extras["tenureWarning"] = TENURE_WARNINGS[pid]
     if manual_row:
         extras["manualMarket"] = manual_row
     if route:

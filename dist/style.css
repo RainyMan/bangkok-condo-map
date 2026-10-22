@@ -15,6 +15,14 @@
 .quick-filters{display:grid;grid-template-columns:44px minmax(0,1fr) 56px;align-items:center;gap:7px;margin:8px 0 1px}.filter-caption,.budget-filter>span{color:#6d7a74;font-size:10px;white-space:nowrap}.bedroom-options{grid-column:2/4;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px}.quick-filters .bedroom-options button{padding:6px 4px;border:1px solid #dfe8e2;border-radius:8px;background:#fff;color:#52615a;font-size:10px;font-weight:600;cursor:pointer}.quick-filters .bedroom-options button:hover,.quick-filters .bedroom-options button.selected{border-color:#79b99a;background:#e3f3e9;color:#075b49}.budget-filter{grid-column:1/3;display:flex;align-items:center;gap:8px;min-width:0}.budget-filter input{min-width:0;flex:1;width:100%;height:31px;padding:0 9px;border:1px solid #dfe6e1;border-radius:8px;background:#fff;color:var(--ink);font-size:11px}.budget-filter input[aria-invalid="true"]{border-color:#c75d52;background:#fff8f7}.budget-unit{margin-left:-4px;color:#63756c;font-size:11px;font-weight:700;white-space:nowrap}.quick-filters .apply-filter{grid-column:3;padding:7px 8px;border:1px solid #0b765e;border-radius:8px;background:#087f63;color:#fff;font-size:10px;font-weight:700;cursor:pointer}.quick-filters .apply-filter:hover{background:#075b49}.quick-filters button:focus-visible{outline:2px solid #78b99a;outline-offset:2px}
 .room-sample{margin:10px 0 2px;padding:9px 10px;border-radius:8px;background:#f4faf6;color:#455b50;font-size:11px}.room-sample a{margin-left:5px;color:var(--green);font-weight:700;text-decoration:none}
 .coverage-line{margin:-7px 0 10px;color:#74817d;font-size:10px;line-height:1.45;overflow-wrap:anywhere}
+.filter-toolbar{flex-wrap:wrap}
+.active-filter-bar[hidden]{display:none}
+.active-filter-bar{display:flex;flex:0 0 100%;align-items:center;gap:8px;min-width:0;padding:3px 5px 2px;border-top:1px solid #edf1ee}
+.active-filter-tags{display:flex;flex:1;align-items:center;gap:5px;min-width:0;overflow-x:auto;scrollbar-width:none;white-space:nowrap}
+.active-filter-tags::-webkit-scrollbar{display:none}
+.active-filter-chip{padding:4px 8px;border:1px solid #dce9e1;border-radius:999px;background:#f1f8f4;color:#32604c;font-size:10px;line-height:1.2}
+.active-filter-clear{flex:none;padding:5px 9px;border:1px solid #dce7e0;border-radius:8px;background:#fff;color:#32735b;font-size:10px;font-weight:700;cursor:pointer}
+@media(max-width:650px){.active-filter-bar{gap:5px;padding:2px 3px 1px}.active-filter-chip{padding:4px 7px;font-size:9px}.active-filter-clear{padding:5px 7px;font-size:9px}}
 @media(min-width:651px){.map-note{flex-wrap:wrap;align-items:center;max-width:calc(100vw - 420px);padding:6px 8px;border-radius:9px;background:#ffffffdd;box-shadow:0 2px 8px #23392d12}}
 @media(max-width:900px) and (min-width:651px){.map-note{max-width:calc(100vw - 360px)}}
 @media(max-width:650px){.map-note{flex-wrap:wrap;align-items:center;max-width:calc(100vw - 20px);padding:5px 7px;border-radius:8px;background:#ffffffdd;box-shadow:0 2px 8px #23392d12}}
@@ -347,6 +355,12 @@
 .station-pill{flex:1 1 135px;min-width:0;line-height:1.4;overflow-wrap:anywhere}
 .age-pill{flex:0 0 auto;white-space:nowrap;line-height:1.4}
 .detail-title{overflow-wrap:anywhere}
+.detail-title-row{display:flex;align-items:flex-start;gap:9px;min-width:0;margin:0 0 6px}
+.detail-title-row .detail-title{flex:1;min-width:0;margin:0}
+.tenure-warning{display:inline-flex;flex:0 0 auto;align-items:center;gap:4px;margin-top:1px;padding:5px 7px;border:1px solid #f0c875;border-radius:8px;background:#fff8e7;color:#8b5900;text-decoration:none;font-size:9px;font-weight:700;line-height:1.2;white-space:nowrap}
+.tenure-warning>span:first-child{color:#d18a00;font-size:12px}
+.tenure-warning small{font-size:8px}
+.tenure-warning:hover{background:#fff0c8;border-color:#dfaa3f}
 .detail-caption,.fee-note,.formula-note{overflow-wrap:anywhere}
 .review-link,.detail-panel .route-button,.detail-panel .use-lowest-yield-button,.detail-panel .save-yield-button{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:34px;padding:8px 11px;border:1px solid #cfe3d7;border-radius:9px;background:#fff;color:#27684f;font:600 10px/1.35 "DM Sans","Noto Sans TC",sans-serif;text-align:center;text-decoration:none;cursor:pointer;transition:background .16s,border-color .16s,color .16s}
 .review-link:hover,.detail-panel .route-button:hover,.detail-panel .use-lowest-yield-button:hover{border-color:#91c6a8;background:#eaf6ef;color:#075b49}
