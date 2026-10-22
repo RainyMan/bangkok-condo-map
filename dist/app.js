@@ -1,9 +1,13 @@
 (() => {
   const stations = window.MRT_STATIONS || [];
+  const additionalStations = window.ADDITIONAL_TRANSIT_STATIONS || [];
   const stationsById = new Map(stations.map(station => [station.id, station]));
   const transitLabel = station => station?.line?.startsWith('BTS') ? 'BTS' : station?.line?.startsWith('MRT') ? 'MRT' : station?.line || '捷運';
   const transitColor = station => {
     const line = station?.line || '';
+    if (line.includes('Airport Rail Link')) return '#bf1e62';
+    if (line.includes('Saen Saep')) return '#2787c7';
+    if (line.includes('Chao Phraya')) return '#e77c2f';
     if (line.includes('Sukhumvit')) return '#70a829';
     if (line.includes('Silom')) return '#008b57';
     if (line.includes('Blue')) return '#0a70af';
@@ -553,10 +557,12 @@
     }
     return points;
   }
-  stations.forEach(s => {
+  [...stations, ...additionalStations].forEach(s => {
     const lineColor = transitColor(s);
-    const marker = L.marker([s.lat, s.lng], { title: `${s.line} ${s.name} ${s.id}`, icon: L.divIcon({ className: 'station-icon', html: `<span style="--station-color:${lineColor}"><b>M</b><strong>${esc(s.name)}</strong><small>${esc(s.id)}</small></span>`, iconSize: [58, 30], iconAnchor: [14, 15] }), zIndexOffset: 500 }).addTo(map);
-    marker.bindPopup(`<strong>${esc(s.name)}</strong><br><span class="station-popup-line"><i style="background:${lineColor}"></i>${esc(s.id)} · ${esc(s.line)}</span><br><a href="${esc(s.sourceUrl)}" target="_blank" rel="noopener">OpenStreetMap 站點來源 ↗</a>`);
+    const kind = s.kind || 'rail';
+    const glyph = kind === 'airport' ? 'A' : kind === 'boat' ? '船' : 'M';
+    const marker = L.marker([s.lat, s.lng], { title: `${s.line} ${s.name} ${s.id}`, icon: L.divIcon({ className: `station-icon ${kind === 'rail' ? '' : kind}`, html: `<span style="--station-color:${lineColor}"><b>${glyph}</b><strong>${esc(s.name)}</strong><small>${esc(s.id)}</small></span>`, iconSize: [58, 30], iconAnchor: [14, 15] }), zIndexOffset: 500 }).addTo(map);
+    marker.bindPopup(`<strong>${esc(s.name)}</strong><br><span class="station-popup-line"><i style="background:${lineColor}"></i>${esc(s.id)} · ${esc(s.line)}</span><br><a href="${esc(s.sourceUrl)}" target="_blank" rel="noopener">站點座標來源 ↗</a>`);
     stationMarkers.set(s.id, marker);
   });
   function syncVisibleMarkers(extraId = selectedId) {

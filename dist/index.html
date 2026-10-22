@@ -7,7 +7,7 @@
   <meta name="description" content="以地圖探索 Hipflat 收錄的曼谷 condo 專案，查看核實座標、售租掛牌來源、每平方米單價與投報試算。">
   <title>Bangkok Condo Map｜BANGKOK Condo 專案全覽</title>
   <link rel="stylesheet" href="vendor/leaflet.css">
-  <link rel="stylesheet" href="style.css?v=20261023-detail-layout-yield-percent-1">
+  <link rel="stylesheet" href="style.css?v=20261023-airport-water-transit-1">
 </head>
 <body>
   <header class="topbar">
@@ -55,11 +55,12 @@
     <div class="map-tools panel" aria-label="地圖工具"><button id="zoomIn" class="map-tool" aria-label="放大地圖">＋</button><button id="zoomOut" class="map-tool" aria-label="縮小地圖">−</button><div class="tool-divider"></div><button id="locate" class="map-tool locate" aria-label="回到曼谷 Condo總覽">◎</button></div>
 
     <aside id="detailPanel" class="detail-panel panel" aria-label="Condo 資訊" aria-live="polite"></aside>
-  <div class="map-note"><span>© OpenStreetMap contributors</span><span>M 為 BTS / MRT 站點</span><span class="line-legend" aria-label="捷運路線顏色"><b>路線顏色</b><span><i style="--line-color:#70a829"></i>Sukhumvit</span><span><i style="--line-color:#008b57"></i>Silom</span><span><i style="--line-color:#0a70af"></i>Blue</span><span><i style="--line-color:#7045a1"></i>Purple</span><span><i style="--line-color:#d72f81"></i>Pink</span><span><i style="--line-color:#c79a00"></i>Yellow</span></span><span>步行距離按路網估算；未完成時計直線距離</span></div>
+  <div class="map-note"><span>© OpenStreetMap contributors</span><span>M BTS / MRT · A 機場快線 · 船 交通船</span><span class="line-legend" aria-label="捷運與渡船路線顏色"><b>路線顏色</b><span><i style="--line-color:#70a829"></i>Sukhumvit</span><span><i style="--line-color:#008b57"></i>Silom</span><span><i style="--line-color:#0a70af"></i>Blue</span><span><i style="--line-color:#7045a1"></i>Purple</span><span><i style="--line-color:#d72f81"></i>Pink</span><span><i style="--line-color:#c79a00"></i>Yellow</span><span><i style="--line-color:#bf1e62"></i>Airport Rail Link</span><span><i style="--line-color:#2787c7"></i>Saen Saep Boat</span><span><i style="--line-color:#e77c2f"></i>Chao Phraya Boat</span></span><span>步行距離按路網估算；未完成時計直線距離</span></div>
   </main>
   <script src="stations.js?v=20261017c"></script>
+  <script src="other-transit.js?v=20261023-airport-water-transit-1"></script>
   <script src="bangkok-overview.js?v=20261022-fast-overview-1"></script>
-  <script src="app.js?v=20261023-detail-layout-yield-percent-1"></script>
+  <script src="app.js?v=20261023-airport-water-transit-1"></script>
 </body>
 </html>
 
