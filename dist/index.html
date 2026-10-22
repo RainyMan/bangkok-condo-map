@@ -7,7 +7,7 @@
   <meta name="description" content="以地圖探索 Hipflat 收錄的曼谷 condo 專案，查看核實座標、售租掛牌來源、每平方米單價與投報試算。">
   <title>Bangkok Condo Map｜BANGKOK Condo 專案全覽</title>
   <link rel="stylesheet" href="vendor/leaflet.css">
-  <link rel="stylesheet" href="style.css?v=20261022-early-map">
+  <link rel="stylesheet" href="style.css?v=20261023-detail-layout-yield-percent-1">
 </head>
 <body>
   <header class="topbar">
@@ -15,7 +15,7 @@
     <div class="top-divider"></div>
     <div class="location-title"><strong>BANGKOK Condo 專案全覽</strong></div>
     <div class="header-data"><div class="header-counts"><span>曼谷 50 區</span><span class="live-dot"></span><span id="resultCount">3,555 個 Condo</span></div><p id="coverageSummary" class="coverage-line" aria-live="polite">正在統計資料覆蓋</p></div>
-    <div class="header-map-mode"><span>地圖標籤</span><div class="segmented" role="group" aria-label="選擇地圖顯示數字"><button data-mode="sale" class="selected">售價/㎡</button><button data-mode="rent">月租/㎡</button><button data-mode="yield">淨投報</button></div></div>
+    <div class="header-map-mode"><span>地圖標籤</span><div class="segmented" role="group" aria-label="選擇地圖顯示數字"><button data-mode="sale" class="selected">售價/㎡</button><button data-mode="rent">月租/㎡</button><button data-mode="yield">淨投報率 (%)</button></div></div>
     <div class="top-spacer"></div>
     <a class="hipflat-link" href="https://www.hipflat.co.th/en/thailand-projects/condo/bangkok-bm" target="_blank" rel="noopener">Hipflat · Bangkok <span>↗</span></a>
     <span class="count-pill">3,555 個 Condo</span>
@@ -47,7 +47,7 @@
 
     <section class="explorer panel" aria-label="Condo搜尋與清單">
       <div class="list-heading"><span>Condo <b id="listCount">05</b></span><div class="list-actions"><button id="toggleExplorerSize" class="panel-size-toggle" type="button" aria-expanded="true" aria-label="縮小左側卡片" title="縮小左側卡片">−</button><button id="fitMap" class="icon-button" aria-label="顯示全部 Condo" title="顯示全部 Condo">⤢</button><button id="clearSearch" class="text-button">清除篩選</button></div></div>
-      <div class="sort-order-row"><label for="sortOrder">排序Condo</label><select id="sortOrder" aria-label="排序Condo"><option value="distance">MRT 距離：近 → 遠</option><option value="sale">最低售價單價：低 → 高</option><option value="rent">最低月租單價：低 → 高</option><option value="yield">淨投報率：高 → 低</option><option value="year-new">完工年：新 → 舊</option><option value="year-old">完工年：舊 → 新</option></select></div>
+      <div class="sort-order-row"><label for="sortOrder">排序Condo</label><select id="sortOrder" aria-label="排序Condo"><option value="distance">MRT 距離：近 → 遠</option><option value="sale">最低售價單價：低 → 高</option><option value="rent">最低月租單價：低 → 高</option><option value="yield">淨投報率（%）：高 → 低</option><option value="year-new">完工年：新 → 舊</option><option value="year-old">完工年：舊 → 新</option></select></div>
       <div id="projectList" class="project-list"></div>
       <div class="panel-foot"><span class="source-dot"></span><span>點選 1～4 房並輸入總價上限（數字單位固定為萬泰銖）；也可搜尋 2房售價&lt;=100萬、年:2014、售價/㎡&lt;50000、距離&lt;1、年投報率&gt;=5%。空格可疊加條件。</span></div>
     </section>
@@ -59,7 +59,7 @@
   </main>
   <script src="stations.js?v=20261017c"></script>
   <script src="bangkok-overview.js?v=20261022-fast-overview-1"></script>
-  <script src="app.js?v=20261022-staged-details-yield-sort-1"></script>
+  <script src="app.js?v=20261023-detail-layout-yield-percent-1"></script>
 </body>
 </html>
 

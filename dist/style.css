@@ -332,3 +332,72 @@
 }
 @media(max-width:350px){.map-tools{top:188px}}
 .detail-loading{min-height:140px;padding:24px;display:flex;align-items:center;justify-content:center;gap:12px;color:var(--muted);font-size:13px}
+
+/* Detail panel: consistent controls, wrapping labels, and non-overlapping actions. */
+.detail-actions{position:absolute;z-index:4;top:12px;right:12px;display:flex;gap:6px}
+.detail-actions .close-detail,.detail-actions .detail-size-toggle{position:static;display:grid;place-items:center;flex:0 0 32px;width:32px;height:32px;margin:0;padding:0;border:1px solid #dfe7e2;border-radius:9px;background:#fff;color:#52645b;font-size:16px;line-height:1;box-shadow:0 1px 4px #17261e0d;cursor:pointer}
+.detail-actions .close-detail:hover,.detail-actions .detail-size-toggle:hover{border-color:#91c6a8;background:#f2faf5;color:#087f63}
+.detail-topline{align-items:flex-start;gap:7px;padding-right:78px}
+.station-pill{flex:1 1 135px;min-width:0;line-height:1.4;overflow-wrap:anywhere}
+.age-pill{flex:0 0 auto;white-space:nowrap;line-height:1.4}
+.detail-title{overflow-wrap:anywhere}
+.detail-caption,.fee-note,.formula-note{overflow-wrap:anywhere}
+.review-link,.detail-panel .route-button,.detail-panel .use-lowest-yield-button,.detail-panel .save-yield-button{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:34px;padding:8px 11px;border:1px solid #cfe3d7;border-radius:9px;background:#fff;color:#27684f;font:600 10px/1.35 "DM Sans","Noto Sans TC",sans-serif;text-align:center;text-decoration:none;cursor:pointer;transition:background .16s,border-color .16s,color .16s}
+.review-link:hover,.detail-panel .route-button:hover,.detail-panel .use-lowest-yield-button:hover{border-color:#91c6a8;background:#eaf6ef;color:#075b49}
+.detail-panel .route-button{float:none;margin:0;white-space:normal}
+.detail-panel .use-lowest-yield-button{display:flex;width:100%;min-height:34px;margin-top:6px;white-space:normal}
+.detail-panel .save-yield-button{border-color:#087f63;background:#087f63;color:#fff}
+.detail-panel .save-yield-button:hover{border-color:#075b49;background:#075b49}
+.walk-section{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:9px 12px}
+.walk-main{min-width:0;align-items:flex-start}
+.walk-main>div{min-width:0;grid-template-columns:minmax(0,auto) minmax(0,1fr);align-items:start;gap:4px 8px}
+.walk-main .metric-label{overflow-wrap:anywhere;line-height:1.4}
+.walk-main strong{font-size:17px;line-height:1.25;white-space:nowrap}
+.walk-main small{align-self:center;line-height:1.4;overflow-wrap:anywhere}
+.walk-section .fee-note{grid-column:1/-1;clear:none;padding-top:0;margin-top:0;line-height:1.5}
+.detail-panel .section-label{align-items:flex-start;gap:8px;line-height:1.4}
+.detail-panel .section-label span{max-width:58%;text-align:right;line-height:1.4;overflow-wrap:anywhere}
+.metric-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.metric{min-width:0}
+.metric-value{overflow-wrap:anywhere;line-height:1.3}
+.metric-sub{line-height:1.45;overflow-wrap:anywhere}
+.unit-price{align-items:flex-start;flex-wrap:wrap;line-height:1.45}
+.source-links{display:flex;flex-direction:column;align-items:flex-start;gap:7px;min-width:0}
+.source-links a{max-width:100%;line-height:1.5;overflow-wrap:anywhere;word-break:break-word}
+.yield-heading{align-items:flex-start;gap:12px}
+.yield-heading .section-label{min-width:0;flex:1;line-height:1.4}
+.yield-value{display:flex;flex:0 0 auto;align-items:baseline;gap:3px;white-space:nowrap;font-size:22px;line-height:1.25;letter-spacing:-.4px}
+.yield-value small{font-size:9px;letter-spacing:0}
+.yield-options{align-items:center;row-gap:8px}
+.yield-options label{line-height:1.4}
+@media(max-width:650px){
+  .detail-panel{padding-bottom:max(10px,env(safe-area-inset-bottom))}
+  .detail-hero{padding:17px 14px 13px}
+  .detail-topline{padding-right:76px;gap:5px}
+  .station-pill{flex-basis:120px;font-size:8px}
+  .age-pill{font-size:8px;padding:5px 6px}
+  .detail-title{padding-right:0;font-size:17px;line-height:1.3}
+  .detail-actions{top:10px;right:10px;gap:5px}
+  .detail-actions .close-detail,.detail-actions .detail-size-toggle{flex-basis:32px;width:32px;height:32px}
+  .walk-section{grid-template-columns:minmax(0,1fr) auto;gap:8px}
+  .walk-main{gap:8px}
+  .walk-main>div{grid-template-columns:minmax(0,auto) minmax(0,1fr);gap:3px 6px}
+  .walk-main strong{font-size:15px}
+  .walk-main small{font-size:8px}
+  .detail-section{padding:12px 13px}
+  .yield-heading{gap:6px}
+  .yield-value{font-size:19px}
+  .yield-value small{font-size:8px}
+  .metric-grid{gap:6px}
+  .metric{padding:8px 7px}
+  .metric-value{font-size:12px}
+  .metric-sub{font-size:8px}
+  .source-links{gap:6px}
+}
+@media(max-width:370px){
+  .detail-topline{padding-right:74px}
+  .walk-section{grid-template-columns:minmax(0,1fr)}
+  .walk-section .route-button{justify-self:start}
+  .yield-heading{flex-wrap:wrap}
+  .yield-value{margin-left:auto}
+}
