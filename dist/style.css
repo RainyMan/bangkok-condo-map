@@ -339,6 +339,10 @@
 .detail-actions{position:absolute;z-index:4;top:12px;right:12px;display:flex;gap:6px}
 .detail-actions .close-detail,.detail-actions .detail-size-toggle{position:static;display:grid;place-items:center;flex:0 0 32px;width:32px;height:32px;margin:0;padding:0;border:1px solid #dfe7e2;border-radius:9px;background:#fff;color:#52645b;font-size:16px;line-height:1;box-shadow:0 1px 4px #17261e0d;cursor:pointer}
 .detail-actions .close-detail:hover,.detail-actions .detail-size-toggle:hover{border-color:#91c6a8;background:#f2faf5;color:#087f63}
+.yield-room-breakdown{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin:0 0 10px;color:#75837b;font-size:10px}
+.yield-room-breakdown>span{font-weight:700}
+.yield-room-breakdown>b{padding:4px 7px;border:1px solid #dcebe1;border-radius:12px;background:#f5faf7;color:#24684f;font-size:9px;font-weight:700}
+.yield-room-breakdown[hidden]{display:none}
 .detail-topline{align-items:flex-start;gap:7px;padding-right:78px}
 .station-pill{flex:1 1 135px;min-width:0;line-height:1.4;overflow-wrap:anywhere}
 .age-pill{flex:0 0 auto;white-space:nowrap;line-height:1.4}

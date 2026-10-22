@@ -177,6 +177,29 @@ for index, project in enumerate(catalogue):
     bed_prices = [sale_rooms.get(str(b), {}).get("minimum") for b in range(1, 5)]
     bed_areas = [sale_rooms.get(str(b), {}).get("minimumArea", sale_rooms.get(str(b), {}).get("area")) for b in range(1, 5)]
     bed_rents = [rent_rooms.get(str(b), {}).get("minimumSqm", rent_rooms.get(str(b), {}).get("averageSqm")) for b in range(1, 5)]
+    fee_rate = (fee or {}).get("rate") or 0
+    room_yields = []
+    for beds in range(1, 5):
+        sale_room = sale_rooms.get(str(beds), {})
+        rent_room = rent_rooms.get(str(beds), {})
+        sale_room_url = sale_room.get("minimumSourceUrl") or sale_room.get("sourceUrl")
+        sale_room_direct = bool(sale_room_url and re.search(r"/(?:ads|listings|property|property-for-sale|property-for-rent|property-rent|livingdetail_en)/", sale_room_url, re.I))
+        if not sale_room_direct and sale_room_url and "livinginsider.com/detail/condo-" in sale_room_url:
+            sale_room_direct = True
+        if not sale_room_direct and sale_room_url and "rentcondobkk.com/index.php/" in sale_room_url:
+            sale_room_direct = True
+        if sale_room_direct:
+            room_price = float(sale_room.get("minimum") or 0)
+            room_area = float(sale_room.get("minimumArea") or sale_room.get("area") or 0)
+        else:
+            room_price = float(sale_room.get("average") or 0)
+            average_rate = float(sale_room.get("averageSqm") or 0)
+            room_area = room_price / average_rate if room_price > 0 and average_rate > 0 else 0
+        room_rent_rate = float(rent_room.get("minimumSqm") or rent_room.get("averageSqm") or 0)
+        if room_price > 0 and room_area > 0 and room_rent_rate > 0:
+            room_monthly_rent = room_rent_rate * room_area
+            if math.isfinite(room_monthly_rent):
+                room_yields.append([beds, round(room_price, 2), round(room_area, 2), round(room_monthly_rent, 2)])
     default_sale, default_area, default_rent_rate = sale_rooms.get("2", {}), None, rent_rooms.get("2", {})
     sale_url = default_sale.get("minimumSourceUrl") or default_sale.get("sourceUrl")
     direct_url = bool(sale_url and re.search(r"/(?:ads|listings|property|property-for-sale|property-for-rent|property-rent|livingdetail_en)/", sale_url, re.I))
@@ -187,11 +210,13 @@ for index, project in enumerate(catalogue):
     if direct_url:
         default_area = default_sale.get("minimumArea") or default_sale.get("area")
     rent_rate = default_rent_rate.get("minimumSqm") or default_rent_rate.get("averageSqm") or 0
-    fee_rate = (fee or {}).get("rate") or 0
     if not (float(default_sale.get("minimum") or 0) > 0 and float(default_area or 0) > 0 and float(rent_rate or 0) > 0):
         core_yield = None
     else:
         core_yield = round((float(rent_rate) * float(default_area) * 11 - float(fee_rate) * float(default_area) * 12) / float(default_sale["minimum"]) * 100, 5)
+    if room_yields:
+        room_returns = [(rent * 11 - fee_rate * area * 12) / price * 100 for _, price, area, rent in room_yields]
+        core_yield = round(sum(room_returns) / len(room_returns), 5)
     overview.append([
         int(project["id"]), project.get("name"), lat if located else None, lng if located else None,
         bool(located), completion, prop.get("floors") or project.get("floors"), prop.get("units") or project.get("units"),
@@ -202,7 +227,7 @@ for index, project in enumerate(catalogue):
         bed_prices, bed_areas, bed_rents, core_yield,
         bool((sale or {}).get("marketSummary") or (sale or {}).get("countKind") in ("propertyscout_market_summary", "matched_city_index")),
         bool((rent or {}).get("marketSummary") or (rent or {}).get("countKind") in ("propertyscout_market_summary", "matched_city_index")),
-        index // 100,
+        index // 100, room_yields,
     ])
     extras = {
         "sale": sale, "rent": rent, "fee": fee,
