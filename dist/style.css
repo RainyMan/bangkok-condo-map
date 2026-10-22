@@ -331,3 +331,4 @@
   .map-tools{top:132px}
 }
 @media(max-width:350px){.map-tools{top:188px}}
+.detail-loading{min-height:140px;padding:24px;display:flex;align-items:center;justify-content:center;gap:12px;color:var(--muted);font-size:13px}

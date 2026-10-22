@@ -30,7 +30,23 @@
   const localListingsByProjectId = new Map((window.BANGKOK_LOCAL_LISTINGS || []).map(row => [Number(row.projectId), row]));
   const localListingFreshnessDays = 45;
   const localListingCutoff = Date.now() - localListingFreshnessDays * 24 * 60 * 60 * 1000;
-  const hipflatProjects = window.BANGKOK_CONDO_CATALOGUE || window.BANGKOK_HIPFLAT_PROJECTS || [];
+  const overviewRows = window.BANGKOK_CONDO_OVERVIEW;
+  const hipflatProjects = overviewRows ? overviewRows.map(row => {
+    const bySaleBedroom = Object.fromEntries([1, 2, 3, 4].filter((_, index) => Number(row[19]?.[index]) > 0).map((beds, index) => {
+      const position = beds - 1, minimum = Number(row[19][position]), area = Number(row[20]?.[position] || 0);
+      return [String(beds), { beds, minimum, area, minimumArea: area, minimumSqm: area ? minimum / area : 0, priceSqm: area ? minimum / area : 0 }];
+    }));
+    const byRentBedroom = Object.fromEntries([1, 2, 3, 4].filter((_, index) => Number(row[21]?.[index]) > 0).map((beds, index) => [String(beds), { beds, minimumSqm: Number(row[21][beds - 1]), averageSqm: Number(row[21][beds - 1]), marketSummary: Boolean(row[24]) }]));
+    return {
+      id: Number(row[0]), name: row[1], lat: row[2], lng: row[3], locationVerified: Boolean(row[4]),
+      completedYear: row[5], floors: row[6], units: row[7], area: { min: row[8], max: row[9] },
+      nearestMrt: row[10] ? { stationId: row[10], distanceKm: row[11], straightDistanceKm: row[12], minutes: row[13] } : null,
+      coreYield: row[22], detailShard: row[25],
+      sale: { minimum: row[14], minimumSqm: row[15], marketSummary: Boolean(row[23]), byBedroom: bySaleBedroom },
+      rent: { minimum: row[16], minimumSqm: row[17], marketSummary: Boolean(row[24]), byBedroom: byRentBedroom },
+      fee: Number(row[18]) > 0 ? { rate: Number(row[18]) } : null, _overview: true,
+    };
+  }) : (window.BANGKOK_CONDO_CATALOGUE || window.BANGKOK_HIPFLAT_PROJECTS || []);
   const matchedLegacy = new Set();
   const condos = hipflatProjects.map(project => {
     const candidates = legacyByName.get(normalizeName(project.name)) || [];
@@ -68,6 +84,8 @@
     const walkingRoute = walkingById.get(Number(project.id));
     if (walkingRoute?.stationId) {
       nearestMrt = { ...walkingRoute };
+    } else if (project.nearestMrt?.stationId) {
+      nearestMrt = { ...project.nearestMrt };
     } else if (Number.isFinite(lat) && Number.isFinite(lng)) {
       let best = null;
       for (const station of stations) {
@@ -368,30 +386,15 @@
   const initializeYieldInputs = () => {
     try {
       const current = localStorage.getItem(yieldStorageKey);
-      if (current) {
-        const saved = JSON.parse(current);
-        const refreshed = {};
-        condos.forEach(c => {
-          const old = saved[c.id];
-          if (!old) return;
-          if (old.autoBaseline === true) {
-            const defaults = yieldDefaultsFor(c, old.beds || null);
-            if (defaults.price > 0 && defaults.area > 0 && defaults.rent > 0) {
-              refreshed[c.id] = { ...old, price: defaults.price, area: defaults.area, rent: defaults.rent, beds: String(defaults.beds || '2'), autoBaseline: true };
-            }
-            // Drop generated values when current same-bedroom sale and rent
-            // evidence no longer supports a calculation; never show stale ROI.
-            return;
-          }
-          refreshed[c.id] = old;
-        });
-        localStorage.setItem(yieldStorageKey, JSON.stringify(refreshed));
-        return refreshed;
-      }
+      if (current) return JSON.parse(current);
       let previous = {};
       for (let version = 213; version >= 5; version--) {
         const stored = localStorage.getItem(`bangkokCondoYieldInputsV${version}`);
         if (stored) { previous = JSON.parse(stored); break; }
+      }
+      if (overviewRows) {
+        localStorage.setItem(yieldStorageKey, JSON.stringify(previous));
+        return previous;
       }
       const recalculated = {};
       condos.forEach(c => {
@@ -513,6 +516,16 @@
     if (yieldValueCache.has(c.id)) return yieldValueCache.get(c.id);
     if (!hasYieldData(c)) { yieldValueCache.set(c.id, null); return null; }
     const saved = loadYieldInputs()[c.id];
+    if (c._overview && (!saved || saved.autoBaseline === true)) {
+      const value = c.coreYield != null && Number.isFinite(Number(c.coreYield)) ? Number(c.coreYield) : null;
+      yieldValueCache.set(c.id, value);
+      return value;
+    }
+    if (c._overview && saved) {
+      const value = calculateNetYield(c, saved);
+      yieldValueCache.set(c.id, value);
+      return value;
+    }
     const defaults = yieldDefaultsFor(c, saved?.beds || null);
     const price = Number(saved?.price ?? defaults.price);
     const rent = Number(saved?.rent ?? defaults.rent);
@@ -652,11 +665,13 @@
     const ranges = [
       ['saleMin','saleMax',Number(c.sale?.minimumSqm)],
       ['rentMin','rentMax',Number(c.rent?.minimumSqm)],
-      ['yieldMin','yieldMax',yieldFor(c)],
+      ['yieldMin','yieldMax',null],
       ['yearMin','yearMax',Number(c.completedYear)],
     ];
-    for (const [minId, maxId, value] of ranges) {
+    for (const [minId, maxId, knownValue] of ranges) {
       const min = read(minId), max = read(maxId);
+      if (min == null && max == null) continue;
+      const value = knownValue == null && (minId === 'yieldMin') ? yieldFor(c) : knownValue;
       if ((min != null || max != null) && !Number.isFinite(value)) return false;
       if (min != null && value < min) return false;
       if (max != null && value > max) return false;
@@ -715,7 +730,7 @@
       const phSale = c.propertyHubSaleUrl || `https://www.google.com/search?q=site%3Apropertyhub.in.th+${query}+for+sale`;
       const phRent = c.propertyHubRentUrl || `https://www.google.com/search?q=site%3Apropertyhub.in.th+${query}+for+rent`;
       const hipflatSearch = c.hipflatProjectUrl || `https://www.google.com/search?q=site%3Ahipflat.co.th%2Fzh%2Fprojects+${query}`;
-      const marketCrosscheck = marketCrosscheckById.get(Number(c.id)) || null;
+      const marketCrosscheck = marketCrosscheckById.get(Number(c.id)) || c.marketCrosscheck || null;
       const nearest = c.nearestMrt;
       const station = stationsById.get(nearest?.stationId);
       const directionsUrl = station && c.locationVerified ? `https://www.google.com/maps/dir/?api=1&origin=${c.lat},${c.lng}&destination=${station.lat},${station.lng}&travelmode=walking` : null;
@@ -887,6 +902,85 @@
       detail.querySelector('#yieldSavedNote').textContent = '已儲存於此裝置';
     });
   }
+  const detailShardCache = new Map();
+  const mergeDetailMarket = (market, manual) => {
+    if (!market && !manual) return null;
+    const merged = { ...(market || manual || {}) };
+    const samplesByUrl = new Map((merged.samples || []).map(sample => [sample.url, sample]));
+    (manual?.samples || []).forEach(sample => { if (sample.url) samplesByUrl.set(sample.url, sample); });
+    merged.samples = [...samplesByUrl.values()];
+    merged.byBedroom = { ...(merged.byBedroom || {}) };
+    return merged;
+  };
+  async function loadCondoDetails(c) {
+    if (c._detailsLoaded) return;
+    if (c.detailShard == null) throw new Error('找不到此 Condo 的詳細資料分片');
+    let request = detailShardCache.get(c.detailShard);
+    if (!request) {
+      request = fetch(`detail-shards/${c.detailShard}.json`).then(response => {
+        if (!response.ok) throw new Error(`詳細資料載入失敗（${response.status}）`);
+        return response.json();
+      });
+      detailShardCache.set(c.detailShard, request);
+    }
+    let shard;
+    try { shard = await request; }
+    catch (error) { detailShardCache.delete(c.detailShard); throw error; }
+    const data = shard[String(c.id)];
+    if (!data) throw new Error('找不到此 Condo 的詳細資料');
+    c.sale = mergeDetailMarket(data.sale, data.manualMarket?.sale) || c.sale;
+    c.rent = mergeDetailMarket(data.rent, data.manualMarket?.rent) || c.rent;
+    c.manualSaleSamples = (data.manualMarket?.sale?.samples || []).filter(sample => sample.specialAsset === true);
+    c.manualSaleSamplesNote = data.manualMarket?.sale?.specialSaleNotice || null;
+    c.verifiedMarketSamples = {
+      sale: (data.manualMarket?.sale?.samples || []).filter(sample => sample.specialAsset !== true && sample.url && Number(sample.price) > 0 && Number(sample.area) > 0),
+      rent: (data.manualMarket?.rent?.samples || []).filter(sample => sample.specialAsset !== true && sample.url && Number(sample.price) > 0 && Number(sample.area) > 0),
+    };
+    c.fee = data.fee || c.fee;
+    c.address = data.address || c.address;
+    c.locationSourceUrl = data.locationSourceUrl || c.locationSourceUrl;
+    c.locationSourceName = data.locationSourceName || c.locationSourceName;
+    c.locationVerificationSourceUrl = data.locationVerificationSourceUrl || c.locationVerificationSourceUrl;
+    c.completedYear = data.completedYear || c.completedYear;
+    c.completedYearSourceUrl = data.completedYearSourceUrl || null;
+    c.startedYear = data.startedYear || null;
+    c.hipflatSummary = data.hipflatSummary || null;
+    c.hipflatProjectUrl = data.hipflatProjectUrl || null;
+    c.propertyHubProjectUrl = data.propertyHubProjectUrl || null;
+    c.propertyHubSaleUrl = data.propertyHubSaleUrl || null;
+    c.propertyHubRentUrl = data.propertyHubRentUrl || null;
+    c.marketCrosscheck = data.marketCrosscheck || null;
+    c.localListings = (data.localListings || []).filter(row => {
+      const observedAt = Date.parse(row.observedAt || '');
+      return Number.isFinite(observedAt) && observedAt >= localListingCutoff && observedAt <= Date.now() + 24 * 60 * 60 * 1000;
+    });
+    if (data.walkRoute?.stationId) c.nearestMrt = { ...c.nearestMrt, ...data.walkRoute };
+    c._detailsLoaded = true;
+    const savedInputs = loadYieldInputs();
+    const savedBaseline = savedInputs[c.id];
+    if (savedBaseline?.autoBaseline === true) {
+      const defaults = yieldDefaultsFor(c, savedBaseline.beds || null);
+      if (defaults.price > 0 && defaults.area > 0 && defaults.rent > 0) {
+        savedInputs[c.id] = { ...savedBaseline, price: defaults.price, area: defaults.area, rent: defaults.rent, beds: String(defaults.beds || '2') };
+        saveYieldInputs(savedInputs);
+      }
+    }
+    yieldValueCache.delete(c.id);
+  }
+  function renderSelectedDetail(c) {
+    if (c._detailsLoaded) { renderDetail(c); return; }
+    detail.classList.remove('empty');
+    detail.innerHTML = `<div class="detail-loading"><span class="loading-spinner"></span><span>正在載入 ${esc(c.name)} 的售租樣本與來源…</span></div>`;
+    loadCondoDetails(c).then(() => {
+      if (selectedId !== c.id) return;
+      renderList();
+      renderDetail(c);
+    }).catch(error => {
+      if (selectedId !== c.id) return;
+      detail.innerHTML = `<div class="detail-loading"><span>${esc(error.message || '詳細資料載入失敗')}</span><button class="text-button" type="button" id="retryDetails">重試</button></div>`;
+      detail.querySelector('#retryDetails')?.addEventListener('click', () => renderSelectedDetail(c));
+    });
+  }
   function markerFor(id) { return markers.get(id); }
   function select(id) {
     const c = condosById.get(id);
@@ -894,7 +988,7 @@
     selectedId = id;
     markers.forEach((m, markerId) => m.setIcon(icon(condosById.get(markerId), markerId === id)));
     renderList();
-    renderDetail(c);
+    renderSelectedDetail(c);
     if (walkingLine) { map.removeLayer(walkingLine); walkingLine = null; }
     if (window.matchMedia('(max-width: 650px)').matches) document.querySelector('.explorer').classList.add('hidden-mobile');
     if (Number.isFinite(c.lat) && Number.isFinite(c.lng)) map.panTo([c.lat, c.lng], { animate: true, duration: .4 });
@@ -1013,7 +1107,7 @@
   renderList();
   updateLowriseSummary();
   updateMarkerDensity();
-  if (selectedId) { const c = condosById.get(selectedId); if (window.matchMedia('(max-width: 650px)').matches) detail.classList.add('empty'); else renderDetail(c); markerFor(selectedId)?.setIcon(icon(c, true)); }
+  if (selectedId) { const c = condosById.get(selectedId); if (window.matchMedia('(max-width: 650px)').matches) detail.classList.add('empty'); else renderSelectedDetail(c); markerFor(selectedId)?.setIcon(icon(c, true)); }
   if (condos.length) {
     const narrow = window.matchMedia('(max-width: 650px)').matches;
     if (narrow) map.setView([13.7563, 100.5018], 10);
