@@ -7,7 +7,7 @@
   <meta name="description" content="以地圖探索 Hipflat 收錄的曼谷 condo 專案，查看核實座標、售租掛牌來源、每平方米單價與投報試算。">
   <title>Bangkok Condo Map｜BANGKOK Condo 專案全覽</title>
   <link rel="stylesheet" href="vendor/leaflet.css">
-  <link rel="stylesheet" href="style.css?v=18">
+  <link rel="stylesheet" href="style.css?v=20261022-early-map">
 </head>
 <body>
   <header class="topbar">
@@ -23,6 +23,11 @@
 
   <main class="map-shell">
     <div id="map" role="region" aria-label="曼谷 condo Condo 地圖"></div>
+    <script src="vendor/leaflet.js"></script>
+    <script>
+      window.__BKK_EARLY_MAP = L.map('map', { zoomControl: false, scrollWheelZoom: true }).setView([13.7563, 100.5018], 11);
+      window.__BKK_EARLY_TILES = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(window.__BKK_EARLY_MAP);
+    </script>
     <div id="startupLoader" class="startup-loader" role="status"><span class="loading-spinner"></span><span>正在載入 Condo 與捷運資料…</span></div>
     <div class="map-wash" aria-hidden="true"></div>
     <section class="filter-toolbar panel" aria-label="Condo 篩選條件">
@@ -52,7 +57,6 @@
     <aside id="detailPanel" class="detail-panel panel" aria-label="Condo 資訊" aria-live="polite"></aside>
   <div class="map-note"><span>© OpenStreetMap contributors</span><span>M 為 BTS / MRT 站點</span><span class="line-legend" aria-label="捷運路線顏色"><b>路線顏色</b><span><i style="--line-color:#70a829"></i>Sukhumvit</span><span><i style="--line-color:#008b57"></i>Silom</span><span><i style="--line-color:#0a70af"></i>Blue</span><span><i style="--line-color:#7045a1"></i>Purple</span><span><i style="--line-color:#d72f81"></i>Pink</span><span><i style="--line-color:#c79a00"></i>Yellow</span></span><span>步行距離按路網估算；未完成時計直線距離</span></div>
   </main>
-  <script src="vendor/leaflet.js"></script>
   <script src="data.js"></script>
   <script src="catalogue.js"></script>
   <script src="huai-khwang.js"></script>
@@ -69,7 +73,7 @@
   <script src="bangkok-walk-routes.js?v=20261019-residence187-route"></script>
   <script src="bangkok-local-listings.js?v=20261017a"></script>
 <script src="bangkok-market-crosschecks.js?v=20261022-brix-market-reconciled"></script>
-<script src="app.js?v=20261020-recalculate-all-yields-v214"></script>
+<script src="app.js?v=20261022-yield-cache-zoom-v216"></script>
 </body>
 </html>
 

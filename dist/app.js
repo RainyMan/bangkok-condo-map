@@ -346,11 +346,11 @@
   };
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const reviewsUrl = c => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${c.name} condo ${c.address || 'Bangkok Thailand'}`)}`;
-  const map = L.map('map', { zoomControl: false, scrollWheelZoom: true }).setView([13.7563, 100.5018], 11);
+  const map = window.__BKK_EARLY_MAP || L.map('map', { zoomControl: false, scrollWheelZoom: true }).setView([13.7563, 100.5018], 11);
   const mapElement = document.getElementById('map');
   const updateMarkerDensity = () => mapElement.classList.toggle('low-zoom', map.getZoom() < 15);
-  map.on('zoomend', updateMarkerDensity);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
+  map.on('zoomend', () => { updateMarkerDensity(); syncVisibleMarkers(); });
+  if (!window.__BKK_EARLY_TILES) L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
   let mode = 'sale';
   let selectedId = condos[0]?.id;
   let query = '';
@@ -364,7 +364,8 @@
   // Recompute saved generated baselines after refreshing the two-bedroom
   // lowest-price unit and its paired floor area, while preserving edits.
   const yieldStorageKey = 'bangkokCondoYieldInputsV214';
-  const loadYieldInputs = () => {
+  let yieldInputsCache = null;
+  const initializeYieldInputs = () => {
     try {
       const current = localStorage.getItem(yieldStorageKey);
       if (current) {
@@ -479,7 +480,15 @@
       return recalculated;
     } catch { return {}; }
   };
-  const saveYieldInputs = values => { try { localStorage.setItem(yieldStorageKey, JSON.stringify(values)); } catch {} };
+  const loadYieldInputs = () => {
+    if (yieldInputsCache !== null) return yieldInputsCache;
+    yieldInputsCache = initializeYieldInputs();
+    return yieldInputsCache;
+  };
+  const saveYieldInputs = values => {
+    yieldInputsCache = values;
+    try { localStorage.setItem(yieldStorageKey, JSON.stringify(values)); } catch {}
+  };
   const calculateNetYield = (c, { price, rent, area, deductFee = true, deductAgent = true }) => {
     const purchasePrice = Number(price), monthlyRent = Number(rent), floorArea = Number(area);
     if (!(purchasePrice > 0) || !(floorArea > 0)) return 0;
@@ -490,6 +499,7 @@
   };
   const markers = new Map();
   let currentShown = [];
+  const yieldValueCache = new Map();
   const MAX_VISIBLE_MARKERS = 500;
   const LIST_PAGE_SIZE = 60;
   let visibleProjectCount = LIST_PAGE_SIZE;
@@ -499,15 +509,18 @@
   const detail = document.getElementById('detailPanel');
   const labelFor = c => mode === 'sale' ? hasSale(c) ? `${fmt(c.sale.minimumSqm)}<small>${c.sale.marketSummary ? '房型均價低點 ฿/㎡' : '最低 ฿/㎡'}</small>` : '待補資料<small>售價/㎡</small>' : mode === 'rent' ? hasRent(c) ? `${fmt(c.rent.minimumSqm)}<small>${c.rent.marketSummary ? '房型均價低點 ฿/㎡/月' : '最低 ฿/㎡/月'}</small>` : '待補資料<small>租金/㎡/月</small>' : Number.isFinite(yieldFor(c)) ? `${yieldFor(c).toFixed(1)}<small>% 淨投報</small>` : '待補資料<small>兩房售價樣本不足</small>';
   function yieldFor(c) {
-    if (!hasYieldData(c)) return null;
     if (yieldOverrides.has(c.id)) return yieldOverrides.get(c.id);
+    if (yieldValueCache.has(c.id)) return yieldValueCache.get(c.id);
+    if (!hasYieldData(c)) { yieldValueCache.set(c.id, null); return null; }
     const saved = loadYieldInputs()[c.id];
     const defaults = yieldDefaultsFor(c, saved?.beds || null);
     const price = Number(saved?.price ?? defaults.price);
     const rent = Number(saved?.rent ?? defaults.rent);
     const area = Number(saved?.area ?? defaults.area);
-    if (!(price > 0) || !(rent > 0) || !(area > 0) || defaults.rentFallback) return null;
-    return calculateNetYield(c, { price, rent, area, deductFee: saved?.deductFee ?? true, deductAgent: saved?.deductAgent ?? true });
+    if (!(price > 0) || !(rent > 0) || !(area > 0) || defaults.rentFallback) { yieldValueCache.set(c.id, null); return null; }
+    const value = calculateNetYield(c, { price, rent, area, deductFee: saved?.deductFee ?? true, deductAgent: saved?.deductAgent ?? true });
+    yieldValueCache.set(c.id, value);
+    return value;
   }
   function icon(c, active = false) {
     return L.divIcon({ className: 'condo-icon' + (active ? ' active' : ''), html: `<span><b class="marker-price">${labelFor(c)}</b></span>`, iconSize: [110, 30], iconAnchor: [55, 15] });
@@ -601,6 +614,7 @@
     const lowriseMode = document.getElementById('lowriseOnly')?.value || 'all';
     const shown = condos.filter(c => matchesQuery(c) && matchesSidebarFilters(c, read, lowriseMode));
     const keyFor = c => sortMode === 'distance' ? (c.nearestMrt?.distanceKm ?? c.nearestMrt?.straightDistanceKm) : sortMode === 'sale' ? c.sale?.minimumSqm : sortMode === 'rent' ? c.rent?.minimumSqm : yieldFor(c);
+    const sortValues = sortMode === 'yield' ? new Map(shown.map(c => [c.id, keyFor(c)])) : null;
     const ranked = sortMode === 'year-new' || sortMode === 'year-old' ? sortMode : null;
     return shown.sort((a, b) => {
       if (ranked) {
@@ -610,7 +624,7 @@
         const yearDelta = yearA - yearB;
         return sortMode === 'year-new' ? -yearDelta : yearDelta;
       }
-      const delta = Number(keyFor(a) ?? Infinity) - Number(keyFor(b) ?? Infinity);
+      const delta = Number((sortValues ? sortValues.get(a.id) : keyFor(a)) ?? Infinity) - Number((sortValues ? sortValues.get(b.id) : keyFor(b)) ?? Infinity);
       return sortMode === 'yield' ? -delta : delta;
     });
   }
@@ -752,7 +766,7 @@
     const calcDeductFee = savedYield?.deductFee ?? true;
     const calcDeductAgent = savedYield?.deductAgent ?? true;
     const localListingSection = c.localListings?.length ? `<section class="detail-section"><p class="section-label">本機每日房源提醒 <span>${c.localListings.length} 筆已配對</span></p><div class="source-links">${c.localListings.slice(0, 8).map(row => `<a href="${esc(row.url)}" target="_blank" rel="noopener">${esc(row.kind === 'sale' ? '出售' : '出租')} · ${esc(row.title || c.name)}${row.price ? ` · ฿${fmt(row.price)}${row.kind === 'rent' ? ' / 月' : ''}` : ''}${row.area ? ` · ${fmt(row.area, 1)} ㎡` : ''} ↗</a>`).join('')}</div><p class="fee-note">資料由本機匯入的平台新房源提醒整理；未保存聯絡人資料。每日更新時間依本機電腦排程。</p></section>` : '';
-    if (savedYield && calcPrice > 0 && calcArea > 0) yieldOverrides.delete(c.id);
+    if (savedYield && calcPrice > 0 && calcArea > 0) { yieldOverrides.delete(c.id); yieldValueCache.delete(c.id); }
     detail.classList.remove('empty');
     const saleLabel = c.sale.marketSummary ? '房型行情摘要' : `${c.sale.sourceName || 'PropertyHub'} 可見掛牌`;
     const rentLabel = c.rent.marketSummary ? '房型行情摘要' : `${c.rent.sourceName || 'PropertyHub'} 可見掛牌`;
@@ -791,7 +805,7 @@
       const rent = Number(detail.querySelector('#yieldRent').value);
       const area = Number(detail.querySelector('#yieldArea').value);
       if (!(price > 0) || !(rent > 0) || !(area > 0)) {
-        yieldOverrides.delete(c.id);
+        yieldOverrides.delete(c.id); yieldValueCache.delete(c.id);
         detail.querySelector('#yieldValue').innerHTML = '待補<small>請填入有效售租與面積</small>';
         markers.forEach((m, markerId) => m.setIcon(icon(condosById.get(markerId), markerId === selectedId)));
         renderList();
@@ -833,7 +847,7 @@
     });
     detail.querySelector('#yieldBeds')?.addEventListener('change', event => {
       const defaults = yieldDefaultsFor(c, event.currentTarget.value || null);
-      yieldOverrides.delete(c.id);
+      yieldOverrides.delete(c.id); yieldValueCache.delete(c.id);
       detail.querySelector('#yieldPrice').value = defaults.price;
       detail.querySelector('#yieldArea').value = defaults.area.toFixed(1);
       detail.querySelector('#yieldRent').value = defaults.rent;
