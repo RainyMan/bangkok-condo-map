@@ -669,8 +669,15 @@
         const yearDelta = yearA - yearB;
         return sortMode === 'year-new' ? -yearDelta : yearDelta;
       }
-      const delta = Number((sortValues ? sortValues.get(a.id) : keyFor(a)) ?? Infinity) - Number((sortValues ? sortValues.get(b.id) : keyFor(b)) ?? Infinity);
-      return sortMode === 'yield' ? -delta : delta;
+      if (sortMode === 'yield') {
+        const valueA = sortValues.get(a.id), valueB = sortValues.get(b.id);
+        const validA = valueA != null && valueA !== '' && Number.isFinite(Number(valueA));
+        const validB = valueB != null && valueB !== '' && Number.isFinite(Number(valueB));
+        if (validA !== validB) return validA ? -1 : 1;
+        if (!validA) return 0;
+        return Number(valueB) - Number(valueA);
+      }
+      return Number(keyFor(a) ?? Infinity) - Number(keyFor(b) ?? Infinity);
     });
   }
   const lowriseSummary = document.querySelector('#lowriseOnly')?.closest('.filter-group')?.querySelector('summary span');
