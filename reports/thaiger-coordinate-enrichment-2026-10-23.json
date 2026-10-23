@@ -1,0 +1,18 @@
+{
+  "candidates": 1,
+  "verified": 0,
+  "statuses": {
+    "project_name_mismatch": 1
+  },
+  "rows": [
+    {
+      "hipflatId": 6541,
+      "name": "Baan CK Apartment",
+      "address": "Soi Naradhiwas Rajanagarindra 18, Chong Nonsi, Yan Nawa, Bangkok 10120, THA",
+      "expectedDistrictSlug": "yan-nawa",
+      "url": "https://www.thaigerproperty.com/projects/thailand/bangkok/yan-nawa/chong-nonsi/baan-ck-apartment",
+      "httpStatus": 200,
+      "status": "project_name_mismatch"
+    }
+  ]
+}
