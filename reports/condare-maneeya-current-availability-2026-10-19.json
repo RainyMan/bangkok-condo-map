@@ -1,7 +1,7 @@
 {
   "hipflatId": 3022,
   "project": "Condare Maneeya",
-  "checkedAt": "2026-10-19",
+  "checkedAt": "2026-10-23",
   "location": {
     "coordinates": "13.80257439278313,100.5627697443388",
     "source": "https://propertyhub.in.th/en/projects/condare-maneeya",
@@ -17,7 +17,15 @@
       "url": "https://www.rightmove.condothai.co.th/room/60158/Condare%20Maneeya/0/?distance=3",
       "updated": "not provided"
     },
-    "treatment": "Retained for traceability only; excluded from current market baseline."
+    "treatment": "Retained for traceability only; excluded from current market baseline.",
+    "propertyHubFalsePositive": {
+      "type": "House",
+      "bedrooms": 3,
+      "areaSqm": 180,
+      "priceTHB": 9700000,
+      "url": "https://propertyhub.in.th/en/projects/condare-maneeya/for-sale",
+      "treatment": "Excluded: PropertyHub labels it a detached house, not a condo unit in this five-storey, 68-unit project."
+    }
   },
   "rent": {
     "status": "no_current_verified_listing",
@@ -32,6 +40,7 @@
     "https://propertyhub.in.th/en/condo-for-sale/project-condare-maneeya",
     "https://propertyhub.in.th/en/condo-for-rent/project-condare-maneeya",
     "https://propertyhub.in.th/en/projects/condare-maneeya",
-    "https://www.rightmove.condothai.co.th/room/60158/Condare%20Maneeya/0/?distance=3"
+    "https://www.rightmove.condothai.co.th/room/60158/Condare%20Maneeya/0/?distance=3",
+    "https://propertyhub.in.th/en/projects/condare-maneeya/for-sale"
   ]
 }
