@@ -1,54 +1,11 @@
 {
-  "projectPagesChecked": 335,
-  "projectsWithMatchedProjectPage": 326,
-  "projectsWithNewListings": 7,
-  "newSaleMarkets": 4,
-  "newRentMarkets": 3,
-  "projectCoordinatesFromPropertyHubPages": 326,
+  "projectPagesChecked": 222,
+  "projectsWithMatchedProjectPage": 218,
+  "projectsWithNewListings": 0,
+  "newSaleMarkets": 0,
+  "newRentMarkets": 0,
+  "projectCoordinatesFromPropertyHubPages": 218,
   "identityMismatchesRejected": [],
   "checkedAt": "2026-10-23",
-  "examples": [
-    {
-      "hipflatId": 4529,
-      "slug": "feel-ratchada-36",
-      "sale": false,
-      "rent": true
-    },
-    {
-      "hipflatId": 5589,
-      "slug": "lumpini-condo-town-bangkhae",
-      "sale": false,
-      "rent": true
-    },
-    {
-      "hipflatId": 5690,
-      "slug": "harmony-living-sukhumvit-15",
-      "sale": true,
-      "rent": false
-    },
-    {
-      "hipflatId": 5835,
-      "slug": "city-home-srinakarin",
-      "sale": false,
-      "rent": true
-    },
-    {
-      "hipflatId": 5888,
-      "slug": "baan-vipavee",
-      "sale": true,
-      "rent": false
-    },
-    {
-      "hipflatId": 6223,
-      "slug": "silk-phaholyothin-9",
-      "sale": true,
-      "rent": false
-    },
-    {
-      "hipflatId": 6270,
-      "slug": "lumpini-park-view",
-      "sale": true,
-      "rent": false
-    }
-  ]
+  "examples": []
 }
