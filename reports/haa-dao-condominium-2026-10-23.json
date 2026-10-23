@@ -1,0 +1,29 @@
+{
+  "hipflatId": 3669,
+  "projectName": "Haa Dao Condominium",
+  "checkedAt": "2026-10-23",
+  "coordinates": {
+    "verified": true,
+    "lat": 13.78959,
+    "lng": 100.54188,
+    "sourceUrl": "https://maps.google.com/maps?daddr=12%2F1+Soi+Pradiphat+10%2C+Bangkok+10400+Thailand%4013.78959%2C100.54188&saddr=",
+    "verificationSourceUrl": "https://www.hipflat.co.th/en/projects/haa-dao-condominium-2144ll0n11e724ht77eec19cnu4a11h7",
+    "corroborationSourceUrl": "https://www.fazwaz.com/projects/thailand/bangkok/phaya-thai/sam-sen-nai/haa-dao-condominium",
+    "method": "Hipflat address identifies Above Medium Rare Residence, Pradiphat 10; FazWaz independently places Haa Dao 10m from Medium Rare Steak & Wine; TripAdvisor's Google Maps route for the venue at 12/1 Soi Pradiphat 10 resolves to 13.78959, 100.54188, within the stated 10m."
+  },
+  "saleAndRent": {
+    "verifiedSaleListings": 0,
+    "verifiedRentListings": 0,
+    "yield": "not calculated",
+    "sources": [
+      "https://www.hipflat.co.th/en/projects/haa-dao-condominium-2144ll0n11e724ht77eec19cnu4a11h7",
+      "https://www.fazwaz.com/projects/thailand/bangkok/phaya-thai/sam-sen-nai/haa-dao-condominium"
+    ]
+  },
+  "sourceNotes": [
+    "Hipflat names the address as Above Medium Rare Residence, Pradiphat 10.",
+    "FazWaz identifies Haa Dao Condominium in Sam Sen Nai, Bangkok and places Medium Rare Steak & Wine 10m from the project.",
+    "Tripadvisor lists Medium Rare Steak & Wine at 12/1 Soi Pradiphat 10; its linked Google Maps route resolves to 13.78959, 100.54188.",
+    "FazWaz currently says No Units Available and View All (0); no direct sale or rent listings were added."
+  ]
+}
