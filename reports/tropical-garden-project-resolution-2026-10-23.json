@@ -1,0 +1,55 @@
+{
+  "hipflatId": 3315,
+  "projectName": "Tropical Garden",
+  "checkedAt": "2026-10-23",
+  "coordinates": {
+    "verified": false,
+    "reason": "The sources identify different streets and public geocoding resolves only to road geometry, not a building entrance or parcel.",
+    "hipflatAddress": "Soi Phrom Chit, Khlong Tan Nuea, Vadhana, Bangkok 10110",
+    "ddPropertyAddress": "4 Soi Sukhumvit 33, Bangkok 10110",
+    "thirdPartyDirectoryAddress": "31 Soi Phrom Chit, Khlong Tan Nuea, Watthana, Bangkok 10110",
+    "osmStreetResults": [
+      {
+        "query": "31 Soi Phrom Chit, Khlong Tan Nuea, Watthana, Bangkok 10110",
+        "lat": 13.7372291,
+        "lng": 100.5699003,
+        "featureType": "road geometry; not a building point",
+        "url": "https://nominatim.openstreetmap.org/search?q=31%20Soi%20Phrom%20Chit%2C%20Khlong%20Tan%20Nuea%2C%20Watthana%2C%20Bangkok%2010110&format=html"
+      },
+      {
+        "query": "4 Soi Sukhumvit 33, Bangkok 10110",
+        "lat": 13.7349554,
+        "lng": 100.5676396,
+        "featureType": "road geometry; not a building point",
+        "url": "https://nominatim.openstreetmap.org/search?q=4%20Soi%20Sukhumvit%2033%2C%20Bangkok%2010110&format=html"
+      }
+    ],
+    "sources": [
+      "https://www.hipflat.co.th/en/projects/tropical-garden-gaozvo",
+      "https://www.ddproperty.com/en/project/9401-tropical-garden",
+      "https://soda.red/projects/thailand/bangkok-province?page=26"
+    ]
+  },
+  "saleAndRent": {
+    "verifiedSaleListings": 0,
+    "verifiedRentListings": 0,
+    "yield": "not calculated"
+  },
+  "excludedNameCollisions": [
+    {
+      "url": "https://www.ddproperty.com/en/property/tropical-garden-bangkok-for-sale-500532493",
+      "reason": "The direct listing's body identifies Pratumnak, Pattaya despite Bangkok text in its heading/address."
+    },
+    {
+      "url": "https://propertyhub.in.th/en/listings/1bed-1bath-mrt-bang-o-54sqm-thb-30-000-mo-fl-6-siam-oriental-tropical-garden-bangkok---6369063",
+      "reason": "The listing belongs to Siam Oriental Tropical Garden in Bang Lamung, Chonburi."
+    }
+  ],
+  "sources": [
+    "https://www.hipflat.co.th/en/projects/tropical-garden-gaozvo",
+    "https://www.ddproperty.com/en/project/9401-tropical-garden",
+    "https://www.ddproperty.com/en/property/tropical-garden-bangkok-for-sale-500532493",
+    "https://propertyhub.in.th/en/listings/1bed-1bath-mrt-bang-o-54sqm-thb-30-000-mo-fl-6-siam-oriental-tropical-garden-bangkok---6369063",
+    "https://soda.red/projects/thailand/bangkok-province?page=26"
+  ]
+}
