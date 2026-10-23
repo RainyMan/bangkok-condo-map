@@ -1,0 +1,46 @@
+{
+  "checkedAt": "2026-10-23",
+  "hipflatId": 3516,
+  "project": "MB GRAND Phaholyothin",
+  "identity": {
+    "propertyHubProjectId": "894",
+    "coordinates": [
+      13.78768927918904,
+      100.54743431890302
+    ],
+    "address": "1345 Phahon Yothin Road, Samsen Nai, Phaya Thai, Bangkok 10400, Thailand",
+    "completionYear": 2010,
+    "units": 151,
+    "floors": 19,
+    "commonFee": {
+      "rate": 30,
+      "unit": "THB/sqm/month",
+      "status": "published_indicative"
+    },
+    "sources": [
+      "https://propertyhub.in.th/en/projects/mb-grand",
+      "https://www.hipflat.co.th/en/projects/mb-grand-phaholyothin-iquejg",
+      "https://www.home.co.th/condo/mb-grand-phaholyothin-2934"
+    ],
+    "note": "Hipflat 頂層地址誤列 Ratchathewi；Hipflat 專案描述、PropertyHub 及 Home.co.th 均指向 Phaholyothin/Samsen Nai, Phaya Thai。"
+  },
+  "sale": {
+    "status": "no_current_project_listing_found",
+    "source": "https://propertyhub.in.th/en/projects/mb-grand",
+    "hipflatProjectPage": "https://www.hipflat.co.th/en/projects/mb-grand-phaholyothin-iquejg",
+    "note": "PropertyHub 專案頁列 0 筆出售，Hipflat 專案頁亦顯示目前無房源；不填售價或投報率。"
+  },
+  "rent": {
+    "price": 29000,
+    "area": 66,
+    "beds": 2,
+    "source": "https://propertyhub.in.th/en/listings/condo-in-high-potential-central-city-location-mb-grand-phaholyothin-near-bts-sena-ruam---6326328",
+    "projectPage": "https://propertyhub.in.th/en/condo-for-rent/project-mb-grand",
+    "availability": "unconfirmed_date_unknown",
+    "note": "PropertyHub 專案出租頁仍列此單筆房源；個別頁核對 2 房、66㎡、฿29,000/月，但更新日期未提供，現況待刊登者確認。"
+  },
+  "yield": {
+    "status": "not_calculated",
+    "reason": "沒有本案可核實出售樣本，沒有購入總價基準。"
+  }
+}
