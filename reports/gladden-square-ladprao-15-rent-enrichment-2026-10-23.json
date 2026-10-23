@@ -1,0 +1,110 @@
+{
+  "hipflatId": 6495,
+  "name": "Gladden Square Ladprao 15",
+  "asOf": "2026-10-23",
+  "coordinates": {
+    "lat": 13.810488006849772,
+    "lng": 100.57119485372901,
+    "source": "https://propertyhub.in.th/en/projects/gladden-square-ladprao-15",
+    "verification": "PropertyHub 精確專案頁位置圖，Hipflat 專案同名及 Soi Lat Phrao 15 Yaek 3 地址交叉核對。"
+  },
+  "saleSamples": [
+    {
+      "id": "9234011888e189na18t014h13u02u9la",
+      "price": 3000000,
+      "area": 25,
+      "priceSqm": 120000,
+      "beds": 1,
+      "roomType": "1BR",
+      "title": "Gladden Square Ladprao 15 · 1房 · 25㎡ · ฿3,000,000",
+      "url": "https://www.hipflat.co.th/ads/9234011888e189na18t014h13u02u9la",
+      "sourceName": "Hipflat 單筆掛牌",
+      "projectName": "Gladden Square Ladprao 15",
+      "updated": "2026-10-23",
+      "checkedAt": "2026-10-23",
+      "matchedBy": "Hipflat project page direct listing; exact project name, bedroom, floor and completion match",
+      "listingStatus": "active_as_listed"
+    },
+    {
+      "id": "11888829",
+      "price": 3390000.0,
+      "area": 28.0,
+      "beds": 1,
+      "roomType": "1BR",
+      "title": "Gladden Square Ladprao 15, Bangkok",
+      "url": "https://www.ddproperty.com/en/property/gladden-square-ladprao-15-bangkok-for-sale-11888829",
+      "updated": "2026-10-16",
+      "sourceName": "DDproperty",
+      "listingStatus": "active",
+      "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+    }
+  ],
+  "rentSample": {
+    "id": "c4ee449h89aa3hte3h00alac3u0heaa2",
+    "price": 15500,
+    "area": 27.6,
+    "priceSqm": 561.5942029,
+    "beds": 1,
+    "roomType": "1BR",
+    "title": "Gladden Square Ladprao 15 · 1房 · 27.6㎡ · ฿15,500/月",
+    "url": "https://www.hipflat.co.th/ads/c4ee449h89aa3hte3h00alac3u0heaa2",
+    "sourceName": "Hipflat 單筆掛牌",
+    "projectName": "Gladden Square Ladprao 15",
+    "updated": "2026-10-23",
+    "checkedAt": "2026-10-23",
+    "matchedBy": "Hipflat project page direct listing; exact project name, bedroom, floor and completion match",
+    "listingStatus": "active_as_listed"
+  },
+  "yield": {
+    "bedrooms": 1,
+    "lowestSalePrice": 3000000,
+    "saleAreaSqm": 25,
+    "lowestMonthlyRent": 15500,
+    "lowestMonthlyRentAreaSqm": 27.6,
+    "areaDifferenceSqm": 2.6,
+    "rule": "area differs over 2 sqm; lowest rent per sqm × sale area",
+    "rentPerSqmPerMonth": 561.59,
+    "estimatedMonthlyRentAtSaleArea": 14039.86,
+    "deductOneAgentMonth": true,
+    "deductManagementFee": false,
+    "managementFeePerSqmPerMonth": null,
+    "netAnnualYieldPercent": 5.15
+  },
+  "marketChecks": [
+    {
+      "sourceName": "Hipflat 專案掛牌頁",
+      "url": "https://www.hipflat.co.th/projects/gladden-square-ladprao-15-0cc94l2114779ucl14812e1l94c31lul",
+      "statusLabel": "頁面顯示 1 售 1 租；兩種掛牌均能開啟對應單筆頁。"
+    },
+    {
+      "sourceName": "Hipflat 出售單筆",
+      "url": "https://www.hipflat.co.th/ads/9234011888e189na18t014h13u02u9la",
+      "statusLabel": "1 房、25㎡、฿3,000,000；刊登 2026-03-24，頁面顯示 2026-10-23 核對時約 2 小時前更新。"
+    },
+    {
+      "sourceName": "Hipflat 出租單筆",
+      "url": "https://www.hipflat.co.th/ads/c4ee449h89aa3hte3h00alac3u0heaa2",
+      "statusLabel": "1 房、27.6㎡、฿15,500/月；刊登 2026-02-12，頁面顯示 2026-10-23 核對時約 53 分鐘前更新。"
+    },
+    {
+      "sourceName": "DDproperty 專案頁",
+      "url": "https://www.ddproperty.com/en/project/14392-gladden-square-ladprao-15",
+      "statusLabel": "核對時列 1 售、0 租；出售樣本頁面更新日期 2026-10-16。"
+    },
+    {
+      "sourceName": "PropertyHub 專案出租頁",
+      "url": "https://propertyhub.in.th/en/condo-for-rent/project-gladden-square-ladprao-15",
+      "statusLabel": "本次頁面顯示沒有匹配出租物件。"
+    },
+    {
+      "sourceName": "FazWaz 鏡像出租頁",
+      "url": "https://www.fazwaz.co.th/en/property-rent/1-bedroom-condo-for-rent-at-gladden-square-ladprao-15-in-chomphon-bangkok-u5352529",
+      "statusLabel": "相同單位 ID U5352529，฿15,500/月、27.6㎡；更新顯示一年以前，當作鏡像交叉參考，不另計新樣本。"
+    }
+  ],
+  "limitations": [
+    "PropertyHub 與 DDproperty 專案頁本次顯示無出租掛牌；Hipflat 直接單筆頁顯示剛更新，採其為當前租金樣本。",
+    "FazWaz 同單位鏡像頁顯示一年未更新，未重複計入。",
+    "未找到可核實管理費率，投報估值不扣管理費。"
+  ]
+}
