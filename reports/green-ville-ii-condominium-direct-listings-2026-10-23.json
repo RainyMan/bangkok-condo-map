@@ -1,0 +1,90 @@
+{
+  "hipflatId": 5581,
+  "projectName": "Green Ville II Condominium",
+  "checkedAt": "2026-10-23",
+  "projectSource": "https://www.hipflat.co.th/en/projects/green-ville-ii-condominium-97u1tat01lce4leua0c1t1hl4t0thc7a",
+  "projectEvidence": [
+    "Hipflat project page identifies Green Ville II Condominium, Punnawithi 28 Yaek 2, Bang Chak, Phra Khanong, 8 floors, completed January 2013.",
+    "Each included listing opens from this exact Hipflat project page and its detail page repeats the project name and January 2013 completion."
+  ],
+  "saleSamples": [
+    {
+      "id": "U163856",
+      "price": 1490000,
+      "area": 32,
+      "priceSqm": 46563,
+      "beds": 1,
+      "roomType": "1BR",
+      "url": "https://www.hipflat.co.th/en/ads/h2h4l7l3883a80cnh3cectau3u0h141h",
+      "title": "For sale 1 bed condo in Phra Khanong, Bangkok · Green Ville II Condominium",
+      "sourceName": "Hipflat",
+      "projectName": "Green Ville II Condominium",
+      "updated": "2026-10-23",
+      "checkedAt": "2026-10-23",
+      "matchedBy": "exact_hipflat_project_page_unit",
+      "listingStatus": "active_as_listed"
+    },
+    {
+      "id": "U1097514",
+      "price": 2500000,
+      "area": 58,
+      "priceSqm": 43103,
+      "beds": 2,
+      "roomType": "2BR",
+      "url": "https://www.hipflat.co.th/en/ads/nnl1t49h8hht31e9aaclhu4t3u02u9eu",
+      "title": "For sale 2 bedrooms condo in Phra Khanong, Bangkok · Green Ville II Condominium",
+      "sourceName": "Hipflat",
+      "projectName": "Green Ville II Condominium",
+      "updated": "2026-10-23",
+      "checkedAt": "2026-10-23",
+      "matchedBy": "exact_hipflat_project_page_unit",
+      "listingStatus": "active_as_listed"
+    }
+  ],
+  "rentSamples": [
+    {
+      "id": "U1636800",
+      "price": 10000,
+      "area": 30,
+      "priceSqm": 333,
+      "beds": 1,
+      "roomType": "1BR",
+      "url": "https://www.hipflat.co.th/en/ads/749ct4248eullnha28t1e9t83u0h14ua",
+      "title": "For rent 1 bed condo in Phra Khanong, Bangkok · Green Ville II Condominium",
+      "sourceName": "Hipflat",
+      "projectName": "Green Ville II Condominium",
+      "updated": "2026-10-23",
+      "checkedAt": "2026-10-23",
+      "matchedBy": "exact_hipflat_project_page_unit",
+      "listingStatus": "active_as_listed"
+    }
+  ],
+  "yieldBasis": {
+    "bedrooms": 1,
+    "salePriceTHB": 1490000,
+    "saleAreaSqm": 32,
+    "rentTHBPerMonth": 10000,
+    "rentAreaSqm": 30,
+    "areaDifferenceSqm": 2,
+    "commonFee": "not verified; not deducted",
+    "notes": [
+      "The 1-bedroom area difference is exactly 2 sqm, so the lowest monthly rent is used without scaling.",
+      "No 2-bedroom rental listing was found on the exact Hipflat project page, so no 2-bedroom ROI is inferred.",
+      "Another 1-bedroom sale listing on the project page was last updated 9 September 2026; it is older than 30 days at the check date and is excluded from current samples."
+    ]
+  },
+  "sourceFindings": [
+    {
+      "url": "https://www.hipflat.co.th/en/ads/h2h4l7l3883a80cnh3cectau3u0h141h",
+      "finding": "1 bedroom, ฿1,490,000, 32 sqm; page shows updated within the last hour and project completion January 2013."
+    },
+    {
+      "url": "https://www.hipflat.co.th/en/ads/nnl1t49h8hht31e9aaclhu4t3u02u9eu",
+      "finding": "2 bedrooms, ฿2,500,000, 58 sqm; page shows updated within the last two hours and project completion January 2013."
+    },
+    {
+      "url": "https://www.hipflat.co.th/en/ads/749ct4248eullnha28t1e9t83u0h14ua",
+      "finding": "1 bedroom, ฿10,000/month, 30 sqm; page shows updated within the last 9 hours and project completion January 2013."
+    }
+  ]
+}
