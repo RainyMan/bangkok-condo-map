@@ -1,0 +1,2910 @@
+{
+  "checkedAt": "2026-10-23",
+  "targetMarkets": 100,
+  "backfilledMarkets": 15,
+  "statuses": {
+    "no_exact_current_candidate_in_keyword_results": 80,
+    "verified_active_ddproperty_listings": 15,
+    "multiple_ddproperty_project_ids": 5
+  },
+  "results": [
+    {
+      "hipflatId": 3703,
+      "name": "M Heritage Phaholyothin",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=M%20Heritage%20Phaholyothin",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3704,
+      "name": "Mahasap Condo Town Project 3",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Mahasap%20Condo%20Town%20Project%203",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3706,
+      "name": "S.S. Surindra Mansion",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=S.S.%20Surindra%20Mansion",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3704,
+      "name": "Mahasap Condo Town Project 3",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Mahasap%20Condo%20Town%20Project%203",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3706,
+      "name": "S.S. Surindra Mansion",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=S.S.%20Surindra%20Mansion",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3707,
+      "name": "Amornpan 205 Tower 2",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Amornpan%20205%20Tower%202",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3707,
+      "name": "Amornpan 205 Tower 2",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Amornpan%20205%20Tower%202",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3711,
+      "name": "Narumol Residence",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Narumol%20Residence",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3711,
+      "name": "Narumol Residence",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Narumol%20Residence",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3708,
+      "name": "Prime I - Zen Condo Ladprao 71",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Prime%20I%20-%20Zen%20Condo%20Ladprao%2071",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 8127,
+        "title": "Prime I-Zen Condo Ladprao 71",
+        "address": "Nakniwat Road, Lat Phrao, Bangkok",
+        "district": "lat phrao",
+        "projectPage": null,
+        "ageDays": 3
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/8127-prime-i-zen-condo-ladprao-71",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-sale/at-prime-i-zen-condo-ladprao-71-8127",
+      "sampleCount": 5,
+      "market": {
+        "count": 5,
+        "observedCount": 5,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 2988000,
+        "minimum": 2650000.0,
+        "minimumArea": 39.78,
+        "averageSqm": 52968,
+        "minimumSqm": 46612.9,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-sale/at-prime-i-zen-condo-ladprao-71-8127",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/prime-i-zen-condo-ladprao-71-bangkok-for-sale-500378365",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/prime-i-zen-condo-ladprao-71-bangkok-for-sale-500192135",
+        "byBedroom": {
+          "1": {
+            "count": 1,
+            "minimum": 2650000.0,
+            "area": 39.78,
+            "minimumArea": 39.78,
+            "priceSqm": 66616.39,
+            "minimumSqm": 66616.39,
+            "sourceUrl": "https://www.ddproperty.com/en/property/prime-i-zen-condo-ladprao-71-bangkok-for-sale-500378365",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/prime-i-zen-condo-ladprao-71-bangkok-for-sale-500378365",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/prime-i-zen-condo-ladprao-71-bangkok-for-sale-500378365"
+          },
+          "2": {
+            "count": 4,
+            "minimum": 2890000.0,
+            "area": 62.0,
+            "minimumArea": 62.0,
+            "priceSqm": 46612.9,
+            "minimumSqm": 46612.9,
+            "sourceUrl": "https://www.ddproperty.com/en/property/prime-i-zen-condo-ladprao-71-bangkok-for-sale-500192135",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/prime-i-zen-condo-ladprao-71-bangkok-for-sale-500192135",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/prime-i-zen-condo-ladprao-71-bangkok-for-sale-500192135"
+          }
+        },
+        "samples": [
+          {
+            "id": "500146245",
+            "price": 2999999.0,
+            "area": 62.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Prime I-Zen Condo Ladprao 71, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/prime-i-zen-condo-ladprao-71-bangkok-for-sale-500146245",
+            "updated": "2026-10-20",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500657253",
+            "price": 3200000.0,
+            "area": 62.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Prime I-Zen Condo Ladprao 71, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/prime-i-zen-condo-ladprao-71-bangkok-for-sale-500657253",
+            "updated": "2026-10-17",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500192135",
+            "price": 2890000.0,
+            "area": 62.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Prime I-Zen Condo Ladprao 71, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/prime-i-zen-condo-ladprao-71-bangkok-for-sale-500192135",
+            "updated": "2026-10-15",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500378365",
+            "price": 2650000.0,
+            "area": 39.78,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Prime I-Zen Condo Ladprao 71, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/prime-i-zen-condo-ladprao-71-bangkok-for-sale-500378365",
+            "updated": "2026-10-03",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "60189517",
+            "price": 3200000.0,
+            "area": 62.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Prime I-Zen Condo Ladprao 71, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/prime-i-zen-condo-ladprao-71-bangkok-for-sale-60189517",
+            "updated": "2026-09-24",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 3708,
+      "name": "Prime I - Zen Condo Ladprao 71",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Prime%20I%20-%20Zen%20Condo%20Ladprao%2071",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 8127,
+        "title": "Prime I-Zen Condo Ladprao 71",
+        "address": "Nakniwat Road, Lat Phrao, Bangkok",
+        "district": "lat phrao",
+        "projectPage": null,
+        "ageDays": 23
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/8127-prime-i-zen-condo-ladprao-71",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-rent/at-prime-i-zen-condo-ladprao-71-8127",
+      "sampleCount": 1,
+      "market": {
+        "count": 1,
+        "observedCount": 1,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 2990000,
+        "minimum": 2990000.0,
+        "minimumArea": 62.0,
+        "averageSqm": 48226,
+        "minimumSqm": 48225.81,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-rent/at-prime-i-zen-condo-ladprao-71-8127",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/prime-i-zen-condo-ladprao-71-bangkok-for-rent-500607568",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/prime-i-zen-condo-ladprao-71-bangkok-for-rent-500607568",
+        "byBedroom": {
+          "2": {
+            "count": 1,
+            "minimum": 2990000.0,
+            "area": 62.0,
+            "minimumArea": 62.0,
+            "priceSqm": 48225.81,
+            "minimumSqm": 48225.81,
+            "sourceUrl": "https://www.ddproperty.com/en/property/prime-i-zen-condo-ladprao-71-bangkok-for-rent-500607568",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/prime-i-zen-condo-ladprao-71-bangkok-for-rent-500607568",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/prime-i-zen-condo-ladprao-71-bangkok-for-rent-500607568"
+          }
+        },
+        "samples": [
+          {
+            "id": "500607568",
+            "price": 2990000.0,
+            "area": 62.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Prime I-Zen Condo Ladprao 71, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/prime-i-zen-condo-ladprao-71-bangkok-for-rent-500607568",
+            "updated": "2026-09-30",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 3712,
+      "name": "The Pillar",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=The%20Pillar",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3712,
+      "name": "The Pillar",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=The%20Pillar",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3715,
+      "name": "Baan Ruam Kao",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Baan%20Ruam%20Kao",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3715,
+      "name": "Baan Ruam Kao",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Baan%20Ruam%20Kao",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3717,
+      "name": "Civic Place",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Civic%20Place",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3718,
+      "name": "Baan Eua Arthorn Ramindra 117",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Baan%20Eua%20Arthorn%20Ramindra%20117",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3718,
+      "name": "Baan Eua Arthorn Ramindra 117",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Baan%20Eua%20Arthorn%20Ramindra%20117",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3723,
+      "name": "Sinpetch Condo Town",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Sinpetch%20Condo%20Town",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3717,
+      "name": "Civic Place",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Civic%20Place",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3724,
+      "name": "Parkview Viphavadi 2",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Parkview%20Viphavadi%202",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3724,
+      "name": "Parkview Viphavadi 2",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Parkview%20Viphavadi%202",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3723,
+      "name": "Sinpetch Condo Town",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Sinpetch%20Condo%20Town",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3729,
+      "name": "Na Veera Ramintra",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Na%20Veera%20Ramintra",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3732,
+      "name": "Blue Sky Nuanchan",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Blue%20Sky%20Nuanchan",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3732,
+      "name": "Blue Sky Nuanchan",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Blue%20Sky%20Nuanchan",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3734,
+      "name": "Charoenkrung Place",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Charoenkrung%20Place",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3733,
+      "name": "Aree Mansion",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Aree%20Mansion",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 74,
+        "title": "Aree Mansion",
+        "address": "Sukhumvit, Khong Tan, Khlong Toei, Bangkok",
+        "district": "khlong toei",
+        "projectPage": null,
+        "ageDays": 9
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/74-aree-mansion",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-sale/at-aree-mansion-74",
+      "sampleCount": 1,
+      "market": {
+        "count": 1,
+        "observedCount": 1,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 8900000,
+        "minimum": 8900000.0,
+        "minimumArea": 105.0,
+        "averageSqm": 84762,
+        "minimumSqm": 84761.9,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-sale/at-aree-mansion-74",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/aree-mansion-bangkok-for-sale-11124424",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/aree-mansion-bangkok-for-sale-11124424",
+        "byBedroom": {
+          "3": {
+            "count": 1,
+            "minimum": 8900000.0,
+            "area": 105.0,
+            "minimumArea": 105.0,
+            "priceSqm": 84761.9,
+            "minimumSqm": 84761.9,
+            "sourceUrl": "https://www.ddproperty.com/en/property/aree-mansion-bangkok-for-sale-11124424",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/aree-mansion-bangkok-for-sale-11124424",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/aree-mansion-bangkok-for-sale-11124424"
+          }
+        },
+        "samples": [
+          {
+            "id": "11124424",
+            "price": 8900000.0,
+            "area": 105.0,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "Aree Mansion, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/aree-mansion-bangkok-for-sale-11124424",
+            "updated": "2026-10-14",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 3736,
+      "name": "Ban Suan Ratchada",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Ban%20Suan%20Ratchada",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3736,
+      "name": "Ban Suan Ratchada",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Ban%20Suan%20Ratchada",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3734,
+      "name": "Charoenkrung Place",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Charoenkrung%20Place",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 427,
+        "title": "Charoenkrung Place condominium",
+        "address": "Chareonkrung-Rama 3, Bang Kho Laem, Bangkok",
+        "district": "bang kho laem",
+        "projectPage": null,
+        "ageDays": 7
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/427-charoenkrung-place-condominium",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-sale/at-charoenkrung-place-condominium-427",
+      "sampleCount": 2,
+      "market": {
+        "count": 2,
+        "observedCount": 2,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 1421000,
+        "minimum": 1343000.0,
+        "minimumArea": 33.67,
+        "averageSqm": 42053,
+        "minimumSqm": 39887.14,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-sale/at-charoenkrung-place-condominium-427",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/charoenkrung-place-condominium-bangkok-for-sale-60020262",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/charoenkrung-place-condominium-bangkok-for-sale-60020262",
+        "byBedroom": {
+          "1": {
+            "count": 2,
+            "minimum": 1343000.0,
+            "area": 33.67,
+            "minimumArea": 33.67,
+            "priceSqm": 39887.14,
+            "minimumSqm": 39887.14,
+            "sourceUrl": "https://www.ddproperty.com/en/property/charoenkrung-place-condominium-bangkok-for-sale-60020262",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/charoenkrung-place-condominium-bangkok-for-sale-60020262",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/charoenkrung-place-condominium-bangkok-for-sale-60020262"
+          }
+        },
+        "samples": [
+          {
+            "id": "500033883",
+            "price": 1499000.0,
+            "area": 33.9,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Charoenkrung Place condominium, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/charoenkrung-place-condominium-bangkok-for-sale-500033883",
+            "updated": "2026-10-16",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "60020262",
+            "price": 1343000.0,
+            "area": 33.67,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Charoenkrung Place condominium, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/charoenkrung-place-condominium-bangkok-for-sale-60020262",
+            "updated": "2026-10-06",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 3733,
+      "name": "Aree Mansion",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Aree%20Mansion",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 74,
+        "title": "Aree Mansion",
+        "address": "Sukhumvit, Khong Tan, Khlong Toei, Bangkok",
+        "district": "khlong toei",
+        "projectPage": null,
+        "ageDays": 1
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/74-aree-mansion",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-rent/at-aree-mansion-74",
+      "sampleCount": 5,
+      "market": {
+        "count": 5,
+        "observedCount": 5,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 47000,
+        "minimum": 45000.0,
+        "minimumArea": 180.0,
+        "averageSqm": 261,
+        "minimumSqm": 250.0,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-rent/at-aree-mansion-74",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/aree-mansion-bangkok-for-rent-500670858",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/aree-mansion-bangkok-for-rent-500670858",
+        "byBedroom": {
+          "2": {
+            "count": 1,
+            "minimum": 50000.0,
+            "area": 180.0,
+            "minimumArea": 180.0,
+            "priceSqm": 277.78,
+            "minimumSqm": 277.78,
+            "sourceUrl": "https://www.ddproperty.com/en/property/aree-mansion-bangkok-for-rent-11147526",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/aree-mansion-bangkok-for-rent-11147526",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/aree-mansion-bangkok-for-rent-11147526"
+          },
+          "3": {
+            "count": 4,
+            "minimum": 45000.0,
+            "area": 180.0,
+            "minimumArea": 180.0,
+            "priceSqm": 250.0,
+            "minimumSqm": 250.0,
+            "sourceUrl": "https://www.ddproperty.com/en/property/aree-mansion-bangkok-for-rent-500670858",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/aree-mansion-bangkok-for-rent-500670858",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/aree-mansion-bangkok-for-rent-500670858"
+          }
+        },
+        "samples": [
+          {
+            "id": "11873247",
+            "price": 50000.0,
+            "area": 180.0,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "Aree Mansion, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/aree-mansion-bangkok-for-rent-11873247",
+            "updated": "2026-10-22",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500670858",
+            "price": 45000.0,
+            "area": 180.0,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "Aree Mansion, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/aree-mansion-bangkok-for-rent-500670858",
+            "updated": "2026-10-21",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500670823",
+            "price": 45000.0,
+            "area": 180.0,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "Aree Mansion, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/aree-mansion-bangkok-for-rent-500670823",
+            "updated": "2026-10-21",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11147515",
+            "price": 45000.0,
+            "area": 180.0,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "Aree Mansion, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/aree-mansion-bangkok-for-rent-11147515",
+            "updated": "2026-10-12",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11147526",
+            "price": 50000.0,
+            "area": 180.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Aree Mansion, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/aree-mansion-bangkok-for-rent-11147526",
+            "updated": "2026-10-12",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500434388",
+            "price": 40000.0,
+            "area": 180.0,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "Aree Mansion, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/aree-mansion-bangkok-for-rent-500434388",
+            "updated": "2026-09-22",
+            "sourceName": "DDproperty",
+            "listingStatus": "update_over_30d",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 3739,
+      "name": "Saithip Condominium",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Saithip%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3737,
+      "name": "Garden Square",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Garden%20Square",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3737,
+      "name": "Garden Square",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Garden%20Square",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3740,
+      "name": "Kurecha Residence",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Kurecha%20Residence",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3740,
+      "name": "Kurecha Residence",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Kurecha%20Residence",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3739,
+      "name": "Saithip Condominium",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Saithip%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3745,
+      "name": "Airlink Residence phase 2",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Airlink%20Residence%20phase%202",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3745,
+      "name": "Airlink Residence phase 2",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Airlink%20Residence%20phase%202",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3746,
+      "name": "Lumpini Ville On Nut - Latkrabang",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Lumpini%20Ville%20On%20Nut%20-%20Latkrabang",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3746,
+      "name": "Lumpini Ville On Nut - Latkrabang",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Lumpini%20Ville%20On%20Nut%20-%20Latkrabang",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3755,
+      "name": "Intraview Condotown",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Intraview%20Condotown",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3760,
+      "name": "Chao Phraya River Condominium Bang Chak 3",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Chao%20Phraya%20River%20Condominium%20Bang%20Chak%203",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3755,
+      "name": "Intraview Condotown",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Intraview%20Condotown",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3759,
+      "name": "Love Charoen Nakhon",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Love%20Charoen%20Nakhon",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3760,
+      "name": "Chao Phraya River Condominium Bang Chak 3",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Chao%20Phraya%20River%20Condominium%20Bang%20Chak%203",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3762,
+      "name": "Premsiri Boutique Park Building E",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Premsiri%20Boutique%20Park%20Building%20E",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3765,
+      "name": "Supapong Place",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Supapong%20Place",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3766,
+      "name": "Metro Sky Kaset",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Metro%20Sky%20Kaset",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3763,
+      "name": "Family Complex",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Family%20Complex",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 1341,
+        "title": "Family complex",
+        "address": "อินทะมะระ2 ถนนสุทธิสาร, Samsen Nai, Phaya Thai, Bangkok",
+        "district": "phaya thai",
+        "projectPage": null,
+        "ageDays": 1
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/1341-family-complex",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-rent/at-family-complex-1341",
+      "sampleCount": 1,
+      "market": {
+        "count": 1,
+        "observedCount": 1,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 55000,
+        "minimum": 55000.0,
+        "minimumArea": 135.0,
+        "averageSqm": 407,
+        "minimumSqm": 407.41,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-rent/at-family-complex-1341",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/family-complex-bangkok-for-rent-500296384",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/family-complex-bangkok-for-rent-500296384",
+        "byBedroom": {
+          "3": {
+            "count": 1,
+            "minimum": 55000.0,
+            "area": 135.0,
+            "minimumArea": 135.0,
+            "priceSqm": 407.41,
+            "minimumSqm": 407.41,
+            "sourceUrl": "https://www.ddproperty.com/en/property/family-complex-bangkok-for-rent-500296384",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/family-complex-bangkok-for-rent-500296384",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/family-complex-bangkok-for-rent-500296384"
+          }
+        },
+        "samples": [
+          {
+            "id": "500296384",
+            "price": 55000.0,
+            "area": 135.0,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "Family complex, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/family-complex-bangkok-for-rent-500296384",
+            "updated": "2026-10-22",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 3763,
+      "name": "Family Complex",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Family%20Complex",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 1341,
+        "title": "Family complex",
+        "address": "อินทะมะระ2 ถนนสุทธิสาร, Samsen Nai, Phaya Thai, Bangkok",
+        "district": "phaya thai",
+        "projectPage": null,
+        "ageDays": 7
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/1341-family-complex",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-sale/at-family-complex-1341",
+      "sampleCount": 4,
+      "market": {
+        "count": 4,
+        "observedCount": 4,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 1062500,
+        "minimum": 850000.0,
+        "minimumArea": 28.0,
+        "averageSqm": 37440,
+        "minimumSqm": 28333.33,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-sale/at-family-complex-1341",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/family-complex-bangkok-for-sale-500090699",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/family-complex-bangkok-for-sale-60125513",
+        "byBedroom": {
+          "1": {
+            "count": 2,
+            "minimum": 1200000.0,
+            "area": 28.0,
+            "minimumArea": 28.0,
+            "priceSqm": 42857.14,
+            "minimumSqm": 42857.14,
+            "sourceUrl": "https://www.ddproperty.com/en/property/family-complex-bangkok-for-sale-500652053",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/family-complex-bangkok-for-sale-500652053",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/family-complex-bangkok-for-sale-500652053"
+          }
+        },
+        "samples": [
+          {
+            "id": "500652053",
+            "price": 1200000.0,
+            "area": 28.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Family complex, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/family-complex-bangkok-for-sale-500652053",
+            "updated": "2026-10-16",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500469554",
+            "price": 1350000.0,
+            "area": 28.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Family complex, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/family-complex-bangkok-for-sale-500469554",
+            "updated": "2026-10-05",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500090699",
+            "price": 850000.0,
+            "area": 28.0,
+            "beds": null,
+            "roomType": null,
+            "title": "Family complex, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/family-complex-bangkok-for-sale-500090699",
+            "updated": "2026-09-23",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "60125513",
+            "price": 850000.0,
+            "area": 30.0,
+            "beds": null,
+            "roomType": null,
+            "title": "Family complex, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/family-complex-bangkok-for-sale-60125513",
+            "updated": "2026-09-23",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 3768,
+      "name": "Airport Residential Condominium",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Airport%20Residential%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3769,
+      "name": "Piya Apartment Sukkhumvit 15",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Piya%20Apartment%20Sukkhumvit%2015",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3762,
+      "name": "Premsiri Boutique Park Building E",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Premsiri%20Boutique%20Park%20Building%20E",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 480,
+        "title": "Premsiri Boutique Park",
+        "address": "Prasoet Manukit Road, Sena Nikhom, Chatuchak, Bangkok",
+        "district": "chatuchak",
+        "projectPage": null,
+        "ageDays": 12
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/480-premsiri-boutique-park",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-sale/at-premsiri-boutique-park-480",
+      "sampleCount": 23,
+      "market": {
+        "count": 23,
+        "observedCount": 23,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 2702609,
+        "minimum": 1450000.0,
+        "minimumArea": 30.15,
+        "averageSqm": 57127,
+        "minimumSqm": 47359.15,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-sale/at-premsiri-boutique-park-480",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/premsiri-boutique-park-bangkok-for-sale-500177885",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/premsiri-boutique-park-bangkok-for-sale-500116708",
+        "byBedroom": {
+          "1": {
+            "count": 7,
+            "minimum": 1990000.0,
+            "area": 34.04,
+            "minimumArea": 34.04,
+            "priceSqm": 58460.63,
+            "minimumSqm": 58460.63,
+            "sourceUrl": "https://www.ddproperty.com/en/property/premsiri-boutique-park-bangkok-for-sale-500092467",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/premsiri-boutique-park-bangkok-for-sale-500092467",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/premsiri-boutique-park-bangkok-for-sale-500092467"
+          },
+          "2": {
+            "count": 14,
+            "minimum": 2690000.0,
+            "area": 56.8,
+            "minimumArea": 56.8,
+            "priceSqm": 47359.15,
+            "minimumSqm": 47359.15,
+            "sourceUrl": "https://www.ddproperty.com/en/property/premsiri-boutique-park-bangkok-for-sale-500116708",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/premsiri-boutique-park-bangkok-for-sale-500116708",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/premsiri-boutique-park-bangkok-for-sale-500116708"
+          }
+        },
+        "samples": [
+          {
+            "id": "500623505",
+            "price": 2990000.0,
+            "area": 56.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Premsiri Boutique Park, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/premsiri-boutique-park-bangkok-for-sale-500623505",
+            "updated": "2026-10-20",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500116708",
+            "price": 2690000.0,
+            "area": 56.8,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Premsiri Boutique Park, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/premsiri-boutique-park-bangkok-for-sale-500116708",
+            "updated": "2026-10-15",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500488417",
+            "price": 2500000.0,
+            "area": 39.38,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Premsiri Boutique Park, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/premsiri-boutique-park-bangkok-for-sale-500488417",
+            "updated": "2026-10-15",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500447961",
+            "price": 2090000.0,
+            "area": 35.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Premsiri Boutique Park, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/premsiri-boutique-park-bangkok-for-sale-500447961",
+            "updated": "2026-10-15",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500523639",
+            "price": 2090000.0,
+            "area": 35.01,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Premsiri Boutique Park, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/premsiri-boutique-park-bangkok-for-sale-500523639",
+            "updated": "2026-10-14",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500642131",
+            "price": 2990000.0,
+            "area": 56.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Premsiri Boutique Park, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/premsiri-boutique-park-bangkok-for-sale-500642131",
+            "updated": "2026-10-14",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500634375",
+            "price": 2990000.0,
+            "area": 56.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Premsiri Boutique Park, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/premsiri-boutique-park-bangkok-for-sale-500634375",
+            "updated": "2026-10-11",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500218801",
+            "price": 3190000.0,
+            "area": 56.77,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Premsiri Boutique Park, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/premsiri-boutique-park-bangkok-for-sale-500218801",
+            "updated": "2026-10-08",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500177885",
+            "price": 1450000.0,
+            "area": 30.15,
+            "beds": null,
+            "roomType": null,
+            "title": "Premsiri Boutique Park, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/premsiri-boutique-park-bangkok-for-sale-500177885",
+            "updated": "2026-10-07",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500246431",
+            "price": 2200000.0,
+            "area": 35.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Premsiri Boutique Park, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/premsiri-boutique-park-bangkok-for-sale-500246431",
+            "updated": "2026-10-07",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500619125",
+            "price": 3290000.0,
+            "area": 57.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Premsiri Boutique Park, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/premsiri-boutique-park-bangkok-for-sale-500619125",
+            "updated": "2026-10-05",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500578963",
+            "price": 3290000.0,
+            "area": 54.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Premsiri Boutique Park, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/premsiri-boutique-park-bangkok-for-sale-500578963",
+            "updated": "2026-10-04",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500618193",
+            "price": 3290000.0,
+            "area": 56.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Premsiri Boutique Park, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/premsiri-boutique-park-bangkok-for-sale-500618193",
+            "updated": "2026-10-04",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500348222",
+            "price": 2990000.0,
+            "area": 56.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Premsiri Boutique Park, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/premsiri-boutique-park-bangkok-for-sale-500348222",
+            "updated": "2026-10-03",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500211568",
+            "price": 3190000.0,
+            "area": 56.8,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Premsiri Boutique Park, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/premsiri-boutique-park-bangkok-for-sale-500211568",
+            "updated": "2026-10-02",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500092467",
+            "price": 1990000.0,
+            "area": 34.04,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Premsiri Boutique Park, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/premsiri-boutique-park-bangkok-for-sale-500092467",
+            "updated": "2026-10-01",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500603698",
+            "price": 3290000.0,
+            "area": 56.77,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Premsiri Boutique Park, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/premsiri-boutique-park-bangkok-for-sale-500603698",
+            "updated": "2026-09-30",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500197587",
+            "price": 1600000.0,
+            "area": 30.2,
+            "beds": null,
+            "roomType": null,
+            "title": "Premsiri Boutique Park, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/premsiri-boutique-park-bangkok-for-sale-500197587",
+            "updated": "2026-09-29",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500506151",
+            "price": 3290000.0,
+            "area": 57.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Premsiri Boutique Park, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/premsiri-boutique-park-bangkok-for-sale-500506151",
+            "updated": "2026-09-25",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500586452",
+            "price": 3290000.0,
+            "area": 56.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Premsiri Boutique Park, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/premsiri-boutique-park-bangkok-for-sale-500586452",
+            "updated": "2026-09-24",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500586143",
+            "price": 2590000.0,
+            "area": 35.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Premsiri Boutique Park, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/premsiri-boutique-park-bangkok-for-sale-500586143",
+            "updated": "2026-09-24",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500586069",
+            "price": 2790000.0,
+            "area": 56.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Premsiri Boutique Park, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/premsiri-boutique-park-bangkok-for-sale-500586069",
+            "updated": "2026-09-24",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500502869",
+            "price": 2090000.0,
+            "area": 35.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Premsiri Boutique Park, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/premsiri-boutique-park-bangkok-for-sale-500502869",
+            "updated": "2026-09-24",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11749972",
+            "price": 3290000.0,
+            "area": 56.77,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Premsiri Boutique Park, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/premsiri-boutique-park-bangkok-for-sale-11749972",
+            "updated": "2026-09-21",
+            "sourceName": "DDproperty",
+            "listingStatus": "update_over_30d",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 3768,
+      "name": "Airport Residential Condominium",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Airport%20Residential%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3769,
+      "name": "Piya Apartment Sukkhumvit 15",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Piya%20Apartment%20Sukkhumvit%2015",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3771,
+      "name": "Studio One Studio Zone",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Studio%20One%20Studio%20Zone",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3773,
+      "name": "Baan Siri Sathorn",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Baan%20Siri%20Sathorn",
+      "status": "multiple_ddproperty_project_ids",
+      "candidates": [
+        {
+          "ddPropertyProjectId": 15135,
+          "title": "Baan Siri Sathorn",
+          "address": "10 Yen Akat 1 Alley, Thung Maha Mek, Sathon, Bangkok",
+          "district": "sathon",
+          "projectPage": null,
+          "ageDays": 1
+        },
+        {
+          "ddPropertyProjectId": 159,
+          "title": "Baan Siri Sathorn Suanplu",
+          "address": "33 Nanglinchi, Thung Maha Mek, Sathon, Bangkok",
+          "district": "sathon",
+          "projectPage": null,
+          "ageDays": 1
+        },
+        {
+          "ddPropertyProjectId": 160,
+          "title": "Baan Siri Sathorn Yenakard",
+          "address": "Yenakat, Thung Maha Mek, Sathon, Bangkok",
+          "district": "sathon",
+          "projectPage": null,
+          "ageDays": 2
+        }
+      ]
+    },
+    {
+      "hipflatId": 3773,
+      "name": "Baan Siri Sathorn",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Baan%20Siri%20Sathorn",
+      "status": "multiple_ddproperty_project_ids",
+      "candidates": [
+        {
+          "ddPropertyProjectId": 15135,
+          "title": "Baan Siri Sathorn",
+          "address": "10 Yen Akat 1 Alley, Thung Maha Mek, Sathon, Bangkok",
+          "district": "sathon",
+          "projectPage": null,
+          "ageDays": 5
+        },
+        {
+          "ddPropertyProjectId": 159,
+          "title": "Baan Siri Sathorn Suanplu",
+          "address": "33 Nanglinchi, Thung Maha Mek, Sathon, Bangkok",
+          "district": "sathon",
+          "projectPage": null,
+          "ageDays": 3
+        },
+        {
+          "ddPropertyProjectId": 160,
+          "title": "Baan Siri Sathorn Yenakard",
+          "address": "Yenakat, Thung Maha Mek, Sathon, Bangkok",
+          "district": "sathon",
+          "projectPage": null,
+          "ageDays": 6
+        }
+      ]
+    },
+    {
+      "hipflatId": 3776,
+      "name": "Ratchayothin Place",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Ratchayothin%20Place",
+      "status": "multiple_ddproperty_project_ids",
+      "candidates": [
+        {
+          "ddPropertyProjectId": 627,
+          "title": "Ratchayothin Place",
+          "address": "Soi Phahonyothin 37, Lat Yao, Chatuchak, Bangkok",
+          "district": "chatuchak",
+          "projectPage": null,
+          "ageDays": 13
+        },
+        {
+          "ddPropertyProjectId": 199,
+          "title": "Lumpini Place Ratchayothin",
+          "address": "1484 Phahonyothin Road, Chan Kasem, Chatuchak, Bangkok",
+          "district": "chatuchak",
+          "projectPage": null,
+          "ageDays": 1
+        },
+        {
+          "ddPropertyProjectId": 13704,
+          "title": "Lumpini Town Place Ratchayothin-Sena",
+          "address": "Chan Kasem, Chatuchak, Bangkok",
+          "district": "chatuchak",
+          "projectPage": null,
+          "ageDays": 1
+        }
+      ]
+    },
+    {
+      "hipflatId": 3771,
+      "name": "Studio One Studio Zone",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Studio%20One%20Studio%20Zone",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 286,
+        "title": "Studio One Zone Condo",
+        "address": "Ladprao 102 Alley, Phlapphla, Wang Thonglang, Bangkok",
+        "district": "wang thonglang",
+        "projectPage": null,
+        "ageDays": 14
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/286-studio-one-zone-condo",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-sale/at-studio-one-zone-condo-286",
+      "sampleCount": 13,
+      "market": {
+        "count": 13,
+        "observedCount": 13,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 17439846,
+        "minimum": 980000.0,
+        "minimumArea": 27.5,
+        "averageSqm": 66420,
+        "minimumSqm": 35636.36,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-sale/at-studio-one-zone-condo-286",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/studio-one-zone-condo-bangkok-for-sale-60174660",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/studio-one-zone-condo-bangkok-for-sale-60174660",
+        "byBedroom": {
+          "1": {
+            "count": 10,
+            "minimum": 980000.0,
+            "area": 27.5,
+            "minimumArea": 27.5,
+            "priceSqm": 35636.36,
+            "minimumSqm": 35636.36,
+            "sourceUrl": "https://www.ddproperty.com/en/property/studio-one-zone-condo-bangkok-for-sale-60174660",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/studio-one-zone-condo-bangkok-for-sale-60174660",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/studio-one-zone-condo-bangkok-for-sale-60174660"
+          },
+          "4": {
+            "count": 1,
+            "minimum": 211965000.0,
+            "area": 561.0,
+            "minimumArea": 561.0,
+            "priceSqm": 377834.22,
+            "minimumSqm": 377834.22,
+            "sourceUrl": "https://www.ddproperty.com/en/property/studio-one-zone-condo-bangkok-for-sale-60022402",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/studio-one-zone-condo-bangkok-for-sale-60022402",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/studio-one-zone-condo-bangkok-for-sale-60022402"
+          }
+        },
+        "samples": [
+          {
+            "id": "500079221",
+            "price": 1089000.0,
+            "area": 27.0,
+            "beds": null,
+            "roomType": null,
+            "title": "Studio One Zone Condo, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/studio-one-zone-condo-bangkok-for-sale-500079221",
+            "updated": "2026-10-22",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500674005",
+            "price": 1350000.0,
+            "area": 30.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Studio One Zone Condo, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/studio-one-zone-condo-bangkok-for-sale-500674005",
+            "updated": "2026-10-22",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500666311",
+            "price": 1299000.0,
+            "area": 32.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Studio One Zone Condo, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/studio-one-zone-condo-bangkok-for-sale-500666311",
+            "updated": "2026-10-19",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500491450",
+            "price": 1490000.0,
+            "area": 32.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Studio One Zone Condo, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/studio-one-zone-condo-bangkok-for-sale-500491450",
+            "updated": "2026-10-19",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500556691",
+            "price": 1050000.0,
+            "area": 28.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Studio One Zone Condo, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/studio-one-zone-condo-bangkok-for-sale-500556691",
+            "updated": "2026-10-16",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500638808",
+            "price": 1299000.0,
+            "area": 32.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Studio One Zone Condo, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/studio-one-zone-condo-bangkok-for-sale-500638808",
+            "updated": "2026-10-13",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "60174660",
+            "price": 980000.0,
+            "area": 27.5,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Studio One Zone Condo, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/studio-one-zone-condo-bangkok-for-sale-60174660",
+            "updated": "2026-10-09",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "60022402",
+            "price": 211965000.0,
+            "area": 561.0,
+            "beds": 4,
+            "roomType": "4BR",
+            "title": "Studio One Zone Condo, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/studio-one-zone-condo-bangkok-for-sale-60022402",
+            "updated": "2026-10-05",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500523969",
+            "price": 1299000.0,
+            "area": 32.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Studio One Zone Condo, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/studio-one-zone-condo-bangkok-for-sale-500523969",
+            "updated": "2026-10-03",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500503038",
+            "price": 1299000.0,
+            "area": 32.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Studio One Zone Condo, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/studio-one-zone-condo-bangkok-for-sale-500503038",
+            "updated": "2026-10-02",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500519916",
+            "price": 1299000.0,
+            "area": 32.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Studio One Zone Condo, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/studio-one-zone-condo-bangkok-for-sale-500519916",
+            "updated": "2026-09-30",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500597167",
+            "price": 1299000.0,
+            "area": 32.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Studio One Zone Condo, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/studio-one-zone-condo-bangkok-for-sale-500597167",
+            "updated": "2026-09-28",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500083331",
+            "price": 1000000.0,
+            "area": 27.0,
+            "beds": null,
+            "roomType": null,
+            "title": "Studio One Zone Condo, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/studio-one-zone-condo-bangkok-for-sale-500083331",
+            "updated": "2026-09-26",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 3780,
+      "name": "Vivarium Residence",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Vivarium%20Residence",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3775,
+      "name": "Thonglor 11 Residence",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Thonglor%2011%20Residence",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 57,
+        "title": "The Waterford Thonglor 11",
+        "address": "219 Soi Thonglor Sukhumvit Road, Khlong Tan Nua, Watthana, Bangkok",
+        "district": "watthana",
+        "projectPage": null,
+        "ageDays": 8
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/57-the-waterford-thonglor-11",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-sale/at-the-waterford-thonglor-11-57",
+      "sampleCount": 2,
+      "market": {
+        "count": 2,
+        "observedCount": 2,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 18950000,
+        "minimum": 14000000.0,
+        "minimumArea": 150.0,
+        "averageSqm": 102902,
+        "minimumSqm": 93333.33,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-sale/at-the-waterford-thonglor-11-57",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-sale-500042957",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-sale-500042957",
+        "byBedroom": {
+          "2": {
+            "count": 1,
+            "minimum": 14000000.0,
+            "area": 150.0,
+            "minimumArea": 150.0,
+            "priceSqm": 93333.33,
+            "minimumSqm": 93333.33,
+            "sourceUrl": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-sale-500042957",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-sale-500042957",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-sale-500042957"
+          },
+          "3": {
+            "count": 1,
+            "minimum": 23900000.0,
+            "area": 212.5,
+            "minimumArea": 212.5,
+            "priceSqm": 112470.59,
+            "minimumSqm": 112470.59,
+            "sourceUrl": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-sale-500034067",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-sale-500034067",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-sale-500034067"
+          }
+        },
+        "samples": [
+          {
+            "id": "500034067",
+            "price": 23900000.0,
+            "area": 212.5,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "The Waterford Thonglor 11, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-sale-500034067",
+            "updated": "2026-10-15",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500042957",
+            "price": 14000000.0,
+            "area": 150.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "The Waterford Thonglor 11, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-sale-500042957",
+            "updated": "2026-10-15",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 3775,
+      "name": "Thonglor 11 Residence",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Thonglor%2011%20Residence",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 57,
+        "title": "The Waterford Thonglor 11",
+        "address": "219 Soi Thonglor Sukhumvit Road, Khlong Tan Nua, Watthana, Bangkok",
+        "district": "watthana",
+        "projectPage": null,
+        "ageDays": 2
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/57-the-waterford-thonglor-11",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-rent/at-the-waterford-thonglor-11-57",
+      "sampleCount": 21,
+      "market": {
+        "count": 21,
+        "observedCount": 21,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 74619,
+        "minimum": 19000.0,
+        "minimumArea": 50.0,
+        "averageSqm": 288,
+        "minimumSqm": 250.0,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-rent/at-the-waterford-thonglor-11-57",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-rent-500167098",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-rent-500422156",
+        "byBedroom": {
+          "1": {
+            "count": 1,
+            "minimum": 19000.0,
+            "area": 50.0,
+            "minimumArea": 50.0,
+            "priceSqm": 380.0,
+            "minimumSqm": 380.0,
+            "sourceUrl": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-rent-500167098",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-rent-500167098",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-rent-500167098"
+          },
+          "2": {
+            "count": 8,
+            "minimum": 26000.0,
+            "area": 90.0,
+            "minimumArea": 90.0,
+            "priceSqm": 288.89,
+            "minimumSqm": 258.6,
+            "sourceUrl": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-rent-500667845",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-rent-500667845",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-rent-500650303"
+          },
+          "3": {
+            "count": 12,
+            "minimum": 49000.0,
+            "area": 193.35,
+            "minimumArea": 193.35,
+            "priceSqm": 253.43,
+            "minimumSqm": 250.0,
+            "sourceUrl": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-rent-500464771",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-rent-500464771",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-rent-500422156"
+          }
+        },
+        "samples": [
+          {
+            "id": "500422156",
+            "price": 100000.0,
+            "area": 400.0,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "The Waterford Thonglor 11, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-rent-500422156",
+            "updated": "2026-10-21",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500043494",
+            "price": 60000.0,
+            "area": 150.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "The Waterford Thonglor 11, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-rent-500043494",
+            "updated": "2026-10-19",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500544964",
+            "price": 52000.0,
+            "area": 193.35,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "The Waterford Thonglor 11, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-rent-500544964",
+            "updated": "2026-10-19",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500675005",
+            "price": 52000.0,
+            "area": 193.35,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "The Waterford Thonglor 11, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-rent-500675005",
+            "updated": "2026-10-22",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500044798",
+            "price": 52000.0,
+            "area": 192.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "The Waterford Thonglor 11, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-rent-500044798",
+            "updated": "2026-10-22",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500167098",
+            "price": 19000.0,
+            "area": 50.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "The Waterford Thonglor 11, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-rent-500167098",
+            "updated": "2026-10-21",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500667845",
+            "price": 26000.0,
+            "area": 90.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "The Waterford Thonglor 11, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-rent-500667845",
+            "updated": "2026-10-20",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500666765",
+            "price": 120000.0,
+            "area": 400.0,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "The Waterford Thonglor 11, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-rent-500666765",
+            "updated": "2026-10-19",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500665505",
+            "price": 100000.0,
+            "area": 400.0,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "The Waterford Thonglor 11, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-rent-500665505",
+            "updated": "2026-10-19",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500665158",
+            "price": 26000.0,
+            "area": 90.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "The Waterford Thonglor 11, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-rent-500665158",
+            "updated": "2026-10-19",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500428090",
+            "price": 100000.0,
+            "area": 400.0,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "The Waterford Thonglor 11, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-rent-500428090",
+            "updated": "2026-10-16",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500650303",
+            "price": 50000.0,
+            "area": 193.35,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "The Waterford Thonglor 11, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-rent-500650303",
+            "updated": "2026-10-15",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500399673",
+            "price": 100000.0,
+            "area": 400.0,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "The Waterford Thonglor 11, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-rent-500399673",
+            "updated": "2026-10-15",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500644877",
+            "price": 120000.0,
+            "area": 400.0,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "The Waterford Thonglor 11, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-rent-500644877",
+            "updated": "2026-10-14",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500643141",
+            "price": 100000.0,
+            "area": 400.0,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "The Waterford Thonglor 11, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-rent-500643141",
+            "updated": "2026-10-14",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500642328",
+            "price": 26000.0,
+            "area": 90.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "The Waterford Thonglor 11, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-rent-500642328",
+            "updated": "2026-10-14",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500415066",
+            "price": 120000.0,
+            "area": 400.0,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "The Waterford Thonglor 11, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-rent-500415066",
+            "updated": "2026-10-09",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500464771",
+            "price": 49000.0,
+            "area": 193.35,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "The Waterford Thonglor 11, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-rent-500464771",
+            "updated": "2026-10-07",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500336464",
+            "price": 120000.0,
+            "area": 400.0,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "The Waterford Thonglor 11, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-rent-500336464",
+            "updated": "2026-10-02",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "60180128",
+            "price": 75000.0,
+            "area": 200.0,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "The Waterford Thonglor 11, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-rent-60180128",
+            "updated": "2026-09-25",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500427406",
+            "price": 100000.0,
+            "area": 400.0,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "The Waterford Thonglor 11, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-waterford-thonglor-11-bangkok-for-rent-500427406",
+            "updated": "2026-09-23",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 3781,
+      "name": "Milestone Condominium",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Milestone%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3776,
+      "name": "Ratchayothin Place",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Ratchayothin%20Place",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 199,
+        "title": "Lumpini Place Ratchayothin",
+        "address": "1484 Phahonyothin Road, Chan Kasem, Chatuchak, Bangkok",
+        "district": "chatuchak",
+        "projectPage": null,
+        "ageDays": 2
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/199-lumpini-place-ratchayothin",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-rent/at-lumpini-place-ratchayothin-199",
+      "sampleCount": 5,
+      "market": {
+        "count": 5,
+        "observedCount": 5,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 12200,
+        "minimum": 10000.0,
+        "minimumArea": 28.0,
+        "averageSqm": 427,
+        "minimumSqm": 357.14,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-rent/at-lumpini-place-ratchayothin-199",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/lumpini-place-ratchayothin-bangkok-for-rent-500658628",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/lumpini-place-ratchayothin-bangkok-for-rent-500658628",
+        "byBedroom": {
+          "1": {
+            "count": 5,
+            "minimum": 10000.0,
+            "area": 28.0,
+            "minimumArea": 28.0,
+            "priceSqm": 357.14,
+            "minimumSqm": 357.14,
+            "sourceUrl": "https://www.ddproperty.com/en/property/lumpini-place-ratchayothin-bangkok-for-rent-500658628",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/lumpini-place-ratchayothin-bangkok-for-rent-500658628",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/lumpini-place-ratchayothin-bangkok-for-rent-500658628"
+          }
+        },
+        "samples": [
+          {
+            "id": "500671252",
+            "price": 14000.0,
+            "area": 28.5,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Lumpini Place Ratchayothin, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/lumpini-place-ratchayothin-bangkok-for-rent-500671252",
+            "updated": "2026-10-21",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500658906",
+            "price": 14000.0,
+            "area": 30.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Lumpini Place Ratchayothin, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/lumpini-place-ratchayothin-bangkok-for-rent-500658906",
+            "updated": "2026-10-21",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500667710",
+            "price": 11500.0,
+            "area": 28.03,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Lumpini Place Ratchayothin, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/lumpini-place-ratchayothin-bangkok-for-rent-500667710",
+            "updated": "2026-10-20",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500658628",
+            "price": 10000.0,
+            "area": 28.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Lumpini Place Ratchayothin, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/lumpini-place-ratchayothin-bangkok-for-rent-500658628",
+            "updated": "2026-10-17",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "7325054",
+            "price": 11500.0,
+            "area": 28.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Lumpini Place Ratchayothin, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/lumpini-place-ratchayothin-bangkok-for-rent-7325054",
+            "updated": "2026-10-03",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 3782,
+      "name": "The Wing Sathorn",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=The%20Wing%20Sathorn",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3782,
+      "name": "The Wing Sathorn",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=The%20Wing%20Sathorn",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3783,
+      "name": "The Trust Residence Nuanchan",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=The%20Trust%20Residence%20Nuanchan",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3783,
+      "name": "The Trust Residence Nuanchan",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=The%20Trust%20Residence%20Nuanchan",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3781,
+      "name": "Milestone Condominium",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Milestone%20Condominium",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 1744,
+        "title": "MileStone Condominium",
+        "address": "168 Seri Thai Road, Khlong Kum, Bueng Kum, Bangkok",
+        "district": "bueng kum",
+        "projectPage": null,
+        "ageDays": 13
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/1744-milestone-condominium",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-sale/at-milestone-condominium-1744",
+      "sampleCount": 5,
+      "market": {
+        "count": 5,
+        "observedCount": 5,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 1199013,
+        "minimum": 1050000.0,
+        "minimumArea": 29.5,
+        "averageSqm": 40890,
+        "minimumSqm": 35593.22,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-sale/at-milestone-condominium-1744",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/milestone-condominium-bangkok-for-sale-60175239",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/milestone-condominium-bangkok-for-sale-60175239",
+        "byBedroom": {
+          "1": {
+            "count": 4,
+            "minimum": 1172533.0,
+            "area": 29.35,
+            "minimumArea": 29.35,
+            "priceSqm": 39950.02,
+            "minimumSqm": 39950.02,
+            "sourceUrl": "https://www.ddproperty.com/en/property/milestone-condominium-bangkok-for-sale-60112098",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/milestone-condominium-bangkok-for-sale-60112098",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/milestone-condominium-bangkok-for-sale-60112098"
+          }
+        },
+        "samples": [
+          {
+            "id": "500290243",
+            "price": 1350000.0,
+            "area": 29.42,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "MileStone Condominium, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/milestone-condominium-bangkok-for-sale-500290243",
+            "updated": "2026-10-10",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "60112098",
+            "price": 1172533.0,
+            "area": 29.35,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "MileStone Condominium, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/milestone-condominium-bangkok-for-sale-60112098",
+            "updated": "2026-10-01",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500323249",
+            "price": 1250000.0,
+            "area": 29.35,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "MileStone Condominium, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/milestone-condominium-bangkok-for-sale-500323249",
+            "updated": "2026-09-29",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "60175239",
+            "price": 1050000.0,
+            "area": 29.5,
+            "beds": null,
+            "roomType": null,
+            "title": "MileStone Condominium, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/milestone-condominium-bangkok-for-sale-60175239",
+            "updated": "2026-09-26",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500506253",
+            "price": 1172533.0,
+            "area": 29.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "MileStone Condominium, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/milestone-condominium-bangkok-for-sale-500506253",
+            "updated": "2026-09-24",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11531682",
+            "price": 1200000.0,
+            "area": 29.35,
+            "beds": null,
+            "roomType": null,
+            "title": "MileStone Condominium, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/milestone-condominium-bangkok-for-sale-11531682",
+            "updated": "2026-09-22",
+            "sourceName": "DDproperty",
+            "listingStatus": "update_over_30d",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 3785,
+      "name": "Rishi Court",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Rishi%20Court",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3786,
+      "name": "Lumpini Ville Srinakarin - Bangna",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Lumpini%20Ville%20Srinakarin%20-%20Bangna",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3785,
+      "name": "Rishi Court",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Rishi%20Court",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3786,
+      "name": "Lumpini Ville Srinakarin - Bangna",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Lumpini%20Ville%20Srinakarin%20-%20Bangna",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3787,
+      "name": "Mahadthai Condotel",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Mahadthai%20Condotel",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3790,
+      "name": "Indra Condo Ville",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Indra%20Condo%20Ville",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3790,
+      "name": "Indra Condo Ville",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Indra%20Condo%20Ville",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3788,
+      "name": "H.R. Residence",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=H.R.%20Residence",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3795,
+      "name": "Chez Moi Bangkok Serviced Apartment",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Chez%20Moi%20Bangkok%20Serviced%20Apartment",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3795,
+      "name": "Chez Moi Bangkok Serviced Apartment",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Chez%20Moi%20Bangkok%20Serviced%20Apartment",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3798,
+      "name": "Supalai Ratchada Plaza Condominium",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Supalai%20Ratchada%20Plaza%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3798,
+      "name": "Supalai Ratchada Plaza Condominium",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Supalai%20Ratchada%20Plaza%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3799,
+      "name": "P. Pinklao Condominium 2",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=P.%20Pinklao%20Condominium%202",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3801,
+      "name": "The Master Montara Sathon-Rama 3",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=The%20Master%20Montara%20Sathon-Rama%203",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3801,
+      "name": "The Master Montara Sathon-Rama 3",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=The%20Master%20Montara%20Sathon-Rama%203",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3802,
+      "name": "D'Raj Residences",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=D%27Raj%20Residences",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3799,
+      "name": "P. Pinklao Condominium 2",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=P.%20Pinklao%20Condominium%202",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 12322,
+        "title": "P. Pinklao Condominium 2",
+        "address": "Khlong Chak Phra, Taling Chan, Bangkok",
+        "district": "taling chan",
+        "projectPage": null,
+        "ageDays": 20
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/12322-p-pinklao-condominium-2",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-sale/at-p-pinklao-condominium-2-12322",
+      "sampleCount": 3,
+      "market": {
+        "count": 3,
+        "observedCount": 3,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 493333,
+        "minimum": 480000.0,
+        "minimumArea": 23.8,
+        "averageSqm": 20641,
+        "minimumSqm": 20168.07,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-sale/at-p-pinklao-condominium-2-12322",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/p-pinklao-condominium-2-bangkok-for-sale-500520759",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/p-pinklao-condominium-2-bangkok-for-sale-500520759",
+        "byBedroom": {
+          "1": {
+            "count": 3,
+            "minimum": 480000.0,
+            "area": 23.8,
+            "minimumArea": 23.8,
+            "priceSqm": 20168.07,
+            "minimumSqm": 20168.07,
+            "sourceUrl": "https://www.ddproperty.com/en/property/p-pinklao-condominium-2-bangkok-for-sale-500520759",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/p-pinklao-condominium-2-bangkok-for-sale-500520759",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/p-pinklao-condominium-2-bangkok-for-sale-500520759"
+          }
+        },
+        "samples": [
+          {
+            "id": "500520799",
+            "price": 500000.0,
+            "area": 23.8,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "P. Pinklao Condominium 2, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/p-pinklao-condominium-2-bangkok-for-sale-500520799",
+            "updated": "2026-10-03",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500520759",
+            "price": 480000.0,
+            "area": 23.8,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "P. Pinklao Condominium 2, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/p-pinklao-condominium-2-bangkok-for-sale-500520759",
+            "updated": "2026-10-03",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500520819",
+            "price": 500000.0,
+            "area": 24.1,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "P. Pinklao Condominium 2, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/p-pinklao-condominium-2-bangkok-for-sale-500520819",
+            "updated": "2026-10-03",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 3806,
+      "name": "Ideo Mobi Rama4",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Ideo%20Mobi%20Rama4",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3805,
+      "name": "Udomsuk Condominium",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Udomsuk%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3806,
+      "name": "Ideo Mobi Rama4",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Ideo%20Mobi%20Rama4",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3809,
+      "name": "Pradipat Condominium",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Pradipat%20Condominium",
+      "status": "multiple_ddproperty_project_ids",
+      "candidates": [
+        {
+          "ddPropertyProjectId": 5417,
+          "title": "The Line Phahon-Pradipat",
+          "address": "21 Pradiphat Road, Samsen Nai, Phaya Thai, Bangkok",
+          "district": "phaya thai",
+          "projectPage": null,
+          "ageDays": 0
+        },
+        {
+          "ddPropertyProjectId": 6524,
+          "title": "The Reserve Phahol-Pradipat",
+          "address": "Soi Pradipat 23, Samsen Nai, Phaya Thai, Bangkok",
+          "district": "phaya thai",
+          "projectPage": null,
+          "ageDays": 11
+        },
+        {
+          "ddPropertyProjectId": 8608,
+          "title": "The Muve Pradipat",
+          "address": "9 Soi Pradipat 23, Samsen Nai, Phaya Thai, Bangkok",
+          "district": "phaya thai",
+          "projectPage": null,
+          "ageDays": 7
+        },
+        {
+          "ddPropertyProjectId": 12977,
+          "title": "Solace Condo Phahol Pradipat",
+          "address": "5 Pradiphat Rd, Samsen Nai, Phaya Thai, Bangkok",
+          "district": "phaya thai",
+          "projectPage": null,
+          "ageDays": 1
+        }
+      ]
+    },
+    {
+      "hipflatId": 3807,
+      "name": "Regent Ratchada Tower",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Regent%20Ratchada%20Tower",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3805,
+      "name": "Udomsuk Condominium",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Udomsuk%20Condominium",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 2057,
+        "title": "The Key Udomsuk",
+        "address": "6 Chaloem Phrakiat Rama 9 Soi 6, Nong Bon, Prawet, Bangkok",
+        "district": "prawet",
+        "projectPage": null,
+        "ageDays": 1
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/2057-the-key-udomsuk",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-sale/at-the-key-udomsuk-2057",
+      "sampleCount": 11,
+      "market": {
+        "count": 11,
+        "observedCount": 11,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 1990000,
+        "minimum": 1690000.0,
+        "minimumArea": 31.0,
+        "averageSqm": 61587,
+        "minimumSqm": 50000.0,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-sale/at-the-key-udomsuk-2057",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/the-key-udomsuk-bangkok-for-sale-11658219",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/the-key-udomsuk-bangkok-for-sale-500126755",
+        "byBedroom": {
+          "1": {
+            "count": 10,
+            "minimum": 1690000.0,
+            "area": 31.0,
+            "minimumArea": 31.0,
+            "priceSqm": 54516.13,
+            "minimumSqm": 54516.13,
+            "sourceUrl": "https://www.ddproperty.com/en/property/the-key-udomsuk-bangkok-for-sale-11658219",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/the-key-udomsuk-bangkok-for-sale-11658219",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/the-key-udomsuk-bangkok-for-sale-11658219"
+          },
+          "2": {
+            "count": 1,
+            "minimum": 2500000.0,
+            "area": 50.0,
+            "minimumArea": 50.0,
+            "priceSqm": 50000.0,
+            "minimumSqm": 50000.0,
+            "sourceUrl": "https://www.ddproperty.com/en/property/the-key-udomsuk-bangkok-for-sale-500126755",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/the-key-udomsuk-bangkok-for-sale-500126755",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/the-key-udomsuk-bangkok-for-sale-500126755"
+          }
+        },
+        "samples": [
+          {
+            "id": "500674770",
+            "price": 1790000.0,
+            "area": 32.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "The Key Udomsuk, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-key-udomsuk-bangkok-for-sale-500674770",
+            "updated": "2026-10-22",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500512274",
+            "price": 1790000.0,
+            "area": 30.4,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "The Key Udomsuk, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-key-udomsuk-bangkok-for-sale-500512274",
+            "updated": "2026-10-22",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500666070",
+            "price": 2250000.0,
+            "area": 32.32,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "The Key Udomsuk, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-key-udomsuk-bangkok-for-sale-500666070",
+            "updated": "2026-10-19",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500449921",
+            "price": 1790000.0,
+            "area": 30.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "The Key Udomsuk, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-key-udomsuk-bangkok-for-sale-500449921",
+            "updated": "2026-10-19",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500645794",
+            "price": 2250000.0,
+            "area": 32.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "The Key Udomsuk, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-key-udomsuk-bangkok-for-sale-500645794",
+            "updated": "2026-10-15",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11658219",
+            "price": 1690000.0,
+            "area": 31.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "The Key Udomsuk, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-key-udomsuk-bangkok-for-sale-11658219",
+            "updated": "2026-10-09",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500616584",
+            "price": 1950000.0,
+            "area": 30.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "The Key Udomsuk, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-key-udomsuk-bangkok-for-sale-500616584",
+            "updated": "2026-10-03",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500609637",
+            "price": 2300000.0,
+            "area": 31.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "The Key Udomsuk, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-key-udomsuk-bangkok-for-sale-500609637",
+            "updated": "2026-10-01",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500126755",
+            "price": 2500000.0,
+            "area": 50.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "The Key Udomsuk, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-key-udomsuk-bangkok-for-sale-500126755",
+            "updated": "2026-09-25",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500505694",
+            "price": 1790000.0,
+            "area": 30.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "The Key Udomsuk, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-key-udomsuk-bangkok-for-sale-500505694",
+            "updated": "2026-09-25",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500584868",
+            "price": 1790000.0,
+            "area": 30.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "The Key Udomsuk, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-key-udomsuk-bangkok-for-sale-500584868",
+            "updated": "2026-09-24",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 3809,
+      "name": "Pradipat Condominium",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Pradipat%20Condominium",
+      "status": "multiple_ddproperty_project_ids",
+      "candidates": [
+        {
+          "ddPropertyProjectId": 6524,
+          "title": "The Reserve Phahol-Pradipat",
+          "address": "Soi Pradipat 23, Samsen Nai, Phaya Thai, Bangkok",
+          "district": "phaya thai",
+          "projectPage": null,
+          "ageDays": 11
+        },
+        {
+          "ddPropertyProjectId": 5417,
+          "title": "The Line Phahon-Pradipat",
+          "address": "21 Pradiphat Road, Samsen Nai, Phaya Thai, Bangkok",
+          "district": "phaya thai",
+          "projectPage": null,
+          "ageDays": 2
+        }
+      ]
+    },
+    {
+      "hipflatId": 3810,
+      "name": "The Rich Sathorn Wongwian Yai",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=The%20Rich%20Sathorn%20Wongwian%20Yai",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3810,
+      "name": "The Rich Sathorn Wongwian Yai",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=The%20Rich%20Sathorn%20Wongwian%20Yai",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3811,
+      "name": "Metro Park Sathorn Phase 2/1",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Metro%20Park%20Sathorn%20Phase%202/1",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3811,
+      "name": "Metro Park Sathorn Phase 2/1",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Metro%20Park%20Sathorn%20Phase%202/1",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    }
+  ]
+}

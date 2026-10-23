@@ -1,0 +1,3092 @@
+{
+  "checkedAt": "2026-10-23",
+  "targetMarkets": 100,
+  "backfilledMarkets": 10,
+  "statuses": {
+    "no_exact_current_candidate_in_keyword_results": 86,
+    "verified_active_ddproperty_listings": 10,
+    "multiple_ddproperty_project_ids": 3,
+    "ddproperty_project_identity_mismatch": 1
+  },
+  "results": [
+    {
+      "hipflatId": 3995,
+      "name": "Mukdha Living Place",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Mukdha%20Living%20Place",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3996,
+      "name": "Wisetsuk",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Wisetsuk",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3996,
+      "name": "Wisetsuk",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Wisetsuk",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3999,
+      "name": "Niran Condotel 1",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Niran%20Condotel%201",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3999,
+      "name": "Niran Condotel 1",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Niran%20Condotel%201",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4000,
+      "name": "MY LOFT condo",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=MY%20LOFT%20condo",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4000,
+      "name": "MY LOFT condo",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=MY%20LOFT%20condo",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4001,
+      "name": "Piyathip Place",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Piyathip%20Place",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4002,
+      "name": "Belair Mansion",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Belair%20Mansion",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4002,
+      "name": "Belair Mansion",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Belair%20Mansion",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4008,
+      "name": "Bexley Mansion",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Bexley%20Mansion",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4008,
+      "name": "Bexley Mansion",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Bexley%20Mansion",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4006,
+      "name": "14 Place Apartment",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=14%20Place%20Apartment",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4006,
+      "name": "14 Place Apartment",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=14%20Place%20Apartment",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4009,
+      "name": "Thienchai Condo",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Thienchai%20Condo",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4009,
+      "name": "Thienchai Condo",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Thienchai%20Condo",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4015,
+      "name": "Uea Pracha Condo Town Building 10",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Uea%20Pracha%20Condo%20Town%20Building%2010",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4015,
+      "name": "Uea Pracha Condo Town Building 10",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Uea%20Pracha%20Condo%20Town%20Building%2010",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4018,
+      "name": "Srinakarin Condominium",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Srinakarin%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4019,
+      "name": "Sirin Residence Pattanakarn",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Sirin%20Residence%20Pattanakarn",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4018,
+      "name": "Srinakarin Condominium",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Srinakarin%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4020,
+      "name": "Palm estate",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Palm%20estate",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4020,
+      "name": "Palm estate",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Palm%20estate",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4024,
+      "name": "Raja Mansion",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Raja%20Mansion",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4024,
+      "name": "Raja Mansion",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Raja%20Mansion",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4028,
+      "name": "El Patio",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=El%20Patio",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4022,
+      "name": "Montiantip Condo Town",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Montiantip%20Condo%20Town",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 9933,
+        "title": "Montiantip Condo Town",
+        "address": "30 Soi Khi Suea Yai Samakkhi, Lat Phrao, Bangkok",
+        "district": "lat phrao",
+        "projectPage": null,
+        "ageDays": 8
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/9933-montiantip-condo-town",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-sale/at-montiantip-condo-town-9933",
+      "sampleCount": 2,
+      "market": {
+        "count": 2,
+        "observedCount": 2,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 955000,
+        "minimum": 950000.0,
+        "minimumArea": 28.38,
+        "averageSqm": 29189,
+        "minimumSqm": 24902.72,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-sale/at-montiantip-condo-town-9933",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/montiantip-condo-town-bangkok-for-sale-11285209",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/montiantip-condo-town-bangkok-for-sale-500550494",
+        "byBedroom": {
+          "1": {
+            "count": 2,
+            "minimum": 950000.0,
+            "area": 28.38,
+            "minimumArea": 28.38,
+            "priceSqm": 33474.28,
+            "minimumSqm": 24902.72,
+            "sourceUrl": "https://www.ddproperty.com/en/property/montiantip-condo-town-bangkok-for-sale-11285209",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/montiantip-condo-town-bangkok-for-sale-11285209",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/montiantip-condo-town-bangkok-for-sale-500550494"
+          }
+        },
+        "samples": [
+          {
+            "id": "11285209",
+            "price": 950000.0,
+            "area": 28.38,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Montiantip Condo Town, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/montiantip-condo-town-bangkok-for-sale-11285209",
+            "updated": "2026-10-15",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500550494",
+            "price": 960000.0,
+            "area": 38.55,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Montiantip Condo Town, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/montiantip-condo-town-bangkok-for-sale-500550494",
+            "updated": "2026-10-15",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 4028,
+      "name": "El Patio",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=El%20Patio",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4031,
+      "name": "Lumpini Place Rama III - Charoen Krung",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Lumpini%20Place%20Rama%20III%20-%20Charoen%20Krung",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4022,
+      "name": "Montiantip Condo Town",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Montiantip%20Condo%20Town",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 9933,
+        "title": "Montiantip Condo Town",
+        "address": "30 Soi Khi Suea Yai Samakkhi, Lat Phrao, Bangkok",
+        "district": "lat phrao",
+        "projectPage": null,
+        "ageDays": 13
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/9933-montiantip-condo-town",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-rent/at-montiantip-condo-town-9933",
+      "sampleCount": 1,
+      "market": {
+        "count": 1,
+        "observedCount": 1,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 5000,
+        "minimum": 5000.0,
+        "minimumArea": 30.0,
+        "averageSqm": 167,
+        "minimumSqm": 166.67,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-rent/at-montiantip-condo-town-9933",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/montiantip-condo-town-bangkok-for-rent-5174489",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/montiantip-condo-town-bangkok-for-rent-5174489",
+        "byBedroom": {},
+        "samples": [
+          {
+            "id": "5174489",
+            "price": 5000.0,
+            "area": 30.0,
+            "beds": null,
+            "roomType": null,
+            "title": "Montiantip Condo Town, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/montiantip-condo-town-bangkok-for-rent-5174489",
+            "updated": "2026-10-10",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 4031,
+      "name": "Lumpini Place Rama III - Charoen Krung",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Lumpini%20Place%20Rama%20III%20-%20Charoen%20Krung",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4034,
+      "name": "Dcondo Calm Ramkhamhaeng",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Dcondo%20Calm%20Ramkhamhaeng",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4034,
+      "name": "Dcondo Calm Ramkhamhaeng",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Dcondo%20Calm%20Ramkhamhaeng",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4037,
+      "name": "Tender Park",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Tender%20Park",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4037,
+      "name": "Tender Park",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Tender%20Park",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4038,
+      "name": "Lamsalee Ville",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Lamsalee%20Ville",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4038,
+      "name": "Lamsalee Ville",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Lamsalee%20Ville",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4040,
+      "name": "Watthanasuk Condominium",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Watthanasuk%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4040,
+      "name": "Watthanasuk Condominium",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Watthanasuk%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4032,
+      "name": "One bangkok residence",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=One%20bangkok%20residence",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 7082,
+        "title": "Tonson One Residence",
+        "address": "Soi Tonson, Ploenchit Road, Lumphini, Pathum Wan, Bangkok",
+        "district": "pathum wan",
+        "projectPage": null,
+        "ageDays": 1
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/7082-tonson-one-residence",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-sale/at-tonson-one-residence-7082",
+      "sampleCount": 39,
+      "market": {
+        "count": 39,
+        "observedCount": 39,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 51068453,
+        "minimum": 20500000.0,
+        "minimumArea": 57.0,
+        "averageSqm": 435223,
+        "minimumSqm": 352469.91,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-sale/at-tonson-one-residence-7082",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500422986",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500661359",
+        "byBedroom": {
+          "1": {
+            "count": 15,
+            "minimum": 20500000.0,
+            "area": 57.0,
+            "minimumArea": 57.0,
+            "priceSqm": 359649.12,
+            "minimumSqm": 359649.12,
+            "sourceUrl": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500422986",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500422986",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500422986"
+          },
+          "2": {
+            "count": 18,
+            "minimum": 31500000.0,
+            "area": 75.49,
+            "minimumArea": 75.49,
+            "priceSqm": 417273.81,
+            "minimumSqm": 352469.91,
+            "sourceUrl": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500422991",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500422991",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500661359"
+          },
+          "3": {
+            "count": 6,
+            "minimum": 80000000.0,
+            "area": 175.0,
+            "minimumArea": 175.0,
+            "priceSqm": 457142.86,
+            "minimumSqm": 457142.86,
+            "sourceUrl": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500422993",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500422993",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500422993"
+          }
+        },
+        "samples": [
+          {
+            "id": "500408842",
+            "price": 47900000.0,
+            "area": 117.85,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500408842",
+            "updated": "2026-10-03",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500422830",
+            "price": 27200000.0,
+            "area": 56.57,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500422830",
+            "updated": "2026-10-22",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500422984",
+            "price": 24000000.0,
+            "area": 57.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500422984",
+            "updated": "2026-10-22",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500422982",
+            "price": 27200000.0,
+            "area": 56.6,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500422982",
+            "updated": "2026-10-22",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500422993",
+            "price": 80000000.0,
+            "area": 175.0,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500422993",
+            "updated": "2026-10-22",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500422992",
+            "price": 26000000.0,
+            "area": 67.02,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500422992",
+            "updated": "2026-10-22",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500422991",
+            "price": 31500000.0,
+            "area": 75.49,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500422991",
+            "updated": "2026-10-22",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500422988",
+            "price": 40618200.0,
+            "area": 106.89,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500422988",
+            "updated": "2026-10-22",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500422987",
+            "price": 28000000.0,
+            "area": 56.57,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500422987",
+            "updated": "2026-10-22",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500422986",
+            "price": 20500000.0,
+            "area": 57.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500422986",
+            "updated": "2026-10-22",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500546648",
+            "price": 26000000.0,
+            "area": 67.02,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500546648",
+            "updated": "2026-10-20",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500423254",
+            "price": 25500000.0,
+            "area": 57.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500423254",
+            "updated": "2026-10-19",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500423242",
+            "price": 158000000.0,
+            "area": 254.1,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500423242",
+            "updated": "2026-10-19",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500661359",
+            "price": 41591449.0,
+            "area": 118.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500661359",
+            "updated": "2026-10-19",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500661378",
+            "price": 45600000.0,
+            "area": 118.44,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500661378",
+            "updated": "2026-10-19",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500609614",
+            "price": 48300000.0,
+            "area": 106.89,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500609614",
+            "updated": "2026-10-16",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500302282",
+            "price": 52000000.0,
+            "area": 107.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500302282",
+            "updated": "2026-10-16",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500554043",
+            "price": 25000000.0,
+            "area": 67.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500554043",
+            "updated": "2026-10-22",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500672131",
+            "price": 150000000.0,
+            "area": 254.12,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500672131",
+            "updated": "2026-10-21",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500671944",
+            "price": 90000000.0,
+            "area": 175.0,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500671944",
+            "updated": "2026-10-21",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500450840",
+            "price": 25800000.0,
+            "area": 67.2,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500450840",
+            "updated": "2026-10-18",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11764697",
+            "price": 26000000.0,
+            "area": 67.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-11764697",
+            "updated": "2026-10-17",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11639034",
+            "price": 48500000.0,
+            "area": 118.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-11639034",
+            "updated": "2026-10-17",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500653125",
+            "price": 46200000.0,
+            "area": 118.44,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500653125",
+            "updated": "2026-10-16",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500411190",
+            "price": 25800000.0,
+            "area": 67.2,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500411190",
+            "updated": "2026-10-16",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500544476",
+            "price": 46890000.0,
+            "area": 106.89,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500544476",
+            "updated": "2026-10-15",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500488665",
+            "price": 150000000.0,
+            "area": 254.0,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500488665",
+            "updated": "2026-10-15",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500458538",
+            "price": 48500000.0,
+            "area": 116.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500458538",
+            "updated": "2026-10-15",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11701258",
+            "price": 48290000.0,
+            "area": 107.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-11701258",
+            "updated": "2026-10-11",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "60162481",
+            "price": 48500000.0,
+            "area": 118.44,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-60162481",
+            "updated": "2026-10-07",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500622176",
+            "price": 150000000.0,
+            "area": 254.12,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500622176",
+            "updated": "2026-10-06",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11144868",
+            "price": 45000000.0,
+            "area": 118.44,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-11144868",
+            "updated": "2026-10-05",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "10860349",
+            "price": 46000000.0,
+            "area": 118.44,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-10860349",
+            "updated": "2026-10-04",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500384832",
+            "price": 25790000.0,
+            "area": 67.2,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500384832",
+            "updated": "2026-10-03",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500402197",
+            "price": 25800000.0,
+            "area": 67.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500402197",
+            "updated": "2026-10-02",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500454206",
+            "price": 25800000.0,
+            "area": 67.2,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500454206",
+            "updated": "2026-09-26",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500234882",
+            "price": 48500000.0,
+            "area": 118.44,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500234882",
+            "updated": "2026-09-23",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500234862",
+            "price": 48500000.0,
+            "area": 106.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-500234862",
+            "updated": "2026-09-23",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11473162",
+            "price": 46890000.0,
+            "area": 108.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-sale-11473162",
+            "updated": "2026-09-23",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 4043,
+      "name": "Nature Place 2",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Nature%20Place%202",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4045,
+      "name": "Prueksa Thani Condotel",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Prueksa%20Thani%20Condotel",
+      "status": "multiple_ddproperty_project_ids",
+      "candidates": [
+        {
+          "ddPropertyProjectId": 17021,
+          "title": "Prueksa Thani Condotel",
+          "address": "Soi On Nut 55/2, Prawet, Bangkok",
+          "district": "prawet",
+          "projectPage": null,
+          "ageDays": 13
+        },
+        {
+          "ddPropertyProjectId": 1285,
+          "title": "Prueksa Thani Fifth Condotel",
+          "address": "77 Soi On Nut 55/2, Prawet, Bangkok",
+          "district": "prawet",
+          "projectPage": null,
+          "ageDays": 0
+        }
+      ]
+    },
+    {
+      "hipflatId": 4045,
+      "name": "Prueksa Thani Condotel",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Prueksa%20Thani%20Condotel",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4043,
+      "name": "Nature Place 2",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Nature%20Place%202",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4050,
+      "name": "Ban Wada Park",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Ban%20Wada%20Park",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4048,
+      "name": "Still Sukhumvit 20",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Still%20Sukhumvit%2020",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4050,
+      "name": "Ban Wada Park",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Ban%20Wada%20Park",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4057,
+      "name": "Baan Suan Rachathani 2",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Baan%20Suan%20Rachathani%202",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4057,
+      "name": "Baan Suan Rachathani 2",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Baan%20Suan%20Rachathani%202",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4051,
+      "name": "The Marvel Residence Thonglor 5",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=The%20Marvel%20Residence%20Thonglor%205",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4060,
+      "name": "Sindhorn Lumpini (Langsuan)",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Sindhorn%20Lumpini%20%28Langsuan%29",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4032,
+      "name": "One bangkok residence",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=One%20bangkok%20residence",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 7082,
+        "title": "Tonson One Residence",
+        "address": "Soi Tonson, Ploenchit Road, Lumphini, Pathum Wan, Bangkok",
+        "district": "pathum wan",
+        "projectPage": null,
+        "ageDays": 1
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/7082-tonson-one-residence",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-rent/at-tonson-one-residence-7082",
+      "sampleCount": 76,
+      "market": {
+        "count": 76,
+        "observedCount": 76,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 161539,
+        "minimum": 71999.0,
+        "minimumArea": 60.0,
+        "averageSqm": 1575,
+        "minimumSqm": 1000.0,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-rent/at-tonson-one-residence-7082",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500116912",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-11498213",
+        "byBedroom": {
+          "1": {
+            "count": 25,
+            "minimum": 71999.0,
+            "area": 60.0,
+            "minimumArea": 60.0,
+            "priceSqm": 1199.98,
+            "minimumSqm": 1000.0,
+            "sourceUrl": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500116912",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500116912",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-11498213"
+          },
+          "2": {
+            "count": 42,
+            "minimum": 120000.0,
+            "area": 118.44,
+            "minimumArea": 118.44,
+            "priceSqm": 1013.17,
+            "minimumSqm": 1013.17,
+            "sourceUrl": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-60233364",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-60233364",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-60233364"
+          },
+          "3": {
+            "count": 8,
+            "minimum": 230000.0,
+            "area": 176.0,
+            "minimumArea": 176.0,
+            "priceSqm": 1306.82,
+            "minimumSqm": 1306.82,
+            "sourceUrl": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500406120",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500406120",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500406120"
+          }
+        },
+        "samples": [
+          {
+            "id": "500408852",
+            "price": 150000.0,
+            "area": 117.5,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500408852",
+            "updated": "2026-10-03",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500387689",
+            "price": 280000.0,
+            "area": 175.0,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500387689",
+            "updated": "2026-10-22",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500456627",
+            "price": 160000.0,
+            "area": 106.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500456627",
+            "updated": "2026-10-21",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500317016",
+            "price": 170000.0,
+            "area": 108.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500317016",
+            "updated": "2026-10-21",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500346041",
+            "price": 125000.0,
+            "area": 66.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500346041",
+            "updated": "2026-10-21",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11124545",
+            "price": 170000.0,
+            "area": 117.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-11124545",
+            "updated": "2026-10-21",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500258163",
+            "price": 170000.0,
+            "area": 117.5,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500258163",
+            "updated": "2026-10-21",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "60196630",
+            "price": 150000.0,
+            "area": 108.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-60196630",
+            "updated": "2026-10-21",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500541832",
+            "price": 150000.0,
+            "area": 107.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500541832",
+            "updated": "2026-10-20",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500590444",
+            "price": 100000.0,
+            "area": 57.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500590444",
+            "updated": "2026-10-20",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500583430",
+            "price": 125000.0,
+            "area": 66.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500583430",
+            "updated": "2026-10-19",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500086277",
+            "price": 159000.0,
+            "area": 106.89,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500086277",
+            "updated": "2026-10-19",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500247621",
+            "price": 125000.0,
+            "area": 66.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500247621",
+            "updated": "2026-10-19",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500662663",
+            "price": 135000.0,
+            "area": 67.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500662663",
+            "updated": "2026-10-19",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500593770",
+            "price": 280000.0,
+            "area": 176.0,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500593770",
+            "updated": "2026-10-17",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500000325",
+            "price": 170000.0,
+            "area": 117.5,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500000325",
+            "updated": "2026-10-21",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11683089",
+            "price": 170000.0,
+            "area": 128.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-11683089",
+            "updated": "2026-10-21",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500445192",
+            "price": 170000.0,
+            "area": 117.5,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500445192",
+            "updated": "2026-10-20",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500666538",
+            "price": 230000.0,
+            "area": 118.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500666538",
+            "updated": "2026-10-19",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500116962",
+            "price": 149000.0,
+            "area": 100.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500116962",
+            "updated": "2026-10-19",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500212287",
+            "price": 160000.0,
+            "area": 106.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500212287",
+            "updated": "2026-10-19",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500665036",
+            "price": 170000.0,
+            "area": 108.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500665036",
+            "updated": "2026-10-19",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500659563",
+            "price": 120000.0,
+            "area": 67.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500659563",
+            "updated": "2026-10-17",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11360611",
+            "price": 85000.0,
+            "area": 57.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-11360611",
+            "updated": "2026-10-17",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500655878",
+            "price": 125000.0,
+            "area": 66.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500655878",
+            "updated": "2026-10-16",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500221223",
+            "price": 170000.0,
+            "area": 108.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500221223",
+            "updated": "2026-10-16",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500220598",
+            "price": 280000.0,
+            "area": 175.0,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500220598",
+            "updated": "2026-10-16",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500189874",
+            "price": 140000.0,
+            "area": 68.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500189874",
+            "updated": "2026-10-15",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "60044080",
+            "price": 165000.0,
+            "area": 107.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-60044080",
+            "updated": "2026-10-15",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500406120",
+            "price": 230000.0,
+            "area": 176.0,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500406120",
+            "updated": "2026-10-14",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500640385",
+            "price": 150000.0,
+            "area": 108.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500640385",
+            "updated": "2026-10-14",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500116912",
+            "price": 71999.0,
+            "area": 60.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500116912",
+            "updated": "2026-10-12",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500350998",
+            "price": 230000.0,
+            "area": 118.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500350998",
+            "updated": "2026-10-12",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11117452",
+            "price": 170000.0,
+            "area": 117.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-11117452",
+            "updated": "2026-10-12",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500634891",
+            "price": 170000.0,
+            "area": 108.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500634891",
+            "updated": "2026-10-12",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500492573",
+            "price": 170000.0,
+            "area": 117.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500492573",
+            "updated": "2026-10-11",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500488114",
+            "price": 100000.0,
+            "area": 57.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500488114",
+            "updated": "2026-10-11",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11056434",
+            "price": 130000.0,
+            "area": 67.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-11056434",
+            "updated": "2026-10-09",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "10901348",
+            "price": 159000.0,
+            "area": 108.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-10901348",
+            "updated": "2026-10-09",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "60222522",
+            "price": 180000.0,
+            "area": 108.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-60222522",
+            "updated": "2026-10-09",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500161847",
+            "price": 170000.0,
+            "area": 118.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500161847",
+            "updated": "2026-10-08",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500625631",
+            "price": 170000.0,
+            "area": 116.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500625631",
+            "updated": "2026-10-07",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "60039457",
+            "price": 85000.0,
+            "area": 67.2,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-60039457",
+            "updated": "2026-10-07",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11106096",
+            "price": 170000.0,
+            "area": 117.5,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-11106096",
+            "updated": "2026-10-07",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500495083",
+            "price": 170000.0,
+            "area": 117.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500495083",
+            "updated": "2026-10-06",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500622378",
+            "price": 380000.0,
+            "area": 254.12,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500622378",
+            "updated": "2026-10-06",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500621374",
+            "price": 155000.0,
+            "area": 102.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500621374",
+            "updated": "2026-10-06",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "60233364",
+            "price": 120000.0,
+            "area": 118.44,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-60233364",
+            "updated": "2026-10-05",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500458087",
+            "price": 170000.0,
+            "area": 108.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500458087",
+            "updated": "2026-10-05",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500458039",
+            "price": 150000.0,
+            "area": 108.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500458039",
+            "updated": "2026-10-05",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500458009",
+            "price": 149000.0,
+            "area": 107.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500458009",
+            "updated": "2026-10-05",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500457986",
+            "price": 170000.0,
+            "area": 117.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500457986",
+            "updated": "2026-10-05",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500457960",
+            "price": 125000.0,
+            "area": 66.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500457960",
+            "updated": "2026-10-05",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500457942",
+            "price": 135000.0,
+            "area": 67.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500457942",
+            "updated": "2026-10-05",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500282594",
+            "price": 170000.0,
+            "area": 117.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500282594",
+            "updated": "2026-10-05",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500618718",
+            "price": 125000.0,
+            "area": 66.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500618718",
+            "updated": "2026-10-05",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500236738",
+            "price": 170000.0,
+            "area": 118.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500236738",
+            "updated": "2026-10-05",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500055701",
+            "price": 80000.0,
+            "area": 57.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500055701",
+            "updated": "2026-10-05",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500051283",
+            "price": 280000.0,
+            "area": 175.0,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500051283",
+            "updated": "2026-10-05",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500180883",
+            "price": 125000.0,
+            "area": 66.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500180883",
+            "updated": "2026-10-04",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500526982",
+            "price": 120000.0,
+            "area": 57.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500526982",
+            "updated": "2026-10-03",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11689692",
+            "price": 170000.0,
+            "area": 118.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-11689692",
+            "updated": "2026-10-02",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11788754",
+            "price": 150000.0,
+            "area": 108.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-11788754",
+            "updated": "2026-10-02",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11498213",
+            "price": 125000.0,
+            "area": 125.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-11498213",
+            "updated": "2026-10-02",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500227036",
+            "price": 380000.0,
+            "area": 253.0,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500227036",
+            "updated": "2026-10-02",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500193619",
+            "price": 230000.0,
+            "area": 175.0,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500193619",
+            "updated": "2026-10-01",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11405169",
+            "price": 150000.0,
+            "area": 108.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-11405169",
+            "updated": "2026-09-30",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500602605",
+            "price": 159000.0,
+            "area": 106.89,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500602605",
+            "updated": "2026-09-30",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500598060",
+            "price": 170000.0,
+            "area": 108.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500598060",
+            "updated": "2026-09-29",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11901846",
+            "price": 140000.0,
+            "area": 67.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-11901846",
+            "updated": "2026-09-28",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500187002",
+            "price": 85000.0,
+            "area": 58.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500187002",
+            "updated": "2026-09-28",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500496194",
+            "price": 150000.0,
+            "area": 106.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500496194",
+            "updated": "2026-09-27",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11854480",
+            "price": 125000.0,
+            "area": 66.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-11854480",
+            "updated": "2026-09-25",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11070435",
+            "price": 125000.0,
+            "area": 66.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-11070435",
+            "updated": "2026-09-23",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500182730",
+            "price": 125000.0,
+            "area": 66.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500182730",
+            "updated": "2026-09-23",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500000950",
+            "price": 90000.0,
+            "area": 67.0,
+            "beds": null,
+            "roomType": null,
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500000950",
+            "updated": "2026-09-23",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500487255",
+            "price": 72000.0,
+            "area": 57.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500487255",
+            "updated": "2026-09-21",
+            "sourceName": "DDproperty",
+            "listingStatus": "update_over_30d",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500122502",
+            "price": 170000.0,
+            "area": 108.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500122502",
+            "updated": "2026-09-21",
+            "sourceName": "DDproperty",
+            "listingStatus": "update_over_30d",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500122046",
+            "price": 150000.0,
+            "area": 106.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500122046",
+            "updated": "2026-09-21",
+            "sourceName": "DDproperty",
+            "listingStatus": "update_over_30d",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500181613",
+            "price": 140000.0,
+            "area": 68.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500181613",
+            "updated": "2026-09-21",
+            "sourceName": "DDproperty",
+            "listingStatus": "update_over_30d",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500137717",
+            "price": 230000.0,
+            "area": 118.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Tonson One Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/tonson-one-residence-bangkok-for-rent-500137717",
+            "updated": "2026-09-21",
+            "sourceName": "DDproperty",
+            "listingStatus": "update_over_30d",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 4061,
+      "name": "Happy Home Building D",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Happy%20Home%20Building%20D",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4061,
+      "name": "Happy Home Building D",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Happy%20Home%20Building%20D",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4060,
+      "name": "Sindhorn Lumpini (Langsuan)",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Sindhorn%20Lumpini%20%28Langsuan%29",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4062,
+      "name": "Chodtayakorn",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Chodtayakorn",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4062,
+      "name": "Chodtayakorn",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Chodtayakorn",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4063,
+      "name": "Airport Condominium",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Airport%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4063,
+      "name": "Airport Condominium",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Airport%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4065,
+      "name": "Niran Condominium 1",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Niran%20Condominium%201",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4065,
+      "name": "Niran Condominium 1",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Niran%20Condominium%201",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4067,
+      "name": "Varasupha Executive Place Phaholyothin 1",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Varasupha%20Executive%20Place%20Phaholyothin%201",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4067,
+      "name": "Varasupha Executive Place Phaholyothin 1",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Varasupha%20Executive%20Place%20Phaholyothin%201",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4069,
+      "name": "Bangkok Horizon Lazi",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Bangkok%20Horizon%20Lazi",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4070,
+      "name": "Jaspal Residence 2",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Jaspal%20Residence%202",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4070,
+      "name": "Jaspal Residence 2",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Jaspal%20Residence%202",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4073,
+      "name": "Zupreme C&C - Marketing for BKK Event",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Zupreme%20C%26C%20-%20Marketing%20for%20BKK%20Event",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4073,
+      "name": "Zupreme C&C - Marketing for BKK Event",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Zupreme%20C%26C%20-%20Marketing%20for%20BKK%20Event",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4075,
+      "name": "Elite Residence Rama 9 - Srinakarin",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Elite%20Residence%20Rama%209%20-%20Srinakarin",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4076,
+      "name": "5 Karat",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=5%20Karat",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4069,
+      "name": "Bangkok Horizon Lazi",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Bangkok%20Horizon%20Lazi",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 3125,
+        "title": "Bangkok Horizon Lazi",
+        "address": "กาญจนาภิเษก, Thung Wat Don, Sathon, Bangkok",
+        "district": "sathon",
+        "projectPage": null,
+        "ageDays": 23
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/3125-bangkok-horizon-lazi",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-sale/at-bangkok-horizon-lazi-3125",
+      "sampleCount": 1,
+      "market": {
+        "count": 1,
+        "observedCount": 1,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 2290000,
+        "minimum": 2290000.0,
+        "minimumArea": 27.0,
+        "averageSqm": 84815,
+        "minimumSqm": 84814.81,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-sale/at-bangkok-horizon-lazi-3125",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/bangkok-horizon-lazi-bangkok-for-sale-500562501",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/bangkok-horizon-lazi-bangkok-for-sale-500562501",
+        "byBedroom": {
+          "1": {
+            "count": 1,
+            "minimum": 2290000.0,
+            "area": 27.0,
+            "minimumArea": 27.0,
+            "priceSqm": 84814.81,
+            "minimumSqm": 84814.81,
+            "sourceUrl": "https://www.ddproperty.com/en/property/bangkok-horizon-lazi-bangkok-for-sale-500562501",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/bangkok-horizon-lazi-bangkok-for-sale-500562501",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/bangkok-horizon-lazi-bangkok-for-sale-500562501"
+          }
+        },
+        "samples": [
+          {
+            "id": "500562501",
+            "price": 2290000.0,
+            "area": 27.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Bangkok Horizon Lazi, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/bangkok-horizon-lazi-bangkok-for-sale-500562501",
+            "updated": "2026-09-30",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 4077,
+      "name": "Paradise Sukhumvit",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Paradise%20Sukhumvit",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4078,
+      "name": "Grass Suites",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Grass%20Suites",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4077,
+      "name": "Paradise Sukhumvit",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Paradise%20Sukhumvit",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4078,
+      "name": "Grass Suites",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Grass%20Suites",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4076,
+      "name": "5 Karat",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=5%20Karat",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 9504,
+        "title": "5 Karat Villa Ramkhamhaeng",
+        "address": "184 Soi Supapong 2/2, Hua Mak, Bang Kapi, Bangkok",
+        "district": "bang kapi",
+        "projectPage": null,
+        "ageDays": 21
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/9504-5-karat-villa-ramkhamhaeng",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-sale/at-5-karat-villa-ramkhamhaeng-9504",
+      "sampleCount": 2,
+      "market": {
+        "count": 2,
+        "observedCount": 2,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 2400000,
+        "minimum": 2400000.0,
+        "minimumArea": 88.0,
+        "averageSqm": 25636,
+        "minimumSqm": 24000.0,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-sale/at-5-karat-villa-ramkhamhaeng-9504",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/5-karat-villa-ramkhamhaeng-bangkok-for-sale-500361202",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/5-karat-villa-ramkhamhaeng-bangkok-for-sale-500608235",
+        "byBedroom": {
+          "2": {
+            "count": 2,
+            "minimum": 2400000.0,
+            "area": 88.0,
+            "minimumArea": 88.0,
+            "priceSqm": 27272.73,
+            "minimumSqm": 24000.0,
+            "sourceUrl": "https://www.ddproperty.com/en/property/5-karat-villa-ramkhamhaeng-bangkok-for-sale-500361202",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/5-karat-villa-ramkhamhaeng-bangkok-for-sale-500361202",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/5-karat-villa-ramkhamhaeng-bangkok-for-sale-500608235"
+          }
+        },
+        "samples": [
+          {
+            "id": "500361202",
+            "price": 2400000.0,
+            "area": 88.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "5 Karat Villa Ramkhamhaeng, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/5-karat-villa-ramkhamhaeng-bangkok-for-sale-500361202",
+            "updated": "2026-10-02",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500608235",
+            "price": 2400000.0,
+            "area": 100.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "5 Karat Villa Ramkhamhaeng, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/5-karat-villa-ramkhamhaeng-bangkok-for-sale-500608235",
+            "updated": "2026-10-01",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 4081,
+      "name": "Plum Condo Chaengwattana (phase - 2)",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Plum%20Condo%20Chaengwattana%20%28phase%20-%202%29",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4085,
+      "name": "Supalai Elite Sukhumvit 39",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Supalai%20Elite%20Sukhumvit%2039",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4081,
+      "name": "Plum Condo Chaengwattana (phase - 2)",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Plum%20Condo%20Chaengwattana%20%28phase%20-%202%29",
+      "status": "ddproperty_project_identity_mismatch",
+      "candidate": {
+        "ddPropertyProjectId": 10854,
+        "title": "Plum Condo Chaengwattana Station Phase 2",
+        "address": "Soi Chaengwattana 1, Yeak 1, Talat Bang Khen, Lak Si, Bangkok",
+        "district": "bang khen",
+        "projectPage": null,
+        "ageDays": 3
+      },
+      "ddProject": {
+        "id": 10854,
+        "name": "Plum Condo Chaengwattana Station Phase 2",
+        "district": "Lak Si"
+      }
+    },
+    {
+      "hipflatId": 4080,
+      "name": "I - Zen Ekamai - Ramindra",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=I%20-%20Zen%20Ekamai%20-%20Ramindra",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 6912,
+        "title": "I-Zen Ekamai-Ramindra",
+        "address": "Soi Nakniwas 45, Lat Phrao, Bangkok",
+        "district": "lat phrao",
+        "projectPage": null,
+        "ageDays": 15
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/6912-i-zen-ekamai-ramindra",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-sale/at-i-zen-ekamai-ramindra-6912",
+      "sampleCount": 1,
+      "market": {
+        "count": 1,
+        "observedCount": 1,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 1940000,
+        "minimum": 1940000.0,
+        "minimumArea": 37.0,
+        "averageSqm": 52432,
+        "minimumSqm": 52432.43,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-sale/at-i-zen-ekamai-ramindra-6912",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/i-zen-ekamai-ramindra-bangkok-for-sale-60143988",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/i-zen-ekamai-ramindra-bangkok-for-sale-60143988",
+        "byBedroom": {
+          "1": {
+            "count": 1,
+            "minimum": 1940000.0,
+            "area": 37.0,
+            "minimumArea": 37.0,
+            "priceSqm": 52432.43,
+            "minimumSqm": 52432.43,
+            "sourceUrl": "https://www.ddproperty.com/en/property/i-zen-ekamai-ramindra-bangkok-for-sale-60143988",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/i-zen-ekamai-ramindra-bangkok-for-sale-60143988",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/i-zen-ekamai-ramindra-bangkok-for-sale-60143988"
+          }
+        },
+        "samples": [
+          {
+            "id": "60143988",
+            "price": 1940000.0,
+            "area": 37.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "I-Zen Ekamai-Ramindra, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/i-zen-ekamai-ramindra-bangkok-for-sale-60143988",
+            "updated": "2026-10-08",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 4087,
+      "name": "Baan Boonpitak",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Baan%20Boonpitak",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4080,
+      "name": "I - Zen Ekamai - Ramindra",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=I%20-%20Zen%20Ekamai%20-%20Ramindra",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 6912,
+        "title": "I-Zen Ekamai-Ramindra",
+        "address": "Soi Nakniwas 45, Lat Phrao, Bangkok",
+        "district": "lat phrao",
+        "projectPage": null,
+        "ageDays": 2
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/6912-i-zen-ekamai-ramindra",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-rent/at-i-zen-ekamai-ramindra-6912",
+      "sampleCount": 3,
+      "market": {
+        "count": 3,
+        "observedCount": 3,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 11333,
+        "minimum": 10000.0,
+        "minimumArea": 30.0,
+        "averageSqm": 300,
+        "minimumSqm": 260.0,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-rent/at-i-zen-ekamai-ramindra-6912",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/i-zen-ekamai-ramindra-bangkok-for-rent-500628849",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/i-zen-ekamai-ramindra-bangkok-for-rent-500586305",
+        "byBedroom": {
+          "1": {
+            "count": 3,
+            "minimum": 10000.0,
+            "area": 30.0,
+            "minimumArea": 30.0,
+            "priceSqm": 333.33,
+            "minimumSqm": 260.0,
+            "sourceUrl": "https://www.ddproperty.com/en/property/i-zen-ekamai-ramindra-bangkok-for-rent-500628849",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/i-zen-ekamai-ramindra-bangkok-for-rent-500628849",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/i-zen-ekamai-ramindra-bangkok-for-rent-500586305"
+          }
+        },
+        "samples": [
+          {
+            "id": "500042151",
+            "price": 11000.0,
+            "area": 35.9,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "I-Zen Ekamai-Ramindra, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/i-zen-ekamai-ramindra-bangkok-for-rent-500042151",
+            "updated": "2026-10-21",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500628849",
+            "price": 10000.0,
+            "area": 30.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "I-Zen Ekamai-Ramindra, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/i-zen-ekamai-ramindra-bangkok-for-rent-500628849",
+            "updated": "2026-10-08",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500586305",
+            "price": 13000.0,
+            "area": 50.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "I-Zen Ekamai-Ramindra, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/i-zen-ekamai-ramindra-bangkok-for-rent-500586305",
+            "updated": "2026-09-24",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 4088,
+      "name": "Grand 39 Tower",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Grand%2039%20Tower",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4091,
+      "name": "Chaengwattana 12 Condo Town",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Chaengwattana%2012%20Condo%20Town",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4090,
+      "name": "Chanarat Place",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Chanarat%20Place",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4092,
+      "name": "Huay Kwang Condominium",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Huay%20Kwang%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4092,
+      "name": "Huay Kwang Condominium",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Huay%20Kwang%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4093,
+      "name": "Thanapat Mini Condo Vill",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Thanapat%20Mini%20Condo%20Vill",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4094,
+      "name": "The Seed Atom",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=The%20Seed%20Atom",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4093,
+      "name": "Thanapat Mini Condo Vill",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Thanapat%20Mini%20Condo%20Vill",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4094,
+      "name": "The Seed Atom",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=The%20Seed%20Atom",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4090,
+      "name": "Chanarat Place",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Chanarat%20Place",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 10848,
+        "title": "Chanarat Place",
+        "address": "Soi Sukhumvit 31, Khlongtoei Nua, Watthana, Bangkok",
+        "district": "watthana",
+        "projectPage": null,
+        "ageDays": 1
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/10848-chanarat-place",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-rent/at-chanarat-place-10848",
+      "sampleCount": 12,
+      "market": {
+        "count": 12,
+        "observedCount": 12,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 60417,
+        "minimum": 45000.0,
+        "minimumArea": 90.0,
+        "averageSqm": 547,
+        "minimumSqm": 447.37,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-rent/at-chanarat-place-10848",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/chanarat-place-bangkok-for-rent-500570262",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/chanarat-place-bangkok-for-rent-11363734",
+        "byBedroom": {
+          "2": {
+            "count": 9,
+            "minimum": 45000.0,
+            "area": 90.0,
+            "minimumArea": 90.0,
+            "priceSqm": 500.0,
+            "minimumSqm": 500.0,
+            "sourceUrl": "https://www.ddproperty.com/en/property/chanarat-place-bangkok-for-rent-500570262",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/chanarat-place-bangkok-for-rent-500570262",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/chanarat-place-bangkok-for-rent-500570262"
+          },
+          "3": {
+            "count": 3,
+            "minimum": 85000.0,
+            "area": 190.0,
+            "minimumArea": 190.0,
+            "priceSqm": 447.37,
+            "minimumSqm": 447.37,
+            "sourceUrl": "https://www.ddproperty.com/en/property/chanarat-place-bangkok-for-rent-11363734",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/chanarat-place-bangkok-for-rent-11363734",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/chanarat-place-bangkok-for-rent-11363734"
+          }
+        },
+        "samples": [
+          {
+            "id": "11363734",
+            "price": 85000.0,
+            "area": 190.0,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "Chanarat Place, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/chanarat-place-bangkok-for-rent-11363734",
+            "updated": "2026-10-22",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500570262",
+            "price": 45000.0,
+            "area": 90.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Chanarat Place, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/chanarat-place-bangkok-for-rent-500570262",
+            "updated": "2026-10-20",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11223239",
+            "price": 55000.0,
+            "area": 90.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Chanarat Place, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/chanarat-place-bangkok-for-rent-11223239",
+            "updated": "2026-10-07",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500622505",
+            "price": 60000.0,
+            "area": 90.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Chanarat Place, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/chanarat-place-bangkok-for-rent-500622505",
+            "updated": "2026-10-06",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500462229",
+            "price": 50000.0,
+            "area": 91.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Chanarat Place, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/chanarat-place-bangkok-for-rent-500462229",
+            "updated": "2026-10-06",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500461263",
+            "price": 50000.0,
+            "area": 90.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Chanarat Place, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/chanarat-place-bangkok-for-rent-500461263",
+            "updated": "2026-10-06",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11087307",
+            "price": 55000.0,
+            "area": 90.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Chanarat Place, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/chanarat-place-bangkok-for-rent-11087307",
+            "updated": "2026-10-04",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11088059",
+            "price": 50000.0,
+            "area": 90.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Chanarat Place, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/chanarat-place-bangkok-for-rent-11088059",
+            "updated": "2026-10-02",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11088089",
+            "price": 85000.0,
+            "area": 190.0,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "Chanarat Place, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/chanarat-place-bangkok-for-rent-11088089",
+            "updated": "2026-09-30",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11223256",
+            "price": 85000.0,
+            "area": 190.0,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "Chanarat Place, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/chanarat-place-bangkok-for-rent-11223256",
+            "updated": "2026-09-29",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500510979",
+            "price": 50000.0,
+            "area": 90.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Chanarat Place, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/chanarat-place-bangkok-for-rent-500510979",
+            "updated": "2026-09-25",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11855900",
+            "price": 55000.0,
+            "area": 90.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Chanarat Place, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/chanarat-place-bangkok-for-rent-11855900",
+            "updated": "2026-09-24",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 4095,
+      "name": "Kuruthanee Privacy",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Kuruthanee%20Privacy",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4096,
+      "name": "Kiatprapa Condo Town",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Kiatprapa%20Condo%20Town",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4096,
+      "name": "Kiatprapa Condo Town",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Kiatprapa%20Condo%20Town",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4098,
+      "name": "The Heritage Condominium",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=The%20Heritage%20Condominium",
+      "status": "multiple_ddproperty_project_ids",
+      "candidates": [
+        {
+          "ddPropertyProjectId": 89,
+          "title": "The Heritage Condominium",
+          "address": "Soi Sukhumvit 8, Khlong Toei, Bangkok",
+          "district": "khlong toei",
+          "projectPage": null,
+          "ageDays": 7
+        },
+        {
+          "ddPropertyProjectId": 380,
+          "title": "Silver Heritage",
+          "address": "96 Soi Sukhumvit 38, Phra Kanong, Khlong Toei, Bangkok",
+          "district": "khlong toei",
+          "projectPage": null,
+          "ageDays": 2
+        }
+      ]
+    },
+    {
+      "hipflatId": 4104,
+      "name": "Sriburin Condo",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Sriburin%20Condo",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4098,
+      "name": "The Heritage Condominium",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=The%20Heritage%20Condominium",
+      "status": "multiple_ddproperty_project_ids",
+      "candidates": [
+        {
+          "ddPropertyProjectId": 89,
+          "title": "The Heritage Condominium",
+          "address": "Soi Sukhumvit 8, Khlong Toei, Bangkok",
+          "district": "khlong toei",
+          "projectPage": null,
+          "ageDays": 4
+        },
+        {
+          "ddPropertyProjectId": 380,
+          "title": "Silver Heritage",
+          "address": "96 Soi Sukhumvit 38, Phra Kanong, Khlong Toei, Bangkok",
+          "district": "khlong toei",
+          "projectPage": null,
+          "ageDays": 1
+        }
+      ]
+    },
+    {
+      "hipflatId": 4104,
+      "name": "Sriburin Condo",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Sriburin%20Condo",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 4111,
+      "name": "Wealth Garden Family House",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Wealth%20Garden%20Family%20House",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 645,
+        "title": "Wealth Garden Family House condominium",
+        "address": "Ladprao, Lat Phrao, Bangkok",
+        "district": "lat phrao",
+        "projectPage": null,
+        "ageDays": 17
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/645-wealth-garden-family-house-condominium",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-sale/at-wealth-garden-family-house-condominium-645",
+      "sampleCount": 1,
+      "market": {
+        "count": 1,
+        "observedCount": 1,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 1900000,
+        "minimum": 1900000.0,
+        "minimumArea": 60.0,
+        "averageSqm": 31667,
+        "minimumSqm": 31666.67,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-sale/at-wealth-garden-family-house-condominium-645",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/wealth-garden-family-house-condominium-bangkok-for-sale-500468623",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/wealth-garden-family-house-condominium-bangkok-for-sale-500468623",
+        "byBedroom": {
+          "2": {
+            "count": 1,
+            "minimum": 1900000.0,
+            "area": 60.0,
+            "minimumArea": 60.0,
+            "priceSqm": 31666.67,
+            "minimumSqm": 31666.67,
+            "sourceUrl": "https://www.ddproperty.com/en/property/wealth-garden-family-house-condominium-bangkok-for-sale-500468623",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/wealth-garden-family-house-condominium-bangkok-for-sale-500468623",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/wealth-garden-family-house-condominium-bangkok-for-sale-500468623"
+          }
+        },
+        "samples": [
+          {
+            "id": "500468623",
+            "price": 1900000.0,
+            "area": 60.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Wealth Garden Family House condominium, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/wealth-garden-family-house-condominium-bangkok-for-sale-500468623",
+            "updated": "2026-10-06",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    }
+  ]
+}
