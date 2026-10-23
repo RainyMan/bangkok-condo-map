@@ -1,0 +1,67 @@
+{
+  "hipflatId": 3122,
+  "projectName": "Belgravia Ratchada 17",
+  "checkedAt": "2026-10-23",
+  "coordinates": {
+    "verified": true,
+    "source": "https://propertyhub.in.th/en/projects/the-belgravia-ratchada-17",
+    "projectPage": "https://www.thegolden-development.com/en/properties/belgravia-ratchada-17"
+  },
+  "sale": {
+    "verifiedSecondhandListings": 0,
+    "sources": [
+      "https://propertyhub.in.th/en/condo-for-sale/project-the-belgravia-ratchada-17",
+      "https://www.ddproperty.com/en/project/14821-the-belgravia-ratchada-17"
+    ],
+    "excludedCandidate": {
+      "sourceName": "Livinginsider 同名搜尋結果（排除）",
+      "price": 3450000,
+      "area": 829.44,
+      "url": "https://www.livinginsider.com/en/project/the-belgravia-ratchada-17-condo-buysell",
+      "reason": "摘要顯示 11 樓、829.44㎡，但專案資料為 8 層，開發商公布住宅戶型約 26.95–39㎡；Livinginsider 專案頁亦顯示該條件下未找到掛牌，未取得可核實的單筆售盤連結，排除。"
+    },
+    "developerStartingPriceExcluded": {
+      "url": "https://www.thegolden-development.com/en/properties/belgravia-ratchada-17",
+      "reason": "專案銷售起價，沒有可識別的二手單位及室內面積。"
+    }
+  },
+  "rentSamples": [
+    {
+      "id": "6379931",
+      "price": 16500,
+      "area": 28.5,
+      "priceSqm": 579,
+      "beds": 1,
+      "roomType": "1BR",
+      "title": "The Belgravia @ Ratchada 17 · 1 房 · 28.5 ㎡ · ฿16,500/月",
+      "url": "https://propertyhub.in.th/en/listings/condo-for-rent-at-the-belgravia-ratchada-17-p6909004---6379931",
+      "sourceName": "PropertyHub",
+      "projectName": "The Belgravia @ Ratchada 17",
+      "updated": null,
+      "checkedAt": "2026-10-23",
+      "matchedBy": "exact_project_route_listing_and_direct_listing_detail",
+      "listingStatus": "availability_unconfirmed_direct_page_update_date_missing",
+      "verificationNote": "PropertyHub 專案出租頁顯示此 1 房租盤為 ฿16,500/月、28.5㎡，並標示 UPDATE；個別物件頁 Last Update 欄為空，尚未向刊登者確認仍可出租。"
+    },
+    {
+      "id": "6170172",
+      "price": 18000,
+      "area": 34,
+      "priceSqm": 529,
+      "beds": 2,
+      "roomType": "2BR",
+      "title": "For Rent : Belgavia Ratchada 17 · 2 房 · 34 ㎡ · ฿18,000/月",
+      "url": "https://propertyhub.in.th/en/listings/for-rent-belgavia-ratchada-17---6170172",
+      "sourceName": "PropertyHub",
+      "projectName": "The Belgravia @ Ratchada 17",
+      "updated": null,
+      "checkedAt": "2026-10-19",
+      "matchedBy": "exact_project_name_and_unit_details",
+      "listingStatus": "availability_unconfirmed_date_unknown"
+    }
+  ],
+  "yield": {
+    "status": "not_calculated",
+    "reason": "沒有可核實的二手出售掛牌，不能計算一房或兩房投報。"
+  }
+}
