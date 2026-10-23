@@ -367,6 +367,30 @@
         rentRooms[key] = { ...current, beds: count, minimum: price, area, minimumSqm: sampleRate, minimumSourceUrl: sample.url, minimumSqmSourceUrl: sample.url, sourceUrl: sample.url, marketSummary: false };
       }
     });
+    const rentBasisForRoom = (key, saleArea) => {
+      if (!(Number(saleArea) > 0)) return { monthlyRent: 0, sourceUrl: null, method: 'missing' };
+      const room = rentRooms[String(key)] || {};
+      const rows = rentSamples.filter(sample => sample?.specialAsset !== true && bedroomCountForSample(sample) === Number(key) && yieldSampleIsCurrent(sample) && isDirectListingUrl(sample?.url) && Number(sample.price) > 0 && Number(sample.area) > 0);
+      const lowestTotal = [...rows].sort((a, b) => Number(a.price) - Number(b.price))[0] || null;
+      const lowestRate = [...rows].sort((a, b) => Number(a.price) / Number(a.area) - Number(b.price) / Number(b.area))[0] || null;
+      if (lowestTotal && Math.abs(Number(lowestTotal.area) - Number(saleArea)) <= 2) {
+        return { monthlyRent: Number(lowestTotal.price), sourceUrl: lowestTotal.url, method: 'matched-area', rentArea: Number(lowestTotal.area) };
+      }
+      if (lowestRate) {
+        const rate = Number(lowestRate.price) / Number(lowestRate.area);
+        return { monthlyRent: rate * Number(saleArea), sourceUrl: lowestRate.url, method: 'per-sqm', rentArea: Number(lowestRate.area), rate };
+      }
+      const summaryUrl = room.minimumSourceUrl || room.sourceUrl || room.minimumSqmSourceUrl;
+      const summaryIsCurrent = yieldSourceIsCurrent(rentSamples, summaryUrl);
+      const summaryRent = summaryIsCurrent ? Number(room.minimum || room.average || 0) : 0;
+      const summaryArea = Number(room.minimumArea || (isDirectListingUrl(summaryUrl) ? room.area : 0) || (Number(room.average || 0) > 0 && Number(room.averageSqm || 0) > 0 ? Number(room.average) / Number(room.averageSqm) : 0));
+      const summaryRate = Number(room.minimumSqm || room.averageSqm || (summaryRent > 0 && summaryArea > 0 ? summaryRent / summaryArea : 0));
+      if (summaryRent > 0 && summaryArea > 0 && Math.abs(summaryArea - Number(saleArea)) <= 2) {
+        return { monthlyRent: summaryRent, sourceUrl: summaryUrl, method: 'matched-area', rentArea: summaryArea };
+      }
+      if (summaryRate > 0) return { monthlyRent: summaryRate * Number(saleArea), sourceUrl: room.minimumSqmSourceUrl || summaryUrl, method: 'per-sqm', rentArea: summaryArea || null, rate: summaryRate };
+      return { monthlyRent: 0, sourceUrl: summaryUrl, method: 'missing' };
+    };
     const roomOptions = Object.entries(saleRooms).filter(([, row]) => Number(row.minimum || row.average) > 0);
     // Default to the lowest-priced available bedroom category that also has
     // a matching rent rate. The map yield is calculated across every such type.
@@ -378,10 +402,8 @@
       const saleUrl = saleRow?.url || room.minimumSourceUrl || room.sourceUrl;
       const salePrice = Number(saleRow?.price || (isDirectListingUrl(saleUrl) ? room.minimum : 0) || room.average || 0);
       const saleArea = Number(saleRow?.area || (isDirectListingUrl(saleUrl) ? room.minimumArea || room.area : 0) || (room.average > 0 && room.averageSqm > 0 ? room.average / room.averageSqm : 0));
-      const rentRows = rentSamples.filter(sample => bedroomCountForSample(sample) === Number(key) && yieldSampleIsCurrent(sample) && isDirectListingUrl(sample?.url) && Number(sample.price) > 0 && Number(sample.area) > 0);
-      const rentRow = rentRows.sort((a, b) => Number(a.price) - Number(b.price))[0];
-      const rentUrl = rentRow?.url || rentRoom.minimumSourceUrl || rentRoom.sourceUrl;
-      const monthlyRent = Number(rentRow?.price || (yieldSourceIsCurrent(rentSamples, rentUrl) ? rentRoom.minimum : 0) || rentRoom.average || 0);
+      const rentBasis = rentBasisForRoom(key, saleArea);
+      const monthlyRent = Number(rentBasis.monthlyRent || 0);
       return salePrice > 0 && saleArea > 0 && monthlyRent > 0
         ? (monthlyRent * 11 - Number(c.fee?.rate || 0) * saleArea * 12) / salePrice * 100
         : null;
@@ -435,12 +457,8 @@
     const salePrice = Number(selectedRoomMinimum || roomAveragePrice || (!chosenBeds ? c.sale?.minimum : 0) || 0);
     const saleArea = Number((roomSample?.area) || (!selectedRoomMinimum ? roomAverageArea : null) || (!chosenBeds ? c.sale?.minimumArea || lowestSaleSample?.area : null) || 0);
     const roomRent = chosenBeds ? rentRooms[chosenBeds] : null;
-    const roomRentListings = chosenBeds ? rentSamples.filter(sample => sample?.specialAsset !== true && yieldSampleIsCurrent(sample) && isDirectListingUrl(sample?.url) && bedroomCountForSample(sample) === Number(chosenBeds) && Number(sample.price) > 0 && Number(sample.area) > 0) : [];
-    const rentSample = roomRentListings.sort((a, b) => Number(a.price) - Number(b.price))[0] || null;
-    const roomRentUrl = roomRent?.minimumSourceUrl || roomRent?.sourceUrl;
-    const rentMinimum = roomRent && yieldSourceIsCurrent(rentSamples, roomRentUrl) ? Number(roomRent.minimum || 0) : 0;
-    const rentAverage = Number(roomRent?.average || 0);
-    const monthlyRent = Number(rentSample?.price || rentMinimum || rentAverage || 0);
+    const selectedRentBasis = chosenBeds ? rentBasisForRoom(chosenBeds, saleArea) : { monthlyRent: Number(c.rent?.minimum || 0), sourceUrl: c.rent?.minimumSourceUrl, method: 'per-sqm' };
+    const monthlyRent = Number(selectedRentBasis.monthlyRent || 0);
     return {
       // Keep the exact lowest same-bedroom sale total. Missing matching rent
       // evidence must not trigger an unrelated project-wide price/sqm fallback.
@@ -450,7 +468,8 @@
       beds: chosenBeds || room?.beds || c.beds || null,
       isRoomStart: Boolean(selectedRoomMinimum), isRoomAverage: Boolean(!selectedRoomMinimum && roomAveragePrice),
       saleSourceUrl: roomSample?.url || (!room ? c.sale?.minimumSourceUrl : null),
-      rentSourceUrl: rentSample?.url || roomRentUrl || c.rent?.minimumSourceUrl,
+      rentSourceUrl: selectedRentBasis.sourceUrl || roomRent?.minimumSourceUrl || roomRent?.sourceUrl || c.rent?.minimumSourceUrl,
+      rentBasis: selectedRentBasis.method, rentArea: selectedRentBasis.rentArea || null, rentRate: selectedRentBasis.rate || null,
       rentFallback: false, rentFallbackBeds: null,
       roomOptions,
     };
@@ -947,7 +966,7 @@
       ${localListingSection}
       ${manualSaleSection}
       <section class="detail-section"><p class="section-label">管理費參考 <span>需向管委會確認</span></p>${feeText}${c.fee?.source ? `<div class="source-links"><a href="${esc(c.fee.source)}" target="_blank" rel="noopener">管理費來源 ↗</a></div>` : ''}</section>
-      ${hasYieldData(c) ? `<section class="detail-section yield-section"><div class="yield-heading"><p class="section-label">年租金報酬試算 <span>${isAllRoomYield ? yieldRoomSummary.rows.length ? `1、2 房投報 · 採較高值` : '整體行情估算' : yieldDefaults.beds && !(yieldDefaults.rent > 0) ? '待補同房型租盤' : yieldDefaults.isRoomStart ? `${yieldDefaults.beds || ''} 房最低總價` : yieldDefaults.isRoomAverage ? `${yieldDefaults.beds || ''} 房平均售價估算` : yieldUsesSummary ? '房型行情摘要估算' : '所選房型估算'}</span></p><div class="yield-value" id="yieldValue">${Number.isFinite(yieldFor(c)) ? `${yieldFor(c).toFixed(2)}%` : '待補'}<small>${Number.isFinite(yieldFor(c)) ? isAllRoomYield ? '1、2 房取較高 / 年' : `${esc(yieldDefaults.beds || '所選')} 房 / 年` : yieldDefaults.beds && !(yieldDefaults.rent > 0) ? '需補同房型租金' : '可比房型售價樣本不足'}</small></div></div>${isAllRoomYield && yieldRoomSummary.rows.length ? `<div class="yield-room-breakdown"><span>一、二房投報比較</span>${yieldRoomSummary.rows.map(row => `<b>${esc(row.beds)} 房 ${row.yield.toFixed(1)}%${row.isRoomAverage ? ' · 均價估算' : ''}</b>`).join('')}</div>` : ''}<div class="yield-inputs"><div class="yield-input"><label for="yieldPrice">參考購入總價 (฿)</label><input id="yieldPrice" type="number" min="1" step="50000" value="${calcPrice}"><button type="button" id="useLowestYieldSample" class="use-lowest-yield-button" ${yieldDefaults.beds && !(yieldDefaults.price > 0) ? 'disabled' : ''}>套用 ${esc(yieldDefaults.beds || '所選')} 房售價基準</button></div><div class="yield-input"><label for="yieldRent">參考月租 (฿)</label><input id="yieldRent" type="number" min="0" step="500" value="${calcRent}"></div><div class="yield-input"><label for="yieldArea">室內面積 (㎡)</label><input id="yieldArea" type="number" min="1" step="0.1" value="${calcArea.toFixed(1)}"></div><div class="yield-input"><label for="yieldBeds">參考房型</label><select id="yieldBeds">${yieldDefaults.beds && !yieldDefaults.roomOptions.some(([bed]) => String(bed) === String(yieldDefaults.beds)) ? `<option value="${esc(yieldDefaults.beds)}" selected disabled>${esc(yieldDefaults.beds)} 房最低掛牌待補</option>` : ''}${yieldDefaults.roomOptions.map(([bed]) => `<option value="${esc(bed)}" ${String(yieldDefaults.beds) === String(bed) ? 'selected' : ''}>${bed} 房${Number(bed) >= 5 ? '以上' : ''}</option>`).join('') || '<option value="">房型未提供</option>'}</select></div></div><p class="formula-note">地圖淨投報率分別以一房、二房最低售價與同房型最低月租計算，顯示兩者中較高的投報率。售價、面積及物件連結取自同一最低價掛牌。售價低於同房型參考每㎡行情 35%、或租金高於參考行情 2.5 倍的極端掛牌會隱藏，不納入計算。淨年投報率＝（月租 × 扣除仲介月數後的年租月數 − 年管理費）÷ 購入總價；管理費僅在已查得時扣除。</p><div class="yield-options"><label><input id="deductFee" type="checkbox" ${calcDeductFee ? 'checked' : ''}> 扣除管理費</label><label><input id="deductAgent" type="checkbox" ${calcDeductAgent ? 'checked' : ''}> 扣除 1 個月仲介管理費</label><button type="button" id="saveYieldInputs" class="save-yield-button">儲存試算</button><span id="yieldSavedNote" class="yield-saved-note">${editableYield ? '已儲存於此裝置' : ''}</span></div><div class="source-links"><a href="${esc(yieldDefaults.saleSourceUrl || saleSampleUrl)}" target="_blank" rel="noopener">${yieldDefaults.beds ? `${esc(yieldDefaults.beds)} 房${yieldDefaults.isRoomStart ? '最低總價' : '房型售價估算'}來源` : '購入基準來源'} ↗</a><a href="${esc(yieldDefaults.rentSourceUrl || rentSampleUrl)}" target="_blank" rel="noopener">${yieldDefaults.beds ? `${esc(yieldDefaults.beds)} 房最低月租來源` : '租金基準來源'} ↗</a><a href="${ddSale}" target="_blank" rel="noopener">DDproperty 出售 ↗</a><a href="${ddRent}" target="_blank" rel="noopener">DDproperty 出租 ↗</a><a href="${hipflatSearch}" target="_blank" rel="noopener">Hipflat 專案行情 ↗</a></div></section>` : '<section class="detail-section yield-section"><p class="section-label">投報率試算 <span>售租資料不足</span></p><p class="fee-note">至少需要同一 Condo可核對的出售與出租每平方米單價，才能計算投報率。</p></section>'}
+      ${hasYieldData(c) ? `<section class="detail-section yield-section"><div class="yield-heading"><p class="section-label">年租金報酬試算 <span>${isAllRoomYield ? yieldRoomSummary.rows.length ? `1、2 房投報 · 採較高值` : '整體行情估算' : yieldDefaults.beds && !(yieldDefaults.rent > 0) ? '待補同房型租盤' : yieldDefaults.isRoomStart ? `${yieldDefaults.beds || ''} 房最低總價` : yieldDefaults.isRoomAverage ? `${yieldDefaults.beds || ''} 房平均售價估算` : yieldUsesSummary ? '房型行情摘要估算' : '所選房型估算'}</span></p><div class="yield-value" id="yieldValue">${Number.isFinite(yieldFor(c)) ? `${yieldFor(c).toFixed(2)}%` : '待補'}<small>${Number.isFinite(yieldFor(c)) ? isAllRoomYield ? '1、2 房取較高 / 年' : `${esc(yieldDefaults.beds || '所選')} 房 / 年` : yieldDefaults.beds && !(yieldDefaults.rent > 0) ? '需補同房型租金' : '可比房型售價樣本不足'}</small></div></div>${isAllRoomYield && yieldRoomSummary.rows.length ? `<div class="yield-room-breakdown"><span>一、二房投報比較</span>${yieldRoomSummary.rows.map(row => `<b>${esc(row.beds)} 房 ${row.yield.toFixed(1)}%${row.isRoomAverage ? ' · 均價估算' : ''}</b>`).join('')}</div>` : ''}<div class="yield-inputs"><div class="yield-input"><label for="yieldPrice">參考購入總價 (฿)</label><input id="yieldPrice" type="number" min="1" step="50000" value="${calcPrice}"><button type="button" id="useLowestYieldSample" class="use-lowest-yield-button" ${yieldDefaults.beds && !(yieldDefaults.price > 0) ? 'disabled' : ''}>套用 ${esc(yieldDefaults.beds || '所選')} 房售價基準</button></div><div class="yield-input"><label for="yieldRent">參考月租 (฿)</label><input id="yieldRent" type="number" min="0" step="500" value="${calcRent}"></div><div class="yield-input"><label for="yieldArea">室內面積 (㎡)</label><input id="yieldArea" type="number" min="1" step="0.1" value="${calcArea.toFixed(1)}"></div><div class="yield-input"><label for="yieldBeds">參考房型</label><select id="yieldBeds">${yieldDefaults.beds && !yieldDefaults.roomOptions.some(([bed]) => String(bed) === String(yieldDefaults.beds)) ? `<option value="${esc(yieldDefaults.beds)}" selected disabled>${esc(yieldDefaults.beds)} 房最低掛牌待補</option>` : ''}${yieldDefaults.roomOptions.map(([bed]) => `<option value="${esc(bed)}" ${String(yieldDefaults.beds) === String(bed) ? 'selected' : ''}>${bed} 房${Number(bed) >= 5 ? '以上' : ''}</option>`).join('') || '<option value="">房型未提供</option>'}</select></div></div><p class="formula-note">地圖淨投報率分別以一房、二房最低售價計算，顯示兩者中較高的投報率。租金最低樣本面積與最低售價物件面積相差不超過 2 ㎡時採用該筆最低月租；超過 2 ㎡則以最低租金/㎡乘以最低售價物件面積換算。售價、面積及物件連結取自同一最低價掛牌。售價低於同房型參考每㎡行情 35%、或租金高於參考行情 2.5 倍的極端掛牌會隱藏，不納入計算。淨年投報率＝（月租 × 扣除仲介月數後的年租月數 − 年管理費）÷ 購入總價；管理費僅在已查得時扣除。</p><div class="yield-options"><label><input id="deductFee" type="checkbox" ${calcDeductFee ? 'checked' : ''}> 扣除管理費</label><label><input id="deductAgent" type="checkbox" ${calcDeductAgent ? 'checked' : ''}> 扣除 1 個月仲介管理費</label><button type="button" id="saveYieldInputs" class="save-yield-button">儲存試算</button><span id="yieldSavedNote" class="yield-saved-note">${editableYield ? '已儲存於此裝置' : ''}</span></div><div class="source-links"><a href="${esc(yieldDefaults.saleSourceUrl || saleSampleUrl)}" target="_blank" rel="noopener">${yieldDefaults.beds ? `${esc(yieldDefaults.beds)} 房${yieldDefaults.isRoomStart ? '最低總價' : '房型售價估算'}來源` : '購入基準來源'} ↗</a><a href="${esc(yieldDefaults.rentSourceUrl || rentSampleUrl)}" target="_blank" rel="noopener">${yieldDefaults.beds ? `${esc(yieldDefaults.beds)} 房${yieldDefaults.rentBasis === 'per-sqm' ? '最低租金/㎡換算來源' : '最低月租來源'}` : '租金基準來源'} ↗</a><a href="${ddSale}" target="_blank" rel="noopener">DDproperty 出售 ↗</a><a href="${ddRent}" target="_blank" rel="noopener">DDproperty 出租 ↗</a><a href="${hipflatSearch}" target="_blank" rel="noopener">Hipflat 專案行情 ↗</a></div></section>` : '<section class="detail-section yield-section"><p class="section-label">投報率試算 <span>售租資料不足</span></p><p class="fee-note">至少需要同一 Condo可核對的出售與出租每平方米單價，才能計算投報率。</p></section>'}
       <section class="detail-section"><p class="section-label">Condo 資訊 <span>${c.completedYear ? `${esc(c.completedYear)} 完工` : '完工年待補'} · ${c.startedYear ? `${esc(c.startedYear)} 起造` : '起造年待補'}</span></p><p class="fee-note">PropertyHub 來源為單筆公開掛牌；PropertyScout 來源為Condo房型行情摘要，連結會開啟該Condo行情頁。Hipflat 提供Condo清單與專案資料。</p><div class="source-links">${c.completedYearSourceUrl || c.propertyHubProjectUrl ? `<a href="${esc(c.completedYearSourceUrl || c.propertyHubProjectUrl)}" target="_blank" rel="noopener">完工與Condo資料來源 ↗</a>` : ''}${c.locationSourceUrl ? `<a href="${esc(c.locationSourceUrl)}" target="_blank" rel="noopener">座標來源 ↗</a>` : ''}${c.locationVerificationSourceUrl ? `<a href="${esc(c.locationVerificationSourceUrl)}" target="_blank" rel="noopener">地址交叉核實 ↗</a>` : ''}<a href="${hipflatSearch}" target="_blank" rel="noopener">搜尋此案 Hipflat 專案與售租行情 ↗</a><a href="${ddSale}" target="_blank" rel="noopener">DDproperty 出售 ↗</a><a href="${ddRent}" target="_blank" rel="noopener">DDproperty 出租 ↗</a></div></section>`;
     detail.querySelector('.close-detail').addEventListener('click', () => { detail.classList.add('empty'); document.querySelector('.explorer').classList.remove('hidden-mobile'); });
     wireDetailSizeToggle();

@@ -265,25 +265,64 @@ for index, project in enumerate(catalogue):
     fee_rate = (fee or {}).get("rate") or 0
     room_yields = []
     for beds in range(1, 3):
-        sale_room = sale_rooms.get(str(beds), {})
-        rent_room = rent_rooms.get(str(beds), {})
-        sale_room_url = sale_room.get("minimumSourceUrl") or sale_room.get("sourceUrl")
-        sale_room_direct = bool(sale_room_url and re.search(r"/(?:ads|listings|property|property-for-sale|property-for-rent|property-rent|livingdetail_en)/", sale_room_url, re.I))
-        if not sale_room_direct and sale_room_url and "livinginsider.com/detail/condo-" in sale_room_url:
-            sale_room_direct = True
-        if not sale_room_direct and sale_room_url and "rentcondobkk.com/index.php/" in sale_room_url:
-            sale_room_direct = True
-        if sale_room_direct:
-            room_price = float(sale_room.get("minimum") or 0)
-            room_area = float(sale_room.get("minimumArea") or sale_room.get("area") or 0)
+        key = str(beds)
+        sale_room = sale_rooms.get(key, {})
+        rent_room = rent_rooms.get(key, {})
+        sale_samples = [sample for sample in (sale or {}).get("samples", [])
+                        if current_sample(sample) and sample_beds(sample) == beds
+                        and sample.get("url") and float(sample.get("price") or 0) > 0
+                        and float(sample.get("area") or 0) > 0]
+        sale_row = min(sale_samples, key=lambda row: float(row["price"]), default=None)
+        sale_url = sale_row.get("url") if sale_row else sale_room.get("minimumSourceUrl") or sale_room.get("sourceUrl")
+        sale_direct = bool(sale_url and re.search(r"/(?:ads|listings|property|property-for-sale|property-for-rent|property-rent|livingdetail_en)/", sale_url, re.I))
+        sale_direct = sale_direct or bool(sale_url and ("livinginsider.com/detail/condo-" in sale_url or "rentcondobkk.com/index.php/" in sale_url))
+        summary_sale = None
+        if not sale_row and sale_direct:
+            price = float(sale_room.get("minimum") or 0)
+            area_value = float(sale_room.get("minimumArea") or sale_room.get("area") or 0)
+            if price > 0 and area_value > 0:
+                summary_sale = {"price": price, "area": area_value}
+        if sale_row:
+            room_price, room_area = float(sale_row["price"]), float(sale_row["area"])
+        elif summary_sale:
+            room_price, room_area = summary_sale["price"], summary_sale["area"]
         else:
             room_price = float(sale_room.get("average") or 0)
             average_rate = float(sale_room.get("averageSqm") or 0)
             room_area = room_price / average_rate if room_price > 0 and average_rate > 0 else 0
-        room_monthly_rent = float(rent_room.get("minimum") or rent_room.get("average") or 0)
-        if room_price > 0 and room_area > 0 and room_monthly_rent > 0:
-            if math.isfinite(room_monthly_rent):
-                room_yields.append([beds, round(room_price, 2), round(room_area, 2), round(room_monthly_rent, 2)])
+
+        rent_samples = [sample for sample in (rent or {}).get("samples", [])
+                        if current_sample(sample) and sample_beds(sample) == beds
+                        and sample.get("url") and float(sample.get("price") or 0) > 0
+                        and float(sample.get("area") or 0) > 0]
+        lowest_monthly = min(rent_samples, key=lambda row: float(row["price"]), default=None)
+        lowest_rate = min(rent_samples, key=lambda row: float(row["price"]) / float(row["area"]), default=None)
+        rent_source = None
+        if lowest_monthly and abs(float(lowest_monthly["area"]) - room_area) <= 2:
+            room_monthly_rent = float(lowest_monthly["price"])
+            rent_source = lowest_monthly["url"]
+        elif lowest_rate:
+            room_monthly_rent = float(lowest_rate["price"]) / float(lowest_rate["area"]) * room_area
+            rent_source = lowest_rate["url"]
+        else:
+            rent_url = rent_room.get("minimumSourceUrl") or rent_room.get("sourceUrl") or rent_room.get("minimumSqmSourceUrl")
+            rent_direct = bool(rent_url and re.search(r"/(?:ads|listings|property|property-for-sale|property-for-rent|property-rent|livingdetail_en)/", rent_url, re.I))
+            rent_direct = rent_direct or bool(rent_url and ("livinginsider.com/detail/condo-" in rent_url or "rentcondobkk.com/index.php/" in rent_url))
+            summary_area = float(rent_room.get("minimumArea") or (rent_room.get("area") if rent_direct else 0) or 0)
+            summary_rent = float(rent_room.get("minimum") or rent_room.get("average") or 0)
+            if not summary_area and float(rent_room.get("averageSqm") or 0) > 0 and float(rent_room.get("average") or 0) > 0:
+                summary_area = float(rent_room["average"]) / float(rent_room["averageSqm"])
+            summary_rate = float(rent_room.get("minimumSqm") or rent_room.get("averageSqm") or (summary_rent / summary_area if summary_area > 0 else 0))
+            if summary_rent > 0 and summary_area > 0 and abs(summary_area - room_area) <= 2:
+                room_monthly_rent = summary_rent
+                rent_source = rent_url
+            elif summary_rate > 0:
+                room_monthly_rent = summary_rate * room_area
+                rent_source = rent_room.get("minimumSqmSourceUrl") or rent_url
+            else:
+                room_monthly_rent = 0
+        if room_price > 0 and room_area > 0 and room_monthly_rent > 0 and math.isfinite(room_monthly_rent):
+            room_yields.append([beds, round(room_price, 2), round(room_area, 2), round(room_monthly_rent, 2)])
     default_sale, default_area, default_rent_rate = sale_rooms.get("2", {}), None, rent_rooms.get("2", {})
     sale_url = default_sale.get("minimumSourceUrl") or default_sale.get("sourceUrl")
     direct_url = bool(sale_url and re.search(r"/(?:ads|listings|property|property-for-sale|property-for-rent|property-rent|livingdetail_en)/", sale_url, re.I))
