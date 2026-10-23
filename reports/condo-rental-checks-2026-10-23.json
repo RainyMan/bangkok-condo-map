@@ -1,0 +1,66 @@
+{
+  "checkedAt": "2026-10-23",
+  "scope": "Direct rental sample and availability refresh; no frontend changes.",
+  "projects": [
+    {
+      "hipflat_id": "3412",
+      "condo": "Commune 80",
+      "checked_at": "2026-10-23",
+      "market": "rent",
+      "status": "direct_listing_date_unknown_unconfirmed",
+      "verification_note": "ZmyHome exact-project owner listing states 2BR, 70 sqm, THB 15,000/month; the page shows an Updated badge but no date. PropertyHub exact-project rental result page shows 0. Kept as a date-unconfirmed direct sample; yield is conditional, not confirmed availability.",
+      "source_1": "https://zmyhome.com/property/V75006",
+      "source_2": "https://propertyhub.in.th/en/projects/commune-80-lat-phrao",
+      "source_3": "https://www.hipflat.co.th/en/projects/commune-80-ohmrsq"
+    },
+    {
+      "hipflat_id": "3468",
+      "condo": "LIFE Udomsuk Station",
+      "checked_at": "2026-10-23",
+      "market": "rent",
+      "status": "no_current_individual_rental_listing",
+      "verification_note": "PropertyHub exact-project rent page says no matched properties and DDproperty shows 0 units to rent. New PropertyHub overview count of 1 has no corresponding unit on its direct rent-results page; no rent sample or yield added.",
+      "source_1": "https://assets3.propertyhub.in.th/EN/projects/life-udomsuk-station/for-rent",
+      "source_2": "https://www.ddproperty.com/en/project/14519-life-udomsuk-station",
+      "source_3": "https://asset-direct-next.propertyhub.in.th/en/projects/life-udomsuk-station"
+    },
+    {
+      "hipflat_id": "3386",
+      "condo": "The Nigh Condominium 3",
+      "checked_at": "2026-10-23",
+      "market": "rent",
+      "status": "no_current_rental_listing_matching_direct_unit_marked_rented",
+      "verification_note": "PropertyHub exact-project page shows 0 rent listings. Exact project RentcondoBKK unit page lists 1BR, 31 sqm, THB 6,000/month but explicitly labels the unit rented; excluded from rent baseline and yield.",
+      "source_1": "https://propertyhub.in.th/projects/the-nigh-condo-3-ngamwongwan---13152",
+      "source_2": "https://www.rentcondobkk.com/%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2/%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/95300/TNC08-0001",
+      "source_3": "https://www.hipflat.co.th/en/projects/the-nigh-condominium-3-zyrcjp"
+    },
+    {
+      "hipflat_id": "3088",
+      "condo": "Donmuang Condo Town",
+      "checked_at": "2026-10-23",
+      "market": "rent",
+      "status": "no_current_matching_listing",
+      "verification_note": "Live PropertyHub exact-project rent page currently says no rental listings. Hipflat project page also reports no available property; nearby projects excluded.",
+      "source_1": "https://propertyhub.in.th/%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94/%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3-%E0%B8%94%E0%B8%AD%E0%B8%99%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87-%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94%E0%B8%97%E0%B8%B2%E0%B8%A7%E0%B8%99%E0%B9%8C---19717",
+      "source_2": "https://www.hipflat.co.th/projects/donmuang-condo-town-lgkhks",
+      "source_3": "https://www.fazwaz.co.th/en/projects/thailand/bangkok/don-mueang/don-mueang/donmuang-condo-town"
+    }
+  ],
+  "commune80RentSample": {
+    "hipflatId": 3412,
+    "name": "Commune 80",
+    "bedrooms": 2,
+    "monthlyRentTHB": 15000,
+    "areaSqm": 70,
+    "rentPerSqmTHB": 214.29,
+    "source": "https://zmyhome.com/property/V75006",
+    "availability": "Listing remains visible and displays Updated; the update date is not provided; current availability is unconfirmed.",
+    "calculation": "The mapped lowest 2BR resale unit is 70 sqm; the rent unit is also 70 sqm, so the ROI calculation uses the full THB 15,000 monthly rent without area scaling.",
+    "projectSaleBaseline": {
+      "priceTHB": 2989000,
+      "areaSqm": 70,
+      "source": "https://propertyhub.in.th/listings/pet-friendly-%E0%B8%82%E0%B8%B2%E0%B8%A2%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-commune-80-%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%A7-80-%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B9%83%E0%B8%AB%E0%B8%8D%E0%B9%88%E0%B8%AA%E0%B8%B8%E0%B8%94-%E0%B8%97%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3-%E0%B8%A1%E0%B8%B5%E0%B9%81%E0%B8%84%E0%B9%88-20-%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87-%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%87%E0%B8%AA%E0%B8%B1%E0%B8%95%E0%B8%A7%E0%B9%8C%E0%B9%84%E0%B8%94%E0%B9%89-%E0%B9%80%E0%B8%9B%E0%B8%B4%E0%B8%94%E0%B9%80%E0%B8%9C%E0%B8%A2---6087703"
+    }
+  }
+}
