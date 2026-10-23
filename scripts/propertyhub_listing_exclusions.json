@@ -1,5 +1,13 @@
 [
   {
+    "listingId": "2841730",
+    "hipflatProjectId": 5505,
+    "propertyHubProjectId": "1319",
+    "kind": "sale",
+    "sourceUrl": "https://propertyhub.in.th/en/listings/1-bedroom-condo-for-sale-lumpini-place-river-view-rama-3-28-67-sqm-21th-floor-brt---2841730",
+    "reason": "The 1BR sale listing for ฿2,560,000 / 28.67 sqm was last refreshed 2026-02-17, over eight months before the 2026-10-23 audit. Exclude this stale low-price record so it cannot set the current sale minimum or inflate ROI; the project feed has a newer directly linked 1BR sale listing at ฿2,990,000 / 38.79 sqm refreshed 2026-10-14."
+  },
+  {
     "listingId": "6492364",
     "hipflatProjectId": 6071,
     "propertyHubProjectId": "52",
