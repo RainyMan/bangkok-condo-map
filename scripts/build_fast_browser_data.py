@@ -287,32 +287,35 @@ for index, project in enumerate(catalogue):
         elif summary_sale:
             room_price, room_area = summary_sale["price"], summary_sale["area"]
         else:
-            room_price = float(sale_room.get("average") or 0)
-            average_rate = float(sale_room.get("averageSqm") or 0)
-            room_area = room_price / average_rate if room_price > 0 and average_rate > 0 else 0
+            # ROI must use a verifiable lowest-total-price listing, not an
+            # average market summary presented as a lowest asking price.
+            room_price, room_area = 0, 0
 
         rent_samples = [sample for sample in (rent or {}).get("samples", [])
                         if current_sample(sample) and sample_beds(sample) == beds
                         and sample.get("url") and float(sample.get("price") or 0) > 0
                         and float(sample.get("area") or 0) > 0]
         lowest_monthly = min(rent_samples, key=lambda row: float(row["price"]), default=None)
-        lowest_rate = min(rent_samples, key=lambda row: float(row["price"]) / float(row["area"]), default=None)
         rent_source = None
         if lowest_monthly and abs(float(lowest_monthly["area"]) - room_area) <= 2:
             room_monthly_rent = float(lowest_monthly["price"])
             rent_source = lowest_monthly["url"]
-        elif lowest_rate:
-            room_monthly_rent = float(lowest_rate["price"]) / float(lowest_rate["area"]) * room_area
-            rent_source = lowest_rate["url"]
+        elif lowest_monthly:
+            # Compare like-for-like using the lowest monthly-rent sample's
+            # own rate, scaled to the area of the lowest-price sale sample.
+            room_monthly_rent = float(lowest_monthly["price"]) / float(lowest_monthly["area"]) * room_area
+            rent_source = lowest_monthly["url"]
         else:
             rent_url = rent_room.get("minimumSourceUrl") or rent_room.get("sourceUrl") or rent_room.get("minimumSqmSourceUrl")
             rent_direct = bool(rent_url and re.search(r"/(?:ads|listings|property|property-for-sale|property-for-rent|property-rent|livingdetail_en)/", rent_url, re.I))
             rent_direct = rent_direct or bool(rent_url and ("livinginsider.com/detail/condo-" in rent_url or "rentcondobkk.com/index.php/" in rent_url))
             summary_area = float(rent_room.get("minimumArea") or (rent_room.get("area") if rent_direct else 0) or 0)
-            summary_rent = float(rent_room.get("minimum") or rent_room.get("average") or 0)
+            summary_rent = float(rent_room.get("minimum") or 0)
             if not summary_area and float(rent_room.get("averageSqm") or 0) > 0 and float(rent_room.get("average") or 0) > 0:
                 summary_area = float(rent_room["average"]) / float(rent_room["averageSqm"])
-            summary_rate = float(rent_room.get("minimumSqm") or rent_room.get("averageSqm") or (summary_rent / summary_area if summary_area > 0 else 0))
+            # Match the fallback to the lowest monthly-rent sample and its
+            # own area, as in the direct-listing path above.
+            summary_rate = summary_rent / summary_area if summary_rent > 0 and summary_area > 0 else 0
             if summary_rent > 0 and summary_area > 0 and abs(summary_area - room_area) <= 2:
                 room_monthly_rent = summary_rent
                 rent_source = rent_url
@@ -332,11 +335,9 @@ for index, project in enumerate(catalogue):
         direct_url = True
     if direct_url:
         default_area = default_sale.get("minimumArea") or default_sale.get("area")
-    rent_rate = default_rent_rate.get("minimumSqm") or default_rent_rate.get("averageSqm") or 0
-    if not (float(default_sale.get("minimum") or 0) > 0 and float(default_area or 0) > 0 and float(rent_rate or 0) > 0):
-        core_yield = None
-    else:
-        core_yield = round((float(rent_rate) * float(default_area) * 11 - float(fee_rate) * float(default_area) * 12) / float(default_sale["minimum"]) * 100, 5)
+    core_yield = None
+    # room_yields is based on directly linked minimum sale and minimum rent
+    # samples for each bedroom count. Keep the requested best of 1BR/2BR.
     if room_yields:
         room_returns = [(rent * 11 - fee_rate * area * 12) / price * 100 for _, price, area, rent in room_yields]
         core_yield = round(max(room_returns), 5)
