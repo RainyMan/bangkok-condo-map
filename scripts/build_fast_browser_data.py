@@ -91,6 +91,27 @@ def slim_market(market, manual, kind):
                                "minimumArea": area, "priceSqm": rate, "minimumSqm": rate,
                                "sourceUrl": sample["url"], "minimumSourceUrl": sample["url"],
                                "minimumSqmSourceUrl": sample["url"]}
+    # Keep the lowest monthly listing and the lowest per-square-metre listing
+    # distinct. Yield calculations use the monthly minimum when its area is
+    # within 2 m² of the minimum-price sale unit; otherwise they scale the
+    # lowest rent/m² to the sale unit's area.
+    if kind == "rent":
+        room_samples = {}
+        for sample in samples:
+            beds = sample_beds(sample)
+            if not beds:
+                continue
+            price, area = float(sample.get("price") or 0), float(sample.get("area") or 0)
+            if price > 0 and area > 0:
+                room_samples.setdefault(str(beds), []).append(sample)
+        for key, rows in room_samples.items():
+            lowest_rate = min(rows, key=lambda row: float(row["price"]) / float(row["area"]))
+            rate = float(lowest_rate["price"]) / float(lowest_rate["area"])
+            room = by_bedroom.setdefault(key, {"beds": int(key)})
+            room.update(minimumSqm=round(rate, 2), minimumSqmRate=rate,
+                        minimumSqmArea=float(lowest_rate["area"]),
+                        minimumSqmSampleRent=float(lowest_rate["price"]),
+                        minimumSqmSourceUrl=lowest_rate["url"])
     if samples:
         cheapest = min(samples, key=lambda row: float(row.get("price") or math.inf))
         lowest_rate = min(samples, key=lambda row: float(row.get("price") or math.inf) / max(float(row.get("area") or 0), 1e-10))
@@ -150,7 +171,7 @@ def slim_market(market, manual, kind):
     keep = ("count", "observedCount", "countKind", "average", "minimum", "minimumArea",
             "minimumSampleUpdated", "averageSqm", "minimumSqm", "minimumSqmSampleUpdated",
             "asOf", "source", "sourceName", "marketSummary", "minimumSourceUrl", "excludedExtremePriceCount",
-            "minimumSqmSourceUrl", "byBedroom")
+            "minimumSqmSourceUrl", "minimumSqmRate", "minimumSqmArea", "minimumSqmSampleRent", "byBedroom")
     return {key: market[key] for key in keep if key in market}
 
 
@@ -301,10 +322,12 @@ for index, project in enumerate(catalogue):
             room_monthly_rent = float(lowest_monthly["price"])
             rent_source = lowest_monthly["url"]
         elif lowest_monthly:
-            # Compare like-for-like using the lowest monthly-rent sample's
-            # own rate, scaled to the area of the lowest-price sale sample.
-            room_monthly_rent = float(lowest_monthly["price"]) / float(lowest_monthly["area"]) * room_area
-            rent_source = lowest_monthly["url"]
+            # The lower rent-per-square-metre listing may differ from the
+            # lowest monthly-rent listing. Scale that lowest rate to the
+            # area of the lowest-price sale sample.
+            lowest_rate = min(rent_samples, key=lambda row: float(row["price"]) / float(row["area"]))
+            room_monthly_rent = float(lowest_rate["price"]) / float(lowest_rate["area"]) * room_area
+            rent_source = lowest_rate["url"]
         else:
             rent_url = rent_room.get("minimumSourceUrl") or rent_room.get("sourceUrl") or rent_room.get("minimumSqmSourceUrl")
             rent_direct = bool(rent_url and re.search(r"/(?:ads|listings|property|property-for-sale|property-for-rent|property-rent|livingdetail_en)/", rent_url, re.I))
@@ -313,9 +336,12 @@ for index, project in enumerate(catalogue):
             summary_rent = float(rent_room.get("minimum") or 0)
             if not summary_area and float(rent_room.get("averageSqm") or 0) > 0 and float(rent_room.get("average") or 0) > 0:
                 summary_area = float(rent_room["average"]) / float(rent_room["averageSqm"])
-            # Match the fallback to the lowest monthly-rent sample and its
-            # own area, as in the direct-listing path above.
-            summary_rate = summary_rent / summary_area if summary_rent > 0 and summary_area > 0 else 0
+            # When listings are represented by a market summary, compare the
+            # lowest monthly-rent unit area first. For a larger area mismatch,
+            # use the room's lowest rent/m² rate and source.
+            summary_rate = float(rent_room.get("minimumSqmRate") or rent_room.get("minimumSqm") or 0)
+            if not summary_rate and summary_rent > 0 and summary_area > 0:
+                summary_rate = summary_rent / summary_area
             if summary_rent > 0 and summary_area > 0 and abs(summary_area - room_area) <= 2:
                 room_monthly_rent = summary_rent
                 rent_source = rent_url
