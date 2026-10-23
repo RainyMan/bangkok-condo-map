@@ -1,0 +1,36 @@
+{
+  "hipflatId": 3820,
+  "projectName": "The Sis Condominium",
+  "asOf": "2026-10-23",
+  "sourceName": "Hipflat / FazWaz / Thailand-Property availability check",
+  "projectSourceUrl": "https://www.hipflat.co.th/en/projects/the-sis-condominium-yqeweo",
+  "sale": {
+    "activeListingCount": 0,
+    "sourceUrl": "https://www.hipflat.co.th/en/projects/the-sis-condominium-yqeweo",
+    "note": "本次核對 Hipflat、FazWaz 與 Thailand-Property，未找到可核實的本案現行出售單筆掛牌；不填售價樣本。"
+  },
+  "rent": {
+    "activeListingCount": 0,
+    "sourceUrl": "https://www.hipflat.co.th/en/projects/the-sis-condominium-yqeweo",
+    "note": "本次核對 Hipflat、FazWaz 與 Thailand-Property，未找到可核實的本案現行出租單筆掛牌；不填租金樣本。"
+  },
+  "availabilitySources": [
+    {
+      "sourceName": "Hipflat 專案頁",
+      "url": "https://www.hipflat.co.th/en/projects/the-sis-condominium-yqeweo",
+      "statusLabel": "2026-10-23 核對頁面未列可用的出售或出租物件。"
+    },
+    {
+      "sourceName": "FazWaz 專案頁",
+      "url": "https://www.fazwaz.co.th/%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3/%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A3/%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%84/%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%84%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD/%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0-%E0%B8%8B%E0%B8%B4%E0%B8%AA-%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%84",
+      "statusLabel": "2026-10-23 核對專案頁未列出售或出租掛牌。"
+    },
+    {
+      "sourceName": "Thailand-Property 專案頁",
+      "url": "https://www.thailand-property.com/condo/3968/the-sis-condominium",
+      "statusLabel": "專案頁顯示 0 間出售、0 間出租。"
+    }
+  ],
+  "yieldStatus": "not_calculated_no_current_sale_or_rent_listing",
+  "yieldNote": "本次核對未找到可核實的現行出售與出租單筆掛牌，沒有同房型售租配對可依最低售價及最低租金估算投報率。"
+}
