@@ -60,6 +60,17 @@ def current_sample(sample):
         str(sample.get("listingStatus") or ""), re.I)
 
 
+def is_direct_listing_url(url):
+    """Accept individual listing pages as ROI evidence, not project summaries."""
+    if not isinstance(url, str):
+        return False
+    return bool(
+        re.search(r"/(?:ads|listings|property|property-for-sale|property-for-rent|property-rent|livingdetail_en)/", url, re.I)
+        or "livinginsider.com/detail/condo-" in url
+        or re.search(r"rentcondobkk\.com/index\.php/.+/\d+/[a-z]{2,5}\d{2}-\d{4}(?:/|$)", url, re.I)
+    )
+
+
 def slim_market(market, manual, kind):
     market = dict(market or manual or {})
     by_bedroom = {str(k): dict(v) for k, v in (market.get("byBedroom") or {}).items()}
@@ -290,13 +301,12 @@ for index, project in enumerate(catalogue):
         sale_room = sale_rooms.get(key, {})
         rent_room = rent_rooms.get(key, {})
         sale_samples = [sample for sample in (sale or {}).get("samples", [])
-                        if current_sample(sample) and sample_beds(sample) == beds
+                        if current_sample(sample) and is_direct_listing_url(sample.get("url")) and sample_beds(sample) == beds
                         and sample.get("url") and float(sample.get("price") or 0) > 0
                         and float(sample.get("area") or 0) > 0]
         sale_row = min(sale_samples, key=lambda row: float(row["price"]), default=None)
         sale_url = sale_row.get("url") if sale_row else sale_room.get("minimumSourceUrl") or sale_room.get("sourceUrl")
-        sale_direct = bool(sale_url and re.search(r"/(?:ads|listings|property|property-for-sale|property-for-rent|property-rent|livingdetail_en)/", sale_url, re.I))
-        sale_direct = sale_direct or bool(sale_url and ("livinginsider.com/detail/condo-" in sale_url or "rentcondobkk.com/index.php/" in sale_url))
+        sale_direct = is_direct_listing_url(sale_url)
         summary_sale = None
         if not sale_row and sale_direct:
             price = float(sale_room.get("minimum") or 0)
@@ -313,7 +323,7 @@ for index, project in enumerate(catalogue):
             room_price, room_area = 0, 0
 
         rent_samples = [sample for sample in (rent or {}).get("samples", [])
-                        if current_sample(sample) and sample_beds(sample) == beds
+                        if current_sample(sample) and is_direct_listing_url(sample.get("url")) and sample_beds(sample) == beds
                         and sample.get("url") and float(sample.get("price") or 0) > 0
                         and float(sample.get("area") or 0) > 0]
         lowest_monthly = min(rent_samples, key=lambda row: float(row["price"]), default=None)
@@ -330,8 +340,7 @@ for index, project in enumerate(catalogue):
             rent_source = lowest_rate["url"]
         else:
             rent_url = rent_room.get("minimumSourceUrl") or rent_room.get("sourceUrl") or rent_room.get("minimumSqmSourceUrl")
-            rent_direct = bool(rent_url and re.search(r"/(?:ads|listings|property|property-for-sale|property-for-rent|property-rent|livingdetail_en)/", rent_url, re.I))
-            rent_direct = rent_direct or bool(rent_url and ("livinginsider.com/detail/condo-" in rent_url or "rentcondobkk.com/index.php/" in rent_url))
+            rent_direct = is_direct_listing_url(rent_url)
             summary_area = float(rent_room.get("minimumArea") or (rent_room.get("area") if rent_direct else 0) or 0)
             summary_rent = float(rent_room.get("minimum") or 0)
             if not summary_area and float(rent_room.get("averageSqm") or 0) > 0 and float(rent_room.get("average") or 0) > 0:
@@ -354,11 +363,7 @@ for index, project in enumerate(catalogue):
             room_yields.append([beds, round(room_price, 2), round(room_area, 2), round(room_monthly_rent, 2)])
     default_sale, default_area, default_rent_rate = sale_rooms.get("2", {}), None, rent_rooms.get("2", {})
     sale_url = default_sale.get("minimumSourceUrl") or default_sale.get("sourceUrl")
-    direct_url = bool(sale_url and re.search(r"/(?:ads|listings|property|property-for-sale|property-for-rent|property-rent|livingdetail_en)/", sale_url, re.I))
-    if not direct_url and sale_url and "livinginsider.com/detail/condo-" in sale_url:
-        direct_url = True
-    if not direct_url and sale_url and "rentcondobkk.com/index.php/" in sale_url:
-        direct_url = True
+    direct_url = is_direct_listing_url(sale_url)
     if direct_url:
         default_area = default_sale.get("minimumArea") or default_sale.get("area")
     core_yield = None
