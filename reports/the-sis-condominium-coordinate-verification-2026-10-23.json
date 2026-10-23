@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-23",
+  "hipflatId": 3820,
+  "project": "The Sis Condominium",
+  "address": "Soi Phet Kasem 76/1, Bang Khae Nuea, Bang Khae, Bangkok 10160",
+  "coordinate": {
+    "lat": 13.71432,
+    "lng": 100.412723,
+    "source": "https://www.homenayoo.com/the-sis-condo-bangkhae/",
+    "sourceType": "published Google coordinates"
+  },
+  "crossChecks": [
+    {
+      "source": "Hipflat",
+      "url": "https://www.hipflat.co.th/en/projects/the-sis-condominium-yqeweo",
+      "finding": "Exact project name and full Soi Phet Kasem 76/1 address."
+    },
+    {
+      "source": "ZmyHome",
+      "url": "https://zmyhome.com/project/V13068",
+      "finding": "Exact project name and same street/subdistrict/district."
+    },
+    {
+      "source": "ArcGIS World Geocoding Service",
+      "finding": "POI exact name The Sis Condominium at Soi Phet Kasem 76/1; candidate 13.714338957, 100.412599482.",
+      "distanceFromPublishedGooglePinMeters": 13.5
+    }
+  ],
+  "decision": "Accepted as a verified project coordinate: the published project Google pin matches the exact project address and is independently corroborated by a same-name POI within 14 m.",
+  "coordinateRecordAdded": true
+}
