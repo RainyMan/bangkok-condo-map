@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import csv
+import argparse
 import json
 import re
 import time
@@ -241,6 +242,14 @@ def search_project_id(project: dict, kind: str) -> dict:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--include-no-sample", action="store_true", help="Search markets that currently have no sale/rent sample")
+    parser.add_argument("--limit", type=int, default=0, help="Limit the target market batch (0 means all)")
+    parser.add_argument("--offset", type=int, default=0, help="Skip this many target markets before processing")
+    args = parser.parse_args()
+    global REPORT
+    if args.include_no_sample:
+        REPORT = ROOT / "reports" / f"ddproperty-no-sample-backfill-{TODAY.isoformat()}-offset-{args.offset}.json"
     projects = js_array(CATALOGUE, "BANGKOK_CONDO_CATALOGUE")
     project_by_id = {int(project["id"]): project for project in projects}
     coverage = {int(row["hipflat_id"]): row for row in csv.DictReader(AUDIT.open(encoding="utf-8-sig"))}
@@ -248,8 +257,12 @@ def main() -> None:
     for project_id, row in coverage.items():
         for kind, sample_key, link_key in (("sale", "sale_sample", "sale_individual_listing_link"),
                                              ("rent", "rent_sample", "rent_individual_listing_link")):
-            if row.get(sample_key) == "yes" and row.get(link_key) != "yes":
+            if ((row.get(sample_key) == "yes" and row.get(link_key) != "yes")
+                    or (args.include_no_sample and row.get(sample_key) != "yes")):
                 targets.append((project_by_id[project_id], kind))
+    targets = targets[args.offset:]
+    if args.limit:
+        targets = targets[:args.limit]
     print(f"DDproperty project markets to backfill with clickable unit listings: {len(targets)}; workers: 4", flush=True)
     results = []
     with ThreadPoolExecutor(max_workers=4) as pool:

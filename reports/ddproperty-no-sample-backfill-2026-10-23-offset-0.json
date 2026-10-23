@@ -1,0 +1,1307 @@
+{
+  "checkedAt": "2026-10-23",
+  "targetMarkets": 100,
+  "backfilledMarkets": 2,
+  "statuses": {
+    "no_exact_current_candidate_in_keyword_results": 98,
+    "verified_active_ddproperty_listings": 2
+  },
+  "results": [
+    {
+      "hipflatId": 3004,
+      "name": "LK Tower",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=LK%20Tower",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3004,
+      "name": "LK Tower",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=LK%20Tower",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3006,
+      "name": "31 Residence",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=31%20Residence",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3005,
+      "name": "Chatuchak Condominium",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Chatuchak%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3007,
+      "name": "Panburi",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Panburi",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3009,
+      "name": "Ruam Rudee Penthouse",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Ruam%20Rudee%20Penthouse",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3010,
+      "name": "Tomi Place",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Tomi%20Place",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3022,
+      "name": "Condare Maneeya",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Condare%20Maneeya",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3018,
+      "name": "Paragon 31",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Paragon%2031",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3022,
+      "name": "Condare Maneeya",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Condare%20Maneeya",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3010,
+      "name": "Tomi Place",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Tomi%20Place",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3026,
+      "name": "Horkarnkah Condo Town",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Horkarnkah%20Condo%20Town",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3026,
+      "name": "Horkarnkah Condo Town",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Horkarnkah%20Condo%20Town",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3028,
+      "name": "Raintree Village Apartment",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Raintree%20Village%20Apartment",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3047,
+      "name": "UTD Aries Hotel & residence",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=UTD%20Aries%20Hotel%20%26%20residence",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3051,
+      "name": "Juldis Mansion",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Juldis%20Mansion",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3051,
+      "name": "Juldis Mansion",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Juldis%20Mansion",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3054,
+      "name": "Wisetsuk Nakorn Condo",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Wisetsuk%20Nakorn%20Condo",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3056,
+      "name": "SN Condo Town",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=SN%20Condo%20Town",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3039,
+      "name": "Sethi Terrace",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Sethi%20Terrace",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3066,
+      "name": "Sripinthong",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Sripinthong",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3066,
+      "name": "Sripinthong",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Sripinthong",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3063,
+      "name": "Thong Thai Condominium",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Thong%20Thai%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3063,
+      "name": "Thong Thai Condominium",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Thong%20Thai%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3073,
+      "name": "A-Pa Place",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=A-Pa%20Place",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3078,
+      "name": "Erawan Condo",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Erawan%20Condo",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3078,
+      "name": "Erawan Condo",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Erawan%20Condo",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3070,
+      "name": "Grand View Condominium",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Grand%20View%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3079,
+      "name": "Quartz Residence",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Quartz%20Residence",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3088,
+      "name": "Donmuang Condo Town",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Donmuang%20Condo%20Town",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3082,
+      "name": "Bangkapi Mansion",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Bangkapi%20Mansion",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3090,
+      "name": "My villa Bang Na",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=My%20villa%20Bang%20Na",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3090,
+      "name": "My villa Bang Na",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=My%20villa%20Bang%20Na",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3093,
+      "name": "The Peace",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=The%20Peace",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3093,
+      "name": "The Peace",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=The%20Peace",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3095,
+      "name": "Sivalai Condominium",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Sivalai%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3095,
+      "name": "Sivalai Condominium",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Sivalai%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3098,
+      "name": "Silom Studios",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Silom%20Studios",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3096,
+      "name": "Sawit Suites",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Sawit%20Suites",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3098,
+      "name": "Silom Studios",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Silom%20Studios",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3105,
+      "name": "Picha Pavilion",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Picha%20Pavilion",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3103,
+      "name": "Natural Ville Executive Residences",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Natural%20Ville%20Executive%20Residences",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3106,
+      "name": "Rembrandt Sukhumvit",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Rembrandt%20Sukhumvit",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3119,
+      "name": "Uea Pracha Condo Town Building 7",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Uea%20Pracha%20Condo%20Town%20Building%207",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3123,
+      "name": "Niche Pride Sathorn-Thapra",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Niche%20Pride%20Sathorn-Thapra",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3121,
+      "name": "Like Sukhumvit 16",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Like%20Sukhumvit%2016",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3121,
+      "name": "Like Sukhumvit 16",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Like%20Sukhumvit%2016",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3122,
+      "name": "Belgravia Ratchada 17",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Belgravia%20Ratchada%2017",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3123,
+      "name": "Niche Pride Sathorn-Thapra",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Niche%20Pride%20Sathorn-Thapra",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3124,
+      "name": "The Premium Condo",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=The%20Premium%20Condo",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3129,
+      "name": "D 5 Condo",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=D%205%20Condo",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3124,
+      "name": "The Premium Condo",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=The%20Premium%20Condo",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3133,
+      "name": "COBE Ladprao - Sutthisan",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=COBE%20Ladprao%20-%20Sutthisan",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3139,
+      "name": "Varrzon Residence Sukhumvit 36",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Varrzon%20Residence%20Sukhumvit%2036",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3129,
+      "name": "D 5 Condo",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=D%205%20Condo",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3139,
+      "name": "Varrzon Residence Sukhumvit 36",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Varrzon%20Residence%20Sukhumvit%2036",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3142,
+      "name": "Wora Sukhumvit 49",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Wora%20Sukhumvit%2049",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3144,
+      "name": "Mee Sin Dee Apartment Condo",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Mee%20Sin%20Dee%20Apartment%20Condo",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3144,
+      "name": "Mee Sin Dee Apartment Condo",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Mee%20Sin%20Dee%20Apartment%20Condo",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3147,
+      "name": "SHAA Asoke",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=SHAA%20Asoke",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3147,
+      "name": "SHAA Asoke",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=SHAA%20Asoke",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3127,
+      "name": "Nana Condo",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Nana%20Condo",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 6230,
+        "title": "Omni Tower Sukhumvit Nana",
+        "address": "69 Sukhumvit 4 Alley, Khlong Toei, Bangkok",
+        "district": "khlong toei",
+        "projectPage": null,
+        "ageDays": 25
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/6230-omni-tower-sukhumvit-nana",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-sale/at-omni-tower-sukhumvit-nana-6230",
+      "sampleCount": 32,
+      "market": {
+        "count": 32,
+        "observedCount": 32,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 5558438,
+        "minimum": 2450000.0,
+        "minimumArea": 31.9,
+        "averageSqm": 70576,
+        "minimumSqm": 52307.69,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-sale/at-omni-tower-sukhumvit-nana-6230",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-60069385",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-11309705",
+        "byBedroom": {
+          "1": {
+            "count": 15,
+            "minimum": 2450000.0,
+            "area": 31.9,
+            "minimumArea": 31.9,
+            "priceSqm": 76802.51,
+            "minimumSqm": 52307.69,
+            "sourceUrl": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-60069385",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-60069385",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-11309705"
+          },
+          "2": {
+            "count": 13,
+            "minimum": 4400000.0,
+            "area": 75.0,
+            "minimumArea": 75.0,
+            "priceSqm": 58666.67,
+            "minimumSqm": 55714.29,
+            "sourceUrl": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-500634423",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-500634423",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-500553079"
+          },
+          "3": {
+            "count": 3,
+            "minimum": 7000000.0,
+            "area": 104.0,
+            "minimumArea": 104.0,
+            "priceSqm": 67307.69,
+            "minimumSqm": 63636.36,
+            "sourceUrl": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-500256341",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-500256341",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-500670539"
+          }
+        },
+        "samples": [
+          {
+            "id": "500590651",
+            "price": 6900000.0,
+            "area": 101.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Omni Tower Sukhumvit Nana, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-500590651",
+            "updated": "2026-10-21",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500456725",
+            "price": 6500000.0,
+            "area": 77.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Omni Tower Sukhumvit Nana, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-500456725",
+            "updated": "2026-10-19",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500480960",
+            "price": 3780000.0,
+            "area": 65.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Omni Tower Sukhumvit Nana, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-500480960",
+            "updated": "2026-10-19",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500256341",
+            "price": 7000000.0,
+            "area": 104.0,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "Omni Tower Sukhumvit Nana, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-500256341",
+            "updated": "2026-10-19",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500298477",
+            "price": 7500000.0,
+            "area": 75.54,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Omni Tower Sukhumvit Nana, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-500298477",
+            "updated": "2026-10-22",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "60069385",
+            "price": 2450000.0,
+            "area": 31.9,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Omni Tower Sukhumvit Nana, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-60069385",
+            "updated": "2026-10-22",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "60070680",
+            "price": 3500000.0,
+            "area": 65.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Omni Tower Sukhumvit Nana, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-60070680",
+            "updated": "2026-10-22",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500670643",
+            "price": 4500000.0,
+            "area": 67.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Omni Tower Sukhumvit Nana, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-500670643",
+            "updated": "2026-10-21",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500670539",
+            "price": 7000000.0,
+            "area": 110.0,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "Omni Tower Sukhumvit Nana, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-500670539",
+            "updated": "2026-10-21",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11309705",
+            "price": 3400000.0,
+            "area": 65.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Omni Tower Sukhumvit Nana, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-11309705",
+            "updated": "2026-10-20",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500564436",
+            "price": 6400000.0,
+            "area": 77.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Omni Tower Sukhumvit Nana, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-500564436",
+            "updated": "2026-10-20",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500666865",
+            "price": 6500000.0,
+            "area": 76.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Omni Tower Sukhumvit Nana, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-500666865",
+            "updated": "2026-10-19",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500665708",
+            "price": 9200000.0,
+            "area": 132.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Omni Tower Sukhumvit Nana, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-500665708",
+            "updated": "2026-10-19",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500553079",
+            "price": 7800000.0,
+            "area": 140.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Omni Tower Sukhumvit Nana, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-500553079",
+            "updated": "2026-10-19",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500657770",
+            "price": 6400000.0,
+            "area": 77.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Omni Tower Sukhumvit Nana, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-500657770",
+            "updated": "2026-10-17",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500644034",
+            "price": 4450000.0,
+            "area": 65.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Omni Tower Sukhumvit Nana, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-500644034",
+            "updated": "2026-10-14",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11881064",
+            "price": 3900000.0,
+            "area": 66.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Omni Tower Sukhumvit Nana, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-11881064",
+            "updated": "2026-10-13",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500634423",
+            "price": 4400000.0,
+            "area": 75.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Omni Tower Sukhumvit Nana, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-500634423",
+            "updated": "2026-10-11",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500202431",
+            "price": 3780000.0,
+            "area": 65.38,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Omni Tower Sukhumvit Nana, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-500202431",
+            "updated": "2026-10-08",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500617355",
+            "price": 7400000.0,
+            "area": 77.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Omni Tower Sukhumvit Nana, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-500617355",
+            "updated": "2026-10-03",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500615795",
+            "price": 5800000.0,
+            "area": 78.89,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Omni Tower Sukhumvit Nana, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-500615795",
+            "updated": "2026-10-02",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11841650",
+            "price": 7900000.0,
+            "area": 105.03,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "Omni Tower Sukhumvit Nana, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-11841650",
+            "updated": "2026-10-02",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500615210",
+            "price": 8750000.0,
+            "area": 100.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Omni Tower Sukhumvit Nana, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-500615210",
+            "updated": "2026-10-02",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11790270",
+            "price": 4500000.0,
+            "area": 65.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Omni Tower Sukhumvit Nana, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-11790270",
+            "updated": "2026-10-02",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11494761",
+            "price": 7000000.0,
+            "area": 101.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Omni Tower Sukhumvit Nana, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-11494761",
+            "updated": "2026-10-02",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11619534",
+            "price": 6500000.0,
+            "area": 98.98,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Omni Tower Sukhumvit Nana, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-11619534",
+            "updated": "2026-10-01",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500315359",
+            "price": 2590000.0,
+            "area": 32.0,
+            "beds": null,
+            "roomType": null,
+            "title": "Omni Tower Sukhumvit Nana, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-500315359",
+            "updated": "2026-09-28",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500586779",
+            "price": 3780000.0,
+            "area": 65.38,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Omni Tower Sukhumvit Nana, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-500586779",
+            "updated": "2026-09-24",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500585934",
+            "price": 2500000.0,
+            "area": 32.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Omni Tower Sukhumvit Nana, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-500585934",
+            "updated": "2026-09-24",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500471267",
+            "price": 6590000.0,
+            "area": 101.18,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Omni Tower Sukhumvit Nana, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-500471267",
+            "updated": "2026-09-23",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500159548",
+            "price": 3700000.0,
+            "area": 65.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Omni Tower Sukhumvit Nana, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-500159548",
+            "updated": "2026-09-23",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500579144",
+            "price": 5500000.0,
+            "area": 78.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Omni Tower Sukhumvit Nana, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-500579144",
+            "updated": "2026-09-23",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500413164",
+            "price": 2950000.0,
+            "area": 55.43,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Omni Tower Sukhumvit Nana, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/omni-tower-sukhumvit-nana-bangkok-for-sale-500413164",
+            "updated": "2026-09-21",
+            "sourceName": "DDproperty",
+            "listingStatus": "update_over_30d",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 3160,
+      "name": "Four Wings Mansion",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Four%20Wings%20Mansion",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3162,
+      "name": "O.P. Tower",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=O.P.%20Tower",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3161,
+      "name": "Casa 24",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Casa%2024",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3162,
+      "name": "O.P. Tower",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=O.P.%20Tower",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3163,
+      "name": "CHAMNAN PHENJATI BUSINESS CENTER",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=CHAMNAN%20PHENJATI%20BUSINESS%20CENTER",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3163,
+      "name": "CHAMNAN PHENJATI BUSINESS CENTER",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=CHAMNAN%20PHENJATI%20BUSINESS%20CENTER",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3165,
+      "name": "Saranthorn Condominium",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Saranthorn%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3165,
+      "name": "Saranthorn Condominium",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Saranthorn%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3168,
+      "name": "The Oasis",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=The%20Oasis",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3171,
+      "name": "Tamarind Tree Residence",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Tamarind%20Tree%20Residence",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3171,
+      "name": "Tamarind Tree Residence",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Tamarind%20Tree%20Residence",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3168,
+      "name": "The Oasis",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=The%20Oasis",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3172,
+      "name": "The shine sukhumvit 39",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=The%20shine%20sukhumvit%2039",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3172,
+      "name": "The shine sukhumvit 39",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=The%20shine%20sukhumvit%2039",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3173,
+      "name": "Udomsuk 103 Condominium",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Udomsuk%20103%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3173,
+      "name": "Udomsuk 103 Condominium",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Udomsuk%20103%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3179,
+      "name": "Phini Home Condominium",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Phini%20Home%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3176,
+      "name": "Kanta Mansion",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Kanta%20Mansion",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3180,
+      "name": "Siri Sathorn",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Siri%20Sathorn",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3181,
+      "name": "London’s Finest Collection",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=London%E2%80%99s%20Finest%20Collection",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3181,
+      "name": "London’s Finest Collection",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=London%E2%80%99s%20Finest%20Collection",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3182,
+      "name": "Arrow Place",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Arrow%20Place",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3184,
+      "name": "Tatchapol",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Tatchapol",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3184,
+      "name": "Tatchapol",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Tatchapol",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3186,
+      "name": "Suwansawat Condo",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Suwansawat%20Condo",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3188,
+      "name": "Baan K Residence",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Baan%20K%20Residence",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3190,
+      "name": "Baan Tri - wit",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Baan%20Tri%20-%20wit",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3193,
+      "name": "Siam Condotown 1",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Siam%20Condotown%201",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3191,
+      "name": "Baan Somthavil",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Baan%20Somthavil",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3193,
+      "name": "Siam Condotown 1",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Siam%20Condotown%201",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3194,
+      "name": "Baan Sukpaibul",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Baan%20Sukpaibul",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3197,
+      "name": "CV 12 The Residence",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=CV%2012%20The%20Residence",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3194,
+      "name": "Baan Sukpaibul",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Baan%20Sukpaibul",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3195,
+      "name": "Baan Thirapa",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Baan%20Thirapa",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3198,
+      "name": "SCC Residence",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=SCC%20Residence",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3198,
+      "name": "SCC Residence",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=SCC%20Residence",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3202,
+      "name": "Ratchada City Condo 2",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Ratchada%20City%20Condo%202",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 3197,
+      "name": "CV 12 The Residence",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=CV%2012%20The%20Residence",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 8498,
+        "title": "CV 12 The Residence",
+        "address": "22 Soi Sukhumvit 53, Khlong Tan Nua, Watthana, Bangkok",
+        "district": "watthana",
+        "projectPage": null,
+        "ageDays": 8
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/8498-cv-12-the-residence",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-rent/at-cv-12-the-residence-8498",
+      "sampleCount": 4,
+      "market": {
+        "count": 4,
+        "observedCount": 4,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 56558,
+        "minimum": 46750.0,
+        "minimumArea": 50.0,
+        "averageSqm": 872,
+        "minimumSqm": 731.05,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-rent/at-cv-12-the-residence-8498",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/cv-12-the-residence-bangkok-for-rent-500596568",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/cv-12-the-residence-bangkok-for-rent-500645686",
+        "byBedroom": {
+          "1": {
+            "count": 2,
+            "minimum": 46750.0,
+            "area": 50.0,
+            "minimumArea": 50.0,
+            "priceSqm": 935.0,
+            "minimumSqm": 935.0,
+            "sourceUrl": "https://www.ddproperty.com/en/property/cv-12-the-residence-bangkok-for-rent-500596568",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/cv-12-the-residence-bangkok-for-rent-500596568",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/cv-12-the-residence-bangkok-for-rent-500596568"
+          },
+          "2": {
+            "count": 2,
+            "minimum": 57030.0,
+            "area": 75.0,
+            "minimumArea": 75.0,
+            "priceSqm": 760.4,
+            "minimumSqm": 731.05,
+            "sourceUrl": "https://www.ddproperty.com/en/property/cv-12-the-residence-bangkok-for-rent-500596560",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/cv-12-the-residence-bangkok-for-rent-500596560",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/cv-12-the-residence-bangkok-for-rent-500645686"
+          }
+        },
+        "samples": [
+          {
+            "id": "500645686",
+            "price": 69450.0,
+            "area": 95.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "CV 12 The Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/cv-12-the-residence-bangkok-for-rent-500645686",
+            "updated": "2026-10-15",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500596568",
+            "price": 46750.0,
+            "area": 50.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "CV 12 The Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/cv-12-the-residence-bangkok-for-rent-500596568",
+            "updated": "2026-09-28",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500596560",
+            "price": 57030.0,
+            "area": 75.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "CV 12 The Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/cv-12-the-residence-bangkok-for-rent-500596560",
+            "updated": "2026-09-28",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500585010",
+            "price": 53000.0,
+            "area": 50.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "CV 12 The Residence, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/cv-12-the-residence-bangkok-for-rent-500585010",
+            "updated": "2026-09-24",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    }
+  ]
+}
