@@ -1,0 +1,42 @@
+{
+  "hipflatId": 3070,
+  "projectName": "Grand View Condominium",
+  "checkedAt": "2026-10-23",
+  "verifiedRentSample": {
+    "id": "903011",
+    "monthlyRent": 55000,
+    "areaSqm": 230,
+    "rentPerSqm": 239.13,
+    "bedrooms": 3,
+    "lastUpdated": "2026-09-10",
+    "status": "availability_unconfirmed_update_over_30d",
+    "url": "https://www.hipflat.co.th/ads/9u3t0hau1l11uu7unlt13n0cn3u2770h"
+  },
+  "saleSearch": {
+    "ddpropertyProjectUrl": "https://www.ddproperty.com/ขายคอนโด/ที่-แกรนด์วิว-คอนโด-1351",
+    "displayedResults": 7,
+    "checkedListingIds": [
+      "500634892",
+      "500637397",
+      "500637395",
+      "500634888",
+      "500626762"
+    ],
+    "excludedListingIds": [
+      "500634892",
+      "500637397",
+      "500637395",
+      "500634888",
+      "500626762"
+    ],
+    "excludedLowestListing": "https://www.ddproperty.com/property/แกรนด์วิว-คอนโด-กรุงเทพ-ขาย-500634892",
+    "conflict": "Five checked direct listing pages say Sattahip; do not map to Chatuchak. Two project-page results remain unverified and are also excluded.",
+    "propertyHubProjectUrl": "https://propertyhub.in.th/ขายคอนโด/โครงการ-grand-view-condo",
+    "otherProjectChecks": [
+      "https://www.dotproperty.co.th/en/condo/13046/grand-view-condominium",
+      "https://www.thailand-property.com/condo/13046/grand-view-condominium"
+    ],
+    "verifiedBangkokListings": 0
+  },
+  "yieldStatus": "not_calculated_no_verified_sale_and_rent_unconfirmed"
+}

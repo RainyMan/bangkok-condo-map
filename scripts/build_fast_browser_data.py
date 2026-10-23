@@ -7,6 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
+YIELD_AREA_TOLERANCE_SQM = 2
 SHARDS = DIST / "detail-shards"
 ROOM_RATE_BASELINES = {"sale": {}, "rent": {}}
 # Public-source tenure cues: only flag projects with explicit Leasehold wording.
@@ -328,7 +329,7 @@ for index, project in enumerate(catalogue):
                         and float(sample.get("area") or 0) > 0]
         lowest_monthly = min(rent_samples, key=lambda row: float(row["price"]), default=None)
         rent_source = None
-        if lowest_monthly and abs(float(lowest_monthly["area"]) - room_area) <= 2:
+        if lowest_monthly and abs(float(lowest_monthly["area"]) - room_area) <= YIELD_AREA_TOLERANCE_SQM:
             room_monthly_rent = float(lowest_monthly["price"])
             rent_source = lowest_monthly["url"]
         elif lowest_monthly:
@@ -351,7 +352,7 @@ for index, project in enumerate(catalogue):
             summary_rate = float(rent_room.get("minimumSqmRate") or rent_room.get("minimumSqm") or 0)
             if not summary_rate and summary_rent > 0 and summary_area > 0:
                 summary_rate = summary_rent / summary_area
-            if summary_rent > 0 and summary_area > 0 and abs(summary_area - room_area) <= 2:
+            if summary_rent > 0 and summary_area > 0 and abs(summary_area - room_area) <= YIELD_AREA_TOLERANCE_SQM:
                 room_monthly_rent = summary_rent
                 rent_source = rent_url
             elif summary_rate > 0:
