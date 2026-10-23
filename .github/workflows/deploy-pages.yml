@@ -1,3 +1,4 @@
+# Publish the committed static files directly; no build step is required.
 name: Deploy GitHub Pages
 
 on:
