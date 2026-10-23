@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-23",
+  "hipflatId": 3872,
+  "project": "Maiyalap Condominium",
+  "address": "Soi Ramintra 14, Tha Raeng, Bang Khen, Bangkok 10230",
+  "coordinate": {
+    "lat": 13.85341382,
+    "lng": 100.630478413,
+    "source": "https://zmyhome.com/search/result?id=13013&keyword=%E0%B8%A1%E0%B8%B1%E0%B8%A2%E0%B8%A5%E0%B8%B2%E0%B8%A0%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94%E0%B8%A1%E0%B8%B4%E0%B9%80%E0%B8%99%E0%B8%B5%E0%B8%A2%E0%B8%A1&lat=13.8534138200&lng=100.6304784130&type=Project&typePost%5B0%5D=1&typePost%5B1%5D=2&typePost%5B2%5D=8&typePost%5B3%5D=10&typePost%5B4%5D=9&typeProperty%5B0%5D=1",
+    "sourceType": "ZmyHome project map center"
+  },
+  "crossChecks": [
+    {
+      "source": "ZmyHome project page",
+      "url": "https://zmyhome.com/project/V13013",
+      "finding": "Exact Maiyalap Condominium project name, Ramintra 14, Tha Raeng, Bang Khen address; project record V13013."
+    },
+    {
+      "source": "Hipflat project page",
+      "url": "https://www.hipflat.co.th/en/projects/maiyalap-condominium-bfabxl",
+      "finding": "Exact Maiyalap Condominium project name and Soi Muban Inthon Phithak address in Tha Raeng/Bang Khen."
+    },
+    {
+      "source": "ArcGIS World Geocoding Service",
+      "finding": "POI exact name Maiyalap Condominium at Soi Maiyalap, Tha Raeng, Bang Khen; candidate 13.853404975, 100.63052947.",
+      "distanceFromZmyHomeMapMeters": 5.6
+    }
+  ],
+  "decision": "Accepted as verified based on project-specific coordinates and matching exact-name POI within 6 m.",
+  "coordinateRecordAdded": true
+}
