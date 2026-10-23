@@ -1,0 +1,2569 @@
+{
+  "checkedAt": "2026-10-23",
+  "targetMarkets": 200,
+  "backfilledMarkets": 14,
+  "statuses": {
+    "no_exact_current_candidate_in_keyword_results": 182,
+    "verified_active_ddproperty_listings": 14,
+    "project_verified_but_no_recent_active_sample": 2,
+    "ddproperty_project_identity_mismatch": 2
+  },
+  "results": [
+    {
+      "hipflatId": 5300,
+      "name": "Sricharoen Condo Town",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Sricharoen%20Condo%20Town",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5303,
+      "name": "Royal Regent Ratchada 36",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Royal%20Regent%20Ratchada%2036",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5303,
+      "name": "Royal Regent Ratchada 36",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Royal%20Regent%20Ratchada%2036",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5300,
+      "name": "Sricharoen Condo Town",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Sricharoen%20Condo%20Town",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5304,
+      "name": "Tongtip Mansion",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Tongtip%20Mansion",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5305,
+      "name": "Ussakan Place",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Ussakan%20Place",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5305,
+      "name": "Ussakan Place",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Ussakan%20Place",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5308,
+      "name": "Alpha Building",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Alpha%20Building",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5308,
+      "name": "Alpha Building",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Alpha%20Building",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5309,
+      "name": "Baan Suan Plu",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Baan%20Suan%20Plu",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5311,
+      "name": "Family House Ladprao 71",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Family%20House%20Ladprao%2071",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5312,
+      "name": "The Monument Sathorn",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=The%20Monument%20Sathorn",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5314,
+      "name": "Baan Sukhumvit 27",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Baan%20Sukhumvit%2027",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5314,
+      "name": "Baan Sukhumvit 27",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Baan%20Sukhumvit%2027",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5315,
+      "name": "Dusit Avenue",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Dusit%20Avenue",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5311,
+      "name": "Family House Ladprao 71",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Family%20House%20Ladprao%2071",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 193,
+        "title": "Family House Ladprao 71",
+        "address": "71 Ladprao, Lat Phrao, Bangkok",
+        "district": "lat phrao",
+        "projectPage": null,
+        "ageDays": 8
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/193-family-house-ladprao-71",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-sale/at-family-house-ladprao-71-193",
+      "sampleCount": 1,
+      "market": {
+        "count": 1,
+        "observedCount": 1,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 900000,
+        "minimum": 900000.0,
+        "minimumArea": 28.0,
+        "averageSqm": 32143,
+        "minimumSqm": 32142.86,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-sale/at-family-house-ladprao-71-193",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/family-house-ladprao-71-bangkok-for-sale-500192139",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/family-house-ladprao-71-bangkok-for-sale-500192139",
+        "byBedroom": {},
+        "samples": [
+          {
+            "id": "500192139",
+            "price": 900000.0,
+            "area": 28.0,
+            "beds": null,
+            "roomType": null,
+            "title": "Family House Ladprao 71, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/family-house-ladprao-71-bangkok-for-sale-500192139",
+            "updated": "2026-10-15",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 5317,
+      "name": "MILES Ratchada-Ladprao",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=MILES%20Ratchada-Ladprao",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5317,
+      "name": "MILES Ratchada-Ladprao",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=MILES%20Ratchada-Ladprao",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5318,
+      "name": "C.S. Apartment",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=C.S.%20Apartment",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5318,
+      "name": "C.S. Apartment",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=C.S.%20Apartment",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5319,
+      "name": "Mankhong Condominium Bilding B",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Mankhong%20Condominium%20Bilding%20B",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5319,
+      "name": "Mankhong Condominium Bilding B",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Mankhong%20Condominium%20Bilding%20B",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5321,
+      "name": "Navy Place Condominium",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Navy%20Place%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5322,
+      "name": "D BURA Pran Nok",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=D%20BURA%20Pran%20Nok",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5322,
+      "name": "D BURA Pran Nok",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=D%20BURA%20Pran%20Nok",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5325,
+      "name": "Chateau Langsuan",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Chateau%20Langsuan",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5326,
+      "name": "Hampton Place",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Hampton%20Place",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5325,
+      "name": "Chateau Langsuan",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Chateau%20Langsuan",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5326,
+      "name": "Hampton Place",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Hampton%20Place",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5328,
+      "name": "Ladprao Condominium",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Ladprao%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5328,
+      "name": "Ladprao Condominium",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Ladprao%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5329,
+      "name": "Regent Home 7 Sukhumvit",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Regent%20Home%207%20Sukhumvit",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5329,
+      "name": "Regent Home 7 Sukhumvit",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Regent%20Home%207%20Sukhumvit",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5331,
+      "name": "Polo Residence",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Polo%20Residence",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5332,
+      "name": "Mit Samphan 1",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Mit%20Samphan%201",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5333,
+      "name": "Hi Kaset-Senanikom",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Hi%20Kaset-Senanikom",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5332,
+      "name": "Mit Samphan 1",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Mit%20Samphan%201",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5333,
+      "name": "Hi Kaset-Senanikom",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Hi%20Kaset-Senanikom",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5338,
+      "name": "Kris Garden Rama 9",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Kris%20Garden%20Rama%209",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5344,
+      "name": "Baiyoke Tower 2",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Baiyoke%20Tower%202",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5335,
+      "name": "Executive Bangna",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Executive%20Bangna",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 14719,
+        "title": "The Executive Bangna",
+        "address": "Srinagarindra Road, Nong Bon, Prawet, Bangkok",
+        "district": "prawet",
+        "projectPage": null,
+        "ageDays": 4
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/14719-the-executive-bangna",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-sale/at-the-executive-bangna-14719",
+      "sampleCount": 1,
+      "market": {
+        "count": 1,
+        "observedCount": 1,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 2850000,
+        "minimum": 2850000.0,
+        "minimumArea": 70.0,
+        "averageSqm": 40714,
+        "minimumSqm": 40714.29,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-sale/at-the-executive-bangna-14719",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/the-executive-bangna-bangkok-for-sale-500665041",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/the-executive-bangna-bangkok-for-sale-500665041",
+        "byBedroom": {
+          "1": {
+            "count": 1,
+            "minimum": 2850000.0,
+            "area": 70.0,
+            "minimumArea": 70.0,
+            "priceSqm": 40714.29,
+            "minimumSqm": 40714.29,
+            "sourceUrl": "https://www.ddproperty.com/en/property/the-executive-bangna-bangkok-for-sale-500665041",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/the-executive-bangna-bangkok-for-sale-500665041",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/the-executive-bangna-bangkok-for-sale-500665041"
+          }
+        },
+        "samples": [
+          {
+            "id": "500665041",
+            "price": 2850000.0,
+            "area": 70.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "The Executive Bangna, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-executive-bangna-bangkok-for-sale-500665041",
+            "updated": "2026-10-19",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 5347,
+      "name": "Levo Ladprao 18 Project 1",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Levo%20Ladprao%2018%20Project%201",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5349,
+      "name": "Merlin Tower 1",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Merlin%20Tower%201",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5338,
+      "name": "Kris Garden Rama 9",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Kris%20Garden%20Rama%209",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 6350,
+        "title": "Kris Garden Rama 9",
+        "address": "Rama 9 Soi 8 - Soi RCA, Bang Kapi, Huai Khwang, Bangkok",
+        "district": "huai khwang",
+        "projectPage": null,
+        "ageDays": 11
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/6350-kris-garden-rama-9",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-sale/at-kris-garden-rama-9-6350",
+      "sampleCount": 2,
+      "market": {
+        "count": 2,
+        "observedCount": 2,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 1725000,
+        "minimum": 1500000.0,
+        "minimumArea": 26.0,
+        "averageSqm": 58293,
+        "minimumSqm": 57692.31,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-sale/at-kris-garden-rama-9-6350",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/kris-garden-rama-9-bangkok-for-sale-60167564",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/kris-garden-rama-9-bangkok-for-sale-60167564",
+        "byBedroom": {
+          "1": {
+            "count": 1,
+            "minimum": 1950000.0,
+            "area": 33.11,
+            "minimumArea": 33.11,
+            "priceSqm": 58894.59,
+            "minimumSqm": 58894.59,
+            "sourceUrl": "https://www.ddproperty.com/en/property/kris-garden-rama-9-bangkok-for-sale-500516939",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/kris-garden-rama-9-bangkok-for-sale-500516939",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/kris-garden-rama-9-bangkok-for-sale-500516939"
+          }
+        },
+        "samples": [
+          {
+            "id": "500516939",
+            "price": 1950000.0,
+            "area": 33.11,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Kris Garden Rama 9, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/kris-garden-rama-9-bangkok-for-sale-500516939",
+            "updated": "2026-10-12",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "60167564",
+            "price": 1500000.0,
+            "area": 26.0,
+            "beds": null,
+            "roomType": null,
+            "title": "Kris Garden Rama 9, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/kris-garden-rama-9-bangkok-for-sale-60167564",
+            "updated": "2026-10-07",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 5344,
+      "name": "Baiyoke Tower 2",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Baiyoke%20Tower%202",
+      "status": "project_verified_but_no_recent_active_sample",
+      "candidate": {
+        "ddPropertyProjectId": 15485,
+        "title": "Baiyoke Tower 2",
+        "address": "Thanon Phaya Thai, Ratchathewi, Bangkok",
+        "district": "ratchathewi",
+        "projectPage": null,
+        "ageDays": 31
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/15485-baiyoke-tower-2",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-rent/at-baiyoke-tower-2-15485",
+      "observedListings": 1,
+      "samples": [
+        {
+          "id": "500574098",
+          "price": 30000.0,
+          "area": 31.0,
+          "beds": 1,
+          "roomType": "1BR",
+          "title": "Baiyoke Tower 2, Bangkok",
+          "url": "https://www.ddproperty.com/en/property/baiyoke-tower-2-bangkok-for-rent-500574098",
+          "updated": "2026-09-22",
+          "sourceName": "DDproperty",
+          "listingStatus": "update_over_30d",
+          "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+        }
+      ]
+    },
+    {
+      "hipflatId": 5349,
+      "name": "Merlin Tower 1",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Merlin%20Tower%201",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5350,
+      "name": "Pattanachat Place",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Pattanachat%20Place",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5350,
+      "name": "Pattanachat Place",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Pattanachat%20Place",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5352,
+      "name": "baan saran",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=baan%20saran",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5352,
+      "name": "baan saran",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=baan%20saran",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5355,
+      "name": "AE House",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=AE%20House",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5355,
+      "name": "AE House",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=AE%20House",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5359,
+      "name": "Kaset Villa Tower",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Kaset%20Villa%20Tower",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5359,
+      "name": "Kaset Villa Tower",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Kaset%20Villa%20Tower",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5360,
+      "name": "The Master Montara Sathon - Rama 3",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=The%20Master%20Montara%20Sathon%20-%20Rama%203",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5360,
+      "name": "The Master Montara Sathon - Rama 3",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=The%20Master%20Montara%20Sathon%20-%20Rama%203",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5361,
+      "name": "NRV Condo Lifestyle",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=NRV%20Condo%20Lifestyle",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5368,
+      "name": "Saint Louis Mansion",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Saint%20Louis%20Mansion",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5368,
+      "name": "Saint Louis Mansion",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Saint%20Louis%20Mansion",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5361,
+      "name": "NRV Condo Lifestyle",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=NRV%20Condo%20Lifestyle",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5369,
+      "name": "Asher Prive Sutthisan",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Asher%20Prive%20Sutthisan",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5370,
+      "name": "PREM Ruamrudee Condominium",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=PREM%20Ruamrudee%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5370,
+      "name": "PREM Ruamrudee Condominium",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=PREM%20Ruamrudee%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5373,
+      "name": "Capri Court",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Capri%20Court",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5373,
+      "name": "Capri Court",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Capri%20Court",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5372,
+      "name": "Heritage Condominium",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Heritage%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5374,
+      "name": "Civic Horizon",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Civic%20Horizon",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5374,
+      "name": "Civic Horizon",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Civic%20Horizon",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5375,
+      "name": "Thana Astra Sathorn-Chan",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Thana%20Astra%20Sathorn-Chan",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5375,
+      "name": "Thana Astra Sathorn-Chan",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Thana%20Astra%20Sathorn-Chan",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5376,
+      "name": "The Grand Sethiwan Sukhumvit 24",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=The%20Grand%20Sethiwan%20Sukhumvit%2024",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5376,
+      "name": "The Grand Sethiwan Sukhumvit 24",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=The%20Grand%20Sethiwan%20Sukhumvit%2024",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5377,
+      "name": "Charan Mansion",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Charan%20Mansion",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5377,
+      "name": "Charan Mansion",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Charan%20Mansion",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5379,
+      "name": "Chateau In Town Vibhavadi 30",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Chateau%20In%20Town%20Vibhavadi%2030",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5379,
+      "name": "Chateau In Town Vibhavadi 30",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Chateau%20In%20Town%20Vibhavadi%2030",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5380,
+      "name": "J.W. Suite",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=J.W.%20Suite",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5386,
+      "name": "Column Bangkok",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Column%20Bangkok",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5378,
+      "name": "D Condo Ramkhamhaeng",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=D%20Condo%20Ramkhamhaeng",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 6743,
+        "title": "Dcondo Ramkhamhaeng",
+        "address": "1851 Ramkhamhaeng Road, Hua Mak, Bang Kapi, Bangkok",
+        "district": "bang kapi",
+        "projectPage": null,
+        "ageDays": 20
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/6743-dcondo-ramkhamhaeng",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-sale/at-dcondo-ramkhamhaeng-6743",
+      "sampleCount": 5,
+      "market": {
+        "count": 5,
+        "observedCount": 5,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 1646000,
+        "minimum": 1450000.0,
+        "minimumArea": 30.0,
+        "averageSqm": 56060,
+        "minimumSqm": 48333.33,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-sale/at-dcondo-ramkhamhaeng-6743",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/dcondo-ramkhamhaeng-bangkok-for-sale-60142720",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/dcondo-ramkhamhaeng-bangkok-for-sale-60142720",
+        "byBedroom": {
+          "1": {
+            "count": 5,
+            "minimum": 1450000.0,
+            "area": 30.0,
+            "minimumArea": 30.0,
+            "priceSqm": 48333.33,
+            "minimumSqm": 48333.33,
+            "sourceUrl": "https://www.ddproperty.com/en/property/dcondo-ramkhamhaeng-bangkok-for-sale-60142720",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/dcondo-ramkhamhaeng-bangkok-for-sale-60142720",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/dcondo-ramkhamhaeng-bangkok-for-sale-60142720"
+          }
+        },
+        "samples": [
+          {
+            "id": "60201210",
+            "price": 1900000.0,
+            "area": 29.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Dcondo Ramkhamhaeng, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/dcondo-ramkhamhaeng-bangkok-for-sale-60201210",
+            "updated": "2026-10-07",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11602825",
+            "price": 1590000.0,
+            "area": 30.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Dcondo Ramkhamhaeng, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/dcondo-ramkhamhaeng-bangkok-for-sale-11602825",
+            "updated": "2026-10-06",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500147280",
+            "price": 1500000.0,
+            "area": 29.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Dcondo Ramkhamhaeng, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/dcondo-ramkhamhaeng-bangkok-for-sale-500147280",
+            "updated": "2026-10-06",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "8290727",
+            "price": 1790000.0,
+            "area": 29.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Dcondo Ramkhamhaeng, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/dcondo-ramkhamhaeng-bangkok-for-sale-8290727",
+            "updated": "2026-10-03",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "60142720",
+            "price": 1450000.0,
+            "area": 30.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Dcondo Ramkhamhaeng, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/dcondo-ramkhamhaeng-bangkok-for-sale-60142720",
+            "updated": "2026-09-24",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 5378,
+      "name": "D Condo Ramkhamhaeng",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=D%20Condo%20Ramkhamhaeng",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 6743,
+        "title": "Dcondo Ramkhamhaeng",
+        "address": "1851 Ramkhamhaeng Road, Hua Mak, Bang Kapi, Bangkok",
+        "district": "bang kapi",
+        "projectPage": null,
+        "ageDays": 10
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/6743-dcondo-ramkhamhaeng",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-rent/at-dcondo-ramkhamhaeng-6743",
+      "sampleCount": 2,
+      "market": {
+        "count": 2,
+        "observedCount": 2,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 12000,
+        "minimum": 11000.0,
+        "minimumArea": 28.0,
+        "averageSqm": 413,
+        "minimumSqm": 392.86,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-rent/at-dcondo-ramkhamhaeng-6743",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/dcondo-ramkhamhaeng-bangkok-for-rent-11799075",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/dcondo-ramkhamhaeng-bangkok-for-rent-11799075",
+        "byBedroom": {
+          "1": {
+            "count": 2,
+            "minimum": 11000.0,
+            "area": 28.0,
+            "minimumArea": 28.0,
+            "priceSqm": 392.86,
+            "minimumSqm": 392.86,
+            "sourceUrl": "https://www.ddproperty.com/en/property/dcondo-ramkhamhaeng-bangkok-for-rent-11799075",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/dcondo-ramkhamhaeng-bangkok-for-rent-11799075",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/dcondo-ramkhamhaeng-bangkok-for-rent-11799075"
+          }
+        },
+        "samples": [
+          {
+            "id": "500668306",
+            "price": 13000.0,
+            "area": 30.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Dcondo Ramkhamhaeng, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/dcondo-ramkhamhaeng-bangkok-for-rent-500668306",
+            "updated": "2026-10-20",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11799075",
+            "price": 11000.0,
+            "area": 28.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Dcondo Ramkhamhaeng, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/dcondo-ramkhamhaeng-bangkok-for-rent-11799075",
+            "updated": "2026-10-13",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 5388,
+      "name": "PORCH Condominium",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=PORCH%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5387,
+      "name": "The Estate @Thapra",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=The%20Estate%20%40Thapra",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5388,
+      "name": "PORCH Condominium",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=PORCH%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5386,
+      "name": "Column Bangkok",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Column%20Bangkok",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 9465,
+        "title": "Column Bangkok",
+        "address": "23/5 Soi Sukhumvit 16, Khlong Toei, Bangkok",
+        "district": "khlong toei",
+        "projectPage": null,
+        "ageDays": 18
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/9465-column-bangkok",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-rent/at-column-bangkok-9465",
+      "sampleCount": 1,
+      "market": {
+        "count": 1,
+        "observedCount": 1,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 38000,
+        "minimum": 38000.0,
+        "minimumArea": 138.0,
+        "averageSqm": 275,
+        "minimumSqm": 275.36,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-rent/at-column-bangkok-9465",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/column-bangkok-bangkok-for-rent-500620572",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/column-bangkok-bangkok-for-rent-500620572",
+        "byBedroom": {
+          "2": {
+            "count": 1,
+            "minimum": 38000.0,
+            "area": 138.0,
+            "minimumArea": 138.0,
+            "priceSqm": 275.36,
+            "minimumSqm": 275.36,
+            "sourceUrl": "https://www.ddproperty.com/en/property/column-bangkok-bangkok-for-rent-500620572",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/column-bangkok-bangkok-for-rent-500620572",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/column-bangkok-bangkok-for-rent-500620572"
+          }
+        },
+        "samples": [
+          {
+            "id": "500620572",
+            "price": 38000.0,
+            "area": 138.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Column Bangkok, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/column-bangkok-bangkok-for-rent-500620572",
+            "updated": "2026-10-05",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 5390,
+      "name": "Anna Condo Ladprao 101",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Anna%20Condo%20Ladprao%20101",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5391,
+      "name": "Bangbua 2",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Bangbua%202",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5391,
+      "name": "Bangbua 2",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Bangbua%202",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5393,
+      "name": "The Gallery Rama 2 – Wongwaen Prachauthit",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=The%20Gallery%20Rama%202%20%E2%80%93%20Wongwaen%20Prachauthit",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5393,
+      "name": "The Gallery Rama 2 – Wongwaen Prachauthit",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=The%20Gallery%20Rama%202%20%E2%80%93%20Wongwaen%20Prachauthit",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5390,
+      "name": "Anna Condo Ladprao 101",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Anna%20Condo%20Ladprao%20101",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 9885,
+        "title": "Anna Condo Ladprao 101",
+        "address": "10 Pho Kaeo 3 Alley, Khlong Chan, Bang Kapi, Bangkok",
+        "district": "bang kapi",
+        "projectPage": null,
+        "ageDays": 9
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/9885-anna-condo-ladprao-101",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-sale/at-anna-condo-ladprao-101-9885",
+      "sampleCount": 1,
+      "market": {
+        "count": 1,
+        "observedCount": 1,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 1900000,
+        "minimum": 1900000.0,
+        "minimumArea": 36.4,
+        "averageSqm": 52198,
+        "minimumSqm": 52197.8,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-sale/at-anna-condo-ladprao-101-9885",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/anna-condo-ladprao-101-bangkok-for-sale-500131911",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/anna-condo-ladprao-101-bangkok-for-sale-500131911",
+        "byBedroom": {
+          "1": {
+            "count": 1,
+            "minimum": 1900000.0,
+            "area": 36.4,
+            "minimumArea": 36.4,
+            "priceSqm": 52197.8,
+            "minimumSqm": 52197.8,
+            "sourceUrl": "https://www.ddproperty.com/en/property/anna-condo-ladprao-101-bangkok-for-sale-500131911",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/anna-condo-ladprao-101-bangkok-for-sale-500131911",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/anna-condo-ladprao-101-bangkok-for-sale-500131911"
+          }
+        },
+        "samples": [
+          {
+            "id": "500131911",
+            "price": 1900000.0,
+            "area": 36.4,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Anna Condo Ladprao 101, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/anna-condo-ladprao-101-bangkok-for-sale-500131911",
+            "updated": "2026-10-14",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 5394,
+      "name": "THE 1 PLUS CONDO @SRINAKARINDRA",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=THE%201%20PLUS%20CONDO%20%40SRINAKARINDRA",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5395,
+      "name": "LILY RESIDENCE",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=LILY%20RESIDENCE",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5394,
+      "name": "THE 1 PLUS CONDO @SRINAKARINDRA",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=THE%201%20PLUS%20CONDO%20%40SRINAKARINDRA",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5395,
+      "name": "LILY RESIDENCE",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=LILY%20RESIDENCE",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5396,
+      "name": "Saranville @ Happy Land",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Saranville%20%40%20Happy%20Land",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5399,
+      "name": "Regent Home Bangson",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Regent%20Home%20Bangson",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5399,
+      "name": "Regent Home Bangson",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Regent%20Home%20Bangson",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5400,
+      "name": "Z2 Lat Phrao",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Z2%20Lat%20Phrao",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5400,
+      "name": "Z2 Lat Phrao",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Z2%20Lat%20Phrao",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5402,
+      "name": "Cross Point",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Cross%20Point",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5402,
+      "name": "Cross Point",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Cross%20Point",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5406,
+      "name": "J.C. Tower Inthamara",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=J.C.%20Tower%20Inthamara",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5406,
+      "name": "J.C. Tower Inthamara",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=J.C.%20Tower%20Inthamara",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5407,
+      "name": "Fraser Suites Sukhumvit",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Fraser%20Suites%20Sukhumvit",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5407,
+      "name": "Fraser Suites Sukhumvit",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Fraser%20Suites%20Sukhumvit",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5408,
+      "name": "Lumpini Park On 19",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Lumpini%20Park%20On%2019",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5404,
+      "name": "Baan Chom Dao",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Baan%20Chom%20Dao",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 314,
+        "title": "Baan Chom Dao Condominium",
+        "address": "Sukhumvit, Suan Luang, Bangkok",
+        "district": "suan luang",
+        "projectPage": null,
+        "ageDays": 4
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/314-baan-chom-dao-condominium",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-sale/at-baan-chom-dao-condominium-314",
+      "sampleCount": 7,
+      "market": {
+        "count": 7,
+        "observedCount": 7,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 1282857,
+        "minimum": 1050000.0,
+        "minimumArea": 34.53,
+        "averageSqm": 31906,
+        "minimumSqm": 26825.4,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-sale/at-baan-chom-dao-condominium-314",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/baan-chom-dao-condominium-bangkok-for-sale-500345151",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/baan-chom-dao-condominium-bangkok-for-sale-500509991",
+        "byBedroom": {
+          "1": {
+            "count": 2,
+            "minimum": 1200000.0,
+            "area": 34.0,
+            "minimumArea": 34.0,
+            "priceSqm": 35294.12,
+            "minimumSqm": 33333.33,
+            "sourceUrl": "https://www.ddproperty.com/en/property/baan-chom-dao-condominium-bangkok-for-sale-500520386",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/baan-chom-dao-condominium-bangkok-for-sale-500520386",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/baan-chom-dao-condominium-bangkok-for-sale-500440573"
+          },
+          "2": {
+            "count": 1,
+            "minimum": 1690000.0,
+            "area": 63.0,
+            "minimumArea": 63.0,
+            "priceSqm": 26825.4,
+            "minimumSqm": 26825.4,
+            "sourceUrl": "https://www.ddproperty.com/en/property/baan-chom-dao-condominium-bangkok-for-sale-500509991",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/baan-chom-dao-condominium-bangkok-for-sale-500509991",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/baan-chom-dao-condominium-bangkok-for-sale-500509991"
+          }
+        },
+        "samples": [
+          {
+            "id": "500499688",
+            "price": 1090000.0,
+            "area": 35.0,
+            "beds": null,
+            "roomType": null,
+            "title": "Baan Chom Dao Condominium, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/baan-chom-dao-condominium-bangkok-for-sale-500499688",
+            "updated": "2026-10-19",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500440573",
+            "price": 1500000.0,
+            "area": 45.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Baan Chom Dao Condominium, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/baan-chom-dao-condominium-bangkok-for-sale-500440573",
+            "updated": "2026-10-18",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500520386",
+            "price": 1200000.0,
+            "area": 34.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Baan Chom Dao Condominium, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/baan-chom-dao-condominium-bangkok-for-sale-500520386",
+            "updated": "2026-10-09",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500345151",
+            "price": 1050000.0,
+            "area": 34.53,
+            "beds": null,
+            "roomType": null,
+            "title": "Baan Chom Dao Condominium, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/baan-chom-dao-condominium-bangkok-for-sale-500345151",
+            "updated": "2026-09-29",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500509991",
+            "price": 1690000.0,
+            "area": 63.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "Baan Chom Dao Condominium, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/baan-chom-dao-condominium-bangkok-for-sale-500509991",
+            "updated": "2026-09-29",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500396739",
+            "price": 1250000.0,
+            "area": 39.0,
+            "beds": null,
+            "roomType": null,
+            "title": "Baan Chom Dao Condominium, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/baan-chom-dao-condominium-bangkok-for-sale-500396739",
+            "updated": "2026-09-24",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500172662",
+            "price": 1200000.0,
+            "area": 35.0,
+            "beds": null,
+            "roomType": null,
+            "title": "Baan Chom Dao Condominium, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/baan-chom-dao-condominium-bangkok-for-sale-500172662",
+            "updated": "2026-09-24",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 5410,
+      "name": "Walden Sukhumvit 39",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Walden%20Sukhumvit%2039",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5411,
+      "name": "Boutique Ratchada 2",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Boutique%20Ratchada%202",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5409,
+      "name": "Sathorn Ville",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Sathorn%20Ville",
+      "status": "ddproperty_project_identity_mismatch",
+      "candidate": {
+        "ddPropertyProjectId": 211,
+        "title": "Lumpini Ville Phra Mae Maree-Sathorn",
+        "address": "46 Charoen Krung Road, Yan Nawa, Sathon, Bangkok",
+        "district": "yan nawa",
+        "projectPage": null,
+        "ageDays": 31
+      },
+      "ddProject": {
+        "id": 211,
+        "name": "Lumpini Ville Phra Mae Maree-Sathorn",
+        "district": "Sathon"
+      }
+    },
+    {
+      "hipflatId": 5411,
+      "name": "Boutique Ratchada 2",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Boutique%20Ratchada%202",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5409,
+      "name": "Sathorn Ville",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Sathorn%20Ville",
+      "status": "ddproperty_project_identity_mismatch",
+      "candidate": {
+        "ddPropertyProjectId": 211,
+        "title": "Lumpini Ville Phra Mae Maree-Sathorn",
+        "address": "46 Charoen Krung Road, Yan Nawa, Sathon, Bangkok",
+        "district": "yan nawa",
+        "projectPage": null,
+        "ageDays": 23
+      },
+      "ddProject": {
+        "id": 211,
+        "name": "Lumpini Ville Phra Mae Maree-Sathorn",
+        "district": "Sathon"
+      }
+    },
+    {
+      "hipflatId": 5416,
+      "name": "Ideo Mobi Rama 4",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Ideo%20Mobi%20Rama%204",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5420,
+      "name": "Quarto Sukhumvit 81",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Quarto%20Sukhumvit%2081",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5416,
+      "name": "Ideo Mobi Rama 4",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Ideo%20Mobi%20Rama%204",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5420,
+      "name": "Quarto Sukhumvit 81",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Quarto%20Sukhumvit%2081",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5419,
+      "name": "City Home Sukhumvit 101/2",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=City%20Home%20Sukhumvit%20101/2",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5419,
+      "name": "City Home Sukhumvit 101/2",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=City%20Home%20Sukhumvit%20101/2",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5425,
+      "name": "J.W. City Building B",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=J.W.%20City%20Building%20B",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5425,
+      "name": "J.W. City Building B",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=J.W.%20City%20Building%20B",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5424,
+      "name": "Sri-Thai condominium",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Sri-Thai%20condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5424,
+      "name": "Sri-Thai condominium",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Sri-Thai%20condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5426,
+      "name": "G.M. Mansion",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=G.M.%20Mansion",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5428,
+      "name": "Chateau In Town Kaset Campus",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Chateau%20In%20Town%20Kaset%20Campus",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5428,
+      "name": "Chateau In Town Kaset Campus",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Chateau%20In%20Town%20Kaset%20Campus",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5429,
+      "name": "HYPE Sathorn-Thonburi",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=HYPE%20Sathorn-Thonburi",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5429,
+      "name": "HYPE Sathorn-Thonburi",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=HYPE%20Sathorn-Thonburi",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5437,
+      "name": "Teja Lake View Apartments",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Teja%20Lake%20View%20Apartments",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5431,
+      "name": "Lapa Place",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Lapa%20Place",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5431,
+      "name": "Lapa Place",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Lapa%20Place",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5427,
+      "name": "Rachvipa Place",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Rachvipa%20Place",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 9920,
+        "title": "Rachvipa Place",
+        "address": "Soi Vibhavadi-Rangsit 22, Lat Yao, Chatuchak, Bangkok",
+        "district": "chatuchak",
+        "projectPage": null,
+        "ageDays": 20
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/9920-rachvipa-place",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-sale/at-rachvipa-place-9920",
+      "sampleCount": 1,
+      "market": {
+        "count": 1,
+        "observedCount": 1,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 1800000,
+        "minimum": 1800000.0,
+        "minimumArea": 34.0,
+        "averageSqm": 52941,
+        "minimumSqm": 52941.18,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-sale/at-rachvipa-place-9920",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/rachvipa-place-bangkok-for-sale-500523975",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/rachvipa-place-bangkok-for-sale-500523975",
+        "byBedroom": {
+          "1": {
+            "count": 1,
+            "minimum": 1800000.0,
+            "area": 34.0,
+            "minimumArea": 34.0,
+            "priceSqm": 52941.18,
+            "minimumSqm": 52941.18,
+            "sourceUrl": "https://www.ddproperty.com/en/property/rachvipa-place-bangkok-for-sale-500523975",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/rachvipa-place-bangkok-for-sale-500523975",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/rachvipa-place-bangkok-for-sale-500523975"
+          }
+        },
+        "samples": [
+          {
+            "id": "500523975",
+            "price": 1800000.0,
+            "area": 34.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "Rachvipa Place, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/rachvipa-place-bangkok-for-sale-500523975",
+            "updated": "2026-10-03",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 5437,
+      "name": "Teja Lake View Apartments",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Teja%20Lake%20View%20Apartments",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5438,
+      "name": "TBI Tower",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=TBI%20Tower",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5439,
+      "name": "Assakarn Place Ramkhamhaeng-Wongwan Building 2",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Assakarn%20Place%20Ramkhamhaeng-Wongwan%20Building%202",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5439,
+      "name": "Assakarn Place Ramkhamhaeng-Wongwan Building 2",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Assakarn%20Place%20Ramkhamhaeng-Wongwan%20Building%202",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5441,
+      "name": "Tawana Residence",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Tawana%20Residence",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5443,
+      "name": "Sahai Place",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Sahai%20Place",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5441,
+      "name": "Tawana Residence",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Tawana%20Residence",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5443,
+      "name": "Sahai Place",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Sahai%20Place",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5446,
+      "name": "Saensuk Condo Town",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Saensuk%20Condo%20Town",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5446,
+      "name": "Saensuk Condo Town",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Saensuk%20Condo%20Town",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5444,
+      "name": "Nirun Residence",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Nirun%20Residence",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5444,
+      "name": "Nirun Residence",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Nirun%20Residence",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5454,
+      "name": "Keha Bangbon",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Keha%20Bangbon",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5454,
+      "name": "Keha Bangbon",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Keha%20Bangbon",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5455,
+      "name": "Quinn Condo Ratchada",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Quinn%20Condo%20Ratchada",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5455,
+      "name": "Quinn Condo Ratchada",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Quinn%20Condo%20Ratchada",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5452,
+      "name": "O Ngoen Community Housing",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=O%20Ngoen%20Community%20Housing",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5452,
+      "name": "O Ngoen Community Housing",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=O%20Ngoen%20Community%20Housing",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 11289,
+        "title": "O Ngoen Community Housing",
+        "address": "Sukhaphiban 5 Road, Sai Mai, Bangkok",
+        "district": "sai mai",
+        "projectPage": null,
+        "ageDays": 1
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/11289-o-ngoen-community-housing",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-sale/at-o-ngoen-community-housing-11289",
+      "sampleCount": 2,
+      "market": {
+        "count": 2,
+        "observedCount": 2,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 589500,
+        "minimum": 540000.0,
+        "minimumArea": 30.1,
+        "averageSqm": 19581,
+        "minimumSqm": 17940.2,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-sale/at-o-ngoen-community-housing-11289",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/o-ngoen-community-housing-bangkok-for-sale-500113830",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/o-ngoen-community-housing-bangkok-for-sale-500113830",
+        "byBedroom": {
+          "1": {
+            "count": 2,
+            "minimum": 540000.0,
+            "area": 30.1,
+            "minimumArea": 30.1,
+            "priceSqm": 17940.2,
+            "minimumSqm": 17940.2,
+            "sourceUrl": "https://www.ddproperty.com/en/property/o-ngoen-community-housing-bangkok-for-sale-500113830",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/o-ngoen-community-housing-bangkok-for-sale-500113830",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/o-ngoen-community-housing-bangkok-for-sale-500113830"
+          }
+        },
+        "samples": [
+          {
+            "id": "500113830",
+            "price": 540000.0,
+            "area": 30.1,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "O Ngoen Community Housing, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/o-ngoen-community-housing-bangkok-for-sale-500113830",
+            "updated": "2026-10-22",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500072551",
+            "price": 639000.0,
+            "area": 30.11,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "O Ngoen Community Housing, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/o-ngoen-community-housing-bangkok-for-sale-500072551",
+            "updated": "2026-10-22",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 5456,
+      "name": "Bangkhae City Condominium",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Bangkhae%20City%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5456,
+      "name": "Bangkhae City Condominium",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Bangkhae%20City%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5458,
+      "name": "Pichai Condominium",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Pichai%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5458,
+      "name": "Pichai Condominium",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Pichai%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5460,
+      "name": "Still Sukhumvit 20",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Still%20Sukhumvit%2020",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5462,
+      "name": "Charming Resident 2",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Charming%20Resident%202",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5462,
+      "name": "Charming Resident 2",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Charming%20Resident%202",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5465,
+      "name": "LPN Tower",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=LPN%20Tower",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5465,
+      "name": "LPN Tower",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=LPN%20Tower",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5467,
+      "name": "Hydon Apartment",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Hydon%20Apartment",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5466,
+      "name": "Worarat Condominium",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Worarat%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5466,
+      "name": "Worarat Condominium",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Worarat%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5467,
+      "name": "Hydon Apartment",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Hydon%20Apartment",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5468,
+      "name": "The Lush 21 Condominium",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=The%20Lush%2021%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5468,
+      "name": "The Lush 21 Condominium",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=The%20Lush%2021%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5471,
+      "name": "The Park at EM District",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=The%20Park%20at%20EM%20District",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5473,
+      "name": "Metro Sky Phaholyothin",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Metro%20Sky%20Phaholyothin",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5473,
+      "name": "Metro Sky Phaholyothin",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Metro%20Sky%20Phaholyothin",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5477,
+      "name": "Varrzon Residence",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Varrzon%20Residence",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5479,
+      "name": "THE REMARKABLE AREE-PAHOL",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=THE%20REMARKABLE%20AREE-PAHOL",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5477,
+      "name": "Varrzon Residence",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Varrzon%20Residence",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5479,
+      "name": "THE REMARKABLE AREE-PAHOL",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=THE%20REMARKABLE%20AREE-PAHOL",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5471,
+      "name": "The Park at EM District",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=The%20Park%20at%20EM%20District",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 8530,
+        "title": "The Park at Em District",
+        "address": "70 Soi Sukhumvit 24, Khong Tan, Khlong Toei, Bangkok",
+        "district": "khlong toei",
+        "projectPage": null,
+        "ageDays": 1
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/8530-the-park-at-em-district",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-sale/at-the-park-at-em-district-8530",
+      "sampleCount": 3,
+      "market": {
+        "count": 3,
+        "observedCount": 3,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 6718333,
+        "minimum": 4290000.0,
+        "minimumArea": 29.4,
+        "averageSqm": 230996,
+        "minimumSqm": 145918.37,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-sale/at-the-park-at-em-district-8530",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/the-park-at-em-district-bangkok-for-sale-500258057",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/the-park-at-em-district-bangkok-for-sale-500258057",
+        "byBedroom": {},
+        "samples": [
+          {
+            "id": "500258057",
+            "price": 4290000.0,
+            "area": 29.4,
+            "beds": null,
+            "roomType": null,
+            "title": "The Park at Em District, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-park-at-em-district-bangkok-for-sale-500258057",
+            "updated": "2026-10-22",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500202227",
+            "price": 7665000.0,
+            "area": 29.0,
+            "beds": null,
+            "roomType": null,
+            "title": "The Park at Em District, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-park-at-em-district-bangkok-for-sale-500202227",
+            "updated": "2026-10-09",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500283744",
+            "price": 8200000.0,
+            "area": 29.0,
+            "beds": null,
+            "roomType": null,
+            "title": "The Park at Em District, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-park-at-em-district-bangkok-for-sale-500283744",
+            "updated": "2026-10-05",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 5481,
+      "name": "The Panache",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=The%20Panache",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5482,
+      "name": "The Lofts Ratchathewi",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=The%20Lofts%20Ratchathewi",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5482,
+      "name": "The Lofts Ratchathewi",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=The%20Lofts%20Ratchathewi",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5481,
+      "name": "The Panache",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=The%20Panache",
+      "status": "project_verified_but_no_recent_active_sample",
+      "candidate": {
+        "ddPropertyProjectId": 12550,
+        "title": "The Panache",
+        "address": "Soi Sukhumvit 31, Khlong Tan Nua, Watthana, Bangkok",
+        "district": "watthana",
+        "projectPage": null,
+        "ageDays": 32
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/12550-the-panache",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-sale/at-the-panache-12550",
+      "observedListings": 1,
+      "samples": [
+        {
+          "id": "500057465",
+          "price": 23000000.0,
+          "area": 230.8,
+          "beds": 3,
+          "roomType": "3BR",
+          "title": "The Panache, Bangkok",
+          "url": "https://www.ddproperty.com/en/property/the-panache-bangkok-for-sale-500057465",
+          "updated": "2026-09-21",
+          "sourceName": "DDproperty",
+          "listingStatus": "update_over_30d",
+          "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+        }
+      ]
+    },
+    {
+      "hipflatId": 5484,
+      "name": "Benjasri Condominium",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Benjasri%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5487,
+      "name": "A Pool Condo Bangna",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=A%20Pool%20Condo%20Bangna",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5488,
+      "name": "Condo On-Nuch 30",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Condo%20On-Nuch%2030",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5488,
+      "name": "Condo On-Nuch 30",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Condo%20On-Nuch%2030",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5484,
+      "name": "Benjasri Condominium",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Benjasri%20Condominium",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 1327,
+        "title": "Benjasri Condominium",
+        "address": "ถนนศรีอยุธยา, Thung Phaya Thai, Ratchathewi, Bangkok",
+        "district": "ratchathewi",
+        "projectPage": null,
+        "ageDays": 1
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/1327-benjasri-condominium",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-sale/at-benjasri-condominium-1327",
+      "sampleCount": 4,
+      "market": {
+        "count": 4,
+        "observedCount": 4,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 28655738,
+        "minimum": 17800000.0,
+        "minimumArea": 231.0,
+        "averageSqm": 81870,
+        "minimumSqm": 77056.28,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-sale/at-benjasri-condominium-1327",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/benjasri-condominium-bangkok-for-sale-500389410",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/benjasri-condominium-bangkok-for-sale-500389410",
+        "byBedroom": {
+          "3": {
+            "count": 3,
+            "minimum": 17800000.0,
+            "area": 231.0,
+            "minimumArea": 231.0,
+            "priceSqm": 77056.28,
+            "minimumSqm": 77056.28,
+            "sourceUrl": "https://www.ddproperty.com/en/property/benjasri-condominium-bangkok-for-sale-500389410",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/benjasri-condominium-bangkok-for-sale-500389410",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/benjasri-condominium-bangkok-for-sale-500389410"
+          },
+          "5": {
+            "count": 1,
+            "minimum": 57822950.0,
+            "area": 680.27,
+            "minimumArea": 680.27,
+            "priceSqm": 85000.0,
+            "minimumSqm": 85000.0,
+            "sourceUrl": "https://www.ddproperty.com/en/property/benjasri-condominium-bangkok-for-sale-500548412",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/benjasri-condominium-bangkok-for-sale-500548412",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/benjasri-condominium-bangkok-for-sale-500548412"
+          }
+        },
+        "samples": [
+          {
+            "id": "500548412",
+            "price": 57822950.0,
+            "area": 680.27,
+            "beds": 5,
+            "roomType": "5BR",
+            "title": "Benjasri Condominium, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/benjasri-condominium-bangkok-for-sale-500548412",
+            "updated": "2026-10-22",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500591592",
+            "price": 18000000.0,
+            "area": 231.0,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "Benjasri Condominium, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/benjasri-condominium-bangkok-for-sale-500591592",
+            "updated": "2026-10-20",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500389410",
+            "price": 17800000.0,
+            "area": 231.0,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "Benjasri Condominium, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/benjasri-condominium-bangkok-for-sale-500389410",
+            "updated": "2026-10-22",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500629972",
+            "price": 21000000.0,
+            "area": 240.0,
+            "beds": 3,
+            "roomType": "3BR",
+            "title": "Benjasri Condominium, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/benjasri-condominium-bangkok-for-sale-500629972",
+            "updated": "2026-10-08",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 5490,
+      "name": "Villa Park 9 Srinakarin - Suanluang",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Villa%20Park%209%20Srinakarin%20-%20Suanluang",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5490,
+      "name": "Villa Park 9 Srinakarin - Suanluang",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Villa%20Park%209%20Srinakarin%20-%20Suanluang",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5489,
+      "name": "Wela Ramkhamhaeng 186",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Wela%20Ramkhamhaeng%20186",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 16077,
+        "title": "Wela Ramkhamhaeng 186",
+        "address": "450 Ramkhamhaeng Road, Min Buri, Bangkok",
+        "district": "min buri",
+        "projectPage": null,
+        "ageDays": 2
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/16077-wela-ramkhamhaeng-186",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-sale/at-wela-ramkhamhaeng-186-16077",
+      "sampleCount": 1,
+      "market": {
+        "count": 1,
+        "observedCount": 1,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 1690000,
+        "minimum": 1690000.0,
+        "minimumArea": 23.0,
+        "averageSqm": 73478,
+        "minimumSqm": 73478.26,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-sale/at-wela-ramkhamhaeng-186-16077",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/wela-ramkhamhaeng-186-bangkok-for-sale-500479144",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/wela-ramkhamhaeng-186-bangkok-for-sale-500479144",
+        "byBedroom": {},
+        "samples": [
+          {
+            "id": "500479144",
+            "price": 1690000.0,
+            "area": 23.0,
+            "beds": null,
+            "roomType": null,
+            "title": "Wela Ramkhamhaeng 186, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/wela-ramkhamhaeng-186-bangkok-for-sale-500479144",
+            "updated": "2026-10-21",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    },
+    {
+      "hipflatId": 5493,
+      "name": "Bangyeekhan Condominium",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Bangyeekhan%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5492,
+      "name": "Taweesap Condominium",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Taweesap%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5493,
+      "name": "Bangyeekhan Condominium",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Bangyeekhan%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5494,
+      "name": "Eden Ekkamai",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Eden%20Ekkamai",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5495,
+      "name": "Takka Sriwara",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Takka%20Sriwara",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5495,
+      "name": "Takka Sriwara",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Takka%20Sriwara",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5496,
+      "name": "Maison De Ville",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Maison%20De%20Ville",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5497,
+      "name": "Pong Thong Tower",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Pong%20Thong%20Tower",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5498,
+      "name": "H2 Wood Condominium",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=H2%20Wood%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5497,
+      "name": "Pong Thong Tower",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Pong%20Thong%20Tower",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5498,
+      "name": "H2 Wood Condominium",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=H2%20Wood%20Condominium",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5499,
+      "name": "The Royal Maneeya",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=The%20Royal%20Maneeya",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5505,
+      "name": "Lumpini Place Rama III - Riverview",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Lumpini%20Place%20Rama%20III%20-%20Riverview",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5505,
+      "name": "Lumpini Place Rama III - Riverview",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=Lumpini%20Place%20Rama%20III%20-%20Riverview",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5506,
+      "name": "Park View Mansion",
+      "kind": "sale",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-sale?keyword=Park%20View%20Mansion",
+      "status": "no_exact_current_candidate_in_keyword_results"
+    },
+    {
+      "hipflatId": 5499,
+      "name": "The Royal Maneeya",
+      "kind": "rent",
+      "keywordPage": "https://www.ddproperty.com/en/property-for-rent?keyword=The%20Royal%20Maneeya",
+      "status": "verified_active_ddproperty_listings",
+      "candidate": {
+        "ddPropertyProjectId": 606,
+        "title": "The Royal Maneeya",
+        "address": "Rajdamri, Lumphini, Pathum Wan, Bangkok",
+        "district": "pathum wan",
+        "projectPage": null,
+        "ageDays": 12
+      },
+      "ddProjectUrl": "https://www.ddproperty.com/en/project/606-the-royal-maneeya",
+      "srpUrl": "https://www.ddproperty.com/en/property-for-rent/at-the-royal-maneeya-606",
+      "sampleCount": 7,
+      "market": {
+        "count": 7,
+        "observedCount": 7,
+        "countKind": "ddproperty_current_individual_listings",
+        "average": 77143,
+        "minimum": 50000.0,
+        "minimumArea": 70.0,
+        "averageSqm": 702,
+        "minimumSqm": 666.67,
+        "asOf": "2026-10-23",
+        "sourceName": "DDproperty 專案單筆掛牌",
+        "source": "https://www.ddproperty.com/en/property-for-rent/at-the-royal-maneeya-606",
+        "minimumSourceUrl": "https://www.ddproperty.com/en/property/the-royal-maneeya-bangkok-for-rent-500588661",
+        "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/the-royal-maneeya-bangkok-for-rent-500583567",
+        "byBedroom": {
+          "1": {
+            "count": 1,
+            "minimum": 50000.0,
+            "area": 70.0,
+            "minimumArea": 70.0,
+            "priceSqm": 714.29,
+            "minimumSqm": 714.29,
+            "sourceUrl": "https://www.ddproperty.com/en/property/the-royal-maneeya-bangkok-for-rent-500588661",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/the-royal-maneeya-bangkok-for-rent-500588661",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/the-royal-maneeya-bangkok-for-rent-500588661"
+          },
+          "2": {
+            "count": 6,
+            "minimum": 75000.0,
+            "area": 110.0,
+            "minimumArea": 110.0,
+            "priceSqm": 681.82,
+            "minimumSqm": 666.67,
+            "sourceUrl": "https://www.ddproperty.com/en/property/the-royal-maneeya-bangkok-for-rent-11196941",
+            "minimumSourceUrl": "https://www.ddproperty.com/en/property/the-royal-maneeya-bangkok-for-rent-11196941",
+            "minimumSqmSourceUrl": "https://www.ddproperty.com/en/property/the-royal-maneeya-bangkok-for-rent-500583567"
+          }
+        },
+        "samples": [
+          {
+            "id": "500203881",
+            "price": 85000.0,
+            "area": 120.5,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "The Royal Maneeya, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-royal-maneeya-bangkok-for-rent-500203881",
+            "updated": "2026-10-11",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500368040",
+            "price": 80000.0,
+            "area": 110.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "The Royal Maneeya, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-royal-maneeya-bangkok-for-rent-500368040",
+            "updated": "2026-10-04",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "11196941",
+            "price": 75000.0,
+            "area": 110.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "The Royal Maneeya, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-royal-maneeya-bangkok-for-rent-11196941",
+            "updated": "2026-10-01",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500353655",
+            "price": 85000.0,
+            "area": 120.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "The Royal Maneeya, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-royal-maneeya-bangkok-for-rent-500353655",
+            "updated": "2026-10-01",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500203456",
+            "price": 85000.0,
+            "area": 120.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "The Royal Maneeya, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-royal-maneeya-bangkok-for-rent-500203456",
+            "updated": "2026-09-30",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500588661",
+            "price": 50000.0,
+            "area": 70.0,
+            "beds": 1,
+            "roomType": "1BR",
+            "title": "The Royal Maneeya, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-royal-maneeya-bangkok-for-rent-500588661",
+            "updated": "2026-09-25",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500583567",
+            "price": 80000.0,
+            "area": 120.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "The Royal Maneeya, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-royal-maneeya-bangkok-for-rent-500583567",
+            "updated": "2026-09-24",
+            "sourceName": "DDproperty",
+            "listingStatus": "active",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          },
+          {
+            "id": "500572192",
+            "price": 85000.0,
+            "area": 103.0,
+            "beds": 2,
+            "roomType": "2BR",
+            "title": "The Royal Maneeya, Bangkok",
+            "url": "https://www.ddproperty.com/en/property/the-royal-maneeya-bangkok-for-rent-500572192",
+            "updated": "2026-09-21",
+            "sourceName": "DDproperty",
+            "listingStatus": "update_over_30d",
+            "matchedBy": "DDproperty project ID + exact name tokens + matching district"
+          }
+        ]
+      }
+    }
+  ]
+}
