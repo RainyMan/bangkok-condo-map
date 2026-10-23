@@ -1,0 +1,34 @@
+{
+  "hipflatId": 3079,
+  "project": "Quartz Residence",
+  "checkedAt": "2026-10-23",
+  "identity": {
+    "address": "169 Sukhumvit 20, Khlong Toei, Bangkok",
+    "floors": 7,
+    "units": 53,
+    "projectSource": "https://www.quartzresidencebkk.com/"
+  },
+  "sale": {
+    "status": "no_current_verified_listing",
+    "ddpropertySource": "https://www.ddproperty.com/en/project/12612-quartz-residence",
+    "misassignedListing": {
+      "url": "https://www.livinginsider.com/en/detail/condo-for-sale-quartz-residence-2bedroom-3241716",
+      "advertisedName": "THE QUARTZ at Sukhumvit 6 (Saranjai Mansion)",
+      "floor": 14,
+      "treatment": "Excluded as a different project; the advertised building has 14 floors, while Quartz Residence is a 7-storey building in Sukhumvit 20."
+    }
+  },
+  "rent": {
+    "currentSamplesPresent": true,
+    "source": "https://www.fazwaz.co.th/en/property-rent/2-bedroom-condo-for-rent-at-quartz-residence-in-khlong-toei-bangkok-u1883468"
+  },
+  "yield": {
+    "status": "not_calculated",
+    "reason": "No verified sale listing for a comparable current yield baseline."
+  },
+  "sources": [
+    "https://www.quartzresidencebkk.com/",
+    "https://www.ddproperty.com/en/project/12612-quartz-residence",
+    "https://www.livinginsider.com/en/detail/condo-for-sale-quartz-residence-2bedroom-3241716"
+  ]
+}
