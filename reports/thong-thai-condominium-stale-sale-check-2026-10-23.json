@@ -1,0 +1,32 @@
+{
+  "hipflatId": 3063,
+  "project": "Thong Thai Condominium",
+  "checkedAt": "2026-10-23",
+  "sale": {
+    "status": "no_current_verified_listing",
+    "propertyHubCurrentCount": 0,
+    "historicalAnomalousLead": {
+      "priceTHB": 420000,
+      "areaSqm": 33.3,
+      "pricePerSqmTHB": 12613,
+      "bedrooms": 1,
+      "url": "https://zmyhome.com/property/V92741",
+      "pageAge": "approximately 7 years 11 months",
+      "treatment": "Excluded from current sale price and ROI because it is stale and current availability is unconfirmed."
+    }
+  },
+  "rent": {
+    "status": "no_current_verified_listing",
+    "source": "https://propertyhub.in.th/en/condo-for-rent/project-thong-thai-condominium-3"
+  },
+  "yield": {
+    "status": "not_calculated",
+    "reason": "No current verified paired sale and rent samples."
+  },
+  "sources": [
+    "https://www.hipflat.co.th/en/projects/thong-thai-condominium-zcpcep",
+    "https://propertyhub.in.th/en/condo-for-sale/project-thong-thai-condominium-3",
+    "https://propertyhub.in.th/en/condo-for-rent/project-thong-thai-condominium-3",
+    "https://zmyhome.com/property/V92741"
+  ]
+}
