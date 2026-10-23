@@ -1,0 +1,59 @@
+{
+  "hipflatId": 3096,
+  "project": "Sawit Suites",
+  "checkedAt": "2026-10-23",
+  "projectFacts": {
+    "address": "37/1 Soi Thong Lo 25, Khlong Tan Nuea, Watthana, Bangkok",
+    "completedYear": 2004,
+    "floors": 6,
+    "units": 8,
+    "source": "https://propertyhub.in.th/en/projects/sawit-suites"
+  },
+  "sale": {
+    "status": "no_current_matching_listing",
+    "source": "https://propertyhub.in.th/en/condo-for-sale/project-sawit-suites"
+  },
+  "rent": {
+    "status": "two_current_project_page_matches",
+    "source": "https://propertyhub.in.th/en/condo-for-rent/project-sawit-suites",
+    "samples": [
+      {
+        "id": "3769109",
+        "priceTHB": 55000,
+        "areaSqm": 155,
+        "beds": 3,
+        "url": "https://propertyhub.in.th/en/listings/sawit-suites-3-bedrooms-for-rent---3769109",
+        "lastProjectPageRefresh": "2026-09-24",
+        "individualLastUpdate": "not provided"
+      },
+      {
+        "id": "5886680",
+        "priceTHB": 68000,
+        "areaSqm": 155,
+        "beds": 3,
+        "url": "https://propertyhub.in.th/en/listings/for-rent-condo-sawit-suites-apartment-khlong-tan-nuea-watthana-bangkok-cx-146083-live-chat-with-us-add-line-connexproperty---5886680",
+        "individualUpdate": "2026-10-23 00:10"
+      }
+    ],
+    "excluded": [
+      {
+        "priceTHB": 68000,
+        "areaSqm": 155,
+        "bedrooms": 3,
+        "source": "https://propertyhub.in.th/en/condo-for-rent/project-sawit-suites",
+        "reason": "Old third project card updated 2026-01-30; excluded as stale."
+      },
+      {
+        "priceTHB": 45000,
+        "areaSqm": 130,
+        "bedrooms": 2,
+        "source": "https://www.fazwaz.co.th/en/property-rent/2-bedroom-apartment-for-rent-at-sawit-suites-in-khlong-tan-nuea-bangkok-u6545345",
+        "reason": "Classified as Apartment, listing update about three months old, and availability date missing; excluded from current Condo rent baseline."
+      }
+    ]
+  },
+  "yield": {
+    "status": "not_calculated",
+    "reason": "No verified current sale listing."
+  }
+}
