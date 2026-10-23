@@ -1,0 +1,75 @@
+{
+  "hipflatId": 3082,
+  "projectName": "Bangkapi Mansion",
+  "asOf": "2026-10-23",
+  "sourceName": "PropertyHub / Hipflat / KaiBaanThai 專案及單筆掛牌核對",
+  "projectSourceUrl": "https://www.hipflat.co.th/en/projects/bangkapi-mansion",
+  "sale": {
+    "activeListingCount": 0,
+    "sourceUrl": "https://propertyhub.in.th/en/condo-for-sale/project-bangkapi-mansion",
+    "note": "PropertyHub 精確專案出售頁顯示 0 筆；未以附近專案售價代替。"
+  },
+  "rent": {
+    "activeListingCount": 1,
+    "displayedResultCount": 6,
+    "sourceUrl": "https://propertyhub.in.th/en/condo-for-rent/project-bangkapi-mansion",
+    "listings": [
+      {
+        "id": "3771245",
+        "price": 110000,
+        "area": 380,
+        "priceSqm": 289.47,
+        "bedrooms": 4,
+        "url": "https://propertyhub.in.th/en/listings/bangkapi-mansion-4-bedrooms-for-rent---3771245",
+        "updated": "2026-10-16",
+        "statusLabel": "PropertyHub 精確專案頁最新刷新日期 2026-10-16；單筆頁確認 Condo、4 房、380㎡、฿110,000/月，單筆頁自身更新日期未提供。列為刊登中待聯絡確認。"
+      }
+    ],
+    "excludedListings": [
+      {
+        "price": 40000,
+        "area": 190,
+        "bedrooms": 2,
+        "url": "https://propertyhub.in.th/en/condo-for-rent/project-bangkapi-mansion",
+        "statusLabel": "PropertyHub 專案頁兩房卡片最後刷新 2025-08-19；過舊，不作現行租金樣本。"
+      },
+      {
+        "price": 60000,
+        "area": 190,
+        "bedrooms": 2,
+        "url": "https://www.kaibaanthai.com/en/property-rent/2-bedroom-condo-for-rent-at-bangkapi-mansion-in-khlong-toei-bangkok-u1079820",
+        "statusLabel": "KaiBaanThai/FazWaz 鏡像頁列 2023-08-16 刊登、更新 4 個月前、入住狀態 Check Availability；只作歷史線索，不計現行樣本。"
+      }
+    ],
+    "note": "PropertyHub 專案頁顯示 6 筆出租，4 房掛牌於 2026-10-16 刷新。兩房最低價卡片最後刷新於 2025-08-19，未納入。相同項目跨站可能是鏡像，不重複計數。"
+  },
+  "availabilitySources": [
+    {
+      "sourceName": "Hipflat 專案頁",
+      "url": "https://www.hipflat.co.th/en/projects/bangkapi-mansion",
+      "statusLabel": "作為 3,555 個曼谷專案目錄及專案識別來源。"
+    },
+    {
+      "sourceName": "PropertyHub 專案資訊與租盤頁",
+      "url": "https://propertyhub.in.th/en/projects/bangkapi-mansion",
+      "statusLabel": "本次核對列 6 筆出租、0 筆出售；專案資料列 1998 年完工、21 層、52 戶；最新四房租卡於 2026-10-16 刷新。"
+    },
+    {
+      "sourceName": "PropertyHub 出售頁",
+      "url": "https://propertyhub.in.th/en/condo-for-sale/project-bangkapi-mansion",
+      "statusLabel": "精確專案頁顯示 0 筆出售。"
+    },
+    {
+      "sourceName": "PropertyHub 出租單筆",
+      "url": "https://propertyhub.in.th/en/listings/bangkapi-mansion-4-bedrooms-for-rent---3771245",
+      "statusLabel": "4 房、380㎡、฿110,000/月；單筆頁自身更新日未提供，專案頁刷新日 2026-10-16。"
+    },
+    {
+      "sourceName": "KaiBaanThai/FazWaz 兩房租盤鏡像（排除）",
+      "url": "https://www.kaibaanthai.com/en/property-rent/2-bedroom-condo-for-rent-at-bangkapi-mansion-in-khlong-toei-bangkok-u1079820",
+      "statusLabel": "2 房、190㎡、฿60,000/月；列 2023-08-16 刊登、4 個月前更新，並顯示 Check Availability。"
+    }
+  ],
+  "yieldStatus": "no_current_sale_listing",
+  "yieldNote": "有一筆可追溯的四房出租候選，但精確專案出售頁為零；無購入價基準，不計投報。"
+}
